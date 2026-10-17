@@ -12,3 +12,19 @@ test("mobile layout: menu, lesson player usable", async ({ page }) => {
   const overflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
   expect(overflow).toBeLessThanOrEqual(1);
 });
+
+test("mobile vocabulary: pages fit the screen and a flashcard can be rated", async ({ page }) => {
+  for (const url of ["/vocabulary", "/vocabulary/explore?level=A1", "/vocabulary/word/achieve", "/vocabulary/today", "/vocabulary/stats", "/vocabulary/notebook"]) {
+    await page.goto(url);
+    await page.waitForLoadState("networkidle");
+    const overflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
+    expect(overflow, url).toBeLessThanOrEqual(1);
+  }
+  await page.goto("/vocabulary");
+  await page.locator("button", { hasText: "Flashcards" }).first().click();
+  await page.waitForURL(/\/vocabulary\/session\//);
+  await page.getByRole("button", { name: /Lật thẻ/ }).click();
+  await page.getByRole("button", { name: /^Nhớ/ }).click();
+  await expect(page.getByTestId("feedback")).toBeVisible();
+  expect(await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth)).toBeLessThanOrEqual(1);
+});

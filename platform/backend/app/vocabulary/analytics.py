@@ -2,7 +2,7 @@
 from __future__ import annotations
 
 from collections import defaultdict
-from datetime import timedelta
+from datetime import datetime, timedelta, timezone
 
 from sqlalchemy import func, select
 from sqlalchemy.orm import Session
@@ -78,12 +78,15 @@ def stats(db: Session, user_id: int) -> dict:
     graded = [l for l in logs if not l.mode.startswith("use:")]
     recall = [l for l in graded if l.mode in RECALL_TYPES]
     coll_logs = [l for l in graded if l.mode == "collocation"]
+    def local_day(dt):  # stored times are naive UTC; the learner's day is the server's local day
+        return dt.replace(tzinfo=timezone.utc).astimezone().date()
     days = {}
+    today_local = datetime.now().astimezone().date()
     for i in range(13, -1, -1):
-        d = (now - timedelta(days=i)).date()
+        d = today_local - timedelta(days=i)
         days[d.isoformat()] = {"date": d.isoformat(), "reviews": 0, "correct": 0, "scheduled": 0}
     for l in graded:
-        k = l.reviewed_at.date().isoformat()
+        k = local_day(l.reviewed_at).isoformat()
         if k in days:
             days[k]["reviews"] += 1
             days[k]["correct"] += bool(l.correct)

@@ -66,12 +66,50 @@ Measured on the repository, not estimated:
 - **One review per word per session round.** All graded items for a word are aggregated, and the worst result wins. Words that are not yet due can still be practised; that is logged but does not move the schedule.
 - **One shared schedule.** Lesson flashcards (`/api/vocabulary`, old grades 1/3/4/5) now write to the same FSRS progress as the vocabulary module. The dashboard and recommendations count FSRS progress.
 
-## Remaining phases (in progress at the time of writing)
+## Phases 4, 6–10 — Learning modes, AI, adaptivity, integration, analytics, QA
 
-- Frontend for the ten learning modes, explorer, notebook, Today's Vocabulary plan and analytics.
-- Reading/Listening word capture UI.
-- E2E tests.
-- Live OpenAI verification remains BLOCKED: there is no API key.
+| Feature | Status | Files | Evidence / remaining work |
+|---|---|---|---|
+| Mode 1 Learn New Words | COMPLETE_AND_TESTED | `backend/app/vocabulary/sessions.py`, `exercises.py`; `frontend/src/features/vocab/session/` | Teaching card is revealed step by step: word → audio → meaning → example → usage. Then a recognition item, and a recall item one word later (interleaving). The difficult-word retry round is covered by API and browser E2E. |
+| Mode 2 Flashcards | COMPLETE_AND_TESTED | `session/items.tsx` | No auto-flip. Space reveals the answer; 1–4 rates Again / Hard / Good / Easy. Ratings update the real FSRS schedule. Idempotent double-submit is tested. |
+| Mode 3 Type the answer | COMPLETE_AND_TESTED | `vocabulary/grading.py` | Deterministic verdicts: correct / acceptable (spelling variant, "to …", "a / b" alternatives) / spelling / wrong form (inflection or word family) / wrong meaning (another real word, with its meaning shown) / incorrect. For phrases, an AI second layer can accept valid alternatives. That layer is fake-provider tested only. |
+| Mode 4 Listening / dictation | COMPLETE_AND_TESTED (fake TTS) | `api/vocabulary.py::_tts` | Audio is cached on disk, so replaying never calls TTS. The answer text is never sent to the browser; the browser-speech fallback text is released only when server TTS is disabled. Live TTS has not been verified. |
+| Mode 5 Contextual | COMPLETE_AND_TESTED | `exercises.py::cloze` | Uses real example sentences. After answering, each option's meaning is shown to explain why the others don't fit. |
+| Mode 6 Collocation | COMPLETE_AND_TESTED | `exercises.py::collocation` | Built from the curriculum collocations (VOC-01–15 and VOC-17). A distractor is rejected if it also forms a known collocation (e.g. "take a shower"). |
+| Mode 7 Sentence builder | COMPLETE_AND_TESTED | `items.tsx::BuilderItem` | Words are added by click or Enter, reordered by drag, and Backspace removes the last word. Grading compares against the original sentence; a valid alternative word order is not recognised (limitation). |
+| Mode 8 Use it yourself | PARTIALLY_IMPLEMENTED | `vocabulary/ai.py::grade_sentence` | A deterministic check that the target word is used runs before any AI call. AI grading is fake-provider tested only. When AI is unavailable, nothing is saved and the learner can self-assess. |
+| Mode 9 Speed review | COMPLETE_AND_TESTED | `sessions.py` | Mixes recognition, listening choice, spelling and completion. The optional timer is only a pace guide; running out of time never marks an answer wrong. |
+| Mode 10 Real situations | PARTIALLY_IMPLEMENTED | `ai.py::dialogue_*`, `DialoguePage.tsx` | Six situations. Usage of the target words is detected deterministically and recorded. Fake-provider tested only. |
+| Due queue / Review Today's Words / FSRS | COMPLETE_AND_TESTED | `vocabulary/srs.py`, `api/vocab.py` | A 30-day time-travel test passes (`test_learn_new_words_full_cycle`). The lesson flashcards, the `/review` page, the dashboard and recommendations all read the same FSRS progress. |
+| Adaptive difficulty | COMPLETE_AND_TESTED (rules); pedagogical effect unmeasured | `sessions.py::profile`, `plan` | Profiles are support / steady / stretch. At least 15 graded answers are needed before anything changes; "stretch" needs at least 30 answers at ≥ 85% accuracy. The profile changes the number of new words, hints, example length and the item mix. Reviews come before new words when more than 40 are due. |
+| AI vocabulary tutor | PARTIALLY_IMPLEMENTED | `ai.py::tutor`, `WordPage.tsx` | Nine quick actions, word comparison and free questions. The tutor gets only the entry, the compared entry and up to two curriculum chunks, and answers are cached. Fake-provider tested only. |
+| AI personalised exercises | PARTIALLY_IMPLEMENTED | `ai.py::exercises`, `sessions.py::create_ai` | Targets weak words and words the learner confuses. Validation requires exactly one blank, 3–5 distinct options, a valid answer index and a Vietnamese explanation. Fake-provider tested only. |
+| Notebook / collections | COMPLETE_AND_TESTED | `service.py`, `NotebookPage.tsx` | Save, known, difficult, notes, own example, review history, search and filters. System collections: reading, listening, writing, speaking, lesson and difficult words. Templates: Work, Travel, and VSTEP (an estimate, not an official list). |
+| Integration (Reading, Listening, Writing, Speaking) | COMPLETE_AND_TESTED for capture; usage is an estimate | `features/vocab/Lookup.tsx`; `ai/writing.py`, `ai/speaking.py` | Clickable lookup with lemmatisation (went → go, children → child) and an optional AI meaning-in-context. A word is saved only when the learner chooses. Writing and Speaking feedback mark studied words as "used"; a use counts as correct when no detected error overlaps the word. |
+| Today's plan | COMPLETE_AND_TESTED | `sessions.py::plan`, `TodayPage.tsx` | Counts come from data and settings: new-word goal, due today, weak words, collocations, and a time estimate from the learner's median answer time. |
+| Analytics | COMPLETE_AND_TESTED | `vocabulary/analytics.py`, `StatsPage.tsx` | Seen, learned (recalled), answered correctly, recalled after ≥ 1 day, used correctly and mastered are kept separate. Also shown: recall accuracy, FSRS retention estimate, progress by CEFR and by topic, collocation mastery, and use in Writing/Speaking. |
+| UI | COMPLETE_AND_TESTED | `frontend/src/features/vocab/*` | Pages: overview, today, explorer, word detail, notebook, stats, dialogue, session player and summary. axe WCAG A/AA has no serious or critical violations on 6 vocabulary routes. Mobile has no horizontal overflow. Not checked: a manual screen-reader pass, or dark-mode screenshots of every page. |
+| Cost rules | COMPLETE_AND_TESTED | `api/vocabulary.py` | No AI is used for flipping cards, the next word, showing meanings, cached audio, multiple-choice grading, loading data or scheduling. Every AI call goes through the existing gateway (limits, rate limit, cache, usage log). Every non-AI mode works with `AI_PROVIDER=disabled` (tested). |
+
+**Verification on 2026-10-18:**
+- Backend: 120 pytest passed. That includes 42 vocabulary tests covering data integrity, import idempotency, grading, the engine, every mode, notebook, integration, AI with the fake provider, enrichment and outages, plus the extended migration test.
+- Frontend: 15 vitest passed; lint and production build pass.
+- Playwright: 32/32 passed. That includes the required flow (A1 Daily Routine learn → recall with feedback → refresh resumes → finish → flashcard review → stats), Reading capture into the notebook, the AI tutor and Use-It grading (simulated provider), axe and mobile.
+
+**Known gaps (not marked complete):**
+- Live OpenAI has never been called (no key). This covers the tutor, judge, Use-It, dialogue, exercises, enrichment and TTS.
+- 2,890 candidate headwords are still unpublished until AI enrichment runs and a person reviews the results.
+- Thin topics (Internet and Social Media, Global Issues, Climate Change) need curation.
+- The 4,211 "sourced" meanings have not been reviewed by a teacher.
+- Images (dual coding) are not implemented; no licensed image source has been chosen.
+- The sentence builder accepts only the original word order.
+- Usage in Writing/Speaking is matched by surface form and does not disambiguate senses.
+
+**Exact next steps:**
+1. Set `OPENAI_API_KEY`, then run `python -m app.vocabulary.enrich queue --limit 40 && python -m app.vocabulary.enrich run --batches 5 --size 8`. Review the results in Stats → "Dữ liệu từ vựng".
+2. Have a Vietnamese teacher review the top 1,000 A1–A2 "sourced" meanings. Approved changes should go into a curated override file read by `build_lexicon.py`.
+3. Curate the thin topics.
+4. Verify live TTS and the AI judge with a disposable database.
 
 # Platform recovery report — 2026-10-17
 

@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { SaveWordButton } from "@/features/vocab/Lookup";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { Flag, History, Mic, Radio, Square, Trash2 } from "lucide-react";
 import { ai, ERROR_LABELS, newId, type SpeakingSession, type SpeakingTurn } from "@/services/ai";
@@ -122,7 +123,7 @@ function TurnView({ turn, local, last }: { turn: SpeakingTurn; local?: string; l
         <p className="text-lg">{turn.text}</p>
         {turn.audio_url ? <audio ref={audioRef} controls src={turn.audio_url} className="mt-2 h-9 w-full max-w-sm" aria-label="Nghe câu hỏi" /> : <p className="text-xs text-muted">(không có âm thanh — TTS lỗi hoặc tắt)</p>}
         {typeof fb.hint_vi === "string" && <p className="mt-1 text-sm text-muted">💡 {fb.hint_vi}</p>}
-        {Array.isArray(fb.useful_expressions) && <p className="text-sm">Mẫu câu: {(fb.useful_expressions as string[]).map((e) => <Badge key={e} className="mr-1">{e}</Badge>)}</p>}
+        {Array.isArray(fb.useful_expressions) && <p className="text-sm">Mẫu câu: {(fb.useful_expressions as string[]).map((e) => <span key={e} className="mr-1 inline-flex items-center"><Badge>{e}</Badge><SaveWordButton text={e} module="speaking" /></span>)}</p>}
       </li>
     );
   }
@@ -146,7 +147,7 @@ function TurnView({ turn, local, last }: { turn: SpeakingTurn; local?: string; l
           {typeof fb.vocabulary_feedback_vi === "string" && <p>📚 {fb.vocabulary_feedback_vi}</p>}
           {typeof fb.completeness_vi === "string" && <p>🧩 {fb.completeness_vi}</p>}
           {typeof fb.improved_answer === "string" && <p>✨ Câu tốt hơn: <i>{fb.improved_answer}</i></p>}
-          {Array.isArray(fb.natural_expressions) && (fb.natural_expressions as string[]).length > 0 && <p>Cách nói tự nhiên: {(fb.natural_expressions as string[]).join(" · ")}</p>}
+          {Array.isArray(fb.natural_expressions) && (fb.natural_expressions as string[]).length > 0 && <p>Cách nói tự nhiên: {(fb.natural_expressions as string[]).map((e) => <span key={e} className="mr-2">{e}<SaveWordButton text={e} module="speaking" /></span>)}</p>}
         </div>
       )}
     </li>
@@ -231,7 +232,7 @@ function Summary({ s }: { s: SpeakingSession }) {
       <CardContent className="space-y-3 text-sm">
         <p>{String(sum.overall_vi)}</p>
         {mistakes.length > 0 && <div><p className="font-semibold">Lỗi chính</p>{mistakes.map((m, i) => <p key={i}><s>{m.original}</s> → <b className="text-success">{m.correction}</b> — {m.explanation_vi}</p>)}</div>}
-        <div><p className="font-semibold">Mẫu câu hữu ích</p><p>{(sum.useful_expressions as string[]).join(" · ")}</p></div>
+        <div><p className="font-semibold">Mẫu câu hữu ích</p><p>{(sum.useful_expressions as string[]).map((e) => <span key={e} className="mr-2">{e}<SaveWordButton text={e} module="speaking" /></span>)}</p></div>
         <div><p className="font-semibold">Câu trả lời mẫu tốt hơn</p><ul className="list-disc pl-5">{(sum.improved_sample_answers as string[]).map((x, i) => <li key={i}>{x}</li>)}</ul></div>
         <div><p className="font-semibold">Luyện tiếp</p><ul className="list-disc pl-5">{(sum.follow_up_practice_vi as string[]).map((x, i) => <li key={i}>{x}</li>)}</ul></div>
         <p className="text-xs text-muted">{String(sum.pronunciation_note_vi ?? "")}</p>

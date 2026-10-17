@@ -451,3 +451,34 @@ def test_enrichment_pipeline_is_resumable_and_reviewed(c, ai_app):
 def test_published_dataset_file_is_gzip_jsonl():
     lines = gzip.decompress(DATA_FILE.read_bytes()).decode().splitlines()
     assert all(json.loads(x)["id"] for x in lines[:20])
+
+
+@pytest.mark.parametrize("mode", ["type", "dictation", "context", "collocation", "builder", "speed", "weak", "custom", "daily"])
+def test_every_mode_builds_items_that_grade_correctly(client, app, mode):
+    # some study history first: a few words learned, two of them forgotten repeatedly (→ weak words)
+    s = start(client, "flashcards", level="A1", size=6)
+    for i, it in enumerate(s["items"]):
+        client.post(f"/api/vocab/sessions/{s['id']}/answer", json={"item_id": it["id"], "rating": 1 if i < 2 else 3})
+    k0 = keys(app, s["id"])
+    weak_ids = [eid(k0, it) for it in s["items"][:2]]
+    for w in weak_ids:
+        client.post(f"/api/vocab/entries/{w}/progress", json={"action": "difficult"})
+    params = {"collection": None}
+    if mode == "custom":
+        params = {"entry_ids": [eid(k0, it) for it in s["items"]]}
+    elif mode == "collocation":
+        params = {"level": "A1"}
+    ses = start(client, mode, **{k: v for k, v in params.items() if v}, size=6) if mode != "daily" else start(client, "daily")
+    assert ses["items"], mode
+    k = keys(app, ses["id"])
+    for it in ses["items"]:
+        if it["type"] == "use_it":
+            continue
+        out = answer_item(client, ses, it, right=True, store_answers=k)
+        if it["type"] != "learn":
+            assert out["correct"], (mode, it["type"], out)
+    if mode == "weak":
+        assert {eid(k, it) for it in ses["items"]} & set(weak_ids)
+    if mode == "dictation":
+        r = client.get(f"/api/vocab/sessions/{ses['id']}/items/{ses['items'][0]['id']}/speak-text")
+        assert r.status_code == 200 and r.json()["b64"]  # AI off → browser speech fallback text after the item exists

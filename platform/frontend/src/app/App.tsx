@@ -9,6 +9,14 @@ const Dashboard = lazy(() => import("@/features/dashboard/DashboardPage"));
 const PathPage = lazy(() => import("@/features/learning-path/PathPage"));
 const ModulePage = lazy(() => import("@/features/catalog/ModulePage"));
 const VocabularyPage = lazy(() => import("@/features/vocabulary/VocabularyPage"));
+const VocabHome = lazy(() => import("@/features/vocab/VocabHome"));
+const VocabToday = lazy(() => import("@/features/vocab/TodayPage"));
+const VocabExplorer = lazy(() => import("@/features/vocab/ExplorerPage"));
+const VocabWord = lazy(() => import("@/features/vocab/WordPage"));
+const VocabNotebook = lazy(() => import("@/features/vocab/NotebookPage"));
+const VocabStats = lazy(() => import("@/features/vocab/StatsPage"));
+const VocabDialogue = lazy(() => import("@/features/vocab/DialoguePage"));
+const VocabSession = lazy(() => import("@/features/vocab/session/SessionPage"));
 const LessonPlayer = lazy(() => import("@/features/lesson-player/LessonPlayer"));
 const ReviewPage = lazy(() => import("@/features/flashcards/ReviewPage"));
 const ProgressPage = lazy(() => import("@/features/progress/ProgressPage"));
@@ -48,7 +56,15 @@ export default function App() {
             <Route index element={<Dashboard />} />
             <Route path="path" element={<PathPage />} />
             <Route path="grammar" element={<ModulePage kind="grammar" />} />
-            <Route path="vocabulary" element={<VocabularyPage />} />
+            <Route path="vocabulary" element={<VocabHome />} />
+            <Route path="vocabulary/today" element={<VocabToday />} />
+            <Route path="vocabulary/explore" element={<VocabExplorer />} />
+            <Route path="vocabulary/word/:id" element={<VocabWord />} />
+            <Route path="vocabulary/notebook" element={<VocabNotebook />} />
+            <Route path="vocabulary/stats" element={<VocabStats />} />
+            <Route path="vocabulary/dialogue" element={<VocabDialogue />} />
+            <Route path="vocabulary/session/:id" element={<VocabSession />} />
+            <Route path="vocabulary/units" element={<VocabularyPage />} />
             <Route path="pronunciation" element={<ModulePage kind="pronunciation" />} />
             <Route path="listening" element={<ModulePage kind="listening" />} />
             <Route path="speaking" element={<ModulePage kind="speaking" />} />

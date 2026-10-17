@@ -8,7 +8,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { EmptyState, ErrorBox, PageHeader, Skeleton } from "@/components/ui/misc";
 import { toast } from "@/components/ui/toast";
-import { FlashcardDeck } from "./FlashcardDeck";
+import { vocab } from "@/services/vocab";
+import { useStart } from "@/features/vocab/VocabHome";
 import { ItemCard } from "@/features/quizzes/ItemCard";
 import { isAnswered, toResponse, type Draft } from "@/features/quizzes/draft";
 
@@ -27,21 +28,27 @@ export default function ReviewPage() {
 }
 
 function DueCards() {
-  const [round, setRound] = useState(0);
-  const q = useQuery({ queryKey: ["due", round], queryFn: () => api.due(20), gcTime: 0 });
-  if (q.isLoading) return <Skeleton className="h-80" />;
+  const q = useQuery({ queryKey: ["vocab-plan"], queryFn: vocab.plan });
+  const { start, busy } = useStart();
+  if (q.isLoading) return <Skeleton className="h-60" />;
   if (q.error || !q.data) return <ErrorBox error={q.error} onRetry={() => q.refetch()} />;
+  const p = q.data;
   return (
     <div className="grid gap-6 lg:grid-cols-[1fr_18rem]">
-      <Card className="p-5">
-        {q.data.cards.length ? <FlashcardDeck key={round} cards={q.data.cards} /> : <EmptyState title="Không còn thẻ nào cần ôn hôm nay 🎉" />}
-        <div className="mt-4 text-center"><Button variant="ghost" size="sm" onClick={() => setRound((r) => r + 1)}>Tải lượt mới</Button></div>
+      <Card className="p-6">
+        {p.due_today ? (
+          <div className="space-y-3 text-center">
+            <p className="text-lg font-semibold">{p.due_today} từ đến hạn ôn hôm nay</p>
+            <p className="text-sm text-muted">Gồm cả thẻ từ trong bài học — tất cả dùng chung một lịch ôn.</p>
+            <Button size="lg" disabled={!!busy} onClick={() => start("review")}><Brain size={18} />Ôn từ hôm nay</Button>
+          </div>
+        ) : <EmptyState title="Không còn từ nào cần ôn hôm nay 🎉"><Link className="text-primary" to="/vocabulary">Học thêm từ mới</Link></EmptyState>}
       </Card>
       <Card>
         <CardHeader><CardTitle>Cách lịch ôn hoạt động</CardTitle></CardHeader>
         <CardContent className="space-y-2 text-sm text-muted">
-          <p>{q.data.due_total} thẻ đến hạn. Mỗi lượt gồm thẻ đến hạn trước, rồi tối đa 10 từ mới theo thứ tự giáo trình.</p>
-          <p>Thuật toán <b>SM-2</b>: “Chưa nhớ” → ôn lại ngày mai; nhớ được → khoảng cách tăng dần (1 ngày, 6 ngày, rồi nhân với hệ số dễ). Chọn “Khó” làm hệ số giảm, “Dễ” làm hệ số tăng.</p>
+          <p>Lịch ôn dùng <b>FSRS</b> (thư viện py-fsrs): mỗi lần bạn chấm <b>Quên / Khó / Nhớ / Dễ</b>, hệ thống ước lượng độ ổn định trí nhớ và hẹn lần ôn tiếp theo vào lúc bạn sắp quên.</p>
+          <p>“Quên” → hỏi lại sau khoảng 10 phút; nhớ tốt → khoảng cách tăng dần theo lịch sử ôn của chính bạn.</p>
         </CardContent>
       </Card>
     </div>

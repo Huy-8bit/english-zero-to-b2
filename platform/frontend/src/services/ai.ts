@@ -78,6 +78,7 @@ export interface WritingFeedback {
   b2_upgrade_suggestions: { original: string; suggestion: string; why_vi: string }[];
   vocabulary_suggestions: { word_used: string; better_choice: string; example: string; why_vi: string }[];
   organization_feedback_vi: string; improvement_plan_vi: string[]; practice_topics: string[];
+  vocab_used?: { entry_id: string; lemma: string; form: string; correct: boolean }[];
   practice_lessons: { topic: string; lesson_id: string; title: string }[]; disclaimer_vi: string;
 }
 

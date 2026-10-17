@@ -25,8 +25,8 @@ export default function VocabularyPage() {
   const topic = units.find((u) => u.id === current);
   return (
     <div>
-      <PageHeader title="Từ vựng" subtitle={`${all.data.cards.length} từ/cụm từ từ 19 chủ đề, có IPA, nghĩa và ví dụ từ giáo trình.`}
-        actions={<Link to="/review"><Button variant="outline"><Layers size={16} />Ôn thẻ đến hạn</Button></Link>} />
+      <PageHeader title="Từ vựng theo bài giáo trình" subtitle={`${all.data.cards.length} thẻ từ các bài 07-VOCABULARY. Tiến độ dùng chung với toàn bộ module Từ vựng (lịch ôn FSRS).`}
+        actions={<Link to="/vocabulary"><Button variant="outline"><Layers size={16} />Về trang Từ vựng</Button></Link>} />
       <div className="grid gap-6 lg:grid-cols-[16rem_1fr]">
         <nav aria-label="Chủ đề" className="flex gap-2 overflow-x-auto lg:flex-col lg:overflow-visible">
           {units.map((u) => (

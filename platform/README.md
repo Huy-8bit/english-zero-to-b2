@@ -108,7 +108,7 @@ platform/
 
 - Lưu thật trong DB: slide hiện tại, bản nháp câu trả lời, checklist, tô sáng, mọi lượt trả lời, điểm, thời gian học (heartbeat 30 giây khi tab đang mở và có thao tác), streak, lịch ôn từ vựng, lịch sử bài viết, ghi chú. Trạng thái bài còn được nhân bản vào `localStorage` nên mất mạng/refresh không mất câu trả lời; bản mới hơn được dùng khi mở lại.
 - **XP** qua bảng sự kiện có khóa duy nhất: mỗi câu đúng lần đầu +10, tự đánh giá đúng +6, nộp bài viết/nói +8, hoàn thành bài +50 (một lần), ôn thẻ +2 (mỗi thẻ mỗi ngày), đạt mục tiêu ngày +20. Reload hay gửi trùng không cộng thêm.
-- **Flashcards SM-2:** “Chưa nhớ” → ôn lại sau 1 ngày; nhớ → 1 ngày, 6 ngày, rồi nhân hệ số dễ (≥ 1.3).
+- **Lịch ôn FSRS** (thư viện `py-fsrs`, tham số mặc định FSRS-6): Quên / Khó / Nhớ / Dễ. Thẻ trong bài học và module Từ vựng dùng **chung một tiến độ**. Tiến độ SM-2 cũ được chuyển sang một lần; bảng cũ được giữ nguyên.
 - **Đề xuất:** bài đang dở → bài ngữ pháp kế tiếp từ cấp xuất phát → bài cần ôn → thẻ đến hạn → kỹ năng/kiểm tra khi xong ngữ pháp một cấp. Cấp xuất phát lấy từ Placement Test theo đúng 3 bước trong `PLACEMENT-ANSWERS.md` (khung tổng điểm, phần đầu tiên dưới 11/15, chọn cấp thấp hơn).
 
 ### API chính
@@ -116,7 +116,8 @@ platform/
 `GET /api/levels · /api/modules · /api/lessons · /api/lessons/{id} · /api/lessons/{id}/steps · /api/path`
 `PUT /api/progress/{id} · POST /api/lessons/{id}/complete · GET /api/progress`
 `GET /api/quizzes/{id} · POST /api/quizzes/{id}/submit · POST /api/attempts/{id}/self-assess · GET /api/mistakes`
-`GET /api/vocabulary · GET /api/vocabulary/due · POST /api/vocabulary/review · GET /api/vocabulary/stats`
+`GET /api/vocabulary · GET /api/vocabulary/due · POST /api/vocabulary/review · GET /api/vocabulary/stats` (thẻ trong bài học, FSRS)
+`GET /api/vocab/overview · /topics · /entries · /entries/{id} · /lookup · /plan · /stats · /collections · POST /api/vocab/sessions · /sessions/{id}/answer · /sessions/{id}/finish · /capture · /tutor · /dialogue · /enrichment/*`
 `GET /api/dashboard · /api/stats · /api/recommendations · GET|PUT /api/profile`
 `GET /api/search?q= · /api/library · /api/docs?path= · /api/content/status · POST /api/content/reload`
 `POST /api/activity/heartbeat · GET|POST /api/writing · GET|PUT /api/notes/{id} · GET /api/ai/status · POST /api/ai/tutor/chat`
@@ -127,9 +128,36 @@ Tài liệu tương tác: <http://localhost:8000/docs>.
 
 Markdown render bằng `react-markdown` (không bật HTML thô) + `rehype-sanitize`: không có script, `onerror` hay link `javascript:` nào chạy được (có test). Mermaid chạy với `securityLevel: "strict"` và chỉ tải khi có sơ đồ. API `/api/docs` chặn path traversal và không phục vụ thư mục `platform/`. Mọi body request được Pydantic kiểm tra (độ dài, khoảng giá trị). Điểm và XP do server tính, không nhận từ frontend. Khóa API chỉ đọc ở backend.
 
+## Từ vựng
+
+**Kho từ.** 5.083 mục, trong đó 4.654 từ và cụm động từ khác nhau, A1–B2. Kho được tạo bởi `scripts/vocabulary/build_lexicon.py`:
+- Từ giáo trình được dùng trước; không tạo lại.
+- Nguồn bổ sung: CEFR-J 1.5, NGSL/NAWL 1.2, Wiktionary (kaikki.org), Tatoeba. Giấy phép xem `backend/app/vocabulary/data/SOURCES.md`.
+- IPA chỉ lấy từ từ điển.
+- Nghĩa lấy từ Wiktionary được đánh dấu là chưa được giáo viên rà soát.
+- Tạo lại kho: `scripts/vocabulary/fetch_sources.sh`, rồi `backend/.venv/bin/python scripts/vocabulary/build_lexicon.py`. Backend tự nhập lại khi file thay đổi; tiến độ học được giữ.
+
+**Học.**
+- 10 chế độ: học từ mới, flashcards, gõ đáp án, nghe-chép, ngữ cảnh, collocation, sắp xếp câu, tự đặt câu (AI), ôn nhanh, hội thoại tình huống (AI).
+- Có thêm luyện từ hay quên và bài tập AI cho từ yếu.
+- Đáp án của các chế độ không dùng AI được chấm ở server; đáp án không gửi về trình duyệt trước khi bạn trả lời.
+- Mỗi từ chỉ được xếp lịch FSRS một lần trong mỗi vòng của phiên học. Luyện thêm từ chưa đến hạn không làm đổi lịch ôn.
+- Trang “Hôm nay” tính kế hoạch từ dữ liệu: số từ đến hạn, độ chính xác gần đây và tùy chọn của bạn.
+
+**Bổ sung bằng AI.** `python -m app.vocabulary.enrich queue|run|review|approve|reject` (hoặc dùng mục “Dữ liệu từ vựng” trong trang Thống kê) xử lý các từ chưa có nghĩa tiếng Việt từ nguồn mở:
+- chạy theo lô, mỗi lô có checkpoint, tự thử lại khi lỗi;
+- kết quả phải được người duyệt mới xuất bản;
+- AI không bao giờ được hỏi IPA.
+
+**Liên kết với các module khác.**
+- Reading/Listening: bấm vào từ để tra nghĩa theo ngữ cảnh rồi lưu.
+- Writing: các gợi ý từ vựng có nút lưu.
+- Speaking: các cụm từ hữu ích có nút lưu.
+- Từ đã học xuất hiện trong bài viết hoặc bài nói được tính là “đã dùng”.
+
 ## Bàn phím
 
-`→` / `←` chuyển slide (khi không gõ trong ô nhập) · `Enter` kiểm tra bài hoặc sang slide tiếp · `Esc` thoát chế độ tập trung / đóng hộp thoại · `⌘K` hoặc `/` tìm kiếm · Flashcards: `Space` lật, `1–4` chấm.
+`→` / `←` chuyển slide (khi không gõ trong ô nhập) · `Enter` kiểm tra bài hoặc sang slide tiếp · `Esc` thoát chế độ tập trung / đóng hộp thoại · `⌘K` hoặc `/` tìm kiếm · Flashcards: `Space` lật, `1–4` chấm (Quên / Khó / Nhớ / Dễ) · Phiên học từ vựng: `1–4` chọn đáp án, `Enter` kiểm tra / tiếp tục, `Backspace` bỏ từ cuối khi sắp xếp câu.
 
 ## OpenAI và các studio
 

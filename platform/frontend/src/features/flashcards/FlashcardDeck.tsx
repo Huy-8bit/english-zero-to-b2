@@ -10,14 +10,14 @@ import { SpeakButton } from "@/components/SpeakButton";
 import { toast } from "@/components/ui/toast";
 
 const GRADES = [
-  { grade: 1, label: "Chưa nhớ", hint: "Ôn lại ngày mai", key: "1", variant: "danger" as const },
+  { grade: 1, label: "Quên", hint: "Hỏi lại sau ~10 phút", key: "1", variant: "danger" as const },
   { grade: 3, label: "Khó", hint: "Nhớ nhưng chật vật", key: "2", variant: "outline" as const },
   { grade: 4, label: "Nhớ", hint: "Nhớ được", key: "3", variant: "success" as const },
   { grade: 5, label: "Dễ", hint: "Nhớ ngay", key: "4", variant: "outline" as const },
 ];
 
 /**
- * Flip cards; each answer is sent to the server, which schedules the next review with SM-2.
+ * Flip cards; each answer is sent to the server, which schedules the next review with FSRS (shared vocabulary progress).
  * `simple` shows only Know / Don't know (mapped to grades 4 and 1).
  */
 export function FlashcardDeck({ cards, simple = false, onFinish }: { cards: Card[]; simple?: boolean; onFinish?: (stats: { known: number; total: number }) => void }) {

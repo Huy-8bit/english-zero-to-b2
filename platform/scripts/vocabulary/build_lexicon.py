@@ -689,8 +689,14 @@ def build(src: Path, content_root: Path) -> dict:
                 if key(d) in entries and key(d) != k and (key(d).startswith(k[:max(4, len(k) - 2)]) or k.startswith(key(d)[:max(4, len(key(d)) - 2)])):
                     e["family"].append(d)
         e["family"] = list(dict.fromkeys(e["family"]))[:8]
-        e["synonyms"] = list(dict.fromkeys(e["synonyms"]))[:5]
         e["antonyms"] = list(dict.fromkeys(e["antonyms"]))[:4]
+    # near-synonyms: Wiktionary lists synonyms per sense (sometimes rare senses: achieve → "register"); keep one only if
+    # it also shares a Vietnamese meaning with the headword — two independent pieces of evidence
+    def vi_set(x):
+        return {fold(w.strip()) for s in x["senses"] for w in re.split(r"[;,]", s["meaning_vi"]) if w.strip()}
+    for k, e in entries.items():
+        mine = vi_set(e)
+        e["synonyms"] = [w for w in dict.fromkeys(e["synonyms"]) if key(w) in entries and vi_set(entries[key(w)]) & mine][:5]
 
     # -- topics, CEFR estimates, tiers
     for k, e in entries.items():

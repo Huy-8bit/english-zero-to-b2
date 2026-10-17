@@ -96,17 +96,22 @@ test("finish lesson updates dashboard and XP", async ({ page }) => {
   await expect(page.getByRole("link", { name: "A1-G011" }).first()).toBeVisible();
 });
 
-test("flashcards review schedules cards with SM-2", async ({ page, request }) => {
-  await page.goto("/review");
+test("curriculum flashcards are scheduled by FSRS in the shared vocabulary progress", async ({ page, request }) => {
+  await page.goto("/vocabulary/units");
+  await page.getByRole("button", { name: "Flashcards" }).click();
   await page.getByRole("button", { name: "Lật thẻ" }).click();
   const reviewResponse = page.waitForResponse((r) => r.url().endsWith("/api/vocabulary/review") && r.request().method() === "POST");
   await page.getByRole("button", { name: /Nhớ được/ }).click();
   const saved = await (await reviewResponse).json();
-  expect(saved.srs.interval_days).toBe(1);
+  expect(saved.srs.state).toBe("review");
+  expect(saved.srs.algorithm).toMatch(/FSRS/);
   await expect(page.getByText("+2 XP")).toBeVisible();
-  await page.goto("/");
   const cards = await (await request.get("/api/vocabulary")).json();
   expect(cards.cards.find((c: { id: string }) => c.id === saved.card_id).srs).toEqual(saved.srs);
+  const entry = await (await request.get(`/api/vocab/entries/${saved.entry_id}`)).json();
+  expect(entry.progress.state).toBe("review"); // same progress as the vocabulary module
+  await page.goto("/review");
+  await expect(page.getByText(/Lịch ôn dùng FSRS|FSRS/).first()).toBeVisible();
 });
 
 test("search finds Vietnamese queries and opens Learning or Reference mode", async ({ page }) => {
@@ -132,7 +137,7 @@ test("exam mode hides answers until the whole test is submitted", async ({ page 
 });
 
 test("reading passage, vocabulary list and matching game render from the curriculum", async ({ page }) => {
-  await page.goto("/vocabulary");
+  await page.goto("/vocabulary/units");
   await expect(page.getByText("wake up").first()).toBeVisible();
   await page.getByRole("button", { name: /Ghép nghĩa/ }).click();
   await expect(page.getByLabel("Từ tiếng Anh")).toBeVisible();

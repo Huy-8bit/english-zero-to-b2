@@ -10,6 +10,7 @@ import { Progress } from "@/components/ui/progress";
 import { Input, PageHeader, Textarea } from "@/components/ui/misc";
 import { Markdown } from "@/components/Markdown";
 import { toast } from "@/components/ui/toast";
+import { SaveWordButton } from "@/features/vocab/Lookup";
 import { AIErrorBox, AILoading, AIUnavailable, SimulatedBanner, useAIStatus } from "@/components/ai/AIStatus";
 import { cn, safeStorage, wordCount } from "@/lib/utils";
 import { diffWords } from "./diff";
@@ -230,7 +231,8 @@ function FeedbackView({ sub, onPractice }: { sub: WritingSubmission; onPractice:
         <Card><CardHeader><CardTitle>Gợi ý nâng cấp</CardTitle></CardHeader>
           <CardContent className="space-y-2 text-sm">
             {fb.b2_upgrade_suggestions.map((u, i) => <p key={i}><span className="text-muted">{u.original}</span> → <b>{u.suggestion}</b><span className="block text-xs text-muted">{u.why_vi}</span></p>)}
-            {fb.vocabulary_suggestions.map((v, i) => <p key={`v${i}`}><b>{v.word_used}</b> → <b className="text-primary">{v.better_choice}</b> <i>{v.example}</i><span className="block text-xs text-muted">{v.why_vi}</span></p>)}
+            {fb.vocabulary_suggestions.map((v, i) => <p key={`v${i}`}><b>{v.word_used}</b> → <b className="text-primary">{v.better_choice}</b><SaveWordButton text={v.better_choice} module="writing" meaning_vi={v.why_vi} example={v.example} context={v.word_used} /> <i>{v.example}</i><span className="block text-xs text-muted">{v.why_vi}</span></p>)}
+            {!!fb.vocab_used?.length && <p className="text-xs text-muted">Từ đã học bạn dùng trong bài: {fb.vocab_used.map((u) => `${u.lemma}${u.correct ? " ✓" : " (có lỗi)"}`).join(", ")}</p>}
           </CardContent></Card>
       )}
       <Card><CardHeader><CardTitle>Bố cục & kế hoạch cải thiện</CardTitle></CardHeader>

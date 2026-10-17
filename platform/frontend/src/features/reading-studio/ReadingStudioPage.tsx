@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import { ErrorBox, Input, PageHeader, Skeleton } from "@/components/ui/misc";
+import { LookupText, SaveWordButton } from "@/features/vocab/Lookup";
 import { ExerciseRunner } from "@/components/ai/ExerciseRunner";
 import { AIErrorBox, AILoading, AIUnavailable, SimulatedBanner, useAIStatus } from "@/components/ai/AIStatus";
 
@@ -95,9 +96,10 @@ function ReadingSetPageSession({ setId }: { setId: string }) {
       <SimulatedBanner />
       <div className="grid gap-5 lg:grid-cols-2">
         <Card className="p-5 lg:sticky lg:top-20 lg:max-h-[calc(100vh-7rem)] lg:overflow-y-auto">
-          <p className="whitespace-pre-wrap text-[15px] leading-relaxed">{highlight(passage, evidence)}</p>
+          <p className="mb-2 text-xs text-muted">Bấm vào một từ để tra nghĩa theo ngữ cảnh và lưu vào sổ từ.</p>
+          <p className="whitespace-pre-wrap text-[15px] leading-relaxed">{highlight(passage, evidence, (t, k) => <LookupText key={k} text={t} module="reading" refId={es.id} />)}</p>
           {rv && Array.isArray(es.meta.vocabulary) && <div className="mt-4 border-t border-border pt-3 text-sm"><p className="mb-1 font-semibold">Từ vựng</p>
-            {(es.meta.vocabulary as { word: string; meaning_vi: string; example: string }[]).map((v) => <p key={v.word}><b>{v.word}</b> — {v.meaning_vi}</p>)}</div>}
+            {(es.meta.vocabulary as { word: string; meaning_vi: string; example: string }[]).map((v) => <p key={v.word}><b>{v.word}</b> — {v.meaning_vi}<SaveWordButton text={v.word} module="reading" meaning_vi={v.meaning_vi} example={v.example} /></p>)}</div>}
         </Card>
         <ExerciseRunner setId={es.id} questions={es.questions} review={rv} onReview={setReview} />
       </div>
@@ -105,8 +107,8 @@ function ReadingSetPageSession({ setId }: { setId: string }) {
   );
 }
 
-function highlight(text: string, quotes: string[]): React.ReactNode[] {
-  if (!quotes.length) return [text];
+function highlight(text: string, quotes: string[], plain: (t: string, k: string) => React.ReactNode = (t) => t): React.ReactNode[] {
+  if (!quotes.length) return [plain(text, "p0")];
   const out: React.ReactNode[] = [];
   let rest = text;
   let k = 0;
@@ -116,9 +118,9 @@ function highlight(text: string, quotes: string[]): React.ReactNode[] {
       const i = rest.toLowerCase().indexOf(q.toLowerCase());
       if (i >= 0 && (!best || i < best.i)) best = { i, q };
     }
-    if (!best) { out.push(rest); break; }
-    out.push(rest.slice(0, best.i));
-    out.push(<mark key={k++} className="em-hl" title="Căn cứ cho đáp án">{rest.slice(best.i, best.i + best.q.length)}</mark>);
+    if (!best) { out.push(plain(rest, `p${k++}`)); break; }
+    out.push(plain(rest.slice(0, best.i), `p${k++}`));
+    out.push(<mark key={k++} className="em-hl" title="Căn cứ cho đáp án">{plain(rest.slice(best.i, best.i + best.q.length), `m${k}`)}</mark>);
     rest = rest.slice(best.i + best.q.length);
   }
   return out;

@@ -7,6 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ErrorBox, Input, PageHeader, Skeleton } from "@/components/ui/misc";
+import { LookupText, SaveWordButton } from "@/features/vocab/Lookup";
 import { ExerciseRunner } from "@/components/ai/ExerciseRunner";
 import { AIErrorBox, AILoading, AIUnavailable, SimulatedBanner, useAIStatus } from "@/components/ai/AIStatus";
 
@@ -91,11 +92,12 @@ function ListeningSetPageSession({ setId }: { setId: string }) {
       {canToggle && <Button size="sm" variant="outline" onClick={() => setReveal((v) => !v)}>{reveal ? <EyeOff size={14} /> : <Eye size={14} />}{reveal ? "Ẩn transcript" : "Hiện transcript (hỗ trợ)"}</Button>}
       {ls.transcript && (
         <Card className="p-4"><p className="mb-2 text-xs font-semibold uppercase text-muted">Transcript</p>
-          <ol className="space-y-1 text-sm">{ls.transcript.map((s, i) => <li key={i}><b>{s.speaker}:</b> {s.text}</li>)}</ol></Card>
+          <ol className="space-y-1 text-sm">{ls.transcript.map((s, i) => <li key={i}><b>{s.speaker}:</b> <LookupText text={s.text} module="listening" refId={ls.id} /></li>)}</ol>
+          <p className="mt-2 text-xs text-muted">Bấm vào từ chưa biết để tra nghĩa và lưu vào sổ từ.</p></Card>
       )}
       {ls.vocabulary && ls.vocabulary.length > 0 && (
         <Card className="p-4"><p className="mb-2 text-xs font-semibold uppercase text-muted">Từ vựng trong bài</p>
-          <ul className="space-y-1 text-sm">{ls.vocabulary.map((v) => <li key={v.word}><b>{v.word}</b> — {v.meaning_vi} <i className="text-muted">{v.example}</i></li>)}</ul></Card>
+          <ul className="space-y-1 text-sm">{ls.vocabulary.map((v) => <li key={v.word}><b>{v.word}</b> — {v.meaning_vi} <i className="text-muted">{v.example}</i><SaveWordButton text={v.word} module="listening" meaning_vi={v.meaning_vi} example={v.example} /></li>)}</ul></Card>
       )}
       <ExerciseRunner setId={ls.id} questions={ls.questions} review={review === undefined ? (q.data as ListeningSet & { review?: Review | null })?.review : review}
         onReview={setReview} submitFn={async (body) => { const r = await ai.submitListening(ls.id, body); setData(r); return r.review; }} />
