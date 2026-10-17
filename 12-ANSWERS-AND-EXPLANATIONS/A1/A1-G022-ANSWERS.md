@@ -60,3 +60,11 @@
 **L5.2.** Mẫu: *Five years ago, I was a student. Now I'm older and busier. I'm more confident when I speak to people. My English is much better, and I'm more independent because I live alone. But I'm a bit less healthy — I exercise less and I'm more tired. I think my life is more interesting now.*
 
 > *less* (kém hơn) là cấu trúc ngược của *more* — học kỹ ở A2-G027.
+
+## Knowledge Check
+
+1. *-er* cho tính từ 1 âm tiết (*tall → taller*) và 2 âm tiết tận cùng *-y* (*happy → happier*); *more* cho phần lớn tính từ 2 âm tiết khác và từ 3 âm tiết trở lên (*more modern, more expensive*). Một số từ 2 âm tiết dùng được cả hai (*quieter / more quiet*).
+2. *bigger, happier, better, worse, more beautiful*.
+3. *much / a lot / far* (+ comparative). *very* bổ nghĩa cho tính từ thường (*very big*), không đi với dạng so sánh hơn (~~very bigger~~).
+4. *than* /ðən/ = hơn (so sánh); *then* /ðen/ = sau đó, khi đó.
+5. *My car is faster than yours.* (so sánh xe với xe, không phải xe với người).

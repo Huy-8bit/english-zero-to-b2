@@ -61,7 +61,7 @@
 - [ ] *interested in* / *good at* đúng giới từ.
 - [ ] 80–100 từ.
 
-> *want to work abroad* và *because* sẽ được học kỹ ở A1–A2; ở đây có thể dùng như cụm cố định.
+> *want to learn* và *because* sẽ được học kỹ ở A1–A2; ở đây có thể dùng như cụm cố định.
 
 **L5.2.** Mẫu ý để phát triển thành bài nói 1 phút (tốc độ mỗi người khác nhau; dùng đồng hồ kiểm tra):
 
@@ -78,3 +78,11 @@ L4.1 really bổ nghĩa like; listening to music là hoạt động, không bỏ
 M1: dùng V-ing; like/love còn có to V. M2: không dùng enjoy to V cho hoạt động; enjoy + danh từ vẫn đúng (enjoy music). M3: making, stopping, lying, traveling (Mỹ), travelling (Anh). M4: interested in, good at. M5: What do you like doing at weekends? / What do you like to do on weekends?
 
 L5.1: kiểm tra số từ thực tế, đủ thông tin đề, dùng V-ing và ngôi đúng, câu dễ hiểu; mỗi mục 1 điểm. L5.2 mẫu có hơn ba cách thể hiện thái độ; thêm bạn làm với ai, ở đâu, bao lâu hoặc vì sao để đạt một phút. Không giả định bản mẫu ngắn tự động đủ thời lượng.
+
+## Knowledge Check
+
+1. V-ing (thường dùng nhất): *I like reading.* *like/love* + *to V* cũng gặp, nhất là Anh-Mỹ.
+2. Không: *enjoy* + V-ing (*I enjoy swimming*, không ~~enjoy to swim~~).
+3. *making, stopping, lying, traveling* (Anh-Anh: *travelling*).
+4. *interested **in***, *good **at***.
+5. *What do you like doing at the weekend?* (Anh-Mỹ: *on the weekend*; cũng có *What do you like to do...?*).

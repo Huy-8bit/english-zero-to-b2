@@ -62,3 +62,11 @@
 - *How much are these sunglasses? — They're 400,000.*
 - *How many colours do you have? — We have five.*
 - *That's too much. Can you give me a discount? — OK, 350,000 for the sunglasses.*
+
+## Knowledge Check
+
+1. *many* + danh từ đếm được số nhiều (*many cars*); *much* + danh từ không đếm được (*much time*); *a lot of / lots of* đi với cả hai.
+2. Trong văn nói, *much/many* ở câu khẳng định nghe trang trọng, sách vở; người bản ngữ thường nói *I have a lot of money*. Trong câu hỏi và phủ định *much/many* rất tự nhiên.
+3. *a lot of* + danh từ (*a lot of work*); *a lot* đứng một mình, không có danh từ theo sau (*I work a lot*, *Thanks a lot*).
+4. *How much*: *How much is this bag?* / *How much does it cost?*
+5. *a lot of people* — trung tính hoặc tích cực (đông vui); *too many people* — tiêu cực, đông quá mức.

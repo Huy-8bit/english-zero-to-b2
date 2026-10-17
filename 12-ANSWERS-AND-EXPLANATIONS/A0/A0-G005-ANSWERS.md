@@ -74,3 +74,11 @@
 5. A big white house: kích thước trước màu theo thứ tự trung tính.
 
 L5.1: mẫu có 6 câu, đủ các nhóm đề yêu cầu. Chấm 1 điểm mỗi mục checklist, thêm 1 điểm đúng 5–7 câu (tổng 5). L5.2: mẫu gợi ý nội dung, tốc độ từng người khác nhau; tự ghi âm để kiểm tra 30–45 giây. Chấm đủ mô tả món ăn/người nấu, dùng tính từ, trạng từ và lời dễ hiểu, mỗi mục 1 điểm.
+
+## Knowledge Check
+
+1. Danh từ riêng là tên riêng (*Lan, Hanoi*) và luôn viết hoa; danh từ chung chỉ loại (*city*). Tiếng Anh viết hoa thêm: thứ, tháng, ngôn ngữ, quốc tịch (*Monday, May, English, Vietnamese*) và đại từ *I*.
+2. Trước danh từ (*a hot day*) và sau *be*/động từ liên kết (*The day is hot*).
+3. *good → well*, *fast → fast*, *hard → hard* (*hardly* là từ khác nghĩa: hầu như không).
+4. Câu thiếu động từ; trước tính từ cần *be*: *The weather is hot.*
+5. *a big white house* (kích thước trước màu sắc).

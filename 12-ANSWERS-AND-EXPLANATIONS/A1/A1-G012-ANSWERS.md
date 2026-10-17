@@ -47,7 +47,7 @@
 | L4.2 | **Can I sit** here? |
 | L4.3 | **Can you speak** louder, please? |
 | L4.4 | You **can buy** tickets online. |
-| L4.5 | We **can see** the mountains from here. |
+| L4.5 | We **can see** the mountains from here. (chấp nhận *the mountain* nếu chỉ một ngọn núi) |
 
 ## Level 5 — Real Communication
 
@@ -64,3 +64,11 @@
 - *Can I leave my luggage here after check-out? — Yes, you can.*
 - *Can I change my room? It's very noisy. — Let me check.*
 - *Can I check out late tomorrow? — You can check out at 1 p.m.*
+
+## Knowledge Check
+
+1. (1) Không chia theo ngôi (*he can*); (2) động từ theo sau ở nguyên mẫu không *to* (*can swim*); (3) không dùng *do/does* cho phủ định và câu hỏi (*can't*, *Can you...?*).
+2. Khả năng (*I can swim*), cho phép (*You can park here*), yêu cầu (*Can you help me?*), điều có thể xảy ra/có thể làm (*You can pay by card*; *It can be hot in April*).
+3. *Can I...?* — tôi làm, để xin phép; *Can you...?* — bạn làm, để nhờ.
+4. Nghe trọng âm và nguyên âm: khẳng định *can* đọc yếu /kən/, động từ chính được nhấn (*I c'n SWIM*); *can't* được nhấn, nguyên âm rõ /kɑːnt/ hoặc /kænt/, âm /t/ có thể gần như mất.
+5. *Can he drive?* (modal tự đảo lên đầu, không dùng *does*).

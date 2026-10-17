@@ -19,7 +19,7 @@
 | 11 | **B. don't** | *We* + động từ thường *have*. | A0-G010 |
 | 12 | **C. The** | Vật duy nhất. | A0-G012 |
 | 13 | **B. five years old** | *be* + số + *years old*. A sai vì thiếu danh từ sau tính từ ghép và có *s*. | A0-G018 |
-| 14 | **B** | Cần *be* trước tính từ. | A0-G008 |
+| 14 | **B** | Cần *be* trước tính từ (A thiếu động từ); C dùng danh từ *kindness* sau *very*; D đặt *very* sau tính từ. | A0-G008 |
 | 15 | **C** | *really* + động từ. | A0-G005 |
 | 16 | There are two **children** in the garden. | Số nhiều bất quy tắc. | A0-G013 |
 | 17 | **Are you** a student? | *be* tự đảo, không dùng *do*. | A0-G016 |
@@ -117,7 +117,7 @@ Mẫu có 69 từ tính cả lời chào/ký tên theo cách tách khoảng tr�
 
 ## Cách tính điểm và bước tiếp
 
-A: 25 điểm; B/C/D: mỗi phần 10. Câu 48 có hai giờ: 0,5 điểm mỗi mốc đúng; các câu khác tối đa 1. Câu 49 cần green2024 theo chỉ dẫn chữ thường/không khoảng trắng trong transcript; lỗi trình bày không làm đổi thông tin ở câu số điện thoại/giờ khác được chấp nhận. Câu đọc 41–45 chấm hiểu thông tin, không trừ vì dùng câu trả lời ngắn; lỗi nhỏ không đổi nghĩa không làm mất điểm.
+A: 25 điểm; B/C/D: mỗi phần 10. Câu 48 có hai giờ: 0,5 điểm mỗi mốc đúng; các câu khác tối đa 1. Câu 49 cần green2024 theo chỉ dẫn chữ thường/không khoảng trắng trong transcript; ở các câu 46–48 và 50, lỗi trình bày không làm đổi thông tin (ví dụ *6.30* thay *6:30*, *750 000* thay *750,000*, viết hoa *SUNRISE*) vẫn được chấp nhận. Câu đọc 41–45 chấm hiểu thông tin, không trừ vì dùng câu trả lời ngắn; lỗi nhỏ không đổi nghĩa không làm mất điểm.
 
 Mốc tự học: tổng A–D ít nhất 39/55, A ít nhất 15/25, B/C/D mỗi phần ít nhất 6/10; Writing và Speaking theo điều kiện riêng trong đề. Nếu chưa có nghe độc lập hoặc chưa ghi âm nói, ghi **chưa đánh giá** cho kỹ năng đó. Không lấy điểm ngữ pháp cao để bù kỹ năng chưa kiểm tra.
 

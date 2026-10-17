@@ -209,7 +209,7 @@ flowchart TD
 | 4 | **Always** I drink tea. | I **always** drink tea. | Đưa *always* lên đầu | *always* không đứng đầu câu (bình thường) |
 | 5 | I go to the gym **two times in a week**. | I go to the gym **twice a week**. | Dịch "hai lần trong một tuần" | *once, twice, three times* + **a** + week |
 | 6 | How often **you** go swimming? | How often **do you** go swimming? | Quên trợ động từ | QUASI |
-| 7 | She **often doesn't** eat breakfast. | She **doesn't often** eat breakfast. | Đặt sai trật tự | aux + adv + V (thường gặp hơn) |
+| 7 | She **often doesn't** eat breakfast. (khi muốn nói *không hay ăn*) | She **doesn't often** eat breakfast. | Hai trật tự khác nghĩa: *often doesn't* = hay bỏ bữa; *doesn't often* = không thường ăn | Chọn trật tự theo ý muốn nói; mẫu luyện của bài là aux + adv + V |
 | 8 | I **sometime** go out. | I **sometimes** go out. | Thiếu *s* | *sometimes* (thỉnh thoảng) — *sometime* nghĩa là "một lúc nào đó" |
 
 ---

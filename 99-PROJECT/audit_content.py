@@ -110,8 +110,8 @@ def audit():
          '## Phân bố module','', '| Module | File Markdown | Đánh giá phạm vi |','|---|---:|---|']
     notes={
       '00-GETTING-STARTED':'8 tài liệu; đã sửa thứ tự A2, chưa tái kiểm định toàn bộ placement/CEFR.',
-      '01-A0-FOUNDATION':'19 bài + kỹ năng; G001–G015 đã đọc đối chiếu, G016–G019 NEEDS_REVIEW.',
-      '02-A1-BEGINNER':'23 bài + giao tiếp/kỹ năng; A1-G023 đã rà soát, các bài khác NEEDS_REVIEW.',
+      '01-A0-FOUNDATION':'19 bài + kỹ năng; 19/19 đã đọc đối chiếu.',
+      '02-A1-BEGINNER':'23 bài + giao tiếp/kỹ năng; 23/23 đã đọc đối chiếu.',
       '04-B1-INTERMEDIATE':'26/26 bài + README (Mini Challenges) + Skills Practice; 26 cặp bài–đáp án đã đọc đối chiếu.',
       '05-B2-UPPER-INTERMEDIATE':'30/30 bài + README + Skills Practice; 30 cặp bài–đáp án đã đọc đối chiếu.',
       '06-GRAMMAR-REFERENCE':'10 tài liệu tra cứu + README (tenses, conditionals, modals, passive, articles, prepositions, lỗi thường gặp, mẫu câu, cheat sheet, master index).',
@@ -133,8 +133,7 @@ def audit():
         out.append(f'| {i} | {s} | {w} | {q} | {"có" if a else "chưa có"} | `{p}` — {reason} |')
     out += ['', '## Vấn đề cấu trúc và nội dung cần xử lý','']
     out += ['- '+x for x in problems] or ['- Không thấy lỗi nhãn/cặp file/H1/code fence/phần A–N trong phạm vi kiểm tra.']
-    out += ['- A0-G016–G019 và A1-G001–G022 còn NEEDS_REVIEW: có đủ cấu trúc và đáp án nhưng chưa được đọc đối chiếu lại toàn bài.',
-            '- Thứ tự tiên quyết: B2-G005 cần B2-G013 (ID đứng sau); B2 README hướng dẫn học G013 trước G005.',
+    out += ['- Thứ tự tiên quyết: B2-G005 cần B2-G013 (ID đứng sau); B2 README hướng dẫn học G013 trước G005.',
             '- Bảng đích liên kết hỏng bên dưới chỉ có nội dung khi kiểm tra phát hiện lỗi.']
     for group in duplicates: out.append('- Trùng toàn file: '+', '.join(group))
     for p in short: out.append('- File ngắn cần xem: '+p)
@@ -145,7 +144,7 @@ def audit():
     out += ['', '## Danh sách toàn bộ file hiện hữu','', 'Danh mục này là kiểm kê, không phải danh sách đã kiểm định học thuật.','']
     out += [f'- `{p.relative_to(ROOT)}`' for p in sorted(files+[REPORT])]
     out += ['', '## Việc tiếp theo','',
-            '1. Đọc đối chiếu các bài A0/A1 còn NEEDS_REVIEW và A0/A1 Exit Test; không viết lại bài COMPLETED chỉ để đổi văn phong.',
+            '1. Khi sửa nội dung, không viết lại bài COMPLETED chỉ để đổi văn phong; ghi căn cứ vào Review Log.',
             '2. Khi thêm/sửa sơ đồ, render lại bằng Mermaid CLI (lần gần nhất: 159/159 khối thành công).',
             '3. Thử nghiệm với người học thật và/hoặc mời giáo viên độc lập góp ý trước khi tuyên bố chất lượng sư phạm.',
             '4. Sau mỗi lần sửa: chạy fix_toc_anchors.py, audit_content.py, check_links.py.',

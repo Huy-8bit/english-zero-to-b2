@@ -110,7 +110,7 @@ Ví dụ:
 - *What **does** she **like**?*
 - *How many children **do** they **have**?*
 
-**Ngoại lệ cần biết ngay:** Who lives here? (Ai sống ở đây?) và Which bus goes to the airport? (Xe buýt nào đi sân bay?) hỏi chính chủ ngữ, nên không thêm do/does trong câu khẳng định trung tính. Who/Which bus đứng trực tiếp trước lives/goes. Bài A2-G029 sẽ luyện sâu; không áp QUASI cho các câu này.
+**Ngoại lệ cần biết ngay:** Who lives here? (Ai sống ở đây?) và Which bus goes to the airport? (Xe buýt nào đi sân bay?) hỏi chính chủ ngữ, nên không thêm do/does trong câu khẳng định trung tính. Who/Which bus đứng trực tiếp trước lives/goes. Bài A2-G029 sẽ luyện sâu; không áp mẹo QUASI (mục J) cho các câu này.
 
 ### Cụm Wh- + danh từ
 

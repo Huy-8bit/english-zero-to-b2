@@ -76,3 +76,11 @@
 Giải thích L4: (1) This is giới thiệu một người gần; (2) those chairs số nhiều nên Are, comfortable là tính từ; (3) this shirt số ít dùng is, but nối hai đặc điểm tương phản; (4) this is tự giới thiệu, Are you hỏi người nghe; (5) that chỉ vật xa, it thay vật trong đáp án, pagoda là danh từ số ít có a.
 
 Rubric L5.1 (4 điểm): đủ 8 lượt; dùng đủ 4 từ đúng khoảng cách; danh từ/be khớp số; hỏi–đáp hợp lý. L5.2: 10 câu chỉ vật, đúng 5 gần/5 xa, thêm một câu với it/they, phát âm đủ khác biệt khi nghe bản ghi; mỗi mục 1 điểm. Không chấm phát âm qua chữ.
+
+## Knowledge Check
+
+1. Số lượng (ít: *this/that*; nhiều: *these/those*) và khoảng cách (gần: *this/these*; xa: *that/those*).
+2. *it* (số ít) hoặc *they* (số nhiều): *Is this your pen? — Yes, it is.*
+3. *Hello, this is Lan.* (Anh-Mỹ cũng *Hi, it's Lan*); không nói ~~I am Lan~~ trên điện thoại.
+4. *Those are old bikes.*
+5. *this* /ðɪs/ — nguyên âm ngắn, âm cuối /s/; *these* /ðiːz/ — nguyên âm dài, âm cuối /z/.

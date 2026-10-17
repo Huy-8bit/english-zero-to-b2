@@ -65,3 +65,11 @@ Wh-: *Where did you go? · Who did you go with? · How long did you stay? · Wha
 **L5.2.** Mẫu:
 
 > *I went to Da Nang. I went with my best friend. We got there by plane. We stayed for four days, in a small hotel near My Khe beach. We swam every morning, visited the Marble Mountains and went to Hoi An one evening. Yes, the food was excellent — I loved mi Quang. And yes, I had a fantastic time!*
+
+## Knowledge Check
+
+1. Nguyên mẫu, vì *did* đã mang dấu hiệu quá khứ; đánh dấu hai lần (~~didn't went~~, ~~Did she went?~~) là sai.
+2. *Were you...?* khi sau chủ ngữ là tính từ/danh từ/nơi chốn (*Were you tired?*); *Did you...?* khi có động từ hành động (*Did you sleep well?*).
+3. *What did you do at the weekend?* (Anh-Mỹ: *on the weekend*).
+4. *She didn't go to bed early.*
+5. Không. *Did/didn't* dùng cho mọi chủ ngữ ở quá khứ.

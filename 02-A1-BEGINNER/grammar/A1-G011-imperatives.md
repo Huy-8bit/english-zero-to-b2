@@ -7,7 +7,7 @@
 - [C. WHAT](#c-what-câu-mệnh-lệnh-là-gì)
 - [D. WHY](#d-why-vì-sao-câu-mệnh-lệnh-không-có-chủ-ngữ)
 - [E. FORM](#e-form-công-thức)
-- [F. HOW](#f-how-6-cách-dùng)
+- [F. HOW](#f-how-10-cách-dùng)
 - [G. VISUAL](#g-visual-explanation)
 - [H. COMPARISON](#h-comparison-mức-độ-lịch-sự)
 - [I. COMMON MISTAKES](#i-common-mistakes)
@@ -63,7 +63,7 @@ Tên gọi "mệnh lệnh" có thể gây hiểu nhầm — câu mệnh lệnh *
 
 ## D. WHY: Vì sao câu mệnh lệnh không có chủ ngữ?
 
-Ở [A0-G007](../../01-A0-FOUNDATION/grammar/A0-G007-subject-verb-object.md), bạn học rằng câu tiếng Anh **luôn cần chủ ngữ**. Câu mệnh lệnh là **ngoại lệ lớn duy nhất**: vì người nghe hiểu ngay rằng "bạn" là người phải làm, nên *you* không cần nói ra.
+Ở [A0-G007](../../01-A0-FOUNDATION/grammar/A0-G007-subject-verb-object.md), bạn học rằng câu tiếng Anh **luôn cần chủ ngữ**. Câu mệnh lệnh là **ngoại lệ quan trọng đầu tiên** bạn gặp (văn nói thân mật cũng hay lược chủ ngữ, ví dụ *Sounds good*, nhưng đó là rút gọn chứ không phải một cấu trúc riêng): vì người nghe hiểu ngay rằng "bạn" là người phải làm, nên *you* không cần nói ra.
 
 ```mermaid
 flowchart LR
@@ -93,7 +93,7 @@ Phủ định vẫn theo "gia đình 2": cần trợ động từ *do* → **Don
 
 ---
 
-## F. HOW: 6 cách dùng
+## F. HOW: 10 cách dùng
 
 | # | Cách dùng | English | Tiếng Việt | Phân tích |
 |---|---|---|---|---|

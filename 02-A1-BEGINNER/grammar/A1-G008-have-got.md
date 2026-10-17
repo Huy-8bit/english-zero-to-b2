@@ -166,7 +166,7 @@ Hai hệ thống **không được trộn**: chọn một và đi hết câu.
 | 3 | She **have got** a cat. | She **has got** a cat. | Quên ngôi 3 | *he/she/it* → *has got* |
 | 4 | I've **got** breakfast at 7 every day. | I **have** breakfast at 7 every day. | Dùng *have got* cho hành động | *have breakfast* là hành động |
 | 5 | "Have you got a pen?" — "Yes, I **do**." | "Yes, I **have**." | Trả lời theo hệ thống *do* | Câu hỏi *Have* → trả lời *have* |
-| 6 | **Have** you a pen? | **Have** you **got** a pen? / **Do** you **have** a pen? | Thiếu *got* | *Have you a...?* rất cổ, không dùng |
+| 6 | **Have** you a pen? (trong bài luyện) | **Have** you **got** a pen? / **Do** you **have** a pen? | Thiếu *got* | *Have you a...?* là biến thể Anh–Anh cũ, hiếm trong giao tiếp hiện nay; không coi là sai nghĩa nhưng hãy luyện hai mẫu thông dụng |
 | 7 | I **got** a car. (ý: tôi có xe) | I**'ve got** a car. | Bỏ *have* trong văn nói nhanh | Văn viết cần *'ve* (*I got* = tôi đã nhận/mua — quá khứ) |
 
 ---

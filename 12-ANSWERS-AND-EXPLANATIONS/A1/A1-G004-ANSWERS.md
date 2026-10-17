@@ -62,3 +62,11 @@
 **L5.2.** Mẫu: *A man is crossing the street. He's carrying a big box. Two children are running to the bus stop. The bus is coming. A woman is waving at the driver. It's getting windy and the trees are moving. A dog is barking at a cat...*
 
 ✅ Tự kiểm tra: mỗi câu có *is/are* + V-ing; nói liên tục ~1 phút.
+
+## Knowledge Check
+
+1. *am/is/are* (cho biết hiện tại, chia theo chủ ngữ) + *V-ing* (hành động đang diễn ra, chưa xong).
+2. Đang xảy ra lúc nói; tạm thời quanh hiện tại; thay đổi/xu hướng đang diễn ra (và kế hoạch đã sắp xếp — học ở A2-G008).
+3. *know* là động từ trạng thái, không mô tả hành động đang diễn ra → *I know*.
+4. *beginning, visiting, lying, making*.
+5. *be* — thì này thuộc gia đình *be*: *Are you working?*, không dùng *do*.

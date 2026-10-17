@@ -26,7 +26,7 @@
 
 ## Trạng thái dự án
 
-**Đủ nội dung theo bản đồ:** 128/128 bài ngữ pháp A0→B2 kèm đáp án, cùng tra cứu ngữ pháp, từ vựng, phát âm, 38 chương bốn kỹ năng, Practice Lab, đề kiểm tra cuối cấp, B2 mock test và tracker. 102 cặp bài–đáp án (A0-G001–G015, A1-G023, A2, B1, B2) đã được đọc đối chiếu; 26 bài A0/A1 còn chờ rà soát lại. Kiểm tra tự động: 0 liên kết nội bộ hỏng.
+**Đủ nội dung theo bản đồ:** 128/128 bài ngữ pháp A0→B2 kèm đáp án, cùng tra cứu ngữ pháp, từ vựng, phát âm, 38 chương bốn kỹ năng, Practice Lab, đề kiểm tra cuối cấp, B2 mock test và tracker. Cả 128 cặp bài–đáp án đã được tác giả đọc đối chiếu (chưa có giáo viên độc lập thẩm định). Kiểm tra tự động: 0 liên kết nội bộ hỏng.
 
 - [IMPLEMENTATION-STATUS.md](IMPLEMENTATION-STATUS.md) — những gì đã hoàn thành và đang thực hiện.
 - [CONTENT-AUDIT.md](CONTENT-AUDIT.md) — báo cáo kiểm định, gồm trạng thái từng bài và kết quả kiểm tra tự động.

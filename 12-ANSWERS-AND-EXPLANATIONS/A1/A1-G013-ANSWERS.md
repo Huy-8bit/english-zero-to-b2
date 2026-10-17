@@ -73,3 +73,11 @@
 1. *Would you like to come to my birthday party on Saturday?* — ✅ *I'd love to! What time?* / ❌ *I'd love to, but I'm visiting my parents this weekend.*
 2. *Would you like to have lunch with our team tomorrow?* — ✅ *Yes, I'd like that.* / ❌ *Sorry, I can't. I have a meeting at 12.*
 3. *Would you like to join our badminton club?* — ✅ *That sounds great!* / ❌ *Thanks, but I'm not very good at sports.*
+
+## Knowledge Check
+
+1. *I like coffee* = sở thích chung, lâu dài (tôi thích cà phê); *I'd like a coffee* = mong muốn cụ thể bây giờ, lịch sự (cho tôi một ly cà phê).
+2. *would like* + **to** + V nguyên mẫu: *I'd like to book a table.* (không *go*, không *going*).
+3. Đồng ý: *Yes, please.* / *That would be lovely.* — Từ chối: *No, thank you.* / *No, thanks. I'm full.*
+4. Đồng ý: *I'd love to!* / *Yes, I'd like that.* — Từ chối: *I'd love to, but I can't. I'm busy.* (nên kèm lý do ngắn).
+5. *Would* tạo khoảng cách giả định ("tôi sẽ muốn... nếu được"), nghe mềm hơn; *want* trực tiếp, với người lạ/khách hàng có thể nghe như đòi hỏi. Giữa bạn bè *Do you want...?* vẫn bình thường.

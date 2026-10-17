@@ -65,3 +65,11 @@
 **L5.2.** Mẫu:
 
 > *My birthday is on the 12th of June, in summer. I usually have a small party at home. At Tet, I go back to my hometown and stay with my family for a week. In April, my company has a holiday, so we often travel. My favourite season is autumn — in October, the weather in Hanoi is perfect. On New Year's Eve, I watch the fireworks at midnight with my friends.*
+
+## Knowledge Check
+
+1. *at* + giờ/thời điểm (*at 7 o'clock*, *at noon*, *at the weekend* Anh-Anh); *on* + ngày/thứ/ngày tháng (*on Monday*, *on 2nd May*); *in* + tháng/năm/mùa/thế kỷ/buổi (*in May*, *in 2025*, *in the morning*).
+2. Đây là cụm cố định theo thói quen: *in the morning/afternoon/evening* (khoảng thời gian trong ngày) nhưng *at night* (thường coi như một mốc); *in the night* vẫn có nhưng mang nghĩa "trong đêm, giữa đêm" (*I woke up in the night*).
+3. Không dùng giới từ trước *this/next/last/every/each* và *today, tomorrow, yesterday*: *next Monday*, *last year*, *every day*.
+4. *on Monday morning* — khi buổi gắn với một ngày cụ thể thì dùng *on* theo ngày, không dùng *in*.
+5. *in ten minutes* = 10 phút nữa (tính từ bây giờ); *after ten minutes* thường dùng cho chuyện đã/sẽ xảy ra sau một mốc khác, *within ten minutes* = trong vòng 10 phút.

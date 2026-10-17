@@ -78,3 +78,11 @@
 5. Giới thiệu nghề theo loại: a/an; xác định đúng người đang nói tới có thể dùng the; nghề số nhiều không dùng a/an.
 
 L5.1 mẫu có 7 câu. Rubric 4 điểm: đủ 6–8 câu; mỗi mạo từ có lý do theo ngữ cảnh; a/an đúng âm; dạng số ít/số nhiều/không đếm được phù hợp. L5.2 là ý gợi ý để nói tới 45 giây; thêm vị trí/màu của đồ vật nếu cần. Không bắt buộc mọi lần nhắc đầu đều a/an vì người nghe có thể đã xác định đối tượng.
+
+## Knowledge Check
+
+1. Người nghe đã biết đúng cái/người nào chưa? Chưa → *a/an*; biết rồi hoặc chỉ có một → *the*.
+2. Chọn theo **âm** đầu, không theo chữ: *university* bắt đầu bằng âm /j/ (phụ âm) → *a*; *hour* có *h* câm, bắt đầu bằng nguyên âm → *an*.
+3. Đã nhắc trước đó (*I saw a dog. The dog was big.*); duy nhất (*the sun, the moon*); người nghe biết từ ngữ cảnh (*Close the door, please.*).
+4. *I like cats* = mèo nói chung; *I like the cats* = những con mèo cụ thể mà cả hai đều biết.
+5. *a/an*: *She is a doctor. He is an engineer.*

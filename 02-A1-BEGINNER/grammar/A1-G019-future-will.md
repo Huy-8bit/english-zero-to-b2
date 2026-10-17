@@ -7,7 +7,7 @@
 - [C. WHAT](#c-what-will-là-gì)
 - [D. WHY](#d-why-will-là-quyết-định-trong-đầu-người-nói)
 - [E. FORM](#e-form-công-thức)
-- [F. HOW](#f-how-5-cách-dùng)
+- [F. HOW](#f-how-các-cách-dùng)
 - [G. VISUAL](#g-visual-explanation)
 - [H. COMPARISON](#h-comparison)
 - [I. COMMON MISTAKES](#i-common-mistakes)
@@ -106,7 +106,7 @@ Vì *will* là modal verb, nó tuân theo **ba quy tắc vàng** ([A1-G012](A1-G
 | Mẫu | Ví dụ |
 |---|---|
 | *I think* + S + *will* | *I think she'**ll** like it.* |
-| *I don't think* + S + *will* | *I **don't think** he'**ll** come.* (không nói *I think he won't come* — kém tự nhiên hơn) |
+| *I don't think* + S + *will* | *I **don't think** he'**ll** come.* (*I think he won't come* vẫn đúng nhưng ít tự nhiên hơn) |
 | *will* + *probably / definitely* | *We'**ll probably** be late.* / *It'**ll definitely** be fun.* |
 | *probably / definitely* + *won't* | *She **probably won't** call.* |
 
@@ -119,7 +119,7 @@ Vì *will* là modal verb, nó tuân theo **ba quy tắc vàng** ([A1-G012](A1-G
 
 ---
 
-## F. HOW: 5 cách dùng
+## F. HOW: Các cách dùng
 
 | # | Cách dùng | English | Tiếng Việt | Phân tích |
 |---|---|---|---|---|

@@ -36,7 +36,7 @@
 **11.** We ___ have a car. We go everywhere by bus.  A. aren't  B. don't  C. doesn't  D. isn't
 **12.** ___ moon looks big tonight.  A. A  B. An  C. The  D. (không cần)
 **13.** My little sister is ___.  A. a five-years-old  B. five years old  C. five year old  D. has five years
-**14.** Which sentence is correct?  A. She very kind.  B. She is very kind.  C. She is very kindness.  D. She is very kindly.
+**14.** Which sentence is correct?  A. She very kind.  B. She is very kind.  C. She is very kindness.  D. She is kind very.
 **15.** Which sentence is correct?  A. I like very much tea.  B. I very like tea.  C. I really like tea.  D. I like tea very.
 
 ### A2. Mỗi câu có một lỗi. Viết lại câu đúng (16–20)

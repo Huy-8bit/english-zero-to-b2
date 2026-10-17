@@ -70,3 +70,11 @@ Wh-: *Where do you come from? · How do you get to work? · What time do you sta
 - Câu hỏi có thể hỏi: *Do you really get up at 5 on Sundays? — Yes, I do.* / *Do you eat noodles? — Yes, I do.* / *Do you have a guitar? — Yes, I do.*
 
 ✅ Tiêu chí: 3 câu khẳng định/phủ định đúng; câu hỏi Yes/No dùng *Do* + *you* + V; trả lời ngắn *Yes, I do / No, I don't*.
+
+## Knowledge Check
+
+1. *does* đã mang dấu hiệu ngôi 3 số ít; động từ chính chỉ cần dạng nguyên mẫu, không lặp *-s*.
+2. *What do you do?* / *What does he do?*
+3. *No, they don't.*
+4. Nếu động từ chính là *be* (*am/is/are*) → đảo *be*; nếu là động từ thường → dùng *do/does*.
+5. *What does "schedule" mean?*

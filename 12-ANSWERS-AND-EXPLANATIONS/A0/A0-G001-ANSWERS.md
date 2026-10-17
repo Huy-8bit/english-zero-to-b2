@@ -87,3 +87,11 @@
 5. Double S hoặc S, S; phải truyền đủ hai chữ.
 
 Chấm L5.1: 1 điểm cho mỗi tiêu chí: 6–8 lượt, đánh vần đủ tên, xác nhận một chữ, sửa/xác nhận rõ. L5.2: mỗi tên đúng đủ chữ và người nghe chép lại được = 1/5; không đánh giá phát âm chỉ từ bản viết. L5.3: 1 điểm mỗi chữ đúng vị trí, tối đa 12; ghi rõ đã xem danh sách.
+
+## Knowledge Check
+
+1. E đọc /iː/ ("i"), I đọc /aɪ/ ("ai") — người Việt hay nhầm hai chữ này.
+2. A, H, J, K.
+3. @ = *at*, dấu chấm = *dot*: *lan.nguyen@gmail.com* → *lan dot nguyen at gmail dot com*.
+4. A, E, I, O, U (Y đôi khi đóng vai nguyên âm, ví dụ *my*, *happy*).
+5. *double S* (ví dụ *Jessica* → J-E-double S-I-C-A).

@@ -75,3 +75,11 @@
 5. Gợi ý tìm quan hệ mô tả/định danh trong câu liên kết; không phải phép thử tuyệt đối.
 
 L4.2 chấm ba bản dịch đủ nghĩa và V/C; L4.3 chấp nhận nghĩa thay đổi được giải thích. L5.1 mẫu có 6 câu và 5 linking verb khác nhau. Rubric 4 điểm: đủ số câu/thời lượng; đủ động từ khác nhau; C phù hợp ý; mô tả mạch lạc, dễ hiểu. L5.2 là mẫu ngắn để mở rộng tới 30 giây; không chấm phát âm qua bản viết.
+
+## Knowledge Check
+
+1. S + V (*She sleeps*), S + V + O (*She reads books*), S + V + C (*She is a doctor / happy*).
+2. Bổ ngữ mô tả hoặc đồng nhất với chủ ngữ (S = C); tân ngữ là người/vật chịu tác động, khác với chủ ngữ.
+3. Ví dụ: *be, become, seem, look, feel, taste, smell, sound, get*.
+4. Sau động từ liên kết *taste* cần tính từ (bổ ngữ), không phải trạng từ: *The food tastes good.*
+5. Kiểm tra xem phần sau động từ có "bằng" chủ ngữ không: nếu S = phần đó → bổ ngữ (S + V + C); nếu không → tân ngữ.

@@ -72,3 +72,11 @@
 5. Ph trong phone, photo biểu thị /f/.
 
 Tự chấm L4.1: mỗi cặp phải gồm hai từ có thật, đúng mẫu và chưa dùng ở trên. L4.2: đủ 4 từ /k/ và 2 từ /s/, tra từ điển để xác nhận. L4.3: chỉ rõ nhóm chữ, âm tương ứng, ngoại lệ và cả từ; white /ʍaɪt/ theo giọng phù hợp cũng được. L4.4: đủ bốn từ và phát âm đúng trong dạng từ đã chọn. L5.1: nghe lại bản ghi, đánh dấu âm cuối, các nhóm chữ và th; chỉ chấm phát âm khi có âm thanh. L5.2: 1 điểm/từ đúng chính tả (6 điểm), ghi điều kiện đã xem danh sách; âm nghe không luôn suy ra duy nhất cách viết.
+
+## Knowledge Check
+
+1. Tên chữ cái là cách gọi khi đánh vần; âm là cách chữ được đọc trong từ. C có tên /siː/ nhưng đọc /k/ trong *cat* và /s/ trong *city*.
+2. Một nguyên âm + phụ âm + *e* cuối câm → nguyên âm thường đọc như tên chữ cái (*cap → cape*, *kit → kite*). Ngoại lệ: *have, give, come* (thêm *some, love, done, live* động từ).
+3. Thường trước *e, i, y*: *city, cent, cycle* (là xu hướng, không phải luật tuyệt đối).
+4. *w* trong *write*, *k* trong *know*, *b* trong *lamb*.
+5. /f/: *phone, photo*.

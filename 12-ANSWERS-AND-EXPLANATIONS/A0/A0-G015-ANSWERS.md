@@ -78,3 +78,11 @@ L4.1 cũng chấp nhận There are two chairs and a bed in my room hoặc tách 
 M1: is với số ít/U, are với số nhiều trong mẫu viết. M2: U dùng is. M3: In my room là cụm nơi chốn, không phải chủ ngữ sở hữu của has. M4: How many students are there in your class? M5: There's a garden giới thiệu vườn tồn tại; We have a garden nói mối quan hệ sở hữu/sử dụng của chúng tôi.
 
 L5.1 mẫu có 7 câu; chấm đủ 7–9 câu, đủ khẳng định/phủ định, hòa hợp, dùng It is/have đúng nghĩa (4 điểm). L5.2 chấm đủ bốn câu hỏi, đúng số, rõ địa điểm, người nghe hiểu (4 điểm); câu hỏi số ít không bắt buộc thêm any.
+
+## Knowledge Check
+
+1. *There is* + danh từ số ít hoặc không đếm được; *there are* + danh từ số nhiều.
+2. Không đếm được (*There is some milk*); số nhiều dùng *there are*.
+3. Dịch từng chữ "Trong phòng tôi có..."; tiếng Anh cần chủ ngữ: *There is a bed in my room.* hoặc *My room has a bed.*
+4. *How many students are there in your class?*
+5. *There's a garden* nói về sự tồn tại (có một khu vườn ở đó); *We have a garden* nói về sở hữu (chúng tôi có vườn).

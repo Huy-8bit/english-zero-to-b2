@@ -190,7 +190,7 @@ Tiếng Việt thích dùng cặp "**Vì**... **nên**...", "**Tuy**... **nhưng
 | 5 | **Because** it was cold. (đứng một mình trong bài viết) | We stayed inside **because** it was cold. | Câu không hoàn chỉnh (fragment) | Trong văn viết, *because*-clause cần mệnh đề chính |
 | 6 | It was raining **so** we stayed home. (văn viết trang trọng) | It was raining**,** so we stayed home. | Thiếu dấu phẩy | Dấu phẩy trước *so* |
 | 7 | I like football, **and** I like basketball, **and** I like tennis. | I like football, basketball and tennis. | Lặp *and* | Liệt kê với dấu phẩy |
-| 8 | **But** I like it. (mở đầu đoạn viết trang trọng) | **However,** I like it. | *But* đầu câu không hợp văn trang trọng | Văn trang trọng dùng *However* ([B1-G018](../../04-B1-INTERMEDIATE/grammar/B1-G018-linking-words.md)) |
+| 8 | **But** I like it. (mở đầu đoạn viết trang trọng) | **However,** I like it. | *But* đầu câu thường được tránh trong văn học thuật/rất trang trọng (văn thường và báo chí vẫn dùng) | Văn trang trọng ưu tiên *However,* ([B1-G018](../../04-B1-INTERMEDIATE/grammar/B1-G018-linking-words.md)) |
 
 ---
 

@@ -68,3 +68,11 @@
 > *I usually get up at six. I have breakfast with my family and then I go to work by motorbike. I start work at eight. I work in an office, so I answer emails and go to meetings. I have lunch at twelve with my colleagues. I finish work at five thirty. In the evening, I cook dinner, I study English for an hour, and I go to bed at eleven.*
 
 ✅ Tự kiểm tra: dùng *I* + V nguyên mẫu (không thêm *-s*); có các mốc giờ; nói liên tục khoảng 1 phút.
+
+## Knowledge Check
+
+1. Thói quen/việc lặp lại; sự thật, quy luật; trạng thái lâu dài; cảm xúc, suy nghĩ, sở hữu (động từ trạng thái); lịch trình, thời gian biểu.
+2. Thêm *-es* sau *-s, -ss, -sh, -ch, -x, -z, -o* (*watches, goes*); phụ âm + *y* → *-ies* (*studies*); nguyên âm + *y* chỉ thêm *-s* (*plays*).
+3. *he, she, it*, danh từ số ít, danh từ không đếm được và *everyone/everybody/somebody/nobody*. *Everybody* là ngôi 3 số ít: *Everybody loves her.*
+4. Câu đã có động từ chính *work*; không ghép *is* với động từ nguyên mẫu. Đúng: *She works...*
+5. *does* /dʌz/; *says* /sez/ — khác cách đọc *do* /duː/ và *say* /seɪ/.

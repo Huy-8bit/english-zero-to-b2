@@ -64,3 +64,11 @@
 4. *I'm hardly ever late, but sometimes the traffic is terrible.*
 5. *I call my parents every evening.*
 6. *No, never!*
+
+## Knowledge Check
+
+1. Trước động từ thường (*I often cook*); sau *be* (*She is always late*); giữa trợ động từ và động từ chính (*I don't usually eat...*).
+2. *never* đã mang nghĩa phủ định; thêm *don't* tạo phủ định kép. Dùng *I never...* hoặc *I don't ever...*
+3. *three times a week*.
+4. Chủ yếu trong câu hỏi (*Do you ever...?*); cũng gặp trong phủ định (*I don't ever...* = *I never...*).
+5. *sometimes* = thỉnh thoảng (tần suất); *sometime* = vào một lúc nào đó (*Let's meet sometime next week*).

@@ -113,7 +113,7 @@ flowchart TD
 | *She's taller **than me**.* | *She's taller **than I am**.* |
 | *He's older **than her**.* | *He's older **than she is**.* |
 
-> ❌ *She's taller than I.* — đúng ngữ pháp cổ, nhưng nghe rất cứng; tránh dùng.
+> ⚠️ *She's taller than I.* — vẫn gặp trong văn rất trang trọng nhưng nghe cứng; trong giao tiếp nên dùng *than me* hoặc *than I am*.
 
 ### E4. Nhấn mạnh mức độ khác biệt
 
@@ -162,7 +162,7 @@ flowchart TD
 `Flat B | is | much | more spacious | than | flat A.`
 
 - *much* — mức độ khác biệt (nhiều)
-- *more spacious* — so sánh hơn (3 âm tiết: *spa-cious*... thực ra 2 âm tiết nhưng không tận cùng -y → *more*)
+- *more spacious* — so sánh hơn (*spa-cious* có 2 âm tiết, không tận cùng *-y* → *more*)
 - *than* — "hơn"
 - *flat A* — đối tượng so sánh
 

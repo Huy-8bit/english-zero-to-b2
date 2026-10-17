@@ -197,7 +197,7 @@ nothing    special    someone   famous           everywhere else
 | 4 | I don't have **no** money. | I don't have **any** money. / I have **no** money. | Phủ định kép | *no* + V khẳng định |
 | 5 | I have **some** egg. | I have **an** egg / **some** eggs. | Dùng *some* với số ít | *some* + số nhiều / không đếm được |
 | 6 | **Somebody are** at the door. | **Somebody is** at the door. | Nghĩ "ai đó" là nhiều người | Từ ghép → số ít |
-| 7 | I want something **to eat cold**. → I want **cold something**. | I want **something cold** to eat. | Tính từ đặt trước | *something* + adj |
+| 7 | I want **cold something** to eat. | I want **something cold** to eat. | Đặt tính từ trước như với danh từ thường | *something* + adj (+ *to* V) |
 | 8 | **Nobody doesn't** know. | **Nobody** knows. | Phủ định kép | *Nobody* đã phủ định |
 
 ---
@@ -300,7 +300,7 @@ Dịch sang tiếng Anh:
 
 - [ ] Tôi dùng *some/any* đúng trong ba loại câu.
 - [ ] Tôi dùng *some* trong lời mời/yêu cầu.
-- [ ] Tôi dùng được 8 từ ghép *some-/any-/no-*.
+- [ ] Tôi dùng được các từ ghép *some-/any-/no-/every-* (người, vật, nơi chốn).
 
 ### 3 lỗi quan trọng cần nhớ
 

@@ -56,10 +56,18 @@
 
 > *The day I will never forget was my university graduation. First, I got up very early and put on my graduation gown. Then my parents drove me to the university. After that, we took a lot of photos with my friends. When the ceremony began, I felt nervous. Finally, I heard my name, walked onto the stage and got my certificate. My mother cried and my father smiled. In the evening, we went to a restaurant and ate a big dinner. It was a wonderful day.*
 
-✅ Tiêu chí: ≥ 6 động từ bất quy tắc (*got, put, drove, took, began, felt, heard, cried, went, ate*...); có *first, then, after that, finally*.
+✅ Tiêu chí: ≥ 6 động từ bất quy tắc (*got, put, drove, took, began, felt, heard, went, ate*; còn *cried, walked, smiled* là động từ có quy tắc); có *first, then, after that, finally*.
 
 **L5.2.** Mẫu:
 
 > *Last weekend, I visited my grandparents in the countryside. On Saturday morning, I cooked lunch with my grandmother. In the afternoon, we walked around the village and talked a lot. On Sunday, I played football with my cousins, and then I watched a film. I returned to the city in the evening. I needed a long sleep!*
 
 ✅ Kiểm tra phát âm: *visited* /ɪd/, *cooked* /t/, *walked* /t/, *talked* /t/, *played* /d/, *watched* /t/, *returned* /d/, *needed* /ɪd/.
+
+## Knowledge Check
+
+1. Hành động/sự việc đã xảy ra và đã kết thúc trong quá khứ, thường ở một thời điểm xác định (*last year, yesterday*); cũng dùng cho chuỗi hành động khi kể chuyện và thói quen/tình trạng đã chấm dứt.
+2. /t/ sau âm vô thanh (*worked*), /d/ sau âm hữu thanh và nguyên âm (*played*), /ɪd/ chỉ khi động từ tận cùng bằng âm /t/ hoặc /d/ (*wanted, needed*).
+3. Tự kiểm tra với bảng E4, ví dụ: *went, ate, saw, came, took, gave, thought, bought, wrote, left*.
+4. Quá khứ đơn không thêm *-s* cho ngôi 3; *watched* đã là quá khứ → *He watched TV.*
+5. *was* + tính từ/danh từ/nơi chốn (*I was tired*); V2 cho hành động (*I slept early*). Không ghép *was* + V2 trong câu chủ động (~~I was visited~~).

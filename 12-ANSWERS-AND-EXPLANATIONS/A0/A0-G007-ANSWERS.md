@@ -70,3 +70,11 @@
 5. Sleep, laugh, cry có thể dùng không có O: I sleep; We laugh; Babies cry.
 
 L4/L5 tự chấm: đủ số câu, mỗi câu có S/V theo mẫu, O đúng với nghĩa động từ, phân biệt nơi/thời gian/cách thức với O; mỗi tiêu chí 1 điểm. L5.1 mẫu có 5 câu; ghi cả cụm S/O, không chỉ từ chính. L5.2 phải nói đủ 5 câu; có thể đổi thành viên để đúng gia đình thực tế.
+
+## Knowledge Check
+
+1. Tìm động từ (hành động/trạng thái) → hỏi "Ai/cái gì + động từ?" để ra chủ ngữ → hỏi "Động từ + ai/cái gì?" để ra tân ngữ.
+2. Có: *My older brother* trong *My older brother works in Hanoi*; cả cụm là chủ ngữ.
+3. Không. Chúng trả lời "ở đâu/khi nào", là trạng ngữ; tân ngữ trả lời "động từ + ai/cái gì".
+4. Không đặt trạng từ giữa động từ và tân ngữ: *I like coffee very much.*
+5. Ví dụ: *sleep, arrive, go, cry, laugh* (*She sleeps. He arrived.*).

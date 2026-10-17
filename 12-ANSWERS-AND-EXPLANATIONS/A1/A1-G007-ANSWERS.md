@@ -62,3 +62,11 @@
 > *My best friend is Quan. I meet **him** every weekend, and he always listens to **me**. My grandparents live in the countryside. I visit **them** every Tet, and they always give **us** lucky money. My manager is Ms Lan. I respect **her** a lot because she teaches **me** many useful things.*
 
 ✅ Tiêu chí: mỗi người có 2–3 câu; đại từ tân ngữ đứng sau động từ/giới từ; không dùng *I/he/they* ở vị trí tân ngữ.
+
+## Knowledge Check
+
+1. *me, you, him, her, it, us, them*.
+2. Sau động từ (*I know him*) và sau giới từ (*for you, with us*); ngoài ra là tân ngữ gián tiếp trong mẫu hai tân ngữ (*She gave me a book*).
+3. Khi vật là đại từ (*it, them*), mẫu chuẩn là vật + *to/for* + người: *Give it to me*. *Give me it* chỉ gặp trong văn nói thân mật.
+4. Bỏ người kia rồi thử: *My friend and I are...* (*I are* → chủ ngữ → *I*); *She invited my friend and me* (*She invited me* → tân ngữ → *me*).
+5. *buy* và *cook* đi với *for*; *give* và *send* đi với *to*.

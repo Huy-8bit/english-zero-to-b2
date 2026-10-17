@@ -63,3 +63,11 @@
 - *Have I got any sunscreen? — No, I haven't. I can buy some at the airport.*
 - *Have I got enough money? — Yes, I have.*
 - *Have I got my toothbrush? — Yes, it's in my bag.*
+
+## Knowledge Check
+
+1. Cùng nghĩa "có"; *have got* thân mật, phổ biến trong văn nói Anh–Anh; *have* trung tính, dùng được ở Anh và Mỹ, nên dùng trong văn viết trang trọng.
+2. Trong *have got*, *have* là trợ động từ nên tự đảo lên đầu câu và tự gắn *not* (giống *be*).
+3. *He hasn't got a car.*
+4. *has* — vì sau nó có *got* (*She has got a cold*).
+5. *have breakfast* là hành động (ăn sáng), không phải sở hữu; *have got* chỉ dùng cho nghĩa "có".

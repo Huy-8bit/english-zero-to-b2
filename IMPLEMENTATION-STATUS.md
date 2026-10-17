@@ -1,10 +1,10 @@
 # Implementation Status
 
-**Cập nhật: 2026-10-17. Toàn bộ nội dung theo Curriculum Map đã được xây dựng; kiểm tra tự động sạch. 26 bài A0/A1 còn chờ đọc đối chiếu lại (xem Pending).**
+**Cập nhật: 2026-10-17. Toàn bộ nội dung theo Curriculum Map đã được xây dựng; 128/128 cặp bài–đáp án đã đọc đối chiếu; kiểm tra tự động sạch.**
 
 ## Tổng quan đã xác minh
 
-Root: `english-zero-to-b2/`, Git repo private [`Huy-8bit/english-zero-to-b2`](https://github.com/Huy-8bit/english-zero-to-b2) (nhánh `main`). Có **128/128 bài ngữ pháp và đáp án**: A0 19, A1 23, A2 30, B1 26, B2 30. **102 cặp COMPLETED** (A0-G001–G015, A1-G023, A2 30/30, B1 26/26, B2 30/30), **26 NEEDS_REVIEW** (A0-G016–G019, A1-G001–G022), **0 NOT_STARTED**. COMPLETED của một cặp không chứng nhận cả cấp độ. [Content Audit](CONTENT-AUDIT.md) là danh mục chi tiết; [Review Log](99-PROJECT/REVIEW-LOG.md) lưu căn cứ biên tập.
+Root: `english-zero-to-b2/`, Git repo private [`Huy-8bit/english-zero-to-b2`](https://github.com/Huy-8bit/english-zero-to-b2) (nhánh `main`). Có **128/128 bài ngữ pháp và đáp án**: A0 19, A1 23, A2 30, B1 26, B2 30. **128 cặp COMPLETED** (A0 19/19, A1 23/23, A2 30/30, B1 26/26, B2 30/30), **0 NEEDS_REVIEW**, **0 NOT_STARTED**. COMPLETED của một cặp không chứng nhận cả cấp độ. [Content Audit](CONTENT-AUDIT.md) là danh mục chi tiết; [Review Log](99-PROJECT/REVIEW-LOG.md) lưu căn cứ biên tập.
 
 ## Completed
 
@@ -16,7 +16,7 @@ Root: `english-zero-to-b2/`, Git repo private [`Huy-8bit/english-zero-to-b2`](ht
 - **10-PRACTICE-LAB:** LAB-01–LAB-10 (drill hằng ngày, bài trộn, sửa lỗi, viết lại câu, dịch, hội thoại, thử thách nói/viết, ôn tuần/tháng) + README; đáp án/hướng dẫn.
 - **11-EXAMS-AND-ASSESSMENTS:** Exit Test A0–B1, B2 Mock Test 1–2, VSTEP-style Mock Exam 1–2 (*mô phỏng định dạng, không phải đề chính thức*), Grammar Diagnostic Test, Vocabulary Assessment, Skill Evaluation Rubrics; đáp án và transcript đầy đủ.
 - **13-LEARNING-TRACKER:** Progress, Error Log, Spaced Repetition, Weekly Review, Grammar Checklist, Vocabulary Tracker, Monthly Assessment, B2 Readiness Checklist.
-- **Kiểm định:** đọc đối chiếu toàn bộ 56 cặp B1/B2 (phần B–M + đáp án), sửa 20 bài; chi tiết trong Review Log ngày 2026-10-17.
+- **Kiểm định:** đọc đối chiếu toàn bộ 128 cặp bài–đáp án (phần B–M + đáp án) và Exit Test A0–B1; batch 2026-10-17 gồm 56 cặp B1/B2 (sửa 20 bài) và 26 cặp A0/A1 (sửa nhỏ 17 bài, thêm Knowledge Check cho mọi file đáp án A0/A1). Chi tiết trong Review Log.
 
 ## In Progress
 
@@ -24,8 +24,7 @@ Root: `english-zero-to-b2/`, Git repo private [`Huy-8bit/english-zero-to-b2`](ht
 
 ## Pending
 
-1. Đọc đối chiếu 26 bài A0/A1 còn NEEDS_REVIEW (A0-G016–G019, A1-G001–G022) và A0/A1 Exit Test; không viết lại bài tốt chỉ để đổi văn phong.
-2. Thử nghiệm với người học thật / giáo viên độc lập trước khi tuyên bố chất lượng sư phạm.
+1. Thử nghiệm với người học thật / giáo viên độc lập trước khi tuyên bố chất lượng sư phạm.
 
 ## Known Issues
 
@@ -44,11 +43,11 @@ python3 99-PROJECT/audit_content.py
 python3 99-PROJECT/check_links.py
 ```
 
-Kết quả 2026-10-17: 128/128 bài, 0 lỗi cấu trúc/nhãn bài–đáp án, 4.569 lượt liên kết nội bộ, **0 hỏng**, 0 anchor hỏng, 0 bảng lỗi dòng phân cách, 0 cảnh báo Mermaid theo heuristic, 0 marker TODO/TBD. 159/159 khối Mermaid render SVG thành công bằng Mermaid CLI + Chrome (chi tiết ở Review Log).
+Kết quả 2026-10-17: 128/128 bài, 0 lỗi cấu trúc/nhãn bài–đáp án, 4.570 lượt liên kết nội bộ, **0 hỏng**, 0 anchor hỏng, 0 bảng lỗi dòng phân cách, 0 cảnh báo Mermaid theo heuristic, 0 marker TODO/TBD. 159/159 khối Mermaid render SVG thành công bằng Mermaid CLI + Chrome (chi tiết ở Review Log).
 
 ## Next Agent Instructions
 
-Đọc file này, Curriculum Map, AUTHORING-STANDARDS, Review Log và Content Audit. Việc còn lại là rà A0/A1 NEEDS_REVIEW theo đúng quy trình đọc đối chiếu bài–đáp án; sau mỗi batch cập nhật bảng quyết định trong Review Log, chạy ba lệnh kiểm tra, rồi commit và push lên `origin main`.
+Đọc file này, Curriculum Map, AUTHORING-STANDARDS, Review Log và Content Audit. Không còn bài NEEDS_REVIEW. Việc tiếp theo hợp lý là thử nghiệm với người học thật/giáo viên độc lập và sửa theo phản hồi; mỗi lần sửa cập nhật Review Log, chạy ba lệnh kiểm tra, rồi commit và push lên `origin main`.
 
 ---
 

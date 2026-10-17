@@ -87,3 +87,11 @@ L4.1 from Hanoi cần be, hỏi you bằng Are; L4.2 mother số ít chọn does
 M1: be tự thêm not/đảo; động từ thường hiện tại đơn dùng do/does. M2: like nghĩa thích là động từ thường, không dùng are để hỏi. M3: She doesn't have a car. M4: Yes, he does / No, he doesn't. M5: trong mẫu có does/doesn't, V chính là nguyên thể.
 
 L5.1: 8 câu đúng nhóm = 8 điểm, 8 đáp ngắn khớp = 8 điểm; tự báo hai phần riêng để biết lỗi đặt câu hay trả lời. L5.2 có sáu câu, mỗi đáp đúng nghĩa/ngữ pháp 1 điểm; các dữ kiện cá nhân tự thay, không có đáp án sự thật bắt buộc.
+
+## Knowledge Check
+
+1. Gia đình 1: *be* — tự đảo lên đầu (*Are you...?*), tự thêm *not*. Gia đình 2: động từ thường — cần *do/does* (*Do you...?*, *don't/doesn't*).
+2. *like* là động từ thường (gia đình 2), không đi với *be*: *Do you like...?*
+3. *She doesn't have a car.*
+4. *Yes, he does. / No, he doesn't.*
+5. Khi đã có *does/doesn't* (trong câu hỏi và phủ định): *Does she work? She doesn't work.*

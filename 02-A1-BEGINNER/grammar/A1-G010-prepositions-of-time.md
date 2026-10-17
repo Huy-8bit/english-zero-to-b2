@@ -238,7 +238,7 @@ flowchart TD
 >
 > *Thank you for your email. I'm afraid I'm not available **on** Monday because I have a training course **from** 9 a.m. **until** 4 p.m. However, I'm free **on** Tuesday morning or **on** Wednesday **after** 2 p.m.*
 >
-> *Alternatively, we can meet **next** week. I'm on holiday **from** 20th **to** 24th May, but I'll be back in the office **on** Monday, 27th May.*
+> *Alternatively, we can meet **next** week. I'm on holiday **from** 20th **to** 24th May, but I'll be back in the office **on** 27th May.*
 >
 > *Our office is closed **at** lunchtime, **from** 12 **to** 1 p.m., so please avoid that time.*
 >
@@ -247,7 +247,7 @@ flowchart TD
 > *Best regards,*
 > *Tran Minh Khoa*
 
-**Vietnamese explanation:** Khoa trả lời email xếp lịch họp: thứ Hai bận khóa đào tạo từ 9h–16h; rảnh sáng thứ Ba hoặc thứ Tư sau 2 giờ chiều; có thể gặp tuần sau nhưng nghỉ phép từ 20–24/5, quay lại văn phòng thứ Hai 27/5; văn phòng đóng cửa giờ trưa 12h–13h.
+**Vietnamese explanation:** Khoa trả lời email xếp lịch họp: thứ Hai bận khóa đào tạo từ 9h–16h; rảnh sáng thứ Ba hoặc thứ Tư sau 2 giờ chiều; có thể gặp tuần sau nhưng nghỉ phép từ 20–24/5, quay lại văn phòng ngày 27/5; văn phòng đóng cửa giờ trưa 12h–13h.
 
 **Useful expressions (email):**
 - *I'm afraid I'm not available...* — Tôi e là tôi không rảnh...

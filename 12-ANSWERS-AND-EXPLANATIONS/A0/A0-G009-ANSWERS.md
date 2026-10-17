@@ -82,3 +82,11 @@
 5. Không thêm be trước động từ chính đã chia hiện tại đơn như I work, She works; be + V-ing là cấu trúc khác sẽ học sau.
 
 L5.1: chấm đủ 6–8 câu và các ý đề yêu cầu; be khớp chủ ngữ; có phủ định; tuổi/nghề đúng mẫu, mỗi mục 1 điểm. L5.2: 1 điểm mỗi câu trả lời đủ ý và đúng be (5 điểm); kiểm tra âm thanh riêng, không quy điểm chữ thành điểm phát âm.
+
+## Knowledge Check
+
+1. *I am*; *she is*; *they are*; *my mother is*; *the books are*.
+2. *He isn't happy.* — *Is he happy?*
+3. Câu trả lời ngắn khẳng định không kết thúc bằng dạng rút gọn: *Yes, I am.*
+4. *be*: *I'm 25 (years old).*
+5. Khi câu đã có động từ chính chia ở hiện tại đơn: *I work here* (không phải ~~I am work here~~).

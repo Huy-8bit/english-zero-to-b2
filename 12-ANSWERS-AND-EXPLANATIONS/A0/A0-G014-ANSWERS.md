@@ -86,3 +86,11 @@ L4.1 glasses là đơn vị số nhiều, water giữ nguyên; L4.2 luggage khô
 5. Time là thời gian; times là số lần trong three times a week.
 
 Rubric L5.1: đúng 6–8 dòng, có nguyên liệu/lượng, đúng C/U, đơn vị và dạng số nhiều đúng; mỗi mục 1 điểm. L5.2 mẫu có sáu nhóm món/đồ uống; chấm đủ sáu nhóm, lượng rõ, đúng đơn vị, lời nói dễ hiểu; không cần dùng đúng món của mẫu.
+
+## Knowledge Check
+
+1. Không dùng *a/an*, không thêm *-s*, động từ chia số ít.
+2. Dùng đơn vị đo: *a piece/slice/loaf of bread*, *a piece of advice*, *a glass/bottle of water*.
+3. *news* trông như số nhiều nhưng là danh từ không đếm được.
+4. Ví dụ: ~~advices, informations, homeworks, furnitures, luggages~~ (đúng: *advice, information, homework, furniture, luggage*).
+5. *time* (không đếm được) = thời gian; *times* (đếm được) = lần (*three times*) hoặc thời kỳ (*hard times*).

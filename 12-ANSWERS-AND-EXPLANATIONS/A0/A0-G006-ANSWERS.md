@@ -71,3 +71,11 @@
 5. Cả hai đều là we; ngữ cảnh cho biết có bao gồm người nghe không.
 
 Chấm L5.1: đúng 5–6 câu, xác định rõ người/vật trước khi thay, chọn đúng đại từ và động từ theo mẫu, viết hoa I; mỗi mục 1 điểm. Mẫu có 6 câu. L5.2 dùng cùng tiêu chí về đối tượng/đại từ, thêm đủ 30–60 giây và lời nói dễ hiểu; nghe bản ghi mới đánh giá được phát âm.
+
+## Knowledge Check
+
+1. I, you, he, she, it, we, they.
+2. Cả hai — *you* dùng cho một người hoặc nhiều người, luôn đi với *are*.
+3. Khi nói thời tiết, thời gian, khoảng cách, nhiệt độ: *It's raining. It's 7 o'clock. It's 5 km.*
+4. Mỗi câu chỉ cần một chủ ngữ; *My mother she...* lặp chủ ngữ. Chọn *My mother is a teacher* hoặc *She is a teacher*.
+5. Cả hai đều là *we* (tiếng Anh không phân biệt có hay không gồm người nghe).

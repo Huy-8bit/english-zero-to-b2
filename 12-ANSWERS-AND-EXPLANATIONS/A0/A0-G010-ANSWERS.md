@@ -82,3 +82,11 @@
 Giải thích L4: (1) have a headache là cụm; (2) My younger sister số ít nên has, eyes/hair là đặc điểm; (3) Do you have hỏi sở hữu, đáp bằng don't; (4) chủ ngữ số ít company chọn doesn't, have giữ nguyên; (5) have dinner là ăn tối, has/have tùy cách nhìn family theo biến thể đã chú thích.
 
 L5.1 mẫu có 7 câu và hai phủ định. Chấm đủ nội dung/số câu, have/has đúng, do/does đúng, ít nhất hai phủ định, mỗi mục 1 điểm. L5.2: mỗi đáp án đúng ngữ cảnh và trợ động từ 1 điểm; không có câu trả lời cố định cho thông tin cá nhân.
+
+## Knowledge Check
+
+1. *he, she, it* và danh từ số ít (*my brother has*).
+2. *She doesn't have a dog.*
+3. *does* đã mang dấu hiệu ngôi 3 số ít, nên động từ chính trở về nguyên mẫu *have*.
+4. *Yes, I do. / No, I don't.* (Anh-Anh cũng có *Have you got...? — Yes, I have.*)
+5. *be*: *I'm 20. I'm hungry.* (không ~~I have 20~~, ~~I have hungry~~).

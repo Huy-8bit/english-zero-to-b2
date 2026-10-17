@@ -79,3 +79,11 @@
 5. Xem cả cụm: I work nêu hành động; my work gọi tên công việc.
 
 Chấm L4.1 theo ba cách dùng light, mỗi cách 1 điểm; không chỉ chấm vị trí. L4.2: fast train mô tả train; goes fast mô tả goes, mỗi câu 1 điểm. L5: 1 điểm cho mỗi tiêu chí: đủ nội dung/thời lượng hoặc số câu; đủ nhóm từ đề yêu cầu; phân loại đúng trong ngữ cảnh; người nghe/đọc hiểu. Phát âm chỉ đánh giá từ bản ghi.
+
+## Knowledge Check
+
+1. Noun (danh từ), Pronoun (đại từ), Verb (động từ), Adjective (tính từ), Adverb (trạng từ), Preposition (giới từ), Conjunction (liên từ), Determiner gồm Article (từ hạn định, mạo từ), Interjection (thán từ). Một số sách gộp thành 8 nhóm.
+2. Tính từ bổ nghĩa cho danh từ (*a fast car*); trạng từ bổ nghĩa cho động từ, tính từ hoặc trạng từ khác (*drive fast*, *very tall*).
+3. Vì *friendly* bổ nghĩa cho danh từ/đứng sau *be* (*a friendly person*, *She is friendly*) — là tính từ; đuôi *-ly* chỉ là dấu hiệu thường gặp, không phải quy tắc.
+4. Từ nội dung (danh, động, tính, trạng từ) mang nghĩa chính và thường được nhấn; từ chức năng (mạo từ, giới từ, đại từ, liên từ, trợ động từ) chủ yếu tạo cấu trúc và thường đọc nhẹ.
+5. Nhìn vị trí và từ xung quanh: sau *a/the/my* → danh từ (*my work*); sau chủ ngữ, làm hành động → động từ (*I work here*).

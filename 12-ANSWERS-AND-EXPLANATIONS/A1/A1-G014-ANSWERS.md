@@ -9,7 +9,7 @@
 | L1.1 | **A. some** | Khẳng định + số nhiều. |
 | L1.2 | **B. any** | Phủ định (*don't*). C sai vì phủ định kép. |
 | L1.3 | **B. some** | Lời mời. |
-| L1.4 | **A. anybody** | Câu hỏi trung tính. |
+| L1.4 | **A. anybody** | Câu hỏi trung tính. (*somebody* cũng có thể dùng nếu người nói nghĩ là có người ở nhà — xem mục H; đề không có ngữ cảnh đó nên chọn A.) |
 | L1.5 | **C. no** | Động từ khẳng định (*There's*) + nghĩa "không còn" → *no*. |
 | L1.6 | **A** | *something + adj + to V*. |
 
@@ -70,3 +70,11 @@
 - *Is there anywhere I can rent a motorbike? — Yes, you can rent one at the shop next to the hotel.*
 - *Is there anyone who speaks English at the tour office? — Yes, someone there speaks English very well.*
 - *Do you have any maps? — Yes, we have some free maps here.*
+
+## Knowledge Check
+
+1. Khẳng định → *some*; phủ định và câu hỏi trung tính → *any*. Cả hai đi với danh từ số nhiều hoặc không đếm được.
+2. Lời mời/yêu cầu: người nói mong câu trả lời "có", nên dùng *some* dù là câu hỏi.
+3. *I don't have any* — động từ phủ định; *I have no* — động từ khẳng định. Không dùng cả hai (~~don't have no~~).
+4. *is* — các từ ghép *somebody, everyone, nothing...* là số ít: *Somebody is at the door.*
+5. *something special* — tính từ đứng sau *something*.

@@ -64,3 +64,11 @@
 - *Whose keys are these? — They're ours. We're staying in room 205.*
 - *Is this your jacket? — Yes, it's my jacket.*
 - *Whose charger is this? — It's my colleague's.*
+
+## Knowledge Check
+
+1. *my* đứng trước danh từ (*my phone*); *mine* đứng một mình, thay cho cả cụm (*This phone is mine*).
+2. Với danh từ số nhiều tận cùng *-s*: *my parents' house, the students' books*.
+3. *her* — chọn theo người sở hữu (Lan, nữ), không theo người/vật được sở hữu: *Lan and her brother*.
+4. *its* = của nó (sở hữu, không có dấu '); *it's* = *it is / it has*.
+5. *Whose shirt is this?* (hoặc *Whose is this shirt?*)

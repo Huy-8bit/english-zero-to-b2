@@ -69,3 +69,11 @@
 3. *Last weekend, I was tired, so I stayed at home and watched TV.*
 4. *I like my job because my colleagues are nice, but it's sometimes stressful.*
 5. *Next summer, I'm going to go to Thailand or Malaysia, because flights there are cheap.*
+
+## Knowledge Check
+
+1. *and* — thêm ý; *but* — tương phản; *or* — lựa chọn; *so* — kết quả; *because* — nguyên nhân/lý do.
+2. *so* đứng trước **kết quả** (*I was sick, so I stayed home*); *because* đứng trước **nguyên nhân** (*I stayed home because I was sick*).
+3. Tiếng Anh chỉ dùng **một** liên từ cho một quan hệ nguyên nhân–kết quả: *Because I was sick, I stayed home.* hoặc *I was sick, so I stayed home.*
+4. *I don't eat meat or fish.* — trong câu phủ định, "và" thường là *or*.
+5. *because* + mệnh đề có S + V (*because it rained*); *because of* + danh từ/cụm danh từ (*because of the rain*).

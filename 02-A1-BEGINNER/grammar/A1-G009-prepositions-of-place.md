@@ -113,7 +113,7 @@ Cùng một nơi có thể dùng giới từ khác nhau tùy cách nhìn:
 ### E3. Cấu trúc giới từ "nhiều chữ"
 
 - *next **to***, *in front **of***, *on top **of***, *at the end **of*** — **không bỏ** *to/of*.
-- *opposite*, *near*, *behind*, *between* — **không** thêm *to/of* (❌ *near to* chấp nhận được nhưng *near* phổ biến; ❌ *opposite of the bank*).
+- *opposite*, *near*, *behind*, *between* — thường **không** thêm *to/of*: *near the station* (*near to* có gặp nhưng ít hơn), *opposite the bank* (không nói ~~opposite of the bank~~ khi chỉ vị trí).
 
 ---
 
@@ -203,7 +203,7 @@ Cùng một nơi có thể dùng giới từ khác nhau tùy cách nhìn:
 | 6 | It's **in front** the hotel. | ...**in front of** the hotel. | Bỏ *of* | *in front of* |
 | 7 | It's between the bank **with** the café. | ...between the bank **and** the café. | Dịch "giữa... với..." | *between ... and* |
 | 8 | My office is **in** the third floor. | ...**on** the third floor. | | Tầng → *on* |
-| 9 | The picture is **on** the wall **above** the... — đúng; nhưng: *The lamp is* **on** *the ceiling* (đèn treo) | The lamp hangs **from** the ceiling. / There's a light **on** the ceiling. | Nhầm *on/above* | *on* = tiếp xúc; *above* = cao hơn, không tiếp xúc |
+| 9 | The clock is **on** the door. (ý: đồng hồ treo trên tường, cao hơn cửa, không chạm cửa) | The clock is **above** the door. | Nhầm *on/above* | *on* = tiếp xúc bề mặt; *above* = cao hơn, không tiếp xúc |
 | 10 | The pharmacy is **opposite of** the bank. | ...**opposite** the bank. | Thêm *of* | *opposite* + N trực tiếp |
 
 ---

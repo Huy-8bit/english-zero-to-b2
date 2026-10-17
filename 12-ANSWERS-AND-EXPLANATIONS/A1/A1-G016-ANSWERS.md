@@ -60,3 +60,11 @@
 **L5.2.** Mẫu:
 
 > *I was born in a small village in Thai Binh. Our house was small, and there was a big garden with a lot of fruit trees. My best friend was Hung — he was my neighbour. My favourite subject was art. I was a quiet child, but I was very curious. There weren't any computers in my school, so we were always outside, playing games.*
+
+## Knowledge Check
+
+1. *was*: I, he, she, it (và danh từ số ít); *were*: you, we, they (và danh từ số nhiều).
+2. Không. *be* tự đảo lên đầu: *Were you at home?* (không nói ~~Did you be~~).
+3. *I was born in 2000.*
+4. *last night* (không nói ~~yesterday night~~; nhưng *yesterday morning/afternoon/evening* thì đúng).
+5. Sau: *two years ago*, *ten minutes ago*.

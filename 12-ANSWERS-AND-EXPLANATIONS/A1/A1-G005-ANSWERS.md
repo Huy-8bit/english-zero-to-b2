@@ -64,3 +64,11 @@
 **L5.2.** Mẫu:
 
 > *On a normal weekend, I get up late, I have brunch with my family and I meet my friends in the afternoon. We usually play badminton. But this weekend is different. I'm staying at my aunt's house in Vung Tau. Right now, I'm walking on the beach and my cousins are swimming. We're having a barbecue tonight!*
+
+## Knowledge Check
+
+1. Hiện tại đơn nhìn "bức tranh chung" (thói quen, sự thật, lâu dài); hiện tại tiếp diễn nhìn "khoảnh khắc/giai đoạn" đang diễn ra, tạm thời hoặc đang thay đổi.
+2. *What do you do?* hỏi nghề; *What are you doing?* hỏi việc đang làm lúc này.
+3. Ví dụ: *know, like, love, want, need, understand* (cũng chấp nhận *believe, own, belong, prefer, hate, mean*).
+4. *I have a car* — *have* = sở hữu (trạng thái) → hiện tại đơn; *I'm having dinner* — *have* = ăn (hành động) → tiếp diễn được.
+5. Dấu hiệu chỉ là gợi ý: *today* có thể đi với hiện tại đơn (lịch cố định), *always* có thể đi với tiếp diễn (phàn nàn). Cần dựa vào nghĩa.

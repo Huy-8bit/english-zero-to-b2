@@ -64,3 +64,11 @@
 **L5.2.** Mẫu:
 *Always arrive on time. Switch off your phone in meetings. Don't eat at your desk. Never share your password. Please keep the kitchen clean. Don't leave the lights on. Always save your work. Be nice to new colleagues.*
 *Let's have a picnic in the park. Let's play some team games. Let's not stay out too late.*
+
+## Knowledge Check
+
+1. Người thực hiện luôn là người nghe (*you*), ai cũng hiểu nên *you* được lược bỏ; động từ để nguyên mẫu.
+2. *Don't be* + tính từ/danh từ: *Don't be late!* — cần *be* vì *late* là tính từ, không phải động từ.
+3. *Go!* = bạn đi đi (người nói không tham gia); *Let's go!* = chúng ta cùng đi (người nói tham gia).
+4. Tự nhiên khi người nghe được lợi hoặc cần hướng dẫn (mời, chúc, khuyên, công thức, chỉ đường); khi bạn nhờ người khác làm việc cho mình, nhất là với người lạ/cấp trên → *Can/Could you...?*
+5. *Don't smoke here.* (bỏ *to*; biển báo thường ghi *No smoking* hoặc *Do not smoke*).

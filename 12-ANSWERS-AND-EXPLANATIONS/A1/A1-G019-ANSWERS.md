@@ -64,3 +64,11 @@
 4. *I'll go to the shop and buy some.*
 5. *I'll take you out for coffee.*
 6. *I'll get it!*
+
+## Knowledge Check
+
+1. Quyết định tức thời (*I'll have the fish*), dự đoán theo ý kiến (*I think it will rain*), lời hứa (*I won't tell anyone*), đề nghị giúp (*I'll carry your bag*), sự thật/thông báo tương lai (*I'll be 30 next year*). Ngoài ra: yêu cầu *Will you...?* và *won't* = không chịu (*The car won't start*).
+2. *will not*; đọc /wəʊnt/ (nguyên âm như trong *go*), khác *want* /wɒnt/.
+3. *I* và *we* trong câu hỏi: *Shall I...?* để đề nghị giúp, *Shall we...?* để gợi ý cùng làm.
+4. Hiện tại đơn: *I'll call you when I arrive.* (không *when I will arrive*).
+5. *I don't think he'll come.*

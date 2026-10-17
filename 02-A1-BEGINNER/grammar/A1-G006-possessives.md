@@ -192,7 +192,7 @@ flowchart TD
 | 2 | This book is **my**. | This book is **mine**. | Dùng tính từ sở hữu đứng một mình | Không có danh từ sau → *mine* |
 | 3 | Lan loves **his** mother. | Lan loves **her** mother. | Chọn theo giới tính của người được sở hữu | Theo người **sở hữu** |
 | 4 | The dog is eating **it's** food. | ...**its** food. | Nhầm với *it's* | *its* sở hữu không có ' |
-| 5 | **The house of my parents** is big. | **My parents' house** is big. | Dịch "nhà của bố mẹ tôi" | Với người → dùng 's |
+| 5 | **The house of my parents** is big. (đúng ngữ pháp nhưng kém tự nhiên) | **My parents' house** is big. | Dịch "nhà của bố mẹ tôi" | Với người → ưu tiên 's |
 | 6 | This is **yours's**/**your's** bag. | This is **your** bag. / This bag is **yours**. | | Không có *your's* |
 | 7 | The **childrens'** toys | The **children's** toys | Số nhiều bất quy tắc | *children* + 's |
 | 8 | **Who's** pen is this? | **Whose** pen is this? | Đồng âm | *Who's* = *Who is* |

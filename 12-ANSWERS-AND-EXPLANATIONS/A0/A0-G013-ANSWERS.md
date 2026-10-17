@@ -77,3 +77,11 @@
 Giải thích L4: students số nhiều sau 25; glasses chỉ kính nên are; tooth → teeth; woman → women và sister → sisters sau two; shirts số nhiều, a pair là một đơn vị còn jeans giữ dạng số nhiều.
 
 Chấm L5.1: đủ 8 món kèm lượng, có 3 câu lý do, dạng số nhiều đúng, số lượng hợp lý cho tiệc; mỗi mục 1 điểm. L5.2: mẫu là nội dung để mở rộng tới 30–45 giây, thêm mô tả khi cần; kiểm tra nhóm /s z ɪz/ qua bản ghi, không qua chữ.
+
+## Knowledge Check
+
+1. Sau *-s, -ss, -sh, -ch, -x* (*buses, glasses, dishes, watches, boxes*) và một số từ tận cùng *-o* (*tomatoes, potatoes*).
+2. *baby → babies* (phụ âm + y → ies); *boy → boys* (nguyên âm + y → chỉ thêm s).
+3. Ví dụ: *man → men, woman → women, child → children, foot → feet, tooth → teeth, mouse → mice, person → people*.
+4. *jeans* là danh từ luôn ở số nhiều (đồ có hai phần, như *trousers, glasses, scissors*).
+5. /s/ sau âm vô thanh (*books*), /z/ sau âm hữu thanh và nguyên âm (*dogs*), /ɪz/ sau âm gió /s, z, ʃ, tʃ, dʒ/ (*buses, watches*).

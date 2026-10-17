@@ -1,6 +1,6 @@
 # A1 Exit Test — Bài kiểm tra cuối cấp A1
 
-> Làm trong điều kiện thi thật: không xem tài liệu, không tra từ điển, bấm giờ. Đáp án và transcript: [A1-EXIT-TEST-ANSWERS](../12-ANSWERS-AND-EXPLANATIONS/EXAMS/A1-EXIT-TEST-ANSWERS.md).
+> **Mục đích:** tìm phần cần ôn trước khi học A2. Đây là đề tự biên soạn, chưa chuẩn hóa; A1 là nhãn của giáo trình, không phải chứng nhận CEFR. Làm trong điều kiện thi thật: không xem tài liệu, không tra từ điển, bấm giờ. Đáp án và transcript: [A1-EXIT-TEST-ANSWERS](../12-ANSWERS-AND-EXPLANATIONS/EXAMS/A1-EXIT-TEST-ANSWERS.md).
 
 | Phần | Nội dung | Điểm | Thời gian gợi ý |
 |---|---|---|---|
@@ -12,7 +12,7 @@
 | F | Speaking | Rubric | 6 phút |
 | **Tổng phần chấm điểm (A–D)** | | **60** | **≈ 85 phút** |
 
-**Điều kiện đạt:** A–D ≥ **42/60** (70%), mỗi phần ≥ 60%, và Writing + Speaking đạt mức **"Đạt"** theo rubric.
+**Mốc sẵn sàng học tiếp do giáo trình đề xuất (không phải điểm chuẩn thi):** A–D ≥ **42/60** (70%), mỗi phần ≥ 60%, và Writing + Speaking đạt mức **"Đạt"** theo rubric.
 
 ---
 
@@ -68,8 +68,8 @@
 
 **31.** I usually ___ breakfast at 7.  A. make  B. have  C. do  D. take
 **32.** Can I ___ the bill, please?  A. have  B. do  C. make  D. take
-**33.** She ___ the bus to work every day.  A. gets on  B. takes  C. drives  D. rides
-**34.** I'm sorry, I can't ___ to your party.  A. go  B. come  C. arrive  D. visit
+**33.** She ___ the bus to work every day.  A. goes  B. takes  C. drives  D. rides
+**34.** I'm sorry, I can't ___ to your party.  A. reach  B. come  C. arrive  D. visit
 **35.** My grandmother is in ___ with a broken leg.  A. hospital  B. a doctor  C. pharmacy  D. clinic room
 
 ### B2. Chọn từ trái nghĩa (36–40)
@@ -93,7 +93,7 @@
 ### C1. True (T), False (F) or Not Given (NG)? (41–45)
 
 **41.** Daniel moved to Vietnam to study Vietnamese.
-**42.** At first, Daniel found the city hotter than his hometown.
+**42.** At first, Daniel found the city hotter than Dublin.
 **43.** Daniel teaches children in the morning.
 **44.** Mrs Lan helps Daniel with his Vietnamese.
 **45.** Daniel's colleagues enjoyed his spring rolls very much.
@@ -149,7 +149,7 @@ Viết **một** trong hai đề (**80–100 từ**):
 | Tổ chức | Có mở – thân – kết đơn giản; dùng *and, but, so, because, then* | Câu rời rạc, không liên kết |
 | Ngữ pháp | Các thì cơ bản (hiện tại, quá khứ, tương lai) phần lớn đúng; lỗi không cản trở hiểu | Lỗi thì/động từ thường xuyên gây khó hiểu |
 | Từ vựng | Đủ cho chủ đề; chính tả từ thông dụng đúng | Thiếu từ, sai chính tả nhiều |
-| Độ dài & hình thức | 80–100 từ; email có mở/kết phù hợp (đề 1) | Dưới 60 từ |
+| Độ dài & hình thức | 80–100 từ; email có mở/kết phù hợp (đề 1) | Dưới 70 hoặc trên 120 từ |
 
 **Đạt** khi ≥ 4/5 tiêu chí ở cột "Đạt".
 

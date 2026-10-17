@@ -58,3 +58,11 @@
 ✅ Tiêu chí: ≥ 8 giới từ khác nhau dùng đúng (*in, in front of, on, opposite, next to, between...and, above, under, behind*).
 
 **L5.2.** Mẫu: *The best café near my house is "Nhà". It's on Tran Quoc Toan Street, at number 31. It's next to a small bookshop and opposite a big school. When you walk from the market, turn right at the traffic lights. The café is on your left, between the bookshop and a flower shop.*
+
+## Knowledge Check
+
+1. Ba hình ảnh: *at* = một điểm (*at the bus stop*), *on* = bề mặt/đường thẳng (*on the table*, *on the wall*), *in* = không gian có ranh giới (*in the box*, *in the room*).
+2. *on the bus/train/plane* — phương tiện lớn, có thể đứng/đi lại bên trong; *in a car/taxi* — phương tiện nhỏ, phải cúi người vào ngồi.
+3. *at 12 Hung Vuong Street, in Hue* — *at* cho địa chỉ có số nhà, *in* cho thành phố (nếu chỉ có tên đường không số nhà: *on Hung Vuong Street*, Anh-Anh cũng gặp *in*).
+4. Cần thêm: *next **to***, *in front **of***. Không thêm: *opposite the bank*, *between A and B*.
+5. *at the hospital* = ở bệnh viện như một địa điểm (đi thăm, làm việc); *in hospital* (Anh-Anh) = đang nằm viện điều trị; Anh-Mỹ thường nói *in the hospital* cho cả nghĩa này.

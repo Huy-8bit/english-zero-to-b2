@@ -26,7 +26,7 @@
 | 18 | **C. to book** | *would like + to V*. | A1-G013 |
 | 19 | She **doesn't** work on Sundays. | | A1-G002 |
 | 20 | I didn't **go** to school yesterday. | | A1-G018 |
-| 21 | **Is he** usually late? | Câu hỏi với *be*: đảo *is*. | A1-G003 |
+| 21 | **Is he** usually late? | Câu hỏi với *be*: đảo *is*. (Câu kể lên giọng chỉ dùng trong văn nói để ngạc nhiên/xác nhận, không phải câu hỏi chuẩn.) | A1-G003 |
 | 22 | **Let's go** to the beach! | | A1-G011 |
 | 23 | I **went** shopping last weekend. | Bỏ *was*. | A1-G017 |
 | 24 | My father is **older** than my mother. | | A1-G022 |
@@ -43,9 +43,9 @@
 |---|---|---|
 | 31 | **B. have** | *have breakfast* |
 | 32 | **A. have** | *Can I have the bill?* |
-| 33 | **B. takes** | *take the bus* |
-| 34 | **B. come** | Mời đến chỗ người nói (bữa tiệc của họ) → *come* |
-| 35 | **A. hospital** | *in hospital* (đang nằm viện) |
+| 33 | **B. takes** | *take the bus*; *drive/ride* không đi với *the bus* khi là hành khách |
+| 34 | **B. come** | Đến chỗ người nghe (bữa tiệc của họ) → *come* tự nhiên nhất; *reach* không đi với *to*, *arrive to* sai giới từ, *visit* không đi với *to your party* |
+| 35 | **A. hospital** | *in hospital* (Anh-Anh: đang nằm viện; Anh-Mỹ: *in the hospital*) |
 | 36 | **expensive** | |
 | 37 | **late** | |
 | 38 | **quiet** | |
@@ -57,7 +57,7 @@
 | Câu | Đáp án | Căn cứ |
 |---|---|---|
 | 41 | **F** | "moved to Ho Chi Minh City **to teach English**" |
-| 42 | **T** | "much hotter and noisier than Dublin" |
+| 42 | **T** | "much hotter and noisier than Dublin" (mốc so sánh là Dublin, bài không nói đó có phải quê anh ấy không) |
 | 43 | **F** | "I teach **adults in the evening**" |
 | 44 | **T** | "practise Vietnamese with the owner, Mrs Lan" |
 | 45 | **NG** | Bài chỉ nói "everyone ate them" — không nói đồng nghiệp **rất thích**. ⚠️ Bẫy suy diễn. |
@@ -76,7 +76,7 @@
 | 53 | **blue** ... **medium** (M) | Đúng cả hai mới tính điểm |
 | 54 | **Thursday** | ⚠️ *Tuesday* là ngày đơn hàng đến (sai), giao lại thứ Năm |
 | 55 | **0983 216 704** | *oh nine eight three, two one six, seven oh four* |
-| 56 | **B** | "the train to Hue" / "Platform 2" |
+| 56 | **B** | "Hanoi Station ticket office" / "Platform 2" |
 | 57 | **A. Hue** | |
 | 58 | **B. 7:50** | ⚠️ *seven fifteen* là chuyến đã hết vé |
 | 59 | **B. 540,000 dong** | *five hundred and forty thousand* — không nhầm với 450 |
@@ -90,7 +90,8 @@
 
 **D2 (56–60):**
 
-> **Man:** Excuse me, I'd like a ticket to Hue, please. For tomorrow morning.
+> **Clerk:** Good morning, Hanoi Station ticket office. How can I help you?
+> **Man:** Hi, I'd like a ticket to Hue, please. For tomorrow morning.
 > **Clerk:** Let me check... The seven fifteen train is full, I'm afraid. There's one at seven fifty.
 > **Man:** Seven fifty is fine. How much is it?
 > **Clerk:** A soft seat is five hundred and forty thousand dong. A bed is more expensive.

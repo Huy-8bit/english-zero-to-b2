@@ -205,13 +205,13 @@ none ── not much / not many ── some ── a lot of / lots of ── too
 > **Sarah:** Ha ha. Did you visit **many** museums?
 > **Tuan:** Not **many** — only two. I didn't have **much** time.
 > **Sarah:** And the food?
-> **Tuan:** Delicious, and not **much** money! I ate **lots of** street food. **How much** do you think a bowl of pho costs there?
+> **Tuan:** Delicious — and I didn't spend **much** money! I ate **lots of** street food. **How much** do you think a bowl of pho costs there?
 > **Sarah:** Maybe 50,000 dong?
 > **Tuan:** About that. I loved it **a lot**.
 
 **Vietnamese explanation:** Tuấn kể về Hà Nội: có rất nhiều thứ để xem nhưng quá nhiều xe máy; chỉ đi được hai bảo tàng vì ít thời gian; đồ ăn ngon, rẻ, ăn nhiều đồ ăn đường phố.
 
-**Grammar highlights:** *a lot of things, too many motorbikes, many museums? Not many, not much time, not much money, lots of street food, How much...?, a lot* (trạng từ). *was/were, did/didn't, ate* là quá khứ — học ở A1-G016–G018.
+**Grammar highlights:** *a lot of things, too many motorbikes, many museums? Not many, not much time, didn't spend much money, lots of street food, How much...?, a lot* (trạng từ). *was/were, did/didn't, didn't spend, ate* là quá khứ — học ở A1-G016–G018.
 
 ---
 

@@ -12,8 +12,8 @@ Baseline tiếp quản: 129 Markdown, 52 bài hiện hữu, 271 lượt liên k�
 
 - Markdown hiện tại (kể cả báo cáo này): 467.
 - Bài theo Curriculum Map: 128; hiện hữu: 128; chưa có: 0.
-- Trạng thái: COMPLETED 102, NEEDS_REVIEW 26.
-- Liên kết nội bộ kiểm tra: 4569; hỏng: 0 lượt, 0 đích.
+- Trạng thái: COMPLETED 128.
+- Liên kết nội bộ kiểm tra: 4570; hỏng: 0 lượt, 0 đích.
 - Vấn đề cấu trúc/nhãn bài–đáp án: 0.
 - File trùng toàn nội dung: 0 nhóm; file dưới 100 từ: 0.
 - Marker chưa hoàn thiện trong bài học/đáp án: 0; cảnh báo Mermaid bằng heuristic: 0.
@@ -25,8 +25,8 @@ Số từ là số đơn vị tách bằng khoảng trắng, chỉ để tìm d�
 | Module | File Markdown | Đánh giá phạm vi |
 |---|---:|---|
 | `00-GETTING-STARTED` | 8 | 8 tài liệu; đã sửa thứ tự A2, chưa tái kiểm định toàn bộ placement/CEFR. |
-| `01-A0-FOUNDATION` | 21 | 19 bài + kỹ năng; G001–G015 đã đọc đối chiếu, G016–G019 NEEDS_REVIEW. |
-| `02-A1-BEGINNER` | 26 | 23 bài + giao tiếp/kỹ năng; A1-G023 đã rà soát, các bài khác NEEDS_REVIEW. |
+| `01-A0-FOUNDATION` | 21 | 19 bài + kỹ năng; 19/19 đã đọc đối chiếu. |
+| `02-A1-BEGINNER` | 26 | 23 bài + giao tiếp/kỹ năng; 23/23 đã đọc đối chiếu. |
 | `03-A2-ELEMENTARY` | 33 | 30/30 bài; Ba unit kỹ năng, giao tiếp và Exit Test đã có; xem nhật ký kiểm định. |
 | `04-B1-INTERMEDIATE` | 28 | 26/26 bài + README (Mini Challenges) + Skills Practice; 26 cặp bài–đáp án đã đọc đối chiếu. |
 | `05-B2-UPPER-INTERMEDIATE` | 32 | 30/30 bài + README + Skills Practice; 30 cặp bài–đáp án đã đọc đối chiếu. |
@@ -61,32 +61,32 @@ Mọi module trong kế hoạch đã có nội dung. AI tutor ở root. Không c
 | A0-G013 | COMPLETED | 2828 | 30 | có | `01-A0-FOUNDATION/grammar/A0-G013-singular-plural-nouns.md` — Đã đọc đối chiếu B–M và đáp án (2026-10-17); 30 nhiệm vụ khớp lời giải, kiểm tra quy tắc, ví dụ, biến thể đúng, mẫu và rubric L5; sửa câu ví dụ D gây nhầm *new + s* với từ *news*. |
 | A0-G014 | COMPLETED | 3024 | 33 | có | `01-A0-FOUNDATION/grammar/A0-G014-countable-uncountable.md` — Đã đọc đối chiếu B–M và đáp án (2026-10-17); 33 nhiệm vụ khớp lời giải, kiểm tra quy tắc, ví dụ, biến thể đúng, mẫu và rubric L5; không phát hiện lỗi cần sửa; nội dung đã có rào đón biến thể từ lượt sửa trước. |
 | A0-G015 | COMPLETED | 3000 | 29 | có | `01-A0-FOUNDATION/grammar/A0-G015-there-is-there-are.md` — Đã đọc đối chiếu B–M và đáp án (2026-10-17); 29 nhiệm vụ khớp lời giải, kiểm tra quy tắc, ví dụ, biến thể đúng, mẫu và rubric L5; không phát hiện lỗi cần sửa; nội dung đã có rào đón biến thể từ lượt sửa trước. |
-| A0-G016 | NEEDS_REVIEW | 3238 | 32 | có | `01-A0-FOUNDATION/grammar/A0-G016-sentence-types.md` — Có nội dung; chỉ kiểm tra cấu trúc, chưa đọc đối chiếu học thuật toàn bài trong lượt này. |
-| A0-G017 | NEEDS_REVIEW | 3033 | 29 | có | `01-A0-FOUNDATION/grammar/A0-G017-question-words.md` — Có nội dung; chỉ kiểm tra cấu trúc, chưa đọc đối chiếu học thuật toàn bài trong lượt này. |
-| A0-G018 | NEEDS_REVIEW | 3503 | 27 | có | `01-A0-FOUNDATION/grammar/A0-G018-numbers-dates-time-age.md` — Có nội dung; chỉ kiểm tra cấu trúc, chưa đọc đối chiếu học thuật toàn bài trong lượt này. |
-| A0-G019 | NEEDS_REVIEW | 2911 | 29 | có | `01-A0-FOUNDATION/grammar/A0-G019-likes-and-hobbies.md` — Có nội dung; chỉ kiểm tra cấu trúc, chưa đọc đối chiếu học thuật toàn bài trong lượt này. |
-| A1-G001 | NEEDS_REVIEW | 3207 | 29 | có | `02-A1-BEGINNER/grammar/A1-G001-present-simple-affirmative.md` — Có nội dung; chỉ kiểm tra cấu trúc, chưa đọc đối chiếu học thuật toàn bài trong lượt này. |
-| A1-G002 | NEEDS_REVIEW | 2922 | 30 | có | `02-A1-BEGINNER/grammar/A1-G002-present-simple-negatives-questions.md` — Có nội dung; chỉ kiểm tra cấu trúc, chưa đọc đối chiếu học thuật toàn bài trong lượt này. |
-| A1-G003 | NEEDS_REVIEW | 2636 | 29 | có | `02-A1-BEGINNER/grammar/A1-G003-adverbs-of-frequency.md` — Có nội dung; chỉ kiểm tra cấu trúc, chưa đọc đối chiếu học thuật toàn bài trong lượt này. |
-| A1-G004 | NEEDS_REVIEW | 2680 | 29 | có | `02-A1-BEGINNER/grammar/A1-G004-present-continuous.md` — Có nội dung; chỉ kiểm tra cấu trúc, chưa đọc đối chiếu học thuật toàn bài trong lượt này. |
-| A1-G005 | NEEDS_REVIEW | 2496 | 28 | có | `02-A1-BEGINNER/grammar/A1-G005-present-simple-vs-continuous.md` — Có nội dung; chỉ kiểm tra cấu trúc, chưa đọc đối chiếu học thuật toàn bài trong lượt này. |
-| A1-G006 | NEEDS_REVIEW | 2607 | 29 | có | `02-A1-BEGINNER/grammar/A1-G006-possessives.md` — Có nội dung; chỉ kiểm tra cấu trúc, chưa đọc đối chiếu học thuật toàn bài trong lượt này. |
-| A1-G007 | NEEDS_REVIEW | 2517 | 29 | có | `02-A1-BEGINNER/grammar/A1-G007-object-pronouns.md` — Có nội dung; chỉ kiểm tra cấu trúc, chưa đọc đối chiếu học thuật toàn bài trong lượt này. |
-| A1-G008 | NEEDS_REVIEW | 2421 | 28 | có | `02-A1-BEGINNER/grammar/A1-G008-have-got.md` — Có nội dung; chỉ kiểm tra cấu trúc, chưa đọc đối chiếu học thuật toàn bài trong lượt này. |
-| A1-G009 | NEEDS_REVIEW | 2939 | 29 | có | `02-A1-BEGINNER/grammar/A1-G009-prepositions-of-place.md` — Có nội dung; chỉ kiểm tra cấu trúc, chưa đọc đối chiếu học thuật toàn bài trong lượt này. |
-| A1-G010 | NEEDS_REVIEW | 2641 | 29 | có | `02-A1-BEGINNER/grammar/A1-G010-prepositions-of-time.md` — Có nội dung; chỉ kiểm tra cấu trúc, chưa đọc đối chiếu học thuật toàn bài trong lượt này. |
-| A1-G011 | NEEDS_REVIEW | 2382 | 27 | có | `02-A1-BEGINNER/grammar/A1-G011-imperatives.md` — Có nội dung; chỉ kiểm tra cấu trúc, chưa đọc đối chiếu học thuật toàn bài trong lượt này. |
-| A1-G012 | NEEDS_REVIEW | 2638 | 29 | có | `02-A1-BEGINNER/grammar/A1-G012-can-cant.md` — Có nội dung; chỉ kiểm tra cấu trúc, chưa đọc đối chiếu học thuật toàn bài trong lượt này. |
-| A1-G013 | NEEDS_REVIEW | 2605 | 29 | có | `02-A1-BEGINNER/grammar/A1-G013-would-like.md` — Có nội dung; chỉ kiểm tra cấu trúc, chưa đọc đối chiếu học thuật toàn bài trong lượt này. |
-| A1-G014 | NEEDS_REVIEW | 2430 | 29 | có | `02-A1-BEGINNER/grammar/A1-G014-some-any.md` — Có nội dung; chỉ kiểm tra cấu trúc, chưa đọc đối chiếu học thuật toàn bài trong lượt này. |
-| A1-G015 | NEEDS_REVIEW | 2355 | 29 | có | `02-A1-BEGINNER/grammar/A1-G015-much-many-a-lot-of.md` — Có nội dung; chỉ kiểm tra cấu trúc, chưa đọc đối chiếu học thuật toàn bài trong lượt này. |
-| A1-G016 | NEEDS_REVIEW | 2478 | 29 | có | `02-A1-BEGINNER/grammar/A1-G016-past-simple-be.md` — Có nội dung; chỉ kiểm tra cấu trúc, chưa đọc đối chiếu học thuật toàn bài trong lượt này. |
-| A1-G017 | NEEDS_REVIEW | 3152 | 29 | có | `02-A1-BEGINNER/grammar/A1-G017-past-simple-affirmative.md` — Có nội dung; chỉ kiểm tra cấu trúc, chưa đọc đối chiếu học thuật toàn bài trong lượt này. |
-| A1-G018 | NEEDS_REVIEW | 2483 | 29 | có | `02-A1-BEGINNER/grammar/A1-G018-past-simple-negatives-questions.md` — Có nội dung; chỉ kiểm tra cấu trúc, chưa đọc đối chiếu học thuật toàn bài trong lượt này. |
-| A1-G019 | NEEDS_REVIEW | 2642 | 29 | có | `02-A1-BEGINNER/grammar/A1-G019-future-will.md` — Có nội dung; chỉ kiểm tra cấu trúc, chưa đọc đối chiếu học thuật toàn bài trong lượt này. |
-| A1-G020 | NEEDS_REVIEW | 2828 | 29 | có | `02-A1-BEGINNER/grammar/A1-G020-be-going-to.md` — Có nội dung; chỉ kiểm tra cấu trúc, chưa đọc đối chiếu học thuật toàn bài trong lượt này. |
-| A1-G021 | NEEDS_REVIEW | 2676 | 29 | có | `02-A1-BEGINNER/grammar/A1-G021-basic-conjunctions.md` — Có nội dung; chỉ kiểm tra cấu trúc, chưa đọc đối chiếu học thuật toàn bài trong lượt này. |
-| A1-G022 | NEEDS_REVIEW | 2615 | 29 | có | `02-A1-BEGINNER/grammar/A1-G022-comparatives.md` — Có nội dung; chỉ kiểm tra cấu trúc, chưa đọc đối chiếu học thuật toàn bài trong lượt này. |
+| A0-G016 | COMPLETED | 3238 | 32 | có | `01-A0-FOUNDATION/grammar/A0-G016-sentence-types.md` — Đã đọc đối chiếu B–M và đáp án (2026-10-17); khóa đáp án khớp nhiệm vụ L1–L4, mẫu và tiêu chí L5 có; bổ sung Knowledge Check vào file đáp án; không phát hiện lỗi cần sửa. |
+| A0-G017 | COMPLETED | 3036 | 29 | có | `01-A0-FOUNDATION/grammar/A0-G017-question-words.md` — Đã đọc đối chiếu B–M và đáp án (2026-10-17); khóa đáp án khớp nhiệm vụ L1–L4, mẫu và tiêu chí L5 có; bổ sung Knowledge Check vào file đáp án; sửa tham chiếu mẹo QUASI cho đúng mục J. |
+| A0-G018 | COMPLETED | 3503 | 27 | có | `01-A0-FOUNDATION/grammar/A0-G018-numbers-dates-time-age.md` — Đã đọc đối chiếu B–M và đáp án (2026-10-17); khóa đáp án khớp nhiệm vụ L1–L4, mẫu và tiêu chí L5 có; bổ sung Knowledge Check vào file đáp án; không phát hiện lỗi cần sửa. |
+| A0-G019 | COMPLETED | 2911 | 29 | có | `01-A0-FOUNDATION/grammar/A0-G019-likes-and-hobbies.md` — Đã đọc đối chiếu B–M và đáp án (2026-10-17); khóa đáp án khớp nhiệm vụ L1–L4, mẫu và tiêu chí L5 có; bổ sung Knowledge Check vào file đáp án; sửa ghi chú *want to learn* trong đáp án L5. |
+| A1-G001 | COMPLETED | 3209 | 29 | có | `02-A1-BEGINNER/grammar/A1-G001-present-simple-affirmative.md` — Đã đọc đối chiếu B–M và đáp án (2026-10-17); khóa đáp án khớp nhiệm vụ L1–L4, mẫu và tiêu chí L5 có; bổ sung Knowledge Check vào file đáp án; bỏ phép so sánh gây hiểu nhầm; ví dụ khái quát hóa thành *Many Vietnamese people eat rice*. |
+| A1-G002 | COMPLETED | 2922 | 30 | có | `02-A1-BEGINNER/grammar/A1-G002-present-simple-negatives-questions.md` — Đã đọc đối chiếu B–M và đáp án (2026-10-17); khóa đáp án khớp nhiệm vụ L1–L4, mẫu và tiêu chí L5 có; bổ sung Knowledge Check vào file đáp án; không phát hiện lỗi cần sửa. |
+| A1-G003 | COMPLETED | 2664 | 29 | có | `02-A1-BEGINNER/grammar/A1-G003-adverbs-of-frequency.md` — Đã đọc đối chiếu B–M và đáp án (2026-10-17); khóa đáp án khớp nhiệm vụ L1–L4, mẫu và tiêu chí L5 có; bổ sung Knowledge Check vào file đáp án; viết lại dòng lỗi 7 cho rõ. |
+| A1-G004 | COMPLETED | 2680 | 29 | có | `02-A1-BEGINNER/grammar/A1-G004-present-continuous.md` — Đã đọc đối chiếu B–M và đáp án (2026-10-17); khóa đáp án khớp nhiệm vụ L1–L4, mẫu và tiêu chí L5 có; bổ sung Knowledge Check vào file đáp án; không phát hiện lỗi cần sửa. |
+| A1-G005 | COMPLETED | 2496 | 28 | có | `02-A1-BEGINNER/grammar/A1-G005-present-simple-vs-continuous.md` — Đã đọc đối chiếu B–M và đáp án (2026-10-17); khóa đáp án khớp nhiệm vụ L1–L4, mẫu và tiêu chí L5 có; bổ sung Knowledge Check vào file đáp án; không phát hiện lỗi cần sửa. |
+| A1-G006 | COMPLETED | 2615 | 29 | có | `02-A1-BEGINNER/grammar/A1-G006-possessives.md` — Đã đọc đối chiếu B–M và đáp án (2026-10-17); khóa đáp án khớp nhiệm vụ L1–L4, mẫu và tiêu chí L5 có; bổ sung Knowledge Check vào file đáp án; dòng lỗi 5 ghi là "kém tự nhiên" thay vì sai tuyệt đối. |
+| A1-G007 | COMPLETED | 2517 | 29 | có | `02-A1-BEGINNER/grammar/A1-G007-object-pronouns.md` — Đã đọc đối chiếu B–M và đáp án (2026-10-17); khóa đáp án khớp nhiệm vụ L1–L4, mẫu và tiêu chí L5 có; bổ sung Knowledge Check vào file đáp án; không phát hiện lỗi cần sửa. |
+| A1-G008 | COMPLETED | 2443 | 28 | có | `02-A1-BEGINNER/grammar/A1-G008-have-got.md` — Đã đọc đối chiếu B–M và đáp án (2026-10-17); khóa đáp án khớp nhiệm vụ L1–L4, mẫu và tiêu chí L5 có; bổ sung Knowledge Check vào file đáp án; dòng lỗi 6 thống nhất với A0-G010 (*Have you a...?* là biến thể Anh-Anh cũ, không phải sai tuyệt đối). |
+| A1-G009 | COMPLETED | 2942 | 29 | có | `02-A1-BEGINNER/grammar/A1-G009-prepositions-of-place.md` — Đã đọc đối chiếu B–M và đáp án (2026-10-17); khóa đáp án khớp nhiệm vụ L1–L4, mẫu và tiêu chí L5 có; bổ sung Knowledge Check vào file đáp án; viết lại dòng lỗi 9 (*on/above*) bị lẫn; làm mềm ghi chú *near to/opposite of*. |
+| A1-G010 | COMPLETED | 2639 | 29 | có | `02-A1-BEGINNER/grammar/A1-G010-prepositions-of-time.md` — Đã đọc đối chiếu B–M và đáp án (2026-10-17); khóa đáp án khớp nhiệm vụ L1–L4, mẫu và tiêu chí L5 có; bổ sung Knowledge Check vào file đáp án; bỏ cặp thứ–ngày giả định trong email mẫu (thứ không khớp ngày). |
+| A1-G011 | COMPLETED | 2410 | 27 | có | `02-A1-BEGINNER/grammar/A1-G011-imperatives.md` — Đã đọc đối chiếu B–M và đáp án (2026-10-17); khóa đáp án khớp nhiệm vụ L1–L4, mẫu và tiêu chí L5 có; bổ sung Knowledge Check vào file đáp án; sửa tiêu đề mục F (10 cách dùng); làm mềm khẳng định "ngoại lệ duy nhất" về lược chủ ngữ. |
+| A1-G012 | COMPLETED | 2638 | 29 | có | `02-A1-BEGINNER/grammar/A1-G012-can-cant.md` — Đã đọc đối chiếu B–M và đáp án (2026-10-17); khóa đáp án khớp nhiệm vụ L1–L4, mẫu và tiêu chí L5 có; bổ sung Knowledge Check vào file đáp án; L4.5 chấp nhận *the mountain*. |
+| A1-G013 | COMPLETED | 2605 | 29 | có | `02-A1-BEGINNER/grammar/A1-G013-would-like.md` — Đã đọc đối chiếu B–M và đáp án (2026-10-17); khóa đáp án khớp nhiệm vụ L1–L4, mẫu và tiêu chí L5 có; bổ sung Knowledge Check vào file đáp án; không phát hiện lỗi cần sửa. |
+| A1-G014 | COMPLETED | 2437 | 29 | có | `02-A1-BEGINNER/grammar/A1-G014-some-any.md` — Đã đọc đối chiếu B–M và đáp án (2026-10-17); khóa đáp án khớp nhiệm vụ L1–L4, mẫu và tiêu chí L5 có; bổ sung Knowledge Check vào file đáp án; viết lại dòng lỗi 7 (*something cold*); sửa checklist số từ ghép; L1.4 ghi chú khả năng *somebody*. |
+| A1-G015 | COMPLETED | 2361 | 29 | có | `02-A1-BEGINNER/grammar/A1-G015-much-many-a-lot-of.md` — Đã đọc đối chiếu B–M và đáp án (2026-10-17); khóa đáp án khớp nhiệm vụ L1–L4, mẫu và tiêu chí L5 có; bổ sung Knowledge Check vào file đáp án; sửa câu thoại không chuẩn *and not much money* thành *I didn't spend much money*. |
+| A1-G016 | COMPLETED | 2478 | 29 | có | `02-A1-BEGINNER/grammar/A1-G016-past-simple-be.md` — Đã đọc đối chiếu B–M và đáp án (2026-10-17); khóa đáp án khớp nhiệm vụ L1–L4, mẫu và tiêu chí L5 có; bổ sung Knowledge Check vào file đáp án; không phát hiện lỗi cần sửa. |
+| A1-G017 | COMPLETED | 3164 | 29 | có | `02-A1-BEGINNER/grammar/A1-G017-past-simple-affirmative.md` — Đã đọc đối chiếu B–M và đáp án (2026-10-17); khóa đáp án khớp nhiệm vụ L1–L4, mẫu và tiêu chí L5 có; bổ sung Knowledge Check vào file đáp án; thêm ngoại lệ không gấp đôi *w/x/y*; rubric L5.1 bỏ *cried* khỏi danh sách động từ bất quy tắc. |
+| A1-G018 | COMPLETED | 2483 | 29 | có | `02-A1-BEGINNER/grammar/A1-G018-past-simple-negatives-questions.md` — Đã đọc đối chiếu B–M và đáp án (2026-10-17); khóa đáp án khớp nhiệm vụ L1–L4, mẫu và tiêu chí L5 có; bổ sung Knowledge Check vào file đáp án; không phát hiện lỗi cần sửa. |
+| A1-G019 | COMPLETED | 2642 | 29 | có | `02-A1-BEGINNER/grammar/A1-G019-future-will.md` — Đã đọc đối chiếu B–M và đáp án (2026-10-17); khóa đáp án khớp nhiệm vụ L1–L4, mẫu và tiêu chí L5 có; bổ sung Knowledge Check vào file đáp án; sửa tiêu đề mục F; *I think he won't come* ghi là ít tự nhiên hơn, không phải sai. |
+| A1-G020 | COMPLETED | 2828 | 29 | có | `02-A1-BEGINNER/grammar/A1-G020-be-going-to.md` — Đã đọc đối chiếu B–M và đáp án (2026-10-17); khóa đáp án khớp nhiệm vụ L1–L4, mẫu và tiêu chí L5 có; bổ sung Knowledge Check vào file đáp án; L2.7/L2.8 chấp nhận hiện tại tiếp diễn chỉ kế hoạch; sửa câu mẫu L5.1 *or I'll probably*. |
+| A1-G021 | COMPLETED | 2688 | 29 | có | `02-A1-BEGINNER/grammar/A1-G021-basic-conjunctions.md` — Đã đọc đối chiếu B–M và đáp án (2026-10-17); khóa đáp án khớp nhiệm vụ L1–L4, mẫu và tiêu chí L5 có; bổ sung Knowledge Check vào file đáp án; làm mềm quy tắc *But* đầu câu (chỉ tránh trong văn học thuật/rất trang trọng). |
+| A1-G022 | COMPLETED | 2621 | 29 | có | `02-A1-BEGINNER/grammar/A1-G022-comparatives.md` — Đã đọc đối chiếu B–M và đáp án (2026-10-17); khóa đáp án khớp nhiệm vụ L1–L4, mẫu và tiêu chí L5 có; bổ sung Knowledge Check vào file đáp án; sửa phần breakdown *more spacious*; *than I* ghi là trang trọng/cứng thay vì đánh dấu sai. |
 | A1-G023 | COMPLETED | 3213 | 29 | có | `02-A1-BEGINNER/grammar/A1-G023-superlatives.md` — Đã đọc đối chiếu 29 nhiệm vụ; 12 ví dụ có phân tích; bổ sung lý do L2–L4/rubric; sửa khẳng định tuyệt đối về the, nhóm hai và tính từ hai âm tiết; thay xếp hạng địa lý mơ hồ bằng tình huống xác định hoặc ý kiến. |
 | A2-G001 | COMPLETED | 3161 | 29 | có | `03-A2-ELEMENTARY/grammar/A2-G001-past-continuous.md` — Quá khứ tiếp diễn: sửa quy tắc thời lượng/trạng thái, phân tích 12 ví dụ, lời giải 29 nhiệm vụ và mẫu 84 từ. |
 | A2-G002 | COMPLETED | 3448 | 29 | có | `03-A2-ELEMENTARY/grammar/A2-G002-past-simple-vs-past-continuous.md` — Hai thì quá khứ: When/While đều đúng trong câu cho phép; everyone was; sửa các câu không thực sự sai và bổ sung ngữ cảnh; 29 nhiệm vụ, mẫu 105 từ. |
@@ -178,7 +178,6 @@ Mọi module trong kế hoạch đã có nội dung. AI tutor ở root. Không c
 ## Vấn đề cấu trúc và nội dung cần xử lý
 
 - Không thấy lỗi nhãn/cặp file/H1/code fence/phần A–N trong phạm vi kiểm tra.
-- A0-G016–G019 và A1-G001–G022 còn NEEDS_REVIEW: có đủ cấu trúc và đáp án nhưng chưa được đọc đối chiếu lại toàn bài.
 - Thứ tự tiên quyết: B2-G005 cần B2-G013 (ID đứng sau); B2 README hướng dẫn học G013 trước G005.
 - Bảng đích liên kết hỏng bên dưới chỉ có nội dung khi kiểm tra phát hiện lỗi.
 
@@ -661,7 +660,7 @@ Danh mục này là kiểm kê, không phải danh sách đã kiểm định h�
 
 ## Việc tiếp theo
 
-1. Đọc đối chiếu các bài A0/A1 còn NEEDS_REVIEW và A0/A1 Exit Test; không viết lại bài COMPLETED chỉ để đổi văn phong.
+1. Khi sửa nội dung, không viết lại bài COMPLETED chỉ để đổi văn phong; ghi căn cứ vào Review Log.
 2. Khi thêm/sửa sơ đồ, render lại bằng Mermaid CLI (lần gần nhất: 159/159 khối thành công).
 3. Thử nghiệm với người học thật và/hoặc mời giáo viên độc lập góp ý trước khi tuyên bố chất lượng sư phạm.
 4. Sau mỗi lần sửa: chạy fix_toc_anchors.py, audit_content.py, check_links.py.

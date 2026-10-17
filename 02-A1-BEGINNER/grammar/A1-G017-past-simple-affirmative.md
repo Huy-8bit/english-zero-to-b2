@@ -102,7 +102,7 @@ Nhưng những động từ **cổ xưa và dùng nhiều nhất** (*go, eat, se
 | Tận cùng *-e*: + **-d** | live → live**d**, like → like**d**, arrive → arrive**d** |
 | Phụ âm + *y*: *y* → **-ied** | study → stud**ied**, try → tr**ied**, carry → carr**ied** |
 | Nguyên âm + *y*: + **-ed** | play → play**ed**, stay → stay**ed** (ngoại lệ: *pay → paid, say → said*) |
-| Một âm tiết, CVC: gấp đôi phụ âm | stop → sto**pp**ed, plan → pla**nn**ed, shop → sho**pp**ed |
+| Một âm tiết, CVC: gấp đôi phụ âm | stop → sto**pp**ed, plan → pla**nn**ed, shop → sho**pp**ed (không gấp đôi *w, x, y*: snow → snowed, fix → fixed) |
 | Hai âm tiết, nhấn âm cuối, CVC: gấp đôi | pre**fer** → prefe**rr**ed, ad**mit** → admi**tt**ed |
 | Tận cùng *-l* (Anh – Anh): gấp đôi | travel → trave**ll**ed (Mỹ: traveled) |
 

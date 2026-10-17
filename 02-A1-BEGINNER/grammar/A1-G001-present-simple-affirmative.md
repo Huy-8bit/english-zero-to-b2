@@ -78,7 +78,7 @@ flowchart LR
 
 Những việc lặp lại nhiều lần trong quá khứ, hiện tại và (có lẽ) tương lai → được "tóm gọn" thành **một câu hiện tại đơn**.
 
-**Vì sao ngôi thứ ba số ít lại thêm *-s*?** Đây là phần còn sót lại từ tiếng Anh cổ, khi động từ thay đổi theo mọi ngôi. Ngày nay chỉ còn lại *-s* cho *he/she/it*. Nó không có lý do logic về nghĩa — đơn giản là quy tắc hòa hợp chủ ngữ – động từ (*subject–verb agreement*) bạn **phải** tuân theo. Người bản ngữ nghe *she work* sẽ thấy "lệch" ngay, giống bạn nghe ai đó nói "tôi ăn cơm rồi chưa".
+**Vì sao ngôi thứ ba số ít lại thêm *-s*?** Đây là phần còn sót lại từ tiếng Anh cổ, khi động từ thay đổi theo mọi ngôi. Ngày nay chỉ còn lại *-s* cho *he/she/it*. Nó không có lý do logic về nghĩa — đơn giản là quy tắc hòa hợp chủ ngữ – động từ (*subject–verb agreement*) bạn **phải** tuân theo. Người bản ngữ vẫn hiểu *she work*, nhưng nghe ngay ra đó là lỗi.
 
 ---
 
@@ -146,7 +146,7 @@ Những việc lặp lại nhiều lần trong quá khứ, hiện tại và (có
 |---|---|---|---|
 | 4 | *Water **boils** at 100°C.* | Nước sôi ở 100 độ C. | *Water* (không đếm được) → V-s |
 | 5 | *The sun **rises** in the east.* | Mặt trời mọc ở phía đông. | Luôn đúng |
-| 6 | *Vietnamese people **eat** rice every day.* | Người Việt ăn cơm hằng ngày. | Sự thật chung về một nhóm người |
+| 6 | *Many Vietnamese people **eat** rice every day.* | Nhiều người Việt ăn cơm hằng ngày. | Khái quát về một nhóm người — dùng *many* để không tuyệt đối hóa |
 
 ### Cách dùng 3 — Trạng thái lâu dài (permanent situations)
 

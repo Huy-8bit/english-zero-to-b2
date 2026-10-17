@@ -78,3 +78,11 @@ L4.1 dùng What do you do trong ngữ cảnh hỏi nghề; L4.2 class số ít c
 M1: Wh + do/does + S + V nguyên thể khi hỏi tân ngữ/trạng ngữ ở hiện tại đơn; hỏi chủ ngữ như Who lives here? không theo khung này. M2: many với danh từ đếm được số nhiều; much với U hoặc hỏi giá. M3: thường hỏi nghề trong ngữ cảnh làm quen. M4: Whose hỏi sở hữu; Who's ở Who's that? là Who is. M5: What time does she get up? / When does she get up?
 
 L5.1: chấm 10 câu hỏi, ít nhất 8 từ/cụm hỏi khác nhau, trật tự đúng theo kiểu hỏi, đáp án khớp thông tin hỏi (4 điểm). L5.2: mỗi câu trả lời đủ ý và dùng khung đúng 1 điểm, tổng 8; nghe bản ghi để kiểm tra độ rõ, không suy phát âm từ chữ.
+
+## Knowledge Check
+
+1. Wh- + *do/does* + S + V (nguyên mẫu)? — *Where do you live? What does she do?*
+2. *How many* + danh từ đếm được số nhiều; *How much* + danh từ không đếm được và để hỏi giá.
+3. Nghề nghiệp (*I'm a nurse*), không phải việc đang làm lúc này.
+4. *Whose* = của ai (*Whose bag is this?*); *Who's* = *Who is/Who has* (*Who's that?*).
+5. *What time does she get up?*

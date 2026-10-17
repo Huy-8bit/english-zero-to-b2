@@ -80,3 +80,11 @@ M1: Fifteen đọc riêng thường nhấn teen và có /n/ cuối; fifty nhấn
 L4.4: Tết thay đổi theo năm nên ví dụ chỉ nêu khoảng tháng, không phải ngày chính xác. Nếu muốn luyện ngày cụ thể không cần tra lịch, có thể dùng ba ngày cố định: International Workers' Day on the first of May; Reunification Day on the thirtieth of April; National Day on the second of September. Đây là tên/ngày để luyện tiếng Anh, không phải lịch nghỉ bù của một năm.
 
 L5.1 mẫu có 8 mốc. Chấm đủ 6–8 mốc, giá trị giờ đúng, at và cách viết số đúng, lịch dễ hiểu (4 điểm). Không bắt buộc dùng cả hai cách đọc nếu đề không yêu cầu; nên thử thêm để luyện. L5.2: 1 điểm/số chép đúng thứ tự (10 điểm), ghi điều kiện đã xem danh sách; đánh giá phát âm từ bản ghi, không chỉ xem chữ.
+
+## Knowledge Check
+
+1. Nghe trọng âm: *fif**TEEN*** nhấn âm sau, kéo dài *-teen*; ***FIF**ty* nhấn âm đầu. Khi cần chắc chắn, hỏi lại: *One-five or five-oh?*
+2. Số đếm chính xác đứng trước danh từ thì không thêm *s*; chỉ nói *thousands of people* khi không có con số cụ thể.
+3. *the second of September, nineteen forty-five* (viết *2nd September 1945*).
+4. *twenty to nine*.
+5. *a ten-year-old boy* (có gạch nối, *year* không có *s*) hoặc *a boy who is ten years old*.
