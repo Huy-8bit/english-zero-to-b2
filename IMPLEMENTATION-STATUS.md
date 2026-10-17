@@ -96,6 +96,13 @@ Measured on the repository, not estimated:
 - Frontend: 15 vitest passed; lint and production build pass.
 - Playwright: 32/32 passed. That includes the required flow (A1 Daily Routine learn → recall with feedback → refresh resumes → finish → flashcard review → stats), Reading capture into the notebook, the AI tutor and Use-It grading (simulated provider), axe and mobile.
 
+**Docker deployment — 2026-10-18.** `platform/scripts/deploy.sh` ran in this order: build → stop backend → verified backup → migrate → recreate the containers → health check through nginx.
+- Backup: `platform/backups/docker-20261017T185637768640Z.tar.gz`, taken at revision 0003.
+- After deployment the revision is 0004 and all 5,083 entries are imported.
+- Learner data is unchanged: 75 attempts, 14 lesson-progress rows and 54 XP events.
+- The learner's 3 SM-2 cards (wake up, get up, brush) are kept in `vocab_cards` and now also appear as FSRS progress, due on the same day.
+- `/api/vocab/plan` responds through localhost:8080.
+
 **Known gaps (not marked complete):**
 - Live OpenAI has never been called (no key). This covers the tutor, judge, Use-It, dialogue, exercises, enrichment and TTS.
 - 2,890 candidate headwords are still unpublished until AI enrichment runs and a person reviews the results.
