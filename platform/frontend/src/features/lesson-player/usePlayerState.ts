@@ -21,6 +21,7 @@ export function usePlayerState(unitId: string, data: StepsPayload | undefined) {
   const [saveError, setSaveError] = useState(false);
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const latest = useRef<Local>({ step: 0, state: {} });
+  const saves = useRef<Promise<void>>(Promise.resolve());
 
   useEffect(() => {
     if (!data || ready) return;
@@ -36,14 +37,18 @@ export function usePlayerState(unitId: string, data: StepsPayload | undefined) {
     setReady(true);
   }, [data, ready, unitId]);
 
-  const flush = useCallback(async () => {
+  const flush = useCallback(() => {
     const { step: s, state: st } = latest.current;
-    try {
-      await api.saveProgress(unitId, s, st);
-      setSaveError(false);
-    } catch {
-      setSaveError(true);
-    }
+    // Keep writes in navigation order, even when a previous request is slow.
+    saves.current = saves.current.then(async () => {
+      try {
+        await api.saveProgress(unitId, s, st);
+        setSaveError(false);
+      } catch {
+        setSaveError(true);
+      }
+    });
+    return saves.current;
   }, [unitId]);
 
   const persist = useCallback((s: number, st: LessonState, immediate = false) => {
@@ -51,7 +56,7 @@ export function usePlayerState(unitId: string, data: StepsPayload | undefined) {
     latest.current = { step: s, state: stamped };
     storage.set(key(unitId), latest.current);
     if (timer.current) clearTimeout(timer.current);
-    timer.current = setTimeout(flush, immediate ? 0 : 800);
+    timer.current = setTimeout(() => { timer.current = null; void flush(); }, immediate ? 0 : 800);
   }, [flush, unitId]);
 
   useEffect(() => () => {

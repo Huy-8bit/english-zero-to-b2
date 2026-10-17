@@ -8,6 +8,7 @@ import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import { ErrorBox, Skeleton } from "@/components/ui/misc";
 import { formatMinutes, KIND_LABELS } from "@/lib/utils";
+import { DailyPlan, WeakTopics } from "./AIPlan";
 
 const DAY = ["CN", "T2", "T3", "T4", "T5", "T6", "T7"];
 
@@ -52,7 +53,7 @@ export default function DashboardPage() {
                 <p className="text-sm text-muted">{r.next_lesson.title_vi}</p>
                 <div className="mt-4 flex flex-wrap gap-2">
                   <Link to={`/learn/${r.next_lesson.id}`}><Button><PlayCircle size={18} />Bắt đầu học</Button></Link>
-                  {!r.placement_taken && <Link to="/learn/PLACEMENT-TEST"><Button variant="outline"><Target size={18} />Làm bài kiểm tra xếp lớp</Button></Link>}
+                  {!r.placement_taken && <Link to="/placement"><Button variant="outline"><Target size={18} />Làm bài kiểm tra xếp lớp</Button></Link>}
                 </div>
               </>
             ) : <p>Bạn đã hoàn thành toàn bộ ngữ pháp. Hãy làm bài kiểm tra B2 trong mục Kiểm tra.</p>}
@@ -83,8 +84,13 @@ export default function DashboardPage() {
         </Card>
       </div>
 
+      <div className="grid gap-4 lg:grid-cols-2">
+        <DailyPlan />
+        <WeakTopics />
+      </div>
+
       <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
-        <Stat icon={<GraduationCap size={18} />} label="Trình độ hiện tại" value={r.current_level} sub={r.current_level_name + (r.placement ? ` · xếp lớp ${r.placement.score}/80` : "")} />
+        <Stat icon={<GraduationCap size={18} />} label="Trình độ hiện tại" value={r.current_level} sub={r.current_level_name + (r.placement ? (r.placement.score != null ? ` · xếp lớp ${r.placement.score}/80` : " · theo bài xếp lớp") : "")} />
         <Stat icon={<Trophy size={18} />} label="Bài đã hoàn thành" value={`${d.lessons.completed}/${d.lessons.total}`} sub={`Ngữ pháp ${d.lessons.grammar_completed}/${d.lessons.grammar_total}`} />
         <Stat icon={<Clock size={18} />} label="Thời gian học" value={formatMinutes(d.time.total_minutes)} sub={`Tuần này ${formatMinutes(d.time.week_minutes)}`} />
         <Stat icon={<Brain size={18} />} label="Cần ôn hôm nay" value={String(d.vocabulary.due + d.lessons.review)} sub={`${d.vocabulary.due} thẻ từ · ${d.lessons.review} bài`} />
@@ -153,7 +159,7 @@ export default function DashboardPage() {
             {r.review_lessons.map((x) => <Rec key={x.id} to={`/learn/${x.id}`} tag="Cần ôn" tone="danger" title={`${x.id} · ${x.title}${x.score !== null ? ` (${Math.round(x.score)}%)` : ""}`} />)}
             {r.skills_or_test && <Rec to={`/learn/${r.skills_or_test.id}`} tag={KIND_LABELS[r.skills_or_test.kind]} tone="success" title={r.skills_or_test.title} />}
             {r.due_cards > 0 && <Rec to="/review" tag="Flashcards" title={`${r.due_cards} thẻ từ vựng đến hạn ôn`} />}
-            {!r.placement_taken && <Rec to="/learn/PLACEMENT-TEST" tag="Xếp lớp" title="Placement Test — tìm điểm xuất phát phù hợp" />}
+            {!r.placement_taken && <Rec to="/placement" tag="Xếp lớp" title="Kiểm tra xếp lớp thích ứng — tìm điểm xuất phát phù hợp" />}
             <p className="pt-2 text-xs text-muted">Huy hiệu: {earned.length}/{d.achievements.length} · <Link className="text-primary underline" to="/progress">xem tất cả</Link></p>
           </CardContent>
         </Card>

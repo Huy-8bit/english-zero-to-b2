@@ -16,6 +16,9 @@ def get_db(request: Request) -> Iterator[Session]:
         yield db
     finally:
         db.close()
+        ai = getattr(request.app.state, "ai", None)
+        if ai is not None:
+            ai.gateway.flush_logs()  # after the request session released its locks
 
 
 def get_store(request: Request) -> ContentStore:

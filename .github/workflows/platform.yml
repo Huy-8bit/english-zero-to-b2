@@ -1,0 +1,57 @@
+name: Learning platform
+on:
+  push:
+    paths: ['platform/**', '.github/workflows/platform.yml']
+  pull_request:
+    paths: ['platform/**', '.github/workflows/platform.yml']
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      AI_PROVIDER: disabled
+      APP_ACCESS_TOKEN: ''
+      PW_CHANNEL: ''
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: platform/frontend/package-lock.json
+      - name: Backend dependencies
+        working-directory: platform/backend
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg
+          python -m venv .venv
+          .venv/bin/python -m pip install -r requirements.txt
+      - name: Backend, SDK contract and migration tests (no live AI)
+        working-directory: platform/backend
+        run: .venv/bin/python -m pytest -q
+      - name: Frontend dependencies
+        working-directory: platform/frontend
+        run: npm ci
+      - name: Lint, components and production build
+        working-directory: platform/frontend
+        run: |
+          npm run lint
+          npm test
+          npm run build
+      - name: Browser workflows with simulated AI
+        working-directory: platform/frontend
+        run: |
+          npx playwright install --with-deps chromium
+          npx playwright test
+      - name: Browser failure artifacts
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: browser-failures
+          path: platform/frontend/test-results
+          retention-days: 7

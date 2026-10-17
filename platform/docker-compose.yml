@@ -11,6 +11,7 @@ services:
     environment:
       CONTENT_ROOT: /content
       DATABASE_URL: sqlite:////data/english.db
+      MEDIA_DIR: /data/media
       CORS_ORIGINS: http://localhost:${WEB_PORT:-8080}
     volumes:
       # Giáo trình Markdown (thư mục cha của platform/), chỉ đọc. Sửa Markdown → web tự cập nhật.
@@ -27,7 +28,9 @@ services:
       backend:
         condition: service_healthy
     ports:
-      - "${WEB_PORT:-8080}:80"
+      - "${WEB_BIND:-127.0.0.1}:${WEB_PORT:-8080}:80"
 
 volumes:
   learning-data:
+    # Keep the existing volume even when the checkout/project directory changes.
+    name: ${LEARNING_DATA_VOLUME:-english-mastery_learning-data}

@@ -46,7 +46,15 @@ def get_user(db: Session) -> User:
     if user is None:
         user = User(id=1)
         db.add(user)
-        db.commit()
+        try:
+            db.commit()
+        except IntegrityError:
+            # The dashboard launches several requests on first load. Another
+            # request may have created the single local profile in the meantime.
+            db.rollback()
+            user = db.get(User, 1)
+            if user is None:
+                raise
     return user
 
 
@@ -163,7 +171,9 @@ def attempt_is_correct(a: Attempt) -> bool | None:
         return True
     if a.verdict == "incorrect":
         return False
-    return a.self_correct
+    if a.self_correct is not None:
+        return a.self_correct
+    return a.ai_correct
 
 
 def unit_score(db: Session, user_id: int, unit_id: str) -> tuple[float | None, int, int]:
@@ -256,6 +266,11 @@ def placement_level(db: Session, user_id: int, store: ContentStore) -> dict | No
 
 # ------------------------------------------------------------------ dashboard
 
+def prog_date(db: Session, user_id: int) -> str | None:
+    p = db.scalar(select(LessonProgress).where(LessonProgress.user_id == user_id, LessonProgress.unit_id == "PLACEMENT-TEST"))
+    return p.completed_at.isoformat() if p and p.completed_at else None
+
+
 def progress_map(db: Session, user_id: int) -> dict[str, LessonProgress]:
     return {p.unit_id: p for p in db.scalars(select(LessonProgress).where(LessonProgress.user_id == user_id))}
 
@@ -273,6 +288,13 @@ def recommendations(db: Session, user: User, store: ContentStore) -> dict:
     review = [p for p in pm.values() if p.status == "review"]
     placement = placement_level(db, user.id, store)
     start_level = placement["level"] if placement and placement.get("level") else "A0"
+    from ..models import LearningProfile
+
+    prof = db.get(LearningProfile, user.id)
+    ai_place = (prof.preferences or {}).get("placement") if prof else None
+    if ai_place and ai_place.get("level") in LEVELS and (not placement or ai_place.get("date", "") > (prog_date(db, user.id) or "")):
+        placement = {"score": None, "level": ai_place["level"], "source": "adaptive"}
+        start_level = ai_place["level"]
     start_idx = LEVELS.index(start_level)
     next_lesson = None
     for u in units:

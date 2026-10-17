@@ -14,7 +14,7 @@ export default function ReferencePage() {
   const path = params.get("path") ?? "";
   const q = useQuery({ queryKey: ["doc", path], queryFn: () => api.doc(path), enabled: path.length > 2 });
   const [confirmed, setConfirmed] = useState(false);
-  useEffect(() => setConfirmed(false), [path]);
+  useEffect(() => { setConfirmed(false); }, [path]);
   useEffect(() => {
     if (!q.data || !loc.hash) return;
     const id = decodeURIComponent(loc.hash.slice(1));

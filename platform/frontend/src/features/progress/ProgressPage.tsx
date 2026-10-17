@@ -10,6 +10,7 @@ import { Progress } from "@/components/ui/progress";
 import { ErrorBox, Input, PageHeader, Skeleton } from "@/components/ui/misc";
 import { toast } from "@/components/ui/toast";
 import { KIND_LABELS, STATUS_LABELS } from "@/lib/utils";
+import { LearningAnalytics } from "./Analytics";
 
 const XP_REASON: Record<string, string> = {
   auto_correct: "Câu tự chấm đúng", self_correct: "Câu tự đánh giá đúng", production: "Bài viết/nói đã nộp",
@@ -18,14 +19,15 @@ const XP_REASON: Record<string, string> = {
 
 export default function ProgressPage() {
   const q = useQuery({ queryKey: ["stats"], queryFn: api.stats, refetchOnMount: "always" });
-  const writing = useQuery({ queryKey: ["writing-history"], queryFn: () => api.writing() });
+  const writing = useQuery({ queryKey: ["writing-entries"], queryFn: () => api.writing() });
   if (q.isLoading) return <Skeleton className="h-96" />;
   if (q.error || !q.data) return <ErrorBox error={q.error} onRetry={() => q.refetch()} />;
   const s = q.data;
   const totalAttempts = Object.values(s.attempts).reduce((a, b) => a + b, 0);
   return (
     <div className="space-y-6">
-      <PageHeader title="Tiến độ của tôi" subtitle="Mọi số liệu được tính từ hoạt động học thật đã lưu." />
+      <PageHeader title="Tiến độ & phân tích" subtitle="Mọi số liệu được tính từ hoạt động học thật đã lưu." />
+      <LearningAnalytics />
       <div className="grid gap-4 sm:grid-cols-3">
         <Card className="p-4"><p className="flex items-center gap-2 text-xs text-muted"><Sparkles size={15} />Tổng XP</p><p className="text-2xl font-bold">{s.xp_total}</p></Card>
         <Card className="p-4"><p className="flex items-center gap-2 text-xs text-muted"><Flame size={15} />Chuỗi ngày học</p><p className="text-2xl font-bold">{s.streak}</p></Card>

@@ -3,7 +3,7 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { AnimatePresence, motion } from "motion/react";
 import {
-  ArrowLeft, ArrowRight, Bot, BookOpenText, CheckCircle2, ChevronLeft, Clock, Flag, Focus, List, NotebookPen, Trophy, X,
+  ArrowLeft, ArrowRight, Bot, BookOpenText, Sparkles, CheckCircle2, ChevronLeft, Clock, Flag, Focus, List, NotebookPen, Trophy, X,
 } from "lucide-react";
 import { api } from "@/services/api";
 import type { ItemResult, Step } from "@/types/content";
@@ -23,6 +23,8 @@ import { usePlayerState } from "./usePlayerState";
 import { useHeartbeat } from "./useHeartbeat";
 import { NotesPanel } from "./NotesPanel";
 import { TutorPanel } from "@/features/tutor/TutorPanel";
+import { GeneratorForm } from "@/features/ai-practice/GeneratorForm";
+import { useAIStatus } from "@/components/ai/AIStatus";
 import {
   ConceptSlide, DialogueSlide, ExamplesSlide, FlashcardsSlide, FormulaSlide, MistakesSlide, PassageSlide, RecapSlide, VocabSlide,
 } from "./slides";
@@ -44,18 +46,27 @@ type CompleteResult = Awaited<ReturnType<typeof api.complete>>;
 
 export default function LessonPlayer() {
   const { unitId = "" } = useParams();
+  // React Router reuses this route when only the ID changes. Each lesson needs its
+  // own drafts, save timer and completion state; unmount flushes the previous one.
+  return <LessonSession key={unitId} unitId={unitId} />;
+}
+
+function LessonSession({ unitId }: { unitId: string }) {
   const nav = useNavigate();
   const qc = useQueryClient();
   const { focusMode, setFocusMode } = useUI();
   const steps = useQuery({ queryKey: ["steps", unitId], queryFn: () => api.steps(unitId), staleTime: Infinity, gcTime: 0 });
   const lesson = useQuery({ queryKey: ["lesson", unitId], queryFn: () => api.lesson(unitId) });
-  const tutor = useQuery({ queryKey: ["tutor-status"], queryFn: api.tutorStatus, staleTime: Infinity });
+  useAIStatus();
   const ps = usePlayerState(unitId, steps.data);
   useHeartbeat(steps.data ? unitId : undefined);
 
   const [outline, setOutline] = useState(false);
   const [notes, setNotes] = useState(false);
   const [tutorOpen, setTutorOpen] = useState(false);
+  const tutorTrigger = useRef<HTMLButtonElement>(null);
+  const closeTutor = useCallback(() => { setTutorOpen(false); tutorTrigger.current?.focus(); }, []);
+  const [practiceOpen, setPracticeOpen] = useState(false);
   const [completing, setCompleting] = useState(false);
   const [done, setDone] = useState<CompleteResult | null>(null);
   const [submittingExam, setSubmittingExam] = useState(false);
@@ -148,6 +159,8 @@ export default function LessonPlayer() {
       const t = e.target as HTMLElement;
       const typing = t instanceof HTMLInputElement || t instanceof HTMLTextAreaElement || t instanceof HTMLSelectElement || t.isContentEditable;
       if (document.querySelector("[role=dialog]")) return;
+      if (e.key === "Escape" && tutorOpen) { closeTutor(); return; }
+      if (t.closest("#lesson-tutor")) return;
       if (e.key === "Escape" && focusMode) setFocusMode(false);
       if (typing || e.altKey || e.metaKey || e.ctrlKey) return;
       if (e.key === "ArrowRight") { e.preventDefault(); go(ps.step + 1); }
@@ -160,7 +173,7 @@ export default function LessonPlayer() {
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [go, ps.step, total, focusMode, setFocusMode]);
+  }, [go, ps.step, total, focusMode, setFocusMode, tutorOpen, closeTutor]);
 
   if (steps.isLoading || !ps.ready) {
     return (
@@ -178,7 +191,7 @@ export default function LessonPlayer() {
   const lastItemId = Object.values(ps.results).sort((a, b) => b.attempt_id - a.attempt_id)[0]?.item_id;
 
   return (
-    <div className="min-h-screen bg-bg">
+    <div className={cn("min-h-screen bg-bg transition-[padding] duration-200 motion-reduce:transition-none", tutorOpen && "md:pr-[22rem] xl:pr-[26rem]")}>
       <header className="sticky top-0 z-30 border-b border-border bg-bg/90 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center gap-2 px-3 py-2 sm:px-6">
           <Button variant="ghost" size="icon" onClick={() => nav(-1)} aria-label="Thoát bài học"><X size={18} /></Button>
@@ -195,9 +208,10 @@ export default function LessonPlayer() {
             </div>
           </div>
           <div className="flex items-center">
-            {!focusMode && <Button variant="ghost" size="icon" onClick={() => setOutline(true)} aria-label="Danh sách slide" className="lg:hidden"><List size={18} /></Button>}
+            {!focusMode && <Button variant="ghost" size="icon" onClick={() => setOutline(true)} aria-label="Danh sách slide" className={tutorOpen ? "2xl:hidden" : "lg:hidden"}><List size={18} /></Button>}
             <Button variant="ghost" size="icon" onClick={() => setNotes(true)} aria-label="Ghi chú"><NotebookPen size={18} /></Button>
-            {tutor.data?.enabled && <Button variant="ghost" size="icon" onClick={() => setTutorOpen(true)} aria-label="Gia sư AI"><Bot size={18} /></Button>}
+            <Button ref={tutorTrigger} variant={tutorOpen ? "secondary" : "ghost"} size="sm" onClick={() => setTutorOpen((open) => !open)} aria-expanded={tutorOpen} aria-controls="lesson-tutor" aria-label="Hỏi AI về bài này" title="Ask AI / Giải thích với AI"><Bot size={18} /><span className={tutorOpen ? "hidden 2xl:inline" : "hidden md:inline"}>Hỏi AI</span></Button>
+            <Button variant="ghost" size="sm" onClick={() => setPracticeOpen(true)} aria-label="Tạo bài tập với AI" title="Practice with AI / Tạo bài tập"><Sparkles size={18} /><span className={tutorOpen ? "hidden 2xl:inline" : "hidden md:inline"}>Tạo bài tập</span></Button>
             <Link to={`/reference?path=${encodeURIComponent(unit.path)}`} className="hidden rounded-xl p-2 text-muted hover:bg-surface-2 sm:block" aria-label="Xem toàn bộ bài (chế độ tra cứu)" title="Xem toàn bộ bài (chế độ tra cứu)"><BookOpenText size={18} /></Link>
             <Button variant={focusMode ? "secondary" : "ghost"} size="icon" onClick={() => setFocusMode(!focusMode)} aria-pressed={focusMode} aria-label="Chế độ tập trung" title="Chế độ tập trung (Esc để thoát)"><Focus size={18} /></Button>
             {!focusMode && <ThemeToggle />}
@@ -212,11 +226,11 @@ export default function LessonPlayer() {
 
       <div className={cn("mx-auto flex max-w-6xl gap-6 px-3 sm:px-6", focusMode && "max-w-4xl")}>
         {!focusMode && (
-          <aside className="sticky top-20 hidden h-[calc(100vh-6rem)] w-64 shrink-0 overflow-y-auto py-6 lg:block" aria-label="Các slide">
+          <aside className={cn("sticky top-20 hidden h-[calc(100vh-10rem)] w-64 shrink-0 overflow-y-auto py-6", tutorOpen ? "2xl:block" : "lg:block")} aria-label="Các slide">
             <Outline steps={allSteps} current={ps.step} onPick={go} results={ps.results} />
           </aside>
         )}
-        <main className="min-w-0 flex-1 pb-28 pt-6">
+        <main className={cn("min-w-0 flex-1 pt-6", tutorOpen ? "pb-[calc(46dvh+6rem)] md:pb-28" : "pb-28")}>
           <AnimatePresence mode="wait">
             <motion.section key={step.id} initial={{ opacity: 0, x: 16 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -16 }} transition={{ duration: 0.18 }}
               aria-labelledby="slide-title">
@@ -236,19 +250,19 @@ export default function LessonPlayer() {
         </main>
       </div>
 
-      <footer className="fixed inset-x-0 bottom-0 z-30 border-t border-border bg-surface/95 backdrop-blur">
+      <footer className={cn("fixed inset-x-0 bottom-0 z-30 border-t border-border bg-surface/95 backdrop-blur transition-[right] duration-200 motion-reduce:transition-none", tutorOpen && "bottom-[46dvh] md:bottom-0 md:right-[22rem] xl:right-[26rem]")}>
         <div className="mx-auto flex max-w-6xl items-center gap-2 px-3 py-3 sm:px-6">
           <Button variant="outline" onClick={() => go(ps.step - 1)} disabled={ps.step === 0} aria-label="Slide trước (phím ←)"><ArrowLeft size={16} /><span className="hidden sm:inline">Trước</span></Button>
-          <span className="mx-auto hidden text-xs text-muted md:block">← → chuyển slide · Enter để kiểm tra / tiếp tục</span>
+          <span className={cn("mx-auto hidden text-xs text-muted", tutorOpen ? "2xl:block" : "md:block")}>← → chuyển slide · Enter để kiểm tra / tiếp tục</span>
           {primaryLabel && (
-            <Button variant="secondary" className="ml-auto md:ml-0" onClick={() => primary.current?.()}><CheckCircle2 size={16} />{primaryLabel}</Button>
+            <Button variant="secondary" className={tutorOpen ? "ml-auto" : "ml-auto md:ml-0"} onClick={() => primary.current?.()}><CheckCircle2 size={16} />{primaryLabel}</Button>
           )}
           {isLast ? (
-            <Button variant="success" onClick={finish} disabled={completing || (isExam && !examSubmitted)} className={primaryLabel ? "" : "ml-auto md:ml-0"}>
+            <Button variant="success" onClick={finish} disabled={completing || (isExam && !examSubmitted)} className={primaryLabel ? "" : tutorOpen ? "ml-auto" : "ml-auto md:ml-0"}>
               <Flag size={16} />{completing ? "Đang lưu…" : unit.status === "completed" ? "Hoàn thành lại" : "Hoàn thành bài học"}
             </Button>
           ) : (
-            <Button onClick={() => go(ps.step + 1)} className={primaryLabel ? "" : "ml-auto md:ml-0"} aria-label="Slide tiếp theo (phím →)">Tiếp<ArrowRight size={16} /></Button>
+            <Button onClick={() => go(ps.step + 1)} className={primaryLabel ? "" : tutorOpen ? "ml-auto" : "ml-auto md:ml-0"} aria-label="Slide tiếp theo (phím →)">Tiếp<ArrowRight size={16} /></Button>
           )}
         </div>
       </footer>
@@ -257,7 +271,19 @@ export default function LessonPlayer() {
         <Outline steps={allSteps} current={ps.step} onPick={(i) => { go(i); setOutline(false); }} results={ps.results} />
       </Sheet>
       <Sheet open={notes} onOpenChange={setNotes} title="Ghi chú của tôi"><NotesPanel unitId={unitId} /></Sheet>
-      {tutor.data?.enabled && <Sheet open={tutorOpen} onOpenChange={setTutorOpen} title="Gia sư AI"><TutorPanel unitId={unitId} stepIndex={Math.min(ps.step, data.steps.length - 1)} lastItemId={lastItemId} /></Sheet>}
+      {tutorOpen && (
+        <aside id="lesson-tutor" aria-labelledby="lesson-tutor-title"
+          className="fixed inset-x-0 bottom-0 z-30 flex h-[46dvh] min-h-0 flex-col border-t border-border bg-surface shadow-xl md:inset-x-auto md:right-0 md:top-0 md:h-dvh md:w-[22rem] md:border-l md:border-t-0 xl:w-[26rem]">
+          <div className="flex shrink-0 items-center justify-between gap-2 border-b border-border px-4 py-3">
+            <div className="flex items-center gap-2"><Bot size={20} className="text-primary" /><h2 id="lesson-tutor-title" className="font-semibold">Gia sư AI</h2></div>
+            <Button variant="ghost" size="icon" onClick={closeTutor} aria-label="Đóng gia sư AI"><X size={18} /></Button>
+          </div>
+          <div className="min-h-0 flex-1 p-3 sm:p-4">
+            <TutorPanel unitId={unitId} stepIndex={Math.min(ps.step, data.steps.length - 1)} lastItemId={lastItemId} />
+          </div>
+        </aside>
+      )}
+      <Sheet open={practiceOpen} onOpenChange={setPracticeOpen} title={`Tạo bài tập với AI — ${unit.id}`}><GeneratorForm lessonId={unitId} compact onDone={() => setPracticeOpen(false)} /></Sheet>
       <CompletionDialog result={done} onClose={() => setDone(null)} nextId={lesson.data?.next_id ?? null} unitKind={unit.kind} />
     </div>
   );

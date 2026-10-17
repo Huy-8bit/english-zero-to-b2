@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import { Layout } from "./Layout";
 import { Skeleton } from "@/components/ui/misc";
 import { Toaster } from "@/components/ui/toast";
+import { LoginGate } from "@/features/auth/LoginGate";
 
 const Dashboard = lazy(() => import("@/features/dashboard/DashboardPage"));
 const PathPage = lazy(() => import("@/features/learning-path/PathPage"));
@@ -15,6 +16,17 @@ const ReferencePage = lazy(() => import("@/features/reference/ReferencePage"));
 const LibraryPage = lazy(() => import("@/features/reference/LibraryPage"));
 const SearchPage = lazy(() => import("@/features/search/SearchPage"));
 const NotFound = lazy(() => import("./NotFound"));
+const PracticeStudio = lazy(() => import("@/features/ai-practice/PracticeStudioPage"));
+const ExerciseSetPage = lazy(() => import("@/features/ai-practice/ExerciseSetPage"));
+const WritingStudio = lazy(() => import("@/features/writing-studio/WritingStudioPage"));
+const SpeakingStudio = lazy(() => import("@/features/speaking-studio/SpeakingStudioPage"));
+const ListeningStudio = lazy(() => import("@/features/listening-studio/ListeningStudioPage").then((m) => ({ default: m.ListeningStudioPage })));
+const ListeningSet = lazy(() => import("@/features/listening-studio/ListeningStudioPage").then((m) => ({ default: m.ListeningSetPage })));
+const ReadingStudio = lazy(() => import("@/features/reading-studio/ReadingStudioPage").then((m) => ({ default: m.ReadingStudioPage })));
+const ReadingSet = lazy(() => import("@/features/reading-studio/ReadingStudioPage").then((m) => ({ default: m.ReadingSetPage })));
+const MistakesPage = lazy(() => import("@/features/mistakes/MistakesPage"));
+const PlacementPage = lazy(() => import("@/features/placement/PlacementPage"));
+const SettingsPage = lazy(() => import("@/features/settings/SettingsPage"));
 
 function Loading() {
   return (
@@ -28,7 +40,7 @@ function Loading() {
 
 export default function App() {
   return (
-    <>
+    <LoginGate>
       <Suspense fallback={<Loading />}>
         <Routes>
           <Route path="/learn/:unitId" element={<LessonPlayer />} />
@@ -49,11 +61,22 @@ export default function App() {
             <Route path="reference" element={<ReferencePage />} />
             <Route path="library" element={<LibraryPage />} />
             <Route path="search" element={<SearchPage />} />
+            <Route path="ai-practice" element={<PracticeStudio />} />
+            <Route path="ai-practice/:setId" element={<ExerciseSetPage />} />
+            <Route path="writing-studio" element={<WritingStudio />} />
+            <Route path="speaking-studio" element={<SpeakingStudio />} />
+            <Route path="listening-studio" element={<ListeningStudio />} />
+            <Route path="listening-studio/:setId" element={<ListeningSet />} />
+            <Route path="reading-studio" element={<ReadingStudio />} />
+            <Route path="reading-studio/:setId" element={<ReadingSet />} />
+            <Route path="mistakes" element={<MistakesPage />} />
+            <Route path="placement" element={<PlacementPage />} />
+            <Route path="settings" element={<SettingsPage />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
       </Suspense>
       <Toaster />
-    </>
+    </LoginGate>
   );
 }

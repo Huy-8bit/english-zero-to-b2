@@ -106,15 +106,13 @@ def test_validation_errors(client):
     assert client.get("/api/lessons/NOPE").status_code == 404
 
 
-def test_tutor_disabled_without_credentials(client, monkeypatch):
-    monkeypatch.delenv("ANTHROPIC_API_KEY", raising=False)
-    monkeypatch.delenv("ANTHROPIC_AUTH_TOKEN", raising=False)
-    monkeypatch.delenv("TUTOR_ENABLED", raising=False)
-    from app import config
-    monkeypatch.setattr(config, "ANTHROPIC_API_KEY", "")
-    assert client.get("/api/tutor/status").json()["enabled"] is False
-    r = client.post("/api/tutor/ask", json={"unit_id": "A1-G011", "action": "explain"})
-    assert r.status_code == 503
+def test_ai_disabled_without_key(client):
+    st = client.get("/api/ai/status").json()
+    assert st["configured"] is False and st["enabled"] is False
+    r = client.post("/api/ai/tutor/chat", json={"unit_id": "A1-G011", "action": "explain_simply"})
+    assert r.status_code == 503 and r.json()["code"] == "ai_disabled"
+    # curriculum learning keeps working without AI
+    assert client.get("/api/lessons/A1-G011/steps").status_code == 200
 
 
 def test_placement_recommendation_uses_lower_of_total_and_parts(client, store):
@@ -141,3 +139,54 @@ def test_placement_recommendation_uses_lower_of_total_and_parts(client, store):
     # 45 correct → total band A2 (45–59); first part under 11/15 is B1 → lower of the two is A2
     assert rec["placement"]["score"] == 45 and rec["placement"]["level"] == "A2"
     assert rec["next_lesson"]["id"] == "A2-G001"
+
+
+def test_curriculum_quiz_retry_is_idempotent(client, app):
+    from sqlalchemy import func, select
+    from app.models import Attempt, TopicMastery
+    data = client.get('/api/lessons/A1-G011/steps').json()
+    quiz = next(s for s in data['steps'] if s['type'] == 'quiz' and s['items'][0]['id'] == 'A1-G011:L1.1')
+    body = {'answers': {'A1-G011:L1.1': 'B'}, 'client_submission_id': 'curriculum-retry-1'}
+    first = client.post(f"/api/quizzes/{quiz['quiz_id']}/submit", json=body).json()
+    again = client.post(f"/api/quizzes/{quiz['quiz_id']}/submit", json=body).json()
+    assert first['results'] == again['results'] and again['xp_gained'] == 0
+    with app.state.sessionmaker() as db:
+        assert db.scalar(select(func.count(Attempt.id))) == 1
+        mastery = db.scalar(select(TopicMastery).where(TopicMastery.topic_id == 'A1-G011'))
+        assert mastery.attempts == 1
+    changed = {**body, 'answers': {'A1-G011:L1.1': 'A'}}
+    assert client.post(f"/api/quizzes/{quiz['quiz_id']}/submit", json=changed).status_code == 409
+
+
+def test_concurrent_first_profile_creation(tmp_path):
+    from concurrent.futures import ThreadPoolExecutor
+    from threading import Barrier
+    from sqlalchemy.orm import Session
+    from app.database import make_engine, init_db
+    from app.models import User
+    from app.services.progress import get_user
+    engine = make_engine(f"sqlite:///{tmp_path / 'concurrent.db'}")
+    init_db(engine)
+    barrier = Barrier(4)
+    class RacingSession(Session):
+        waited = False
+        def get(self, entity, ident, **kwargs):
+            result = super().get(entity, ident, **kwargs)
+            if entity is User and not self.waited:
+                self.waited = True
+                barrier.wait(timeout=5)
+            return result
+    def create(_):
+        with RacingSession(engine) as db:
+            return get_user(db).id
+    with ThreadPoolExecutor(max_workers=4) as pool:
+        assert list(pool.map(create, range(4))) == [1, 1, 1, 1]
+    engine.dispose()
+
+
+def test_stale_autosave_cannot_replace_newer_lesson_draft(client):
+    client.put('/api/progress/A1-G011', json={'current_step': 4, 'state': {'savedAt': 200, 'drafts': {'q': 'new'}}})
+    client.put('/api/progress/A1-G011', json={'current_step': 1, 'state': {'savedAt': 100, 'drafts': {'q': 'old'}}})
+    progress = client.get('/api/lessons/A1-G011/steps').json()['progress']
+    assert progress['current_step'] == 4
+    assert progress['state']['drafts'] == {'q': 'new'}

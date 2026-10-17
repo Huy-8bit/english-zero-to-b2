@@ -22,6 +22,7 @@ class ProgressIn(BaseModel):
 
 class QuizSubmitIn(BaseModel):
     answers: dict[str, Any] = Field(min_length=1, max_length=200)
+    client_submission_id: str | None = Field(default=None, min_length=8, max_length=64)
 
     @field_validator("answers")
     @classmethod

@@ -3,6 +3,7 @@ import type { ItemResult } from "@/types/content";
 import { Markdown } from "@/components/Markdown";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { AIGradeButton } from "./AIGrade";
 
 const META = {
   correct: { label: "Chính xác!", icon: CheckCircle2, cls: "border-success/40 bg-success-soft text-success" },
@@ -44,6 +45,7 @@ export function ResultPanel({ result, docPath, onSelfAssess, onRetry }: {
           <Button size="sm" variant="outline" onClick={() => onSelfAssess(false)}>Tôi cần xem lại</Button>
         </div>
       )}
+      {(result.verdict === "mismatch" || result.verdict === "submitted") && result.has_key && <AIGradeButton key={result.attempt_id} attemptId={result.attempt_id} />}
       {result.self_correct !== null && (
         <p className="mt-2 text-xs text-muted">Tự đánh giá: {result.self_correct ? "đúng ✓" : "cần xem lại"}</p>
       )}

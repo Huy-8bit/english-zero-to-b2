@@ -6,9 +6,13 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
     DATABASE_URL=sqlite:////data/english.db
 
 WORKDIR /app
+RUN apt-get update && apt-get install -y --no-install-recommends ffmpeg \
+    && rm -rf /var/lib/apt/lists/*
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 COPY app ./app
+COPY alembic.ini ./alembic.ini
+COPY alembic ./alembic
 
 RUN useradd --create-home --uid 10001 app && mkdir -p /data && chown app:app /data
 USER app

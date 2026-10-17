@@ -1,3 +1,4 @@
+import { safeStorage } from "@/lib/utils";
 import type {
   Card, Dashboard, ItemResult, LessonDetail, LessonState, PathLevel, Recommendations, SearchResult, StepsPayload, Unit,
 } from "@/types/content";
@@ -18,6 +19,7 @@ async function request<T>(path: string, init?: RequestInit): Promise<T> {
   } catch {
     throw new ApiError(0, "Không kết nối được máy chủ. Hãy kiểm tra backend đang chạy.");
   }
+  if (res.status === 401) window.dispatchEvent(new CustomEvent("em-auth-required"));
   if (!res.ok) {
     let msg = `${res.status}`;
     try {
@@ -49,9 +51,20 @@ export const api = {
   complete: (id: string) =>
     request<{ status: string; score: number | null; correct: number; graded: number; xp_gained: number; new_achievements: string[]; level_completed: string | null; pass_score: number }>(
       `/api/lessons/${encodeURIComponent(id)}/complete`, { method: "POST" }),
-  submitQuiz: (quizId: string, answers: Record<string, unknown>) =>
-    request<{ results: Record<string, ItemResult>; xp_gained: number; new_achievements: string[] }>(
-      `/api/quizzes/${encodeURIComponent(quizId)}/submit`, { method: "POST", body: json({ answers }) }),
+  submitQuiz: async (quizId: string, answers: Record<string, unknown>) => {
+    // Preserve a failed request's ID across retries/refresh, then retire it after
+    // success so an intentional new attempt gets a new ID.
+    const storage = safeStorage();
+    const key = `em-quiz-pending-${quizId}`;
+    const signature = json(Object.fromEntries(Object.entries(answers).sort(([a], [b]) => a.localeCompare(b))));
+    const pending = storage.get<{ signature: string; id: string } | null>(key, null);
+    const id = pending?.signature === signature ? pending.id : crypto.randomUUID();
+    storage.set(key, { signature, id });
+    const result = await request<{ results: Record<string, ItemResult>; xp_gained: number; new_achievements: string[] }>(
+      `/api/quizzes/${encodeURIComponent(quizId)}/submit`, { method: "POST", body: json({ answers, client_submission_id: id }) });
+    storage.set(key, null);
+    return result;
+  },
   selfAssess: (attemptId: number, correct: boolean) =>
     request<{ result: ItemResult; xp_gained: number }>(`/api/attempts/${attemptId}/self-assess`, { method: "POST", body: json({ correct }) }),
   path: () => request<{ levels: PathLevel[] }>("/api/path"),
@@ -79,7 +92,4 @@ export const api = {
   profile: () => request<{ name: string; daily_goal_minutes: number; weekly_goal_lessons: number }>("/api/profile"),
   saveProfile: (body: Partial<{ name: string; daily_goal_minutes: number; weekly_goal_lessons: number }>) =>
     request<{ name: string; daily_goal_minutes: number; weekly_goal_lessons: number }>("/api/profile", { method: "PUT", body: json(body) }),
-  tutorStatus: () => request<{ enabled: boolean; model: string | null }>("/api/tutor/status"),
-  tutorAsk: (body: { unit_id: string; step_index?: number; action: string; message?: string; item_id?: string }) =>
-    request<{ answer: string; refused: boolean }>("/api/tutor/ask", { method: "POST", body: json(body) }),
 };

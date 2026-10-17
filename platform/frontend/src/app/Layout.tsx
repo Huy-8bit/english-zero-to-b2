@@ -2,38 +2,61 @@ import { NavLink, Outlet, useLocation, useNavigate } from "react-router-dom";
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import {
   BookOpen, BookText, Brain, ClipboardCheck, Ear, FlaskConical, GraduationCap, Headphones, Home, Library, LineChart,
-  Map, Menu, Mic, Moon, PenLine, Search, Sun, X, Layers,
+  Map, Menu, Mic, Moon, PenLine, Search, Sun, X, Layers, Sparkles, PenSquare, AudioLines, Headset, BookOpenCheck, Target,
+  NotebookPen, Settings,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useUI } from "@/stores/ui";
 
-export const NAV = [
-  { to: "/", label: "Dashboard", icon: Home },
-  { to: "/path", label: "Lộ trình học", icon: Map },
-  { to: "/grammar", label: "Ngữ pháp", icon: BookText },
-  { to: "/vocabulary", label: "Từ vựng", icon: Layers },
-  { to: "/pronunciation", label: "Phát âm", icon: Ear },
-  { to: "/listening", label: "Nghe", icon: Headphones },
-  { to: "/speaking", label: "Nói", icon: Mic },
-  { to: "/reading", label: "Đọc", icon: BookOpen },
-  { to: "/writing", label: "Viết", icon: PenLine },
-  { to: "/practice", label: "Luyện tập", icon: FlaskConical },
-  { to: "/exams", label: "Kiểm tra", icon: ClipboardCheck },
-  { to: "/progress", label: "Tiến độ của tôi", icon: LineChart },
-  { to: "/review", label: "Ôn tập & Flashcards", icon: Brain },
-  { to: "/library", label: "Tra cứu", icon: Library },
+export const NAV_GROUPS = [
+  { title: "Học", items: [
+    { to: "/", label: "Dashboard", icon: Home },
+    { to: "/path", label: "Lộ trình học", icon: Map },
+    { to: "/grammar", label: "Ngữ pháp", icon: BookText },
+    { to: "/vocabulary", label: "Từ vựng", icon: Layers },
+    { to: "/pronunciation", label: "Phát âm", icon: Ear },
+    { to: "/listening", label: "Nghe", icon: Headphones },
+    { to: "/speaking", label: "Nói", icon: Mic },
+    { to: "/reading", label: "Đọc", icon: BookOpen },
+    { to: "/writing", label: "Viết", icon: PenLine },
+    { to: "/practice", label: "Luyện tập", icon: FlaskConical },
+    { to: "/exams", label: "Kiểm tra", icon: ClipboardCheck },
+  ] },
+  { title: "Luyện với AI", items: [
+    { to: "/ai-practice", label: "Tạo bài tập AI", icon: Sparkles },
+    { to: "/writing-studio", label: "Writing Studio", icon: PenSquare },
+    { to: "/speaking-studio", label: "Speaking Studio", icon: AudioLines },
+    { to: "/listening-studio", label: "Listening Studio", icon: Headset },
+    { to: "/reading-studio", label: "Reading Studio", icon: BookOpenCheck },
+    { to: "/placement", label: "Kiểm tra xếp lớp", icon: Target },
+  ] },
+  { title: "Theo dõi", items: [
+    { to: "/progress", label: "Tiến độ & phân tích", icon: LineChart },
+    { to: "/mistakes", label: "Sổ lỗi sai", icon: NotebookPen },
+    { to: "/review", label: "Ôn tập & Flashcards", icon: Brain },
+    { to: "/library", label: "Tra cứu", icon: Library },
+    { to: "/settings", label: "Cài đặt", icon: Settings },
+  ] },
 ];
+export const NAV = NAV_GROUPS.flatMap((g) => g.items);
 
 function SideNav({ onNavigate }: { onNavigate?: () => void }) {
   return (
-    <nav aria-label="Điều hướng chính" className="flex flex-col gap-0.5">
-      {NAV.map(({ to, label, icon: Icon }) => (
-        <NavLink key={to} to={to} end={to === "/"} onClick={onNavigate}
-          className={({ isActive }) => cn("flex items-center gap-3 rounded-xl px-3 py-2 text-sm transition",
-            isActive ? "bg-primary-soft text-primary font-semibold" : "text-muted hover:bg-surface-2 hover:text-fg")}>
-          <Icon size={18} aria-hidden />
-          {label}
-        </NavLink>
+    <nav aria-label="Điều hướng chính" className="flex flex-col gap-3">
+      {NAV_GROUPS.map((g) => (
+        <div key={g.title}>
+          <p className="px-3 pb-1 text-[11px] font-semibold uppercase tracking-wider text-muted">{g.title}</p>
+          <div className="flex flex-col gap-0.5">
+            {g.items.map(({ to, label, icon: Icon }) => (
+              <NavLink key={to} to={to} end={to === "/"} onClick={onNavigate}
+                className={({ isActive }) => cn("flex items-center gap-3 rounded-xl px-3 py-1.5 text-sm transition",
+                  isActive ? "bg-primary-soft text-primary font-semibold" : "text-muted hover:bg-surface-2 hover:text-fg")}>
+                <Icon size={17} aria-hidden />
+                {label}
+              </NavLink>
+            ))}
+          </div>
+        </div>
       ))}
     </nav>
   );
@@ -82,7 +105,7 @@ export function ThemeToggle() {
 export function Layout() {
   const { sidebarOpen, setSidebarOpen } = useUI();
   const loc = useLocation();
-  useEffect(() => setSidebarOpen(false), [loc.pathname, setSidebarOpen]);
+  useEffect(() => { setSidebarOpen(false); }, [loc.pathname, setSidebarOpen]);
   return (
     <div className="min-h-screen">
       <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:left-2 focus:top-2 focus:z-50 focus:rounded focus:bg-surface focus:p-2">Bỏ qua tới nội dung</a>

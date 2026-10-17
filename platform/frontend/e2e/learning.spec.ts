@@ -1,4 +1,7 @@
 import { expect, test, type Page } from "@playwright/test";
+import { resetTestDatabase } from "./database";
+
+test.beforeAll(resetTestDatabase);
 
 async function next(page: Page) {
   const h = page.locator("#slide-title");
@@ -90,16 +93,20 @@ test("finish lesson updates dashboard and XP", async ({ page }) => {
   await expect(page.getByText(/^\d+ XP$/).first()).not.toHaveText("0 XP");
   // Resume shows up for in-progress lessons; completed lesson appears in progress history
   await page.goto("/progress");
-  await expect(page.getByRole("link", { name: "A1-G011" })).toBeVisible();
+  await expect(page.getByRole("link", { name: "A1-G011" }).first()).toBeVisible();
 });
 
-test("flashcards review schedules cards with SM-2", async ({ page }) => {
+test("flashcards review schedules cards with SM-2", async ({ page, request }) => {
   await page.goto("/review");
   await page.getByRole("button", { name: "Lật thẻ" }).click();
+  const reviewResponse = page.waitForResponse((r) => r.url().endsWith("/api/vocabulary/review") && r.request().method() === "POST");
   await page.getByRole("button", { name: /Nhớ được/ }).click();
+  const saved = await (await reviewResponse).json();
+  expect(saved.srs.interval_days).toBe(1);
   await expect(page.getByText("+2 XP")).toBeVisible();
   await page.goto("/");
-  await expect(page.getByText(/^1$/).first()).toBeVisible();
+  const cards = await (await request.get("/api/vocabulary")).json();
+  expect(cards.cards.find((c: { id: string }) => c.id === saved.card_id).srs).toEqual(saved.srs);
 });
 
 test("search finds Vietnamese queries and opens Learning or Reference mode", async ({ page }) => {
@@ -133,4 +140,27 @@ test("reading passage, vocabulary list and matching game render from the curricu
   await gotoStep(page, /Task 2/);
   await expect(page.getByRole("button", { name: /Hiện transcript/ })).toBeVisible();
   await expect(page.getByText(/giọng đọc tổng hợp/).first()).toBeVisible();
+});
+
+test("next lesson restores its own slide and drafts without overwriting either lesson", async ({ page, request }) => {
+  const sourceId = "A1-G015";
+  const lesson = await (await request.get(`/api/lessons/${sourceId}`)).json();
+  const nextId = lesson.next_id as string;
+  expect(nextId).toBeTruthy();
+  const target = await (await request.get(`/api/lessons/${nextId}/steps`)).json();
+  const targetState = { savedAt: Date.now(), checklist: { ownLesson: true } };
+  await request.put(`/api/progress/${nextId}`, { data: { current_step: 2, state: targetState } });
+  await page.goto(`/learn/${sourceId}`);
+  await expect(page.locator("#slide-title")).toBeVisible();
+  await page.getByRole("complementary", { name: "Các slide" }).getByRole("button").last().click();
+  await page.getByRole("button", { name: "Hoàn thành bài học", exact: true }).click();
+  await page.getByRole("dialog").getByRole("button", { name: "Bài tiếp theo" }).click();
+  await expect(page).toHaveURL(new RegExp(`/learn/${nextId}$`));
+  await expect(page.locator("#slide-title")).toHaveText(target.steps[2].title);
+  await page.getByRole("button", { name: /Slide tiếp theo/ }).click();
+  await expect.poll(async () => (await (await request.get(`/api/lessons/${nextId}/steps`)).json()).progress.current_step).toBe(3);
+  const saved = await (await request.get(`/api/lessons/${nextId}/steps`)).json();
+  expect(saved.progress.state.checklist).toEqual({ ownLesson: true });
+  await page.reload();
+  await expect(page.locator("#slide-title")).toHaveText(target.steps[3].title);
 });

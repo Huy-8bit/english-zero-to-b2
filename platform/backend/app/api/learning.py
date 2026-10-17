@@ -2,13 +2,17 @@
 from __future__ import annotations
 
 import json
+import hashlib
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy import select
+from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
 
 from ..content.store import ContentStore
-from ..models import Attempt, LessonProgress, Note, User, WritingEntry, utcnow
+from ..models import Attempt, LessonProgress, Note, QuizSubmission, User, WritingEntry, utcnow
 from ..schemas import HeartbeatIn, NoteIn, ProgressIn, QuizSubmitIn, SelfAssessIn, WritingIn
+from ..content.md import strip_md
+from ..services import adaptive
 from ..services import progress as P
 from ..services.grading import grade
 from .deps import current_user, get_db, get_store
@@ -45,6 +49,11 @@ def save_progress(unit_id: str, body: ProgressIn, db: Session = Depends(get_db),
     total = len(b.steps)
     step = min(body.current_step, max(0, total - 1))
     p = _progress(db, user, unit_id, total)
+    previous_stamp = (p.state or {}).get("savedAt")
+    incoming_stamp = (body.state or {}).get("savedAt")
+    if isinstance(previous_stamp, (int, float)) and isinstance(incoming_stamp, (int, float)) and incoming_stamp < previous_stamp:
+        # A keepalive save from a previous page must not replace a newer draft.
+        return {"current_step": p.current_step, "max_step": p.max_step, "status": p.status}
     p.current_step = step
     p.max_step = max(p.max_step, step)
     if body.state is not None:
@@ -68,6 +77,19 @@ def get_quiz(quiz_id: str, db: Session = Depends(get_db), store: ContentStore = 
 @router.post("/quizzes/{quiz_id}/submit")
 def submit_quiz(quiz_id: str, body: QuizSubmitIn, db: Session = Depends(get_db), store: ContentStore = Depends(get_store),
                 user: User = Depends(current_user)):
+    request_hash = hashlib.sha256(json.dumps(body.answers, sort_keys=True, ensure_ascii=False).encode()).hexdigest()
+
+    def previous_submission():
+        if not body.client_submission_id:
+            return None
+        previous = db.scalar(select(QuizSubmission).where(QuizSubmission.user_id == user.id,
+                                                         QuizSubmission.client_submission_id == body.client_submission_id))
+        if previous and (previous.quiz_id != quiz_id or previous.request_hash != request_hash):
+            raise HTTPException(409, "Mã nộp bài đã dùng cho nội dung khác.")
+        return previous
+
+    if previous := previous_submission():
+        return {**previous.result, "xp_gained": 0, "new_achievements": []}
     unit_id = quiz_id.split(":", 1)[0]
     b = store.built(unit_id)
     if b is None:
@@ -93,6 +115,7 @@ def submit_quiz(quiz_id: str, body: QuizSubmitIn, db: Session = Depends(get_db),
         elif g["verdict"] == "submitted" and it.kind in ("long", "speaking") and str(value or "").strip():
             xp += P.award(db, user.id, f"item:{iid}", "production", P.XP_RULES["production"])
         results[iid] = result_payload(it, a)
+        _learning_hooks(db, user.id, b, it, g["verdict"], resp or "")
     act = P.activity(db, user.id)
     act.items_answered += len(body.answers)
     auto = [r for r in results.values() if r["auto"]]
@@ -105,8 +128,18 @@ def submit_quiz(quiz_id: str, body: QuizSubmitIn, db: Session = Depends(get_db),
         p.status = "in_progress"
     user.last_unit_id = unit_id
     new_badges += P.check_achievements(db, user.id, store)
-    db.commit()
-    return {"results": results, "xp_gained": xp, "new_achievements": new_badges}
+    payload = {"results": results, "xp_gained": xp, "new_achievements": new_badges}
+    if body.client_submission_id:
+        db.add(QuizSubmission(user_id=user.id, client_submission_id=body.client_submission_id,
+                              quiz_id=quiz_id, request_hash=request_hash, result=payload))
+    try:
+        db.commit()
+    except IntegrityError:
+        db.rollback()
+        if previous := previous_submission():
+            return {**previous.result, "xp_gained": 0, "new_achievements": []}
+        raise
+    return payload
 
 
 @router.post("/attempts/{attempt_id}/self-assess")
@@ -117,7 +150,14 @@ def self_assess(attempt_id: int, body: SelfAssessIn, db: Session = Depends(get_d
         raise HTTPException(404, "Attempt not found")
     if a.verdict not in ("mismatch", "submitted"):
         raise HTTPException(409, "This answer was graded automatically")
+    if a.self_correct == body.correct:
+        it = store.item(a.item_id)
+        return {"result": result_payload(it, a) if it else None, "xp_gained": 0}
     a.self_correct = body.correct
+    it_sa = store.item(a.item_id)
+    b_sa = store.built(a.unit_id)
+    if it_sa is not None and b_sa is not None:
+        _learning_hooks(db, user.id, b_sa, it_sa, "correct" if body.correct else "incorrect", a.response)
     xp = 0
     if body.correct:
         xp = P.award(db, user.id, f"item:{a.item_id}", "self_correct", P.XP_RULES["self_correct"])
@@ -218,3 +258,23 @@ def put_note(unit_id: str, body: NoteIn, db: Session = Depends(get_db), store: C
     db.commit()
     return {"unit_id": unit_id, "text": n.text, "updated_at": n.updated_at.isoformat()}
 
+
+
+def _learning_hooks(db: Session, user_id: int, built, item, verdict: str, response: str) -> None:
+    """Curriculum answers feed the knowledge model and the mistake notebook (graded results only)."""
+    if verdict not in ("correct", "incorrect") or item.kind in ("long", "speaking"):
+        return
+    ok = verdict == "correct"
+    adaptive.record_result(db, user_id, built.unit.id, 1.0 if ok else 0.0, "normal", None)
+    key = f"cur:{item.id}"
+    if ok:
+        adaptive.record_mistake_success(db, user_id, key)
+        return
+    prompt = next((x["prompt_md"] for st in built.steps for x in st.get("items") or [] if x["id"] == item.id), "")
+    if item.options and item.correct_option:
+        corrected = next((f"{o['key']}. {strip_md(o['text'])}" for o in item.options if o["key"] == item.correct_option), item.correct_option)
+    else:
+        corrected = strip_md(item.model_md)[:500]
+    adaptive.record_mistake(db, user_id, key=key, source_type="curriculum", source_ref=item.id, question_text=strip_md(prompt)[:1000],
+                            student_answer=response, corrected_answer=corrected, error_type="other",
+                            explanation=strip_md(item.explanation_md)[:1000], topic_id=built.unit.id)

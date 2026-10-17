@@ -1,3 +1,139 @@
+# Platform recovery report — 2026-10-17
+
+This section supersedes the historical platform claims below. Existing uncommitted work is preserved. No curriculum files or learner records have been intentionally changed.
+
+## A. Actual architecture
+
+React 19 / TypeScript / Vite / TanStack Query frontend, FastAPI / SQLAlchemy / Pydantic backend. SQLite with WAL and foreign keys; Alembic revisions 0001–0003 adopt the older schema, add AI tables and persist idempotent curriculum submissions. Markdown is read from the existing curriculum by `app/content`; no demo curriculum. One local learner profile, optionally protected by `APP_ACCESS_TOKEN` (not multi-user accounts). Central OpenAI Python SDK provider uses Responses structured outputs, audio and optional Realtime; gateway adds request limits, caching and usage estimates. Tests explicitly use FakeProvider, not live OpenAI. Docker Compose serves nginx and the API with persistent SQLite/media storage.
+
+## B. Current feature status after recovery
+
+Paths below are relative to `platform/`. COMPLETE_AND_TESTED refers only to the listed deterministic scope; no live AI feature is certified.
+
+| Feature | Status | Relevant files | Remaining work |
+|---|---|---|---|
+| Markdown ingestion, hierarchy, answer matching | COMPLETE_AND_TESTED | backend/app/content, tests/test_content.py | Import report regenerated; seven instructional sections remain explicit content slides |
+| Dashboard / path / real analytics | COMPLETE_AND_TESTED | frontend/src/features/dashboard, learning-path, progress; backend/app/api/analytics.py | Deterministic/API and browser flows pass; pedagogical mastery estimates remain estimates |
+| Lesson slides / resume / full text | COMPLETE_AND_TESTED | frontend/src/features/lesson-player, reference | Route isolation, last outline button, refresh, draft ordering and full reading mode tested |
+| Curriculum grading / persistence / completion | COMPLETE_AND_TESTED | backend/app/api/learning.py; frontend/src/features/quizzes; alembic/versions/0003_quiz_submissions.py | Deterministic grading, idempotent retries, XP, completion and migration tests pass; arbitrary open answers need AI/self-assessment |
+| AI tutor / bounded contextual retrieval | PARTIALLY_IMPLEMENTED | backend/app/ai/tutor.py, knowledge.py; frontend/src/features/tutor | Fake-provider API + browser tests and SDK mock HTTP pass; live validation BLOCKED by absent API key |
+| Exercise generation / validation / history | PARTIALLY_IMPLEMENTED | backend/app/ai/exercises.py, validators.py; frontend/src/features/ai-practice | Fake-provider API and browser tests pass; live model quality/availability unverified |
+| AI semantic grading / Vietnamese feedback | PARTIALLY_IMPLEMENTED | backend/app/ai/exercises.py; frontend/src/components/ai | Malformed batches/scores rejected; retries tested; live semantic accuracy unverified |
+| Writing coach / autosave / modes / history | PARTIALLY_IMPLEMENTED | backend/app/ai/writing.py; frontend/src/features/writing-studio | Fake-provider API and browser tests pass; live model quality/availability unverified |
+| Speaking / recording / playback / history | PARTIALLY_IMPLEMENTED | backend/app/ai/speaking.py; frontend/src/features/speaking-studio | Server measures actual audio duration; fake-device microphone, playback and history pass; real microphone/live transcription unverified |
+| Optional Realtime | IMPLEMENTED_NOT_TESTED | backend/app/ai/provider.py; frontend/src/features/speaking-studio/RealtimePanel.tsx | Live lifecycle and budget validation |
+| Listening / cached audio / hidden transcript | PARTIALLY_IMPLEMENTED | backend/app/ai/studio.py; frontend/src/features/listening-studio | Fake-provider API and browser tests pass; live model quality/availability unverified |
+| Reading / evidence / timer / history | PARTIALLY_IMPLEMENTED | backend/app/ai/studio.py; frontend/src/features/reading-studio | Fake-provider API and browser tests pass; live model quality/availability unverified |
+| Adaptive plans / topic mastery / Mistake Notebook | PARTIALLY_IMPLEMENTED | backend/app/services/adaptive.py; frontend/src/features/mistakes | API/browser tests pass with stored attempts; long-term adaptation and independent pedagogical evaluation pending |
+| Vocabulary / SM-2 | COMPLETE_AND_TESTED | backend/app/api/vocab.py; frontend/src/features/flashcards | API + browser review and persisted SM-2 schedule pass |
+| Assessments / adaptive placement | PARTIALLY_IMPLEMENTED | backend/app/ai/placement.py; frontend/src/features/placement | Fake API test passes; scores remain estimates |
+| Authentication / local access model | PARTIALLY_IMPLEMENTED | backend/app/api/auth.py, deps.py | Token API tests pass; Compose binds loopback by default. One local profile, no multi-user account isolation claim |
+| Migrations / restart persistence | COMPLETE_AND_TESTED | backend/alembic; backend/app/database.py; tests/test_migrations.py | SQLite legacy/versioned upgrades and restart pass; PostgreSQL not tested |
+| Cost controls / usage / caching | PARTIALLY_IMPLEMENTED | backend/app/ai/gateway.py, settings.py | Caps, caching and estimates tested; cross-worker reservations and crash-durable logging remain incomplete |
+| Safe Markdown / mobile / keyboard / themes | PARTIALLY_IMPLEMENTED | frontend/src/components/Markdown.tsx; e2e | Sanitization, five axe routes, keyboard and mobile pass; all AI screens/themes need broader accessibility review |
+| AI-unavailable local curriculum | PARTIALLY_IMPLEMENTED | backend/app/ai/provider.py; frontend/src/components/ai | Disabled-AI API tests and Docker browser lesson flow pass; fully disconnected browser has no service worker |
+| Docker / setup / configuration | COMPLETE_AND_TESTED | backend/Dockerfile; frontend/nginx.conf; docker-compose.yml; .env.example; README.md | Both images built; nginx/API/lesson smoke and restart passed; production scaling remains out of scope for this local model |
+| Frontend lint | COMPLETE_AND_TESTED | frontend/package.json | Oxlint correctness checks pass; React Compiler-specific advisory rules are not enabled |
+| CI automation | IMPLEMENTED_NOT_TESTED | ../.github/workflows/platform.yml | Equivalent local checks pass; remote GitHub Actions run not performed |
+| Live OpenAI verification | BLOCKED | backend/app/ai/provider.py; .env | OPENAI_API_KEY absent; no successful live API call or account model-access check |
+
+### Database deployment follow-up — 2026-10-17
+
+- Retained the existing SQLite database and pinned the existing Docker volume name `english-mastery_learning-data`; DB and media persist across image/container replacement. No PostgreSQL conversion or learner-data reset.
+- Added `platform/scripts/backup-db.sh`, `restore-db.sh`, `database.py`, `db_archive.py`, and `deploy.sh`. Backups use the SQLite online API (including committed WAL), media, a manifest and SHA-256 checksums; verification checks SQLite integrity, foreign keys, migration revision and row counts. Restore validates before downtime, requires explicit replacement, snapshots the current destination first, preserves ownership, removes stale WAL/SHM, and reverses ordinary failed swaps.
+- Deploy builds first, stops the API, requires a successful backup before migrations, recreates the API/nginx against the same volume, and checks health through nginx. Wrong-volume guards prevent accidental switch to a blank learner database. Fresh installation and server-transfer commands are documented in `platform/DATABASE.md`.
+- Backed up both actual Docker and local development storage in ignored `platform/backups/`. Restored the real Docker archive to a separate disposable volume; all **29 table content fingerprints matched the archived source**. Tested wrapper-driven stop/restore/restart, pre-restore backup, backup with temporary API stop, and refusal without `--replace` before stopping the API.
+- Ran the actual deployment script twice (including final nginx recreation/proxy check); the final pre-deploy snapshot is `platform/backups/docker-20261017T130208729958Z.tar.gz`. Compared all **29 tables after deployment: contents unchanged**, including **8 lesson progress records and 20 attempts**. `/api/health` through localhost:8080 returned healthy with 224 units.
+- Validation: **78 backend tests passed** (66 existing + 12 archive/restore tests), including WAL recovery, Unicode/media round-trip, corruption/path-traversal rejection, overwrite protection, automatic pre-restore snapshot and simulated I/O failure rollback. Final targeted rerun: **12/12**. Shell syntax and Git whitespace checks passed. Docker restore test container/volume removed; real learner volume retained.
+- Scope: a single-server persistent-disk SQLite deployment; no multi-instance SQLite/PostgreSQL claim. Online media copying is not transactional with DB writes; `--stop` is the documented consistent full-snapshot option. Browser-only AI drafts are not covered by database backup. No cron job or off-host backup transfer was automatically installed.
+
+### Lesson AI chat layout follow-up — 2026-10-17
+
+- Replaced the lesson tutor modal sheet with a non-modal right sidebar. Lesson/header/footer reserve space for chat on desktop; narrow screens use a bottom panel with lesson controls above it. Lesson navigation remains usable while chat is open, and tutor context follows the current slide.
+- Chat history scrolls independently with the composer fixed below it. Closing with the button or Escape restores focus to the trigger; typing/keyboard interaction in chat does not trigger lesson shortcuts.
+- Validation: frontend lint and production build passed; existing tutor/history and mobile Playwright scenarios passed (**2/2**, simulated AI). Browser checks at 1440, 1024, 768 and 390 pixels verified no overlap/horizontal overflow, lesson navigation while chat remains open, typing and closing. Desktop/mobile screenshots visually inspected.
+- Rebuilt/recreated only the frontend container; backend/database untouched by deployment. The deployed nginx API health check passed at localhost:8080.
+
+## C. Recovery baseline (historical; failures below were fixed)
+
+- Backend: 40 passed, 1 failed (`test_file_sqlite_no_lock_between_request_and_usage_log`: cached TTS reduces expected call count).
+- Frontend: 13 passed, 1 failed (`ItemCard` self-assessment test lacks QueryClientProvider after AI grading integration).
+- TypeScript and production build pass.
+- Dockerfile copies only `app/`, but startup needs `alembic.ini` and `alembic/`.
+- LessonPlayer stays mounted between `/learn/:unitId` routes while `usePlayerState` initialization is gated by `ready`; next lesson can inherit previous lesson position/drafts.
+- Tests create the default application at import; isolate environment/database before imports to avoid touching development data.
+- API key presence is not proof of live API validation. No successful live call performed in this recovery session.
+
+## D. Remaining prioritized backlog
+
+1. **Live AI verification (blocked):** configure a valid backend key and run model-access check, tutor, generation/independent verifier, open grading, writing, transcription and TTS on a disposable learner DB. Inspect Vietnamese feedback and valid alternative answers with a teacher. Never mark these complete from fake-provider tests.
+2. **Cost/concurrency hardening:** reserve budgets across in-flight calls/workers; enforce idempotency before concurrent billable AI operations; persist usage through process crashes/DB lock failures. Current limits are estimate-based checks and in-process rate queues, not a guaranteed financial hard cap.
+3. **Optional Realtime:** client-enforced duration and client-reported usage are not server-enforced accounting; add session ownership, one-time finalization and server lifecycle controls before relying on its cost cap. Real WebRTC has not been exercised.
+4. **Persistence/UX depth:** AI drafts currently persist in browser storage, submissions in DB; add server draft sync if cross-device resume is required. Validate interrupted real microphone sessions and Safari/mobile audio. Reading timer resets after refresh.
+5. **Quality/test coverage:** independently evaluate all exercise types and question ambiguity; review AI-screen keyboard/screen-reader behavior and both themes. CI is created but not run remotely. PostgreSQL and multi-user deployment remain unverified.
+6. **Optional disconnected use:** add a versioned content/service-worker cache if lessons must load without the local backend. Existing curriculum works when only AI is unavailable.
+
+## E. Recovery batch log
+
+### Batch 1 — core state, test isolation, startup packaging
+
+- Fixed route reuse in LessonPlayer and AI practice/reading/listening set pages: each ID now owns its own state.
+- Added next-lesson resume and similar-exercise state regressions.
+- Isolated pytest default DB/media/environment and Playwright suite data. Fixed ItemCard test provider and mobile selector.
+- Dockerfile now packages Alembic files.
+- Executed: backend **41/41 passed**, frontend **14/14 passed** after baseline repairs. Baseline production build passed.
+- Browser rerun: **17 passed, 1 failed, 4 skipped**; remaining failure is an obsolete flashcard dashboard assertion. The new next-lesson test was skipped by that serial suite and remains unverified at this point.
+
+### Batch 2 — grading correctness and persistence (in verification)
+
+- Incomplete/duplicate/undecided AI grading now rejects the batch without recording fabricated zero scores.
+- Idempotent exercise retries target the original submission and reject IDs reused across sets.
+- Listening question context is stripped on all public set routes; reading/listening evidence quote validation tightened.
+- Fake/live TTS cache keys separated; numeric AI scores constrained; SDK parsing failures mapped to learner-facing errors.
+- Added legacy versioned/unversioned migration and application restart tests plus regression tests for the issues above.
+- Confirmed **OPENAI_API_KEY absent**; live AI tests are BLOCKED. Docker daemon is available.
+
+### Batch 3 — audio, deployment, content audit and SDK contracts
+
+- Server validates actual uploaded audio duration using ffprobe before any live transcription call; invalid/overlong uploads are rejected. Docker includes FFmpeg. Audio upload work runs off the event loop, and media writes reject traversal paths.
+- Docker binds loopback by default; nginx accepts the backend's 8 MiB audio limit plus multipart overhead.
+- Updated `.env.example` and platform README for OpenAI, per-task models, local access token, caps, costs and known limitations. Removed unused Anthropic settings.
+- Model pricing is required for billable custom-model calls; user limits cannot exceed environment caps; cached tutor responses respect the AI off switch and use provider/user-specific keys.
+- Added official SDK-over-mock-HTTP tests for Responses strict schema, malformed output, quota/auth errors. These are NOT live calls.
+- Re-ran content import: **224 units, 3,347 steps, 5,791 items, 5,692 keyed, 1,429 deterministic closed questions, 693 cards**. Seven instructional sections remain content slides and are listed in `platform/CONTENT-IMPORT-REPORT.md`.
+- Built both Docker images; verified backend health (224 units), nginx proxy, dashboard, direct lesson URL, navigation, refresh and container restart persistence using disposable containers on ports 18080/18081. Docker schema head is 0003.
+- Added Oxlint correctness checks without changing TypeScript 7. ESLint/typescript-eslint rejected that existing TS version; no forced peer override or downgrade was used. Added GitHub Actions workflow, not executed remotely.
+
+### Batch 4 — workflow correctness and retries
+
+- New additive migration `0003_quiz_submissions.py` stores curriculum idempotency keys and result snapshots. Frontend preserves failed submission IDs through refresh; retries do not duplicate attempts/mastery/XP. Repeated identical self-assessment no longer increments mastery again.
+- Fixed first-load local-user creation race and added concurrent regression.
+- Fixed outline/footer overlap so the last lesson outline button is clickable.
+- Reading/listening now require the requested question count, attach the actual passage for grading, and run the independent blind-answer check. Public questions do not repeat or expose the shared transcript. Reading vocabulary appears after submission.
+- Added a decodable test tone for FakeProvider and browser media decoding coverage; it is not live TTS or speech.
+- Added reading browser flow; fixed next-lesson and similar-set state contamination. Full browser suite: **23/23 passed** before the final writing/autosave follow-up below.
+- Serial autosaves + stale timestamp rejection prevent older lesson drafts overwriting newer ones. Writing edits/mode changes reset feedback and submission IDs; stale request IDs cannot retrieve feedback for changed text. Added regression tests.
+- Component suite: **15/15 passed**. Backend follow-up found one fake-provider flake with smart apostrophes in random read-aloud sentences; fake transcription now accepts printable Unicode. Final backend rerun passed (66 tests).
+
+## F. Final verification and precise handover
+
+- `cd platform/backend && .venv/bin/python -m pytest -q`: **66 passed** (API, content, schema/SDK mock HTTP, invalid AI results, audio parsing, concurrent local-profile creation, idempotent submissions, migration and restart).
+- `cd platform/frontend && npm test`: **15 passed** across four files.
+- `npm run lint`: passed (Oxlint correctness checks). `npm run typecheck` and `npm run build`: passed; final artifact rebuilt after the last source changes.
+- `npx playwright test`: **23 passed**, desktop/mobile, five axe routes; AI backend uses **FakeProvider**, microphone is Chrome's fake device and generated test audio is a tone, not live speech.
+- Content import: **224 lessons / 3,347 slides / 5,791 items / 693 cards**, seven instructional sections explicitly reported instead of dropped.
+- `docker compose config --quiet`: passed. Both Docker images built; disposable nginx/backend smoke passed, schema head **0003**, local lesson refresh and container restart persistence verified. No production learner volume was used. Disposable test containers/network were stopped and removed; final images remain available locally.
+- `git diff --check`: passed. No curriculum source files changed. Existing uncommitted work, including the inherited deleted tutor route and temporary debug scripts, was preserved. No commit/push performed.
+- **No live OpenAI call was made: credentials are absent.** Local fake and HTTP-mock tests do not validate model availability, audio/feedback quality or official CEFR/VSTEP scoring.
+
+**Exact next implementation target:** inspect `backend/app/ai/gateway.py` (`check`, `_run`, `flush_logs`) and `backend/app/ai/exercises.py::submit` for durable budget reservations and concurrent AI submission deduplication. Add a migration for reservations/request records, then tests using file-backed SQLite and simultaneous requests. Preserve revision 0003 and all existing student data. When credentials are supplied, perform the live checks in backlog item 1 with low limits and a disposable DB.
+
+**Files changed in recovery, in addition to inherited AI work:** lesson/player/set route state, autosave hook and regression, writing draft/feedback handling, quiz API/client/migration, grading validators/provider/gateway/media/studio services, backend/test fixtures and new tests, browser scenarios, Docker/nginx/Compose, environment template, README, npm lint dependency/lockfile, CI workflow and this report. The original curriculum audit/history below is retained for continuity and does not override this section.
+
+---
+
+# Historical curriculum and implementation notes
+
 # Implementation Status
 
 **Cập nhật: 2026-10-17. Toàn bộ nội dung theo Curriculum Map đã được xây dựng; 128/128 cặp bài–đáp án đã đọc đối chiếu; kiểm tra tự động sạch.**

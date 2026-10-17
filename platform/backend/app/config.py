@@ -24,6 +24,17 @@ _load_dotenv()
 CONTENT_ROOT = Path(os.environ.get("CONTENT_ROOT", PLATFORM_DIR.parent)).resolve()
 DATABASE_URL = os.environ.get("DATABASE_URL", f"sqlite:///{PLATFORM_DIR / 'backend' / 'data' / 'english.db'}")
 CORS_ORIGINS = [o.strip() for o in os.environ.get("CORS_ORIGINS", "http://localhost:5173,http://127.0.0.1:5173").split(",") if o.strip()]
-ANTHROPIC_API_KEY = os.environ.get("ANTHROPIC_API_KEY", "").strip()
-TUTOR_MODEL = os.environ.get("TUTOR_MODEL", "claude-opus-5-5")
 CONTENT_RELOAD_SECONDS = float(os.environ.get("CONTENT_RELOAD_SECONDS", "3"))
+
+
+def _media_dir() -> Path:
+    explicit = os.environ.get("MEDIA_DIR")
+    if explicit:
+        return Path(explicit).resolve()
+    if DATABASE_URL.startswith("sqlite:///") and ":memory:" not in DATABASE_URL:
+        return Path(DATABASE_URL.replace("sqlite:///", "", 1)).resolve().parent / "media"
+    return PLATFORM_DIR / "backend" / "data" / "media"
+
+
+MEDIA_DIR = _media_dir()
+APP_ACCESS_TOKEN = os.environ.get("APP_ACCESS_TOKEN", "").strip()

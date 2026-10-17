@@ -1,8 +1,21 @@
-import { render, screen } from "@testing-library/react";
+import { render as renderComponent, screen } from "@testing-library/react";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import type { ReactNode } from "react";
 import userEvent from "@testing-library/user-event";
 import { MemoryRouter } from "react-router-dom";
 import { ItemCard } from "./ItemCard";
 import type { ItemResult, QuizItem } from "@/types/content";
+
+vi.mock("@/services/ai", async (importOriginal) => {
+  const original = await importOriginal<typeof import("@/services/ai")>();
+  return { ...original, ai: { ...original.ai, status: vi.fn().mockResolvedValue({ enabled: false }),
+    attemptGrade: vi.fn().mockResolvedValue({ result: null }) } };
+});
+
+function render(ui: ReactNode) {
+  const client = new QueryClient({ defaultOptions: { queries: { retry: false } } });
+  return renderComponent(<QueryClientProvider client={client}>{ui}</QueryClientProvider>);
+}
 
 const mc: QuizItem = {
   id: "A1-G011:L1.1", label: "L1.1", kind: "mc", prompt_md: "___ the window, please.", instruction_md: "",

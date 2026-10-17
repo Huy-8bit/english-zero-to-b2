@@ -1,55 +1,78 @@
-import { useState } from "react";
-import { Bot, Send } from "lucide-react";
-import { api } from "@/services/api";
+import { useEffect, useRef, useState } from "react";
+import { Send } from "lucide-react";
+import { ai } from "@/services/ai";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/misc";
 import { Markdown } from "@/components/Markdown";
+import { AIErrorBox, AILoading, AIUnavailable, SimulatedBanner, useAIStatus } from "@/components/ai/AIStatus";
 
 const ACTIONS = [
-  { id: "explain", label: "Giải thích khái niệm này" },
-  { id: "example", label: "Cho tôi ví dụ khác" },
-  { id: "simpler", label: "Giải thích đơn giản hơn" },
-  { id: "why_wrong", label: "Vì sao tôi sai?" },
-  { id: "practice", label: "Tạo bài luyện thêm" },
-  { id: "quiz_me", label: "Hỏi tôi vài câu" },
+  { id: "explain_simply", label: "Giải thích dễ hơn" },
+  { id: "more_examples", label: "Cho thêm ví dụ" },
+  { id: "compare", label: "So sánh cấu trúc khác" },
+  { id: "why", label: "Tại sao dùng cấu trúc này?" },
+  { id: "common_mistakes", label: "Lỗi thường gặp" },
+  { id: "explain_mistake", label: "Giải thích câu tôi làm sai" },
 ];
 
-/** Optional AI tutor (server-side key). Exercise answers are only shared after you submit them. */
+interface Msg { role: string; content: string; sources?: { section_title: string; source_path: string }[] }
+
+/** AI Tutor sidebar: knows the current lesson, slide, prerequisites and your recent mistakes. */
 export function TutorPanel({ unitId, stepIndex, lastItemId }: { unitId: string; stepIndex: number; lastItemId?: string }) {
-  const [log, setLog] = useState<{ q: string; a: string }[]>([]);
+  const st = useAIStatus();
+  const [log, setLog] = useState<Msg[]>([]);
   const [msg, setMsg] = useState("");
   const [busy, setBusy] = useState(false);
-  const ask = async (action: string, label: string) => {
+  const [err, setErr] = useState<{ e: unknown; retry: () => void } | null>(null);
+  const conversation = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    ai.tutorHistory(unitId).then((h) => setLog(h.messages.map((m) => ({ role: m.role, content: m.content, sources: m.sources })))).catch(() => {});
+  }, [unitId]);
+  useEffect(() => {
+    const container = conversation.current;
+    container?.scrollTo({ top: container.scrollHeight, behavior: "smooth" });
+  }, [log, busy]);
+  const ask = async (action: string, label: string, message?: string) => {
     setBusy(true);
+    setErr(null);
+    setLog((l) => [...l, { role: "user", content: message || label }]);
     try {
-      const r = await api.tutorAsk({ unit_id: unitId, step_index: stepIndex, action, message: action === "free" ? msg : undefined, item_id: action === "why_wrong" ? lastItemId : undefined });
-      setLog((l) => [...l, { q: label, a: r.answer }]);
-      if (action === "free") setMsg("");
+      const r = await ai.tutor({ unit_id: unitId, step_index: stepIndex, action, message, item_id: action === "explain_mistake" ? lastItemId : undefined });
+      setLog((l) => [...l, { role: "assistant", content: r.answer, sources: r.sources }]);
+      if (action === "chat") setMsg("");
     } catch (e) {
-      setLog((l) => [...l, { q: label, a: `⚠️ ${e instanceof Error ? e.message : "Lỗi"}` }]);
+      setLog((l) => l.slice(0, -1));
+      setErr({ e, retry: () => ask(action, label, message) });
     } finally {
       setBusy(false);
     }
   };
+  if (st.data && !st.data.enabled) return <AIUnavailable />;
   return (
-    <div className="flex h-full flex-col gap-3">
-      <p className="text-xs text-muted">Gia sư AI dùng nội dung slide hiện tại. Đáp án bài tập chỉ được chia sẻ sau khi bạn đã nộp câu đó. Câu trả lời của AI có thể sai — đối chiếu với giáo trình.</p>
-      <div className="flex flex-wrap gap-2">
-        {ACTIONS.map((a) => (
-          <Button key={a.id} size="sm" variant="outline" disabled={busy || (a.id === "why_wrong" && !lastItemId)} onClick={() => ask(a.id, a.label)}>{a.label}</Button>
-        ))}
+    <div className="flex h-full min-h-0 flex-col gap-3">
+      <div ref={conversation} className="min-h-0 flex-1 space-y-3 overflow-y-auto overscroll-contain pr-1">
+        <SimulatedBanner />
+        <p className="text-xs text-muted">Gia sư dựa trên slide đang học và đoạn giáo trình liên quan. Đáp án bài tập chỉ được dùng sau khi bạn đã nộp câu đó. AI có thể sai — đối chiếu với giáo trình.</p>
+        <div className="flex flex-wrap gap-2">
+          {ACTIONS.map((a) => (
+            <Button key={a.id} size="sm" variant="outline" disabled={busy || (a.id === "explain_mistake" && !lastItemId)} onClick={() => ask(a.id, a.label)}>{a.label}</Button>
+          ))}
+        </div>
+        <div className="flex-1 space-y-3" aria-live="polite">
+          {log.map((x, i) => x.role === "user" ? (
+            <p key={i} className="ml-8 rounded-xl bg-primary-soft px-3 py-2 text-sm">{x.content}</p>
+          ) : (
+            <div key={i} className="rounded-xl bg-surface-2 p-3">
+              <Markdown className="text-sm">{x.content}</Markdown>
+              {!!x.sources?.length && <p className="mt-2 text-[11px] text-muted">Nguồn: {x.sources.map((s) => s.section_title).join(" · ")}</p>}
+            </div>
+          ))}
+          {busy && <AILoading label="Gia sư đang trả lời…" />}
+          {err && <AIErrorBox error={err.e} onRetry={err.retry} />}
+        </div>
       </div>
-      <div className="flex-1 space-y-3">
-        {log.map((x, i) => (
-          <div key={i} className="space-y-1">
-            <p className="text-sm font-medium">🙋 {x.q}</p>
-            <div className="rounded-xl bg-surface-2 p-3"><Markdown className="text-sm">{x.a}</Markdown></div>
-          </div>
-        ))}
-        {busy && <p className="flex items-center gap-2 text-sm text-muted"><Bot size={16} className="animate-pulse" />Đang trả lời…</p>}
-      </div>
-      <form className="flex gap-2" onSubmit={(e) => { e.preventDefault(); if (msg.trim()) ask("free", msg.trim()); }}>
-        <Textarea rows={2} value={msg} onChange={(e) => setMsg(e.target.value)} placeholder="Hỏi gia sư…" aria-label="Câu hỏi cho gia sư" />
+      <form className="flex shrink-0 gap-2 border-t border-border pt-3" onSubmit={(e) => { e.preventDefault(); if (msg.trim()) ask("chat", msg.trim(), msg.trim()); }}>
+        <Textarea rows={2} value={msg} onChange={(e) => setMsg(e.target.value)} placeholder="Hỏi bất kỳ điều gì về bài này… (vd: Tại sao She goes mà I go?)" aria-label="Câu hỏi cho gia sư" />
         <Button type="submit" size="icon" disabled={busy || !msg.trim()} aria-label="Gửi"><Send size={16} /></Button>
       </form>
     </div>
