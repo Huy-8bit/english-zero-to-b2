@@ -1,0 +1,33 @@
+# English Mastery — chạy toàn bộ: docker compose up -d --build  →  http://localhost:8080
+name: english-mastery
+
+services:
+  backend:
+    build: ./backend
+    restart: unless-stopped
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      CONTENT_ROOT: /content
+      DATABASE_URL: sqlite:////data/english.db
+      CORS_ORIGINS: http://localhost:${WEB_PORT:-8080}
+    volumes:
+      # Giáo trình Markdown (thư mục cha của platform/), chỉ đọc. Sửa Markdown → web tự cập nhật.
+      - ..:/content:ro
+      # Dữ liệu học (SQLite) giữ qua các lần khởi động lại
+      - learning-data:/data
+    expose:
+      - "8000"
+
+  frontend:
+    build: ./frontend
+    restart: unless-stopped
+    depends_on:
+      backend:
+        condition: service_healthy
+    ports:
+      - "${WEB_PORT:-8080}:80"
+
+volumes:
+  learning-data:

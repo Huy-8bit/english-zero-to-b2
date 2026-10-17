@@ -64,7 +64,7 @@ Kết quả 2026-10-17: 128/128 bài, 0 lỗi cấu trúc/nhãn bài–đáp án
   - Câu trả lời mở chỉ tự chấm khi khớp biến thể trong đáp án, còn lại người học tự đánh giá.
   - Gia sư AI chưa được chạy với khóa API thật.
   - Chưa có service worker cho offline.
-- **Chạy:** `cd platform && scripts/setup.sh && scripts/dev.sh` → <http://localhost:5173>.
+- **Chạy:** `cd platform && docker compose up -d --build` → <http://localhost:8080> (hoặc chạy trực tiếp: `scripts/setup.sh && scripts/dev.sh` → <http://localhost:5173>).
 
 ---
 

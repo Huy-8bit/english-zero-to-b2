@@ -26,7 +26,7 @@
 
 ## Học trên web
 
-Thư mục [platform/](platform/README.md) chứa ứng dụng web học tương tác dùng chính giáo trình này: học từng slide, bài tập được chấm, lưu tiến độ, flashcards, tìm kiếm. Chạy: `cd platform && scripts/setup.sh && scripts/dev.sh`.
+Thư mục [platform/](platform/README.md) chứa ứng dụng web học tương tác dùng chính giáo trình này: học từng slide, bài tập được chấm, lưu tiến độ, flashcards, tìm kiếm. Chạy: `cd platform && docker compose up -d --build` → <http://localhost:8080>.
 
 ## Trạng thái dự án
 

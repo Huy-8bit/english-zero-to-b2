@@ -6,27 +6,51 @@
 Dashboard → Lộ trình → chọn bài → học từng slide → làm bài tập → xem giải thích → hoàn thành → bài tiếp theo
 ```
 
-## Chạy trên máy
+## Chạy bằng Docker Compose (khuyến nghị)
+
+Yêu cầu: Docker với Compose v2.
+
+```bash
+cd platform
+docker compose up -d --build     # lần đầu build ~1–2 phút
+```
+
+Mở <http://localhost:8080>.
+
+- **Hai container:**
+  - `backend`: FastAPI, cổng nội bộ 8000.
+  - `frontend`: nginx phục vụ bản build React và chuyển `/api` sang backend.
+- **Giáo trình** (thư mục cha của `platform/`) được mount **chỉ đọc** vào `/content`. Sửa Markdown thì web tự cập nhật sau vài giây, không cần build lại.
+- **Dữ liệu học** (SQLite) nằm trong volume `english-mastery_learning-data`, nên vẫn còn sau `docker compose down` và khi khởi động lại.
+- **Gia sư AI:** tạo `platform/.env` từ `.env.example` và điền `ANTHROPIC_API_KEY`. Compose tự đọc file này; không có file vẫn chạy bình thường.
+- **Đổi cổng:** `WEB_PORT=3000 docker compose up -d`.
+
+Các lệnh hay dùng:
+
+```bash
+docker compose logs -f backend      # xem log
+docker compose up -d --build        # cập nhật sau khi sửa code ứng dụng
+docker compose down                 # dừng (giữ dữ liệu học)
+docker compose down -v              # dừng và XÓA dữ liệu học
+```
+
+Sao lưu dữ liệu học:
+
+```bash
+docker compose cp backend:/data/english.db ./english-backup.db
+```
+
+## Chạy trực tiếp trên máy (phát triển)
 
 Yêu cầu: Python 3.11+ (khuyến nghị có [`uv`](https://docs.astral.sh/uv/)), Node.js 20+.
 
 ```bash
 cd platform
 scripts/setup.sh        # tạo backend/.venv, cài thư viện Python và npm, tạo .env từ .env.example
-scripts/dev.sh          # backend http://localhost:8000 + frontend http://localhost:5173
+scripts/dev.sh          # backend http://localhost:8000 + frontend http://localhost:5173 (hot reload)
 ```
 
-Mở <http://localhost:5173>. Dữ liệu học lưu trong `backend/data/english.db` (SQLite).
-
-Chạy riêng từng phần:
-
-```bash
-cd backend && .venv/bin/uvicorn app.main:app --reload --port 8000
-cd frontend && npm run dev            # proxy /api → :8000
-cd frontend && npm run build && npm run preview   # bản build production
-```
-
-Cấu hình trong `.env` (xem `.env.example`): `CONTENT_ROOT`, `DATABASE_URL` (bất kỳ URL SQLAlchemy nào, ví dụ PostgreSQL), `CORS_ORIGINS`, `ANTHROPIC_API_KEY` (tùy chọn cho Gia sư AI).
+Dữ liệu học khi chạy trực tiếp nằm ở `backend/data/english.db`, tách riêng với volume Docker.
 
 ## Kiểm thử
 
@@ -52,6 +76,7 @@ platform/
 ├── frontend/               React 19 + TypeScript + Vite + Tailwind 4 + React Router + TanStack Query + Zustand + Motion
 │   └── src/features/       dashboard, learning-path, lesson-player, quizzes, flashcards, vocabulary,
 │                           progress, reference, search, tutor, catalog
+├── docker-compose.yml      backend + frontend (nginx), giáo trình mount chỉ đọc, volume dữ liệu học
 ├── scripts/                setup.sh, dev.sh, content_validation/validate_content.py
 └── CONTENT-IMPORT-REPORT.md   (sinh tự động)
 ```
