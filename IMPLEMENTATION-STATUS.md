@@ -1,3 +1,78 @@
+# Vocabulary module upgrade — 2026-10-18
+
+Paths are relative to `platform/`. This section is updated after each phase. Earlier sections are historical.
+
+## Phase 1 — Audit: why so few words appeared
+
+Measured on the repository, not estimated:
+
+| Possible cause | Finding |
+|---|---|
+| 1. The curriculum itself has few words | **Main cause.** All Markdown vocabulary tables together contain 927 unique headwords. 679 of them are in `07-VOCABULARY` (VOC-01–16), the rest in grammar and skills units. That is far below the 3,000–5,000 needed for A0–B2. |
+| 2. Ingestion misses existing words | **Yes, partly.** `content/builder.py` turned only VOC-01–16 tables into cards (693 cards). VOC-17 (about 200 collocations written as `a · b · c` lists, plus the "dịch thẳng" mistakes table), VOC-18 (40 word families) and VOC-19 (40 confusable pairs) produced **0 cards**. Vocabulary tables in grammar and skills units (149 rows, 99 sentence patterns) were never extracted. These are now imported. Nothing that already existed was regenerated. |
+| 3. Database seeded only partly | No seed existed. The database stored only SM-2 progress (`vocab_cards`), and the words came from Markdown at request time. |
+| 4. Frontend display limit | No hard limit, but the page listed one VOC unit at a time (about 40 words) with no search, filter or level view. |
+| 5. API returns too little | `/api/vocabulary` returned every card, so the API was not the bottleneck. |
+| 6. Sync errors / duplicates | 14 duplicate headwords across units (693 cards → 679 unique), now merged into one entry each with all card ids kept. Two spelling variants were merged. |
+| 7. Vocabulary not connected to other modules | **Yes.** Reading, Listening, Writing and Speaking had no link to vocabulary progress. Lesson flashcards had their own SM-2 schedule. |
+
+## Phase 2–3 — Database, pipeline, expansion (COMPLETE_AND_TESTED for the deterministic scope)
+
+- **Schema.** Migration `alembic/versions/0004_vocabulary_system.py` adds tables only:
+  - Lexicon: `vocab_entries`, `vocab_senses`, `vocab_examples`, `vocab_collocations`, `vocab_topics`, `vocab_entry_topics`, `vocab_legacy_cards`.
+  - Learner state: `vocab_progress` (VocabularyMastery, FSRS state), `vocab_review_log` (VocabularyReview), `vocab_mistakes`, `vocab_sessions` (VocabularyLearningSession), `vocab_collections`, `vocab_collection_items`, `vocab_enrichment_jobs`, `vocab_dialogues`.
+  - `vocab_cards` / `vocab_reviews` are **kept unchanged**. Old SM-2 progress is copied once into FSRS progress (`app/vocabulary/lexicon.py::migrate_legacy_progress`), and the migration test proves the old row is untouched.
+- **Pipeline.** `scripts/vocabulary/build_lexicon.py` is offline and deterministic. It runs Discover → dictionary Generate → Normalize → Validate → Deduplicate → Review status → Store. Sources and licences are in `backend/app/vocabulary/data/SOURCES.md`:
+  - curriculum
+  - CEFR-J 1.5
+  - NGSL 1.2, NAWL 1.2
+  - English Wiktionary via kaikki.org
+  - Tatoeba English–Vietnamese pairs
+
+  `scripts/vocabulary/fetch_sources.sh` reproduces the downloads, which are not committed.
+- **Import.** The output `backend/app/vocabulary/data/lexicon.jsonl.gz` is imported idempotently on startup. It is keyed by file hash and upserts by stable id. Entries that disappear are unpublished, never deleted, so learner progress stays valid. AI and user rows are never overwritten. Import validation rejects duplicate ids, empty meanings, invalid levels and inconsistent sense ids.
+- **Actual numbers** (`data/build-report.json`):
+
+  | Measure | Count |
+  |---|---|
+  | Published entries | 5,083 |
+  | Unique word / phrasal-verb lemmas | 4,654 |
+  | Collocations | 220 |
+  | Phrases | 115 |
+  | Sentence patterns | 94 |
+  | Senses | 6,595 |
+  | Examples | 8,736 |
+  | Entries with an example | 3,948 |
+  | Entries with a Vietnamese-translated example | 3,148 |
+
+  - By level: A1 1,091 · A2 1,021 · B1 1,488 · B2 1,483 (levels are estimates).
+  - By status: 872 curriculum · 4,211 sourced. "Sourced" means the meanings come from Wiktionary translation tables, the senses were chosen automatically, and **no teacher has reviewed them**.
+  - All 693 curriculum card ids map to exactly one entry.
+- **IPA comes from dictionaries only.**
+  - 4,224 entries: Wiktionary.
+  - 256 entries: curriculum IPA that agrees with Wiktionary.
+  - 116 entries: multi-word phrases composed from each word's dictionary IPA.
+  - 487 entries: no IPA shown.
+  - 76 curriculum IPA values differ from Wiktionary even after normalising notation. The dictionary IPA is shown and the entry is flagged `ipa_curriculum_differs`.
+  - 55 curriculum IPA values cannot be checked; they are hidden and flagged.
+- **Topics.** All 26 required topics exist, plus a `core` topic for general words. Topics are assigned heuristically, and the evidence type is stored per entry. Coverage is thin for Internet and Social Media (12), Global Issues (16) and Climate Change (18). These need AI enrichment plus review, or manual curation.
+- **Not published: 2,890 CEFR-J/NGSL/NAWL headwords** that have no Vietnamese translation in Wiktionary. They are queued as candidates for the AI enrichment stage (`app/vocabulary/enrich.py`). That stage is batched and resumable, keeps a checkpoint per batch, retries up to 3 times, never re-sends finished jobs, and needs human approval before publishing. The AI is never asked for IPA. It has been run **only with the fake provider**; no live enrichment has been done.
+
+## Phase 5 — Spaced repetition (COMPLETE_AND_TESTED)
+
+- **Scheduler.** `py-fsrs` 6.3.2 (open-spaced-repetition, MIT licence) with default FSRS-6 parameters, one 10-minute learning step and desired retention from settings (default 0.9). The scheduling maths is entirely the library's; nothing home-made is labelled FSRS.
+- **States.** new / learning / review / relearning. "Mastered" is a product criterion, not an FSRS state: Review state, stability ≥ 21 days, ≥ 3 correct answers, and last rating Good or Easy.
+- **Ratings.** Again / Hard / Good / Easy.
+- **One review per word per session round.** All graded items for a word are aggregated, and the worst result wins. Words that are not yet due can still be practised; that is logged but does not move the schedule.
+- **One shared schedule.** Lesson flashcards (`/api/vocabulary`, old grades 1/3/4/5) now write to the same FSRS progress as the vocabulary module. The dashboard and recommendations count FSRS progress.
+
+## Remaining phases (in progress at the time of writing)
+
+- Frontend for the ten learning modes, explorer, notebook, Today's Vocabulary plan and analytics.
+- Reading/Listening word capture UI.
+- E2E tests.
+- Live OpenAI verification remains BLOCKED: there is no API key.
+
 # Platform recovery report — 2026-10-17
 
 This section supersedes the historical platform claims below. Existing uncommitted work is preserved. No curriculum files or learner records have been intentionally changed.

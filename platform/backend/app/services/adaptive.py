@@ -236,8 +236,11 @@ def daily_plan(db: Session, user: User, store: ContentStore, ai_enabled: bool) -
                      "weakness_reason": f"Đến lịch ôn (lần ôn trước cách đây {d['last_practiced'][:10] if d['last_practiced'] else '?'}).",
                      "recommended_lesson_id": d["topic_id"] if d["topic_id"] in store.units else None, "title": f"Ôn lại: {d['title']}",
                      "suggested_exercise_parameters": {"lesson_id": d["topic_id"], "count": 5, "scope": "lesson", "difficulty": "adaptive"} if ai_enabled else None})
-    due_cards = db.scalar(select(func.count(VocabCard.id)).where(VocabCard.user_id == user.id, VocabCard.due <= _today())) or 0
-    seen_cards = db.scalar(select(func.count(VocabCard.id)).where(VocabCard.user_id == user.id)) or 0
+    from ..models import VocabProgress
+    from .progress import vocab_due_count
+
+    due_cards = vocab_due_count(db, user.id)
+    seen_cards = db.scalar(select(func.count(VocabProgress.id)).where(VocabProgress.user_id == user.id, VocabProgress.state != "new")) or 0
     recs.append({"topic_id": "vocabulary", "recommendation_type": "vocabulary_review", "priority": 3,
                  "weakness_reason": f"{due_cards} thẻ đến hạn ôn." if due_cards else ("Bắt đầu học 10 từ mới." if seen_cards == 0 else "Thêm 10 từ mới hôm nay."),
                  "recommended_lesson_id": None, "title": "Luyện 10 từ vựng", "suggested_exercise_parameters": None})

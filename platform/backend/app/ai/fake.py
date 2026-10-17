@@ -226,6 +226,86 @@ class FakeProvider:
     def _s_WritingLevelEstimate(self, input: str) -> WritingLevelEstimate:
         return WritingLevelEstimate(level="A2", rationale_vi="Câu đơn, dùng được thì quá khứ cơ bản.")
 
+    # ----------------------------------------------------------------- vocabulary
+    @staticmethod
+    def _between(text: str, tag: str) -> str:
+        return text.split(f"<{tag}>")[-1].split(f"</{tag}>")[0] if f"<{tag}>" in text else ""
+
+    def _s_VocabAnswerJudge(self, input: str):
+        from ..vocabulary.ai_schemas import VocabAnswerJudge
+
+        ref = re.search(r"Reference answer: ([^<\n]+)", input)
+        ref_words = set((ref.group(1) if ref else "").lower().split())
+        ans_words = set(self._between(input, "learner_answer").lower().split())
+        ok = bool(ref_words) and len(ref_words ^ ans_words) <= 2 and len(ref_words & ans_words) >= max(1, len(ref_words) - 1)
+        return VocabAnswerJudge(acceptable=ok, verdict="acceptable" if ok else "incorrect",
+                                explanation_vi="Cách diễn đạt này cũng tự nhiên và đúng nghĩa." if ok else "Nghĩa chưa khớp với gợi ý tiếng Việt.")
+
+    def _s_VocabSentenceGrade(self, input: str):
+        from ..vocabulary.ai_schemas import SentenceIssue, VocabSentenceGrade
+
+        text = self._between(input, "learner_text").strip()
+        bad = "[[incorrect]]" in text or re.search(r"\b(\w+) \1\b", text.lower()) is not None
+        return VocabSentenceGrade(uses_target=True, target_used_correctly=not bad, grammar_ok=not bad, natural=not bad, meaning_clear=True,
+                                  verdict="incorrect" if bad else "correct",
+                                  issues=[SentenceIssue(original=text[:40], correction=text[:40].replace("[[incorrect]]", "").strip(),
+                                                        explanation_vi="Câu có từ lặp hoặc sai ngữ pháp.")] if bad else [],
+                                  corrected_sentence=text.replace("[[incorrect]]", "").strip(), explanation_vi="Câu dùng từ đúng nghĩa và tự nhiên." if not bad else "Câu chưa đúng, xem phần sửa.",
+                                  better_example="I want to achieve my goals this year.")
+
+    def _s_VocabContextMeaning(self, input: str):
+        from ..vocabulary.ai_schemas import VocabContextMeaning
+
+        data = self._between(input, "dictionary_entry")
+        try:
+            d = json.loads(data)
+            meaning = d["senses"][0]["meaning_vi"]
+            lemma, pos = d["lemma"], d["senses"][0]["pos"] or ""
+        except Exception:  # noqa: BLE001
+            meaning, lemma, pos = "nghĩa theo ngữ cảnh (giả lập)", self._between(input, "learner_text"), ""
+        return VocabContextMeaning(lemma=lemma, pos=pos, sense_index=0, meaning_vi_in_context=meaning,
+                                   explanation_vi="Trong câu này từ được dùng với nghĩa phổ biến nhất.")
+
+    def _s_VocabDialogueTurn(self, input: str):
+        from ..vocabulary.ai_schemas import VocabDialogueTurn
+
+        targets = [w.strip() for w in re.search(r"Target words: (.*?)</curriculum>", input, re.S).group(1).split(",") if w.strip()]
+        said = self._between(input, "learner_text").lower()
+        used = [t for t in targets if t.lower() in said]
+        q = f"That sounds interesting! Could you tell me more about how you would {targets[0] if targets else 'do'} that?"
+        return VocabDialogueTurn(reply_en=q, hint_vi=f"Thử dùng từ “{targets[0] if targets else ''}” trong câu trả lời.", target_words_used=used,
+                                 corrections=[], feedback_vi="Bạn đã dùng từ mục tiêu tự nhiên." if used else "Hãy thử dùng một từ mục tiêu.",
+                                 should_end=False)
+
+    def _s_VocabExerciseSet(self, input: str):
+        from ..vocabulary.ai_schemas import VocabExerciseItem, VocabExerciseSet
+
+        raw = re.search(r"Target words: (\[.*\])\n", input, re.S)
+        lemmas = []
+        if raw:
+            for x in json.loads(raw.group(1)):
+                try:
+                    lemmas.append(json.loads(x)["lemma"])
+                except Exception:  # noqa: BLE001
+                    pass
+        items = [VocabExerciseItem(type="cloze", target_word=l, sentence=f"Every day I try to _____ something new.", sentence_vi="Mỗi ngày tôi cố gắng làm một điều mới.",
+                                   options=[l, "banana", "yesterday", "purple"], answer_index=0,
+                                   explanation_vi=f"“{l}” hợp nghĩa câu; các lựa chọn khác không phải động từ phù hợp.") for l in lemmas[:4]]
+        return VocabExerciseSet(items=items)
+
+    def _s_VocabEnrichmentBatch(self, input: str):
+        from ..vocabulary.ai_schemas import EnrichExample, EnrichSense, VocabEnrichment, VocabEnrichmentBatch
+
+        data = json.loads(self._between(input, "curriculum") or "[]")
+        out = []
+        for d in data:
+            l = d["lemma"]
+            out.append(VocabEnrichment(lemma=l, exists=True, senses=[EnrichSense(pos="noun", meaning_vi=f"nghĩa thử nghiệm của {l}", definition_en=f"a test sense of {l}")],
+                                       cefr_estimate="B1", examples=[EnrichExample(en=f"I read about {l} yesterday.", vi=f"Hôm qua tôi đọc về {l}.")],
+                                       collocations=[f"use {l}"], word_family=[], usage_vi="Dùng trong văn viết (giả lập).",
+                                       common_mistake_vi="Không có lỗi phổ biến (giả lập)."))
+        return VocabEnrichmentBatch(entries=out)
+
     # ----------------------------------------------------------------- other modalities
     def text(self, *, model, instructions, input, max_output_tokens):
         self._maybe_fail("text", input)

@@ -112,6 +112,9 @@ class WritingService:
             data["estimated_score_10"] = max(0.0, min(10.0, float(data["estimated_score_10"])))
         data["disclaimer_vi"] = "Điểm và trình độ là đánh giá tham khảo của AI, không phải điểm VSTEP/CEFR chính thức."
         data["practice_lessons"] = self._map_topics(data.get("practice_topics", []))
+        from ..vocabulary.service import record_usage  # shared vocabulary progress: studied words used in writing
+
+        data["vocab_used"] = record_usage(db, user_id, text, "writing", [e["original"] for e in data["detected_errors"]])
         sub = WritingSubmission(user_id=user_id, client_submission_id=client_submission_id, prompt=prompt, mode=mode,
                                 task_type=task_type, level=level, text=text, word_count=wc, feedback=data, parent_id=parent_id)
         db.add(sub)

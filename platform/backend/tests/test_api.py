@@ -76,15 +76,18 @@ def test_score_is_computed_server_side(client):
     assert r["graded"] == len(answers) and r["score"] < 60 and r["status"] == "review"
 
 
-def test_vocabulary_review_sm2(client):
+def test_lesson_flashcards_use_fsrs_progress(client):
+    """Lesson flashcards (card ids VOC-xx:...) are scheduled by FSRS in the shared vocabulary progress."""
     due = client.get("/api/vocabulary/due", params={"limit": 5}).json()
     card = due["cards"][0]
-    r = client.post("/api/vocabulary/review", json={"card_id": card["id"], "grade": 4}).json()
-    assert r["srs"]["interval_days"] == 1 and r["xp_gained"] == 2
-    r = client.post("/api/vocabulary/review", json={"card_id": card["id"], "grade": 4}).json()
-    assert r["srs"]["interval_days"] == 6 and r["xp_gained"] == 0
-    r = client.post("/api/vocabulary/review", json={"card_id": card["id"], "grade": 1}).json()
-    assert r["srs"]["interval_days"] == 1 and r["srs"]["lapses"] == 1
+    r = client.post("/api/vocabulary/review", json={"card_id": card["id"], "grade": 4}).json()  # Good
+    assert r["srs"]["state"] == "review" and r["srs"]["algorithm"].startswith("FSRS") and r["xp_gained"] == 2
+    first_stability = r["srs"]["stability"]
+    assert first_stability > 1
+    r = client.post("/api/vocabulary/review", json={"card_id": card["id"], "grade": 1}).json()  # Again → relearning
+    assert r["srs"]["state"] == "relearning" and r["srs"]["lapses"] == 1 and r["xp_gained"] == 0
+    detail = client.get(f"/api/vocab/entries/{r['entry_id']}").json()  # same progress in the vocabulary module
+    assert detail["progress"]["state"] == "relearning" and len(detail["history"]) == 2
 
 
 def test_heartbeat_counts_time(client):

@@ -395,3 +395,268 @@ class PlacementSession(Base):
     result: Mapped[dict | None] = mapped_column(JSON, nullable=True)
     created_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
     finished_at: Mapped[datetime | None] = mapped_column(DateTime, nullable=True)
+
+
+# ====================================================================== vocabulary
+# Lexicon tables are imported idempotently from app/vocabulary/data/lexicon.jsonl.gz (origin="dataset").
+# Rows with origin "ai" (enrichment, status needs_review until approved) or "user" (personal notebook entries)
+# are never touched by a dataset re-import. Learner progress lives in vocab_progress / vocab_review_log.
+
+class VocabDataset(Base):
+    __tablename__ = "vocab_dataset"
+    id: Mapped[int] = mapped_column(Integer, primary_key=True)
+    version: Mapped[str] = mapped_column(String(32))
+    counts: Mapped[dict] = mapped_column(JSON, default=dict)
+    imported_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
+
+
+class VocabEntry(Base):
+    __tablename__ = "vocab_entries"
+    id: Mapped[str] = mapped_column(String(120), primary_key=True)
+    lemma: Mapped[str] = mapped_column(String(200), index=True)
+    headword: Mapped[str] = mapped_column(String(200))
+    search_key: Mapped[str] = mapped_column(String(400), index=True)
+    kind: Mapped[str] = mapped_column(String(16), index=True)  # word | phrasal_verb | phrase | collocation | pattern
+    cefr: Mapped[str | None] = mapped_column(String(2), index=True, nullable=True)
+    cefr_source: Mapped[str | None] = mapped_column(String(80), nullable=True)
+    pos: Mapped[list] = mapped_column(JSON, default=list)
+    variants: Mapped[list] = mapped_column(JSON, default=list)
+    forms: Mapped[list] = mapped_column(JSON, default=list)
+    ipa_uk: Mapped[str | None] = mapped_column(String(120), nullable=True)
+    ipa_us: Mapped[str | None] = mapped_column(String(120), nullable=True)
+    ipa_source: Mapped[str | None] = mapped_column(String(80), nullable=True)
+    ipa_status: Mapped[str] = mapped_column(String(32), default="missing")
+    ipa_curriculum: Mapped[str | None] = mapped_column(String(120), nullable=True)
+    freq_rank: Mapped[int | None] = mapped_column(Integer, nullable=True)
+    tier: Mapped[int | None] = mapped_column(Integer, nullable=True)
+    academic: Mapped[bool] = mapped_column(Boolean, default=False)
+    topics: Mapped[list] = mapped_column(JSON, default=list)
+    topic_sources: Mapped[list] = mapped_column(JSON, default=list)
+    family: Mapped[list] = mapped_column(JSON, default=list)
+    synonyms: Mapped[list] = mapped_column(JSON, default=list)
+    antonyms: Mapped[list] = mapped_column(JSON, default=list)
+    confused_with: Mapped[list] = mapped_column(JSON, default=list)
+    mistakes: Mapped[list] = mapped_column(JSON, default=list)
+    focus: Mapped[list] = mapped_column(JSON, default=list)
+    legacy_ids: Mapped[list] = mapped_column(JSON, default=list)
+    units: Mapped[list] = mapped_column(JSON, default=list)
+    sources: Mapped[list] = mapped_column(JSON, default=list)
+    status: Mapped[str] = mapped_column(String(16), index=True)  # curriculum | sourced | needs_review | user
+    review_flags: Mapped[list] = mapped_column(JSON, default=list)
+    sort_order: Mapped[int] = mapped_column(Integer, default=0, index=True)
+    origin: Mapped[str] = mapped_column(String(16), default="dataset")  # dataset | user
+    owner_user_id: Mapped[int | None] = mapped_column(ForeignKey("users.id"), nullable=True, index=True)
+    published: Mapped[bool] = mapped_column(Boolean, default=True, index=True)
+    updated_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow, onupdate=utcnow)
+
+
+class VocabSense(Base):
+    __tablename__ = "vocab_senses"
+    id: Mapped[str] = mapped_column(String(140), primary_key=True)
+    entry_id: Mapped[str] = mapped_column(ForeignKey("vocab_entries.id", ondelete="CASCADE"), index=True)
+    idx: Mapped[int] = mapped_column(Integer, default=0)
+    pos: Mapped[str | None] = mapped_column(String(16), nullable=True)
+    meaning_vi: Mapped[str] = mapped_column(Text)
+    definition_en: Mapped[str | None] = mapped_column(Text, nullable=True)
+    cefr: Mapped[str | None] = mapped_column(String(2), nullable=True)
+    usage: Mapped[list] = mapped_column(JSON, default=list)
+    pattern: Mapped[str | None] = mapped_column(String(200), nullable=True)
+    source: Mapped[str] = mapped_column(String(80))
+    status: Mapped[str] = mapped_column(String(16))
+    origin: Mapped[str] = mapped_column(String(16), default="dataset")
+
+
+class VocabExample(Base):
+    __tablename__ = "vocab_examples"
+    id: Mapped[str] = mapped_column(String(140), primary_key=True)
+    entry_id: Mapped[str] = mapped_column(ForeignKey("vocab_entries.id", ondelete="CASCADE"), index=True)
+    sense_id: Mapped[str | None] = mapped_column(String(140), nullable=True)
+    en: Mapped[str] = mapped_column(Text)
+    vi: Mapped[str | None] = mapped_column(Text, nullable=True)
+    source: Mapped[str] = mapped_column(String(80))
+    ref: Mapped[str | None] = mapped_column(String(120), nullable=True)
+    status: Mapped[str] = mapped_column(String(16), default="sourced")
+    origin: Mapped[str] = mapped_column(String(16), default="dataset")
+    idx: Mapped[int] = mapped_column(Integer, default=0)
+
+
+class VocabCollocation(Base):
+    __tablename__ = "vocab_collocations"
+    id: Mapped[int] = mapped_column(Integer, primary_key=True)
+    entry_id: Mapped[str] = mapped_column(ForeignKey("vocab_entries.id", ondelete="CASCADE"), index=True)
+    phrase: Mapped[str] = mapped_column(String(240))
+    meaning_vi: Mapped[str | None] = mapped_column(Text, nullable=True)
+    focus: Mapped[str | None] = mapped_column(String(80), nullable=True)
+    linked_entry_id: Mapped[str | None] = mapped_column(String(120), nullable=True)
+    source: Mapped[str] = mapped_column(String(80))
+    status: Mapped[str] = mapped_column(String(16), default="curriculum")
+    origin: Mapped[str] = mapped_column(String(16), default="dataset")
+
+
+class VocabTopic(Base):
+    __tablename__ = "vocab_topics"
+    id: Mapped[str] = mapped_column(String(40), primary_key=True)
+    name: Mapped[str] = mapped_column(String(80))
+    name_vi: Mapped[str] = mapped_column(String(120))
+    band: Mapped[str] = mapped_column(String(2))
+    sort_order: Mapped[int] = mapped_column(Integer, default=0)
+
+
+class VocabEntryTopic(Base):
+    __tablename__ = "vocab_entry_topics"
+    entry_id: Mapped[str] = mapped_column(ForeignKey("vocab_entries.id", ondelete="CASCADE"), primary_key=True)
+    topic_id: Mapped[str] = mapped_column(ForeignKey("vocab_topics.id"), primary_key=True, index=True)
+
+
+class VocabLegacyCard(Base):
+    """Curriculum flashcard ids (e.g. VOC-01:wake-up) → lexicon entry, so lesson slides and old progress keep working."""
+    __tablename__ = "vocab_legacy_cards"
+    card_id: Mapped[str] = mapped_column(String(128), primary_key=True)
+    entry_id: Mapped[str] = mapped_column(String(120), index=True)
+
+
+class VocabProgress(Base):
+    """VocabularyMastery: one row per (user, entry). FSRS state from the py-fsrs library (stored as Card.to_dict())."""
+    __tablename__ = "vocab_progress"
+    __table_args__ = (UniqueConstraint("user_id", "entry_id"),)
+    id: Mapped[int] = mapped_column(Integer, primary_key=True)
+    user_id: Mapped[int] = mapped_column(ForeignKey("users.id"), index=True)
+    entry_id: Mapped[str] = mapped_column(ForeignKey("vocab_entries.id"), index=True)
+    state: Mapped[str] = mapped_column(String(12), default="new", index=True)  # new | learning | review | relearning
+    fsrs: Mapped[dict | None] = mapped_column(JSON, nullable=True)
+    due: Mapped[datetime | None] = mapped_column(DateTime, nullable=True, index=True)
+    stability: Mapped[float | None] = mapped_column(Float, nullable=True)
+    difficulty: Mapped[float | None] = mapped_column(Float, nullable=True)
+    reps: Mapped[int] = mapped_column(Integer, default=0)
+    lapses: Mapped[int] = mapped_column(Integer, default=0)
+    last_review: Mapped[datetime | None] = mapped_column(DateTime, nullable=True)
+    last_rating: Mapped[int | None] = mapped_column(Integer, nullable=True)
+    # distinct learning milestones (never conflated)
+    first_seen_at: Mapped[datetime | None] = mapped_column(DateTime, nullable=True)
+    learned_at: Mapped[datetime | None] = mapped_column(DateTime, nullable=True)
+    first_correct_at: Mapped[datetime | None] = mapped_column(DateTime, nullable=True)
+    recalled_after_delay_at: Mapped[datetime | None] = mapped_column(DateTime, nullable=True)
+    used_correctly_at: Mapped[datetime | None] = mapped_column(DateTime, nullable=True)
+    correct_count: Mapped[int] = mapped_column(Integer, default=0)
+    incorrect_count: Mapped[int] = mapped_column(Integer, default=0)
+    streak: Mapped[int] = mapped_column(Integer, default=0)
+    used_count: Mapped[int] = mapped_column(Integer, default=0)
+    used_in: Mapped[dict] = mapped_column(JSON, default=dict)  # {"writing": n, "speaking": n, "practice": n}
+    saved: Mapped[bool] = mapped_column(Boolean, default=False)
+    known: Mapped[bool] = mapped_column(Boolean, default=False)
+    difficult: Mapped[bool] = mapped_column(Boolean, default=False)
+    suspended: Mapped[bool] = mapped_column(Boolean, default=False)
+    note: Mapped[str | None] = mapped_column(Text, nullable=True)
+    own_example: Mapped[str | None] = mapped_column(Text, nullable=True)
+    added_from: Mapped[str | None] = mapped_column(String(24), nullable=True)
+    legacy_migrated: Mapped[bool] = mapped_column(Boolean, default=False)
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
+    updated_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow, onupdate=utcnow)
+
+
+class VocabReviewLog(Base):
+    """VocabularyReview: every graded interaction (scheduling and non-scheduling)."""
+    __tablename__ = "vocab_review_log"
+    __table_args__ = (UniqueConstraint("user_id", "client_review_id"),)
+    id: Mapped[int] = mapped_column(Integer, primary_key=True)
+    user_id: Mapped[int] = mapped_column(ForeignKey("users.id"), index=True)
+    entry_id: Mapped[str] = mapped_column(String(120), index=True)
+    session_id: Mapped[str | None] = mapped_column(String(36), nullable=True, index=True)
+    client_review_id: Mapped[str | None] = mapped_column(String(64), nullable=True)
+    mode: Mapped[str] = mapped_column(String(20))
+    rating: Mapped[int | None] = mapped_column(Integer, nullable=True)  # 1 Again 2 Hard 3 Good 4 Easy (when scheduled)
+    correct: Mapped[bool | None] = mapped_column(Boolean, nullable=True)
+    verdict: Mapped[str | None] = mapped_column(String(24), nullable=True)
+    response: Mapped[dict] = mapped_column(JSON, default=dict)
+    state_before: Mapped[str | None] = mapped_column(String(12), nullable=True)
+    state_after: Mapped[str | None] = mapped_column(String(12), nullable=True)
+    elapsed_days: Mapped[float | None] = mapped_column(Float, nullable=True)
+    due_after: Mapped[datetime | None] = mapped_column(DateTime, nullable=True)
+    duration_ms: Mapped[int | None] = mapped_column(Integer, nullable=True)
+    reviewed_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow, index=True)
+
+
+class VocabMistake(Base):
+    """VocabularyMistake: a wrong answer kept for error-based review (resolved after later correct recalls)."""
+    __tablename__ = "vocab_mistakes"
+    id: Mapped[int] = mapped_column(Integer, primary_key=True)
+    user_id: Mapped[int] = mapped_column(ForeignKey("users.id"), index=True)
+    entry_id: Mapped[str] = mapped_column(String(120), index=True)
+    mode: Mapped[str] = mapped_column(String(20))
+    error_type: Mapped[str] = mapped_column(String(24))
+    prompt: Mapped[str] = mapped_column(Text, default="")
+    answer: Mapped[str] = mapped_column(Text, default="")
+    expected: Mapped[str] = mapped_column(Text, default="")
+    explanation_vi: Mapped[str | None] = mapped_column(Text, nullable=True)
+    confused_with: Mapped[str | None] = mapped_column(String(120), nullable=True)
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow, index=True)
+    resolved_at: Mapped[datetime | None] = mapped_column(DateTime, nullable=True)
+
+
+class VocabSession(Base):
+    """VocabularyLearningSession. `items` holds answer keys and stays on the server; the API returns public items only."""
+    __tablename__ = "vocab_sessions"
+    id: Mapped[str] = mapped_column(String(36), primary_key=True)
+    user_id: Mapped[int] = mapped_column(ForeignKey("users.id"), index=True)
+    kind: Mapped[str] = mapped_column(String(20))
+    params: Mapped[dict] = mapped_column(JSON, default=dict)
+    items: Mapped[list] = mapped_column(JSON, default=list)
+    results: Mapped[dict] = mapped_column(JSON, default=dict)
+    status: Mapped[str] = mapped_column(String(12), default="active", index=True)
+    summary: Mapped[dict | None] = mapped_column(JSON, nullable=True)
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow, index=True)
+    updated_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow, onupdate=utcnow)
+    finished_at: Mapped[datetime | None] = mapped_column(DateTime, nullable=True)
+
+
+class VocabCollection(Base):
+    __tablename__ = "vocab_collections"
+    __table_args__ = (UniqueConstraint("user_id", "system_key"),)
+    id: Mapped[int] = mapped_column(Integer, primary_key=True)
+    user_id: Mapped[int] = mapped_column(ForeignKey("users.id"), index=True)
+    name: Mapped[str] = mapped_column(String(120))
+    description: Mapped[str | None] = mapped_column(Text, nullable=True)
+    system_key: Mapped[str | None] = mapped_column(String(32), nullable=True)
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
+
+
+class VocabCollectionItem(Base):
+    __tablename__ = "vocab_collection_items"
+    __table_args__ = (UniqueConstraint("collection_id", "entry_id"),)
+    id: Mapped[int] = mapped_column(Integer, primary_key=True)
+    collection_id: Mapped[int] = mapped_column(ForeignKey("vocab_collections.id", ondelete="CASCADE"), index=True)
+    entry_id: Mapped[str] = mapped_column(ForeignKey("vocab_entries.id"), index=True)
+    context: Mapped[str | None] = mapped_column(Text, nullable=True)
+    source_module: Mapped[str | None] = mapped_column(String(24), nullable=True)
+    source_ref: Mapped[str | None] = mapped_column(String(120), nullable=True)
+    added_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
+
+
+class VocabEnrichmentJob(Base):
+    """AI enrichment checkpoints: one row per (entry key, task). Re-runs skip done rows; failures keep the error."""
+    __tablename__ = "vocab_enrichment_jobs"
+    __table_args__ = (UniqueConstraint("entry_key", "task"),)
+    id: Mapped[int] = mapped_column(Integer, primary_key=True)
+    entry_key: Mapped[str] = mapped_column(String(200), index=True)
+    task: Mapped[str] = mapped_column(String(24))
+    batch_id: Mapped[str | None] = mapped_column(String(36), nullable=True, index=True)
+    status: Mapped[str] = mapped_column(String(16), default="queued", index=True)  # queued|done|failed|rejected|approved
+    attempts: Mapped[int] = mapped_column(Integer, default=0)
+    last_error: Mapped[str | None] = mapped_column(Text, nullable=True)
+    result: Mapped[dict | None] = mapped_column(JSON, nullable=True)
+    validation: Mapped[dict | None] = mapped_column(JSON, nullable=True)
+    model: Mapped[str | None] = mapped_column(String(64), nullable=True)
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
+    updated_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow, onupdate=utcnow)
+
+
+class VocabDialogue(Base):
+    __tablename__ = "vocab_dialogues"
+    id: Mapped[str] = mapped_column(String(36), primary_key=True)
+    user_id: Mapped[int] = mapped_column(ForeignKey("users.id"), index=True)
+    situation: Mapped[str] = mapped_column(String(40))
+    entry_ids: Mapped[list] = mapped_column(JSON, default=list)
+    turns: Mapped[list] = mapped_column(JSON, default=list)
+    used: Mapped[dict] = mapped_column(JSON, default=dict)
+    status: Mapped[str] = mapped_column(String(12), default="active")
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow, index=True)

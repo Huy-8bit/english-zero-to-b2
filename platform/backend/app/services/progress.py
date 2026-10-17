@@ -16,7 +16,7 @@ from sqlalchemy.orm import Session
 from ..content.catalog import LEVELS, LEVEL_NAMES
 from ..content.md import fold, parse_tables, strip_md
 from ..content.store import ContentStore
-from ..models import Achievement, ActivityDay, Attempt, LessonProgress, User, VocabCard, VocabReview, XPEvent, utcnow
+from ..models import Achievement, ActivityDay, Attempt, LessonProgress, User, VocabCard, VocabEntry, VocabProgress, VocabReview, XPEvent, utcnow
 
 XP_RULES = {"auto_correct": 10, "self_correct": 6, "production": 8, "lesson_complete": 50, "vocab_review": 2, "daily_goal": 20}
 PASS_SCORE = 60.0
@@ -128,7 +128,10 @@ def check_achievements(db: Session, user_id: int, store: ContentStore) -> list[s
     done = list(db.scalars(select(LessonProgress).where(LessonProgress.user_id == user_id, LessonProgress.completed_at.is_not(None))))
     n = len(done)
     st = streak(db, user_id)
-    reviews = db.scalar(select(func.count(VocabReview.id)).where(VocabReview.user_id == user_id)) or 0
+    from ..models import VocabReviewLog
+
+    reviews = (db.scalar(select(func.count(VocabReview.id)).where(VocabReview.user_id == user_id)) or 0) + (
+        db.scalar(select(func.count(VocabReviewLog.id)).where(VocabReviewLog.user_id == user_id, VocabReviewLog.rating.is_not(None))) or 0)
     candidates = {
         "first_lesson": n >= 1, "lessons_10": n >= 10, "lessons_50": n >= 50,
         "streak_3": st >= 3, "streak_7": st >= 7, "streak_30": st >= 30,
@@ -189,7 +192,19 @@ def unit_score(db: Session, user_id: int, unit_id: str) -> tuple[float | None, i
 
 # ------------------------------------------------------------------ spaced repetition (SM-2)
 
+def vocab_due_count(db: Session, user_id: int) -> int:
+    """Words due now in the (single) FSRS vocabulary schedule."""
+    return db.scalar(select(func.count(VocabProgress.id)).where(
+        VocabProgress.user_id == user_id, VocabProgress.state != "new", VocabProgress.due <= utcnow(),
+        VocabProgress.suspended.is_(False), VocabProgress.known.is_(False))) or 0
+
+
 def sm2(card: VocabCard, grade: int) -> VocabCard:
+    """Legacy SM-2 (kept for reading old vocab_cards rows; new reviews use FSRS in app.vocabulary.srs)."""
+    return _sm2(card, grade)
+
+
+def _sm2(card: VocabCard, grade: int) -> VocabCard:
     """SuperMemo-2: grade 0–5. <3 resets the card; ease never drops below 1.3."""
     grade = max(0, min(5, grade))
     if grade < 3:
@@ -307,7 +322,7 @@ def recommendations(db: Session, user: User, store: ContentStore) -> dict:
         next_lesson = u
         break
     level = next_lesson.level if next_lesson else start_level
-    due = db.scalar(select(func.count(VocabCard.id)).where(VocabCard.user_id == user.id, VocabCard.due <= today())) or 0
+    due = vocab_due_count(db, user.id)
     skills = None
     for lv in LEVELS:
         g = [u for u in units if u.kind == "grammar" and u.level == lv]
@@ -355,10 +370,11 @@ def dashboard(db: Session, user: User, store: ContentStore) -> dict:
         scores = [p.best_score for p in done if p.best_score is not None]
         mastery.append({"level": lv, "name": LEVEL_NAMES[lv], "total": len(g), "completed": len(done),
                         "avg_score": round(sum(scores) / len(scores), 1) if scores else None})
-    cards_total = len(store.cards())
-    seen = db.scalar(select(func.count(VocabCard.id)).where(VocabCard.user_id == user.id)) or 0
-    mature = db.scalar(select(func.count(VocabCard.id)).where(VocabCard.user_id == user.id, VocabCard.interval_days >= 21)) or 0
-    due = db.scalar(select(func.count(VocabCard.id)).where(VocabCard.user_id == user.id, VocabCard.due <= t)) or 0
+    cards_total = db.scalar(select(func.count(VocabEntry.id)).where(VocabEntry.published.is_(True), VocabEntry.owner_user_id.is_(None))) or len(store.cards())
+    seen = db.scalar(select(func.count(VocabProgress.id)).where(VocabProgress.user_id == user.id, VocabProgress.state != "new")) or 0
+    mature = db.scalar(select(func.count(VocabProgress.id)).where(VocabProgress.user_id == user.id, VocabProgress.state == "review",
+                                                                  VocabProgress.stability >= 21)) or 0
+    due = vocab_due_count(db, user.id)
     today_row = days.get(t)
     return {
         "user": {"name": user.name, "daily_goal_minutes": user.daily_goal_minutes, "weekly_goal_lessons": user.weekly_goal_lessons},

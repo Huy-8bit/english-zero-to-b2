@@ -177,6 +177,9 @@ class SpeakingService:
                                              f"<learner_answer>{transcript}</learner_answer>\nGive feedback on the latest answer and the next question.",
                                        schema=SpeakingTurnFeedback, max_output_tokens=1400)
             fb = {"type": "conversation", **fb_ai.model_dump(), "indicators": indicators}
+            from ..vocabulary.service import record_usage  # shared vocabulary progress: studied words used in speaking
+
+            fb["vocab_used"] = record_usage(db, user_id, transcript, "speaking", [e.original for e in fb_ai.grammar_feedback])
             db.add(SpeakingTurn(session_id=s.id, client_turn_id=client_turn_id, role="user", text=transcript, audio_file=audio_file,
                                 audio_seconds=seconds, feedback=fb))
             for i, e in enumerate(fb_ai.grammar_feedback[:5]):
