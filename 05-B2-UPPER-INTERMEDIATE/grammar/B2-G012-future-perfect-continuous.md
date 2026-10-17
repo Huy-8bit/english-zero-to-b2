@@ -203,14 +203,14 @@ Thường đi với: ***by + mốc tương lai*** + ***for + khoảng thời gia
 >
 > *I **was going to** raise this at our meeting last week, but we ran out of time. I had also planned to start the course in September, which **was to have been** my first semester, but my application was delayed.*
 >
-> *Before submitting this request, I **was about to** ask my colleague Minh whether he could cover my accounts, and he kindly agreed.*
+> *I **was about to** send this request without a plan for my accounts when my colleague Minh kindly offered to cover them.*
 >
 > *I look forward to your reply.*
 >
 > *Best regards,*
 > *Nguyen Thi Hoa*
 
-**Dịch tóm tắt:** Xin nghỉ không lương 3 tháng từ tháng Giêng; đến cuối năm sẽ làm ở phòng marketing được 8 năm, cần thời gian hoàn thành thạc sĩ. Định nêu ở cuộc họp tuần trước nhưng hết giờ; kế hoạch học kỳ đầu từ tháng 9 bị trễ. Đã định hỏi đồng nghiệp Minh hỗ trợ — anh ấy đồng ý.
+**Dịch tóm tắt:** Xin nghỉ không lương 3 tháng từ tháng Giêng; đến cuối năm sẽ làm ở phòng marketing được 8 năm, cần thời gian hoàn thành thạc sĩ. Định nêu ở cuộc họp tuần trước nhưng hết giờ; kế hoạch học kỳ đầu từ tháng 9 bị trễ. Khi sắp gửi đơn mà chưa có ai lo phần khách hàng, đồng nghiệp Minh đã chủ động đề nghị phụ trách giúp.
 
 ---
 

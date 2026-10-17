@@ -188,7 +188,7 @@ flowchart TD
 | 3 | If I **am** you, I'd go. | If I **were** you, I'd go. | | Cụm cố định *If I were you* |
 | 4 | If I had a car, I would **drove** to work. | ...would **drive**... | Chia động từ sau *would* | *would* + V nguyên mẫu |
 | 5 | What **will** you do if you **won** the lottery? | What **would** you do... | | |
-| 6 | I'd go**,** if I had time. | I'd go if I had time. | Dấu phẩy thừa | *If* ở giữa → không phẩy |
+| 6 | I'd go**,** if I had time. | I'd go if I had time. | Dấu phẩy thường không cần | *If* ở giữa → thường không phẩy (một số người viết vẫn thêm khi muốn ngắt nhịp) |
 | 7 | If I **were** you**,** I **would to** call her. | ...I would call her. | Thêm *to* | |
 
 ---

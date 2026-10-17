@@ -90,7 +90,7 @@ The + comparative (+ S + V), the + comparative (+ S + V)
 |---|
 | ***The more** you read, **the more** you learn.* |
 | ***The older** I get, **the happier** I feel.* |
-| ***The more expensive** the hotel (is), **the better** the service (is)?* — Không phải lúc nào cũng đúng! |
+| ***The more expensive** the hotel (is), **the better** the service (is).* — đúng ngữ pháp; *is* có thể lược (về nội dung thì chưa chắc đã đúng!) |
 | ***The sooner, the better.*** (rút gọn) |
 | ***The more** money he earns, **the less** time he has.* (*more/less* + danh từ) |
 

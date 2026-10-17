@@ -213,12 +213,12 @@ If  it    had not rained       →   Had     it   not rained, ...
 >
 > *I would also like to thank you for your recommendation last year. **Had it not been for** your introduction, we **would never have** started working with Lotus Hotels.*
 >
-> *We look forward to hearing from you. **Otherwise**, I will contact you again next month.*
+> *Please let us know your decision by 15 November; **otherwise**, I will contact you again next month.*
 >
 > *Yours sincerely,*
 > *Tran Thu Ha*
 
-**Dịch tóm tắt:** Cảm ơn đã quan tâm; gửi kèm bảng giá. Nếu muốn hẹn gặp, liên hệ trợ lý. Nếu đặt hàng trước 30/11 sẽ giảm 10%. Nếu không nhờ ông giới thiệu, chúng tôi đã không hợp tác với Lotus Hotels. Nếu không nhận được phản hồi, tôi sẽ liên hệ lại tháng sau.
+**Dịch tóm tắt:** Cảm ơn đã quan tâm; gửi kèm bảng giá. Nếu muốn hẹn gặp, liên hệ trợ lý. Nếu đặt hàng trước 30/11 sẽ giảm 10%. Nếu không nhờ ông giới thiệu, chúng tôi đã không hợp tác với Lotus Hotels. Vui lòng cho biết quyết định trước 15/11; nếu không, tôi sẽ liên hệ lại tháng sau.
 
 ---
 

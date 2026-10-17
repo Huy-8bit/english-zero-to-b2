@@ -168,7 +168,7 @@ every  → [👤👤👤👤] nhìn cả nhóm, không trừ ai
 
 | *neither* (chủ ngữ/đầu câu) | *not ... either* |
 |---|---|
-| ***Neither** of them came.* | *They did**n't** come, **either** of them.* (ít dùng) |
+| ***Neither** answer is correct.* | *I do**n't** like **either** answer.* (cùng nghĩa: không thích cả hai) |
 | *A: I don't like it. — B: **Neither do I**.* | *B: I do**n't either**.* |
 
 ### *none of* vs *no*
@@ -215,7 +215,7 @@ every  → [👤👤👤👤] nhìn cả nhóm, không trừ ai
 
 > **Linh:** *I've found two hotels in Nha Trang. **Both** of them are near the beach.*
 > **Duc:** *Do **either** of them have free breakfast?*
-> **Linh:** ***Neither** does, unfortunately. But **each** room has a balcony.*
+> **Linh:** ***Neither** of them does, unfortunately. But **each** room has a balcony.*
 > **Duc:** *Hmm. What about the reviews?*
 > **Linh:** *The first one has **both** good reviews **and** a lower price. **None of** the reviews mention noise.*
 > **Duc:** *Great. **Either** is fine with me, but let's book the cheaper one. **Every** penny counts!*

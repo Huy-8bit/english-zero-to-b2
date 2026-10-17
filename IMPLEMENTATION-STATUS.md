@@ -1,50 +1,54 @@
 # Implementation Status
 
-**Cập nhật: 2026-10-16. Dự án đang triển khai, chưa đạt Definition of Done.**
+**Cập nhật: 2026-10-17. Toàn bộ nội dung theo Curriculum Map đã được xây dựng; kiểm tra tự động sạch. 26 bài A0/A1 còn chờ đọc đối chiếu lại (xem Pending).**
 
 ## Tổng quan đã xác minh
 
-Root: `english-zero-to-b2/`. Chưa có Git metadata; không có AGENTS.md/CLAUDE.md. Người dùng yêu cầu tiếp tục tới hoàn thành, rồi tự tạo repo nếu chưa có, commit và push. GitHub CLI đã xác nhận tài khoản Huy-8bit; repo `Huy-8bit/english-zero-to-b2` chưa tồn tại lúc kiểm tra. Sẽ tạo private sau kiểm định cuối. Không reset hoặc xóa nội dung hợp lệ.
-
-Hiện có **72/128 bài ngữ pháp và đáp án**, gồm A0 19/19, A1 23/23, A2 30/30; B1 0/26, B2 0/30. **34 cặp COMPLETED**, **38 NEEDS_REVIEW**, **56 NOT_STARTED**. COMPLETED của một cặp không chứng nhận cả cấp độ. [Content Audit](CONTENT-AUDIT.md) là danh mục chi tiết; [Review Log](99-PROJECT/REVIEW-LOG.md) lưu căn cứ biên tập và lịch sử.
+Root: `english-zero-to-b2/`, Git repo private [`Huy-8bit/english-zero-to-b2`](https://github.com/Huy-8bit/english-zero-to-b2) (nhánh `main`). Có **128/128 bài ngữ pháp và đáp án**: A0 19, A1 23, A2 30, B1 26, B2 30. **102 cặp COMPLETED** (A0-G001–G015, A1-G023, A2 30/30, B1 26/26, B2 30/30), **26 NEEDS_REVIEW** (A0-G016–G019, A1-G001–G022), **0 NOT_STARTED**. COMPLETED của một cặp không chứng nhận cả cấp độ. [Content Audit](CONTENT-AUDIT.md) là danh mục chi tiết; [Review Log](99-PROJECT/REVIEW-LOG.md) lưu căn cứ biên tập.
 
 ## Completed
 
-- A0-G001–G003 và đáp án: sửa IPA/độ dài và chất lượng nguyên âm, /h/, biến thể giọng, đếm âm tiết; bổ sung lời giải L2, tự kiểm tra và rubric. Có hướng dẫn nghe nguồn mẫu, không có audio đính kèm.
-- A1-G023 và đáp án: 12 ví dụ phân tích, lời giải theo câu, quy tắc có ngoại lệ; thay xếp hạng địa lý mơ hồ bằng số liệu bài tập hoặc nhận xét chủ quan.
-- A2-G001–G030 và đáp án: đầy đủ A–N, tối thiểu 8 ví dụ phân tích, 25–32 nhiệm vụ mỗi bài, mẫu mở và tiêu chí chấm. Nội dung đã đọc đối chiếu; số mẫu viết được kiểm tra theo batch.
-- A2 Skills Units 1–3: 42 nhiệm vụ nghe/đọc/nói/viết, transcript, đáp án và rubric riêng; sáu tình huống A2 Communication có thẻ vai và mẫu riêng; A2 Exit Test có 54 mã mục cùng lời giải và thang điểm theo kỹ năng. Đã đối chiếu nội dung và điều kiện nghe.
-- Listening README, AI Tutor Instructions; 5 file Learning Tracker: README, Progress, Error Log, Spaced Repetition, Weekly Review.
-- Bản đồ và roadmap: học G015 trước G011; bị động G019 cần chủ ngữ/tân ngữ, quá khứ và V3. Đã sửa cập nhật tiên quyết vô tình lan sang A1-G018; A1-G018 vẫn chỉ cần A1-G017.
+- **Bài ngữ pháp A0→B2** (128 bài, mục A–N, ≥ 25 nhiệm vụ mỗi bài) và 128 file đáp án có lời giải, rubric L5 và Knowledge Check. B1/B2 có README với Mini Challenges theo khối và Skills Practice (3 unit mỗi cấp, transcript và đáp án riêng).
+- **06-GRAMMAR-REFERENCE:** Master Index, so sánh thì, câu điều kiện, modal, bị động, mạo từ, giới từ, 60 lỗi thường gặp, mẫu câu, cheat sheet.
+- **07-VOCABULARY:** VOC-01–VOC-19 (15 chủ đề + phrasal verbs, collocations, word families, confusable words) và đáp án.
+- **08-PRONUNCIATION:** PRON-01–PRON-11 (IPA, nguyên/phụ âm, minimal pairs, trọng âm từ/câu, nối âm, dạng yếu, ngữ điệu, shadowing, lỗi của người Việt) và đáp án. Không có audio; hướng dẫn dùng từ điển/TTS.
+- **09-FOUR-SKILLS:** Listening L01–L08, Speaking S01–S08, Reading R01–R09, Writing W01–W13, README từng kỹ năng và đáp án theo chương.
+- **10-PRACTICE-LAB:** LAB-01–LAB-10 (drill hằng ngày, bài trộn, sửa lỗi, viết lại câu, dịch, hội thoại, thử thách nói/viết, ôn tuần/tháng) + README; đáp án/hướng dẫn.
+- **11-EXAMS-AND-ASSESSMENTS:** Exit Test A0–B1, B2 Mock Test 1–2, VSTEP-style Mock Exam 1–2 (*mô phỏng định dạng, không phải đề chính thức*), Grammar Diagnostic Test, Vocabulary Assessment, Skill Evaluation Rubrics; đáp án và transcript đầy đủ.
+- **13-LEARNING-TRACKER:** Progress, Error Log, Spaced Repetition, Weekly Review, Grammar Checklist, Vocabulary Tracker, Monthly Assessment, B2 Readiness Checklist.
+- **Kiểm định:** đọc đối chiếu toàn bộ 56 cặp B1/B2 (phần B–M + đáp án), sửa 20 bài; chi tiết trong Review Log ngày 2026-10-17.
 
 ## In Progress
 
-- Đã viết đủ A2 và hỗ trợ, rà xong G001–G030. Đang rà A0/A1. Không có bài mới rỗng hoặc chỉ có khung.
-- 38 bài nền cũ có nội dung nhưng chưa tái kiểm định đầy đủ; không tự nâng trạng thái dựa vào file hoặc số câu.
+- Không có bài hoặc module nào ở trạng thái viết dở.
 
 ## Pending
 
-1. Tiếp tục rà A0 từ G004; G001–G003 đã hoàn thiện.
-2. Rà A0/A1 cũ cùng kỹ năng và đề cuối cấp; không viết lại bài tốt chỉ để đổi văn phong.
-3. Bổ sung nền từ vựng/phát âm và các tài liệu được dẫn.
-4. Triển khai B1/B2 và các module chuyên biệt theo Curriculum Map: Grammar Reference, Vocabulary, Pronunciation, Listening/Speaking/Reading/Writing, Practice Lab, Exams, các tracker còn thiếu.
-5. Kiểm định toàn cục, parse/render Mermaid, rà bốn kỹ năng; cập nhật báo cáo chất lượng cuối, rồi tạo Git repo, commit, tạo GitHub private và push.
+1. Đọc đối chiếu 26 bài A0/A1 còn NEEDS_REVIEW (A0-G016–G019, A1-G001–G022) và A0/A1 Exit Test; không viết lại bài tốt chỉ để đổi văn phong.
+2. Thử nghiệm với người học thật / giáo viên độc lập trước khi tuyên bố chất lượng sư phạm.
 
 ## Known Issues
 
-- Còn liên kết tới nội dung kế hoạch chưa viết; danh sách chính xác trong Content Audit. Không tạo file rỗng để che lỗi.
-- B2-G005 cần B2-G013: khi tới B2 phải điều chỉnh thứ tự học thực tế, giữ ID.
-- Chưa có audio đóng gói. Bài nghe có quy trình người đọc/TTS; nếu người học đã xem transcript phải ghi điều kiện luyện.
-- 84 khối Mermaid đã render SVG; hai khối phonics sửa sau đó đã render lại PNG, đã xem sơ đồ quyết định.
-- VSTEP-style phải xác minh cấu trúc/thang điểm từ nguồn chính thức khi biên soạn. Không kết luận người học đạt B2 từ bài ngữ pháp.
+- B2-G005 tham chiếu B2-G013 (ID đứng sau): B2 README hướng dẫn học G013 trước G005; giữ nguyên ID.
+- Không có audio đóng gói. Bài nghe dùng transcript + người đọc/TTS; người học ghi điều kiện luyện (đã xem transcript hay chưa).
+- Đề "VSTEP-style" chỉ mô phỏng định dạng; không quy đổi điểm chính thức. Không kết luận người học đạt B2 từ số bài đã học.
+- Người kiểm định là tác giả nội dung; chưa có đánh giá độc lập.
 
 ## Validation
 
-Chạy `python3 99-PROJECT/audit_content.py` và `python3 99-PROJECT/check_links.py --stats`. Bộ kiểm tra toàn cục vẫn trả mã 1 khi có link thiếu. Kết quả hiện tại: 0 lỗi cấu trúc/nhãn bài–đáp án; 1.861 lượt link nội bộ, 199 lượt hỏng trước cập nhật báo cáo. Các số liệu lịch sử batch cũ giữ trong Review Log, không thay thế báo cáo hiện tại. Markdown đã parse/render HTML; tiếp tục chạy lại sau các batch chỉnh sửa.
+Chạy từ root:
+
+```text
+python3 99-PROJECT/fix_toc_anchors.py
+python3 99-PROJECT/audit_content.py
+python3 99-PROJECT/check_links.py
+```
+
+Kết quả 2026-10-17: 128/128 bài, 0 lỗi cấu trúc/nhãn bài–đáp án, 4.569 lượt liên kết nội bộ, **0 hỏng**, 0 anchor hỏng, 0 bảng lỗi dòng phân cách, 0 cảnh báo Mermaid theo heuristic, 0 marker TODO/TBD. 159/159 khối Mermaid render SVG thành công bằng Mermaid CLI + Chrome (chi tiết ở Review Log).
 
 ## Next Agent Instructions
 
-Đọc file này, Curriculum Map, AUTHORING-STANDARDS, Review Log và Content Audit. Tiếp tục rà A0-G004 trở đi; không viết lại A2 đã hoàn thiện. Sau từng batch, đọc đối chiếu lời giải, kiểm số từ mẫu, link và cập nhật bảng quyết định. Trước báo cáo cuối phải hết khoảng trống trong bản đồ và các module chuyên biệt. Yêu cầu tiếp tục/commit/push vẫn có hiệu lực.
+Đọc file này, Curriculum Map, AUTHORING-STANDARDS, Review Log và Content Audit. Việc còn lại là rà A0/A1 NEEDS_REVIEW theo đúng quy trình đọc đối chiếu bài–đáp án; sau mỗi batch cập nhật bảng quyết định trong Review Log, chạy ba lệnh kiểm tra, rồi commit và push lên `origin main`.
 
 ---
 

@@ -229,6 +229,8 @@ Kỹ năng B1: [B1 Skills Practice](../04-B1-INTERMEDIATE/B1-SKILLS-PRACTICE.md)
 
 Thư mục: [`05-B2-UPPER-INTERMEDIATE/`](../05-B2-UPPER-INTERMEDIATE/README.md) · Đề mô phỏng: [B2 Mock Tests](../11-EXAMS-AND-ASSESSMENTS/B2-MOCK-TEST-1.md)
 
+**Thứ tự thực học B2:** học **B2-G013** trước **B2-G005** (G005 cần nguyên mẫu hoàn thành của G013); các bài khác theo thứ tự ID. Giữ nguyên Lesson ID và tên file.
+
 | ID | Topic (English) | Tên tiếng Việt | Prerequisites | Time |
 |---|---|---|---|---|
 | [B2-G001](../05-B2-UPPER-INTERMEDIATE/grammar/B2-G001-mixed-conditionals.md) | Mixed Conditionals | Câu điều kiện hỗn hợp | B1-G008 | 90' |

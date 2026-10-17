@@ -25,25 +25,25 @@ Không cộng thành một điểm tổng rồi bỏ qua kỹ năng yếu. Mốc
 
 **G02.** When we got to the cinema, the film ___ already ___.  A. has / started  B. had / started  C. was / starting
 
-**G03.** This time tomorrow, I ___ on a beach in Phu Quoc.  A. will lie  B. will be lying  C. will have lain
+**G03.** This time tomorrow, I ___ on a beach in Phu Quoc.  A. will be lying  B. will lie  C. will have lain
 
-**G04.** If I ___ more time, I would learn to play the piano.  A. have  B. had  C. would have
+**G04.** If I ___ more time, I would learn to play the piano.  A. would have  B. have  C. had
 
-**G05.** If she had left earlier, she ___ the train.  A. wouldn't miss  B. won't have missed  C. wouldn't have missed
+**G05.** If she had left earlier, she ___ the train.  A. won't have missed  B. wouldn't miss  C. wouldn't have missed
 
-**G06.** I wish I ___ so much last night. My head hurts.  A. didn't eat  B. hadn't eaten  C. wouldn't eat
+**G06.** I wish I ___ so much last night. My head hurts.  A. hadn't eaten  B. wouldn't eat  C. didn't eat
 
-**G07.** She asked me where ___.  A. did I live  B. I lived  C. do I live
+**G07.** She asked me where ___.  A. did I live  B. do I live  C. I lived
 
-**G08.** The new bridge ___ at the moment.  A. is being built  B. is building  C. has built
+**G08.** The new bridge ___ at the moment.  A. has built  B. is building  C. is being built
 
-**G09.** My brother, ___ lives in Canada, is visiting us next week.  A. that  B. who  C. which
+**G09.** My brother, ___ lives in Canada, is visiting us next week.  A. who  B. that  C. which
 
-**G10.** He ___ be at home — his car isn't outside.  A. can't  B. mustn't  C. shouldn't
+**G10.** He ___ be at home — his car isn't outside.  A. mustn't  B. can't  C. shouldn't
 
-**G11.** I'll never forget ___ the Great Wall for the first time.  A. to see  B. seeing  C. see
+**G11.** I'll never forget ___ the Great Wall for the first time.  A. seeing  B. see  C. to see
 
-**G12.** ___ the heavy rain, the match continued.  A. Although  B. Despite  C. However
+**G12.** ___ the heavy rain, the match continued.  A. Although  B. However  C. Despite
 
 ### Hoàn thành hoặc viết lại câu (G13–G20)
 
@@ -67,17 +67,17 @@ Không cộng thành một điểm tổng rồi bỏ qua kỹ năng yếu. Mốc
 
 Chọn từ phù hợp nhất (V01–V06).
 
-**V01.** We need to ___ a decision before Friday.  A. do  B. make  C. take place
+**V01.** We need to ___ a decision before Friday.  A. make  B. do  C. take place
 
-**V02.** The meeting has been ___ until next Tuesday.  A. put off  B. put on  C. put up
+**V02.** The meeting has been ___ until next Tuesday.  A. put off  B. put up  C. put on
 
-**V03.** He's very ___ — he always arrives exactly on time.  A. punctual  B. punctured  C. practical
+**V03.** He's very ___ — he always arrives exactly on time.  A. punctured  B. practical  C. punctual
 
-**V04.** I can't ___ with this noise any longer.  A. put up  B. get on  C. come up
+**V04.** I can't ___ with this noise any longer.  A. come up  B. get on  C. put up
 
 **V05.** Rents in the city centre are not ___ for most young workers.  A. affordable  B. available  C. reliable
 
-**V06.** The company has decided to ___ its prices by 10%.  A. rise  B. raise  C. arise
+**V06.** The company has decided to ___ its prices by 10%.  A. arise  B. rise  C. raise
 
 Điền một từ phù hợp vào mỗi chỗ trống, chọn từ: *despite, commute, benefit, however*.
 

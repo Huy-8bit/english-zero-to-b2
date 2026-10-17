@@ -10,16 +10,16 @@ Mỗi câu 1 điểm; chấp nhận biến thể đúng cùng ý ở câu mở.
 |---|---|---|
 | G01 | **B. have been working** — hành động kéo dài từ quá khứ đến nay, nhấn mạnh quá trình, gây mệt. | B1-G001 |
 | G02 | **B. had / started** — phim bắt đầu trước thời điểm đến rạp trong quá khứ. | B1-G002 |
-| G03 | **B. will be lying** — hành động đang diễn ra tại một thời điểm tương lai. | B1-G005 |
-| G04 | **B. had** — ĐK loại 2: *If + quá khứ đơn*. C sai vì không dùng *would* trong mệnh đề *if*. | B1-G007 |
+| G03 | **A. will be lying** — hành động đang diễn ra tại một thời điểm tương lai. | B1-G005 |
+| G04 | **C. had** — ĐK loại 2: *If + quá khứ đơn*. *would have* sai vì không dùng *would* trong mệnh đề *if*. | B1-G007 |
 | G05 | **C. wouldn't have missed** — ĐK loại 3. | B1-G008 |
-| G06 | **B. hadn't eaten** — tiếc về quá khứ (*last night*) → *wish + QKHT*. | B1-G009 |
-| G07 | **B. I lived** — câu hỏi tường thuật dùng trật tự câu kể và lùi thì. | B1-G011 |
-| G08 | **A. is being built** — bị động hiện tại tiếp diễn. B nghĩa là cây cầu tự xây. | B1-G012 |
-| G09 | **B. who** — mệnh đề không xác định (có dấu phẩy) không dùng *that*; *which* không dùng cho người. | B1-G013 |
-| G10 | **A. can't** — suy luận chắc chắn phủ định. *mustn't* là cấm. | B1-G014 |
-| G11 | **B. seeing** — *forget + V-ing* = quên việc đã làm trong quá khứ (ký ức). | B1-G016 |
-| G12 | **B. Despite** — + cụm danh từ. A cần mệnh đề; C cần đứng đầu câu mới. | B1-G018 |
+| G06 | **A. hadn't eaten** — tiếc về quá khứ (*last night*) → *wish + QKHT*. | B1-G009 |
+| G07 | **C. I lived** — câu hỏi tường thuật dùng trật tự câu kể và lùi thì. | B1-G011 |
+| G08 | **C. is being built** — bị động hiện tại tiếp diễn. *is building* nghĩa là cây cầu tự xây. | B1-G012 |
+| G09 | **A. who** — mệnh đề không xác định (có dấu phẩy) không dùng *that*; *which* không dùng cho người. | B1-G013 |
+| G10 | **B. can't** — suy luận chắc chắn phủ định. *mustn't* là cấm. | B1-G014 |
+| G11 | **A. seeing** — *forget + V-ing* = quên việc đã làm trong quá khứ (ký ức). | B1-G016 |
+| G12 | **C. Despite** — + cụm danh từ. *Although* cần mệnh đề; *However* cần đứng đầu câu mới. | B1-G018 |
 | G13 | **had** (hoặc **got**) — *have + O + V3*. | B1-G017 |
 | G14 | **Although she was tired, she finished the marathon.** | B1-G018 |
 | G15 | Nam told me **(that) he would call me the next day / the following day**. (Chấp nhận *tomorrow* nếu thời điểm tường thuật vẫn là cùng ngày.) | B1-G010 |
@@ -33,12 +33,12 @@ Mỗi câu 1 điểm; chấp nhận biến thể đúng cùng ý ở câu mở.
 
 | Mã | Đáp án và giải thích |
 |---|---|
-| V01 | **B. make** — *make a decision*. *take a decision* cũng tồn tại trong Anh–Anh nhưng không có trong lựa chọn; *do* sai collocation. |
+| V01 | **A. make** — *make a decision*. *take a decision* cũng tồn tại trong Anh–Anh nhưng không có trong lựa chọn; *do* sai collocation. |
 | V02 | **A. put off** = hoãn. |
-| V03 | **A. punctual** = đúng giờ. *punctured* = bị thủng; *practical* = thực tế. |
-| V04 | **A. put up** — *put up with* = chịu đựng. |
+| V03 | **C. punctual** = đúng giờ. *punctured* = bị thủng; *practical* = thực tế. |
+| V04 | **C. put up** — *put up with* = chịu đựng. |
 | V05 | **A. affordable** = giá phải chăng. *available* = có sẵn; *reliable* = đáng tin cậy. |
-| V06 | **B. raise** — ngoại động từ (có tân ngữ *its prices*). *rise* là nội động từ. |
+| V06 | **C. raise** — ngoại động từ (có tân ngữ *its prices*). *rise* là nội động từ. |
 | V07 | **commute** |
 | V08 | **benefit** (*benefits*) |
 | V09 | **However** |

@@ -69,7 +69,7 @@ Bài này luyện danh từ trong cách dùng đếm được. Một từ có th
 
 Tiếng Việt cho biết số lượng bằng **từ đứng trước** danh từ: "**những** cuốn sách", "**các** bạn", "**ba** con mèo". Danh từ giữ nguyên.
 
-Tiếng Anh đánh dấu số lượng **trên chính danh từ** — và **bắt buộc**, kể cả khi đã có số đếm. Đây là quy tắc **hòa hợp (agreement)**: những thành phần có đối lập số cần khớp trong mẫu đó, như these/books/are. Tính từ không thêm s: these new books, không phải news.
+Tiếng Anh đánh dấu số lượng **trên chính danh từ** — và **bắt buộc**, kể cả khi đã có số đếm. Đây là quy tắc **hòa hợp (agreement)**: những thành phần có đối lập số cần khớp trong mẫu đó, như these/books/are. Tính từ không thêm s: *these new books*, không viết ~~these news books~~.
 
 ```mermaid
 flowchart LR

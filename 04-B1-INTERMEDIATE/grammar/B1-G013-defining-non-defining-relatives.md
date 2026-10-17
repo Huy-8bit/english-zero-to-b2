@@ -154,13 +154,13 @@ NON-DEFINING (có phẩy):
 
 ### Breakdown
 
-`Ho Chi Minh City, | which | has a population of over 9 million, | is the economic centre of Vietnam.`
+`Ho Chi Minh City, | which | is the largest city in Vietnam, | is also its economic centre.`
 
 | Phần | Vai trò |
 |---|---|
 | Ho Chi Minh City | Danh từ đã xác định (tên riêng) |
 | , which ..., | Mệnh đề không xác định — thông tin thêm, có phẩy |
-| is the economic centre... | Mệnh đề chính |
+| is also its economic centre | Mệnh đề chính |
 
 ---
 

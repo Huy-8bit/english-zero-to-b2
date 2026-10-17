@@ -220,7 +220,7 @@ TRẠNG TỪ:   It was late. However, we went out.      It was late; however, we
 
 **Giải thích:** Đoạn văn bàn về làm việc tại nhà: lợi ích (tiết kiệm thời gian, chi phí), bất lợi (cô đơn, khó tập trung), kết luận nên có phương án linh hoạt.
 
-**Grammar highlights:** 12 từ nối thuộc 6 chức năng — đây chính là "khung xương" của bài viết B1–B2. Xem thêm [W05 — Cohesion & Coherence](../../09-FOUR-SKILLS/Writing/W05-cohesion-coherence.md).
+**Grammar highlights:** 12 từ nối thuộc 7 chức năng (trình tự, nguyên nhân, bổ sung, ví dụ, tương phản, kết quả, kết luận) — đây chính là "khung xương" của bài viết B1–B2. Xem thêm [W05 — Cohesion & Coherence](../../09-FOUR-SKILLS/Writing/W05-cohesion-coherence.md).
 
 ---
 

@@ -114,7 +114,7 @@ flowchart LR
 | 5 | *She **won't have read** the email by the meeting.* | Cô ấy sẽ chưa đọc email trước buổi họp. | Phủ định |
 | 6 | ***Will** you **have saved** enough money by December?* | Đến tháng 12 bạn đã tiết kiệm đủ tiền chưa? | Câu hỏi |
 | 7 | *Don't call at 9. The film **will have started**.* | Đừng gọi lúc 9 giờ. Phim sẽ bắt đầu rồi. | Nhìn lại từ 9 giờ |
-| 8 | *In two weeks, I**'ll have moved** into my new flat.* | Hai tuần nữa tôi sẽ đã chuyển vào căn hộ mới. | *in* + khoảng |
+| 8 | *In two weeks, I**'ll have moved** into my new flat.* | Hai tuần nữa là tôi đã chuyển vào căn hộ mới rồi. | *in* + khoảng |
 | 9 | *By the end of this course, you **will have learned** over 500 words.* | Đến cuối khóa, bạn sẽ học được hơn 500 từ. | Số lượng tính đến mốc |
 | 10 | *How many countries **will** you **have visited** by the time you're 40?* | Đến lúc 40 tuổi bạn sẽ đến được bao nhiêu nước? | |
 

@@ -22,6 +22,18 @@ Bảng này là quyết định biên tập thủ công, được `audit_content
 | A2-G008 | COMPLETED | Lịch tương lai: không suy chắc vé/hợp đồng, không bắt buộc trạng ngữ thời gian trong mọi câu; 29 nhiệm vụ, mẫu 90 từ. |
 | A2-G009 | COMPLETED | May/might: bỏ phần trăm xác suất cố định, phân biệt ý nghĩa, sửa lỗi thực sự về dạng động từ; 29 nhiệm vụ, mẫu 75 từ đủ năm hình thức đề yêu cầu. |
 | A0-G003 | COMPLETED | Đã đọc đối chiếu toàn bài và 27 nhiệm vụ; sửa nguyên âm/IPA, phân loại /h/, đếm âm tiết, biến thể giọng và quy tắc tuyệt đối; bổ sung giải thích L2, rubric và tự kiểm tra. Không có audio đính kèm; luyện nghe mẫu qua nguồn từ điển/TTS theo hướng dẫn. |
+| A0-G004 | COMPLETED | Đã đọc đối chiếu B–M và đáp án (2026-10-17); 25 nhiệm vụ khớp lời giải, kiểm tra quy tắc, ví dụ, biến thể đúng, mẫu và rubric L5; không phát hiện lỗi cần sửa; nội dung đã có rào đón biến thể từ lượt sửa trước. |
+| A0-G005 | COMPLETED | Đã đọc đối chiếu B–M và đáp án (2026-10-17); 27 nhiệm vụ khớp lời giải, kiểm tra quy tắc, ví dụ, biến thể đúng, mẫu và rubric L5; không phát hiện lỗi cần sửa; nội dung đã có rào đón biến thể từ lượt sửa trước. |
+| A0-G006 | COMPLETED | Đã đọc đối chiếu B–M và đáp án (2026-10-17); 27 nhiệm vụ khớp lời giải, kiểm tra quy tắc, ví dụ, biến thể đúng, mẫu và rubric L5; không phát hiện lỗi cần sửa; nội dung đã có rào đón biến thể từ lượt sửa trước. |
+| A0-G007 | COMPLETED | Đã đọc đối chiếu B–M và đáp án (2026-10-17); 25 nhiệm vụ khớp lời giải, kiểm tra quy tắc, ví dụ, biến thể đúng, mẫu và rubric L5; không phát hiện lỗi cần sửa; nội dung đã có rào đón biến thể từ lượt sửa trước. |
+| A0-G008 | COMPLETED | Đã đọc đối chiếu B–M và đáp án (2026-10-17); 25 nhiệm vụ khớp lời giải, kiểm tra quy tắc, ví dụ, biến thể đúng, mẫu và rubric L5; không phát hiện lỗi cần sửa; nội dung đã có rào đón biến thể từ lượt sửa trước. |
+| A0-G009 | COMPLETED | Đã đọc đối chiếu B–M và đáp án (2026-10-17); 30 nhiệm vụ khớp lời giải, kiểm tra quy tắc, ví dụ, biến thể đúng, mẫu và rubric L5; không phát hiện lỗi cần sửa; nội dung đã có rào đón biến thể từ lượt sửa trước. |
+| A0-G010 | COMPLETED | Đã đọc đối chiếu B–M và đáp án (2026-10-17); 29 nhiệm vụ khớp lời giải, kiểm tra quy tắc, ví dụ, biến thể đúng, mẫu và rubric L5; không phát hiện lỗi cần sửa; nội dung đã có rào đón biến thể từ lượt sửa trước. |
+| A0-G011 | COMPLETED | Đã đọc đối chiếu B–M và đáp án (2026-10-17); 27 nhiệm vụ khớp lời giải, kiểm tra quy tắc, ví dụ, biến thể đúng, mẫu và rubric L5; không phát hiện lỗi cần sửa; nội dung đã có rào đón biến thể từ lượt sửa trước. |
+| A0-G012 | COMPLETED | Đã đọc đối chiếu B–M và đáp án (2026-10-17); 29 nhiệm vụ khớp lời giải, kiểm tra quy tắc, ví dụ, biến thể đúng, mẫu và rubric L5; không phát hiện lỗi cần sửa; nội dung đã có rào đón biến thể từ lượt sửa trước. |
+| A0-G013 | COMPLETED | Đã đọc đối chiếu B–M và đáp án (2026-10-17); 30 nhiệm vụ khớp lời giải, kiểm tra quy tắc, ví dụ, biến thể đúng, mẫu và rubric L5; sửa câu ví dụ D gây nhầm *new + s* với từ *news*. |
+| A0-G014 | COMPLETED | Đã đọc đối chiếu B–M và đáp án (2026-10-17); 33 nhiệm vụ khớp lời giải, kiểm tra quy tắc, ví dụ, biến thể đúng, mẫu và rubric L5; không phát hiện lỗi cần sửa; nội dung đã có rào đón biến thể từ lượt sửa trước. |
+| A0-G015 | COMPLETED | Đã đọc đối chiếu B–M và đáp án (2026-10-17); 29 nhiệm vụ khớp lời giải, kiểm tra quy tắc, ví dụ, biến thể đúng, mẫu và rubric L5; không phát hiện lỗi cần sửa; nội dung đã có rào đón biến thể từ lượt sửa trước. |
 | A1-G023 | COMPLETED | Đã đọc đối chiếu 29 nhiệm vụ; 12 ví dụ có phân tích; bổ sung lý do L2–L4/rubric; sửa khẳng định tuyệt đối về the, nhóm hai và tính từ hai âm tiết; thay xếp hạng địa lý mơ hồ bằng tình huống xác định hoặc ý kiến. |
 | A2-G010 | COMPLETED | Đọc lại toàn bài và 29 nhiệm vụ; thêm phân tích 10 ví dụ, lý do L2–L4, rubric và tự kiểm tra; sửa quy tắc thời lượng/năm, thêm ngữ cảnh sự kiện duy nhất; cập nhật tiên quyết và liên kết. |
 | A2-G011 | COMPLETED | 8 ví dụ phân tích, 25 nhiệm vụ khớp đáp án; kiểm tra trạng thái/quá trình, dạng sau giới từ, các thì và trả lời ngắn; có mẫu/rubric/tự kiểm tra. |
@@ -29,24 +41,77 @@ Bảng này là quyết định biên tập thủ công, được `audit_content
 | A2-G013 | COMPLETED | 8 ví dụ, 25 nhiệm vụ; kiểm tra người thực hiện, may I/could you, trả lời cho phép hiện tại; giải thích đáp án mở và biến thể. |
 | A2-G014 | COMPLETED | 8 ví dụ, 25 nhiệm vụ; kiểm tra should/ought to, advice/obligation, câu hỏi và phủ định; mẫu viết trong giới hạn và rubric. |
 | A2-G015 | COMPLETED | 8 ví dụ, 25 nhiệm vụ; đối chiếu enjoy/finish/avoid và want/plan/hope; phân biệt V-ing với thì tiếp diễn, chia V1; có mẫu/rubric/tự kiểm tra. |
-
 | A2-G016 | COMPLETED | Đã đọc đối chiếu phần A–N, 8 ví dụ phân tích, 25 nhiệm vụ và lời giải; kiểm tra ngữ cảnh, biến thể đúng, rubric mở và tự kiểm tra. |
 | A2-G017 | COMPLETED | Đã đọc đối chiếu phần A–N, 8 ví dụ phân tích, 25 nhiệm vụ và lời giải; kiểm tra ngữ cảnh, biến thể đúng, rubric mở và tự kiểm tra. |
 | A2-G018 | COMPLETED | Đã đọc đối chiếu phần A–N, 8 ví dụ phân tích, 25 nhiệm vụ và lời giải; kiểm tra ngữ cảnh, biến thể đúng, rubric mở và tự kiểm tra. |
 | A2-G019 | COMPLETED | Đã đọc đối chiếu phần A–N, 8 ví dụ phân tích, 25 nhiệm vụ và lời giải; kiểm tra ngữ cảnh, biến thể đúng, rubric mở và tự kiểm tra. |
 | A2-G020 | COMPLETED | Đã đọc đối chiếu phần A–N, 8 ví dụ phân tích, 25 nhiệm vụ và lời giải; kiểm tra ngữ cảnh, biến thể đúng, rubric mở và tự kiểm tra. |
-
 | A2-G021 | COMPLETED | 8 ví dụ, 25 nhiệm vụ; thứ tự trung tính có ngoại lệ, a/an theo âm, tính từ không chia số nhiều; mẫu viết 61 từ. |
 | A2-G022 | COMPLETED | 9 ví dụ, 25 nhiệm vụ; phân biệt từ loại, good/well, hard/hardly, fast và vị trí trạng từ; mẫu viết 56 từ. |
 | A2-G023 | COMPLETED | 9 ví dụ, 25 nhiệm vụ; phân biệt nguồn gây cảm xúc và người/vật trải nghiệm, không dùng quy tắc người/vật tuyệt đối; mẫu viết 60 từ. |
 | A2-G024 | COMPLETED | 9 ví dụ, 25 nhiệm vụ; a little không luôn đủ, loại danh từ, no/none và none of; lời giải chấp nhận biến thể đúng. |
 | A2-G025 | COMPLETED | 9 ví dụ, 25 nhiệm vụ; too/very, enough với danh từ/tính từ/trạng từ, for + người + to V; lời giải và rubric mở. |
-
 | A2-G026 | COMPLETED | Đã đối chiếu A–N, 9–10 ví dụ và 25 nhiệm vụ/lời giải; kiểm tra ý nghĩa, biến thể, câu mở, mẫu viết 50–70 từ và liên kết. |
 | A2-G027 | COMPLETED | Đã đối chiếu A–N, 9–10 ví dụ và 25 nhiệm vụ/lời giải; kiểm tra ý nghĩa, biến thể, câu mở, mẫu viết 50–70 từ và liên kết. |
 | A2-G028 | COMPLETED | Đã đối chiếu A–N, 9–10 ví dụ và 25 nhiệm vụ/lời giải; kiểm tra ý nghĩa, biến thể, câu mở, mẫu viết 50–70 từ và liên kết. |
 | A2-G029 | COMPLETED | Đã đối chiếu A–N, 9–10 ví dụ và 25 nhiệm vụ/lời giải; kiểm tra ý nghĩa, biến thể, câu mở, mẫu viết 50–70 từ và liên kết. |
 | A2-G030 | COMPLETED | Đã đối chiếu A–N, 9–10 ví dụ và 25 nhiệm vụ/lời giải; kiểm tra ý nghĩa, biến thể, câu mở, mẫu viết 50–70 từ và liên kết. |
+| B1-G001 | COMPLETED | Đã đọc đối chiếu B–M (10 ví dụ phân tích) và đáp án; 30 nhiệm vụ khớp lời giải, kiểm tra biến thể đúng, câu mở và mẫu/rubric L5; không phát hiện lỗi cần sửa. |
+| B1-G002 | COMPLETED | Đã đọc đối chiếu B–M (11 ví dụ phân tích) và đáp án; 30 nhiệm vụ khớp lời giải, kiểm tra biến thể đúng, câu mở và mẫu/rubric L5; sửa mẫu L5.1 (*had learned* → *learned* ở câu kết). |
+| B1-G003 | COMPLETED | Đã đọc đối chiếu B–M (10 ví dụ phân tích) và đáp án; 29 nhiệm vụ khớp lời giải, kiểm tra biến thể đúng, câu mở và mẫu/rubric L5; không phát hiện lỗi cần sửa. |
+| B1-G004 | COMPLETED | Đã đọc đối chiếu B–M (10 ví dụ phân tích) và đáp án; 29 nhiệm vụ khớp lời giải, kiểm tra biến thể đúng, câu mở và mẫu/rubric L5; sửa câu kết mẫu L5.1 cho đúng quan hệ nhân quả. |
+| B1-G005 | COMPLETED | Đã đọc đối chiếu B–M (10 ví dụ phân tích) và đáp án; 30 nhiệm vụ khớp lời giải, kiểm tra biến thể đúng, câu mở và mẫu/rubric L5; sửa dòng lỗi I#6 bị trộn. |
+| B1-G006 | COMPLETED | Đã đọc đối chiếu B–M (10 ví dụ phân tích) và đáp án; 30 nhiệm vụ khớp lời giải, kiểm tra biến thể đúng, câu mở và mẫu/rubric L5; sửa bản dịch F#8. |
+| B1-G007 | COMPLETED | Đã đọc đối chiếu B–M (11 ví dụ phân tích) và đáp án; 30 nhiệm vụ khớp lời giải, kiểm tra biến thể đúng, câu mở và mẫu/rubric L5; làm mềm quy tắc dấu phẩy khi *if* ở giữa câu. |
+| B1-G008 | COMPLETED | Đã đọc đối chiếu B–M (10 ví dụ phân tích) và đáp án; 30 nhiệm vụ khớp lời giải, kiểm tra biến thể đúng, câu mở và mẫu/rubric L5; không phát hiện lỗi cần sửa. |
+| B1-G009 | COMPLETED | Đã đọc đối chiếu B–M (11 ví dụ phân tích) và đáp án; 30 nhiệm vụ khớp lời giải, kiểm tra biến thể đúng, câu mở và mẫu/rubric L5; không phát hiện lỗi cần sửa. |
+| B1-G010 | COMPLETED | Đã đọc đối chiếu B–M (10 ví dụ phân tích) và đáp án; 29 nhiệm vụ khớp lời giải, kiểm tra biến thể đúng, câu mở và mẫu/rubric L5; không phát hiện lỗi cần sửa. |
+| B1-G011 | COMPLETED | Đã đọc đối chiếu B–M (11 ví dụ phân tích) và đáp án; 29 nhiệm vụ khớp lời giải, kiểm tra biến thể đúng, câu mở và mẫu/rubric L5; không phát hiện lỗi cần sửa. |
+| B1-G012 | COMPLETED | Đã đọc đối chiếu B–M (12 ví dụ phân tích) và đáp án; 29 nhiệm vụ khớp lời giải, kiểm tra biến thể đúng, câu mở và mẫu/rubric L5; sửa dòng lỗi I#6, đếm lại động từ bị động ở K, bỏ mốc niên đại còn tranh luận của Truyện Kiều. |
+| B1-G013 | COMPLETED | Đã đọc đối chiếu B–M (11 ví dụ phân tích) và đáp án; 29 nhiệm vụ khớp lời giải, kiểm tra biến thể đúng, câu mở và mẫu/rubric L5; thay số dân TP.HCM đã lỗi thời bằng dữ kiện ổn định. |
+| B1-G014 | COMPLETED | Đã đọc đối chiếu B–M (11 ví dụ phân tích) và đáp án; 29 nhiệm vụ khớp lời giải, kiểm tra biến thể đúng, câu mở và mẫu/rubric L5; không phát hiện lỗi cần sửa. |
+| B1-G015 | COMPLETED | Đã đọc đối chiếu B–M (10 ví dụ phân tích) và đáp án; 30 nhiệm vụ khớp lời giải, kiểm tra biến thể đúng, câu mở và mẫu/rubric L5; không phát hiện lỗi cần sửa. |
+| B1-G016 | COMPLETED | Đã đọc đối chiếu B–M (12 ví dụ phân tích) và đáp án; 30 nhiệm vụ khớp lời giải, kiểm tra biến thể đúng, câu mở và mẫu/rubric L5; không phát hiện lỗi cần sửa. |
+| B1-G017 | COMPLETED | Đã đọc đối chiếu B–M (10 ví dụ phân tích) và đáp án; 29 nhiệm vụ khớp lời giải, kiểm tra biến thể đúng, câu mở và mẫu/rubric L5; không phát hiện lỗi cần sửa. |
+| B1-G018 | COMPLETED | Đã đọc đối chiếu B–M (12 ví dụ phân tích) và đáp án; 29 nhiệm vụ khớp lời giải, kiểm tra biến thể đúng, câu mở và mẫu/rubric L5; sửa số chức năng từ nối trong K. |
+| B1-G019 | COMPLETED | Đã đọc đối chiếu B–M (12 ví dụ phân tích) và đáp án; 29 nhiệm vụ khớp lời giải, kiểm tra biến thể đúng, câu mở và mẫu/rubric L5; không phát hiện lỗi cần sửa. |
+| B1-G020 | COMPLETED | Đã đọc đối chiếu B–M (12 ví dụ phân tích) và đáp án; 29 nhiệm vụ khớp lời giải, kiểm tra biến thể đúng, câu mở và mẫu/rubric L5; mẫu L5.1 bổ sung đủ phrasal verb tách được có đại từ ở giữa. |
+| B1-G021 | COMPLETED | Đã đọc đối chiếu B–M (12 ví dụ phân tích) và đáp án; 29 nhiệm vụ khớp lời giải, kiểm tra biến thể đúng, câu mở và mẫu/rubric L5; không phát hiện lỗi cần sửa. |
+| B1-G022 | COMPLETED | Đã đọc đối chiếu B–M (12 ví dụ phân tích) và đáp án; 29 nhiệm vụ khớp lời giải, kiểm tra biến thể đúng, câu mở và mẫu/rubric L5; sửa ví dụ E1 bị dấu hỏi gây nhiễu. |
+| B1-G023 | COMPLETED | Đã đọc đối chiếu B–M (12 ví dụ phân tích) và đáp án; 29 nhiệm vụ khớp lời giải, kiểm tra biến thể đúng, câu mở và mẫu/rubric L5; không phát hiện lỗi cần sửa. |
+| B1-G024 | COMPLETED | Đã đọc đối chiếu B–M (12 ví dụ phân tích) và đáp án; 29 nhiệm vụ khớp lời giải, kiểm tra biến thể đúng, câu mở và mẫu/rubric L5; không phát hiện lỗi cần sửa. |
+| B1-G025 | COMPLETED | Đã đọc đối chiếu B–M (12 ví dụ phân tích) và đáp án; 29 nhiệm vụ khớp lời giải, kiểm tra biến thể đúng, câu mở và mẫu/rubric L5; thay ví dụ *not ... either* thiếu tự nhiên; sửa *Neither does* trong hội thoại K. |
+| B1-G026 | COMPLETED | Đã đọc đối chiếu B–M (12 ví dụ phân tích) và đáp án; 29 nhiệm vụ khớp lời giải, kiểm tra biến thể đúng, câu mở và mẫu/rubric L5; không phát hiện lỗi cần sửa. |
+| B2-G001 | COMPLETED | Đã đọc đối chiếu B–M (12 ví dụ phân tích) và đáp án; 29 nhiệm vụ khớp lời giải, kiểm tra biến thể đúng, câu mở và mẫu/rubric L5; không phát hiện lỗi cần sửa. |
+| B2-G002 | COMPLETED | Đã đọc đối chiếu B–M (12 ví dụ phân tích) và đáp án; 29 nhiệm vụ khớp lời giải, kiểm tra biến thể đúng, câu mở và mẫu/rubric L5; sửa hai chỗ *otherwise* sai logic (email K, mẫu L5.1). |
+| B2-G003 | COMPLETED | Đã đọc đối chiếu B–M (12 ví dụ phân tích) và đáp án; 29 nhiệm vụ khớp lời giải, kiểm tra biến thể đúng, câu mở và mẫu/rubric L5; không phát hiện lỗi cần sửa. |
+| B2-G004 | COMPLETED | Đã đọc đối chiếu B–M (12 ví dụ phân tích) và đáp án; 29 nhiệm vụ khớp lời giải, kiểm tra biến thể đúng, câu mở và mẫu/rubric L5; không phát hiện lỗi cần sửa. |
+| B2-G005 | COMPLETED | Đã đọc đối chiếu B–M (12 ví dụ phân tích) và đáp án; 29 nhiệm vụ khớp lời giải, kiểm tra biến thể đúng, câu mở và mẫu/rubric L5; không phát hiện lỗi cần sửa. |
+| B2-G006 | COMPLETED | Đã đọc đối chiếu B–M (12 ví dụ phân tích) và đáp án; 29 nhiệm vụ khớp lời giải, kiểm tra biến thể đúng, câu mở và mẫu/rubric L5; không phát hiện lỗi cần sửa. |
+| B2-G007 | COMPLETED | Đã đọc đối chiếu B–M (12 ví dụ phân tích) và đáp án; 29 nhiệm vụ khớp lời giải, kiểm tra biến thể đúng, câu mở và mẫu/rubric L5; không phát hiện lỗi cần sửa. |
+| B2-G008 | COMPLETED | Đã đọc đối chiếu B–M (12 ví dụ phân tích) và đáp án; 29 nhiệm vụ khớp lời giải, kiểm tra biến thể đúng, câu mở và mẫu/rubric L5; không phát hiện lỗi cần sửa. |
+| B2-G009 | COMPLETED | Đã đọc đối chiếu B–M (12 ví dụ phân tích) và đáp án; 29 nhiệm vụ khớp lời giải, kiểm tra biến thể đúng, câu mở và mẫu/rubric L5; không phát hiện lỗi cần sửa. |
+| B2-G010 | COMPLETED | Đã đọc đối chiếu B–M (12 ví dụ phân tích) và đáp án; 29 nhiệm vụ khớp lời giải, kiểm tra biến thể đúng, câu mở và mẫu/rubric L5; không phát hiện lỗi cần sửa. |
+| B2-G011 | COMPLETED | Đã đọc đối chiếu B–M (12 ví dụ phân tích) và đáp án; 29 nhiệm vụ khớp lời giải, kiểm tra biến thể đúng, câu mở và mẫu/rubric L5; không phát hiện lỗi cần sửa. |
+| B2-G012 | COMPLETED | Đã đọc đối chiếu B–M (12 ví dụ phân tích) và đáp án; 29 nhiệm vụ khớp lời giải, kiểm tra biến thể đúng, câu mở và mẫu/rubric L5; sửa mâu thuẫn *was about to ... he agreed* trong email K. |
+| B2-G013 | COMPLETED | Đã đọc đối chiếu B–M (12 ví dụ phân tích) và đáp án; 29 nhiệm vụ khớp lời giải, kiểm tra biến thể đúng, câu mở và mẫu/rubric L5; không phát hiện lỗi cần sửa. |
+| B2-G014 | COMPLETED | Đã đọc đối chiếu B–M (12 ví dụ phân tích) và đáp án; 29 nhiệm vụ khớp lời giải, kiểm tra biến thể đúng, câu mở và mẫu/rubric L5; không phát hiện lỗi cần sửa. |
+| B2-G015 | COMPLETED | Đã đọc đối chiếu B–M (12 ví dụ phân tích) và đáp án; 29 nhiệm vụ khớp lời giải, kiểm tra biến thể đúng, câu mở và mẫu/rubric L5; không phát hiện lỗi cần sửa. |
+| B2-G016 | COMPLETED | Đã đọc đối chiếu B–M (12 ví dụ phân tích) và đáp án; 29 nhiệm vụ khớp lời giải, kiểm tra biến thể đúng, câu mở và mẫu/rubric L5; không phát hiện lỗi cần sửa. |
+| B2-G017 | COMPLETED | Đã đọc đối chiếu B–M (12 ví dụ phân tích) và đáp án; 29 nhiệm vụ khớp lời giải, kiểm tra biến thể đúng, câu mở và mẫu/rubric L5; không phát hiện lỗi cần sửa. |
+| B2-G018 | COMPLETED | Đã đọc đối chiếu B–M (12 ví dụ phân tích) và đáp án; 29 nhiệm vụ khớp lời giải, kiểm tra biến thể đúng, câu mở và mẫu/rubric L5; xóa dòng phân cách thừa trong bảng H. |
+| B2-G019 | COMPLETED | Đã đọc đối chiếu B–M (12 ví dụ phân tích) và đáp án; 29 nhiệm vụ khớp lời giải, kiểm tra biến thể đúng, câu mở và mẫu/rubric L5; không phát hiện lỗi cần sửa. |
+| B2-G020 | COMPLETED | Đã đọc đối chiếu B–M (12 ví dụ phân tích) và đáp án; 29 nhiệm vụ khớp lời giải, kiểm tra biến thể đúng, câu mở và mẫu/rubric L5; không phát hiện lỗi cần sửa. |
+| B2-G021 | COMPLETED | Đã đọc đối chiếu B–M (12 ví dụ phân tích) và đáp án; 29 nhiệm vụ khớp lời giải, kiểm tra biến thể đúng, câu mở và mẫu/rubric L5; sửa ví dụ *a rapid growth* (growth không đếm được). |
+| B2-G022 | COMPLETED | Đã đọc đối chiếu B–M (12 ví dụ phân tích) và đáp án; 29 nhiệm vụ khớp lời giải, kiểm tra biến thể đúng, câu mở và mẫu/rubric L5; không phát hiện lỗi cần sửa. |
+| B2-G023 | COMPLETED | Đã đọc đối chiếu B–M (12 ví dụ phân tích) và đáp án; 29 nhiệm vụ khớp lời giải, kiểm tra biến thể đúng, câu mở và mẫu/rubric L5; mẫu L5.1 bổ sung tỉnh lược sau trợ động từ cho khớp rubric. |
+| B2-G024 | COMPLETED | Đã đọc đối chiếu B–M (12 ví dụ phân tích) và đáp án; 29 nhiệm vụ khớp lời giải, kiểm tra biến thể đúng, câu mở và mẫu/rubric L5; không phát hiện lỗi cần sửa. |
+| B2-G025 | COMPLETED | Đã đọc đối chiếu B–M (12 ví dụ phân tích) và đáp án; 29 nhiệm vụ khớp lời giải, kiểm tra biến thể đúng, câu mở và mẫu/rubric L5; thay mẹo ghi nhớ viết tắt sai chữ. |
+| B2-G026 | COMPLETED | Đã đọc đối chiếu B–M (12 ví dụ phân tích) và đáp án; 29 nhiệm vụ khớp lời giải, kiểm tra biến thể đúng, câu mở và mẫu/rubric L5; tách *fully understand* (động từ) khỏi cột tính từ. |
+| B2-G027 | COMPLETED | Đã đọc đối chiếu B–M (12 ví dụ phân tích) và đáp án; 29 nhiệm vụ khớp lời giải, kiểm tra biến thể đúng, câu mở và mẫu/rubric L5; thay DM *In short* không hợp ngữ cảnh ở mẫu L5.1. |
+| B2-G028 | COMPLETED | Đã đọc đối chiếu B–M (12 ví dụ phân tích) và đáp án; 29 nhiệm vụ khớp lời giải, kiểm tra biến thể đúng, câu mở và mẫu/rubric L5; bỏ cặp thứ–ngày cố định chỉ đúng với một số năm. |
+| B2-G029 | COMPLETED | Đã đọc đối chiếu B–M (12 ví dụ phân tích) và đáp án; 28 nhiệm vụ khớp lời giải, kiểm tra biến thể đúng, câu mở và mẫu/rubric L5; không phát hiện lỗi cần sửa. |
+| B2-G030 | COMPLETED | Đã đọc đối chiếu B–M (12 ví dụ phân tích) và đáp án; 29 nhiệm vụ khớp lời giải, kiểm tra biến thể đúng, câu mở và mẫu/rubric L5; không phát hiện lỗi cần sửa. |
 
 ## Các file ngoài ngữ pháp đã kiểm tra
 
@@ -96,3 +161,13 @@ A2-G001–G009 đã đọc đối chiếu toàn bộ và sửa quy tắc, ví d�
 84 khối Mermaid hiện hữu đã render SVG thành công bằng Mermaid CLI và Chrome. Sau sửa sơ đồ phonics, hai khối trong G002 được render lại PNG; đã xem sơ đồ quyết định để kiểm tra nhánh và chữ. Đây là kiểm định khả năng render, không phải khẳng định mọi sơ đồ có giá trị sư phạm như nhau.
 
 Nguồn đối chiếu phát âm: [Cambridge IPA guide](https://dictionary.cambridge.org/help/phonetics.html) và [Cambridge pronunciation — with](https://dictionary.cambridge.org/us/pronunciation/english/with). Các sửa A2 về quá khứ đối chiếu [British Council](https://learnenglish.britishcouncil.org/free-resources/grammar/english-grammar-reference/past-continuous); về động từ tình thái đối chiếu [Cambridge modality](https://dictionary.cambridge.org/grammar/british-grammar/modality). Không dùng quy tắc rút gọn như quy luật tuyệt đối.
+
+## Batch B1/B2, chuyên đề và hoàn thiện dự án — 2026-10-17
+
+- **B1-G001–G026 và B2-G001–G030 (56 cặp bài–đáp án):** đọc đối chiếu toàn bộ phần B–M của từng bài cùng file đáp án; mục A (thông tin, tiên quyết) và N (liên kết đáp án) kiểm tra bằng script liên kết. Đã sửa 20 bài như ghi ở bảng quyết định (chủ yếu mẫu L5 chưa khớp rubric của chính nó, ví dụ thiếu tự nhiên, logic từ nối, dữ kiện thời sự có thể lỗi thời). Không phát hiện đáp án trắc nghiệm sai khóa.
+- **Tiên quyết:** chỉ có một tham chiếu "đi trước" B2-G005 → B2-G013, có chủ đích và đã ghi trong B2 README (học G013 trước G005).
+- **Chuyên đề và hỗ trợ:** 06-GRAMMAR-REFERENCE (10 file), 07-VOCABULARY (19 bài), 08-PRONUNCIATION (11 bài), 09-FOUR-SKILLS (38 chương), 10-PRACTICE-LAB (10 bài + README), 11-EXAMS-AND-ASSESSMENTS (B1 exit, 2 B2 mock, 2 đề mô phỏng định dạng VSTEP, diagnostic, vocabulary assessment, rubric), 12-ANSWERS README và 4 tracker mới (Grammar Checklist, Vocabulary Tracker, Monthly Assessment, B2 Readiness Checklist). Các file này được soạn kèm đáp án/rubric và kiểm tra liên kết, bảng, nhãn; chúng **không** nằm trong bảng trạng thái bài học ở trên.
+- **Kiểm tra tự động cuối:** 128/128 bài, 0 lỗi cấu trúc, 0 liên kết nội bộ hỏng, 0 anchor hỏng, 0 bảng thiếu dòng phân cách hoặc thừa dòng phân cách, 0 cảnh báo Mermaid theo heuristic, không còn từ khóa TODO/TBD.
+- **Mermaid:** toàn bộ **159 khối** Mermaid trong dự án được trích ra và render SVG bằng Mermaid CLI (bản npx đã cache) với Chrome hệ thống: 159/159 thành công, không SVG nào chứa thông báo lỗi cú pháp; đã xem PNG mẫu của sơ đồ B2-G019.
+- **A0-G004–G015:** đọc đối chiếu B–M và đáp án; xem bảng quyết định.
+- **Giới hạn:** người kiểm định là tác giả nội dung (không có giáo viên độc lập), chưa thử với người học thật. Các đề "VSTEP-style" là mô phỏng định dạng, không phải đề chính thức và không quy đổi điểm chính thức. A0-G016–G019 và A1-G001–G022 còn NEEDS_REVIEW theo nghĩa chưa được đọc đối chiếu lại toàn bài.

@@ -94,10 +94,10 @@ def audit():
         dest=str(target_path.resolve().relative_to(ROOT)) if target.split('#')[0] else rel
         missing_targets[dest].append(f'{rel}:{n} ({why})')
     out=['# Content Audit — Kiểm định theo trạng thái thực tế','',
-         '**Ngày kiểm định: 2026-10-16. Đây là báo cáo giữa kỳ, không phải chứng nhận hoàn thành dự án.**','',
+         '**Ngày kiểm định: 2026-10-17. Báo cáo cuối giai đoạn xây dựng: đủ nội dung theo kế hoạch; trạng thái kiểm định từng bài ghi ở bảng dưới. Không phải chứng nhận độc lập.**','',
          '## Phạm vi và phương pháp','',
          'Tạo bằng `python3 99-PROJECT/audit_content.py`; kết hợp quyết định đọc đối chiếu trong `99-PROJECT/REVIEW-LOG.md`. Nhãn COMPLETED chỉ được ghi thủ công sau kiểm tra bài–đáp án. Các mục còn lại không được nâng trạng thái chỉ nhờ đủ từ/câu hỏi.','',
-         'Baseline tiếp quản: 129 Markdown, 52 bài hiện hữu, 271 lượt liên kết hỏng đến 140 đích thiếu. Báo cáo cũ ghi A2 0/30 nhưng thực tế có 10 bài. Không có Git metadata, AGENTS.md hoặc CLAUDE.md trong dự án.','',
+         'Baseline tiếp quản: 129 Markdown, 52 bài hiện hữu, 271 lượt liên kết hỏng đến 140 đích thiếu. Báo cáo cũ ghi A2 0/30 nhưng thực tế có 10 bài. (Số liệu lịch sử lúc tiếp quản; trạng thái hiện tại ở mục dưới.)','',
          '## Kết quả tổng hợp','',
          f'- Markdown hiện tại (kể cả báo cáo này): {len(files)+1}.',
          f'- Bài theo Curriculum Map: {len(plan)}; hiện hữu: {len(actual_lessons)}; chưa có: {counts["NOT_STARTED"]}.',
@@ -106,31 +106,36 @@ def audit():
          f'- Vấn đề cấu trúc/nhãn bài–đáp án: {len(problems)}.',
          f'- File trùng toàn nội dung: {len(duplicates)} nhóm; file dưới 100 từ: {len(short)}.',
          f'- Marker chưa hoàn thiện trong bài học/đáp án: {len(markers)}; cảnh báo Mermaid bằng heuristic: {len(mermaid)}.','',
-         'Số từ là số đơn vị tách bằng khoảng trắng, chỉ để tìm dấu hiệu bài ngắn, không phải thước đo độ sâu. Nhãn bài tập đọc được cả trong bảng, nhiều câu cùng dòng và khoảng như L2.7–L2.10; khớp nhãn không đảm bảo đáp án đúng. Không phát hiện trùng toàn file không loại trừ đoạn văn trùng; phần mới đã đọc để kiểm tra trùng ý, phần cũ chưa soát hết. Heuristic Mermaid không thay thế render/parser; 84 khối đã render thành công, xem Review Log.','',
+         'Số từ là số đơn vị tách bằng khoảng trắng, chỉ để tìm dấu hiệu bài ngắn, không phải thước đo độ sâu. Nhãn bài tập đọc được cả trong bảng, nhiều câu cùng dòng và khoảng như L2.7–L2.10; khớp nhãn không đảm bảo đáp án đúng. Không phát hiện trùng toàn file không loại trừ đoạn văn trùng; phần mới đã đọc để kiểm tra trùng ý, phần cũ chưa soát hết. Heuristic Mermaid không thay thế render/parser; lần render gần nhất 159/159 khối thành công, xem Review Log.','',
          '## Phân bố module','', '| Module | File Markdown | Đánh giá phạm vi |','|---|---:|---|']
     notes={
       '00-GETTING-STARTED':'8 tài liệu; đã sửa thứ tự A2, chưa tái kiểm định toàn bộ placement/CEFR.',
-      '01-A0-FOUNDATION':'19 bài + kỹ năng; G003 đã sửa và rà soát, các bài khác xem bảng trạng thái.',
-      '02-A1-BEGINNER':'23 bài + giao tiếp/kỹ năng; cần rà soát đáp án và chiều sâu ví dụ.',
+      '01-A0-FOUNDATION':'19 bài + kỹ năng; G001–G015 đã đọc đối chiếu, G016–G019 NEEDS_REVIEW.',
+      '02-A1-BEGINNER':'23 bài + giao tiếp/kỹ năng; A1-G023 đã rà soát, các bài khác NEEDS_REVIEW.',
+      '04-B1-INTERMEDIATE':'26/26 bài + README (Mini Challenges) + Skills Practice; 26 cặp bài–đáp án đã đọc đối chiếu.',
+      '05-B2-UPPER-INTERMEDIATE':'30/30 bài + README + Skills Practice; 30 cặp bài–đáp án đã đọc đối chiếu.',
+      '06-GRAMMAR-REFERENCE':'10 tài liệu tra cứu + README (tenses, conditionals, modals, passive, articles, prepositions, lỗi thường gặp, mẫu câu, cheat sheet, master index).',
+      '07-VOCABULARY':'19 chủ đề/chuyên đề + README; đáp án ở 12/VOCABULARY.',
+      '08-PRONUNCIATION':'11 bài + README; không có audio, hướng dẫn TTS/từ điển; đáp án ở 12/PRONUNCIATION.',
+      '10-PRACTICE-LAB':'10 bài luyện tổng hợp + README; đáp án/hướng dẫn ở 12/PRACTICE-LAB.',
       '03-A2-ELEMENTARY':f'{sum(i.startswith("A2") and st != "NOT_STARTED" for i,st,*_ in rows)}/30 bài; Ba unit kỹ năng, giao tiếp và Exit Test đã có; xem nhật ký kiểm định.',
-      '11-EXAMS-AND-ASSESSMENTS':'Có A0/A1/A2 Exit Test; A2 đã đối chiếu, A0/A1 còn tái kiểm định.',
+      '11-EXAMS-AND-ASSESSMENTS':'Exit Test A0–B1, 2 B2 Mock Test, 2 đề mô phỏng định dạng VSTEP (không chính thức), diagnostic, vocabulary assessment, rubric; A0/A1 Exit Test còn tái kiểm định.',
       '12-ANSWERS-AND-EXPLANATIONS':'Có cặp cho mọi bài ngữ pháp hiện hữu và đáp án kỹ năng/đề hiện hữu.',
-      '13-LEARNING-TRACKER':'5 tài liệu dùng ngay; còn thiếu Vocabulary Tracker và B2 Checklist.',
-      '09-FOUR-SKILLS':'Có Listening README, bài kỹ năng nằm ở từng cấp; chưa có chuyên đề L/S/R/W.',
+      '13-LEARNING-TRACKER':'9 tài liệu: Progress, Error Log, Spaced Repetition, Weekly Review, Grammar Checklist, Vocabulary Tracker, Monthly Assessment, B2 Readiness Checklist, README.',
+      '09-FOUR-SKILLS':'38 chương L01–L08, S01–S08, R01–R09, W01–W13 + README; transcript thay audio; đáp án ở 12/SKILLS.',
     }
-    for folder in sorted(p for p in ROOT.iterdir() if p.is_dir()):
+    for folder in sorted(p for p in ROOT.iterdir() if p.is_dir() and not p.name.startswith('.')):
         n=modules[folder.name]
         out.append(f'| `{folder.name}` | {n} | {notes.get(folder.name,"Chưa có nội dung." if not n else "Tài liệu quy trình; xem danh mục file.")} |')
-    out += ['', 'Các module Grammar Reference, Vocabulary, Pronunciation, Practice Lab, B1 và B2 vẫn chưa có bài. AI tutor đã có ở root. Không có audio; TTS là phương thức luyện được hướng dẫn, không phải tài nguyên âm thanh đã sản xuất.','',
+    out += ['', 'Mọi module trong kế hoạch đã có nội dung. AI tutor ở root. Không có audio; TTS là phương thức luyện được hướng dẫn, không phải tài nguyên âm thanh đã sản xuất.','',
             '## Danh mục trạng thái từng bài','', '| ID | Trạng thái | Từ | Nhiệm vụ | Đáp án | File và căn cứ |','|---|---|---:|---:|---|---|']
     for i,s,w,q,a,p,reason in rows:
         out.append(f'| {i} | {s} | {w} | {q} | {"có" if a else "chưa có"} | `{p}` — {reason} |')
     out += ['', '## Vấn đề cấu trúc và nội dung cần xử lý','']
     out += ['- '+x for x in problems] or ['- Không thấy lỗi nhãn/cặp file/H1/code fence/phần A–N trong phạm vi kiểm tra.']
-    out += ['- A0-G003 và A1-G023 đã hoàn thiện các điểm cần sửa; xem quyết định và phạm vi trong Review Log.',
-            '- Các bài cũ còn nhiều cột đáp án hoặc phân tích ngắn; chưa thể chứng nhận toàn A0/A1.',
-            '- Thứ tự tiên quyết tương lai còn cần điều chỉnh: B2-G005 cần B2-G013 nhưng ID đứng trước. Khi triển khai B2 phải học G013 trước G005; chưa viết nội dung B2 trong batch này.',
-            '- Các liên kết dưới đây vẫn hỏng vì nội dung chưa được triển khai. Không tạo placeholder để che lỗi; không xóa mục kế hoạch. Bộ kiểm tra toàn dự án vẫn trả mã lỗi cho đến khi sửa xong.']
+    out += ['- A0-G016–G019 và A1-G001–G022 còn NEEDS_REVIEW: có đủ cấu trúc và đáp án nhưng chưa được đọc đối chiếu lại toàn bài.',
+            '- Thứ tự tiên quyết: B2-G005 cần B2-G013 (ID đứng sau); B2 README hướng dẫn học G013 trước G005.',
+            '- Bảng đích liên kết hỏng bên dưới chỉ có nội dung khi kiểm tra phát hiện lỗi.']
     for group in duplicates: out.append('- Trùng toàn file: '+', '.join(group))
     for p in short: out.append('- File ngắn cần xem: '+p)
     for p,n,l in markers: out.append(f'- Marker: {p}:{n} {l}')
@@ -140,16 +145,16 @@ def audit():
     out += ['', '## Danh sách toàn bộ file hiện hữu','', 'Danh mục này là kiểm kê, không phải danh sách đã kiểm định học thuật.','']
     out += [f'- `{p.relative_to(ROOT)}`' for p in sorted(files+[REPORT])]
     out += ['', '## Việc tiếp theo','',
-            '1. Tiếp tục từ bài NOT_STARTED đầu tiên của cấp đang triển khai; không viết lại bài COMPLETED chỉ để đổi văn phong.',
-            '2. A2 đã đủ 30 bài và hỗ trợ; giữ thứ tự tiên quyết đã sửa và các biến thể đúng trong đáp án.',
-            '3. Rà soát các bài nền NEEDS_REVIEW và nội dung đánh giá cũ trước khi triển khai B1/B2.',
-            '4. Bổ sung các module chuyên biệt và sửa các đích liên kết còn thiếu; chạy kiểm tra toàn cục.',
-            '5. Rà soát học thuật toàn bộ và đánh giá bốn kỹ năng trước báo cáo cuối; không công bố dự án hoặc người học đạt B2 từ số bài ngữ pháp.','']
+            '1. Đọc đối chiếu các bài A0/A1 còn NEEDS_REVIEW và A0/A1 Exit Test; không viết lại bài COMPLETED chỉ để đổi văn phong.',
+            '2. Khi thêm/sửa sơ đồ, render lại bằng Mermaid CLI (lần gần nhất: 159/159 khối thành công).',
+            '3. Thử nghiệm với người học thật và/hoặc mời giáo viên độc lập góp ý trước khi tuyên bố chất lượng sư phạm.',
+            '4. Sau mỗi lần sửa: chạy fix_toc_anchors.py, audit_content.py, check_links.py.',
+            '5. Không công bố người học đạt B2 từ số bài đã học; dùng B2 Readiness Checklist và đề thi chính thức nếu cần chứng nhận.','']
     REPORT.write_text('\n'.join(out))
     print(f'Lessons {len(actual_lessons)}/{len(plan)}; statuses {dict(counts)}')
     print(f'Structural issues {len(problems)}; internal links {total}; broken {len(broken)}; Mermaid warnings {len(mermaid)}')
     for issue in problems: print(issue)
-    print('Wrote CONTENT-AUDIT.md (interim report).')
+    print('Wrote CONTENT-AUDIT.md.')
     return bool(problems or broken or mermaid or markers or duplicates)
 
 if __name__=='__main__':

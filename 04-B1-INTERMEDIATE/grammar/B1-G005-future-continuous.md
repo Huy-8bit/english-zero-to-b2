@@ -165,7 +165,7 @@ NOW ──────────────────── [~~~~~~~~ will 
 | 3 | I'll be waiting when you **will arrive**. | ...when you **arrive**. | *will* sau *when* | Mệnh đề thời gian → hiện tại đơn |
 | 4 | This time tomorrow I'**ll be knowing** the result. | ...I'**ll know** the result. | Động từ trạng thái | |
 | 5 | **Do** you be using the car? | **Will** you **be using** the car? | | |
-| 6 | I **will still** be... → I **still will be** working. | I **will still be** working. | Sai vị trí *still* | *will still be* |
+| 6 | I **still will be** working at midnight. | I **will still be** working at midnight. | Sai vị trí *still* | *will still be* |
 
 ---
 

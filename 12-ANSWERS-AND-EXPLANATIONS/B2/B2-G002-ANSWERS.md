@@ -62,7 +62,7 @@
 >
 > *Should this delay cause serious problems for your business, please let us know immediately. Were you to cancel the order, we would, of course, provide a full refund.*
 >
-> *Without the support of loyal customers like you, our company would not be where it is today. We will include a 5% discount on your next order; otherwise, we will contact you to discuss other compensation.*
+> *Without the support of loyal customers like you, our company would not be where it is today. If you would prefer a different form of compensation, please tell us; otherwise, we will include a 5% discount on your next order.*
 >
 > *Yours sincerely,*
 > *Le Van Nam*

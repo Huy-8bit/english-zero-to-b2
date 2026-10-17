@@ -165,7 +165,7 @@ must / can be       → must be cleaned
 flowchart TD
     A["Bạn muốn nói về..."] --> B{"Ai/cái gì là trọng tâm?"}
     B -->|"Người làm hành động"| ACT["Chủ động<br/>Nguyen Du wrote Kieu."]
-    B -->|"Sự vật / kết quả<br/>(người làm không rõ / không quan trọng)"| PAS["Bị động<br/>Kieu was written in the 19th century."]
+    B -->|"Sự vật / kết quả<br/>(người làm không rõ / không quan trọng)"| PAS["Bị động<br/>Kieu was written over 200 years ago."]
 ```
 
 ### *by* hay *with*?
@@ -189,7 +189,7 @@ Tiếng Việt dùng "được" (tích cực) và "bị" (tiêu cực): *đượ
 | 3 | The accident **was happened** at 9. | The accident **happened** at 9. | Bị động với nội động từ | *happen* không có tân ngữ |
 | 4 | The report will **be write** tomorrow. | ...will **be written**... | Thiếu V3 | |
 | 5 | The house was built **from** my grandfather. | ...built **by** my grandfather. | Dịch "bởi/từ" | Tác nhân → *by* |
-| 6 | The thief was caught **by the police** **by someone**. → thừa tác nhân | The thief was caught. | Thêm tác nhân không cần | Bỏ *by* khi hiển nhiên |
+| 6 | My bag was stolen **by someone**. | My bag was stolen. | Thêm tác nhân không mang thông tin | Bỏ *by* khi tác nhân không rõ/hiển nhiên |
 | 7 | **Did** the room cleaned? | **Was** the room cleaned? | Dùng *did* | Câu hỏi bị động đảo *be* |
 
 ---
@@ -210,7 +210,7 @@ Tiếng Việt dùng "được" (tích cực) và "bị" (tiêu cực): *đượ
 
 **Giải thích:** Thành phố đang cải thiện giao thông công cộng: năm ngoái mở hai tuyến xe buýt mới, từ tháng Giêng thêm hơn 300 xe buýt điện; tuyến metro đầu tiên (từng bị hoãn nhiều lần) hoàn thành vào tháng 12; năm sau sẽ xây tuyến thứ hai, giá vé cho sinh viên sẽ giảm; hành khách được đề nghị góp ý qua ứng dụng.
 
-**Grammar highlights:** 8 câu bị động ở 7 dạng khác nhau — tin tức thường dùng bị động vì trọng tâm là **sự việc**, không phải người làm.
+**Grammar highlights:** 9 động từ bị động ở 7 dạng khác nhau — tin tức thường dùng bị động vì trọng tâm là **sự việc**, không phải người làm.
 
 ---
 

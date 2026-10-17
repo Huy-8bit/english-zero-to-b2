@@ -58,7 +58,7 @@
 
 > *Hi Mai,*
 >
-> *Sorry I haven't written — this week has been crazy! On Monday my laptop **broke down**, so I had to **take** it **back** to the shop. Then my boss asked me to **come up with** a new marketing plan by Friday. I've been **looking after** my nephew in the evenings too, because my sister is away. Yesterday I **ran into** our old teacher at the supermarket — she says hi! I've decided to **cut down on** coffee, but it's hard. Anyway, the weekend is coming, and I'm going to **turn** my phone **off** and relax. Let's **catch up** soon!*
+> *Sorry I haven't written — this week has been crazy! On Monday my laptop **broke down**, so I had to **take** it **back** to the shop. Then my boss asked me to **come up with** a new marketing plan by Friday. I've been **looking after** my nephew in the evenings too, because my sister is away. Yesterday I **ran into** our old teacher at the supermarket — she says hi! I've decided to **cut down on** coffee, but it's hard. Anyway, the weekend is coming. My phone never stops ringing, so I'm going to **turn** it **off** and relax. Let's **catch up** soon!*
 >
 > *Love,*
 > *Hoa*

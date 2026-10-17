@@ -1,6 +1,21 @@
 # Listening — Luyện nghe với transcript và TTS
 
-Giáo trình hiện chưa có file âm thanh. Bạn có thể nhờ người khác đọc hoặc dùng công cụ chuyển văn bản thành giọng nói (TTS) sẵn có. Trang này hướng dẫn một buổi luyện hoàn chỉnh; các chuyên đề L01–L08 trong kế hoạch chưa được triển khai.
+Giáo trình hiện chưa có file âm thanh. Bạn có thể nhờ người khác đọc hoặc dùng công cụ chuyển văn bản thành giọng nói (TTS) sẵn có. Trang này hướng dẫn một buổi luyện hoàn chỉnh và liệt kê tám chuyên đề luyện nghe.
+
+## Chuyên đề L01–L08
+
+| Chuyên đề | Nội dung | Cấp độ |
+|---|---|---|
+| [L01 — Basic Listening](L01-basic-listening.md) | Vì sao nghe khó, số/chữ cái/giờ, quy trình cơ bản | A0 → A2 |
+| [L02 — Listening for Keywords](L02-listening-for-keywords.md) | Từ khóa, từ tín hiệu, thông tin bị sửa | A1 → B1 |
+| [L03 — Listening for Main Ideas](L03-listening-for-main-ideas.md) | Ý chính, mục đích, thái độ | A2 → B2 |
+| [L04 — Listening for Details](L04-listening-for-details.md) | Chi tiết, bẫy thường gặp, ghi chú nhanh | A2 → B2 |
+| [L05 — Understanding Paraphrases](L05-understanding-paraphrases.md) | Nhận diện diễn đạt khác | B1 → B2 |
+| [L06 — Note Completion](L06-note-completion.md) | Điền ghi chú, giới hạn từ, chính tả | B1 → B2 |
+| [L07 — Concentration Exercises](L07-concentration-exercises.md) | Chép chính tả, hình dung, tóm tắt | A2 → B2 |
+| [L08 — B1–B2 Listening Practice](L08-b1-b2-listening-practice.md) | Bài nghe tổng hợp 3 phần | B1 → B2 |
+
+Transcript và đáp án các chuyên đề: [Listening Chapters — Answers](../../12-ANSWERS-AND-EXPLANATIONS/SKILLS/LISTENING-CHAPTERS-ANSWERS.md).
 
 ## Chọn bài đang có
 
@@ -8,7 +23,9 @@ Giáo trình hiện chưa có file âm thanh. Bạn có thể nhờ người kh�
 |---|---|---|---|
 | A0 | [A0 Skills](../../01-A0-FOUNDATION/A0-SKILLS-PRACTICE.md#part-1--listening) | [A0 transcript](../../12-ANSWERS-AND-EXPLANATIONS/SKILLS/A0-LISTENING-TRANSCRIPTS.md) | [A0 answers](../../12-ANSWERS-AND-EXPLANATIONS/SKILLS/A0-SKILLS-ANSWERS.md) |
 | A1 | [A1 Skills](../../02-A1-BEGINNER/A1-SKILLS-PRACTICE.md#part-1--listening) | [A1 transcript](../../12-ANSWERS-AND-EXPLANATIONS/SKILLS/A1-LISTENING-TRANSCRIPTS.md) | [A1 answers](../../12-ANSWERS-AND-EXPLANATIONS/SKILLS/A1-SKILLS-ANSWERS.md) |
-| A2, nửa đầu | [A2 Unit 1](../../03-A2-ELEMENTARY/A2-SKILLS-PRACTICE.md) | [A2 transcript](../../12-ANSWERS-AND-EXPLANATIONS/SKILLS/A2-LISTENING-TRANSCRIPTS.md) | [A2 answers](../../12-ANSWERS-AND-EXPLANATIONS/SKILLS/A2-SKILLS-ANSWERS.md) |
+| A2 | [A2 Units 1–3](../../03-A2-ELEMENTARY/A2-SKILLS-PRACTICE.md) | [A2 transcript](../../12-ANSWERS-AND-EXPLANATIONS/SKILLS/A2-LISTENING-TRANSCRIPTS.md) | [A2 answers](../../12-ANSWERS-AND-EXPLANATIONS/SKILLS/A2-SKILLS-ANSWERS.md) |
+| B1 | [B1 Units 1–3](../../04-B1-INTERMEDIATE/B1-SKILLS-PRACTICE.md) | [B1 transcript](../../12-ANSWERS-AND-EXPLANATIONS/SKILLS/B1-LISTENING-TRANSCRIPTS.md) | [B1 answers](../../12-ANSWERS-AND-EXPLANATIONS/SKILLS/B1-SKILLS-ANSWERS.md) |
+| B2 | [B2 Units 1–3](../../05-B2-UPPER-INTERMEDIATE/B2-SKILLS-PRACTICE.md) | [B2 transcript](../../12-ANSWERS-AND-EXPLANATIONS/SKILLS/B2-LISTENING-TRANSCRIPTS.md) | [B2 answers](../../12-ANSWERS-AND-EXPLANATIONS/SKILLS/B2-SKILLS-ANSWERS.md) |
 
 ## Chuẩn bị âm thanh
 
