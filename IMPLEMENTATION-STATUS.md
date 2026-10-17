@@ -49,6 +49,23 @@ Kết quả 2026-10-17: 128/128 bài, 0 lỗi cấu trúc/nhãn bài–đáp án
 
 Đọc file này, Curriculum Map, AUTHORING-STANDARDS, Review Log và Content Audit. Không còn bài NEEDS_REVIEW. Việc tiếp theo hợp lý là thử nghiệm với người học thật/giáo viên độc lập và sửa theo phản hồi; mỗi lần sửa cập nhật Review Log, chạy ba lệnh kiểm tra, rồi commit và push lên `origin main`.
 
+
+## Interactive Learning Platform (`platform/`) — 2026-10-17
+
+Ứng dụng web React + FastAPI đọc trực tiếp giáo trình này (không sao chép) và biến nó thành bài học theo slide có chấm điểm. Hướng dẫn chạy, kiến trúc và giới hạn: [platform/README.md](platform/README.md).
+
+- **Đã code:**
+  - Content engine nhập 224 bài (128 ngữ pháp + từ vựng, phát âm, 38 chương kỹ năng, lab, 11 đề kiểm tra, skills, giao tiếp) thành 3.347 slide và 5.791 câu bài tập, trong đó 5.692 câu ghép được đáp án và 1.429 câu tự chấm. Ngoài ra có 693 flashcard từ vựng và 51 tài liệu ở chế độ Tra cứu.
+  - Các tính năng: Dashboard, Lộ trình, Lesson Player (10 kiểu slide, bàn phím, chế độ tập trung, tiếp tục bài dở), quiz engine (trắc nghiệm, T/F/NG, điền từ, sửa lỗi, sắp xếp câu, ghép, viết, nói), chế độ kiểm tra, flashcards SM-2, ghép nghĩa, nghe (TTS), đọc (tô sáng, bấm giờ), viết (đếm từ, lịch sử), nói (ghi âm, checklist), XP/streak/huy hiệu, tìm kiếm có/không dấu, Reference Mode, Gia sư AI tùy chọn.
+- **Đã test:** 24 test backend (pytest), 14 test frontend (Vitest), 13 test E2E Playwright (desktop, mobile, axe a11y). Báo cáo nhập nội dung: [platform/CONTENT-IMPORT-REPORT.md](platform/CONTENT-IMPORT-REPORT.md).
+- **Chưa hoàn thiện / giới hạn:**
+  - Chỉ có một hồ sơ cục bộ, chưa có đăng nhập.
+  - Không có audio gốc (dùng TTS); không chấm phát âm.
+  - Câu trả lời mở chỉ tự chấm khi khớp biến thể trong đáp án, còn lại người học tự đánh giá.
+  - Gia sư AI chưa được chạy với khóa API thật.
+  - Chưa có service worker cho offline.
+- **Chạy:** `cd platform && scripts/setup.sh && scripts/dev.sh` → <http://localhost:5173>.
+
 ---
 
 ## Báo cáo trước khi tiếp quản — lưu lịch sử, không dùng làm trạng thái hiện tại

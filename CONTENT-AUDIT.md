@@ -39,6 +39,7 @@ Số từ là số đơn vị tách bằng khoảng trắng, chỉ để tìm d�
 | `12-ANSWERS-AND-EXPLANATIONS` | 195 | Có cặp cho mọi bài ngữ pháp hiện hữu và đáp án kỹ năng/đề hiện hữu. |
 | `13-LEARNING-TRACKER` | 9 | 9 tài liệu: Progress, Error Log, Spaced Repetition, Weekly Review, Grammar Checklist, Vocabulary Tracker, Monthly Assessment, B2 Readiness Checklist, README. |
 | `99-PROJECT` | 2 | Tài liệu quy trình; xem danh mục file. |
+| `platform` | 0 | Chưa có nội dung. |
 
 Mọi module trong kế hoạch đã có nội dung. AI tutor ở root. Không có audio; TTS là phương thức luyện được hướng dẫn, không phải tài nguyên âm thanh đã sản xuất.
 

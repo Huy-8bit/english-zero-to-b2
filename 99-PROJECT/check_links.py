@@ -46,7 +46,9 @@ def anchors_of(path, cache={}):
 
 
 def md_files():
-    for d, _, files in os.walk(ROOT):
+    for d, dirs, files in os.walk(ROOT):
+        # the learning platform (and its node_modules) is application code, not curriculum
+        dirs[:] = [x for x in dirs if x not in ("platform", "node_modules") and not x.startswith(".")]
         for name in files:
             if name.endswith(".md"):
                 yield os.path.join(d, name)

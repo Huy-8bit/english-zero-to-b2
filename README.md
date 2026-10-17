@@ -24,6 +24,10 @@
 | [13-LEARNING-TRACKER](13-LEARNING-TRACKER/README.md) | Theo dõi tiến độ, sổ lỗi, lịch ôn tập |
 | [99-PROJECT](99-PROJECT/AUTHORING-STANDARDS.md) | Tiêu chuẩn biên soạn và kiểm định nội dung |
 
+## Học trên web
+
+Thư mục [platform/](platform/README.md) chứa ứng dụng web học tương tác dùng chính giáo trình này: học từng slide, bài tập được chấm, lưu tiến độ, flashcards, tìm kiếm. Chạy: `cd platform && scripts/setup.sh && scripts/dev.sh`.
+
 ## Trạng thái dự án
 
 **Đủ nội dung theo bản đồ:** 128/128 bài ngữ pháp A0→B2 kèm đáp án, cùng tra cứu ngữ pháp, từ vựng, phát âm, 38 chương bốn kỹ năng, Practice Lab, đề kiểm tra cuối cấp, B2 mock test và tracker. Cả 128 cặp bài–đáp án đã được tác giả đọc đối chiếu (chưa có giáo viên độc lập thẩm định). Kiểm tra tự động: 0 liên kết nội bộ hỏng.

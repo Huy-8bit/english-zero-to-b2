@@ -26,7 +26,10 @@ def visible(text):
     return re.sub(r'^```[^\n]*\n.*?^```\s*$', '', text, flags=re.M | re.S)
 
 def audit():
-    files = sorted(p for p in ROOT.rglob('*.md') if p != REPORT)
+    def curriculum_file(p):
+        parts = p.relative_to(ROOT).parts
+        return p != REPORT and not {'platform', 'node_modules'} & set(parts) and not any(x.startswith('.') for x in parts)
+    files = sorted(p for p in ROOT.rglob('*.md') if curriculum_file(p))
     old_report = REPORT.read_text() if REPORT.exists() else ''
     statuses = {}
     for lesson, status, reason in re.findall(
