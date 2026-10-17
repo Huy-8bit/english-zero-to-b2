@@ -1,3 +1,19 @@
+# Learning assistant — 2026-10-18
+
+| Feature | Status | Files | Evidence / remaining work |
+|---|---|---|---|
+| Assistant on every page (header button + side panel) | COMPLETE_AND_TESTED | `frontend/src/features/assistant/*`, `app/Layout.tsx` | Quick questions: progress, vocabulary, completion estimate, mistakes, next steps. Free questions and data cards with links are supported. History survives reload and can be cleared. Esc closes the panel and returns focus. Full screen on mobile. |
+| Deterministic insights (all numbers) | COMPLETE_AND_TESTED | `backend/app/assistant.py`, `api/assistant.py` | Covers lessons by level, recent pace, the ETA formula, vocabulary milestones, mistakes by category and topic, and ordered next steps. Tests check the ETA arithmetic, including the fallback to the weekly goal. |
+| AI explanation | PARTIALLY_IMPLEMENTED | `assistant.py::Assistant.ask` | Goes through the gateway (limits, logs, cache for quick questions). Learner data is sent as DATA. Fake-provider tested only. An `OPENAI_API_KEY` is now present in `platform/.env`, but no live call was made in this session. |
+| Works without AI | COMPLETE_AND_TESTED | `assistant.py::fallback_text` | Quick questions and routed free questions are answered from data when AI is disabled or failing. |
+
+Also in this change:
+- Fixed a mobile overflow on the dashboard (grids without `grid-cols-1` grew to 571 px on a 412 px phone).
+- The launcher was moved into the header after a test showed a floating button covering the Reading "Nộp bài" button.
+- `AISettings.api_key` is excluded from reprs, so it can no longer appear in logs or test failures.
+
+**Verification:** backend 125 pytest passed; frontend 15 vitest passed; lint and build pass; Playwright 35/35 passed.
+
 # Vocabulary module upgrade — 2026-10-18
 
 Paths are relative to `platform/`. This section is updated after each phase. Earlier sections are historical.

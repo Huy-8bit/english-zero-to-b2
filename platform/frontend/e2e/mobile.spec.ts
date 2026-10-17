@@ -28,3 +28,12 @@ test("mobile vocabulary: pages fit the screen and a flashcard can be rated", asy
   await expect(page.getByTestId("feedback")).toBeVisible();
   expect(await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth)).toBeLessThanOrEqual(1);
 });
+
+test("mobile assistant opens full screen and answers", async ({ page }) => {
+  await page.goto("/");
+  await page.getByRole("button", { name: "Mở trợ lý học tập" }).click();
+  await page.getByRole("button", { name: "Tiến độ của tôi" }).click();
+  await expect(page.getByText("[AI giả lập]").first()).toBeVisible();
+  expect(await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth)).toBeLessThanOrEqual(1);
+  await page.getByRole("button", { name: "Đóng trợ lý", exact: true }).click();
+});

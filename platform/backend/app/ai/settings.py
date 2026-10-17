@@ -59,7 +59,7 @@ def _float(name: str, default: float) -> float:
 @dataclass
 class AISettings:
     provider: str = "openai"  # openai | fake (tests/E2E only) | disabled
-    api_key: str = ""
+    api_key: str = field(default="", repr=False)  # never printed in reprs, logs or test failures
     models: dict[str, str] = field(default_factory=dict)
     pricing: dict[str, dict[str, float]] = field(default_factory=dict)
     timeout_seconds: float = 45.0

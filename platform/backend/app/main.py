@@ -12,7 +12,7 @@ from sqlalchemy.orm import sessionmaker
 from . import config
 from .ai.errors import AIError
 from .ai.services import build as build_ai
-from .api import ai, analytics, auth, content, learning, vocab, vocabulary
+from .api import ai, analytics, assistant, auth, content, learning, vocab, vocabulary
 from .content.store import ContentStore
 from .database import init_db, make_engine
 
@@ -36,12 +36,15 @@ def create_app(database_url: str | None = None, content_root=None, ai_settings=N
     from .vocabulary.sessions import SessionService
 
     app.state.vocab_ai = VocabAI(app.state.ai.gateway, app.state.ai.kb)
+    from .assistant import Assistant
+
+    app.state.assistant = Assistant(app.state.ai.gateway, app.state.store)
     app.state.vocab_sessions = SessionService(ai=app.state.vocab_ai, gateway=app.state.ai.gateway)
     with app.state.sessionmaker() as db:  # idempotent: only does work when the lexicon file changed
         ensure_imported(db)
     app.add_middleware(auth.AuthMiddleware)
     app.add_middleware(CORSMiddleware, allow_origins=config.CORS_ORIGINS, allow_methods=["*"], allow_headers=["*"], allow_credentials=True)
-    for r in (auth.router, content.router, learning.router, vocab.router, vocabulary.router, analytics.router, ai.router):
+    for r in (auth.router, content.router, learning.router, vocab.router, vocabulary.router, assistant.router, analytics.router, ai.router):
         app.include_router(r)
 
     @app.exception_handler(AIError)

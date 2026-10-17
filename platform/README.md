@@ -155,6 +155,23 @@ Markdown render bằng `react-markdown` (không bật HTML thô) + `rehype-sanit
 - Speaking: các cụm từ hữu ích có nút lưu.
 - Từ đã học xuất hiện trong bài viết hoặc bài nói được tính là “đã dùng”.
 
+## Trợ lý học tập
+
+Mở bằng nút **Trợ lý** trên thanh trên cùng, có ở mọi trang. Bạn có thể hỏi về:
+- tiến độ học;
+- từ vựng;
+- khi nào hoàn thành mục tiêu;
+- lỗi hay mắc;
+- nên học gì tiếp.
+
+Có thể bấm câu hỏi nhanh hoặc gõ câu hỏi tự do.
+
+Cách trợ lý trả lời:
+- **Số liệu do backend tính từ dữ liệu học thật** (`app/assistant.py`, `GET /api/assistant/insights`). AI chỉ diễn giải bằng tiếng Việt và được dặn không tự đưa ra con số.
+- Thời gian hoàn thành được ước lượng theo nhịp học 4 tuần gần nhất (số bài hoàn thành mỗi tuần). Nếu chưa đủ dữ liệu, ước lượng theo mục tiêu số bài mỗi tuần. Câu trả lời luôn ghi rõ đây là ước lượng.
+- Khi AI tắt hoặc lỗi, câu hỏi nhanh vẫn được trả lời trực tiếp từ dữ liệu.
+- Lịch sử trò chuyện được lưu ở server và có thể xóa. Câu hỏi nhanh được cache khi dữ liệu học chưa đổi.
+
 ## Bàn phím
 
 `→` / `←` chuyển slide (khi không gõ trong ô nhập) · `Enter` kiểm tra bài hoặc sang slide tiếp · `Esc` thoát chế độ tập trung / đóng hộp thoại · `⌘K` hoặc `/` tìm kiếm · Flashcards: `Space` lật, `1–4` chấm (Quên / Khó / Nhớ / Dễ) · Phiên học từ vựng: `1–4` chọn đáp án, `Enter` kiểm tra / tiếp tục, `Backspace` bỏ từ cuối khi sắp xếp câu.

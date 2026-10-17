@@ -35,7 +35,7 @@ export default function DashboardPage() {
         </div>
       </div>
 
-      <div className="grid gap-4 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
         <Card className="lg:col-span-2 overflow-hidden">
           <div className="bg-gradient-to-br from-primary-soft to-transparent p-6">
             {cont ? (
@@ -84,7 +84,7 @@ export default function DashboardPage() {
         </Card>
       </div>
 
-      <div className="grid gap-4 lg:grid-cols-2">
+      <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
         <DailyPlan />
         <WeakTopics />
       </div>
@@ -96,7 +96,7 @@ export default function DashboardPage() {
         <Stat icon={<Brain size={18} />} label="Cần ôn hôm nay" value={String(d.vocabulary.due + d.lessons.review)} sub={`${d.vocabulary.due} thẻ từ · ${d.lessons.review} bài`} />
       </div>
 
-      <div className="grid gap-4 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
         <Card>
           <CardHeader><CardTitle className="flex items-center gap-2"><CalendarDays size={16} />Hoạt động 7 ngày</CardTitle></CardHeader>
           <CardContent>
@@ -135,7 +135,7 @@ export default function DashboardPage() {
         </Card>
       </div>
 
-      <div className="grid gap-4 lg:grid-cols-2">
+      <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
         <Card>
           <CardHeader><CardTitle className="flex items-center gap-2"><TriangleAlert size={16} />Lỗi gần đây</CardTitle><Link to="/review" className="text-xs text-primary">Làm lại →</Link></CardHeader>
           <CardContent>

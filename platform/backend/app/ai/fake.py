@@ -309,6 +309,13 @@ class FakeProvider:
     # ----------------------------------------------------------------- other modalities
     def text(self, *, model, instructions, input, max_output_tokens):
         self._maybe_fail("text", input)
+        if "<learner_data>" in input:  # study assistant: echo real figures so tests/E2E can check grounding
+            d = json.loads(input.split("<learner_data>")[1].split("</learner_data>")[0])
+            p, e, nxt = d["progress"], d["eta"], d["next"]["steps"]
+            first = f" Việc nên làm tiếp: **{nxt[0]['title']}**." if nxt else ""
+            weeks = f"khoảng {e['weeks']} tuần" if e.get("weeks") is not None else "chưa đủ dữ liệu"
+            return (f"**[AI giả lập]** Bạn đã hoàn thành {p['lessons_completed']}/{p['lessons_total']} bài "
+                    f"({p['start_level']} → {p['target_level']}); ước lượng còn {weeks}.{first}"), self._usage()
         q = input.split("<learner_text>")[-1].split("</learner_text>")[0][:80]
         return (f"**[AI giả lập]** Giải thích cho yêu cầu: _{q}_\n\n- **Present Simple (thì hiện tại đơn)**: He/She/It + V(s/es).\n"
                 "- Ví dụ: *She goes to school.* — Cô ấy đi học.\n\n❓ Câu hỏi kiểm tra: *He ___ (play) football.*"), self._usage()
