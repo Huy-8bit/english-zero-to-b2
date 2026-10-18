@@ -24,7 +24,9 @@ cat > "$PLIST" <<PL
   <key>StandardErrorPath</key><string>$HOME/.english-focus-lock/agent.log</string>
 </dict></plist>
 PL
-launchctl bootout "gui/$(id -u)/com.englishmastery.focuslock" 2>/dev/null || true
-launchctl bootstrap "gui/$(id -u)" "$PLIST"
+SERVICE="gui/$(id -u)/com.englishmastery.focuslock"
+launchctl bootout "$SERVICE" 2>/dev/null || true
+for _ in $(seq 1 20); do launchctl print "$SERVICE" >/dev/null 2>&1 || break; sleep 0.5; done  # bootout is asynchronous
+launchctl bootstrap "gui/$(id -u)" "$PLIST" 2>/dev/null || { sleep 2; launchctl bootstrap "gui/$(id -u)" "$PLIST"; }
 "$HOME/Applications/EnglishFocusLock.app/Contents/MacOS/EnglishFocusLock" --check
 echo "Installed. Start a session at $SERVER/focus. Uninstall: $(pwd)/uninstall.sh"
