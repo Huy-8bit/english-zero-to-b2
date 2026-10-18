@@ -31,12 +31,16 @@ def diagnose(db: Session, user: User, store: ContentStore, quick: bool = False) 
     gaps = gap_counts(db, user, store)
     wrong = P.recent_mistakes(db, user.id, store, limit=500)
     items = []
-    for m in wrong[: 6 if quick else 15]:
+    for m in wrong:
         b = store.built(m["unit_id"])
         step = next((s for s in (b.steps if b else []) if s.get("quiz_id") == m["quiz_id"]), None)
         pub = next((i for i in (step or {}).get("items", []) if i["id"] == m["item_id"]), None)
         if pub:
             items.append({**m, "item": pub, "step_title": step["title"]})
+    # quick, instantly graded retrieval first (multiple choice, gap fill, ordering); open writing/speaking prompts last
+    rank = {"mc": 0, "tfng": 0, "choice": 0, "multi": 1, "text": 1, "order": 2, "long": 5, "speaking": 6}
+    items.sort(key=lambda x: rank.get(x["item"].get("kind"), 3))
+    items = items[: 6 if quick else 15]
     recs = list(db.scalars(select(MistakeRecord).where(
         MistakeRecord.user_id == user.id, MistakeRecord.review_status != "mastered", MistakeRecord.source_type != "curriculum",
         MistakeRecord.corrected_answer != "").order_by(MistakeRecord.frequency.desc(), MistakeRecord.last_seen.desc()).limit(5 if quick else 12)))
