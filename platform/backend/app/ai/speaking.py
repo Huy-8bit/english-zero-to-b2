@@ -190,6 +190,7 @@ class SpeakingService:
                 db.add(SpeakingTurn(session_id=s.id, role="ai", text=fb_ai.next_question_en,
                                     audio_file=self._tts(db, user_id, fb_ai.next_question_en), feedback={"hint_vi": fb_ai.next_hint_vi}))
         P.activity(db, user_id).items_answered += 1
+        P.log_study(db, user_id, "speaking-studio", kind="module", items=1)
         db.commit()
         return s
 

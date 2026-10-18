@@ -429,6 +429,7 @@ class SessionService:
         e = db.get(VocabEntry, it["entry_id"])
         p = get_progress(db, user_id, it["entry_id"], source="session")
         mark_seen(p)
+        was_learned = p.learned_at is not None
         duration = payload.get("duration_ms")
         out = self._grade(db, user_id, it, e, payload)
         out["item_id"] = item_id
@@ -444,6 +445,8 @@ class SessionService:
             db.flush()
             out["log_id"] = log.id
             self._learning_counters(db, user_id, p, it, out)
+            P.log_study(db, user_id, "vocab", kind="module", items=1, correct=int(bool(out.get("correct"))),
+                        learned=int(not was_learned and p.learned_at is not None))
         self._store(s, item_id, out)
         # schedule when every graded item of this word in this round is answered
         sched = self._maybe_schedule(db, user_id, s, it)
@@ -601,6 +604,7 @@ class SessionService:
         s.params = {**(s.params or {}), "applied": applied}
         flag_modified(s, "params")
         P.activity(db, user_id).cards_reviewed += 1
+        P.log_study(db, user_id, "vocab", kind="module", cards=1)
         P.award(db, user_id, f"vocab:{it['entry_id']}:{P.today().isoformat()}", "vocab_review", P.XP_RULES["vocab_review"])
         return {"rating": rating, "rating_name": srs.RATINGS[rating], "due": applied[key]["due"], "state": applied[key]["state"]}
 

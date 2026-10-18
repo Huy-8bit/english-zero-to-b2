@@ -16,7 +16,8 @@ from sqlalchemy.orm import Session
 from ..content.catalog import LEVELS, LEVEL_NAMES
 from ..content.md import fold, parse_tables, strip_md
 from ..content.store import ContentStore
-from ..models import Achievement, ActivityDay, Attempt, LessonProgress, User, VocabCard, VocabEntry, VocabProgress, VocabReview, XPEvent, utcnow
+from ..models import (Achievement, ActivityDay, Attempt, LessonProgress, StudyLog, User, VocabCard, VocabEntry, VocabProgress, VocabReview,
+                      XPEvent, utcnow)
 
 XP_RULES = {"auto_correct": 10, "self_correct": 6, "production": 8, "lesson_complete": 50, "vocab_review": 2, "daily_goal": 20}
 PASS_SCORE = 60.0
@@ -103,7 +104,38 @@ def streak(db: Session, user_id: int) -> int:
     return n
 
 
-def heartbeat(db: Session, user: User, unit_id: str | None) -> int:
+MODULE_KEYS = {"vocab", "writing-studio", "speaking-studio", "reading-studio", "listening-studio", "ai-practice", "placement",
+               "mistakes", "review", "reference"}
+
+
+def log_study(db: Session, user_id: int, key: str | None, *, kind: str | None = None, seconds: int = 0, items: int = 0, correct: int = 0,
+              cards: int = 0, learned: int = 0, completed: bool = False, score: float | None = None) -> None:
+    """Add to today's study-journal row for a lesson (unit id) or module key."""
+    if not key:
+        return
+    key = key[:64]
+    d = today()
+    row = db.scalar(select(StudyLog).where(StudyLog.user_id == user_id, StudyLog.day == d, StudyLog.activity_key == key))
+    if row is None:
+        try:
+            with db.begin_nested():
+                row = StudyLog(user_id=user_id, day=d, activity_key=key, kind=kind or ("module" if key in MODULE_KEYS else "lesson"),
+                               seconds=0, items_answered=0, items_correct=0, cards_reviewed=0, words_learned=0, completed=False, source="live")
+                db.add(row)
+        except IntegrityError:
+            row = db.scalar(select(StudyLog).where(StudyLog.user_id == user_id, StudyLog.day == d, StudyLog.activity_key == key))
+    row.seconds += max(0, int(seconds))
+    row.items_answered += max(0, int(items))
+    row.items_correct += max(0, int(correct))
+    row.cards_reviewed += max(0, int(cards))
+    row.words_learned += max(0, int(learned))
+    row.completed = row.completed or completed
+    if score is not None:
+        row.score = score
+    row.last_at = utcnow()
+
+
+def heartbeat(db: Session, user: User, unit_id: str | None, module: str | None = None) -> int:
     """Count study time from the gap between heartbeats (clamped, so idle tabs don't inflate it)."""
     now = utcnow()
     last = user.last_heartbeat
@@ -116,6 +148,7 @@ def heartbeat(db: Session, user: User, unit_id: str | None) -> int:
         prog = db.scalar(select(LessonProgress).where(LessonProgress.user_id == user.id, LessonProgress.unit_id == unit_id))
         if prog:
             prog.time_spent_sec += seconds
+    log_study(db, user.id, unit_id or (module if module in MODULE_KEYS else None), seconds=seconds)
     goal = user.daily_goal_minutes * 60
     if act.seconds >= goal:
         award(db, user.id, f"goal:{today().isoformat()}", "daily_goal", XP_RULES["daily_goal"])

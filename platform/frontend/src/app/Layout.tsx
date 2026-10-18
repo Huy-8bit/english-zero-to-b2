@@ -3,11 +3,12 @@ import { useEffect, useRef, useState, type FormEvent } from "react";
 import {
   BookOpen, BookText, Brain, ClipboardCheck, Ear, FlaskConical, GraduationCap, Headphones, Home, Library, LineChart,
   Map, Menu, Mic, Moon, PenLine, Search, Sun, X, Layers, Sparkles, PenSquare, AudioLines, Headset, BookOpenCheck, Target,
-  NotebookPen, Settings,
+  NotebookPen, Settings, CalendarDays,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useUI } from "@/stores/ui";
 import { AssistantButton, AssistantHost } from "@/features/assistant/AssistantPanel";
+import { useModuleHeartbeat } from "@/features/journal/useModuleHeartbeat";
 
 export const NAV_GROUPS = [
   { title: "Học", items: [
@@ -33,6 +34,7 @@ export const NAV_GROUPS = [
   ] },
   { title: "Theo dõi", items: [
     { to: "/progress", label: "Tiến độ & phân tích", icon: LineChart },
+    { to: "/journal", label: "Nhật ký học tập", icon: CalendarDays },
     { to: "/mistakes", label: "Sổ lỗi sai", icon: NotebookPen },
     { to: "/review", label: "Ôn tập & Flashcards", icon: Brain },
     { to: "/library", label: "Tra cứu", icon: Library },
@@ -107,6 +109,7 @@ export function Layout() {
   const { sidebarOpen, setSidebarOpen } = useUI();
   const loc = useLocation();
   useEffect(() => { setSidebarOpen(false); }, [loc.pathname, setSidebarOpen]);
+  useModuleHeartbeat(loc.pathname);
   return (
     <div className="min-h-screen">
       <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:left-2 focus:top-2 focus:z-50 focus:rounded focus:bg-surface focus:p-2">Bỏ qua tới nội dung</a>

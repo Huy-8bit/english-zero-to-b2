@@ -378,7 +378,10 @@ class ExerciseService:
         sub.score = round(total, 2)
         sub.max_score = float(len(qs))
         act = P.activity(db, user_id)
-        act.items_answered += sum(1 for q in qs if answers.get(q.id) not in (None, "", []))
+        answered = sum(1 for q in qs if answers.get(q.id) not in (None, "", []))
+        act.items_answered += answered
+        P.log_study(db, user_id, {"listening": "listening-studio", "reading": "reading-studio"}.get(es.kind, "ai-practice"), kind="module",
+                    items=answered, correct=int(round(total)))
         P.check_achievements(db, user_id, self.store)
         db.commit()
         return self.review(db, user_id, es)

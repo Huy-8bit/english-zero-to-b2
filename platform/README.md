@@ -172,6 +172,24 @@ Cách trợ lý trả lời:
 - Khi AI tắt hoặc lỗi, câu hỏi nhanh vẫn được trả lời trực tiếp từ dữ liệu.
 - Lịch sử trò chuyện được lưu ở server và có thể xóa. Câu hỏi nhanh được cache khi dữ liệu học chưa đổi.
 
+## Nhật ký học tập
+
+Trang `/journal` và bảng `study_log` ghi lại mỗi ngày bạn học những gì:
+- bài nào (theo mã bài) và module nào: Từ vựng, Writing/Speaking/Reading/Listening Studio, bài tập AI…;
+- bao nhiêu phút, bao nhiêu câu, đúng bao nhiêu;
+- hoàn thành bài với điểm bao nhiêu;
+- số lượt ôn từ và số từ mới đã học.
+
+Thời gian được đo bằng heartbeat 30 giây, chỉ khi tab đang mở và bạn có thao tác. Trang tổng quan và cài đặt không tính.
+
+Migration `0005` dựng lại nhật ký từ dữ liệu cũ (bài làm, bài hoàn thành, ôn từ, bài viết…). Thời gian học trước đây chỉ lưu theo ngày nên được ghi là "chưa rõ bài".
+
+Trợ lý dùng nhật ký này để:
+- trả lời hôm nay, hôm qua, tuần này đã học gì;
+- ước lượng thời gian hoàn thành theo tốc độ học thật của bạn (phút thực tế mỗi bài so với thời lượng gợi ý);
+- so sánh các phương án như "30 phút/ngày" hay "1 giờ/ngày";
+- gợi ý ôn lại bài đã học: bài điểm thấp, và bài đến hạn ôn theo khoảng cách tăng dần 2 → 7 → 21 → 60 ngày.
+
 ## Bàn phím
 
 `→` / `←` chuyển slide (khi không gõ trong ô nhập) · `Enter` kiểm tra bài hoặc sang slide tiếp · `Esc` thoát chế độ tập trung / đóng hộp thoại · `⌘K` hoặc `/` tìm kiếm · Flashcards: `Space` lật, `1–4` chấm (Quên / Khó / Nhớ / Dễ) · Phiên học từ vựng: `1–4` chọn đáp án, `Enter` kiểm tra / tiếp tục, `Backspace` bỏ từ cuối khi sắp xếp câu.

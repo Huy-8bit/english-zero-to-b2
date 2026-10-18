@@ -118,6 +118,7 @@ def submit_quiz(quiz_id: str, body: QuizSubmitIn, db: Session = Depends(get_db),
         _learning_hooks(db, user.id, b, it, g["verdict"], resp or "")
     act = P.activity(db, user.id)
     act.items_answered += len(body.answers)
+    P.log_study(db, user.id, unit_id, items=len(body.answers), correct=sum(1 for r in results.values() if r.get("verdict") == "correct"))
     auto = [r for r in results.values() if r["auto"]]
     new_badges = []
     if first_time and len(auto) >= 3 and len(auto) == len(items) and all(r["verdict"] == "correct" for r in auto):
@@ -153,7 +154,10 @@ def self_assess(attempt_id: int, body: SelfAssessIn, db: Session = Depends(get_d
     if a.self_correct == body.correct:
         it = store.item(a.item_id)
         return {"result": result_payload(it, a) if it else None, "xp_gained": 0}
+    newly_correct = body.correct and a.self_correct is not True
     a.self_correct = body.correct
+    if newly_correct:
+        P.log_study(db, user.id, a.unit_id, correct=1)
     it_sa = store.item(a.item_id)
     b_sa = store.built(a.unit_id)
     if it_sa is not None and b_sa is not None:
@@ -184,6 +188,7 @@ def complete(unit_id: str, db: Session = Depends(get_db), store: ContentStore = 
     xp = P.award(db, user.id, f"lesson:{unit_id}", "lesson_complete", P.XP_RULES["lesson_complete"])
     if first:
         P.activity(db, user.id).lessons_completed += 1
+    P.log_study(db, user.id, unit_id, completed=True, score=score)
     badges = P.check_achievements(db, user.id, store)
     db.commit()
     level_done = None
@@ -209,7 +214,7 @@ def mistakes(db: Session = Depends(get_db), store: ContentStore = Depends(get_st
 
 @router.post("/activity/heartbeat")
 def activity_heartbeat(body: HeartbeatIn, db: Session = Depends(get_db), user: User = Depends(current_user)):
-    seconds = P.heartbeat(db, user, body.unit_id)
+    seconds = P.heartbeat(db, user, body.unit_id, body.activity)
     db.commit()
     return {"counted_seconds": seconds}
 

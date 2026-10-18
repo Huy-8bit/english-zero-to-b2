@@ -1,3 +1,15 @@
+# Study journal + smarter assistant — 2026-10-18
+
+| Feature | Status | Files | Evidence / remaining work |
+|---|---|---|---|
+| Study journal (`study_log`: day × lesson/module) | COMPLETE_AND_TESTED | `models.py::StudyLog`, `alembic/versions/0005_study_log.py`, `services/progress.py::log_study` | Recorded from lesson heartbeats, module heartbeats (new), quiz answers, self-assessment, lesson completion with score, vocabulary sessions and flashcards, AI practice, Writing and Speaking. A one-time backfill rebuilds older days. Day-level time from before this change cannot be split per lesson, so it is labelled `_untracked`. |
+| Journal page | COMPLETE_AND_TESTED | `frontend/src/features/journal/*` | KPIs, a 14-day chart, what-if scenarios, the review plan and 30 days of entries with lesson links. Passes axe and mobile checks. |
+| Personal-pace ETA + scenarios | COMPLETE_AND_TESTED (formula); accuracy depends on recorded data | `assistant.py::pace_insight`, `eta_insight` | Speed factor = actual minutes on completed lessons ÷ curriculum minutes. ETA = remaining minutes ÷ lesson minutes per week. Scenarios use the learner's own share of study time spent on lessons. Unit tests check the arithmetic. |
+| Review of studied material | COMPLETE_AND_TESTED | `assistant.py::review_insight` | Lists low-score lessons, lessons due for spaced revision (2/7/21/60-day intervals per revision), weak topics, due vocabulary and open mistakes. |
+| Assistant intents | COMPLETE_AND_TESTED | `assistant.py` | New: history (today, yesterday, this week, a specific day) and review. The AI receives up to 21 active journal days plus pace, ETA and review data, and is told to compute what-if schedules from them. |
+
+**Verification:** backend 127 pytest passed; frontend 15 vitest passed; lint and build pass; Playwright 37/37 passed.
+
 # Learning assistant — 2026-10-18
 
 | Feature | Status | Files | Evidence / remaining work |

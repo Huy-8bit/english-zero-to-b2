@@ -49,6 +49,7 @@ class VocabReviewIn(BaseModel):
 
 class HeartbeatIn(BaseModel):
     unit_id: str | None = Field(default=None, max_length=64)
+    activity: str | None = Field(default=None, pattern="^(vocab|writing-studio|speaking-studio|reading-studio|listening-studio|ai-practice|placement|mistakes|review|reference)$")
 
 
 class WritingIn(BaseModel):

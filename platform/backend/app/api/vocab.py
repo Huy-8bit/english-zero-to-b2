@@ -78,6 +78,7 @@ def review(body: VocabReviewIn, db: Session = Depends(get_db), store: ContentSto
         raise HTTPException(404, "Card not found")
     p = get_progress(db, user.id, eid, source="lesson")
     mark_seen(p)
+    was_learned = p.learned_at is not None
     rating = GRADE_TO_RATING.get(body.grade, 1)
     info = srs.review(p, rating, retention=float(settings(db, user.id)["retention"]))
     if rating >= 2:
@@ -92,6 +93,8 @@ def review(body: VocabReviewIn, db: Session = Depends(get_db), store: ContentSto
                           response={"card_id": body.card_id, "grade": body.grade}, state_before=info["state_before"], state_after=info["state_after"],
                           elapsed_days=info["elapsed_days"], due_after=info["due_after"]))
     P.activity(db, user.id).cards_reviewed += 1
+    P.log_study(db, user.id, "vocab", kind="module", items=1, correct=int(rating >= 2), cards=1,
+                learned=int(not was_learned and p.learned_at is not None))
     xp = P.award(db, user.id, f"vocab:{eid}:{P.today().isoformat()}", "vocab_review", P.XP_RULES["vocab_review"])
     badges = P.check_achievements(db, user.id, store)
     db.commit()

@@ -660,3 +660,28 @@ class VocabDialogue(Base):
     used: Mapped[dict] = mapped_column(JSON, default=dict)
     status: Mapped[str] = mapped_column(String(12), default="active")
     created_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow, index=True)
+
+
+class StudyLog(Base):
+    """Study journal: one row per (learner, local day, lesson or module). Feeds the journal page and the assistant.
+
+    activity_key is a curriculum unit id (e.g. A1-G003) or a module key (vocab, writing-studio, …).
+    Rows with source="backfill" were reconstructed from older records (time could not be attributed to lessons).
+    """
+    __tablename__ = "study_log"
+    __table_args__ = (UniqueConstraint("user_id", "day", "activity_key"),)
+    id: Mapped[int] = mapped_column(Integer, primary_key=True)
+    user_id: Mapped[int] = mapped_column(ForeignKey("users.id"), index=True)
+    day: Mapped[date] = mapped_column(Date, index=True)
+    activity_key: Mapped[str] = mapped_column(String(64), index=True)
+    kind: Mapped[str] = mapped_column(String(12), default="lesson")  # lesson | module
+    seconds: Mapped[int] = mapped_column(Integer, default=0)
+    items_answered: Mapped[int] = mapped_column(Integer, default=0)
+    items_correct: Mapped[int] = mapped_column(Integer, default=0)
+    cards_reviewed: Mapped[int] = mapped_column(Integer, default=0)
+    words_learned: Mapped[int] = mapped_column(Integer, default=0)
+    completed: Mapped[bool] = mapped_column(Boolean, default=False)
+    score: Mapped[float | None] = mapped_column(Float, nullable=True)
+    source: Mapped[str] = mapped_column(String(12), default="live")  # live | backfill
+    first_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
+    last_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)

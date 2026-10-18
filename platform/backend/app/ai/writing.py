@@ -126,6 +126,7 @@ class WritingService:
                                     explanation=e["explanation_vi"], topic_id=(data["practice_lessons"][0]["lesson_id"] if data["practice_lessons"] else None))
         P.award(db, user_id, f"writing:{sub.id}", "production", P.XP_RULES["production"])
         P.activity(db, user_id).items_answered += 1
+        P.log_study(db, user_id, "writing-studio", kind="module", items=1)
         db.commit()
         return sub
 

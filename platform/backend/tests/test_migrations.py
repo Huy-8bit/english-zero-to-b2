@@ -31,10 +31,13 @@ def test_legacy_upgrade_preserves_records_and_restarts(tmp_path, unversioned):
     init_db(engine)
     init_db(engine)  # repeated startup is idempotent
     with engine.connect() as conn:
-        assert conn.execute(text("SELECT version_num FROM alembic_version")).scalar() == "0004"
+        assert conn.execute(text("SELECT version_num FROM alembic_version")).scalar() == "0005"
         attempt = conn.execute(text("SELECT response,verdict,ai_correct,ai_score FROM attempts WHERE id=1")).one()
         assert tuple(attempt) == ("B", "correct", None, None)
         assert conn.execute(text("PRAGMA foreign_key_check")).all() == []
+        # the study journal is rebuilt from the old attempt (one answer, correct) without touching the attempt
+        log = conn.execute(text("SELECT activity_key, items_answered, items_correct, source FROM study_log")).all()
+        assert ("A1-G011", 1, 1, "backfill") in [tuple(r) for r in log]
     first = create_app(url)
     with TestClient(first) as client:
         assert client.get("/api/profile").json()["name"] == "Existing learner"
