@@ -47,6 +47,7 @@ export default function JournalPage() {
             ))}
             {!eta.scenarios.length && <p className="text-muted">Chưa đủ dữ liệu để so sánh.</p>}
             {eta.note && <p className="pt-1 text-xs text-muted">{eta.note}</p>}
+            {eta.confidence_note && <p className="pt-1 text-xs text-warning">{eta.confidence_note}</p>}
             {pace.personal_speed_factor && <p className="pt-1 text-xs text-muted">Bạn học mỗi bài nhanh/chậm bằng ×{pace.personal_speed_factor} so với thời lượng gợi ý (từ {pace.speed_sample_lessons} bài đã xong).</p>}
             <p className="pt-1 text-xs text-muted">{eta.disclaimer_vi}</p>
           </CardContent>

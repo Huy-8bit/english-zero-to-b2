@@ -147,3 +147,13 @@ def test_ai_outage_falls_back_to_data(c, ai_app):
     ai_app.state.ai.gateway.provider.fail_next = AIUnavailable("down")
     r = c.post("/api/assistant/chat", json={"action": "mistakes"}).json()
     assert not r["ai"] and r["notice"] and ("lỗi" in r["answer"].lower())
+
+
+def test_pace_window_starts_at_first_study_day(client, app):
+    client.get("/api/profile")
+    seed_pace(app, ["A0-G001", "A0-G002"], days=2)  # a learner who started yesterday
+    s = client.get("/api/assistant/insights").json()
+    p = s["pace"]
+    assert p["history_days"] == 2 and p["window_days"] == 7 and p["low_confidence"]
+    assert p["minutes_per_week"] == 2 * 40 + 2 * 10  # not diluted over 4 weeks
+    assert s["eta"]["confidence_note"]

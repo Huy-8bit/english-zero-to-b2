@@ -8,7 +8,7 @@
 | Review of studied material | COMPLETE_AND_TESTED | `assistant.py::review_insight` | Lists low-score lessons, lessons due for spaced revision (2/7/21/60-day intervals per revision), weak topics, due vocabulary and open mistakes. |
 | Assistant intents | COMPLETE_AND_TESTED | `assistant.py` | New: history (today, yesterday, this week, a specific day) and review. The AI receives up to 21 active journal days plus pace, ETA and review data, and is told to compute what-if schedules from them. |
 
-**Verification:** backend 127 pytest passed; frontend 15 vitest passed; lint and build pass; Playwright 37/37 passed.
+**Verification:** backend 128 pytest passed; frontend 15 vitest passed; lint and build pass; Playwright 37/37 passed. Pace is averaged from the first recorded study day (at least 7 days), and estimates from fewer than 14 days of history are flagged as low confidence.
 
 # Learning assistant — 2026-10-18
 

@@ -149,6 +149,11 @@ def journal(db: Session, user: User, store: ContentStore, days: int = 30) -> lis
 
 def pace_insight(db: Session, user: User, store: ContentStore, window: int = 28) -> dict:
     """The learner's own pace over the last `window` days, from the study journal."""
+    # averaging window: since the first recorded study day (a learner who started 2 days ago is not averaged over
+    # 4 weeks), but at least 7 days so a couple of days are not over-extrapolated
+    first = db.scalar(select(func.min(StudyLog.day)).where(StudyLog.user_id == user.id))
+    elapsed = (P.today() - first).days + 1 if first else window
+    window = max(7, min(window, elapsed))
     since = P.today() - timedelta(days=window - 1)
     rows = list(db.scalars(select(StudyLog).where(StudyLog.user_id == user.id, StudyLog.day >= since)))
     study_days = {r.day for r in rows if r.seconds >= 60 or r.items_answered or r.cards_reviewed}
@@ -168,7 +173,7 @@ def pace_insight(db: Session, user: User, store: ContentStore, window: int = 28)
     if len(sample) >= 2:
         factor = max(0.3, min(4.0, sum(a for a, _ in sample) / sum(b for _, b in sample)))
     weeks = window / 7
-    return {"window_days": window, "study_days": len(study_days), "days_per_week": round(len(study_days) / weeks, 1),
+    return {"window_days": window, "history_days": elapsed, "low_confidence": elapsed < 14, "study_days": len(study_days), "days_per_week": round(len(study_days) / weeks, 1),
             "minutes_total": round(total_min), "minutes_per_week": round(total_min / weeks), "minutes_per_study_day": round(total_min / len(study_days)) if study_days else 0,
             "lesson_minutes_per_week": round(lesson_min / weeks), "lesson_share": round(lesson_min / total_min, 2) if total_min >= 30 else None,
             "lessons_completed": len(completed), "lessons_per_week": round(len(completed) / weeks, 1),
@@ -240,6 +245,8 @@ def eta_insight(db: Session, user: User, store: ContentStore, prog: dict | None 
                          "weeks_at_current_pace": math.ceil((voc_total - learned) / per_week) if per_week >= 1 else None,
                          "weeks_at_daily_goal": math.ceil((voc_total - learned) / (daily_new * 7)) if daily_new else None, "daily_new_goal": daily_new}
     out["disclaimer_vi"] = "Đây là ước lượng từ nhịp học đã ghi nhận, không phải cam kết đạt chứng chỉ CEFR/VSTEP."
+    if pace.get("low_confidence"):
+        out["confidence_note"] = f"Mới có {pace['history_days']} ngày dữ liệu nên ước lượng còn dao động nhiều; sau khoảng 2 tuần sẽ chính xác hơn."
     return out
 
 
@@ -374,6 +381,8 @@ def fallback_text(action: str, s: dict) -> str:
                  f"Ước lượng {basis}: **~{e['weeks']} tuần** (khoảng {e['finish_date']})."]
         if e.get("note"):
             lines.append(e["note"])
+        if e.get("confidence_note"):
+            lines.append(e["confidence_note"])
         if e["scenarios"]:
             lines.append("\nNếu thay đổi thời gian học:")
             lines += [f"- {x['label']}: ~{x['weeks']} tuần ({x['months']} tháng, khoảng {x['finish_date']})" for x in e["scenarios"]]

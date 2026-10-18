@@ -56,7 +56,7 @@ export interface Insights {
   pace: { window_days: number; study_days: number; days_per_week: number; minutes_total: number; minutes_per_week: number; minutes_per_study_day: number;
     lesson_minutes_per_week: number; lessons_completed: number; lessons_per_week: number; personal_speed_factor: number | null; speed_sample_lessons: number; avg_minutes_per_completed_lesson: number | null };
   eta: { target_level: string; remaining_lessons: number; remaining_hours: number; remaining_minutes: number; minutes_basis: string; basis: string; weeks: number; finish_date: string;
-    note?: string; scenarios: Scenario[]; remaining_by_level: Record<string, { lessons: number; minutes: number }>; disclaimer_vi: string;
+    note?: string; confidence_note?: string; scenarios: Scenario[]; remaining_by_level: Record<string, { lessons: number; minutes: number }>; disclaimer_vi: string;
     vocabulary: { target_words: number; learned: number; learned_per_week: number; weeks_at_current_pace: number | null; weeks_at_daily_goal: number | null; daily_new_goal: number } };
   review: { lessons: { lesson_id: string; title: string; level: string; reason_vi: string; link: string; last_studied: string }[]; lessons_due_total: number;
     weak_topics: { topic_id: string; title: string; mastery: number }[]; vocab_due: number };
