@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
-import { Bar, BarChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
-import { Bot, CalendarCheck, CheckCircle2, Clock, RotateCcw } from "lucide-react";
+import { Bar, BarChart, CartesianGrid, ReferenceLine, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
+import { Bot, CalendarCheck, CheckCircle2, Clock, Lightbulb, RotateCcw } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -16,39 +16,61 @@ export default function JournalPage() {
   const ask = useAssistant((s) => s.ask);
   if (q.isLoading) return <div className="space-y-4"><Skeleton className="h-10 w-72" /><Skeleton className="h-48" /><Skeleton className="h-96" /></div>;
   if (q.error || !q.data) return <ErrorBox error={q.error} onRetry={() => q.refetch()} />;
-  const { journal, pace, eta, review, periods } = q.data;
+  const { journal, pace, eta, review } = q.data;
   const active = journal.filter((d) => d.minutes || d.items);
-  const chart = [...journal].reverse().slice(-14).map((d) => ({ day: d.date.slice(8, 10) + "/" + d.date.slice(5, 7), minutes: d.minutes }));
+  // calendar days from the pace analysis (days without study included, so gaps are visible)
+  const chart = pace.days.slice(-14).map((d) => ({ day: d.date.slice(8, 10) + "/" + d.date.slice(5, 7), minutes: d.minutes }));
   return (
     <div>
-      <PageHeader title="Nhật ký học tập" subtitle="Mỗi ngày bạn học bài nào, bao lâu, đúng bao nhiêu — dùng để ước lượng thời gian hoàn thành và gợi ý ôn tập."
+      <PageHeader title="Nhật ký học tập" subtitle="Mỗi ngày bạn học bài nào, bao lâu, đúng bao nhiêu. Dữ liệu này dùng để đo nhịp học thực tế, ước lượng ngày hoàn thành và gợi ý ôn tập."
         actions={<Button variant="outline" onClick={() => ask({ action: "eta" })}><Bot size={16} />Hỏi trợ lý: bao lâu nữa tôi xong?</Button>} />
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        <Kpi label="7 ngày qua" v={`${periods.last_7_days.minutes} phút`} sub={`${periods.last_7_days.days} ngày học · ${periods.last_7_days.lessons.length} bài`} />
-        <Kpi label="Nhịp 4 tuần" v={`${pace.minutes_per_week} phút/tuần`} sub={`${pace.days_per_week} ngày/tuần · ${pace.lessons_per_week} bài/tuần`} />
-        <Kpi label={`Còn lại tới ${eta.target_level}`} v={`${eta.remaining_lessons} bài`} sub={`~${eta.remaining_hours} giờ (${eta.minutes_basis})`} />
-        <Kpi label="Ước lượng hoàn thành" v={`~${eta.weeks} tuần`} sub={vnDate(eta.finish_date)} />
+        {pace.has_data
+          ? <Kpi label="Nhịp thực tế" v={`${pace.minutes_per_study_day} phút/ngày học`} sub={`Học ${pace.study_days}/${pace.calendar_days} ngày · ${pace.lessons_per_study_day} bài/ngày học`} />
+          : <Kpi label="Nhịp thực tế" v="Chưa có dữ liệu" sub="Học một bài để bắt đầu đo" />}
+        <Kpi label="Tốc độ mỗi bài" v={pace.speed.minutes_per_lesson ? `~${pace.speed.minutes_per_lesson} phút` : "Chưa đo được"}
+          sub={pace.speed.overall_ratio ? `×${pace.speed.overall_ratio} thời lượng gợi ý · ${pace.speed.samples} bài` : "Cần ≥ 2 bài có đo thời gian"} />
+        <Kpi label={`Còn lại tới ${eta.target_level}`} v={`${eta.remaining_lessons} bài`} sub={`~${eta.remaining_hours} giờ học bài`} />
+        <Kpi label="Dự kiến hoàn thành" v={vnDate(eta.finish_date)} sub={`${eta.duration_vi} · khoảng ${vnDate(eta.range.fast.finish_date)} – ${vnDate(eta.range.slow.finish_date)}`} />
       </div>
       <div className="mt-4 grid grid-cols-1 gap-4 lg:grid-cols-3">
         <Card className="lg:col-span-2">
-          <CardHeader><CardTitle>Thời gian học 14 ngày</CardTitle></CardHeader>
+          <CardHeader><CardTitle>Thời gian học từng ngày</CardTitle><span className="text-xs text-muted">Đường kẻ: mục tiêu {pace.goal_minutes} phút</span></CardHeader>
           <CardContent className="h-56">
             <ResponsiveContainer width="100%" height="100%">
               <BarChart data={chart}><CartesianGrid strokeDasharray="3 3" opacity={0.3} /><XAxis dataKey="day" fontSize={11} /><YAxis fontSize={11} allowDecimals={false} />
-                <Tooltip formatter={(v) => [`${v} phút`, "Thời gian"]} /><Bar dataKey="minutes" fill="var(--primary)" radius={4} /></BarChart>
+                <Tooltip formatter={(v) => [`${v} phút`, "Thời gian"]} /><Bar dataKey="minutes" fill="var(--primary)" radius={4} />
+                {pace.goal_minutes > 0 && <ReferenceLine y={pace.goal_minutes} stroke="var(--success)" strokeDasharray="4 4" />}</BarChart>
             </ResponsiveContainer>
           </CardContent>
+        </Card>
+        <Card>
+          <CardHeader><CardTitle>Mốc từng cấp</CardTitle><Badge tone={eta.confidence === "khá" ? "success" : "warning"}>Độ tin cậy: {eta.confidence}</Badge></CardHeader>
+          <CardContent className="space-y-1.5 text-sm">
+            {eta.milestones.map((m) => (
+              <div key={m.level} className="flex justify-between gap-2">
+                <span className="text-muted">{m.level} · {m.lessons} bài · ~{m.hours} giờ{m.speed_basis !== "measured" && <span title="Tốc độ ở cấp này được suy ra từ các bài bạn đã học"> *</span>}</span>
+                <b>{vnDate(m.finish_date)}</b>
+              </div>
+            ))}
+            <p className="pt-1 text-xs text-muted">Tính theo {eta.basis_vi}.</p>
+            <p className="text-xs text-warning">{eta.confidence_reason_vi}</p>
+          </CardContent>
+        </Card>
+      </div>
+      <div className="mt-4 grid grid-cols-1 gap-4 lg:grid-cols-3">
+        <Card className="lg:col-span-2">
+          <CardHeader><CardTitle><Lightbulb size={16} className="mr-1 inline" />Nhận xét từ dữ liệu của bạn</CardTitle>
+            <Button size="sm" variant="ghost" onClick={() => ask({ action: "progress" })}><Bot size={14} />Hỏi trợ lý</Button></CardHeader>
+          <CardContent><ul className="space-y-1.5 text-sm">{pace.observations_vi.map((o) => <li key={o}>• {o}</li>)}</ul></CardContent>
         </Card>
         <Card>
           <CardHeader><CardTitle>Nếu thay đổi thời gian học</CardTitle></CardHeader>
           <CardContent className="space-y-1.5 text-sm">
             {eta.scenarios.map((x) => (
-              <div key={x.label} className="flex justify-between gap-2"><span className="text-muted">{x.label}</span><b>~{x.weeks} tuần · {vnDate(x.finish_date)}</b></div>
+              <div key={x.label} className="flex justify-between gap-2"><span className="text-muted">{x.label}</span><b className="text-right">{x.duration_vi} · {vnDate(x.finish_date)}</b></div>
             ))}
             {!eta.scenarios.length && <p className="text-muted">Chưa đủ dữ liệu để so sánh.</p>}
-            {eta.note && <p className="pt-1 text-xs text-muted">{eta.note}</p>}
-            {eta.confidence_note && <p className="pt-1 text-xs text-warning">{eta.confidence_note}</p>}
-            {pace.personal_speed_factor && <p className="pt-1 text-xs text-muted">Bạn học mỗi bài nhanh/chậm bằng ×{pace.personal_speed_factor} so với thời lượng gợi ý (từ {pace.speed_sample_lessons} bài đã xong).</p>}
             <p className="pt-1 text-xs text-muted">{eta.disclaimer_vi}</p>
           </CardContent>
         </Card>

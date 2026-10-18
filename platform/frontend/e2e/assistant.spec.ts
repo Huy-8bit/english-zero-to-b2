@@ -11,8 +11,9 @@ test("assistant answers from my learning data, links to next steps and keeps his
   await expect(panel).toBeVisible();
   await panel.getByRole("button", { name: "Bao lâu nữa tôi xong?" }).click();
   await expect(panel.getByText(/\[AI giả lập\] Bạn đã hoàn thành 0\/\d+ bài/)).toBeVisible();
-  await expect(panel.getByText("Bài còn lại")).toBeVisible();
+  await expect(panel.getByText("Bài còn lại", { exact: true })).toBeVisible();
   await expect(panel.getByText("Nếu thay đổi thời gian học")).toBeVisible();
+  await expect(panel.getByText("Mốc từng cấp")).toBeVisible();
   await panel.getByLabel("Câu hỏi cho trợ lý").fill("Tôi nên học gì tiếp theo?");
   await panel.getByRole("button", { name: "Gửi" }).click();
   await expect(panel.getByText("Gợi ý tiếp theo").last()).toBeVisible();
@@ -54,6 +55,11 @@ test("study journal records today's lesson and vocabulary; the assistant reports
   const today = page.locator("main").getByText(/A1-G001 ·/).first();
   await expect(today).toBeVisible();
   await expect(page.locator("main li").filter({ hasText: /Từ vựng.*1\/1 đúng/ })).toBeVisible();
+  // pace is measured per real study day (one day so far = every day), with a dated forecast and findings
+  await expect(page.getByText("Nhịp thực tế", { exact: true })).toBeVisible();
+  await expect(page.getByText(/Học 1\/1 ngày/)).toBeVisible();
+  await expect(page.getByText("Mốc từng cấp")).toBeVisible();
+  await expect(page.getByText(/bạn học 1\/1 ngày, trung bình/)).toBeVisible();
   await page.getByRole("button", { name: "Mở trợ lý học tập" }).click();
   await page.getByRole("button", { name: "Gần đây tôi học gì?" }).click();
   await expect(page.getByRole("complementary", { name: "Trợ lý học tập" }).getByText("7 ngày qua")).toBeVisible();

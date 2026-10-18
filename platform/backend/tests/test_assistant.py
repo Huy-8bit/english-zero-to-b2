@@ -53,14 +53,17 @@ def test_journal_pace_and_eta_from_recorded_study(client, app, store):
     day0 = s["journal"][0]
     assert day0["lessons"][0]["key"] == "A0-G001" and day0["lessons"][0]["completed"] and day0["minutes"] == 50 and day0["accuracy"] == 82
     pace = s["pace"]
-    assert pace["study_days"] == 5 and pace["minutes_total"] == 4 * 40 + 5 * 10 and pace["lessons_completed"] == 4
-    expected_factor = round(max(0.3, min(4.0, 160 / sum(store.units[u].minutes or 30 for u in done))), 2)
-    assert pace["personal_speed_factor"] == expected_factor
+    assert pace["study_days"] == 5 and pace["calendar_days"] == 5 and pace["minutes_total"] == 4 * 40 + 5 * 10 and pace["lessons_completed"] == 4
+    expected_ratio = math.exp(sum(math.log(40 / store.units[u].minutes) for u in done) / 4)
+    assert abs(pace["speed"]["overall_ratio"] - expected_ratio) < 0.001 and pace["speed"]["by_level"]["A0"]["basis"] == "measured"
+    assert pace["observations_vi"] and "4/" not in pace["observations_vi"][0]
     e = s["eta"]
-    assert e["basis"] == "recent_minutes" and e["minutes_basis"] == "tốc độ của bạn"
-    assert e["weeks"] == math.ceil(e["remaining_minutes"] / pace["lesson_minutes_per_week"])
+    assert e["basis"] == "real_pace" and e["range"]["fast"]["days"] <= e["days"] <= e["range"]["slow"]["days"]
+    assert [m["level"] for m in e["milestones"]] == sorted({m["level"] for m in e["milestones"]}, key=["A0", "A1", "A2", "B1", "B2"].index)
     one_hour = next(x for x in e["scenarios"] if x["label"] == "1 giờ/ngày")
-    assert one_hour["weeks"] == math.ceil(e["remaining_minutes"] / (60 * 7 * e["lesson_share_of_study_time"]))
+    assert abs(one_hour["days"] - e["remaining_minutes"] / (60 * e["lesson_share_of_study_time"])) <= 1
+    r = client.post("/api/assistant/chat", json={"action": "eta"}).json()
+    assert "Mốc từng cấp" in r["answer"] and "Độ tin cậy" in r["answer"] and any(c["title"] == "Mốc từng cấp" for c in r["cards"])
     assert s["periods"]["last_7_days"]["days"] == 5 and s["periods"]["today"]["lessons"] == ["A0-G001"]
     # history answered from the journal without AI, naming the lessons
     r = client.post("/api/assistant/chat", json={"message": "Hôm qua tôi đã học những gì?"}).json()
@@ -101,10 +104,12 @@ def test_live_hooks_record_the_journal(client, app):
     assert mods["vocab"]["items"] == 1 and "writing-studio" in mods and day["vocab_reviews"] == 1
 
 
-def test_eta_without_enough_data_uses_weekly_goal(client):
-    client.put("/api/profile", json={"weekly_goal_lessons": 5})
-    e = client.get("/api/assistant/insights").json()["eta"]
-    assert e["basis"] == "weekly_goal" and e["weekly_goal"] == 5 and e["weeks"] == math.ceil(e["remaining_lessons"] / 5) and e["note"]
+def test_eta_without_any_study_uses_the_daily_goal(client):
+    client.put("/api/profile", json={"daily_goal_minutes": 60})
+    s = client.get("/api/assistant/insights").json()
+    e = s["eta"]
+    assert not s["pace"]["has_data"] and e["basis"] == "goal" and "60 phút/ngày" in e["basis_vi"] and e["confidence"] == "thấp"
+    assert abs(e["days"] - e["remaining_minutes"] / (60 * 0.7)) <= 1  # 70% of the daily goal on lessons until measured
 
 
 @pytest.fixture(scope="module")
@@ -154,6 +159,20 @@ def test_pace_window_starts_at_first_study_day(client, app):
     seed_pace(app, ["A0-G001", "A0-G002"], days=2)  # a learner who started yesterday
     s = client.get("/api/assistant/insights").json()
     p = s["pace"]
-    assert p["history_days"] == 2 and p["window_days"] == 7 and p["low_confidence"]
-    assert p["minutes_per_week"] == 2 * 40 + 2 * 10  # not diluted over 4 weeks
-    assert s["eta"]["confidence_note"]
+    assert p["calendar_days"] == 2 and p["study_days"] == 2 and p["active_ratio"] == 1.0  # studied every day so far
+    assert p["minutes_per_study_day"] == 50  # 40 min lesson + 10 min vocabulary, not diluted over a week
+    assert s["eta"]["confidence"] == "thấp" and "2 ngày" in s["eta"]["confidence_reason_vi"]
+
+
+def test_a_lesson_completed_again_later_counts_once(client, app):
+    client.get("/api/profile")
+    seed_pace(app, ["A0-G001", "A0-G002"], days=2)
+    from app.models import StudyLog
+    from app.services.progress import today
+    with app.state.sessionmaker() as db:  # A0-G001 (completed today) was first completed yesterday
+        db.query(StudyLog).filter_by(activity_key="A0-G002").update({"day": today() - timedelta(days=2)})
+        db.add(StudyLog(user_id=1, day=today() - timedelta(days=1), activity_key="A0-G001", kind="lesson", seconds=1200, completed=True, source="live"))
+        db.commit()
+    p = client.get("/api/assistant/insights").json()["pace"]
+    assert p["lessons_completed"] == 2 and p["speed"]["samples"] == 2
+    assert [d["lessons_completed"] for d in p["days"]] == [1, 1, 0]

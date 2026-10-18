@@ -13,6 +13,8 @@ services:
       DATABASE_URL: sqlite:////data/english.db
       MEDIA_DIR: /data/media
       CORS_ORIGINS: http://localhost:${WEB_PORT:-8080}
+      # Ngày học được tính theo giờ địa phương (không phải UTC), để một buổi học buổi sáng không bị tính vào hôm trước
+      TZ: ${TZ:-Asia/Ho_Chi_Minh}
     volumes:
       # Giáo trình Markdown (thư mục cha của platform/), chỉ đọc. Sửa Markdown → web tự cập nhật.
       - ..:/content:ro
