@@ -348,7 +348,14 @@ def snapshot(db: Session, user: User, store: ContentStore) -> dict:
     mis = mistakes_insight(db, user, store)
     pace = pace_insight(db, user, store)
     days = journal(db, user, store, 30)
-    return {"progress": prog, "vocab": voc, "pace": pace, "eta": eta_insight(db, user, store, prog, voc, pace), "mistakes": mis,
+    from .study_plan import plan as day_plan
+
+    dp = day_plan(db, user, store)
+    today_plan = {"target_minutes": dp["target_minutes"], "minutes_today": dp["minutes_today"], "percent": dp["percent"],
+                  "current_block": dp["current_block"], "blocks": [{k: b[k] for k in ("id", "title", "minutes", "done_minutes", "status")} | {"action": b["action"]["label"]}
+                                                                   for b in dp["blocks"]],
+                  "quests": [{k: q[k] for k in ("title", "progress", "goal", "done")} for q in dp["quests"]]}
+    return {"today_plan": today_plan, "progress": prog, "vocab": voc, "pace": pace, "eta": eta_insight(db, user, store, prog, voc, pace), "mistakes": mis,
             "review": review_insight(db, user, store), "journal": days, "periods": period_summary(days),
             "next": next_insight(db, user, store, prog, voc, mis), "today": P.today().isoformat()}
 
@@ -480,7 +487,7 @@ ASSISTANT = TEACHER + (
     " You are the learner's personal study assistant inside an English-learning app. Answer in Vietnamese, warm, specific and "
     "concise (normally under 220 words; Markdown with short lists). Answer the learner's actual question first. "
     "Use ONLY facts and numbers from <learner_data>: journal (day-by-day lessons, minutes, accuracy), pace, eta (with what-if "
-    "scenarios), review plan, vocabulary, mistakes, next steps. Never invent dates, lessons, scores or durations. "
+    "scenarios), today_plan (focus blocks of today's study schedule, quests), review plan, vocabulary, mistakes, next steps. Never invent dates, lessons, scores or durations. "
     "When the learner proposes a different schedule (e.g. '1 tiếng mỗi ngày'), compute it from eta.remaining_minutes and "
     "eta.lesson_share_of_study_time (weeks = remaining_minutes / (minutes_per_day × days_per_week × lesson_share)) and show the "
     "calculation briefly. Refer to concrete days and lesson IDs from the journal when relevant (e.g. 'Thứ 3 bạn học A1-G003'). "
@@ -528,7 +535,7 @@ class Assistant:
         cards = cards_for(topic, s)
         conv = self.conversation(db, user.id)
         prior = list(db.scalars(select(TutorMessage).where(TutorMessage.conversation_id == conv.id).order_by(TutorMessage.id.desc()).limit(6)))[::-1]
-        data = {k: s[k] for k in ("today", "progress", "pace", "eta", "review", "periods", "next", "mistakes")} | {
+        data = {k: s[k] for k in ("today", "today_plan", "progress", "pace", "eta", "review", "periods", "next", "mistakes")} | {
             "vocab": {k: v for k, v in s["vocab"].items() if k not in ("weak_word_ids", "by_level")},
             "journal": [d for d in s["journal"] if d["minutes"] or d["items"]][:21]}
         ai_used, notice = True, None

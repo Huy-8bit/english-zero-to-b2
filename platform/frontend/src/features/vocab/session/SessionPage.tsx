@@ -1,7 +1,8 @@
 import { useCallback, useEffect, useRef, useState } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams, useSearchParams } from "react-router-dom";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
-import { ArrowRight, CheckCircle2, Clock, RotateCcw, Sparkles, Trophy, XCircle } from "lucide-react";
+import { ArrowRight, CheckCircle2, Clock, Coffee, Flame, RotateCcw, Sparkles, Trophy, XCircle } from "lucide-react";
+import { useCelebrate } from "@/components/Celebrate";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -25,12 +26,19 @@ export default function SessionPage() {
 
 function Player({ initial }: { initial: Session }) {
   const qc = useQueryClient();
+  const [sp] = useSearchParams();
+  const backTo = safeReturn(sp.get("return"));
   const [s, setS] = useState(initial);
   const [idx, setIdx] = useState(initial.cursor);
   const [busy, setBusy] = useState(false);
   const [aiDown, setAiDown] = useState(false);
   const [summary, setSummary] = useState<Summary | null>(initial.summary);
   const started = useRef(Date.now());
+  const [combo, setCombo] = useState(0);
+  const comboRef = useRef(0);
+  const [fatigue, setFatigue] = useState<string | null>(null);
+  const history = useRef<{ ok: boolean; ms: number }[]>([]);
+  const fire = useCelebrate((x) => x.fire);
   const it = s.items[idx];
   const result = it ? s.results[it.id] : undefined;
   const done = idx >= s.items.length;
@@ -58,6 +66,14 @@ function Player({ initial }: { initial: Session }) {
     setBusy(true);
     try {
       const r = await vocab.answer(s.id, { item_id: it.id, duration_ms: Date.now() - started.current, client_review_id: `${s.id}:${it.id}`, ...body });
+      if (it.type !== "learn") {
+        const ok = !!r.correct;
+        comboRef.current = ok ? comboRef.current + 1 : 0;
+        setCombo(comboRef.current);
+        if (ok && comboRef.current % 5 === 0) fire(`${comboRef.current} câu đúng liên tiếp! 🔥`);
+        history.current.push({ ok, ms: Date.now() - started.current });
+        setFatigue(fatigueSignal(history.current));
+      }
       let next = { ...s, results: { ...s.results, [it.id]: r } };
       if (r.retry_added) next = { ...(await vocab.session(s.id)), results: next.results };
       setS(next);
@@ -73,7 +89,7 @@ function Player({ initial }: { initial: Session }) {
     } finally {
       setBusy(false);
     }
-  }, [it, busy, s, qc]);
+  }, [it, busy, s, qc, fire]);
 
   useEffect(() => {
     if (!result) return;
@@ -83,13 +99,20 @@ function Player({ initial }: { initial: Session }) {
   }, [result]);
 
   if (!s.items.length) return <EmptySession kind={s.kind} />;
-  if (summary) return <SummaryView s={s} summary={summary} />;
+  if (summary) return <SummaryView s={s} summary={summary} backTo={backTo} />;
   if (done) return <Skeleton className="mx-auto h-96 max-w-3xl" />;
   const pct = Math.round((Object.keys(s.results).length / s.items.length) * 100);
   return (
     <div className="mx-auto max-w-3xl space-y-4">
+      {fatigue && (
+        <div role="status" className="flex flex-wrap items-center gap-2 rounded-2xl bg-warning-soft px-4 py-2 text-sm text-warning">
+          <Coffee size={16} />{fatigue}
+          <button className="ml-auto text-xs underline" onClick={() => setFatigue(null)}>Tiếp tục học</button>
+        </div>
+      )}
       <div className="flex items-center gap-3">
-        <Link to="/vocabulary" className="text-sm text-muted hover:text-fg">← Từ vựng</Link>
+        <Link to={backTo} className="text-sm text-muted hover:text-fg">← Quay lại</Link>
+        {combo >= 3 && <Badge tone="warning" aria-label={`${combo} câu đúng liên tiếp`}><Flame size={12} />{combo}</Badge>}
         <div className="flex-1"><Progress value={pct} label={`Tiến độ phiên học ${pct}%`} /></div>
         <span data-testid="session-pos" className="text-sm tabular-nums text-muted">{Math.min(idx + 1, s.items.length)}/{s.items.length}</span>
         {s.params.timed ? <Timer key={it.id} /> : null}
@@ -168,8 +191,13 @@ function EmptySession({ kind }: { kind: string }) {
   );
 }
 
-function SummaryView({ s, summary }: { s: Session; summary: Summary }) {
+function SummaryView({ s, summary, backTo }: { s: Session; summary: Summary; backTo: string }) {
   const nav = useNavigate();
+  const fire = useCelebrate((x) => x.fire);
+  useEffect(() => {
+    if (summary.answered >= 8 && summary.correct / summary.answered >= 0.85) fire(`Xuất sắc: ${summary.correct}/${summary.answered} câu đúng!`);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   const name = (eid: string) => summary.words.find((w) => w.entry_id === eid)?.lemma ?? eid;
   const start = async (kind: SessionKind) => {
     try {
@@ -205,7 +233,7 @@ function SummaryView({ s, summary }: { s: Session; summary: Summary }) {
           )}
           <div className="flex flex-wrap gap-2 border-t border-border pt-4">
             {summary.suggestions.map((x) => <Button key={x.mode} variant="outline" onClick={() => start(x.mode as SessionKind)}>{x.label_vi}</Button>)}
-            <Link to="/vocabulary"><Button>Tiếp tục <ArrowRight size={16} /></Button></Link>
+            <Link to={backTo}><Button>{backTo === "/vocabulary" ? "Tiếp tục" : "Quay lại kế hoạch"} <ArrowRight size={16} /></Button></Link>
           </div>
         </CardContent>
       </Card>
@@ -220,4 +248,25 @@ function Stat({ n, of, label }: { n: number; of?: number; label: string }) {
       <p className="text-xs text-muted">{label}</p>
     </div>
   );
+}
+
+/** Only same-app paths are allowed as a return target. */
+function safeReturn(v: string | null): string {
+  return v && /^\/(today|review|vocabulary)(\/|$|\?)/.test(v) ? v : "/vocabulary";
+}
+
+/**
+ * Fatigue cue from the learner's own answers (no AI): after ≥ 12 answers, accuracy of the last 8 below 50 %, or answers
+ * getting much slower than at the start of the session. Suggests a short break or a change of activity.
+ */
+export function fatigueSignal(h: { ok: boolean; ms: number }[]): string | null {
+  if (h.length < 12) return null;
+  const last = h.slice(-8);
+  const acc = last.filter((x) => x.ok).length / last.length;
+  const median = (xs: number[]) => [...xs].sort((a, b) => a - b)[Math.floor(xs.length / 2)];
+  const early = median(h.slice(0, 6).map((x) => x.ms));
+  const late = median(h.slice(-6).map((x) => x.ms));
+  if (acc < 0.5) return "Độ chính xác đang giảm — có thể bạn đã mệt. Nghỉ 5 phút (đứng dậy, uống nước) hoặc đổi sang dạng bài khác.";
+  if (early > 0 && late > early * 2 && late > 8000) return "Bạn trả lời chậm dần — dấu hiệu mất tập trung. Nghỉ ngắn 3–5 phút sẽ giúp tỉnh táo lại.";
+  return null;
 }

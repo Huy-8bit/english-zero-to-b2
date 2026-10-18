@@ -31,6 +31,7 @@ MODES = {
     "daily": "Kế hoạch hôm nay", "review": "Ôn từ đến hạn", "learn": "Học từ mới", "flashcards": "Flashcards",
     "type": "Gõ đáp án", "dictation": "Nghe – chép chính tả", "context": "Từ trong ngữ cảnh", "collocation": "Collocation",
     "builder": "Sắp xếp câu", "use": "Tự đặt câu (AI chấm)", "speed": "Ôn nhanh", "weak": "Ôn từ khó", "custom": "Luyện theo bộ từ",
+    "gaps": "Ôn lỗ hổng từ vựng",
 }
 SECONDS_DEFAULT = {"learn": 25, "flashcard": 8, "mc_meaning": 7, "mc_word": 7, "type_word": 12, "dictation": 14, "cloze": 12,
                    "collocation": 9, "builder": 20, "confusable": 10, "listen_choose": 8, "use_it": 60}
@@ -300,6 +301,25 @@ class SessionBuilder:
             self.load(ids)
             self.schedulable(ids)
             self.teach(ids)
+        elif k == "gaps":
+            # everything still missing: due today, answered wrong and unresolved, weak — retrieval + discrimination
+            wrong = [eid for (eid,) in self.db.execute(select(VocabMistake.entry_id).where(
+                VocabMistake.user_id == self.user_id, VocabMistake.resolved_at.is_(None)).group_by(VocabMistake.entry_id)
+                .order_by(func.max(VocabMistake.created_at).desc()).limit(20))]
+            weak = [p.entry_id for p in weak_entries(self.db, self.user_id, 15)]
+            ids = list(dict.fromkeys(due_ids[:25] + wrong + weak))[: (size if prm.get("size") else 30)]
+            self.load(ids)
+            self.schedulable(ids)
+            forms = {b.e.lemma.lower(): b.forms for b in self.bundles.values()}
+            for i in ids:
+                b = self.bundles.get(i)
+                if b is None:
+                    continue
+                if i in wrong or i in weak:
+                    self.add(X.confusable(b, self.rng, forms) or X.cloze(b, self.pool(), prefer_short=self.support) or X.mc_word(b, self.pool()))
+                    self.add(X.type_word(b, hint=self.support))
+                else:
+                    self.add(self.review_item(b))
         elif k == "weak":
             ids = [p.entry_id for p in weak_entries(self.db, self.user_id, size)]
             self.load(ids)
@@ -452,7 +472,7 @@ class SessionService:
         sched = self._maybe_schedule(db, user_id, s, it)
         if sched:
             out["schedule"] = sched
-        if it["type"] != "learn" and not out.get("correct") and it.get("round", 1) == 1 and s.kind in ("daily", "learn", "review", "weak") \
+        if it["type"] != "learn" and not out.get("correct") and it.get("round", 1) == 1 and s.kind in ("daily", "learn", "review", "weak", "gaps") \
                 and not any(x["entry_id"] == it["entry_id"] and x.get("round") == 2 for x in s.items):
             self._add_retry(db, s, it)
             out["retry_added"] = True

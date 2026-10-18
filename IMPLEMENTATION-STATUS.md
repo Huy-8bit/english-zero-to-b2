@@ -1,3 +1,16 @@
+# Focused 4-hour study day + smart review — 2026-10-18
+
+| Feature | Status | Files | Evidence / remaining work |
+|---|---|---|---|
+| Daily plan (`/today`) | COMPLETE_AND_TESTED | `backend/app/study_plan.py`, `frontend/src/features/plan/*` | For 240 min, 8 interleaved blocks: retrieval warm-up → gap review → new lesson → listening/reading → new words → second lesson → speaking/writing → final check. Short breaks follow each block, with one long break after ~2 h. No two consecutive blocks share a category (tested). Smaller goals keep the core blocks. Block progress comes from the study journal, not self-report. |
+| Block timer + active breaks | COMPLETE_AND_TESTED | `features/plan/BlockTimer.tsx`, `timerStore.ts` | Header chip in the app and in lessons. When a block ends, a short celebration and a break screen with movement/20-20-20/water/breathing tips appear (survives reload). A block can optionally start a focus lock. |
+| Daily quests (+XP, once per day) | COMPLETE_AND_TESTED | `study_plan.py::quests` | Finish 2 lessons; fix 10 mistakes or weak words (or 60 correct answers); 5 speaking/writing turns. |
+| Smart review (`/review`) | COMPLETE_AND_TESTED | `backend/app/smart_review.py`, `frontend/src/features/flashcards/ReviewPage.tsx` | Diagnoses and reviews, in order: (1) wrong curriculum answers, re-answered in place; (2) Writing/Speaking/AI corrections — the learner types the corrected sentence and must succeed twice to master it, and the correction is hidden until answering; (3) vocabulary "gaps" session — due, unresolved wrong and weak words; (4) lessons below 60 % or due for spaced revision, plus optional AI practice for weak topics. |
+| Engagement & alertness | COMPLETE_AND_TESTED | `components/Celebrate.tsx`, `vocab/session/SessionPage.tsx` | Daily ring; streak; a correct-answer combo with a milestone every 5; celebrations that respect `prefers-reduced-motion`. A fatigue cue (unit-tested) suggests a break when accuracy over the last 8 answers drops below 50 % or answers become 2× slower. |
+| Assistant | COMPLETE_AND_TESTED | `assistant.py` | Receives today's plan (blocks, minutes, quests). |
+
+**Verification:** backend 137 pytest passed; vitest 18 passed; Playwright 51/51 passed (Chrome, mobile, WebKit; axe includes `/today` and `/review`).
+
 # Fixes after first use of focus mode — 2026-10-18
 
 - **Lock window needed two clicks.** AppKit used the first click on a non-key window only to activate it. Fix: `LockWebView.acceptsFirstMouse → true`; secondary-screen windows can no longer take key status; the learning window regains key focus on every poll. `EnglishFocusLock --clicktest` proves it with a synthetic click on a non-key window: the fixed view receives the first click, the plain `WKWebView` control does not.

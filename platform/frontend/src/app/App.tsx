@@ -4,6 +4,8 @@ import { Layout } from "./Layout";
 import { Skeleton } from "@/components/ui/misc";
 import { Toaster } from "@/components/ui/toast";
 import { LoginGate } from "@/features/auth/LoginGate";
+import { CelebrateHost } from "@/components/Celebrate";
+import { BlockTimerHost } from "@/features/plan/BlockTimer";
 
 const Dashboard = lazy(() => import("@/features/dashboard/DashboardPage"));
 const PathPage = lazy(() => import("@/features/learning-path/PathPage"));
@@ -37,6 +39,7 @@ const PlacementPage = lazy(() => import("@/features/placement/PlacementPage"));
 const SettingsPage = lazy(() => import("@/features/settings/SettingsPage"));
 const JournalPage = lazy(() => import("@/features/journal/JournalPage"));
 const FocusPage = lazy(() => import("@/features/focus/FocusPage"));
+const TodayPlanPage = lazy(() => import("@/features/plan/TodayPlanPage"));
 
 function Loading() {
   return (
@@ -56,6 +59,7 @@ export default function App() {
           <Route path="/learn/:unitId" element={<LessonPlayer />} />
           <Route element={<Layout />}>
             <Route index element={<Dashboard />} />
+            <Route path="today" element={<TodayPlanPage />} />
             <Route path="path" element={<PathPage />} />
             <Route path="grammar" element={<ModulePage kind="grammar" />} />
             <Route path="vocabulary" element={<VocabHome />} />
@@ -96,6 +100,8 @@ export default function App() {
           </Route>
         </Routes>
       </Suspense>
+      <BlockTimerHost />
+      <CelebrateHost />
       <Toaster />
     </LoginGate>
   );

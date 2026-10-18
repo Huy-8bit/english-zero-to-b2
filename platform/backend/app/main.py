@@ -12,7 +12,7 @@ from sqlalchemy.orm import sessionmaker
 from . import config
 from .ai.errors import AIError
 from .ai.services import build as build_ai
-from .api import ai, analytics, assistant, auth, content, focus, learning, vocab, vocabulary
+from .api import ai, analytics, assistant, auth, content, focus, learning, plan, vocab, vocabulary
 from .content.store import ContentStore
 from .database import init_db, make_engine
 
@@ -44,7 +44,7 @@ def create_app(database_url: str | None = None, content_root=None, ai_settings=N
         ensure_imported(db)
     app.add_middleware(auth.AuthMiddleware)
     app.add_middleware(CORSMiddleware, allow_origins=config.CORS_ORIGINS, allow_methods=["*"], allow_headers=["*"], allow_credentials=True)
-    for r in (auth.router, content.router, learning.router, vocab.router, vocabulary.router, assistant.router, focus.router, analytics.router, ai.router):
+    for r in (auth.router, content.router, learning.router, vocab.router, vocabulary.router, assistant.router, focus.router, plan.router, analytics.router, ai.router):
         app.include_router(r)
 
     @app.exception_handler(AIError)

@@ -190,6 +190,37 @@ Trợ lý dùng nhật ký này để:
 - so sánh các phương án như "30 phút/ngày" hay "1 giờ/ngày";
 - gợi ý ôn lại bài đã học: bài điểm thấp, và bài đến hạn ôn theo khoảng cách tăng dần 2 → 7 → 21 → 60 ngày.
 
+## Lịch học hôm nay & Ôn tập thông minh
+
+### Lịch học hôm nay (`/today`)
+
+Mục tiêu đặt được 1–4 giờ mỗi ngày. Với 4 giờ, ngày học gồm 8 khối:
+
+| # | Khối |
+|---|---|
+| 1 | Ôn từ đến hạn |
+| 2 | Ôn lỗ hổng |
+| 3 | Bài mới |
+| — | Nghỉ dài |
+| 4 | Nghe/Đọc |
+| 5 | Từ mới |
+| 6 | Bài mới thứ hai |
+| 7 | Nói/Viết với AI |
+| 8 | Kiểm tra cuối ngày |
+
+- Mỗi khối có lý do sư phạm và nút bắt đầu đúng việc cần làm.
+- Có đồng hồ khối; hết khối hiện màn nghỉ chủ động.
+- Có nhiệm vụ ngày (+XP).
+- Có thể khóa máy theo từng khối.
+
+### Ôn tập thông minh (`/review`)
+
+Ôn những gì bạn còn thiếu hoặc sai, theo thứ tự:
+1. Câu sai trong bài.
+2. Lỗi viết/nói: tự gõ lại câu đúng.
+3. Từ vựng đến hạn, hay sai, hay quên.
+4. Bài điểm thấp hoặc đến hạn ôn.
+
 ## Học tập trung (khóa máy)
 
 Trang `/focus`:

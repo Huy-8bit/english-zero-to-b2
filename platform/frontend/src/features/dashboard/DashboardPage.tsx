@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { TodayPlanCard } from "@/features/plan/TodayPlanCard";
 import { useQuery } from "@tanstack/react-query";
 import { ArrowRight, Brain, CalendarDays, Clock, Flame, GraduationCap, PlayCircle, Sparkles, Target, Trophy, TriangleAlert } from "lucide-react";
 import { api } from "@/services/api";
@@ -24,6 +25,7 @@ export default function DashboardPage() {
   const earned = d.achievements.filter((a) => a.earned_at);
   return (
     <div className="space-y-6">
+      <TodayPlanCard />
       <div className="flex flex-wrap items-end justify-between gap-3">
         <div>
           <p className="text-sm text-muted">Xin chào, {d.user.name} 👋</p>

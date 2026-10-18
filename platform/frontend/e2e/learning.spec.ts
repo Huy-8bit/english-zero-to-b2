@@ -110,8 +110,9 @@ test("curriculum flashcards are scheduled by FSRS in the shared vocabulary progr
   expect(cards.cards.find((c: { id: string }) => c.id === saved.card_id).srs).toEqual(saved.srs);
   const entry = await (await request.get(`/api/vocab/entries/${saved.entry_id}`)).json();
   expect(entry.progress.state).toBe("review"); // same progress as the vocabulary module
-  await page.goto("/review");
-  await expect(page.getByText(/Lịch ôn dùng FSRS|FSRS/).first()).toBeVisible();
+  await page.goto("/review"); // smart review reads the same progress
+  await expect(page.getByRole("heading", { name: "Ôn tập thông minh" })).toBeVisible();
+  await expect(page.getByRole("tab", { name: /Từ vựng lỗ hổng/ })).toBeVisible();
 });
 
 test("search finds Vietnamese queries and opens Learning or Reference mode", async ({ page }) => {

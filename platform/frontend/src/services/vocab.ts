@@ -125,7 +125,7 @@ export interface EnrichmentStatus {
   review: { id: number; lemma: string; problems: string[]; model: string | null; result: { senses: { pos: string; meaning_vi: string; definition_en: string }[]; examples: { en: string; vi: string }[]; cefr_estimate: string; collocations: string[] } }[];
 }
 
-export type SessionKind = "daily" | "review" | "learn" | "flashcards" | "type" | "dictation" | "context" | "collocation" | "builder" | "use" | "speed" | "weak" | "custom";
+export type SessionKind = "daily" | "review" | "learn" | "flashcards" | "type" | "dictation" | "context" | "collocation" | "builder" | "use" | "speed" | "weak" | "custom" | "gaps";
 export interface SessionParams { topic?: string; level?: string; collection?: number; entry_ids?: string[]; size?: number }
 export interface EntryFilters { q?: string; level?: string; topic?: string; kind?: string; mastery?: string; saved?: boolean; difficult?: boolean; collection?: number; page?: number; size?: number; sort?: "order" | "az" }
 
