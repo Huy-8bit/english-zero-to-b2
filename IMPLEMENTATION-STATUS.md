@@ -1,3 +1,22 @@
+# Lesson "journey" mode — 2026-10-18
+
+**Diagnosis** (A0-G012, A1-G005; all grammar lessons share the template):
+- 11 explanation slides (~7,000 characters) come before the first question.
+- Then 34 questions follow in 6 consecutive quiz slides of 8–10 items each.
+- Wrong answers are not revisited inside the lesson, and the lesson has no goal or reward framing.
+
+| Feature | Status | Files | Evidence / remaining work |
+|---|---|---|---|
+| Journey view (default for lessons with practice; exams keep their flow) | COMPLETE_AND_TESTED | `frontend/src/features/lesson-player/journey.ts`, `JourneySession.tsx`, `LessonPlayer.tsx` | Sequence: mission (goal, time, 3 stages) → 2-question pre-test → stage "Hiểu" → stage "Vận dụng" → stage "Thử thách". Both explanation stages have a quick check after at most 2 slides (unit-tested), followed by a checkpoint. In "Thử thách" every remaining question is shown one per screen with its exercise instructions. Wrong answers come back in up to 2 retry rounds, then the recap, then a finish screen with 1–3 stars (first-try accuracy), XP, time, and the items still wrong (they go to Smart Review). |
+| Grading and persistence | COMPLETE_AND_TESTED | same | Grading uses the normal quiz endpoint, so XP, the journal, mistakes and focus sessions all count. Position and per-journey answers persist (resume after reload is tested). Old classic-view answers are not shown as already done. Completion uses the normal `complete` endpoint. |
+| Classic slide view kept | COMPLETE_AND_TESTED | `LessonPlayer.tsx` | Toggle in both headers; `?mode=classic`; the preference is remembered. |
+| Personalised AI examples (G) | NOT_STARTED | — | The learner's interests (technology, travel, work/interviews, entertainment) were noted for this; it was not implemented in this round. |
+
+**Verification:**
+- Vitest 25 passed (8 for the journey builder).
+- Playwright 53/53 passed, including a full A0-G001 lesson completed in journey mode (stars, score, status) and resume plus mode switching on A0-G012.
+- Mobile layout checked at Pixel 7 width: no horizontal overflow.
+
 # Focused 4-hour study day + smart review — 2026-10-18
 
 | Feature | Status | Files | Evidence / remaining work |

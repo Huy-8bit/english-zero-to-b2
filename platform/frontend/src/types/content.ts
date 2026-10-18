@@ -110,6 +110,21 @@ export interface LessonState {
   examStartedAt?: number;
   examSubmitted?: boolean;
   savedAt?: number;
+  journey?: JourneyState;
+}
+
+/** Position and results of the "journey" view of a lesson (see features/lesson-player/journey.ts). */
+export interface JourneyState {
+  pos: number;
+  /** items answered during this journey (older answers from the classic view are not shown as already done) */
+  done: string[];
+  wrong: string[];
+  retry: string[];
+  retryPass: number;
+  first: Record<string, boolean>;
+  xp: number;
+  startedAt: number;
+  completed?: boolean;
 }
 
 export interface StepsPayload {

@@ -1,6 +1,12 @@
 import { expect, test } from "@playwright/test";
 import { resetTestDatabase } from "./database";
 
+// These tests cover the classic slide view; the journey view has its own spec (journey.spec.ts).
+test.beforeEach(async ({ page }) => {
+  await page.addInitScript(() => localStorage.setItem("em-lesson-mode", JSON.stringify("classic")));
+});
+
+
 test.beforeAll(resetTestDatabase);
 
 // AI scenarios run against AI_PROVIDER=fake (deterministic, no key, no cost) — see playwright.config.ts.

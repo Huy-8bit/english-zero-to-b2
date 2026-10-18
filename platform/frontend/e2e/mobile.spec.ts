@@ -1,5 +1,11 @@
 import { expect, test } from "@playwright/test";
 
+// These tests cover the classic slide view; the journey view has its own spec (journey.spec.ts).
+test.beforeEach(async ({ page }) => {
+  await page.addInitScript(() => localStorage.setItem("em-lesson-mode", JSON.stringify("classic")));
+});
+
+
 test("mobile layout: menu, lesson player usable", async ({ page }) => {
   await page.goto("/");
   await page.getByRole("button", { name: "Mở menu" }).click();

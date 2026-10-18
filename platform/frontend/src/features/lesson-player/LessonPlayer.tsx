@@ -1,11 +1,11 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { FocusBadge } from "@/features/focus/FocusBadge";
 import { BlockTimerChip } from "@/features/plan/BlockTimer";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams, useSearchParams } from "react-router-dom";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { AnimatePresence, motion } from "motion/react";
 import {
-  ArrowLeft, ArrowRight, Bot, BookOpenText, Sparkles, CheckCircle2, ChevronLeft, Clock, Flag, Focus, List, NotebookPen, Trophy, X,
+  ArrowLeft, ArrowRight, Bot, BookOpenText, Sparkles, CheckCircle2, ChevronLeft, Clock, Flag, Focus, List, NotebookPen, Trophy, X, Route,
 } from "lucide-react";
 import { api } from "@/services/api";
 import type { ItemResult, Step } from "@/types/content";
@@ -16,12 +16,14 @@ import { Dialog, Sheet } from "@/components/ui/dialog";
 import { ErrorBox, Skeleton } from "@/components/ui/misc";
 import { toast } from "@/components/ui/toast";
 import { ThemeToggle } from "@/app/Layout";
-import { cn, KIND_LABELS } from "@/lib/utils";
+import { cn, KIND_LABELS, safeStorage } from "@/lib/utils";
 import { stopSpeaking } from "@/lib/tts";
 import { useUI } from "@/stores/ui";
 import { QuizSlide } from "@/features/quizzes/QuizSlide";
 import { isAnswered, toResponse, type Draft } from "@/features/quizzes/draft";
 import { usePlayerState } from "./usePlayerState";
+import { JourneySession } from "./JourneySession";
+import { journeyApplies } from "./journey";
 import { useHeartbeat } from "./useHeartbeat";
 import { NotesPanel } from "./NotesPanel";
 import { TutorPanel } from "@/features/tutor/TutorPanel";
@@ -46,14 +48,38 @@ export const ACHIEVEMENT_TITLES: Record<string, string> = {
 
 type CompleteResult = Awaited<ReturnType<typeof api.complete>>;
 
+const MODE_KEY = "em-lesson-mode";
+
 export default function LessonPlayer() {
   const { unitId = "" } = useParams();
   // React Router reuses this route when only the ID changes. Each lesson needs its
   // own drafts, save timer and completion state; unmount flushes the previous one.
-  return <LessonSession key={unitId} unitId={unitId} />;
+  return <LessonModes key={unitId} unitId={unitId} />;
 }
 
-function LessonSession({ unitId }: { unitId: string }) {
+/** Journey view (one thing at a time, checks every few slides) by default; the full slide view stays available. */
+function LessonModes({ unitId }: { unitId: string }) {
+  const [sp, setSp] = useSearchParams();
+  const storage = safeStorage();
+  const forced = sp.get("mode");
+  const [pref, setPref] = useState<"journey" | "classic">(() => (forced === "classic" || forced === "journey" ? forced : storage.get(MODE_KEY, "journey")));
+  const steps = useQuery({ queryKey: ["steps", unitId], queryFn: () => api.steps(unitId), staleTime: Infinity, gcTime: 0 });
+  const lesson = useQuery({ queryKey: ["lesson", unitId], queryFn: () => api.lesson(unitId) });
+  const choose = (m: "journey" | "classic") => {
+    storage.set(MODE_KEY, m);
+    setPref(m);
+    if (sp.get("mode")) { sp.delete("mode"); setSp(sp, { replace: true }); }
+  };
+  if (steps.isLoading) return <div className="mx-auto max-w-3xl space-y-4 p-6"><Skeleton className="h-8 w-2/3" /><Skeleton className="h-72" /></div>;
+  if (!steps.data) return <LessonSession unitId={unitId} />; // shows the load error with retry
+  const can = journeyApplies(steps.data.unit.kind, steps.data.steps);
+  if (pref === "journey" && can) {
+    return <JourneySession unitId={unitId} data={steps.data} lesson={lesson.data} onClassic={() => choose("classic")} />;
+  }
+  return <LessonSession unitId={unitId} onJourney={can ? () => choose("journey") : undefined} />;
+}
+
+function LessonSession({ unitId, onJourney }: { unitId: string; onJourney?: () => void }) {
   const nav = useNavigate();
   const qc = useQueryClient();
   const { focusMode, setFocusMode } = useUI();
@@ -213,6 +239,7 @@ function LessonSession({ unitId }: { unitId: string }) {
           </div>
           <div className="flex items-center">
             {!focusMode && <Button variant="ghost" size="icon" onClick={() => setOutline(true)} aria-label="Danh sách slide" className={tutorOpen ? "2xl:hidden" : "lg:hidden"}><List size={18} /></Button>}
+            {onJourney && <Button variant="ghost" size="sm" onClick={onJourney} aria-label="Chế độ hành trình" title="Chế độ hành trình: từng bước, có kiểm tra xen kẽ"><Route size={18} /><span className="hidden md:inline">Hành trình</span></Button>}
             <Button variant="ghost" size="icon" onClick={() => setNotes(true)} aria-label="Ghi chú"><NotebookPen size={18} /></Button>
             <Button ref={tutorTrigger} variant={tutorOpen ? "secondary" : "ghost"} size="sm" onClick={() => setTutorOpen((open) => !open)} aria-expanded={tutorOpen} aria-controls="lesson-tutor" aria-label="Hỏi AI về bài này" title="Ask AI / Giải thích với AI"><Bot size={18} /><span className={tutorOpen ? "hidden 2xl:inline" : "hidden md:inline"}>Hỏi AI</span></Button>
             <Button variant="ghost" size="sm" onClick={() => setPracticeOpen(true)} aria-label="Tạo bài tập với AI" title="Practice with AI / Tạo bài tập"><Sparkles size={18} /><span className={tutorOpen ? "hidden 2xl:inline" : "hidden md:inline"}>Tạo bài tập</span></Button>

@@ -190,6 +190,18 @@ Trợ lý dùng nhật ký này để:
 - so sánh các phương án như "30 phút/ngày" hay "1 giờ/ngày";
 - gợi ý ôn lại bài đã học: bài điểm thấp, và bài đến hạn ôn theo khoảng cách tăng dần 2 → 7 → 21 → 60 ngày.
 
+## Học bài theo "Hành trình"
+
+Bài học mở mặc định ở chế độ Hành trình:
+1. **Nhiệm vụ:** mục tiêu bài, thời lượng, 3 chặng.
+2. **Đoán trước:** 2 câu.
+3. **Chặng Hiểu và chặng Vận dụng:** cứ tối đa 2 phần giải thích lại có 1 câu kiểm tra nhanh.
+4. **Chặng Thử thách:** mỗi màn một câu, kèm hướng dẫn của bài tập.
+5. **Làm lại câu sai.**
+6. **Tổng kết:** ⭐ và XP.
+
+Nội dung giáo trình giữ nguyên. Nút 📖 (hoặc `?mode=classic`) mở lại cách xem slide đầy đủ như cũ.
+
 ## Lịch học hôm nay & Ôn tập thông minh
 
 ### Lịch học hôm nay (`/today`)
