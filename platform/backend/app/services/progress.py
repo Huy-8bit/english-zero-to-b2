@@ -133,6 +133,9 @@ def log_study(db: Session, user_id: int, key: str | None, *, kind: str | None = 
     if score is not None:
         row.score = score
     row.last_at = utcnow()
+    from ..focus import record  # focus (study lock) sessions count the same study records
+
+    record(db, user_id, key=key, seconds=seconds, completed=completed)
 
 
 def heartbeat(db: Session, user: User, unit_id: str | None, module: str | None = None) -> int:

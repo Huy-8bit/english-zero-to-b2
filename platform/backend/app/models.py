@@ -685,3 +685,24 @@ class StudyLog(Base):
     source: Mapped[str] = mapped_column(String(12), default="live")  # live | backfill
     first_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
     last_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
+
+
+class FocusSession(Base):
+    """Self-imposed study lock: the computer stays locked (by the macOS Focus Lock app) until the goals are met.
+
+    Progress is accumulated by services.progress.log_study while the session is active (study seconds, lessons completed).
+    Safety: max_minutes auto-unlocks; emergency unlock after a 60-second wait (PIN if configured).
+    """
+    __tablename__ = "focus_sessions"
+    id: Mapped[str] = mapped_column(String(36), primary_key=True)
+    user_id: Mapped[int] = mapped_column(ForeignKey("users.id"), index=True)
+    status: Mapped[str] = mapped_column(String(16), default="active", index=True)  # active | completed | expired | emergency | cancelled
+    goal_lessons: Mapped[int] = mapped_column(Integer, default=0)
+    goal_minutes: Mapped[int] = mapped_column(Integer, default=0)
+    max_minutes: Mapped[int] = mapped_column(Integer, default=180)
+    seconds: Mapped[int] = mapped_column(Integer, default=0)
+    lessons_done: Mapped[list] = mapped_column(JSON, default=list)
+    emergency_requested_at: Mapped[datetime | None] = mapped_column(DateTime, nullable=True)
+    end_reason: Mapped[str | None] = mapped_column(String(120), nullable=True)
+    started_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow, index=True)
+    ended_at: Mapped[datetime | None] = mapped_column(DateTime, nullable=True)

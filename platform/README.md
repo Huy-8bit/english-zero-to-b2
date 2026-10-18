@@ -190,6 +190,27 @@ Trợ lý dùng nhật ký này để:
 - so sánh các phương án như "30 phút/ngày" hay "1 giờ/ngày";
 - gợi ý ôn lại bài đã học: bài điểm thấp, và bài đến hạn ôn theo khoảng cách tăng dần 2 → 7 → 21 → 60 ngày.
 
+## Học tập trung (khóa máy)
+
+Trang `/focus`:
+1. Đặt mục tiêu: số bài phải hoàn thành và/hoặc số phút học thật.
+2. Bấm **Bắt đầu học & khóa máy**.
+
+Ứng dụng macOS `focus-lock/` (cài bằng `focus-lock/install.sh`) khóa màn hình cho tới khi đạt mục tiêu. Bạn học ngay trong cửa sổ khóa.
+
+Tiến độ được tính từ nhật ký học:
+- **Bài:** chỉ tính khi hoàn thành bài (đi tới slide cuối).
+- **Phút:** đo bằng heartbeat khi có thao tác.
+
+Lối thoát an toàn, theo thứ tự:
+1. Tự mở khi hết thời gian tối đa.
+2. Mở khẩn cấp: chờ 60 giây, rồi nhập PIN hoặc câu xác nhận.
+3. Hủy trong 60 giây đầu nếu bắt đầu nhầm.
+4. Tự mở khi không liên lạc được máy chủ.
+5. Phím thoát của ứng dụng: `Ctrl ⌥ ⌘ ⇧ U`.
+
+Xem `focus-lock/README.md`.
+
 ## Bàn phím
 
 `→` / `←` chuyển slide (khi không gõ trong ô nhập) · `Enter` kiểm tra bài hoặc sang slide tiếp · `Esc` thoát chế độ tập trung / đóng hộp thoại · `⌘K` hoặc `/` tìm kiếm · Flashcards: `Space` lật, `1–4` chấm (Quên / Khó / Nhớ / Dễ) · Phiên học từ vựng: `1–4` chọn đáp án, `Enter` kiểm tra / tiếp tục, `Backspace` bỏ từ cuối khi sắp xếp câu.

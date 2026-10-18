@@ -36,6 +36,7 @@ const MistakesPage = lazy(() => import("@/features/mistakes/MistakesPage"));
 const PlacementPage = lazy(() => import("@/features/placement/PlacementPage"));
 const SettingsPage = lazy(() => import("@/features/settings/SettingsPage"));
 const JournalPage = lazy(() => import("@/features/journal/JournalPage"));
+const FocusPage = lazy(() => import("@/features/focus/FocusPage"));
 
 function Loading() {
   return (
@@ -76,6 +77,7 @@ export default function App() {
             <Route path="review" element={<ReviewPage />} />
             <Route path="progress" element={<ProgressPage />} />
             <Route path="journal" element={<JournalPage />} />
+            <Route path="focus" element={<FocusPage />} />
             <Route path="reference" element={<ReferencePage />} />
             <Route path="library" element={<LibraryPage />} />
             <Route path="search" element={<SearchPage />} />

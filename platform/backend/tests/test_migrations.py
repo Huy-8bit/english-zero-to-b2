@@ -31,7 +31,7 @@ def test_legacy_upgrade_preserves_records_and_restarts(tmp_path, unversioned):
     init_db(engine)
     init_db(engine)  # repeated startup is idempotent
     with engine.connect() as conn:
-        assert conn.execute(text("SELECT version_num FROM alembic_version")).scalar() == "0005"
+        assert conn.execute(text("SELECT version_num FROM alembic_version")).scalar() == "0006"
         attempt = conn.execute(text("SELECT response,verdict,ai_correct,ai_score FROM attempts WHERE id=1")).one()
         assert tuple(attempt) == ("B", "correct", None, None)
         assert conn.execute(text("PRAGMA foreign_key_check")).all() == []

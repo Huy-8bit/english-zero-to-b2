@@ -3,12 +3,13 @@ import { useEffect, useRef, useState, type FormEvent } from "react";
 import {
   BookOpen, BookText, Brain, ClipboardCheck, Ear, FlaskConical, GraduationCap, Headphones, Home, Library, LineChart,
   Map, Menu, Mic, Moon, PenLine, Search, Sun, X, Layers, Sparkles, PenSquare, AudioLines, Headset, BookOpenCheck, Target,
-  NotebookPen, Settings, CalendarDays,
+  NotebookPen, Settings, CalendarDays, Lock,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useUI } from "@/stores/ui";
 import { AssistantButton, AssistantHost } from "@/features/assistant/AssistantPanel";
 import { useModuleHeartbeat } from "@/features/journal/useModuleHeartbeat";
+import { FocusBadge } from "@/features/focus/FocusBadge";
 
 export const NAV_GROUPS = [
   { title: "Học", items: [
@@ -35,6 +36,7 @@ export const NAV_GROUPS = [
   { title: "Theo dõi", items: [
     { to: "/progress", label: "Tiến độ & phân tích", icon: LineChart },
     { to: "/journal", label: "Nhật ký học tập", icon: CalendarDays },
+    { to: "/focus", label: "Học tập trung", icon: Lock },
     { to: "/mistakes", label: "Sổ lỗi sai", icon: NotebookPen },
     { to: "/review", label: "Ôn tập & Flashcards", icon: Brain },
     { to: "/library", label: "Tra cứu", icon: Library },
@@ -130,7 +132,7 @@ export function Layout() {
         <header className="sticky top-0 z-30 flex h-16 items-center gap-3 border-b border-border bg-bg/85 px-4 backdrop-blur sm:px-6">
           <button className="rounded-xl p-2 lg:hidden" aria-label="Mở menu" onClick={() => setSidebarOpen(true)}><Menu size={20} /></button>
           <SearchBox />
-          <div className="ml-auto flex items-center gap-1"><AssistantButton /><ThemeToggle /></div>
+          <div className="ml-auto flex items-center gap-1"><FocusBadge /><AssistantButton /><ThemeToggle /></div>
         </header>
         <main id="main" className="mx-auto max-w-6xl px-4 py-6 sm:px-6 sm:py-8">
           <Outlet />

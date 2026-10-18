@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { FocusBadge } from "@/features/focus/FocusBadge";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { AnimatePresence, motion } from "motion/react";
@@ -199,6 +200,7 @@ function LessonSession({ unitId }: { unitId: string }) {
             <div className="flex items-center gap-2">
               <h1 className="truncate text-sm font-semibold sm:text-base">{unit.id} · {unit.title}</h1>
               {unit.level && <Badge tone="primary">{unit.level}</Badge>}
+              <FocusBadge />
               {!focusMode && <Badge className="hidden sm:inline-flex">{KIND_LABELS[unit.kind]}</Badge>}
             </div>
             <div className="mt-1.5 flex items-center gap-3">

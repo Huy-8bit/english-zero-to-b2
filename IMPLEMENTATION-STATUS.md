@@ -1,3 +1,11 @@
+# Focus mode / study lock — 2026-10-18
+
+| Feature | Status | Files | Evidence / remaining work |
+|---|---|---|---|
+| Focus sessions (goals: lessons completed, study minutes) | COMPLETE_AND_TESTED | `backend/app/focus.py`, `api/focus.py`, `models.py::FocusSession`, `alembic/versions/0006_focus_sessions.py` | Progress comes from the same hooks as the study journal: lesson completion requires reaching the last slide, and minutes come from active heartbeats. Tests cover the goal logic, a max duration ≥ the time goal + 30, the 60-second cancel window, emergency unlock (60 s wait + PBKDF2-hashed PIN or phrase), the native escape and history. |
+| Web UI (`/focus`, progress badge in app and lesson headers) | COMPLETE_AND_TESTED | `frontend/src/features/focus/*` | E2E covers start, badge, lesson completion unlocking, cancel and the emergency countdown. Passes axe. |
+| macOS lock app (`platform/focus-lock`) | IMPLEMENTED_PARTIALLY_TESTED | `FocusLock.swift`, `install.sh`, `uninstall.sh` | Compiles with swiftc and passes `--selftest` (7 cases: lock, unlock, escape release, re-lock on a new session, brief outage, fail-open after ~30 s, outage never starts a lock). `--check` passed against the Docker server. **Not verified:** the real full-screen lock was not triggered in this session, so it would not lock the learner's screen while work was in progress. Try it once with a short session and the escape key. |
+
 # Study journal + smarter assistant — 2026-10-18
 
 | Feature | Status | Files | Evidence / remaining work |
