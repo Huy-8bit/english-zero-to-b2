@@ -74,6 +74,14 @@ func reportEscape(_ cfg: Config, sessionId: String) {
     URLSession.shared.dataTask(with: req).resume()
 }
 
+// MARK: - diagnostics (LaunchAgent sends stderr to ~/.english-focus-lock/agent.log)
+
+func diag(_ s: String) {
+    let f = ISO8601DateFormatter()
+    f.formatOptions = [.withInternetDateTime, .withFractionalSeconds]
+    FileHandle.standardError.write("\(f.string(from: Date())) \(s)\n".data(using: .utf8)!)
+}
+
 // MARK: - lock windows
 
 final class LockWindow: NSWindow {
@@ -106,6 +114,7 @@ final class Controller: NSObject, NSApplicationDelegate, WKNavigationDelegate, W
     var keyMonitor: Any?
     var escapeView: NSView?
     var escapeTimer: Timer?
+    var lastState = ""
 
     func applicationDidFinishLaunching(_ n: Notification) {
         NSApp.setActivationPolicy(.accessory)
@@ -128,7 +137,11 @@ final class Controller: NSObject, NSApplicationDelegate, WKNavigationDelegate, W
                                failures: self.failures, currentlyLocked: self.isLocked)
                 if d.lock && !self.isLocked { self.lock() }
                 if !d.lock && self.isLocked { self.unlock() }
-                if self.isLocked, let w = self.mainWindow, !w.isKeyWindow, self.escapeView == nil { self.focusMain() }
+                if self.isLocked, let w = self.mainWindow {
+                    let st = "active=\(NSApp.isActive) key=\(w.isKeyWindow) fr=\(w.firstResponder.map { String(describing: type(of: $0)) } ?? "nil") front=\(NSWorkspace.shared.frontmostApplication?.bundleIdentifier ?? "?")"
+                    if st != self.lastState { diag("state \(st)"); self.lastState = st }
+                }
+                if self.isLocked, let w = self.mainWindow, !NSApp.isActive || !w.isKeyWindow, self.escapeView == nil { self.focusMain() }
             }
         }
     }
@@ -150,11 +163,18 @@ final class Controller: NSObject, NSApplicationDelegate, WKNavigationDelegate, W
     }
 
     func lock() {
+        diag("lock session=\(sessionId ?? "-")")
         isLocked = true
-        NSApp.setActivationPolicy(.regular)
+        // The activation policy stays .accessory. A .regular app's windows cannot join another app's full-screen Space,
+        // so the lock window stayed on the desktop Space while clicks fell through to the full-screen app underneath
+        // (every first click activated that app, the lock took focus back, and only the second click registered).
         buildWindows()
         NSApp.presentationOptions = [.hideDock, .hideMenuBar, .disableProcessSwitching, .disableForceQuit,
                                      .disableSessionTermination, .disableHideApplication, .disableAppleMenu]
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
+            guard let w = self?.mainWindow else { return }
+            diag("lock window onActiveSpace=\(w.isOnActiveSpace) visible=\(w.occlusionState.contains(.visible))")
+        }
         keyMonitor = NSEvent.addLocalMonitorForEvents(matching: .keyDown) { [weak self] e in
             let mods: NSEvent.ModifierFlags = [.control, .option, .command, .shift]
             if e.modifierFlags.intersection(.deviceIndependentFlagsMask).isSuperset(of: mods) && e.charactersIgnoringModifiers?.lowercased() == "u" {
@@ -166,6 +186,7 @@ final class Controller: NSObject, NSApplicationDelegate, WKNavigationDelegate, W
     }
 
     func unlock() {
+        diag("unlock")
         isLocked = false
         NSApp.presentationOptions = []
         if let m = keyMonitor { NSEvent.removeMonitor(m); keyMonitor = nil }
@@ -228,13 +249,15 @@ final class Controller: NSObject, NSApplicationDelegate, WKNavigationDelegate, W
         NSApp.activate(ignoringOtherApps: true)
         w.makeKeyAndOrderFront(nil)
         w.orderFrontRegardless()
-        if let v = web { w.makeFirstResponder(v) }
+        // Only when focus left the page: resetting the first responder blurs the focused input in the page.
+        if let v = web, !((w.firstResponder as? NSView)?.isDescendant(of: v) ?? false) { w.makeFirstResponder(v) }
     }
 
     @objc func otherAppActivated(_ n: Notification) {
         guard isLocked else { return }
         let app = n.userInfo?[NSWorkspace.applicationUserInfoKey] as? NSRunningApplication
         if app?.processIdentifier != ProcessInfo.processInfo.processIdentifier {
+            diag("other app activated: \(app?.bundleIdentifier ?? "?") → refocus")
             windows.forEach { $0.orderFrontRegardless() }
             focusMain()
         }

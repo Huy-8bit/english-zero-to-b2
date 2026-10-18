@@ -33,6 +33,10 @@ Tự kiểm tra: `--selftest` (logic khóa/mở) và `--clicktest` (cú bấm đ
 
 Mọi lần mở khẩn cấp đều được ghi trong lịch sử buổi học.
 
+## Nếu phải bấm hai lần mới nhận
+
+Mở `~/.english-focus-lock/agent.log` và tìm dòng `lock window onActiveSpace=…` của lần khóa gần nhất. Giá trị `false` nghĩa là cửa sổ khóa không nằm trên Space đang hiển thị, nên cú bấm rơi xuống ứng dụng toàn màn hình bên dưới. Ứng dụng giữ chế độ `accessory` để tránh lỗi này; hãy cài lại bằng `./install.sh` nếu bạn đang dùng bản cũ.
+
 ## Giới hạn
 
 - Đây là công cụ tự kỷ luật, không phải phần mềm kiểm soát chống người dùng. Người có quyền quản trị máy luôn gỡ được.
