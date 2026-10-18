@@ -13,14 +13,15 @@ export default defineConfig({
   retries: 0,
   reporter: [["list"]],
   use: {
-    baseURL: "http://localhost:5174", trace: "retain-on-failure", channel: process.env.PW_CHANNEL ?? "chrome",
-    permissions: ["microphone"],
-    launchOptions: { args: ["--use-fake-ui-for-media-stream", "--use-fake-device-for-media-stream"] },
+    baseURL: "http://localhost:5174", trace: "retain-on-failure",
   },
   projects: [
     { name: "desktop", use: { ...devices["Desktop Chrome"], channel: process.env.PW_CHANNEL ?? "chrome", permissions: ["microphone"],
       launchOptions: { args: ["--use-fake-ui-for-media-stream", "--use-fake-device-for-media-stream"] } }, testIgnore: /mobile\.spec\.ts/ },
     { name: "mobile", use: { ...devices["Pixel 7"], channel: process.env.PW_CHANNEL ?? "chrome" }, testMatch: /mobile\.spec\.ts/ },
+    // The macOS Focus Lock window renders the app with WebKit: run the screens used inside the lock there too.
+    { name: "webkit-lock", use: { ...devices["Desktop Safari"], viewport: { width: 1512, height: 982 },
+      userAgent: `${devices["Desktop Safari"].userAgent} EnglishFocusLock/1.0` }, testMatch: /(assistant|focus)\.spec\.ts/ },
   ],
   webServer: [
     {

@@ -14,6 +14,8 @@ cd platform/focus-lock
 
 Kiểm tra kết nối: `~/Applications/EnglishFocusLock.app/Contents/MacOS/EnglishFocusLock --check`
 
+Tự kiểm tra: `--selftest` (logic khóa/mở) và `--clicktest` (cú bấm đầu tiên vào cửa sổ khóa phải tới được trang).
+
 ## Khi đang khóa
 
 - Một cửa sổ phủ mọi màn hình. Màn hình chính hiện trang học, chỉ mở được địa chỉ của máy chủ học.

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { Bot, ChevronRight, Info, Send, Trash2, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ChatHint, ChatInput } from "@/components/ChatInput";
 import { Markdown } from "@/components/Markdown";
 import { AIErrorBox, AILoading, useAIStatus } from "@/components/ai/AIStatus";
 import { cn } from "@/lib/utils";
@@ -18,8 +19,10 @@ export function AssistantButton() {
     if (wasOpen.current && !open) btn.current?.focus({ preventScroll: true });
     wasOpen.current = open;
   }, [open]);
+  // Always opens (never toggles): a double click — or a click the OS counts twice — must not open and close at once.
+  // The panel closes with its × button or Esc.
   return (
-    <button ref={btn} onClick={() => setOpen(!open)} aria-label={open ? "Đóng trợ lý học tập" : "Mở trợ lý học tập"} aria-expanded={open}
+    <button ref={btn} onClick={() => setOpen(true)} aria-label="Mở trợ lý học tập" aria-expanded={open}
       title="Trợ lý học tập" className="flex items-center gap-1.5 rounded-xl px-2.5 py-2 text-sm font-medium text-primary hover:bg-primary-soft">
       <Bot size={18} /><span className="hidden sm:inline">Trợ lý</span>
     </button>
@@ -40,7 +43,7 @@ function AssistantPanel({ onClose }: { onClose: () => void }) {
   const [text, setText] = useState("");
   const [busy, setBusy] = useState(false);
   const [err, setErr] = useState<{ e: unknown; q: { action?: AssistantAction; message?: string } } | null>(null);
-  const input = useRef<HTMLInputElement>(null);
+  const input = useRef<HTMLTextAreaElement>(null);
   const end = useRef<HTMLDivElement>(null);
   const messages: AssistantMessage[] = [...(hist.data ?? []), ...(asking ? [{ role: "user" as const, content: asking, cards: [] }] : [])];
 
@@ -118,12 +121,12 @@ function AssistantPanel({ onClose }: { onClose: () => void }) {
               className="rounded-full border border-border px-2.5 py-1 text-xs hover:border-primary/50 hover:bg-primary-soft disabled:opacity-50">{q.label}</button>
           ))}
         </div>
-        <form className="flex gap-2" onSubmit={(e) => { e.preventDefault(); send(); }}>
-          <input ref={input} value={text} onChange={(e) => setText(e.target.value)} maxLength={1000} disabled={busy}
-            placeholder="Ví dụ: Tuần này tôi nên tập trung vào gì?" aria-label="Câu hỏi cho trợ lý"
-            className="h-10 flex-1 rounded-xl border border-border bg-surface px-3 text-sm outline-none focus:border-primary focus:ring-2 focus:ring-primary/20" />
+        <form className="flex items-end gap-2" onSubmit={(e) => { e.preventDefault(); send(); }}>
+          <ChatInput ref={input} value={text} onChange={setText} onSend={send} disabled={busy}
+            placeholder="Ví dụ: Tuần này tôi nên tập trung vào gì?" label="Câu hỏi cho trợ lý" />
           <Button type="submit" size="icon" disabled={busy || !text.trim()} aria-label="Gửi"><Send size={16} /></Button>
         </form>
+        <ChatHint />
       </div>
     </aside>
   );

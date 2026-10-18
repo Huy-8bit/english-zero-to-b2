@@ -1,3 +1,10 @@
+# Fixes after first use of focus mode — 2026-10-18
+
+- **Lock window needed two clicks.** AppKit used the first click on a non-key window only to activate it. Fix: `LockWebView.acceptsFirstMouse → true`; secondary-screen windows can no longer take key status; the learning window regains key focus on every poll. `EnglishFocusLock --clicktest` proves it with a synthetic click on a non-key window: the fixed view receives the first click, the plain `WKWebView` control does not.
+- **Assistant could not be opened while locked.** The header button toggled, so a double click (or a click counted twice) opened and then closed the panel. It now always opens; the panel closes with × or Esc.
+- **Enter added a new line in the lesson "Hỏi AI" box.** New shared `ChatInput` (lesson tutor and assistant): Enter sends, Shift+Enter adds a new line, and Enter during input-method composition (Vietnamese Telex/VNI) does not send.
+- **Tests:** a new Playwright project, `webkit-lock`, runs the assistant and focus specs in WebKit with the lock app's user agent. Playwright: 47/47 passed (desktop Chrome, mobile, WebKit).
+
 # Focus mode / study lock — 2026-10-18
 
 | Feature | Status | Files | Evidence / remaining work |

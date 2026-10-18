@@ -58,3 +58,30 @@ test("study journal records today's lesson and vocabulary; the assistant reports
   await page.getByRole("button", { name: "Gần đây tôi học gì?" }).click();
   await expect(page.getByRole("complementary", { name: "Trợ lý học tập" }).getByText("7 ngày qua")).toBeVisible();
 });
+
+test("chat boxes: Enter sends, Shift+Enter is a new line, Enter while composing Vietnamese does not send", async ({ page }) => {
+  await page.goto("/learn/A1-G001");
+  await page.getByRole("button", { name: "Hỏi AI về bài này" }).click();
+  const box = page.getByLabel("Câu hỏi cho gia sư");
+  await box.fill("Dòng một");
+  await box.press("Shift+Enter");
+  await box.pressSequentially("dòng hai");
+  await expect(box).toHaveValue("Dòng một\ndòng hai");
+  // an Enter that only confirms an input-method composition (Telex/VNI) must not send
+  await box.evaluate((el) => el.dispatchEvent(new KeyboardEvent("keydown", { key: "Enter", bubbles: true, cancelable: true, isComposing: true })));
+  await expect(box).toHaveValue("Dòng một\ndòng hai");
+  await box.press("Enter");
+  await expect(box).toHaveValue("");
+  await expect(page.getByText("dòng hai").first()).toBeVisible(); // the question appears in the conversation
+
+  await page.goto("/");
+  const open = page.getByRole("button", { name: "Mở trợ lý học tập" });
+  await open.dblclick(); // a double click must not open and immediately close the panel
+  const panel = page.getByRole("complementary", { name: "Trợ lý học tập" });
+  await expect(panel).toBeVisible();
+  const q = panel.getByLabel("Câu hỏi cho trợ lý");
+  await q.fill("Tôi nên học gì tiếp theo?");
+  await q.press("Enter");
+  await expect(q).toHaveValue("");
+  await expect(panel.getByText("Gợi ý tiếp theo").last()).toBeVisible();
+});

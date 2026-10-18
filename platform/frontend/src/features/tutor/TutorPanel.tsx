@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Send } from "lucide-react";
 import { ai } from "@/services/ai";
 import { Button } from "@/components/ui/button";
-import { Textarea } from "@/components/ui/misc";
+import { ChatHint, ChatInput } from "@/components/ChatInput";
 import { Markdown } from "@/components/Markdown";
 import { AIErrorBox, AILoading, AIUnavailable, SimulatedBanner, useAIStatus } from "@/components/ai/AIStatus";
 
@@ -71,10 +71,12 @@ export function TutorPanel({ unitId, stepIndex, lastItemId }: { unitId: string; 
           {err && <AIErrorBox error={err.e} onRetry={err.retry} />}
         </div>
       </div>
-      <form className="flex shrink-0 gap-2 border-t border-border pt-3" onSubmit={(e) => { e.preventDefault(); if (msg.trim()) ask("chat", msg.trim(), msg.trim()); }}>
-        <Textarea rows={2} value={msg} onChange={(e) => setMsg(e.target.value)} placeholder="Hỏi bất kỳ điều gì về bài này… (vd: Tại sao She goes mà I go?)" aria-label="Câu hỏi cho gia sư" />
+      <form className="flex shrink-0 items-end gap-2 border-t border-border pt-3" onSubmit={(e) => { e.preventDefault(); if (msg.trim()) ask("chat", msg.trim(), msg.trim()); }}>
+        <ChatInput value={msg} onChange={setMsg} onSend={() => { if (msg.trim()) ask("chat", msg.trim(), msg.trim()); }}
+          disabled={busy} placeholder="Hỏi bất kỳ điều gì về bài này… (vd: Tại sao She goes mà I go?)" label="Câu hỏi cho gia sư" />
         <Button type="submit" size="icon" disabled={busy || !msg.trim()} aria-label="Gửi"><Send size={16} /></Button>
       </form>
+      <ChatHint />
     </div>
   );
 }

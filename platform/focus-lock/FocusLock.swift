@@ -81,9 +81,22 @@ final class LockWindow: NSWindow {
     override var canBecomeMain: Bool { true }
 }
 
+/// Secondary screens: covered, but never take keyboard focus away from the learning window.
+final class PassiveWindow: NSWindow {
+    override var canBecomeKey: Bool { false }
+    override var canBecomeMain: Bool { false }
+}
+
+/// The first click goes straight to the page. Without this, AppKit uses a click on a window that is not key only to
+/// activate it, so every button needed two clicks.
+final class LockWebView: WKWebView {
+    override func acceptsFirstMouse(for event: NSEvent?) -> Bool { true }
+}
+
 final class Controller: NSObject, NSApplicationDelegate, WKNavigationDelegate, WKUIDelegate {
     let cfg = Config.load()
-    var windows: [LockWindow] = []
+    var windows: [NSWindow] = []
+    var mainWindow: LockWindow?
     var web: WKWebView?
     var isLocked = false
     var sessionId: String?
@@ -115,6 +128,7 @@ final class Controller: NSObject, NSApplicationDelegate, WKNavigationDelegate, W
                                failures: self.failures, currentlyLocked: self.isLocked)
                 if d.lock && !self.isLocked { self.lock() }
                 if !d.lock && self.isLocked { self.unlock() }
+                if self.isLocked, let w = self.mainWindow, !w.isKeyWindow, self.escapeView == nil { self.focusMain() }
             }
         }
     }
@@ -139,7 +153,6 @@ final class Controller: NSObject, NSApplicationDelegate, WKNavigationDelegate, W
         isLocked = true
         NSApp.setActivationPolicy(.regular)
         buildWindows()
-        NSApp.activate(ignoringOtherApps: true)
         NSApp.presentationOptions = [.hideDock, .hideMenuBar, .disableProcessSwitching, .disableForceQuit,
                                      .disableSessionTermination, .disableHideApplication, .disableAppleMenu]
         keyMonitor = NSEvent.addLocalMonitorForEvents(matching: .keyDown) { [weak self] e in
@@ -159,6 +172,7 @@ final class Controller: NSObject, NSApplicationDelegate, WKNavigationDelegate, W
         escapeTimer?.invalidate(); escapeView?.removeFromSuperview(); escapeView = nil
         windows.forEach { $0.orderOut(nil) }
         windows.removeAll()
+        mainWindow = nil
         web = nil
         NSApp.setActivationPolicy(.accessory)
     }
@@ -166,27 +180,32 @@ final class Controller: NSObject, NSApplicationDelegate, WKNavigationDelegate, W
     func buildWindows() {
         windows.forEach { $0.orderOut(nil) }
         windows.removeAll()
-        for (i, screen) in NSScreen.screens.enumerated() {
-            let w = LockWindow(contentRect: screen.frame, styleMask: [.borderless], backing: .buffered, defer: false, screen: screen)
+        mainWindow = nil
+        let main = NSScreen.main ?? NSScreen.screens.first
+        for screen in NSScreen.screens {
+            let isMain = screen == main
+            let w: NSWindow = isMain ? LockWindow(contentRect: screen.frame, styleMask: [.borderless], backing: .buffered, defer: false, screen: screen)
+                                     : PassiveWindow(contentRect: screen.frame, styleMask: [.borderless], backing: .buffered, defer: false, screen: screen)
             w.level = NSWindow.Level(rawValue: NSWindow.Level.mainMenu.rawValue + 2)
             w.collectionBehavior = [.canJoinAllSpaces, .fullScreenAuxiliary, .stationary, .ignoresCycle]
             w.isReleasedWhenClosed = false
             w.backgroundColor = .black
+            w.acceptsMouseMovedEvents = true
             w.setFrame(screen.frame, display: true)
-            if i == 0 {
+            if isMain, let lw = w as? LockWindow {
                 let conf = WKWebViewConfiguration()
                 conf.mediaTypesRequiringUserActionForPlayback = []
-                let v = WKWebView(frame: NSRect(origin: .zero, size: screen.frame.size), configuration: conf)
+                let v = LockWebView(frame: NSRect(origin: .zero, size: screen.frame.size), configuration: conf)
                 v.autoresizingMask = [.width, .height]
-                v.customUserAgent = nil
                 v.navigationDelegate = self
                 v.uiDelegate = self
                 v.evaluateJavaScript("navigator.userAgent") { ua, _ in
                     v.customUserAgent = "\((ua as? String) ?? "Mozilla/5.0") EnglishFocusLock/1.0"
                     v.load(URLRequest(url: self.cfg.server.appendingPathComponent("focus")))
                 }
-                w.contentView = v
+                lw.contentView = v
                 web = v
+                mainWindow = lw
             } else {
                 let label = NSTextField(labelWithString: "Đang học tập trung — hãy dùng màn hình chính")
                 label.textColor = .white
@@ -196,21 +215,28 @@ final class Controller: NSObject, NSApplicationDelegate, WKNavigationDelegate, W
                 label.frame.origin = NSPoint(x: (c.frame.width - label.frame.width) / 2, y: c.frame.height / 2)
                 c.addSubview(label)
                 w.contentView = c
+                w.orderFrontRegardless()
             }
-            w.makeKeyAndOrderFront(nil)
-            w.orderFrontRegardless()
             windows.append(w)
         }
-        windows.first?.makeKey()
+        focusMain()
+    }
+
+    /// Keep keyboard and mouse focus on the learning window (so the first click and typing always reach the page).
+    func focusMain() {
+        guard let w = mainWindow else { return }
+        NSApp.activate(ignoringOtherApps: true)
+        w.makeKeyAndOrderFront(nil)
+        w.orderFrontRegardless()
+        if let v = web { w.makeFirstResponder(v) }
     }
 
     @objc func otherAppActivated(_ n: Notification) {
         guard isLocked else { return }
         let app = n.userInfo?[NSWorkspace.applicationUserInfoKey] as? NSRunningApplication
         if app?.processIdentifier != ProcessInfo.processInfo.processIdentifier {
-            NSApp.activate(ignoringOtherApps: true)
             windows.forEach { $0.orderFrontRegardless() }
-            windows.first?.makeKey()
+            focusMain()
         }
     }
 
@@ -234,7 +260,7 @@ final class Controller: NSObject, NSApplicationDelegate, WKNavigationDelegate, W
 
     // MARK: offline escape (10-second confirmation inside the lock window)
     func showEscape() {
-        guard escapeView == nil, let host = windows.first?.contentView else { return }
+        guard escapeView == nil, let host = mainWindow?.contentView else { return }
         let box = NSView(frame: NSRect(x: (host.frame.width - 520) / 2, y: (host.frame.height - 200) / 2, width: 520, height: 200))
         box.wantsLayer = true
         box.layer?.backgroundColor = NSColor.windowBackgroundColor.cgColor
@@ -284,8 +310,66 @@ func selftest() -> Int32 {
     return fails == 0 ? 0 : 1
 }
 
+/// --clicktest: a single click on a window that is NOT key must reach the page (the "two clicks" bug).
+/// Runs a fixed web view (LockWebView) and, as a control, a plain WKWebView; uses a small off-screen window.
+final class ClickTest: NSObject, NSApplicationDelegate, WKNavigationDelegate {
+    var results: [String: Bool] = [:]
+    var pending: [(String, WKWebView)] = []
+    var holder: NSWindow?
+    var keep: [NSWindow] = []
+
+    func applicationDidFinishLaunching(_ n: Notification) {
+        NSApp.setActivationPolicy(.accessory)
+        holder = NSWindow(contentRect: NSRect(x: -4000, y: -4000, width: 100, height: 100), styleMask: [.titled], backing: .buffered, defer: false)
+        pending = [("LockWebView", LockWebView(frame: NSRect(x: 0, y: 0, width: 300, height: 200))),
+                   ("WKWebView (control)", WKWebView(frame: NSRect(x: 0, y: 0, width: 300, height: 200)))]
+        runNext()
+    }
+
+    func runNext() {
+        guard let (name, view) = pending.first else {
+            for (k, v) in results.sorted(by: { $0.key < $1.key }) { print("\(k): first click reached page = \(v)") }
+            exit(results["LockWebView"] == true ? 0 : 1)
+        }
+        let w = LockWindow(contentRect: NSRect(x: -3000, y: -3000, width: 300, height: 200), styleMask: [.borderless], backing: .buffered, defer: false)
+        w.contentView = view
+        keep.append(w)
+        view.navigationDelegate = self
+        w.orderFrontRegardless()
+        view.loadHTMLString("<html><body style='margin:0'><button style='position:fixed;inset:0;width:100%;height:100%' onclick=\"document.title='clicked'\">x</button></body></html>", baseURL: nil)
+    }
+
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        guard let (name, view) = pending.first, view === webView, let w = view.window else { return }
+        holder?.makeKeyAndOrderFront(nil)   // the lock window is not key, like right after activation
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            let p = NSPoint(x: 150, y: 100)
+            for type in [NSEvent.EventType.leftMouseDown, .leftMouseUp] {
+                if let e = NSEvent.mouseEvent(with: type, location: p, modifierFlags: [], timestamp: ProcessInfo.processInfo.systemUptime,
+                                              windowNumber: w.windowNumber, context: nil, eventNumber: 0, clickCount: 1, pressure: 1) {
+                    w.sendEvent(e)
+                }
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
+                view.evaluateJavaScript("document.title") { t, _ in
+                    self.results[name] = (t as? String) == "clicked"
+                    w.orderOut(nil)
+                    self.pending.removeFirst()
+                    self.runNext()
+                }
+            }
+        }
+    }
+}
+
 let args = CommandLine.arguments
 if args.contains("--selftest") { exit(selftest()) }
+if args.contains("--clicktest") {
+    let a = NSApplication.shared
+    let t = ClickTest()
+    a.delegate = t
+    a.run()
+}
 if args.contains("--check") {
     let cfg = Config.load()
     let sem = DispatchSemaphore(value: 0)
