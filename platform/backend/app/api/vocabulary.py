@@ -14,7 +14,7 @@ from ..ai.services import AIServices
 from ..models import User, VocabCollection, VocabCollectionItem, VocabDialogue, VocabEntry, VocabSession
 from ..vocabulary import analytics, enrich, lexicon, service as V, srs
 from ..vocabulary.ai import SITUATIONS, TUTOR_ACTIONS, VocabAI
-from ..vocabulary.sessions import MODES, SessionService, plan, profile, speak_fallback, weak_entries
+from ..vocabulary.sessions import MODES, SessionService, plan, profile, speak_fallback, sprint_status, weak_entries
 from ..vocabulary.topics import TOPICS
 from .deps import current_user, get_db
 
@@ -224,8 +224,28 @@ def get_plan(db: Session = Depends(get_db), user: User = Depends(current_user)):
     return plan(db, user.id)
 
 
+@router.get("/sprint")
+def get_sprint(db: Session = Depends(get_db), user: User = Depends(current_user)):
+    """Intensive learning: batches of 10 new words, the next batch to triage, and the real review load ahead."""
+    return sprint_status(db, user.id)
+
+
+class KnownIn(BaseModel):
+    entry_ids: list[str] = Field(min_length=1, max_length=30)
+
+
+@router.post("/sprint/known")
+def sprint_known(body: KnownIn, db: Session = Depends(get_db), user: User = Depends(current_user)):
+    """Triage: words the learner already knows are skipped (reversible on the word page); they do not count as learned today."""
+    ids = list(db.scalars(select(VocabEntry.id).where(VocabEntry.id.in_(body.entry_ids))))
+    for eid in ids:
+        V.update_progress(db, user.id, eid, "known")
+    db.commit()
+    return {"known": len(ids)}
+
+
 class SettingsIn(BaseModel):
-    daily_new: int | None = Field(None, ge=0, le=30)
+    daily_new: int | None = Field(None, ge=0, le=150)
     retention: float | None = Field(None, ge=0.75, le=0.97)
     timed_speed: bool | None = None
     accent: Literal["uk", "us"] | None = None

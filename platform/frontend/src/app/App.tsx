@@ -13,6 +13,7 @@ const ModulePage = lazy(() => import("@/features/catalog/ModulePage"));
 const VocabularyPage = lazy(() => import("@/features/vocabulary/VocabularyPage"));
 const VocabHome = lazy(() => import("@/features/vocab/VocabHome"));
 const VocabToday = lazy(() => import("@/features/vocab/TodayPage"));
+const VocabSprint = lazy(() => import("@/features/vocab/SprintPage"));
 const VocabExplorer = lazy(() => import("@/features/vocab/ExplorerPage"));
 const VocabWord = lazy(() => import("@/features/vocab/WordPage"));
 const VocabNotebook = lazy(() => import("@/features/vocab/NotebookPage"));
@@ -64,6 +65,7 @@ export default function App() {
             <Route path="grammar" element={<ModulePage kind="grammar" />} />
             <Route path="vocabulary" element={<VocabHome />} />
             <Route path="vocabulary/today" element={<VocabToday />} />
+            <Route path="vocabulary/sprint" element={<VocabSprint />} />
             <Route path="vocabulary/explore" element={<VocabExplorer />} />
             <Route path="vocabulary/word/:id" element={<VocabWord />} />
             <Route path="vocabulary/notebook" element={<VocabNotebook />} />

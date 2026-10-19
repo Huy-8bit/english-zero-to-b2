@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
-import { CalendarCheck, Play, Save } from "lucide-react";
+import { Link } from "react-router-dom";
+import { CalendarCheck, Play, Save, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ErrorBox, PageHeader, Skeleton } from "@/components/ui/misc";
@@ -38,7 +39,10 @@ export default function TodayPage() {
             </ol>
             {!p.tasks.length && <p className="text-sm text-muted">Hôm nay không còn việc bắt buộc. Bạn có thể luyện thêm.</p>}
             <p className="text-xs text-muted">Mức độ: <b>{PROFILE_VI[p.profile.name]}</b> — {p.profile.reason_vi} {p.adjustments_vi.join(" ")}</p>
-            <Button size="lg" onClick={() => start("daily")} disabled={!!busy || !p.tasks.length}><Play size={18} />Bắt đầu: ôn → học mới → nhớ lại → ngữ cảnh</Button>
+            <div className="flex flex-wrap gap-2">
+              <Button size="lg" onClick={() => start("daily")} disabled={!!busy || !p.tasks.length}><Play size={18} />Bắt đầu: ôn → học mới → nhớ lại → ngữ cảnh</Button>
+              {p.new_goal > 10 && <Link to="/vocabulary/sprint"><Button size="lg" variant="outline"><Zap size={18} />Học cấp tốc ({p.new_left} từ, đợt 10 từ)</Button></Link>}
+            </div>
           </CardContent>
         </Card>
         <SettingsCard s={p.settings} />
@@ -86,7 +90,7 @@ function SettingsCard({ s }: { s: VocabSettings }) {
       <CardHeader><CardTitle>Tùy chọn</CardTitle></CardHeader>
       <CardContent className="space-y-3 text-sm">
         <label className="block">Số từ mới mỗi ngày: <b>{v.daily_new}</b>
-          <input type="range" min={0} max={20} value={v.daily_new} onChange={(e) => setV({ ...v, daily_new: Number(e.target.value) })} className="w-full" />
+          <input type="range" min={0} max={150} step={5} value={v.daily_new} onChange={(e) => setV({ ...v, daily_new: Number(e.target.value) })} className="w-full" />
         </label>
         <label className="block">Mức ghi nhớ mong muốn: <b>{Math.round(v.retention * 100)}%</b>
           <input type="range" min={80} max={95} value={Math.round(v.retention * 100)} onChange={(e) => setV({ ...v, retention: Number(e.target.value) / 100 })} className="w-full" />

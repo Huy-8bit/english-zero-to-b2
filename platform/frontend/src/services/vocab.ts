@@ -125,7 +125,13 @@ export interface EnrichmentStatus {
   review: { id: number; lemma: string; problems: string[]; model: string | null; result: { senses: { pos: string; meaning_vi: string; definition_en: string }[]; examples: { en: string; vi: string }[]; cefr_estimate: string; collocations: string[] } }[];
 }
 
-export type SessionKind = "daily" | "review" | "learn" | "flashcards" | "type" | "dictation" | "context" | "collocation" | "builder" | "use" | "speed" | "weak" | "custom" | "gaps";
+export type SessionKind = "daily" | "review" | "learn" | "sprint" | "flashcards" | "type" | "dictation" | "context" | "collocation" | "builder" | "use" | "speed" | "weak" | "custom" | "gaps";
+export interface SprintWord { entry_id: string; word: string; ipa: string | null; pos_vi: string; meaning_vi: string; cefr: string | null }
+export interface Sprint {
+  goal: number; learned_today: number; new_left: number; batch_size: number; batches_total: number; batches_done: number;
+  minutes_per_batch: number; minutes_left: number; due_now: number; backlog: number; adjustments_vi: string[];
+  review_forecast: { day: string; reviews: number }[]; next: { topic: string | null; words: SprintWord[] };
+}
 export interface SessionParams { topic?: string; level?: string; collection?: number; entry_ids?: string[]; size?: number }
 export interface EntryFilters { q?: string; level?: string; topic?: string; kind?: string; mastery?: string; saved?: boolean; difficult?: boolean; collection?: number; page?: number; size?: number; sort?: "order" | "az" }
 
@@ -147,6 +153,8 @@ export const vocab = {
   capture: (body: { text?: string; entry_id?: string; module: "reading" | "listening" | "writing" | "speaking" | "lesson"; context?: string; ref?: string; meaning_vi?: string; example?: string }) =>
     post<{ entry_id: string; lemma: string; personal: boolean; collection_id: number; added: boolean; progress: WordProgress }>("/api/vocab/capture", body),
   plan: () => call<Plan>("/api/vocab/plan"),
+  sprint: () => call<Sprint>("/api/vocab/sprint"),
+  sprintKnown: (entry_ids: string[]) => post<{ known: number }>("/api/vocab/sprint/known", { entry_ids }),
   saveSettings: (s: Partial<VocabSettings>) => call<VocabSettings>("/api/vocab/settings", { method: "PUT", body: JSON.stringify(s) }),
   start: (kind: SessionKind, params: SessionParams = {}) => post<Session>("/api/vocab/sessions", { kind, ...params }),
   startAI: (entry_ids?: string[]) => post<Session>("/api/vocab/sessions/ai", { entry_ids }),

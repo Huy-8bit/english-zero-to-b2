@@ -32,7 +32,7 @@ export function useStart() {
 
 export const SubNav = () => (
   <nav aria-label="Từ vựng" className="mb-5 flex flex-wrap gap-2 text-sm">
-    {[["/vocabulary", "Tổng quan"], ["/vocabulary/today", "Hôm nay"], ["/vocabulary/explore", "Khám phá từ"], ["/vocabulary/notebook", "Sổ từ của tôi"],
+    {[["/vocabulary", "Tổng quan"], ["/vocabulary/today", "Hôm nay"], ["/vocabulary/sprint", "Học cấp tốc"], ["/vocabulary/explore", "Khám phá từ"], ["/vocabulary/notebook", "Sổ từ của tôi"],
       ["/vocabulary/stats", "Thống kê"], ["/vocabulary/dialogue", "Tình huống thật"], ["/vocabulary/units", "Theo bài giáo trình"]].map(([to, l]) => (
       <Link key={to} to={to} className="rounded-full border border-border px-3 py-1 hover:bg-surface-2">{l}</Link>
     ))}

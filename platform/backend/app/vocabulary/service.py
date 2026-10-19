@@ -31,6 +31,7 @@ TEMPLATES = {
     "vstep": ("Từ vựng ôn VSTEP (ước lượng)", ["education", "environment", "technology", "health", "work-careers", "media-news",
                                              "social-problems", "culture-society", "academic"], ("B1", "B2")),
 }
+MAX_DAILY_NEW = 150  # intensive learners (e.g. 100 words/day in batches of 10)
 SETTINGS_DEFAULT = {"daily_new": 8, "retention": srs.DEFAULT_RETENTION, "timed_speed": False, "accent": "uk", "level": None}
 
 
@@ -49,7 +50,7 @@ def save_settings(db: Session, user_id: int, values: dict) -> dict:
     for k, v in values.items():
         if k in SETTINGS_DEFAULT and v is not None:
             cur[k] = v
-    cur["daily_new"] = max(0, min(30, int(cur["daily_new"])))
+    cur["daily_new"] = max(0, min(MAX_DAILY_NEW, int(cur["daily_new"])))
     cur["retention"] = max(0.75, min(0.97, float(cur["retention"])))
     p.preferences = {**(p.preferences or {}), "vocab": cur}
     return cur

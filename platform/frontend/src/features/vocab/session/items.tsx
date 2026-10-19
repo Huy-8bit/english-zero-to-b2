@@ -6,6 +6,7 @@ import { Input, Textarea } from "@/components/ui/misc";
 import { Badge } from "@/components/ui/badge";
 import { useUI } from "@/stores/ui";
 import { vocab, type SessionItem } from "@/services/vocab";
+import { Markdown } from "@/components/Markdown";
 import { Ipa, WordAudio, useAudio } from "../components";
 
 export type Submit = (body: Record<string, unknown>) => void;
@@ -46,6 +47,7 @@ export function LearnItem({ it, submit, busy }: P) {
           )}
         </motion.div>
       )}
+      {step >= 1 && it.entry_id && <Mnemonic entryId={it.entry_id} />}
       {step >= 2 && it.example && (
         <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} className="mx-auto max-w-xl text-left">
           <p className="text-lg"><i>{it.example.en}</i></p>
@@ -62,6 +64,23 @@ export function LearnItem({ it, submit, busy }: P) {
         </motion.div>
       )}
       <Button size="lg" onClick={next} disabled={busy}>{step + 1 < steps ? ["Xem nghĩa", "Xem ví dụ", "Xem cách dùng"][step] : "Tiếp tục"} <kbd className="ml-1 text-xs opacity-70">Enter</kbd></Button>
+    </div>
+  );
+}
+
+/** AI memory hint for a new word (association + a real-life phrase + a sentence to practise); cached per word on the server. */
+function Mnemonic({ entryId }: { entryId: string }) {
+  const [state, setState] = useState<{ busy: boolean; text: string | null; err: string | null }>({ busy: false, text: null, err: null });
+  if (state.text) return <div className="mx-auto max-w-xl rounded-2xl border border-border p-3 text-left text-sm"><p className="mb-1 text-xs font-semibold text-muted">Mẹo nhớ (AI gợi ý)</p><Markdown className="text-sm">{state.text}</Markdown></div>;
+  return (
+    <div>
+      <button type="button" disabled={state.busy} className="inline-flex items-center gap-1 text-sm text-primary hover:underline disabled:opacity-50"
+        onClick={async () => {
+          setState({ busy: true, text: null, err: null });
+          try { setState({ busy: false, text: (await vocab.tutor({ entry_id: entryId, action: "remember" })).answer, err: null }); }
+          catch (e) { setState({ busy: false, text: null, err: e instanceof Error ? e.message : "AI chưa sẵn sàng" }); }
+        }}><Lightbulb size={14} />{state.busy ? "Đang nghĩ mẹo nhớ…" : "Mẹo nhớ (AI)"}</button>
+      {state.err && <p className="text-xs text-warning">{state.err}</p>}
     </div>
   );
 }

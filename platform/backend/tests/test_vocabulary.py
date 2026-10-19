@@ -482,3 +482,50 @@ def test_every_mode_builds_items_that_grade_correctly(client, app, mode):
     if mode == "dictation":
         r = client.get(f"/api/vocab/sessions/{ses['id']}/items/{ses['items'][0]['id']}/speak-text")
         assert r.status_code == 200 and r.json()["b64"]  # AI off → browser speech fallback text after the item exists
+
+
+# ============================================================ intensive mode (e.g. 100 words/day)
+def test_sprint_batches_triage_and_review_forecast(client, app):
+    assert client.put("/api/vocab/settings", json={"daily_new": 100}).json()["daily_new"] == 100
+    assert client.put("/api/vocab/settings", json={"daily_new": 151}).status_code == 422
+    sp = client.get("/api/vocab/sprint").json()
+    assert sp["goal"] == 100 and sp["batches_total"] == 10 and sp["batch_size"] == 10 and sp["learned_today"] == 0
+    words = sp["next"]["words"]
+    assert len(words) == 15 and all(w["word"] and w["meaning_vi"] for w in words)
+    assert len(sp["review_forecast"]) == 7 and sp["review_forecast"][0]["reviews"] == 0
+    # triage: two words are already known → skipped, not counted as learned
+    known = [w["entry_id"] for w in words[:2]]
+    assert client.post("/api/vocab/sprint/known", json={"entry_ids": known}).json() == {"known": 2}
+    batch = [w["entry_id"] for w in words[2:12]]
+    s = start(client, "sprint", entry_ids=batch)
+    k = keys(app, s["id"])
+    types = Counter(it["type"] for it in s["items"])
+    assert types["learn"] == 10 and types["type_word"] == 10 and {eid(k, it) for it in s["items"]} == set(batch)
+    assert sum(1 for it in s["items"] if it["round"] == 2) == 10  # last listening/recognition round, shuffled
+    for it in s["items"]:
+        answer_item(client, s, it, right=True, store_answers=k)
+    client.post(f"/api/vocab/sessions/{s['id']}/finish")
+    sp2 = client.get("/api/vocab/sprint").json()
+    assert sp2["learned_today"] == 10 and sp2["batches_done"] == 1 and sp2["new_left"] == 90
+    assert not set(known) & {w["entry_id"] for w in sp2["next"]["words"]}
+    assert not set(batch) & {w["entry_id"] for w in sp2["next"]["words"]}
+    assert sum(d["reviews"] for d in sp2["review_forecast"]) >= 10  # the new words are scheduled within the week
+
+
+def test_known_words_from_triage_cannot_enter_a_sprint_and_daily_teaches_one_batch(client, app):
+    client.put("/api/vocab/settings", json={"daily_new": 100})
+    words = client.get("/api/vocab/sprint").json()["next"]["words"]
+    client.post("/api/vocab/sprint/known", json={"entry_ids": [words[0]["entry_id"]]})
+    s = start(client, "sprint", entry_ids=[w["entry_id"] for w in words[:4]])
+    k = keys(app, s["id"])
+    assert words[0]["entry_id"] not in {eid(k, it) for it in s["items"]}
+    d = start(client, "daily")
+    assert Counter(it["type"] for it in d["items"])["learn"] == 10  # 100/day is taught 10 at a time
+
+
+def test_backlog_from_earlier_days_reduces_new_words_but_todays_steps_do_not(client, app):
+    client.put("/api/vocab/settings", json={"daily_new": 100})
+    s = start(client, "flashcards", level="A1", size=40)
+    for it in s["items"]:
+        client.post(f"/api/vocab/sessions/{s['id']}/answer", json={"item_id": it["id"], "rating": 3})
+    assert client.get("/api/vocab/plan").json()["new_goal"] == 100  # today's learning steps are not a backlog

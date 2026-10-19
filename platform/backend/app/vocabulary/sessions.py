@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import base64
 import json
+import math
 import random
 import statistics
 import uuid
@@ -28,7 +29,7 @@ from .service import day_bounds, get_progress, mark_seen, settings, visible
 
 LEVELS = ["A1", "A2", "B1", "B2", "C1"]
 MODES = {
-    "daily": "Kế hoạch hôm nay", "review": "Ôn từ đến hạn", "learn": "Học từ mới", "flashcards": "Flashcards",
+    "daily": "Kế hoạch hôm nay", "review": "Ôn từ đến hạn", "learn": "Học từ mới", "sprint": "Học cấp tốc · đợt 10 từ", "flashcards": "Flashcards",
     "type": "Gõ đáp án", "dictation": "Nghe – chép chính tả", "context": "Từ trong ngữ cảnh", "collocation": "Collocation",
     "builder": "Sắp xếp câu", "use": "Tự đặt câu (AI chấm)", "speed": "Ôn nhanh", "weak": "Ôn từ khó", "custom": "Luyện theo bộ từ",
     "gaps": "Ôn lỗ hổng từ vựng",
@@ -131,6 +132,59 @@ def weak_entries(db: Session, user_id: int, limit: int = 10, exclude: set[str] =
 
 
 # ------------------------------------------------------------------ plan
+BATCH = 10  # new words per batch: small enough to remember, ~7–9 minutes
+
+
+def sprint_candidates(db: Session, user_id: int, n: int = 15) -> dict:
+    """Next new words for one batch, kept to one topic when possible (a shared scene is easier to remember)."""
+    from .topics import TOPICS
+
+    pool = new_candidates(db, user_id, max(n * 4, 40))
+    if not pool:
+        return {"topic": None, "entry_ids": []}
+    rows = db.execute(select(VocabEntryTopic.entry_id, VocabEntryTopic.topic_id).where(VocabEntryTopic.entry_id.in_(pool))).all()
+    topics: dict[str, list[str]] = {}
+    for eid, tid in rows:
+        topics.setdefault(tid, []).append(eid)
+    # the topic of the most urgent words (first in learning order), "core" (general words) only as a fallback
+    head = pool[: n]
+    best = max((t for t in topics if t != "core"), key=lambda t: (sum(1 for e in head if e in topics[t]), len(topics[t])), default=None)
+    chosen = [e for e in pool if best and e in topics[best]][:n] if best and len(topics[best]) >= 5 else []
+    chosen += [e for e in pool if e not in chosen][: n - len(chosen)]
+    name = next((t["name_vi"] for t in TOPICS if t["id"] == best), None) if len(chosen) and best and sum(e in topics[best] for e in chosen) >= 5 else None
+    return {"topic": name, "entry_ids": chosen}
+
+
+def sprint_status(db: Session, user_id: int) -> dict:
+    """Intensive mode: today's batches, the next batch to triage, and the real review load ahead (from the FSRS schedule)."""
+    pl = plan(db, user_id)
+    goal = int(pl["settings"]["daily_new"])
+    nxt = sprint_candidates(db, user_id, 15) if pl["new_left"] else {"topic": None, "entry_ids": []}
+    bundles = X.load_bundles(db, nxt["entry_ids"])
+    def meanings(b: X.Bundle) -> str:
+        # the first two senses with their part of speech (e.g. "can": danh từ "lon" · động từ "có thể")
+        parts = [f"({X.POS_VI.get(sn.pos or '', sn.pos or '')}) {X.short_meaning(sn.meaning_vi, 40)}" if sn.pos else X.short_meaning(sn.meaning_vi, 40)
+                 for sn in b.senses[:2]]
+        return " · ".join(dict.fromkeys(parts)) or X.short_meaning(b.meaning)
+    words = [{"entry_id": i, "word": b.e.headword or b.e.lemma, "ipa": b.e.ipa_uk or b.e.ipa_us, "pos_vi": X.POS_VI.get(b.pos, b.pos),
+              "meaning_vi": meanings(b), "cefr": b.e.cefr} for i in nxt["entry_ids"] if (b := bundles.get(i))]
+    start, _ = day_bounds()
+    forecast, before = [], 0
+    for d in range(7):
+        until = start + timedelta(days=d + 1)
+        n = db.scalar(select(func.count()).select_from(due_query(user_id, until).subquery())) or 0
+        # reviews that fall on that day (today also includes everything already overdue)
+        forecast.append({"day": (P.today() + timedelta(days=d)).isoformat(), "reviews": n - before})
+        before = n
+    per = pl["per_item_seconds"] or 9
+    batch_min = round((BATCH * (SECONDS_DEFAULT["learn"] + 3 * per)) / 60)
+    return {"goal": goal, "learned_today": pl["new_today"], "new_left": pl["new_left"], "batch_size": BATCH,
+            "batches_total": math.ceil(goal / BATCH) if goal else 0, "batches_done": pl["new_today"] // BATCH,
+            "minutes_per_batch": batch_min, "minutes_left": round(math.ceil(pl["new_left"] / BATCH) * batch_min),
+            "due_now": pl["due_now"], "backlog": pl["backlog"], "review_forecast": forecast, "adjustments_vi": pl["adjustments_vi"],
+            "next": {"topic": nxt["topic"], "words": words}}
+
+
 def plan(db: Session, user_id: int) -> dict:
     lexicon.ensure_imported(db)
     s = settings(db, user_id)
@@ -147,10 +201,14 @@ def plan(db: Session, user_id: int) -> dict:
     if prof["name"] == "support":
         goal = max(2, goal // 2)
         reasons.append("Giảm từ mới vì độ chính xác gần đây thấp.")
-    if due_today > 40:
-        cut = min(goal, (due_today - 40) // 10 + 1)
+    # reviews left over from earlier days come first; today's own learning-step reviews do not block new words
+    # (otherwise an intensive learner, e.g. 100 words/day, could never start the next batch)
+    backlog = db.scalar(select(func.count()).select_from(due_query(user_id, start).subquery())) or 0
+    limit = max(40, goal)
+    if backlog > limit:
+        cut = min(goal, (backlog - limit) // 10 + 1)
         goal -= cut
-        reasons.append(f"Còn {due_today} từ đến hạn — ưu tiên ôn trước, bớt {cut} từ mới.")
+        reasons.append(f"Còn {backlog} từ quá hạn ôn từ những ngày trước — ưu tiên ôn trước, bớt {cut} từ mới.")
     new_left = max(0, goal - new_today)
     weak = weak_entries(db, user_id, limit=8)
     learned_with_colls = db.scalar(select(func.count(VocabProgress.id)).join(VocabEntry, VocabEntry.id == VocabProgress.entry_id).where(
@@ -165,14 +223,15 @@ def plan(db: Session, user_id: int) -> dict:
     if due_today:
         tasks.append({"key": "review", "label_vi": f"Ôn {min(due_today, 40)} từ đến hạn", "count": min(due_today, 40)})
     if new_left:
-        tasks.append({"key": "learn", "label_vi": f"Học {new_left} từ mới", "count": new_left})
+        tasks.append({"key": "learn", "count": new_left, "label_vi": f"Học {new_left} từ mới" + (
+            f" ({math.ceil(new_left / BATCH)} đợt × {BATCH} từ)" if new_left > BATCH else "")})
     if weak:
         tasks.append({"key": "weak", "label_vi": f"Luyện lại {min(5, len(weak))} từ hay quên", "count": min(5, len(weak))})
     if colloc:
         tasks.append({"key": "collocation", "label_vi": f"Luyện {colloc} collocation", "count": colloc})
     if due_today or new_left or weak:
         tasks.append({"key": "context", "label_vi": "1 bài trắc nghiệm ngữ cảnh ngắn", "count": 1})
-    return {"new_goal": goal, "new_left": new_left, "new_today": new_today, "due_now": due_now, "due_today": due_today,
+    return {"new_goal": goal, "new_left": new_left, "new_today": new_today, "due_now": due_now, "due_today": due_today, "backlog": backlog,
             "weak": [p.entry_id for p in weak], "collocations": colloc, "tasks": tasks, "minutes": max(1, round(est / 60)) if tasks else 0,
             "per_item_seconds": per_item, "profile": prof, "adjustments_vi": reasons, "settings": s}
 
@@ -269,7 +328,7 @@ class SessionBuilder:
         if k == "daily":
             pl = plan(self.db, self.user_id)
             due = due_ids[:40]
-            new = new_candidates(self.db, self.user_id, pl["new_left"], **filters)
+            new = new_candidates(self.db, self.user_id, min(pl["new_left"], BATCH), **filters)  # one batch per session
             weak = [p.entry_id for p in weak_entries(self.db, self.user_id, 5, exclude=set(due) | set(new))]
             ids = due + new + weak
             self.load(ids)
@@ -296,6 +355,18 @@ class SessionBuilder:
             for i in ids:
                 if i in self.bundles:
                     self.add(self.review_item(self.bundles[i]))
+        elif k == "sprint":
+            # one batch: words from one topic (given after triage, or chosen here) → teach → recognise → recall,
+            # then a last shuffled listening round (spacing inside the session)
+            ids = prm.get("entry_ids") or sprint_candidates(self.db, self.user_id, BATCH)["entry_ids"]
+            ids = new_candidates(self.db, self.user_id, len(ids), entry_ids=ids) if prm.get("entry_ids") else ids
+            self.load(ids)
+            self.schedulable(ids)
+            self.teach(ids)
+            for i in self.rng.sample(ids, len(ids)):
+                b = self.bundles.get(i)
+                if b:
+                    self.add(X.listen_choose(b, self.pool()) or X.mc_word(b, self.pool()), round_=2)
         elif k == "learn":
             ids = new_candidates(self.db, self.user_id, size if prm.get("size") else (5 if self.support else 8), **filters)
             self.load(ids)
