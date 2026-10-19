@@ -74,7 +74,7 @@ export interface Step {
   passage_md?: string;
 }
 
-export type Verdict = "correct" | "incorrect" | "mismatch" | "submitted";
+export type Verdict = "correct" | "incorrect" | "mismatch" | "submitted" | "revealed";
 
 export interface ItemResult {
   item_id: string;

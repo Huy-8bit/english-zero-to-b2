@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { RotateCcw } from "lucide-react";
+import { Eye, RotateCcw } from "lucide-react";
 import type { ItemResult, QuizItem } from "@/types/content";
 import { InlineMd, Markdown } from "@/components/Markdown";
 import { Input, Textarea } from "@/components/ui/misc";
@@ -21,6 +21,8 @@ interface Props {
   onSelfAssess: (correct: boolean) => void;
   onRetry: () => void;
   onEnter?: () => void;
+  /** "I don't know": show the answer without answering (graded as not correct). Not offered in exams. */
+  onReveal?: () => void;
 }
 
 function shuffleOrder(n: number, seed: string): number[] {
@@ -36,7 +38,7 @@ function shuffleOrder(n: number, seed: string): number[] {
   return idx;
 }
 
-export function ItemCard({ item, unitId, docPath, draft, onDraft, result, locked, onSelfAssess, onRetry, onEnter }: Props) {
+export function ItemCard({ item, unitId, docPath, draft, onDraft, result, locked, onSelfAssess, onRetry, onEnter, onReveal }: Props) {
   const disabled = locked || !!result;
   const showPrompt = item.kind !== "long" || item.prompt_md.length < 1200;
   return (
@@ -55,6 +57,11 @@ export function ItemCard({ item, unitId, docPath, draft, onDraft, result, locked
       <div className="mt-3">
         <Answer item={item} unitId={unitId} draft={draft} onDraft={onDraft} disabled={disabled} result={result} onEnter={onEnter} />
       </div>
+      {!result && !locked && onReveal && (
+        <button type="button" onClick={onReveal} className="mt-2 inline-flex items-center gap-1.5 text-xs font-medium text-muted hover:text-primary">
+          <Eye size={14} />Không biết — xem đáp án
+        </button>
+      )}
       {result && <ResultPanel result={result} docPath={docPath} onSelfAssess={onSelfAssess} onRetry={locked ? undefined : onRetry} />}
     </div>
   );

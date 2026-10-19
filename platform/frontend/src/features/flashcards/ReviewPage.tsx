@@ -103,11 +103,15 @@ function CurriculumStep({ d, why, onDone }: { d: SmartReview; why: string; onDon
       <ul className="space-y-4">
         {list.map((m) => (
           <li key={m.item_id}>
-            <p className="mb-1 text-xs text-muted"><Link className="text-primary underline" to={`/learn/${m.unit_id}`}>{m.unit_id} · {m.unit_title}</Link> · {m.step_title} · lần trước bạn trả lời “{m.response}”</p>
+            <p className="mb-1 text-xs text-muted"><Link className="text-primary underline" to={`/learn/${m.unit_id}`}>{m.unit_id} · {m.unit_title}</Link> · {m.step_title} · {m.response ? <>lần trước bạn trả lời “{m.response}”</> : "lần trước bạn chưa biết và đã xem đáp án"}</p>
             <ItemCard item={m.item} unitId={m.unit_id} docPath="" draft={drafts[m.item_id]} onDraft={(dr) => setDrafts((x) => ({ ...x, [m.item_id]: dr }))}
               result={results[m.item_id]} locked={false}
               onSelfAssess={async (c) => { const r = results[m.item_id]; if (r) { const s = await api.selfAssess(r.attempt_id, c); setResults((x) => ({ ...x, [m.item_id]: s.result })); } }}
-              onRetry={() => setResults((x) => { const n = { ...x }; delete n[m.item_id]; return n; })} onEnter={() => check(m)} />
+              onRetry={() => setResults((x) => { const n = { ...x }; delete n[m.item_id]; return n; })} onEnter={() => check(m)}
+              onReveal={async () => {
+                try { const r = await api.submitQuiz(m.quiz_id, {}, [m.item_id]); setResults((x) => ({ ...x, ...r.results })); }
+                catch (e) { toast.error(e instanceof Error ? e.message : "Không xem được đáp án"); }
+              }} />
             {!results[m.item_id] && <Button size="sm" className="mt-2" onClick={() => check(m)} disabled={!isAnswered(m.item, drafts[m.item_id])}>Kiểm tra lại</Button>}
           </li>
         ))}

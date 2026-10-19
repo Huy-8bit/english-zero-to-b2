@@ -1,4 +1,4 @@
-import { CheckCircle2, CircleAlert, CircleHelp, XCircle } from "lucide-react";
+import { CheckCircle2, CircleAlert, CircleHelp, Eye, XCircle } from "lucide-react";
 import type { ItemResult } from "@/types/content";
 import { Markdown } from "@/components/Markdown";
 import { Button } from "@/components/ui/button";
@@ -10,6 +10,7 @@ const META = {
   incorrect: { label: "Chưa đúng", icon: XCircle, cls: "border-danger/40 bg-danger-soft text-danger" },
   mismatch: { label: "Chưa khớp đáp án mẫu — hãy so sánh và tự đánh giá", icon: CircleAlert, cls: "border-warning/40 bg-warning-soft text-warning" },
   submitted: { label: "Đã nộp — so sánh với đáp án gợi ý", icon: CircleHelp, cls: "border-primary/30 bg-primary-soft text-primary" },
+  revealed: { label: "Đáp án — câu này tính là chưa đúng và sẽ được ôn lại", icon: Eye, cls: "border-warning/40 bg-warning-soft text-warning" },
 };
 
 export function ResultPanel({ result, docPath, onSelfAssess, onRetry }: {
@@ -24,7 +25,7 @@ export function ResultPanel({ result, docPath, onSelfAssess, onRetry }: {
       <div className="mt-2 space-y-2 text-fg">
         {result.model_md ? (
           <div>
-            <p className="text-xs font-semibold uppercase tracking-wide text-muted">{result.verdict === "submitted" ? "Đáp án / bài mẫu từ giáo trình" : "Đáp án"}</p>
+            <p className="text-xs font-semibold uppercase tracking-wide text-muted">{result.verdict === "submitted" || (result.verdict === "revealed" && !result.correct_option) ? "Đáp án / bài mẫu từ giáo trình" : "Đáp án"}</p>
             <Markdown docPath={docPath} className="text-sm">{result.model_md}</Markdown>
           </div>
         ) : (
@@ -50,7 +51,7 @@ export function ResultPanel({ result, docPath, onSelfAssess, onRetry }: {
         <p className="mt-2 text-xs text-muted">Tự đánh giá: {result.self_correct ? "đúng ✓" : "cần xem lại"}</p>
       )}
       {onRetry && result.verdict !== "correct" && (
-        <button className="mt-2 text-xs font-medium text-primary underline" onClick={onRetry}>Làm lại câu này</button>
+        <button className="mt-2 text-xs font-medium text-primary underline" onClick={onRetry}>{result.verdict === "revealed" ? "Tự làm lại câu này (không nhìn đáp án)" : "Làm lại câu này"}</button>
       )}
     </div>
   );

@@ -208,7 +208,7 @@ def latest_attempts(db: Session, user_id: int, unit_id: str | None = None, quiz_
 def attempt_is_correct(a: Attempt) -> bool | None:
     if a.verdict == "correct":
         return True
-    if a.verdict == "incorrect":
+    if a.verdict in ("incorrect", "revealed"):  # revealed: the learner did not know and looked at the answer
         return False
     if a.self_correct is not None:
         return a.self_correct

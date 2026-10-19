@@ -120,6 +120,21 @@ export function JourneySession({ unitId, data, lesson, onClassic }: { unitId: st
     }
   }, [busy, drafts, ps, setJ, record, qc]);
 
+  const reveal = useCallback(async (c: QCard) => {
+    if (busy) return;
+    setBusy(true);
+    try {
+      const r = await api.submitQuiz(c.quizId, {}, [c.item.id]);
+      ps.setResults(r.results);
+      record(c, false); // not known: counts as wrong and comes back in the retry round
+      qc.invalidateQueries({ queryKey: ["day-plan"] });
+    } catch (e) {
+      toast.error(e instanceof Error ? e.message : "Không xem được đáp án");
+    } finally {
+      setBusy(false);
+    }
+  }, [busy, ps, record, qc]);
+
   const selfAssess = useCallback(async (c: QCard, ok: boolean) => {
     const r = ps.results[c.item.id];
     if (!r) return;
@@ -212,10 +227,12 @@ export function JourneySession({ unitId, data, lesson, onClassic }: { unitId: st
                 {card.kind === "pretest" && !result && <p className="mb-3 text-sm text-muted">Trả lời theo phỏng đoán. Bài học sẽ cho bạn biết vì sao — đoán trước giúp não chú ý hơn.</p>}
                 {card.intro && <ExerciseIntro md={card.intro} docPath={data.unit.path} />}
                 <ItemCard item={card.item} unitId={unitId} docPath={data.unit.path} draft={drafts[card.item.id]} onDraft={(d) => ps.setDraft(card.item.id, d)}
-                  result={result} locked={false} onSelfAssess={(ok) => void selfAssess(card, ok)} onRetry={() => ps.clearResult(card.item.id)} onEnter={() => void check(card)} />
+                  result={result} locked={false} onSelfAssess={(ok) => void selfAssess(card, ok)} onRetry={() => ps.clearResult(card.item.id)} onEnter={() => void check(card)}
+                  onReveal={() => void reveal(card)} />
                 {result && !(good(result) && card.kind !== "pretest") && <p className="mt-2 text-sm text-muted">{good(result) ? "Đoán đúng! Xem bài để chắc chắn vì sao."
                   : result.verdict === "mismatch" && result.self_correct === null ? "So sánh với đáp án: nếu đúng ý, bấm “Tôi làm đúng”; nếu không, câu này sẽ được hỏi lại ở cuối bài."
-                  : result.verdict === "submitted" ? "Tự đánh giá câu trả lời của bạn rồi bấm Tiếp." : "Chưa đúng — câu này sẽ được hỏi lại ở cuối bài."}</p>}
+                  : result.verdict === "submitted" ? "Tự đánh giá câu trả lời của bạn rồi bấm Tiếp."
+                  : result.verdict === "revealed" ? "Đọc kỹ đáp án và giải thích — câu này sẽ được hỏi lại ở cuối bài." : "Chưa đúng — câu này sẽ được hỏi lại ở cuối bài."}</p>}
               </div>
             )}
             {card.kind === "checkpoint" && <Checkpoint stage={card.stage} title={card.title} firstOk={firstOk} firstTotal={firsts.length} fire={fire} />}

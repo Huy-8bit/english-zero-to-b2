@@ -75,3 +75,15 @@ test("journey: finishing a lesson gives stars, XP and sends wrong answers to sma
   await page.getByRole("button", { name: /Về lịch học hôm nay/ }).click();
   await expect(page).toHaveURL(/\/today/);
 });
+
+test("a question I cannot answer: 'Không biết — xem đáp án' shows the answer and lets me continue", async ({ page }) => {
+  await page.goto("/learn/A0-G013");
+  await page.getByRole("button", { name: "Bắt đầu" }).click();
+  await expect(page.getByText(/Đoán trước 1\/2/)).toBeVisible();
+  await expect(page.getByRole("button", { name: /^Kiểm tra/ })).toBeDisabled(); // nothing typed or chosen
+  await page.getByRole("button", { name: "Không biết — xem đáp án" }).click();
+  await expect(page.getByText("Đáp án — câu này tính là chưa đúng và sẽ được ôn lại")).toBeVisible();
+  await expect(page.getByText(/sẽ được hỏi lại ở cuối bài/)).toBeVisible();
+  await page.getByRole("button", { name: /^Tiếp/ }).click();
+  await expect(page.getByText(/Đoán trước 2\/2/)).toBeVisible();
+});

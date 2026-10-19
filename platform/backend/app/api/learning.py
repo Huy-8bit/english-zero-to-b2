@@ -77,7 +77,8 @@ def get_quiz(quiz_id: str, db: Session = Depends(get_db), store: ContentStore = 
 @router.post("/quizzes/{quiz_id}/submit")
 def submit_quiz(quiz_id: str, body: QuizSubmitIn, db: Session = Depends(get_db), store: ContentStore = Depends(get_store),
                 user: User = Depends(current_user)):
-    request_hash = hashlib.sha256(json.dumps(body.answers, sort_keys=True, ensure_ascii=False).encode()).hexdigest()
+    request_hash = hashlib.sha256(json.dumps({"answers": body.answers, "reveal": sorted(body.reveal)} if body.reveal else body.answers,
+                                             sort_keys=True, ensure_ascii=False).encode()).hexdigest()
 
     def previous_submission():
         if not body.client_submission_id:
@@ -97,9 +98,12 @@ def submit_quiz(quiz_id: str, body: QuizSubmitIn, db: Session = Depends(get_db),
     items = {iid: it for iid, it in b.items.items() if it.quiz_id == quiz_id}
     if not items:
         raise HTTPException(404, "Quiz not found")
-    unknown = [k for k in body.answers if k not in items]
+    unknown = [k for k in [*body.answers, *body.reveal] if k not in items]
     if unknown:
         raise HTTPException(422, f"Items not in this quiz: {unknown[:5]}")
+    reveal = [k for k in dict.fromkeys(body.reveal) if k not in body.answers]
+    if reveal and any(s.get("quiz_id") == quiz_id and s.get("defer") for s in b.steps):
+        raise HTTPException(409, "Bài kiểm tra chỉ hiện đáp án sau khi nộp cả bài.")
     first_time = not db.scalar(select(Attempt.id).where(Attempt.user_id == user.id, Attempt.quiz_id == quiz_id))
     results, xp = {}, 0
     for iid, value in body.answers.items():
@@ -116,9 +120,17 @@ def submit_quiz(quiz_id: str, body: QuizSubmitIn, db: Session = Depends(get_db),
             xp += P.award(db, user.id, f"item:{iid}", "production", P.XP_RULES["production"])
         results[iid] = result_payload(it, a)
         _learning_hooks(db, user.id, b, it, g["verdict"], resp or "")
+    for iid in reveal:
+        # "I don't know": show the answer now; it counts as not correct (mistake notebook, smart review, retry)
+        it = items[iid]
+        a = Attempt(user_id=user.id, unit_id=unit_id, quiz_id=quiz_id, item_id=iid, response="", verdict="revealed", auto=False)
+        db.add(a)
+        db.flush()
+        results[iid] = result_payload(it, a)
+        _learning_hooks(db, user.id, b, it, "incorrect", REVEALED_ANSWER)
     act = P.activity(db, user.id)
-    act.items_answered += len(body.answers)
-    P.log_study(db, user.id, unit_id, items=len(body.answers), correct=sum(1 for r in results.values() if r.get("verdict") == "correct"))
+    act.items_answered += len(body.answers) + len(reveal)
+    P.log_study(db, user.id, unit_id, items=len(body.answers) + len(reveal), correct=sum(1 for r in results.values() if r.get("verdict") == "correct"))
     auto = [r for r in results.values() if r["auto"]]
     new_badges = []
     if first_time and len(auto) >= 3 and len(auto) == len(items) and all(r["verdict"] == "correct" for r in auto):
@@ -263,6 +275,9 @@ def put_note(unit_id: str, body: NoteIn, db: Session = Depends(get_db), store: C
     db.commit()
     return {"unit_id": unit_id, "text": n.text, "updated_at": n.updated_at.isoformat()}
 
+
+
+REVEALED_ANSWER = "(không biết — đã xem đáp án)"
 
 
 def _learning_hooks(db: Session, user_id: int, built, item, verdict: str, response: str) -> None:

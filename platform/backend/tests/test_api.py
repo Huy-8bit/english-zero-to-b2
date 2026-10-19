@@ -193,3 +193,26 @@ def test_stale_autosave_cannot_replace_newer_lesson_draft(client):
     progress = client.get('/api/lessons/A1-G011/steps').json()['progress']
     assert progress['current_step'] == 4
     assert progress['state']['drafts'] == {'q': 'new'}
+
+
+def test_reveal_shows_the_answer_and_counts_as_not_correct(client):
+    # "I don't know": no answer typed, the learner still sees the result
+    r = client.post("/api/quizzes/A0-G001:q1/submit", json={"answers": {}, "reveal": ["A0-G001:L1.1"]})
+    assert r.status_code == 200
+    res = r.json()["results"]["A0-G001:L1.1"]
+    assert res["verdict"] == "revealed" and res["correct_option"] and res["response"] == "" and r.json()["xp_gained"] == 0
+    # it goes to the mistake notebook / smart review like a wrong answer
+    review = client.get("/api/review/smart").json()
+    assert any(m["item_id"] == "A0-G001:L1.1" for m in review["curriculum_items"])
+    # not open to self-assessment (it would turn "I didn't know" into a correct answer)
+    assert client.post(f"/api/attempts/{res['attempt_id']}/self-assess", json={"correct": True}).status_code == 409
+    # answering it later works as usual
+    ok = client.post("/api/quizzes/A0-G001:q1/submit", json={"answers": {"A0-G001:L1.1": res["correct_option"]}}).json()
+    assert ok["results"]["A0-G001:L1.1"]["verdict"] == "correct"
+
+
+def test_reveal_is_refused_in_exams_and_needs_something_to_grade(client):
+    r = client.post("/api/quizzes/PLACEMENT-TEST:q1/submit", json={"reveal": ["PLACEMENT-TEST:1"]})
+    assert r.status_code == 409
+    assert client.post("/api/quizzes/A0-G001:q1/submit", json={"answers": {}}).status_code == 422
+    assert client.post("/api/quizzes/A0-G001:q1/submit", json={"reveal": ["A0-G002:L1.1"]}).status_code == 422

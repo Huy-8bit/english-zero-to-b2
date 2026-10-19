@@ -3,7 +3,7 @@ from __future__ import annotations
 
 from typing import Any
 
-from pydantic import BaseModel, Field, field_validator
+from pydantic import BaseModel, Field, field_validator, model_validator
 
 MAX_TEXT = 10_000
 
@@ -21,8 +21,18 @@ class ProgressIn(BaseModel):
 
 
 class QuizSubmitIn(BaseModel):
-    answers: dict[str, Any] = Field(min_length=1, max_length=200)
+    answers: dict[str, Any] = Field(default_factory=dict, max_length=200)
+    # items the learner could not answer and asked to see the answer for (graded as not correct)
+    reveal: list[str] = Field(default_factory=list, max_length=200)
     client_submission_id: str | None = Field(default=None, min_length=8, max_length=64)
+
+    @model_validator(mode="after")
+    def something_to_grade(self):
+        if not self.answers and not self.reveal:
+            raise ValueError("no answers")
+        if any(len(k) > 120 for k in self.reveal):
+            raise ValueError("bad item id")
+        return self
 
     @field_validator("answers")
     @classmethod

@@ -51,17 +51,18 @@ export const api = {
   complete: (id: string) =>
     request<{ status: string; score: number | null; correct: number; graded: number; xp_gained: number; new_achievements: string[]; level_completed: string | null; pass_score: number }>(
       `/api/lessons/${encodeURIComponent(id)}/complete`, { method: "POST" }),
-  submitQuiz: async (quizId: string, answers: Record<string, unknown>) => {
+  /** `reveal`: items the learner does not know — the server shows their answer and grades them as not correct. */
+  submitQuiz: async (quizId: string, answers: Record<string, unknown>, reveal: string[] = []) => {
     // Preserve a failed request's ID across retries/refresh, then retire it after
     // success so an intentional new attempt gets a new ID.
     const storage = safeStorage();
     const key = `em-quiz-pending-${quizId}`;
-    const signature = json(Object.fromEntries(Object.entries(answers).sort(([a], [b]) => a.localeCompare(b))));
+    const signature = json([Object.fromEntries(Object.entries(answers).sort(([a], [b]) => a.localeCompare(b))), [...reveal].sort()]);
     const pending = storage.get<{ signature: string; id: string } | null>(key, null);
     const id = pending?.signature === signature ? pending.id : crypto.randomUUID();
     storage.set(key, { signature, id });
     const result = await request<{ results: Record<string, ItemResult>; xp_gained: number; new_achievements: string[] }>(
-      `/api/quizzes/${encodeURIComponent(quizId)}/submit`, { method: "POST", body: json({ answers, client_submission_id: id }) });
+      `/api/quizzes/${encodeURIComponent(quizId)}/submit`, { method: "POST", body: json({ answers, ...(reveal.length ? { reveal } : {}), client_submission_id: id }) });
     storage.set(key, null);
     return result;
   },

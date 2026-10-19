@@ -61,6 +61,19 @@ export function QuizSlide(p: QuizSlideProps) {
     return () => registerPrimary(null);
   }, [pending.length, check, registerPrimary, p.deferred, busy]);
 
+  const reveal = async (itemId: string) => {
+    if (busy || p.deferred) return;
+    setBusy(true);
+    try {
+      const r = await api.submitQuiz(step.quiz_id!, {}, [itemId]);
+      p.setResults(r.results);
+    } catch (e) {
+      toast.error(e instanceof Error ? e.message : "Không xem được đáp án");
+    } finally {
+      setBusy(false);
+    }
+  };
+
   const selfAssess = async (r: ItemResult, correct: boolean) => {
     try {
       const res = await api.selfAssess(r.attempt_id, correct);
@@ -77,7 +90,7 @@ export function QuizSlide(p: QuizSlideProps) {
         <ItemCard key={it.id} item={it} unitId={p.unitId} docPath={p.docPath} draft={drafts[it.id]}
           onDraft={(d) => p.setDraft(it.id, d)} result={results[it.id]} locked={p.deferred && p.examSubmitted}
           onSelfAssess={(c) => results[it.id] && selfAssess(results[it.id], c)} onRetry={() => p.clearResult(it.id)}
-          onEnter={check} />
+          onEnter={check} onReveal={p.deferred ? undefined : () => void reveal(it.id)} />
       ))}
     </div>
   );
