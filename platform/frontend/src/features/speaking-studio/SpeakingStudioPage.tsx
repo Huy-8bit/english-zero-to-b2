@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { SaveWordButton } from "@/features/vocab/Lookup";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
-import { Flag, History, Mic, Radio, Square, Trash2 } from "lucide-react";
+import { AudioLines, Flag, History, Mic, Radio, Square, Trash2 } from "lucide-react";
 import { ai, ERROR_LABELS, newId, type SpeakingSession, type SpeakingTurn } from "@/services/ai";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -10,6 +10,10 @@ import { Input, PageHeader } from "@/components/ui/misc";
 import { AIErrorBox, AILoading, AIUnavailable, SimulatedBanner, useAIStatus } from "@/components/ai/AIStatus";
 import { cn } from "@/lib/utils";
 import { RealtimePanel } from "./RealtimePanel";
+import { PronunciationFeedback } from "@/features/pronunciation/PronunciationFeedback";
+import { PronunciationPractice } from "@/features/pronunciation/PronunciationPractice";
+import { speak } from "@/lib/tts";
+import type { PronunciationResult } from "@/services/ai";
 
 const LEVELS = ["A0", "A1", "A2", "B1", "B2"];
 
@@ -24,7 +28,7 @@ export default function SpeakingStudioPage() {
   const [session, setSession] = useState<SpeakingSession | null>(null);
   const [busy, setBusy] = useState<string | null>(null);
   const [err, setErr] = useState<{ e: unknown; retry: () => void } | null>(null);
-  const [tab, setTab] = useState<"practice" | "realtime" | "history">("practice");
+  const [tab, setTab] = useState<"practice" | "pronunciation" | "realtime" | "history">("practice");
 
   const start = async () => {
     setBusy("start");
@@ -54,14 +58,16 @@ export default function SpeakingStudioPage() {
       <PageHeader title="Speaking Studio" subtitle="Luyện nói với AI: ghi âm câu trả lời, xem bản chép lời, nhận góp ý ngữ pháp – từ vựng và trả lời câu hỏi tiếp theo."
         actions={<div className="flex flex-wrap gap-2">
           <Button variant={tab === "practice" ? "primary" : "outline"} onClick={() => setTab("practice")}><Mic size={15} />Luyện nói</Button>
+          <Button variant={tab === "pronunciation" ? "primary" : "outline"} onClick={() => setTab("pronunciation")}><AudioLines size={15} />Phát âm</Button>
           <Button variant={tab === "realtime" ? "primary" : "outline"} onClick={() => setTab("realtime")}><Radio size={15} />Thời gian thực</Button>
           <Button variant={tab === "history" ? "primary" : "outline"} onClick={() => setTab("history")}><History size={15} />Lịch sử</Button></div>} />
       <SimulatedBanner />
       {st.data && !st.data.enabled && <div className="mb-4"><AIUnavailable /></div>}
-      <p className="mb-4 rounded-xl bg-surface-2 px-3 py-2 text-xs text-muted">AI chỉ nhận xét dựa trên bản chép lời tự động (speech-to-text): ngữ pháp, từ vựng, mức độ liên quan và độ hoàn chỉnh. Hệ thống không chấm phát âm, trọng âm hay ngữ điệu.
+      <p className="mb-4 rounded-xl bg-surface-2 px-3 py-2 text-xs text-muted"><b>Phát âm</b> được chấm từng từ: máy chép lại đúng những gì nghe được rồi so với câu mẫu (chế độ Đọc to và tab Phát âm); từ chưa rõ có IPA từ điển, cách sửa và nút đọc lại. Nội dung câu trả lời (ngữ pháp, từ vựng, độ liên quan) được AI nhận xét từ bản chép lời. Không chấm giọng địa phương hay ngữ điệu. Giọng AI là giọng máy tạo.
         {opts.data && !opts.data.store_user_audio && " Bản ghi âm của bạn chỉ phát lại trong trình duyệt, không lưu trên máy chủ."}</p>
       {tab === "history" && <SpeakingHistory data={hist.data} onOpen={async (id) => { setSession(await ai.speakingSession(id)); setTab("practice"); }} />}
       {tab === "realtime" && <RealtimePanel level={level} topic={topic} />}
+      {tab === "pronunciation" && <PronunciationPractice level={level} />}
       {tab === "practice" && (!session ? (
         <Card><CardContent className="space-y-4 pt-5">
           <fieldset><legend className="mb-1 text-sm font-medium">Chế độ</legend>
@@ -102,7 +108,7 @@ function Conversation({ session, setSession, onEnd, busyEnd, maxSeconds, onNew, 
         </span>
       </div>
       <ol className="space-y-3">
-        {session.turns.map((t, i) => <TurnView key={t.id} turn={t} local={localAudio[userTurns.indexOf(t)]} last={i === session.turns.length - 1} />)}
+        {session.turns.map((t, i) => <TurnView key={t.id} turn={t} local={localAudio[userTurns.indexOf(t)]} last={i === session.turns.length - 1} level={session.level} sessionId={session.id} />)}
       </ol>
       {!ended && <Recorder sessionId={session.id} maxSeconds={maxSeconds} onDone={(s, url) => { setLocalAudio((m) => ({ ...m, [userTurns.length]: url })); setSession(s); }} />}
       {busyEnd && <AILoading label="AI đang tổng kết phiên luyện nói…" />}
@@ -112,7 +118,7 @@ function Conversation({ session, setSession, onEnd, busyEnd, maxSeconds, onNew, 
   );
 }
 
-function TurnView({ turn, local, last }: { turn: SpeakingTurn; local?: string; last: boolean }) {
+function TurnView({ turn, local, last, level, sessionId }: { turn: SpeakingTurn; local?: string; last: boolean; level: string; sessionId: string }) {
   const fb = (turn.feedback ?? {}) as Record<string, unknown>;
   const audioRef = useRef<HTMLAudioElement>(null);
   useEffect(() => { if (last && turn.role === "ai" && turn.audio_url) audioRef.current?.play().catch(() => {}); }, [last, turn]);
@@ -129,6 +135,8 @@ function TurnView({ turn, local, last }: { turn: SpeakingTurn; local?: string; l
   }
   const ind = fb.indicators as Record<string, number | null | string> | undefined;
   const match = fb.match as { word_match_percent: number; missing_words: string[]; different_words: string[]; note_vi: string } | undefined;
+  const pron = fb.pronunciation as (PronunciationResult | { unclear: string[] } | null | undefined);
+  const unclear = pron && "unclear" in pron ? pron.unclear : [];
   const grammar = (fb.grammar_feedback as { original: string; correction: string; category: string; explanation_vi: string }[]) ?? [];
   return (
     <li className="ml-6 rounded-2xl border border-primary/30 bg-primary-soft/40 p-4 text-sm">
@@ -136,9 +144,14 @@ function TurnView({ turn, local, last }: { turn: SpeakingTurn; local?: string; l
       <p className="text-[15px]">{turn.text}</p>
       {local && <audio controls src={local} className="mt-2 h-9 w-full max-w-sm" aria-label="Nghe lại bản ghi của bạn" />}
       {ind && <p className="mt-2 text-xs text-muted">{ind.words} từ{ind.words_per_minute ? ` · ~${ind.words_per_minute} từ/phút` : ""} · {ind.fillers} từ đệm · {ind.sentences} câu</p>}
-      {match && (
+      {pron && "score" in pron ? <div className="mt-2"><PronunciationFeedback result={pron} level={level} source="read_aloud" sourceRef={sessionId} /></div> : match && (
         <div className="mt-2 rounded-xl bg-surface p-2"><p><b>Khớp từ: {match.word_match_percent}%</b>{match.missing_words.length ? ` · thiếu: ${match.missing_words.join(", ")}` : ""}{match.different_words.length ? ` · khác: ${match.different_words.join(", ")}` : ""}</p>
           <p className="text-xs text-muted">{match.note_vi}</p></div>
+      )}
+      {unclear.length > 0 && (
+        <p className="mt-2 flex flex-wrap items-center gap-1 text-xs">Máy chưa nghe rõ: {unclear.map((w) => (
+          <button key={w} type="button" className="rounded-full border border-warning/50 bg-warning-soft px-2 py-0.5 text-warning" onClick={() => speak(w, { slow: true })} title="Nghe chậm từ này">{w} 🔊</button>
+        ))}<span className="text-muted">— luyện các từ này ở tab Phát âm.</span></p>
       )}
       {fb.type === "conversation" && (
         <div className="mt-2 space-y-1">
@@ -224,7 +237,16 @@ function Recorder({ sessionId, maxSeconds, onDone }: { sessionId: string; maxSec
 function Summary({ s }: { s: SpeakingSession }) {
   const sum = s.summary as Record<string, unknown>;
   if (sum.empty) return <p className="text-sm text-muted">Phiên chưa có câu trả lời nào.</p>;
-  if (sum.type === "read_aloud") return <Card className="p-4"><p className="font-semibold">Tổng kết đọc to: {String(sum.sentences)} câu · khớp từ trung bình {String(sum.average_word_match)}%</p><p className="text-xs text-muted">{String(sum.note_vi)}</p></Card>;
+  if (sum.type === "read_aloud") return (
+    <Card className="space-y-2 p-4">
+      <p className="font-semibold">Tổng kết đọc to: {String(sum.sentences)} câu{sum.average_pronunciation != null ? ` · độ rõ trung bình ${String(sum.average_pronunciation)}%` : ` · khớp từ trung bình ${String(sum.average_word_match)}%`}</p>
+      {Array.isArray(sum.words_to_practise) && (sum.words_to_practise as string[]).length > 0 && (
+        <p className="flex flex-wrap items-center gap-1 text-sm">Từ cần luyện: {(sum.words_to_practise as string[]).map((w) => (
+          <button key={w} type="button" className="rounded-full border border-border px-2 py-0.5 hover:border-primary" onClick={() => speak(w, { slow: true })}>{w} 🔊</button>))}</p>
+      )}
+      <p className="text-xs text-muted">{String(sum.note_vi)}</p>
+    </Card>
+  );
   const mistakes = (sum.key_mistakes as { original: string; correction: string; explanation_vi: string; category: string }[]) ?? [];
   return (
     <Card>

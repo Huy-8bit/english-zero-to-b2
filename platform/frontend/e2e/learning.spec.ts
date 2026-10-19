@@ -151,7 +151,7 @@ test("reading passage, vocabulary list and matching game render from the curricu
   await page.goto("/learn/L02");
   await gotoStep(page, /Task 2/);
   await expect(page.getByRole("button", { name: /Hiện transcript/ })).toBeVisible();
-  await expect(page.getByText(/giọng đọc tổng hợp/).first()).toBeVisible();
+  await expect(page.getByText(/Giọng đọc AI/).first()).toBeVisible(); // the AI voice is disclosed
 });
 
 test("next lesson restores its own slide and drafts without overwriting either lesson", async ({ page, request }) => {

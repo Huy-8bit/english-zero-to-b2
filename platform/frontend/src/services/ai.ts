@@ -91,6 +91,19 @@ export interface SpeakingTurn {
   id: number; role: "ai" | "user"; text: string; audio_url: string | null; audio_seconds: number | null; created_at: string;
   feedback: Record<string, unknown> | null;
 }
+export type WordStatus = "ok" | "unclear" | "different" | "missing";
+export interface PronWord {
+  word: string; status: WordStatus; heard: string | null; confidence: number | null; ipa?: string | null; tips_vi?: string[];
+  explain?: { sound_vi: string; how_vi: string; practice: string[] };
+}
+export interface PronunciationResult {
+  attempt_id: number; reference: string; heard: string; score: number; words: PronWord[];
+  counts: Record<WordStatus, number>; words_per_minute: number | null; previous_score: number | null; summary_vi: string; note_vi: string;
+}
+export interface PronunciationSummary {
+  attempts: number; average_score: number | null; recent: { id: number; reference: string; score: number; source: string; created_at: string }[];
+  hard_words: { word: string; missed: number; seen: number; ipa: string | null; tips_vi: string[] }[];
+}
 export interface SpeakingSession {
   id: string; mode: string; mode_label: string; topic: string; level: string; status: string; summary: Record<string, unknown> | null;
   created_at: string; ended_at: string | null; turns: SpeakingTurn[];
@@ -159,6 +172,18 @@ export const ai = {
     fd.append("client_turn_id", clientTurnId);
     return call<SpeakingSession>(`/api/ai/speaking/session/${id}/answer`, { method: "POST", body: fd });
   },
+  /** Read a sentence or a word aloud → word-by-word pronunciation check. */
+  assessPronunciation: (audio: Blob, reference: string, opts: { seconds?: number; source?: string; sourceRef?: string; level?: string } = {}) => {
+    const fd = new FormData();
+    fd.append("audio", audio, `read.${audio.type.includes("ogg") ? "ogg" : audio.type.includes("mp4") ? "m4a" : "webm"}`);
+    fd.append("reference", reference);
+    fd.append("source", opts.source ?? "practice");
+    if (opts.sourceRef) fd.append("source_ref", opts.sourceRef);
+    if (opts.seconds) fd.append("seconds", String(opts.seconds));
+    fd.append("level", opts.level ?? "A1");
+    return call<PronunciationResult>("/api/pronunciation/assess", { method: "POST", body: fd });
+  },
+  pronunciationSummary: () => call<PronunciationSummary>("/api/pronunciation/summary"),
   endSpeaking: (id: string) => post<SpeakingSession>(`/api/ai/speaking/session/${id}/end`),
   speakingSessions: () => call<{ sessions: { id: string; mode: string; topic: string; level: string; status: string; answers: number; created_at: string }[] }>("/api/speaking/sessions"),
   speakingSession: (id: string) => call<SpeakingSession>(`/api/speaking/sessions/${id}`),

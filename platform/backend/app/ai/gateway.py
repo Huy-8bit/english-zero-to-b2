@@ -179,6 +179,26 @@ class AIGateway:
         text, _ = self._run(db, user_id, feature, model, fn)
         return text
 
+    def transcribe_words(self, db: Session, user_id: int, *, feature: str, audio: bytes, filename: str,
+                         duration_hint: float | None = None) -> tuple[str, list[tuple[str, float]], float | None]:
+        """Unprompted transcription with per-word confidence (pronunciation checks). Returns (text, words, seconds)."""
+        from .audio_validation import audio_duration
+        from .errors import AIBadInput
+
+        if not audio or len(audio) > self.settings.max_audio_bytes:
+            raise AIBadInput("File ghi âm rỗng hoặc quá lớn.")
+        if self.settings.provider != "fake":
+            duration_hint = audio_duration(audio, self.limits(db, user_id)["max_audio_seconds"])
+        model = self.settings.model("pronunciation")
+
+        def fn():
+            text, words, usage = self.provider.transcribe_words(model=model, audio=audio, filename=filename)
+            if not usage.audio_seconds and not usage.input_tokens and duration_hint:
+                usage.audio_seconds = duration_hint
+            return (text, words), usage
+        (text, words), _ = self._run(db, user_id, feature, model, fn)
+        return text, words, duration_hint
+
     def speech(self, db: Session, user_id: int, *, feature: str, text: str, voice: str | None = None, instructions: str = "") -> bytes:
         model = self.settings.model("tts")
         audio, _ = self._run(db, user_id, feature, model, lambda: self.provider.speech(

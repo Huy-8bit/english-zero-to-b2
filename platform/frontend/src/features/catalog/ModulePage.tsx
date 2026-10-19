@@ -10,8 +10,8 @@ import { cn, STATUS_LABELS } from "@/lib/utils";
 
 const INFO: Record<string, { title: string; subtitle: string; note?: string; extraKinds?: UnitKind[] }> = {
   grammar: { title: "Ngữ pháp", subtitle: "128 bài từ A0 đến B2. Mỗi bài: khái niệm → công thức → ví dụ → lỗi thường gặp → bài tập có chấm → tổng kết." },
-  pronunciation: { title: "Phát âm", subtitle: "IPA, nguyên âm/phụ âm, trọng âm, nối âm, ngữ điệu, shadowing.", note: "Âm thanh dùng giọng đọc tổng hợp (TTS) của trình duyệt; giáo trình không kèm file ghi âm. Dùng nút ghi âm để tự nghe lại giọng mình." },
-  listening: { title: "Nghe", subtitle: "Chiến lược nghe và bài luyện theo transcript.", note: "Không có file audio gốc: bài nghe được đọc bằng giọng tổng hợp (TTS), có chỉnh tốc độ, nghe lại và ẩn/hiện transcript.", extraKinds: ["skills"] },
+  pronunciation: { title: "Phát âm", subtitle: "IPA, nguyên âm/phụ âm, trọng âm, nối âm, ngữ điệu, shadowing.", note: "Âm thanh dùng giọng đọc AI (OpenAI TTS, giọng máy tạo); giáo trình không kèm file ghi âm. Vào Speaking Studio → Phát âm để được chấm và sửa phát âm từng từ." },
+  listening: { title: "Nghe", subtitle: "Chiến lược nghe và bài luyện theo transcript.", note: "Không có file audio gốc: bài nghe được đọc bằng giọng AI (OpenAI TTS, giọng máy tạo), có chỉnh tốc độ, nghe lại và ẩn/hiện transcript.", extraKinds: ["skills"] },
   speaking: { title: "Nói", subtitle: "Từ đặt câu cơ bản đến VSTEP-style speaking (mô phỏng).", note: "Có bấm giờ, ghi âm (nếu trình duyệt cho phép), nghe lại và checklist tự đánh giá. Hệ thống không chấm điểm phát âm.", extraKinds: ["communication"] },
   reading: { title: "Đọc", subtitle: "Skimming, scanning, ý chính, suy luận, từ vựng theo ngữ cảnh.", note: "Bài đọc hiển thị cạnh câu hỏi trên màn hình rộng, có bấm giờ và tô sáng." },
   writing: { title: "Viết", subtitle: "Từ câu đơn đến email và bài luận.", note: "Trình soạn có đếm từ, bấm giờ, tự lưu bản nháp, lịch sử phiên bản, bài mẫu và tự đánh giá theo tiêu chí." },

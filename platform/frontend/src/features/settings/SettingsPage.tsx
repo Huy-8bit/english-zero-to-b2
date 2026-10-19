@@ -15,7 +15,7 @@ import { AIErrorBox, useAIStatus } from "@/components/ai/AIStatus";
 const FEATURE_LABELS: Record<string, string> = {
   exercise_generate: "Tạo bài tập", exercise_verify: "Kiểm tra câu hỏi", exercise_grade: "Chấm bài", curriculum_grade: "Chấm câu mở (bài học)",
   writing_evaluate: "Chấm bài viết", writing_prompt: "Tạo đề viết", speaking_question: "Câu hỏi nói", speaking_feedback: "Góp ý nói",
-  speaking_summary: "Tổng kết nói", speaking_transcribe: "Chép lời (STT)", speaking_tts: "Giọng đọc (TTS)", speaking_realtime: "Hội thoại thời gian thực",
+  speaking_summary: "Tổng kết nói", speaking_transcribe: "Chép lời (STT)", speaking_tts: "Giọng đọc (TTS)", app_tts: "Giọng đọc AI trong bài học", pronunciation: "Chấm phát âm (chép lời)", pronunciation_explain: "Giải thích lỗi phát âm", speaking_realtime: "Hội thoại thời gian thực",
   listening_generate: "Tạo bài nghe", listening_tts: "Âm thanh bài nghe", reading_generate: "Tạo bài đọc", placement_report: "Báo cáo xếp lớp",
   placement_writing: "Đánh giá viết (xếp lớp)", embedding: "Embedding",
 };

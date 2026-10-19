@@ -1,3 +1,26 @@
+# Pronunciation check and natural AI voice — 2026-10-20
+
+Request: "sửa lại chỗ nói nó chấm chữa phát âm và sửa lại cho tôi, đồng thời phần nói trong APP dùng OpenAI model để giọng nghe tự nhiên hơn".
+
+**Measured before choosing models** (live API, about $0.03; TTS-generated clean and deliberately mispronounced samples):
+- `gpt-4o-transcribe` (no prompt, `include=["logprobs"]`): mispronounced "I tink dis is de tird ting" → "I tink dis is deturred ting." with low-confidence tokens; clean speech (two voices) → exact text, no word below 0.9; a partly wrong sample → "dis" plus low confidence on "third".
+- `gpt-audio-mini`: flagged the mispronounced sample, but also flagged 1–3 "errors" with 0.9 confidence in clean native speech.
+- `gpt-audio-1.5`: did not use the audio in this request form.
+
+**Decision:** detect errors from the unprompted transcription and alignment only. Use AI text only to explain the flagged words.
+
+| Feature | Status | Files | Evidence / remaining work |
+|---|---|---|---|
+| Word-by-word pronunciation check (`POST /api/pronunciation/assess`, `GET /api/pronunciation/summary`) | COMPLETE_AND_TESTED | `backend/app/ai/pronunciation.py`, `provider.py::transcribe_words`, `gateway.py`, `fake.py`, `api/ai.py`, model `PronunciationAttempt`, migration `0007` | Statuses: ok / unclear (< 0.75) / different / missing. Score = % clear words. Dictionary IPA only; built-in tips for common Vietnamese difficulties; optional cached AI explanation of flagged words; previous score on the same sentence; hard-words summary. Tests: `test_ai.py` (pronunciation, read aloud). |
+| Speaking Studio: read aloud graded by pronunciation; conversation lists unclear words; Phát âm tab | COMPLETE_AND_TESTED | `ai/speaking.py`, `frontend/src/features/pronunciation/*`, `speaking-studio/SpeakingStudioPage.tsx`, `lib/recorder.ts` | The read-aloud transcription is no longer prompted with the target sentence (a prompt hid errors). Word fix cards: listen / slow / record the word again; whole-sentence retry shows the change. E2E `pronunciation.spec.ts` (fake microphone). |
+| Natural AI voice everywhere (`POST /api/tts`) | COMPLETE_AND_TESTED | `api/ai.py::tts`, `frontend/src/lib/tts.ts`, `components/SpeakButton.tsx` | `gpt-4o-mini-tts`, voice `marin` (dialogue speakers alternate marin / cedar / coral / ash), US/UK accent and slow mode via instructions. Server cache per text; browser voice fallback on error, limits or AI off. WebKit audio unlock on first gesture. Labels disclose the AI voice. Test: `test_tts_endpoint_uses_ai_voice_and_caches`, E2E (Nghe mẫu → `/api/tts`). |
+
+**Limitations:**
+- Intelligibility, not accent, is measured. A clear but non-native sound can still be heard as the right word.
+- Speech recognisers sometimes "repair" a near-miss into the intended word; such words then count as clear.
+- Intonation and stress are not scored.
+- The live check used TTS-generated voices, not real learners.
+
 # Reveal answer, 100 words/day, daily writing — 2026-10-19
 
 Requests:

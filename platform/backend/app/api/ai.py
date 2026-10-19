@@ -434,6 +434,58 @@ async def speaking_transcribe(audio: UploadFile = File(...), seconds: float | No
     return {"transcript": text, "indicators": fluency_indicators(text, seconds)}
 
 
+# ------------------------------------------------------------------ pronunciation & natural voice
+@router.post("/pronunciation/assess")
+async def pronunciation_assess(audio: UploadFile = File(...), reference: str = Form(..., min_length=1, max_length=400),
+                               source: str = Form("practice", max_length=24), source_ref: str | None = Form(None, max_length=80),
+                               seconds: float | None = Form(None, gt=0, le=600), level: str = Form("A1", pattern="^(A0|A1|A2|B1|B2)$"),
+                               db: Session = Depends(get_db), ai: AIServices = Depends(get_ai), user: User = Depends(current_user)):
+    """Read a sentence or a word aloud → which words were not heard as intended, with dictionary IPA and how to fix them."""
+    data = await audio.read(ai.settings.max_audio_bytes + 1)
+    if not data or len(data) > ai.settings.max_audio_bytes:
+        raise HTTPException(413, "File ghi âm rỗng hoặc quá lớn")
+    out = await run_in_threadpool(ai.pronunciation.assess, db, user.id, audio=data, content_type=audio.content_type or "",
+                                  reference=reference, source=source, source_ref=source_ref, seconds=seconds, level=level)
+    db.commit()
+    return out
+
+
+@router.get("/pronunciation/summary")
+def pronunciation_summary(db: Session = Depends(get_db), ai: AIServices = Depends(get_ai), user: User = Depends(current_user)):
+    return ai.pronunciation.summary(db, user.id)
+
+
+TTS_VOICES = ("marin", "cedar", "coral", "sage", "verse", "ash", "ballad", "alloy", "echo", "fable", "nova", "onyx", "shimmer")
+
+
+class TTSIn(BaseModel):
+    text: str = Field(min_length=1, max_length=800)
+    voice: str | None = Field(None, max_length=16)
+    accent: str = Field("us", pattern="^(us|uk)$")
+    slow: bool = False
+
+
+@router.post("/tts")
+def tts(body: TTSIn, db: Session = Depends(get_db), ai: AIServices = Depends(get_ai), user: User = Depends(current_user)):
+    """Natural AI voice for any English text in the app (OpenAI TTS). Each (text, voice, style) is generated once and cached."""
+    gw = ai.gateway
+    if not gw.settings.enabled:
+        raise HTTPException(503, "Giọng đọc AI chưa được bật")
+    voice = body.voice if body.voice in TTS_VOICES else gw.settings.tts_voice
+    accent = "a British accent" if body.accent == "uk" else "an American accent"
+    instructions = (f"Read this English text for a learner: natural, warm, clear, with {accent}. "
+                    + ("Speak slowly, pausing slightly between words and articulating every sound, including final consonants."
+                       if body.slow else "Use a natural, moderate pace."))
+    text = " ".join(body.text.split())
+    model = gw.settings.model("tts")
+    rel = media.tts_name(model, voice, text, instructions, provider=gw.provider.name)
+    if not media.exists(rel):  # only the first play of a text costs a TTS request
+        audio = gw.speech(db, user.id, feature="app_tts", text=text, voice=voice, instructions=instructions)
+        media.write(rel, audio)
+    db.commit()
+    return {"url": f"/api/media/{rel}", "voice": voice, "ai_voice": True}
+
+
 @router.post("/ai/speaking/session/{session_id}/end")
 def speaking_end(session_id: str, db: Session = Depends(get_db), ai: AIServices = Depends(get_ai), user: User = Depends(current_user)):
     return ai.speaking.public(db, ai.speaking.end(db, user.id, session_id))

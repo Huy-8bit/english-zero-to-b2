@@ -7,7 +7,7 @@ from dataclasses import dataclass, field
 
 from .. import config  # noqa: F401  (loads platform/.env)
 
-TASKS = ("tutor", "exercise", "grading", "complex_grading", "transcription", "tts", "realtime", "embedding")
+TASKS = ("tutor", "exercise", "grading", "complex_grading", "transcription", "pronunciation", "tts", "realtime", "embedding")
 
 DEFAULT_MODELS = {
     # Cost-aware defaults chosen from the OpenAI pricing page (Oct 2026); override per deployment.
@@ -16,6 +16,10 @@ DEFAULT_MODELS = {
     "grading": "gpt-5.4-mini",
     "complex_grading": "gpt-6.1-sol",
     "transcription": "gpt-4o-mini-transcribe",
+    # pronunciation check: an unprompted transcription with word confidences. Measured on 2026-10-19 with clean and
+    # deliberately mispronounced samples: gpt-4o-transcribe wrote what was said ("I tink dis…") and was fully confident on
+    # clean speech; gpt-audio-mini flagged errors in clean native speech, so audio models are not used to detect errors.
+    "pronunciation": "gpt-4o-transcribe",
     "tts": "gpt-4o-mini-tts",
     "realtime": "gpt-realtime-mini",
     "embedding": "text-embedding-3-small",

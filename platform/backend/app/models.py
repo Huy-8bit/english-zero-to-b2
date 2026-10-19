@@ -366,6 +366,21 @@ class SpeakingTurn(Base):
     created_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
 
 
+class PronunciationAttempt(Base):
+    """One recording checked word by word against a reference sentence or word (see app/ai/pronunciation.py)."""
+    __tablename__ = "pronunciation_attempts"
+    id: Mapped[int] = mapped_column(Integer, primary_key=True)
+    user_id: Mapped[int] = mapped_column(ForeignKey("users.id"), index=True)
+    source: Mapped[str] = mapped_column(String(24))  # read_aloud | conversation | practice | word
+    source_ref: Mapped[str | None] = mapped_column(String(80), nullable=True)
+    reference: Mapped[str] = mapped_column(Text)
+    heard: Mapped[str] = mapped_column(Text)
+    score: Mapped[int] = mapped_column(Integer)  # % of reference words heard clearly
+    words: Mapped[list] = mapped_column(JSON)
+    audio_seconds: Mapped[float | None] = mapped_column(Float, nullable=True)
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow, index=True)
+
+
 class TutorConversation(Base):
     __tablename__ = "tutor_conversations"
     id: Mapped[int] = mapped_column(Integer, primary_key=True)

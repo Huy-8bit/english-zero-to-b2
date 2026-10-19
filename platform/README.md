@@ -291,7 +291,14 @@ Sao chép `.env.example` thành `.env` nếu chưa có; đặt `OPENAI_API_KEY` 
 - **Gia sư:** ngữ cảnh slide hiện tại + đoạn giáo trình liên quan + tiến độ/lỗi gần đây; lịch sử được lưu.
 - **Tạo bài tập AI:** chọn bài, dạng, độ khó, số câu; Structured Outputs, kiểm tra cấu trúc và lượt giải độc lập; lưu bộ bài, chấm xác định hoặc ngữ nghĩa, giải thích tiếng Việt, cập nhật lỗi và độ thành thạo.
 - **Writing Studio:** đề từ giáo trình hoặc AI, bản nháp tự lưu trong trình duyệt, ba chế độ góp ý, lỗi theo câu, so sánh bản sửa, lịch sử ở DB.
-- **Speaking Studio:** micro → upload → transcription → góp ý nội dung/ngữ pháp → câu tiếp theo và TTS; read aloud, hội thoại, role-play, VSTEP-style. Bản chép lời không phải bằng chứng để chấm phát âm. Audio học viên không lưu mặc định (`AI_STORE_USER_AUDIO=false`).
+- **Speaking Studio:** micro → upload → transcription → góp ý nội dung/ngữ pháp → câu tiếp theo và TTS; read aloud, hội thoại, role-play, VSTEP-style. Audio học viên không lưu mặc định (`AI_STORE_USER_AUDIO=false`).
+- **Chấm & sửa phát âm** (Speaking Studio → tab **Phát âm**, và chế độ **Đọc to**):
+  - Bản ghi được chép lời **không kèm câu mẫu** (`gpt-4o-transcribe`, `OPENAI_MODEL_PRONUNCIATION`), nên máy viết đúng những gì nghe được (“I tink dis…”), kèm độ tin cậy từng từ.
+  - Mỗi từ của câu mẫu được đánh dấu: *rõ*, *chưa rõ* (độ tin cậy thấp), *nghe thành từ khác*, *bị bỏ sót*. Điểm = tỉ lệ từ máy nghe rõ (độ dễ hiểu). Không chấm giọng địa phương hay ngữ điệu.
+  - Từ cần sửa có: IPA từ điển (không bao giờ dùng IPA do AI tạo), mẹo cho âm người Việt hay sai (th, phụ âm cuối, -s/-ed, cụm phụ âm, v/w, sh, r, nguyên âm dài), giải thích của AI chỉ cho các từ đã bị đánh dấu, nút **Nghe / Chậm** (giọng AI) và **Đọc lại từ này**. Đọc lại cả câu hiện mức tăng/giảm so với lần trước.
+  - Chọn cách này sau khi đo thử thật ngày 2026-10-19: với giọng chuẩn, `gpt-4o-transcribe` chép đúng và không có từ nào độ tin cậy thấp; với câu đọc sai kiểu người Việt, nó chép đúng lỗi. Mô hình nghe (`gpt-audio-mini`) báo lỗi cả ở giọng chuẩn nên không dùng để phát hiện lỗi.
+  - Hội thoại: các từ máy chưa nghe rõ được liệt kê dưới câu trả lời và trong tổng kết.
+- **Giọng đọc AI cho cả app:** mọi nút loa, hội thoại và bài nghe trong bài học dùng `POST /api/tts` (OpenAI `gpt-4o-mini-tts`, giọng `OPENAI_TTS_VOICE`, mặc định `marin`; mỗi người nói trong hội thoại một giọng; có chế độ đọc chậm cho luyện phát âm). Mỗi câu chỉ tạo âm thanh một lần rồi lưu cache trên máy chủ. Khi AI tắt, quá giới hạn hoặc lỗi, app tự chuyển sang giọng của trình duyệt. Giọng AI là giọng máy tạo và được ghi rõ trên giao diện.
 - **Listening Studio:** đoạn nghe và câu hỏi sinh cùng nhau, TTS cache; transcript ẩn trong kiểm tra đến khi nộp.
 - **Reading Studio:** bài đọc, câu hỏi, trích dẫn bằng chứng, bấm giờ và lịch sử.
 - **Sổ lỗi / kế hoạch / phân tích:** dựa vào dữ liệu đã lưu, không có thống kê giả. Điểm CEFR/VSTEP là ước tính tham khảo.

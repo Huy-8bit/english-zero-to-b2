@@ -12,6 +12,7 @@ from .knowledge import KnowledgeBase
 from .placement import PlacementService
 from .provider import AIProvider, DisabledProvider, OpenAIProvider
 from .settings import AISettings, load_settings
+from .pronunciation import PronunciationService
 from .speaking import SpeakingService
 from .studio import StudioService
 from .tutor import TutorService
@@ -27,6 +28,7 @@ class AIServices:
     exercises: ExerciseService
     writing: WritingService
     speaking: SpeakingService
+    pronunciation: PronunciationService
     studio: StudioService
     placement: PlacementService
 
@@ -47,6 +49,7 @@ def build(store: ContentStore, session_factory: sessionmaker, settings: AISettin
     gateway = AIGateway(settings, provider or make_provider(settings), session_factory)
     kb = KnowledgeBase(store)
     exercises = ExerciseService(gateway, store, kb)
+    pron = PronunciationService(gateway)
     return AIServices(settings=settings, gateway=gateway, kb=kb, tutor=TutorService(gateway, store, kb), exercises=exercises,
-                      writing=WritingService(gateway, store, kb), speaking=SpeakingService(gateway, store),
+                      writing=WritingService(gateway, store, kb), speaking=SpeakingService(gateway, store, pron), pronunciation=pron,
                       studio=StudioService(gateway, store, kb, exercises), placement=PlacementService(gateway, store))

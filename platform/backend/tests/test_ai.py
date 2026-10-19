@@ -173,13 +173,57 @@ def test_speaking_flow_with_audio_upload(c):
     assert c.delete(f"/api/speaking/sessions/{s['id']}").status_code == 200
 
 
-def test_read_aloud_is_word_match_not_pronunciation_score(c):
+def test_read_aloud_checks_pronunciation_word_by_word(c):
     s = c.post("/api/ai/speaking/session", json={"mode": "read_aloud", "topic": "", "level": "A1"}).json()
     target = s["turns"][0]["text"]
     files = {"audio": ("a.webm", io.BytesIO(target.encode()), "audio/webm")}
     s2 = c.post(f"/api/ai/speaking/session/{s['id']}/answer", files=files, data={"seconds": "4", "client_turn_id": "turn-ra-01"}).json()
-    match = next(t for t in s2["turns"] if t["role"] == "user")["feedback"]["match"]
-    assert match["word_match_percent"] == 100 and "không phải điểm phát âm" in match["note_vi"]
+    fb = next(t for t in s2["turns"] if t["role"] == "user")["feedback"]
+    assert fb["match"]["word_match_percent"] == 100 and fb["pronunciation"]["score"] == 100
+    assert all(w["status"] == "ok" for w in fb["pronunciation"]["words"])
+    # a second sentence read badly: the next target is read with two words changed
+    nxt = s2["turns"][-1]["text"]
+    words = nxt.split()
+    bad = " ".join(["?" + words[0]] + ["zzz"] + words[2:])
+    s3 = c.post(f"/api/ai/speaking/session/{s['id']}/answer", files={"audio": ("b.webm", io.BytesIO(bad.encode()), "audio/webm")},
+                data={"seconds": "4", "client_turn_id": "turn-ra-02"}).json()
+    p = [t for t in s3["turns"] if t["role"] == "user"][-1]["feedback"]["pronunciation"]
+    st = {w["status"] for w in p["words"][:2]}
+    assert st == {"unclear", "different"} and p["score"] < 100 and p["words"][1]["heard"] == "zzz"
+    end = c.post(f"/api/ai/speaking/session/{s['id']}/end").json()
+    assert end["summary"]["average_pronunciation"] is not None and end["summary"]["words_to_practise"]
+
+
+def test_pronunciation_assess_explains_and_tracks_progress(c, ai_app):
+    ref = "I think this is the third thing."
+    send = lambda said: c.post("/api/pronunciation/assess", files={"audio": ("a.webm", io.BytesIO(said.encode()), "audio/webm")},
+                               data={"reference": ref, "source": "practice", "seconds": "3"})
+    r = send("I tink ?this is the tird thing").json()
+    by = {w["word"]: w for w in r["words"]}
+    assert by["think"]["status"] == "different" and by["think"]["heard"] == "tink"
+    assert by["this"]["status"] == "unclear" and by["third"]["status"] == "different" and by["thing"]["status"] == "ok"
+    assert r["score"] == round(100 * 4 / 7) and r["counts"]["different"] == 2
+    assert any("/θ/" in t for t in by["think"]["tips_vi"])  # built-in tip for the "th" sound
+    assert by["think"]["ipa"] and "θ" in by["think"]["ipa"]  # dictionary IPA, never AI IPA
+    assert by["think"]["explain"]["practice"]  # optional AI explanation of the flagged words only
+    r2 = send("I think this is the third thing").json()
+    assert r2["score"] == 100 and r2["previous_score"] == r["score"]  # progress on the same sentence
+    sm = c.get("/api/pronunciation/summary").json()
+    assert sm["attempts"] == 2 and {w["word"] for w in sm["hard_words"]} >= {"think", "third"}
+    bad = c.post("/api/pronunciation/assess", files={"audio": ("a.webm", io.BytesIO(b"x"), "audio/webm")},
+                 data={"reference": "   ", "source": "practice"})
+    assert bad.status_code == 422
+
+
+def test_tts_endpoint_uses_ai_voice_and_caches(c, ai_app):
+    calls = len(ai_app.state.ai.gateway.provider.calls)
+    a = c.post("/api/tts", json={"text": "Nice to meet you.", "accent": "uk"}).json()
+    b = c.post("/api/tts", json={"text": "Nice  to meet you.", "accent": "uk"}).json()
+    assert a["url"] == b["url"] and a["ai_voice"] and c.get(a["url"]).status_code == 200
+    assert len(ai_app.state.ai.gateway.provider.calls) == calls + 1  # same text → generated once
+    slow = c.post("/api/tts", json={"text": "Nice to meet you.", "accent": "uk", "slow": True}).json()
+    assert slow["url"] != a["url"]
+    assert c.post("/api/tts", json={"text": "x" * 801}).status_code == 422
 
 
 def test_listening_transcript_hidden_until_submit_and_audio_cached(c, ai_app):

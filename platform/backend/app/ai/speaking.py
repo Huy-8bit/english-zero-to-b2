@@ -1,7 +1,9 @@
 """AI Speaking Coach: record → transcribe → feedback → next question (TTS), plus session summaries.
 
-Only the transcript is analysed. Pronunciation, stress and intonation are never scored from text;
-Read Aloud compares recognised words with the target sentence and says so explicitly.
+Read Aloud is a pronunciation check (app/ai/pronunciation.py): an unprompted transcription with word confidences is
+compared with the target sentence word by word, and every word not heard as intended gets dictionary IPA and a fix.
+Conversation turns are transcribed the same way, so words the recogniser could not hear clearly are listed too.
+Intonation and accent are not scored.
 """
 from __future__ import annotations
 
@@ -70,8 +72,11 @@ def read_aloud_match(target: str, said: str) -> dict:
 
 
 class SpeakingService:
-    def __init__(self, gateway: AIGateway, store: ContentStore):
+    def __init__(self, gateway: AIGateway, store: ContentStore, pronunciation=None):
+        from .pronunciation import PronunciationService
+
         self.gw, self.store = gateway, store
+        self.pron = pronunciation or PronunciationService(gateway)
 
     # ------------------------------------------------------------ helpers
     def _tts(self, db: Session, user_id: int, text: str) -> str | None:
@@ -154,8 +159,19 @@ class SpeakingService:
         if sum(1 for t in turns if t.role == "user") >= MAX_TURNS:
             raise AIBadInput("Phiên đã đủ số lượt — hãy kết thúc để xem tổng kết.")
         last_ai = next((t for t in reversed(turns) if t.role == "ai"), None)
-        transcript = self.gw.transcribe(db, user_id, feature="speaking_transcribe", audio=audio,
-                                        filename=f"answer.{EXT[ctype]}", prompt=last_ai.text if last_ai else "", duration_hint=seconds).strip()
+        pron = None
+        if s.mode == "read_aloud":
+            # pronunciation check against the target sentence (unprompted transcription, word by word)
+            pron = self.pron.assess(db, user_id, audio=audio, content_type=ctype, reference=last_ai.text if last_ai else "",
+                                    source="read_aloud", source_ref=s.id, seconds=seconds, level=s.level)
+            transcript = pron["heard"].strip()
+        else:
+            # unprompted as well: a prompt would make the recogniser "hear" the expected words and hide unclear ones
+            transcript, heard, _ = self.gw.transcribe_words(db, user_id, feature="speaking_transcribe", audio=audio,
+                                                            filename=f"answer.{EXT[ctype]}", duration_hint=seconds)
+            transcript = transcript.strip()
+            unclear = [w for w, p in heard if p < 0.6][:8]
+            pron = {"unclear": unclear} if unclear else None
         if not transcript:
             raise AIBadInput("Không nhận diện được giọng nói. Hãy nói rõ hơn hoặc kiểm tra micro.")
         audio_file = None
@@ -163,7 +179,8 @@ class SpeakingService:
             audio_file = media.write(f"speaking/{s.id}/{client_turn_id}.{EXT[ctype]}", audio)
         indicators = fluency_indicators(transcript, seconds)
         if s.mode == "read_aloud":
-            fb = {"type": "read_aloud", "match": read_aloud_match(last_ai.text if last_ai else "", transcript), "indicators": indicators}
+            fb = {"type": "read_aloud", "match": read_aloud_match(last_ai.text if last_ai else "", transcript), "indicators": indicators,
+                  "pronunciation": pron}
             db.add(SpeakingTurn(session_id=s.id, client_turn_id=client_turn_id, role="user", text=transcript, audio_file=audio_file,
                                 audio_seconds=seconds, feedback=fb))
             used = {t.text for t in turns if t.role == "ai"}
@@ -177,6 +194,8 @@ class SpeakingService:
                                              f"<learner_answer>{transcript}</learner_answer>\nGive feedback on the latest answer and the next question.",
                                        schema=SpeakingTurnFeedback, max_output_tokens=1400)
             fb = {"type": "conversation", **fb_ai.model_dump(), "indicators": indicators}
+            if pron:
+                fb["pronunciation"] = pron | {"note_vi": "Máy chưa nghe rõ các từ này — hãy nói chậm, rõ âm cuối. Bấm vào từ để luyện."}
             from ..vocabulary.service import record_usage  # shared vocabulary progress: studied words used in speaking
 
             fb["vocab_used"] = record_usage(db, user_id, transcript, "speaking", [e.original for e in fb_ai.grammar_feedback])
@@ -206,16 +225,22 @@ class SpeakingService:
             return s
         if s.mode == "read_aloud":
             matches = [t.feedback["match"]["word_match_percent"] for t in user_turns]
+            scores = [t.feedback["pronunciation"]["score"] for t in user_turns if (t.feedback or {}).get("pronunciation")]
+            hard = sorted({w["word"] for t in user_turns for w in ((t.feedback or {}).get("pronunciation") or {}).get("words", [])
+                           if w["status"] != "ok"})
             s.summary = {"type": "read_aloud", "sentences": len(user_turns), "average_word_match": round(sum(matches) / len(matches)),
-                         "note_vi": "Tỉ lệ khớp từ do máy nhận diện, không phải điểm phát âm."}
+                         "average_pronunciation": round(sum(scores) / len(scores)) if scores else None, "words_to_practise": hard[:15],
+                         "note_vi": "Điểm phát âm = tỉ lệ từ máy nghe rõ đúng như câu mẫu (độ dễ hiểu), không chấm giọng hay ngữ điệu."}
         else:
             convo = "\n".join(f"{t.role.upper()}: {t.text}" for t in turns)
             out = self.gw.structured(db, user_id, feature="speaking_summary", task="grading", instructions=prompts.SPEAKING,
                                      input=f"Mode: {MODES[s.mode]}. Level: {s.level}. Topic: {s.topic}. Summarise this practice session."
                                            f"\n<learner_text>\n{convo[:12000]}\n</learner_text>",
                                      schema=SpeakingSummaryOut, max_output_tokens=2500)
-            s.summary = {"type": "conversation", **out.model_dump(),
-                         "pronunciation_note_vi": "Nhận xét dựa trên bản chép lời tự động; hệ thống không đánh giá phát âm, trọng âm hay ngữ điệu."}
+            unclear = sorted({w for t in user_turns for w in (((t.feedback or {}).get("pronunciation") or {}).get("unclear") or [])})
+            s.summary = {"type": "conversation", **out.model_dump(), "unclear_words": unclear[:15],
+                         "pronunciation_note_vi": "Nội dung được nhận xét từ bản chép lời. Phát âm: các từ máy chưa nghe rõ được liệt kê để luyện; "
+                                                  "không chấm giọng hay ngữ điệu. Dùng “Đọc to” để luyện phát âm từng từ."}
         s.status, s.ended_at = "ended", utcnow()
         P.award(db, user_id, f"speaking:{s.id}", "production", P.XP_RULES["production"])
         db.commit()

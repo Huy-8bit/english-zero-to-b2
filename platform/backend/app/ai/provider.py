@@ -6,6 +6,8 @@ backoff; here we only configure timeout/max_retries and translate errors.
 """
 from __future__ import annotations
 
+import math
+import re
 import time
 from dataclasses import dataclass
 from typing import Protocol, TypeVar
@@ -34,6 +36,7 @@ class AIProvider(Protocol):
     def text(self, *, model: str, instructions: str, input: str, max_output_tokens: int) -> tuple[str, Usage]: ...
     def transcribe(self, *, model: str, audio: bytes, filename: str, prompt: str = "") -> tuple[str, Usage]: ...
     def speech(self, *, model: str, text: str, voice: str, instructions: str = "") -> tuple[bytes, Usage]: ...
+    def transcribe_words(self, *, model: str, audio: bytes, filename: str) -> tuple[str, list[tuple[str, float]], Usage]: ...
     def realtime_secret(self, *, model: str, instructions: str, voice: str, ttl_seconds: int) -> dict: ...
     def embed(self, *, model: str, texts: list[str]) -> tuple[list[list[float]], Usage]: ...
     def list_models(self) -> list[str]: ...
@@ -116,6 +119,30 @@ class OpenAIProvider:
                 usage.output_tokens = getattr(u, "output_tokens", 0) or 0
         return tr.text, usage
 
+    def transcribe_words(self, *, model, audio, filename):
+        """Transcription without any prompt (a prompt would steer the model towards the expected words and hide errors),
+        with token log-probabilities grouped into words: [(word, probability)]."""
+        tr, ms = self._call(lambda: self.client.audio.transcriptions.create(
+            model=model, file=(filename, audio), language="en", response_format="json", include=["logprobs"]))
+        words: list[list] = []
+        for t in getattr(tr, "logprobs", None) or []:
+            tok, p = t.token, math.exp(t.logprob)
+            if not words or tok.startswith(" ") or not re.match(r"[A-Za-z0-9']", words[-1][0][-1:] or " "):
+                words.append([tok.strip(), p])
+            else:
+                words[-1][0] += tok
+                words[-1][1] = min(words[-1][1], p)
+        pairs = [(re.sub(r"[^A-Za-z0-9']", "", w).lower(), round(p, 3)) for w, p in words]
+        usage = Usage(latency_ms=ms)
+        u = getattr(tr, "usage", None)
+        if u is not None:
+            if getattr(u, "type", "") == "duration":
+                usage.audio_seconds = float(u.seconds)
+            else:
+                usage.input_tokens = getattr(u, "input_tokens", 0) or 0
+                usage.output_tokens = getattr(u, "output_tokens", 0) or 0
+        return tr.text, [x for x in pairs if x[0]], usage
+
     def speech(self, *, model, text, voice, instructions=""):
         kwargs = {"instructions": instructions} if instructions else {}
         res, ms = self._call(lambda: self.client.audio.speech.create(
@@ -146,4 +173,4 @@ class DisabledProvider:
 
         raise AIDisabled()
 
-    structured = text = transcribe = speech = realtime_secret = embed = list_models = _no
+    structured = text = transcribe = transcribe_words = speech = realtime_secret = embed = list_models = _no

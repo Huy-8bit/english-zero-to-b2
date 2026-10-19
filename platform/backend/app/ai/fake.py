@@ -231,6 +231,14 @@ class FakeProvider:
     def _between(text: str, tag: str) -> str:
         return text.split(f"<{tag}>")[-1].split(f"</{tag}>")[0] if f"<{tag}>" in text else ""
 
+    def _s_PronunciationExplanation(self, input: str):
+        from .pronunciation import PronunciationExplanation, WordExplanation
+
+        words = re.findall(r"^- (\S+) \(", self._between(input, "learner_text"), re.M)
+        return PronunciationExplanation(words=[WordExplanation(word=w, sound_vi=f"[AI giả lập] Âm khó trong “{w}”.",
+                                                               how_vi="Đọc chậm từng âm, bật rõ âm cuối.", practice=[w, f"{w} {w}"]) for w in words],
+                                        summary_vi="[AI giả lập] Luyện lại các từ được đánh dấu rồi đọc lại cả câu.")
+
     def _s_VocabAnswerJudge(self, input: str):
         from ..vocabulary.ai_schemas import VocabAnswerJudge
 
@@ -329,6 +337,12 @@ class FakeProvider:
         except (UnicodeDecodeError, ValueError):
             text = "I usually go to the park with my family."
         return text.strip(), Usage(audio_seconds=5.0, latency_ms=5)
+
+    def transcribe_words(self, *, model, audio, filename):
+        """Test audio is UTF-8 text: a word written "?word" is heard with low confidence (0.4)."""
+        text, usage = self.transcribe(model=model, audio=audio, filename=filename)
+        words = [(re.sub(r"[^A-Za-z0-9']", "", w).lower(), 0.4 if w.startswith("?") else 0.98) for w in text.split()]
+        return text.replace("?", ""), [w for w in words if w[0]], usage
 
     def speech(self, *, model, text, voice, instructions=""):
         self._maybe_fail("speech")
