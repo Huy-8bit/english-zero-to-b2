@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { History, Save, Sparkles, Timer, Trash2 } from "lucide-react";
 import { ai, ERROR_LABELS, newId, type WritingFeedback, type WritingSubmission } from "@/services/ai";
@@ -30,7 +30,13 @@ export default function WritingStudioPage() {
   const nav = useNavigate();
   const opts = useQuery({ queryKey: ["writing-options"], queryFn: ai.writingOptions });
   const hist = useQuery({ queryKey: ["writing-history"], queryFn: ai.writingHistory });
-  const [d, setD] = useState<Draft>(() => store.get<Draft>("em-writing-draft", { prompt: null, text: "", taskType: "paragraph", level: "B1", mode: "minimal", clientId: newId(), parentId: null }));
+  const [sp] = useSearchParams();
+  const [d, setD] = useState<Draft>(() => {
+    const saved = store.get<Draft>("em-writing-draft", { prompt: null, text: "", taskType: "paragraph", level: "A1", mode: "minimal", clientId: newId(), parentId: null });
+    const lv = sp.get("level");
+    // coming from the daily writing ladder: start a fresh paragraph task at the learner's level
+    return lv && /^(A0|A1|A2|B1|B2)$/.test(lv) && lv !== saved.level && !saved.text ? { ...saved, level: lv, taskType: "paragraph", prompt: null } : saved;
+  });
   const [result, setResult] = useState<WritingSubmission | null>(null);
   const [busy, setBusy] = useState<string | null>(null);
   const [err, setErr] = useState<{ e: unknown; retry: () => void } | null>(null);

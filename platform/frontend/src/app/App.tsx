@@ -30,6 +30,7 @@ const NotFound = lazy(() => import("./NotFound"));
 const PracticeStudio = lazy(() => import("@/features/ai-practice/PracticeStudioPage"));
 const ExerciseSetPage = lazy(() => import("@/features/ai-practice/ExerciseSetPage"));
 const WritingStudio = lazy(() => import("@/features/writing-studio/WritingStudioPage"));
+const DailyWriting = lazy(() => import("@/features/writing-studio/DailyWritingPage"));
 const SpeakingStudio = lazy(() => import("@/features/speaking-studio/SpeakingStudioPage"));
 const ListeningStudio = lazy(() => import("@/features/listening-studio/ListeningStudioPage").then((m) => ({ default: m.ListeningStudioPage })));
 const ListeningSet = lazy(() => import("@/features/listening-studio/ListeningStudioPage").then((m) => ({ default: m.ListeningSetPage })));
@@ -90,6 +91,7 @@ export default function App() {
             <Route path="ai-practice" element={<PracticeStudio />} />
             <Route path="ai-practice/:setId" element={<ExerciseSetPage />} />
             <Route path="writing-studio" element={<WritingStudio />} />
+            <Route path="writing-daily" element={<DailyWriting />} />
             <Route path="speaking-studio" element={<SpeakingStudio />} />
             <Route path="listening-studio" element={<ListeningStudio />} />
             <Route path="listening-studio/:setId" element={<ListeningSet />} />

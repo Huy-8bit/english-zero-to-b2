@@ -160,10 +160,12 @@ def _action(bid: str, cat: str, nexts: dict, vp: dict, gaps: dict, today) -> dic
             return {"label": f"{u['id']} · {u['title']}", "type": "link", "link": f"/learn/{u['id']}"}
         return {"label": "Listening Studio" if even else "Reading Studio", "type": "link", "link": "/listening-studio" if even else "/reading-studio"}
     if bid == "vocab_new":
+        if vp["new_left"] > 10:  # intensive goal: batches of 10 on the sprint page
+            return {"label": f"Học cấp tốc: còn {vp['new_left']} từ (đợt 10 từ)", "type": "link", "link": "/vocabulary/sprint"}
         return {"label": f"Học {vp['new_left']} từ mới" if vp["new_left"] else "Luyện collocation", "type": "vocab_session",
                 "kind": "learn" if vp["new_left"] else "collocation"}
     if bid == "output":
-        return {"label": "Speaking Studio" if even else "Writing Studio", "type": "link", "link": "/speaking-studio" if even else "/writing-studio"}
+        return {"label": "Speaking Studio" if even else "Luyện viết mỗi ngày", "type": "link", "link": "/speaking-studio" if even else "/writing-daily"}
     return {"label": "Mở", "type": "link", "link": "/"}
 
 

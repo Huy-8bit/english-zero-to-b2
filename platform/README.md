@@ -102,6 +102,8 @@ platform/
 | Điền từ, sửa lỗi, viết lại, dịch, sắp xếp | Khớp với các biến thể ghi trong đáp án (chuẩn hóa hoa/thường, dấu câu, viết tắt) → **Đúng**. Không khớp → *không* kết luận sai: hiện đáp án mẫu để người học tự đánh giá |
 | Viết đoạn, nói, tự kiểm tra | Hiện bài mẫu/rubric của giáo trình, người học tự đánh giá |
 
+**Không biết làm?** Mỗi câu (trừ bài kiểm tra) có nút **“Không biết — xem đáp án”**: hiện ngay đáp án và giải thích mà không cần trả lời. Câu đó được tính là *chưa đúng*: nó vào Sổ lỗi sai và Ôn tập thông minh, được hỏi lại cuối bài (chế độ Hành trình), không được tự đánh giá thành “đúng” và không cộng XP. Bài kiểm tra chỉ hiện đáp án sau khi nộp cả bài.
+
 Điểm bài = (câu tự chấm đúng + câu tự đánh giá đúng) / số câu đã chấm, **tính ở server** từ lần trả lời gần nhất. Dưới 60% → trạng thái *Cần ôn lại*. Không thể hoàn thành bài khi chưa đi tới slide cuối.
 
 ### Tiến độ, XP, ôn tập
@@ -144,6 +146,15 @@ Markdown render bằng `react-markdown` (không bật HTML thô) + `rehype-sanit
 - Mỗi từ chỉ được xếp lịch FSRS một lần trong mỗi vòng của phiên học. Luyện thêm từ chưa đến hạn không làm đổi lịch ôn.
 - Trang “Hôm nay” tính kế hoạch từ dữ liệu: số từ đến hạn, độ chính xác gần đây và tùy chọn của bạn.
 
+**Học cấp tốc (`/vocabulary/sprint`) — ví dụ 100 từ/ngày.**
+- Mục tiêu tối đa 150 từ/ngày, chia thành **đợt 10 từ**, mỗi đợt khoảng 5–9 phút (đo từ tốc độ trả lời của bạn).
+- Mỗi đợt ưu tiên các từ **cùng một chủ đề**, theo đúng thứ tự học (cấp độ → từ thông dụng).
+- **Sàng lọc:** bấm “Biết rồi?” với từ bạn đã biết chắc để bỏ qua. Từ bỏ qua không được tính vào số từ học hôm nay; có thể bỏ đánh dấu ở trang từ.
+- Trình tự một đợt: thẻ học (nghĩa → ví dụ → cách dùng, có nút **Mẹo nhớ (AI)**) → nhận ra nghĩa → tự gõ lại từ → vòng nghe chọn từ ở cuối, xáo trộn.
+- **Lịch ôn 7 ngày tới:** số từ đến hạn mỗi ngày, lấy từ lịch FSRS thật. Học 100 từ/ngày thì phần ôn tăng rất nhanh, nên luôn ôn hết từ đến hạn trước.
+- Số từ mới chỉ bị giảm khi còn nhiều từ quá hạn ôn từ những ngày trước. Các lượt ôn trong ngày của chính các từ vừa học không chặn đợt tiếp theo.
+- Phiên “Kế hoạch hôm nay” chỉ dạy tối đa 10 từ mới mỗi lần.
+
 **Bổ sung bằng AI.** `python -m app.vocabulary.enrich queue|run|review|approve|reject` (hoặc dùng mục “Dữ liệu từ vựng” trong trang Thống kê) xử lý các từ chưa có nghĩa tiếng Việt từ nguồn mở:
 - chạy theo lô, mỗi lô có checkpoint, tự thử lại khi lỗi;
 - kết quả phải được người duyệt mới xuất bản;
@@ -154,6 +165,21 @@ Markdown render bằng `react-markdown` (không bật HTML thô) + `rehype-sanit
 - Writing: các gợi ý từ vựng có nút lưu.
 - Speaking: các cụm từ hữu ích có nút lưu.
 - Từ đã học xuất hiện trong bài viết hoặc bài nói được tính là “đã dùng”.
+
+## Luyện viết mỗi ngày (`/writing-daily`)
+
+Ba bậc, theo trình độ hiện tại, dùng chính các từ bạn đã học:
+
+1. **Dịch câu Việt → Anh** (8 câu/ngày): câu thật, ngắn (Tatoeba), chứa một từ bạn đã học (có gợi ý từ). Cách chấm:
+   - khớp câu mẫu (bỏ qua hoa/thường, dấu câu; “I'm” = “I am”) → **Đúng**;
+   - đủ các từ nhưng sai thứ tự → **Đúng từ, sai trật tự**;
+   - khác câu mẫu → AI xét xem đó có phải một cách dịch khác đúng nghĩa không và giải thích bằng tiếng Việt. Nếu AI không dùng được, bạn so với câu mẫu rồi tự đánh giá (một lần).
+
+   Đây là bài luyện, không làm đổi lịch ôn FSRS. Câu sai vào mục “Câu dịch cần xem lại”.
+2. **Tự đặt câu với từ đã học** (5 câu): AI chấm, chỉ lỗi và đưa câu sửa.
+3. **Viết đoạn ngắn** đúng độ dài theo cấp (A0 25–50 từ … B2 150–220 từ) trong Writing Studio, đã chọn sẵn cấp độ của bạn. Sửa theo góp ý rồi nộp lại để so sánh.
+
+Trang hiển thị số câu đã làm hôm nay, tỉ lệ dịch đúng 7 ngày, các loại lỗi hay gặp (từ bài viết và câu dịch) và điểm ước lượng của đoạn gần nhất. Thời gian luyện viết được ghi vào phần “Nói / Viết” của lịch học.
 
 ## Trợ lý học tập
 

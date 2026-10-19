@@ -81,7 +81,7 @@ export interface Overview {
 export interface Topic { id: string; name: string; name_vi: string; band: string; total: number; encountered: number; learned: number; mastered: number }
 
 export interface SessionItem {
-  id: string; type: "learn" | "flashcard" | "mc_meaning" | "mc_word" | "listen_choose" | "type_word" | "dictation" | "cloze" | "collocation" | "builder" | "confusable" | "use_it";
+  id: string; type: "learn" | "flashcard" | "mc_meaning" | "mc_word" | "listen_choose" | "type_word" | "dictation" | "cloze" | "collocation" | "builder" | "confusable" | "use_it" | "translate";
   entry_id?: string; round: number; scheduled: boolean; prompt_vi?: string;
   // learn / flashcard
   word?: string; lemma?: string; kind?: string; cefr?: string; pos?: string; pos_vi?: string; ipa_uk?: string | null; ipa_us?: string | null;
@@ -94,12 +94,14 @@ export interface SessionItem {
   example_vi?: string; hint?: { first: string; length: number; words: number }; words?: number; ipa_after?: boolean;
   // builder
   tokens?: string[]; end?: string;
+  // translate (Vietnamese sentence → English)
+  vi?: string;
 }
 export interface AnswerResult {
   item_id: string; type: string; entry_id: string; entry: { lemma: string; headword: string; ipa_uk: string | null; ipa_us: string | null };
   correct: boolean | null; verdict: string; expected?: string; expected_index?: number; answer?: string | number; full?: string; vi?: string | null;
   explain?: { word: string; meaning_vi: string; correct: boolean }[]; note_vi?: string | null; confused_meaning?: string; confused_with?: string;
-  ai_checked?: boolean; ai_explanation_vi?: string; ai_unavailable?: string; detail?: string;
+  ai_checked?: boolean; ai_explanation_vi?: string; ai_unavailable?: string; detail?: string; used_word?: boolean;
   schedule?: { rating: number; rating_name: string; due: string | null; state: string }; retry_added?: boolean; session_complete?: boolean;
   // use it
   issues?: { original: string; correction: string; explanation_vi: string }[]; corrected_sentence?: string; explanation_vi?: string; better_example?: string; ai?: boolean;
@@ -125,7 +127,7 @@ export interface EnrichmentStatus {
   review: { id: number; lemma: string; problems: string[]; model: string | null; result: { senses: { pos: string; meaning_vi: string; definition_en: string }[]; examples: { en: string; vi: string }[]; cefr_estimate: string; collocations: string[] } }[];
 }
 
-export type SessionKind = "daily" | "review" | "learn" | "sprint" | "flashcards" | "type" | "dictation" | "context" | "collocation" | "builder" | "use" | "speed" | "weak" | "custom" | "gaps";
+export type SessionKind = "daily" | "review" | "learn" | "sprint" | "translate" | "flashcards" | "type" | "dictation" | "context" | "collocation" | "builder" | "use" | "speed" | "weak" | "custom" | "gaps";
 export interface SprintWord { entry_id: string; word: string; ipa: string | null; pos_vi: string; meaning_vi: string; cefr: string | null }
 export interface Sprint {
   goal: number; learned_today: number; new_left: number; batch_size: number; batches_total: number; batches_done: number;
@@ -186,7 +188,7 @@ export const STATE_TONES: Record<ProgressState, "neutral" | "primary" | "success
 export const VERDICT_LABELS: Record<string, string> = {
   correct: "Chính xác", acceptable: "Chấp nhận được", spelling: "Sai chính tả", wrong_form: "Sai dạng từ", wrong_meaning: "Sai nghĩa",
   incorrect: "Chưa đúng", self_accepted: "Bạn tự chấp nhận", again: "Quên", hard: "Khó", good: "Nhớ", easy: "Dễ",
-  minor_issues: "Đúng, còn lỗi nhỏ", missing_word: "Chưa dùng từ", self_correct: "Tự đánh giá: đúng", self_partly: "Tự đánh giá: gần đúng", self_wrong: "Tự đánh giá: sai",
+  wrong_order: "Đúng từ, sai trật tự", mismatch: "Khác câu mẫu — hãy so sánh", minor_issues: "Đúng, còn lỗi nhỏ", missing_word: "Chưa dùng từ", self_correct: "Tự đánh giá: đúng", self_partly: "Tự đánh giá: gần đúng", self_wrong: "Tự đánh giá: sai",
 };
 export const MODE_INFO: { kind: SessionKind; title: string; desc: string; ai?: boolean }[] = [
   { kind: "learn", title: "Học từ mới", desc: "5–10 từ: nghe, nghĩa, ví dụ, nhận diện rồi nhớ lại" },

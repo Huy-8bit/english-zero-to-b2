@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useQueryClient } from "@tanstack/react-query";
-import { AnimatePresence, motion } from "motion/react";
+import { motion } from "motion/react";
 import { ArrowRight, BookOpenText, Bot, CalendarClock, CheckCircle2, Flag, Flame, ListChecks, RotateCcw, Sparkles, Star, Target, X } from "lucide-react";
 import { api } from "@/services/api";
 import type { ItemResult, JourneyState, LessonDetail, QuizItem, Step, StepsPayload } from "@/types/content";
@@ -215,8 +215,9 @@ export function JourneySession({ unitId, data, lesson, onClassic }: { unitId: st
       </header>
 
       <main className="mx-auto max-w-3xl px-3 pb-28 pt-6 sm:px-6">
-        <AnimatePresence mode="wait">
-          <motion.section key={card.key} initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -12 }} transition={{ duration: 0.18 }} aria-live="polite">
+        {/* enter animation only: an exit animation (AnimatePresence mode="wait") could freeze the old screen when
+            the learner moved on quickly, leaving an input that ignored typing */}
+          <motion.section key={card.key} initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.18 }} aria-live="polite">
             {card.kind === "mission" && <Mission data={data} j={j} />}
             {card.kind === "content" && <ContentCard step={card.step} data={data} checklist={ps.state.checklist ?? {}} onChecklist={(c) => ps.update((s) => ({ ...s, checklist: c }))} />}
             {isQ(card) && (
@@ -244,7 +245,6 @@ export function JourneySession({ unitId, data, lesson, onClassic }: { unitId: st
                 minutes={js.startedAt ? Math.round((Date.now() - js.startedAt) / 60000) : null} />
             )}
           </motion.section>
-        </AnimatePresence>
       </main>
 
       {card.kind !== "finish" && (

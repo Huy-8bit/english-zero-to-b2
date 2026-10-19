@@ -5,7 +5,7 @@ from fastapi import APIRouter, Depends, HTTPException
 from pydantic import BaseModel, Field
 from sqlalchemy.orm import Session
 
-from .. import smart_review, study_plan
+from .. import smart_review, study_plan, writing_daily
 from ..content.store import ContentStore
 from ..models import User
 from .deps import current_user, get_db, get_store
@@ -18,6 +18,11 @@ def today(db: Session = Depends(get_db), store: ContentStore = Depends(get_store
     out = study_plan.plan(db, user, store)
     db.commit()  # quest XP
     return out
+
+
+@router.get("/api/writing/daily")
+def daily_writing(db: Session = Depends(get_db), store: ContentStore = Depends(get_store), user: User = Depends(current_user)):
+    return writing_daily.status(db, user, store)
 
 
 @router.get("/api/review/smart")

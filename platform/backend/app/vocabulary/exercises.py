@@ -306,6 +306,19 @@ def use_it(b: Bundle) -> dict:
             "private": {"forms": b.forms}}
 
 
+def translate(b: Bundle) -> dict | None:
+    """Writing: translate a short real sentence (Vietnamese → English) that uses the word (given as a hint)."""
+    rx = b.word_forms_regex()
+    exs = [x for x in b.examples if x.en and x.vi and rx and rx.search(x.en) and 3 <= len(x.en.split()) <= 12]
+    if not exs:
+        return None
+    ex = sorted(exs, key=lambda x: (len(x.en.split()), x.id))[0]
+    return {"id": _id(), "type": "translate", "entry_id": b.e.id,
+            "public": {"vi": ex.vi, "word": b.e.headword or b.e.lemma, "meaning_vi": short_meaning(b.meaning), "pos_vi": POS_VI.get(b.pos, b.pos),
+                       "words": len(ex.en.split()), "prompt_vi": "Dịch câu sau sang tiếng Anh"},
+            "private": {"en": ex.en, "forms": b.forms}}
+
+
 # item types whose prompt must not reveal the word: entry ids are readable slugs ("achieve"), so they are only
 # returned with the feedback after answering
 HIDE_ENTRY = {"type_word", "dictation", "mc_word", "listen_choose", "cloze", "collocation", "confusable"}

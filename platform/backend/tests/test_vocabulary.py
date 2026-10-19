@@ -529,3 +529,57 @@ def test_backlog_from_earlier_days_reduces_new_words_but_todays_steps_do_not(cli
     for it in s["items"]:
         client.post(f"/api/vocab/sessions/{s['id']}/answer", json={"item_id": it["id"], "rating": 3})
     assert client.get("/api/vocab/plan").json()["new_goal"] == 100  # today's learning steps are not a backlog
+
+
+# ============================================================ writing: translate Vietnamese → English
+@pytest.mark.parametrize("answer, verdict", [
+    ("I'm going to school.", "correct"), ("i am going to school", "correct"), ("Going I am to school", "wrong_order"),
+    ("I go to the school", "mismatch"), ("", "incorrect")])
+def test_translation_deterministic_layer(answer, verdict):
+    g = grading.grade_translation(answer, "I am going to school.", ["go", "going"])
+    assert g["verdict"] == verdict
+
+
+def _studied(client, n=8):
+    s = start(client, "flashcards", level="A1", size=n)
+    for it in s["items"]:
+        client.post(f"/api/vocab/sessions/{s['id']}/answer", json={"item_id": it["id"], "rating": 3})
+
+
+def test_translate_session_uses_studied_words_and_never_moves_the_schedule(client, app):
+    _studied(client, 15)
+    s = start(client, "translate", size=6)
+    k = keys(app, s["id"])
+    assert s["items"] and all(it["type"] == "translate" and it["vi"] and it["word"] and not it["scheduled"] for it in s["items"])
+    first, second, third = s["items"][:3]
+    ok = client.post(f"/api/vocab/sessions/{s['id']}/answer", json={"item_id": first["id"], "answer": k[first["id"]]["en"]}).json()
+    assert ok["verdict"] == "correct" and ok["expected"] == k[first["id"]]["en"]
+    words = k[second["id"]]["en"].rstrip(".!?").split()
+    shuffled = " ".join(words[1:] + words[:1]) if len(words) > 1 else "x"
+    wo = client.post(f"/api/vocab/sessions/{s['id']}/answer", json={"item_id": second["id"], "answer": shuffled}).json()
+    assert wo["verdict"] == "wrong_order" and not wo["correct"]
+    # AI unavailable: a different translation waits for the learner's own judgement, once
+    mm = client.post(f"/api/vocab/sessions/{s['id']}/answer", json={"item_id": third["id"], "answer": "Something else entirely here"}).json()
+    assert mm["verdict"] == "mismatch" and mm["correct"] is None and mm["ai_unavailable"]
+    sa = client.post(f"/api/vocab/sessions/{s['id']}/answer", json={"item_id": third["id"], "self": "wrong"}).json()
+    assert sa["verdict"] == "self_wrong" and sa["correct"] is False
+    again = client.post(f"/api/vocab/sessions/{s['id']}/answer", json={"item_id": third["id"], "self": "correct"}).json()
+    assert again["verdict"] == "self_wrong"  # decided once
+    with app.state.sessionmaker() as db:
+        logs = db.scalars(select(VocabReviewLog).where(VocabReviewLog.mode == "translate")).all()
+        assert len(logs) == 3 and all(l.rating is None for l in logs)  # practice: no FSRS review
+    daily = client.get("/api/writing/daily").json()
+    tr = next(x for x in daily["steps"] if x["key"] == "translate")
+    assert tr["done"] == 3 and tr["correct"] == 1 and daily["week"]["translations"] == 3
+    assert daily["recent_translation_mistakes"] and daily["common_errors"]
+    assert {x["key"] for x in daily["steps"]} == {"translate", "use", "paragraph"} and daily["level"] in ("A0", "A1", "A2", "B1", "B2")
+
+
+def test_translate_ai_judge_accepts_a_close_alternative(c, ai_app):
+    _studied(c, 15)
+    s = start(c, "translate", size=3)
+    k = keys(ai_app, s["id"])
+    it = s["items"][0]
+    alt = k[it["id"]]["en"] + " too"  # one extra word: not the model sentence, but the (fake) judge accepts small differences
+    out = c.post(f"/api/vocab/sessions/{s['id']}/answer", json={"item_id": it["id"], "answer": alt}).json()
+    assert out["ai_checked"] and out["verdict"] == "acceptable" and out["correct"] and out["ai_explanation_vi"]

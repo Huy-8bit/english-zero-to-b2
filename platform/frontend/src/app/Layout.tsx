@@ -3,7 +3,7 @@ import { useEffect, useRef, useState, type FormEvent } from "react";
 import {
   BookOpen, BookText, Brain, ClipboardCheck, Ear, FlaskConical, GraduationCap, Headphones, Home, Library, LineChart,
   Map, Menu, Mic, Moon, PenLine, Search, Sun, X, Layers, Sparkles, PenSquare, AudioLines, Headset, BookOpenCheck, Target,
-  NotebookPen, Settings, CalendarDays, Lock, CalendarClock,
+  NotebookPen, PencilLine, Settings, CalendarDays, Lock, CalendarClock,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useUI } from "@/stores/ui";
@@ -29,6 +29,7 @@ export const NAV_GROUPS = [
   ] },
   { title: "Luyện với AI", items: [
     { to: "/ai-practice", label: "Tạo bài tập AI", icon: Sparkles },
+    { to: "/writing-daily", label: "Luyện viết mỗi ngày", icon: PencilLine },
     { to: "/writing-studio", label: "Writing Studio", icon: PenSquare },
     { to: "/speaking-studio", label: "Speaking Studio", icon: AudioLines },
     { to: "/listening-studio", label: "Listening Studio", icon: Headset },
@@ -113,7 +114,7 @@ export function Layout() {
   const { sidebarOpen, setSidebarOpen } = useUI();
   const loc = useLocation();
   useEffect(() => { setSidebarOpen(false); }, [loc.pathname, setSidebarOpen]);
-  useModuleHeartbeat(loc.pathname);
+  useModuleHeartbeat(loc.pathname, loc.search);
   return (
     <div className="min-h-screen">
       <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:left-2 focus:top-2 focus:z-50 focus:rounded focus:bg-surface focus:p-2">Bỏ qua tới nội dung</a>

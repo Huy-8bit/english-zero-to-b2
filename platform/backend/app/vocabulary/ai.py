@@ -90,7 +90,7 @@ class VocabAI:
                                   instructions=VOCAB_TEACHER + " Decide whether the learner's English answer correctly expresses the Vietnamese prompt. "
                                   "Accept valid alternatives and synonyms that a teacher would accept; reject wrong meaning. Explain in Vietnamese.",
                                   input=f"<curriculum>Vietnamese prompt: {prompt_vi}\nReference answer: {expected}</curriculum>\n"
-                                        f"<learner_answer>{answer[:200]}</learner_answer>",
+                                        f"<learner_answer>{answer[:400]}</learner_answer>",
                                   schema=VocabAnswerJudge, max_output_tokens=400, cache=True)
 
     def grade_sentence(self, db: Session, user_id: int, *, entry: dict, sentence: str) -> dict:

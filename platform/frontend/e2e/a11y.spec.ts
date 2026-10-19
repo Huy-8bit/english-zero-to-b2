@@ -5,7 +5,7 @@ import { expect, test } from "@playwright/test";
 for (const [name, url] of [
   ["dashboard", "/"], ["learning path", "/path"], ["lesson player", "/learn/A1-G001"], ["vocabulary", "/vocabulary"],
   ["vocabulary explorer", "/vocabulary/explore?level=A1"], ["vocabulary word", "/vocabulary/word/achieve"], ["vocabulary today", "/vocabulary/today"],
-  ["vocabulary stats", "/vocabulary/stats"], ["journal", "/journal"], ["focus", "/focus"], ["today plan", "/today"], ["smart review", "/review"], ["vocabulary notebook", "/vocabulary/notebook"],
+  ["vocabulary stats", "/vocabulary/stats"], ["journal", "/journal"], ["focus", "/focus"], ["today plan", "/today"], ["smart review", "/review"], ["vocabulary notebook", "/vocabulary/notebook"], ["vocabulary sprint", "/vocabulary/sprint"], ["daily writing", "/writing-daily"],
   ["reference", "/reference?path=06-GRAMMAR-REFERENCE/ALL-TENSES-COMPARISON.md"],
 ] as const) {
   test(`a11y: ${name}`, async ({ page }) => {

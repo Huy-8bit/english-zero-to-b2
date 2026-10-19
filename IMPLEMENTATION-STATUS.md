@@ -1,3 +1,29 @@
+# Reveal answer, 100 words/day, daily writing — 2026-10-19
+
+Requests:
+- "nếu những câu tôi không có đáp án thì tôi vẫn bấm coi kết quả được";
+- "nâng cao khả năng viết";
+- "học từ vựng dễ nhớ, nhưng nhiều từ vựng nhất có thể, target mỗi ngày 100 từ".
+
+| Feature | Status | Files | Evidence / remaining work |
+|---|---|---|---|
+| "Không biết — xem đáp án" on every lesson question (classic, journey, smart review) | COMPLETE_AND_TESTED | `backend/app/api/learning.py`, `schemas.py`, `services/progress.py`; `frontend/src/features/quizzes/ItemCard.tsx`, `QuizSlide.tsx`, `ResultPanel.tsx`, `lesson-player/JourneySession.tsx`, `flashcards/ReviewPage.tsx` | `reveal: [item ids]` on the normal submit endpoint. The server stores verdict `revealed` (counted as not correct): the item goes to the mistake notebook and smart review and comes back in the journey retry round. It cannot be self-assessed as correct and earns no XP. Exams (deferred answers) answer 409. Tests: `test_api.py` (2), E2E `journey.spec.ts` ("a question I cannot answer"). |
+| Intensive vocabulary (`/vocabulary/sprint`), up to 150 new words/day | COMPLETE_AND_TESTED | `backend/app/vocabulary/sessions.py` (`sprint_candidates`, `sprint_status`, kind `sprint`), `api/vocabulary.py` (`/sprint`, `/sprint/known`); `frontend/src/features/vocab/SprintPage.tsx` | Batches of 10, one topic when ≥ 5 candidates share it. Triage of known words: they are skipped and not counted. Session: teach → recognise → recall → shuffled listening round. 7-day review forecast comes from the real FSRS schedule; minutes per batch come from the learner's median answer time. The daily session teaches ≤ 10 new words. New words are reduced only by reviews overdue from earlier days, not by today's learning steps. Tests: `test_vocabulary.py` (3), E2E `sprint.spec.ts`. |
+| Memory hint on the teaching card | COMPLETE_AND_TESTED (fake AI) | `vocab/session/items.tsx::Mnemonic` | Uses the existing cached tutor action `remember`; labelled "AI gợi ý"; optional. Not checked against the live model. |
+| Daily writing ladder (`/writing-daily`) | COMPLETE_AND_TESTED | `backend/app/writing_daily.py`, `api/plan.py`; `vocabulary/exercises.py::translate`, `grading.py::grade_translation`, `sessions.py`; `frontend/src/features/writing-studio/DailyWritingPage.tsx`, `vocab/session/items.tsx::TranslateItem`, `SessionPage.tsx` | (1) Translate 8 real Tatoeba sentences (Vietnamese → English) containing studied words. Grading: exact (contractions expanded), word order, then the AI judge for other valid translations; without AI the learner self-assesses once. Practice only: FSRS is untouched. (2) 5 own sentences with AI feedback (existing mode). (3) A paragraph at the learner's level in Writing Studio (`?level=`). Shows today's counts, 7-day accuracy, common error types, recent wrong translations. Writing time is logged as writing, and the 4-hour plan's output block links here. Tests: `test_vocabulary.py` (7 incl. 5 grading cases), E2E `writing-daily.spec.ts`. |
+| Journey screen transition | FIXED | `JourneySession.tsx` | The full-lesson E2E failed intermittently (also before this round): an input stayed empty and ignored typing. Cause: `AnimatePresence mode="wait"` can leave the previous screen frozen when cards change quickly. The exit animation was removed (enter animation kept). |
+
+**Verification (2026-10-19):**
+- Backend: 156 passed.
+- Vitest: 25 passed.
+- Playwright: 58/58 (desktop, mobile, webkit-lock), including the new pages in the a11y (axe) and mobile-overflow checks.
+- The full-lesson journey test passed 3 times in a row after the transition fix (17 s; before: 41 s or stuck).
+
+**Known limitations:**
+- 100 new words/day means a fast-growing review load; the sprint page shows it but does not cap it.
+- Some high-frequency words list a less common sense first in the source data (e.g. "can" = "lon" before "có thể"). The triage list shows the first two senses with their part of speech, and the teaching card shows three senses.
+- The AI judge, memory hints and sentence feedback were tested with the fake provider only.
+
 # Lesson "journey" mode — 2026-10-18
 
 **Diagnosis** (A0-G012, A1-G005; all grammar lessons share the template):

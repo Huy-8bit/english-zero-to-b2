@@ -323,7 +323,7 @@ class AnswerIn(BaseModel):
     item_id: str = Field(min_length=1, max_length=20)
     rating: int | None = Field(None, ge=1, le=4)
     choice: int | None = Field(None, ge=0, le=10)
-    answer: str | None = Field(None, max_length=200)
+    answer: str | None = Field(None, max_length=400)
     tokens: list[str] | None = Field(None, max_length=30)
     sentence: str | None = Field(None, max_length=400)
     self: Literal["correct", "partly", "wrong"] | None = None

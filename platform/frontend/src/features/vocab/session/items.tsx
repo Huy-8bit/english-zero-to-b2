@@ -295,6 +295,27 @@ export function UseItItem({ it, submit, busy, aiDown }: P & { aiDown: boolean })
   );
 }
 
+/** Writing: translate a real Vietnamese sentence into English, using a word you studied (shown as a hint). */
+export function TranslateItem({ it, submit, busy }: P) {
+  const [v, setV] = useState("");
+  const ref = useRef<HTMLTextAreaElement>(null);
+  useEffect(() => { ref.current?.focus(); }, [it.id]);
+  const send = () => { if (!busy && v.trim()) submit({ answer: v.trim() }); };
+  return (
+    <div className="space-y-4">
+      <div className="text-center">
+        <p className="text-sm font-medium text-muted">{it.prompt_vi}</p>
+        <p data-testid="translate-vi" className="mt-2 text-2xl font-semibold">{it.vi}</p>
+        <p className="mt-2 text-sm text-muted">Gợi ý: dùng <b className="text-fg">{it.word}</b> ({it.meaning_vi}) · câu mẫu khoảng {it.words} từ</p>
+      </div>
+      <Textarea ref={ref} rows={2} value={v} onChange={(e) => setV(e.target.value)} placeholder="Viết câu tiếng Anh…" aria-label="Câu dịch tiếng Anh"
+        className="mx-auto max-w-2xl" spellCheck={false}
+        onKeyDown={(e: RKE<HTMLTextAreaElement>) => { if (e.key === "Enter" && !e.shiftKey && !e.nativeEvent.isComposing) { e.preventDefault(); send(); } }} />
+      <div className="text-center"><Button disabled={busy || !v.trim()} onClick={send}><Send size={16} />Kiểm tra</Button></div>
+    </div>
+  );
+}
+
 export function ItemView(props: P & { aiDown: boolean }) {
   const t = props.it.type;
   if (t === "learn") return <LearnItem {...props} />;
@@ -302,10 +323,11 @@ export function ItemView(props: P & { aiDown: boolean }) {
   if (t === "type_word" || t === "dictation") return <TypeItem {...props} />;
   if (t === "builder") return <BuilderItem {...props} />;
   if (t === "use_it") return <UseItItem {...props} />;
+  if (t === "translate") return <TranslateItem {...props} />;
   return <ChoiceItem {...props} />;
 }
 
 export const typeLabel: Record<string, string> = {
   learn: "Học từ", flashcard: "Flashcard", mc_meaning: "Nhận diện", mc_word: "Nhận diện", listen_choose: "Nghe chọn", type_word: "Nhớ lại",
-  dictation: "Chính tả", cloze: "Ngữ cảnh", collocation: "Collocation", builder: "Sắp xếp câu", confusable: "Từ dễ nhầm", use_it: "Tự đặt câu",
+  dictation: "Chính tả", cloze: "Ngữ cảnh", collocation: "Collocation", builder: "Sắp xếp câu", confusable: "Từ dễ nhầm", use_it: "Tự đặt câu", translate: "Dịch câu",
 };

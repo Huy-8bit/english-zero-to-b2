@@ -39,7 +39,17 @@ export interface SmartReview {
 }
 export interface CorrectionResult { correct: boolean; similarity: number; expected: string; explanation: string; status: string; streak: number; note_vi: string }
 
+export interface WritingStep { key: "translate" | "use" | "paragraph"; title: string; goal: number; done: number; correct: number | null; why_vi: string }
+export interface DailyWriting {
+  level: string; paragraph_words: [number, number]; steps: WritingStep[]; done_today: boolean;
+  week: { translations: number; accuracy: number | null; paragraphs: number };
+  common_errors: { type: string; count: number }[];
+  recent_translation_mistakes: { vi: string; answer: string; expected: string; explanation_vi: string | null }[];
+  last_paragraph: { score_10: number | null; level: string | null } | null;
+}
+
 export const plan = {
+  writingDaily: () => call<DailyWriting>("/api/writing/daily"),
   today: () => call<DayPlan>("/api/plan/today"),
   smart: (quick = false) => call<SmartReview>(`/api/review/smart${quick ? "?quick=true" : ""}`),
   correct: (id: number, answer: string) => call<CorrectionResult>(`/api/review/corrections/${id}`, { method: "POST", body: JSON.stringify({ answer }) }),

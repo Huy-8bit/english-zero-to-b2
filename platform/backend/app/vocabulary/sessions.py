@@ -24,12 +24,12 @@ from ..models import (LessonProgress, VocabEntry, VocabEntryTopic, VocabMistake,
 from ..services import progress as P
 from . import exercises as X
 from . import lexicon, srs
-from .grading import CORRECTISH, SCHEDULE_RATING, grade_order, grade_typed
+from .grading import CORRECTISH, SCHEDULE_RATING, grade_order, grade_translation, grade_typed
 from .service import day_bounds, get_progress, mark_seen, settings, visible
 
 LEVELS = ["A1", "A2", "B1", "B2", "C1"]
 MODES = {
-    "daily": "Kế hoạch hôm nay", "review": "Ôn từ đến hạn", "learn": "Học từ mới", "sprint": "Học cấp tốc · đợt 10 từ", "flashcards": "Flashcards",
+    "daily": "Kế hoạch hôm nay", "review": "Ôn từ đến hạn", "learn": "Học từ mới", "sprint": "Học cấp tốc · đợt 10 từ", "translate": "Luyện viết: dịch câu Việt → Anh", "flashcards": "Flashcards",
     "type": "Gõ đáp án", "dictation": "Nghe – chép chính tả", "context": "Từ trong ngữ cảnh", "collocation": "Collocation",
     "builder": "Sắp xếp câu", "use": "Tự đặt câu (AI chấm)", "speed": "Ôn nhanh", "weak": "Ôn từ khó", "custom": "Luyện theo bộ từ",
     "gaps": "Ôn lỗ hổng từ vựng",
@@ -367,6 +367,16 @@ class SessionBuilder:
                 b = self.bundles.get(i)
                 if b:
                     self.add(X.listen_choose(b, self.pool()) or X.mc_word(b, self.pool()), round_=2)
+        elif k == "translate":
+            # writing practice with words already studied (recent first); practice only — it never moves the FSRS schedule
+            pool = prm.get("entry_ids") or [p.entry_id for p in self.db.scalars(select(VocabProgress).where(
+                VocabProgress.user_id == self.user_id, VocabProgress.state != "new", VocabProgress.suspended.is_(False))
+                .order_by(VocabProgress.last_review.desc().nulls_last()).limit(120))]
+            self.load(pool)
+            for i in pool:
+                b = self.bundles.get(i)
+                if b and self.add(X.translate(b)) and len(self.items) >= size:
+                    break
         elif k == "learn":
             ids = new_candidates(self.db, self.user_id, size if prm.get("size") else (5 if self.support else 8), **filters)
             self.load(ids)
@@ -516,7 +526,10 @@ class SessionService:
         it = self.item(s, item_id)
         res = dict(s.results or {})
         if item_id in res:  # idempotent retry (double click / network retry)
-            return res[item_id]
+            prev = res[item_id]
+            if prev.get("verdict") == "mismatch" and payload.get("self") in ("correct", "wrong"):
+                return self._self_assess(db, user_id, s, item_id, prev, payload["self"] == "correct")
+            return prev
         e = db.get(VocabEntry, it["entry_id"])
         p = get_progress(db, user_id, it["entry_id"], source="session")
         mark_seen(p)
@@ -535,7 +548,8 @@ class SessionService:
             db.add(log)
             db.flush()
             out["log_id"] = log.id
-            self._learning_counters(db, user_id, p, it, out)
+            if out.get("correct") is not None:  # a translation awaiting self-assessment is counted when decided
+                self._learning_counters(db, user_id, p, it, out)
             P.log_study(db, user_id, "vocab", kind="module", items=1, correct=int(bool(out.get("correct"))),
                         learned=int(not was_learned and p.learned_at is not None))
         self._store(s, item_id, out)
@@ -550,6 +564,19 @@ class SessionService:
         self._store(s, item_id, out)
         if all(x["id"] in s.results for x in s.items):
             out["session_complete"] = True
+        return out
+
+    def _self_assess(self, db: Session, user_id: int, s: VocabSession, item_id: str, prev: dict, ok: bool) -> dict:
+        """A translation that differs from the model sentence and could not be checked by AI: the learner decides once."""
+        out = prev | {"verdict": "self_correct" if ok else "self_wrong", "correct": ok, "self": True}
+        log = db.get(VocabReviewLog, prev.get("log_id")) if prev.get("log_id") else None
+        if log is not None:
+            log.correct, log.verdict = ok, out["verdict"]
+        it = self.item(s, item_id)
+        self._learning_counters(db, user_id, get_progress(db, user_id, it["entry_id"], source="session"), it, out)
+        if ok:
+            P.log_study(db, user_id, "vocab", kind="module", correct=1)
+        self._store(s, item_id, out)
         return out
 
     @staticmethod
@@ -619,6 +646,19 @@ class SessionService:
                 raise ValueError("tokens required")
             g = grade_order([str(x) for x in toks], pv["sentence"])
             return g | {"answer": " ".join(map(str, toks)), "expected": pv["full"], "score": 3 if g["correct"] else 2}
+        if t == "translate":
+            ans = str(payload.get("answer") or "")[:400]
+            g = grade_translation(ans, pv["en"], pv.get("forms", []))
+            g |= {"answer": ans, "expected": it["private"]["en"], "ai_checked": False}
+            if g["verdict"] == "mismatch" and self.ai is not None:
+                try:
+                    j = self.ai.judge_answer(db, user_id, prompt_vi=it["public"]["vi"], expected=pv["en"], answer=ans)
+                    g |= {"ai_checked": True, "ai_explanation_vi": j.explanation_vi,
+                          "verdict": "acceptable" if j.acceptable else "incorrect", "correct": bool(j.acceptable)}
+                except Exception as exc:  # noqa: BLE001 — AI optional: the learner compares with the model sentence
+                    g["ai_unavailable"] = getattr(exc, "code", "ai_error")
+            g["score"] = SCHEDULE_RATING.get(g["verdict"], 2)
+            return g
         if t == "use_it":
             sentence = str(payload.get("sentence") or "")
             if payload.get("self") in ("correct", "partly", "wrong"):  # AI unavailable → learner self-assessment
@@ -653,7 +693,7 @@ class SessionService:
         else:
             p.incorrect_count = (p.incorrect_count or 0) + 1
             p.streak = 0
-            prompt = it["public"].get("meaning_vi") or it["public"].get("sentence") or it["public"].get("phrase") or it["public"].get("word") or ""
+            prompt = (it["public"].get("vi") if it["type"] == "translate" else None) or it["public"].get("meaning_vi") or it["public"].get("sentence") or it["public"].get("phrase") or it["public"].get("word") or ""
             exp = out.get("expected") or it["private"].get("target") or it["private"].get("full") or ""
             if out.get("expected_index") is not None and it["public"].get("options"):
                 exp = it["public"]["options"][out["expected_index"]]

@@ -20,7 +20,7 @@ test("mobile layout: menu, lesson player usable", async ({ page }) => {
 });
 
 test("mobile vocabulary: pages fit the screen and a flashcard can be rated", async ({ page }) => {
-  for (const url of ["/vocabulary", "/vocabulary/explore?level=A1", "/vocabulary/word/achieve", "/vocabulary/today", "/vocabulary/stats", "/vocabulary/notebook", "/journal", "/today", "/review"]) {
+  for (const url of ["/vocabulary", "/vocabulary/explore?level=A1", "/vocabulary/word/achieve", "/vocabulary/today", "/vocabulary/stats", "/vocabulary/notebook", "/journal", "/today", "/review", "/vocabulary/sprint", "/writing-daily"]) {
     await page.goto(url);
     await page.waitForLoadState("networkidle");
     const overflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);

@@ -14,7 +14,7 @@ from __future__ import annotations
 import re
 import unicodedata
 
-SCHEDULE_RATING = {"correct": 3, "acceptable": 3, "spelling": 2, "wrong_form": 2, "wrong_meaning": 1, "incorrect": 1}
+SCHEDULE_RATING = {"correct": 3, "acceptable": 3, "self_correct": 2, "wrong_order": 1, "self_wrong": 1, "spelling": 2, "wrong_form": 2, "wrong_meaning": 1, "incorrect": 1}
 CORRECTISH = {"correct", "acceptable", "spelling", "wrong_form"}
 BRIT_US = [("our", "or"), ("ise", "ize"), ("isation", "ization"), ("yse", "yze"), ("tre", "ter"), ("ll", "l"), ("ogue", "og")]
 
@@ -128,3 +128,31 @@ def grade_order(tokens: list[str], sentence: str) -> dict:
 def contains_word(text: str, forms: list[str]) -> bool:
     t = " " + clean(text) + " "
     return any(f and (" " + clean(f) + " ") in t for f in forms)
+
+
+# ------------------------------------------------------------------ sentence translation (Vietnamese → English)
+_CONTRACTIONS = [(r"\bcan't\b", "can not"), (r"\bcannot\b", "can not"), (r"\bwon't\b", "will not"), (r"\bshan't\b", "shall not"),
+                 (r"n't\b", " not"), (r"'re\b", " are"), (r"'ll\b", " will"), (r"'ve\b", " have"), (r"\bi'm\b", "i am"),
+                 (r"\b(it|he|she|that|what|there|here|who|where)'s\b", r"\1 is"), (r"'d\b", " would")]
+
+
+def sentence_words(text: str) -> list[str]:
+    """Lower-case words with contractions expanded and punctuation removed (so "I'm" == "I am")."""
+    t = (text or "").lower().replace("’", "'").replace("‘", "'")
+    for rx, rep in _CONTRACTIONS:
+        t = re.sub(rx, rep, t)
+    return re.findall(r"[a-z0-9]+(?:-[a-z0-9]+)*", t)
+
+
+def grade_translation(answer: str, reference: str, forms: list[str]) -> dict:
+    """Deterministic layer: exact (normalised) match, or the right words in the wrong order. Anything else is a
+    "mismatch" — possibly another valid translation — decided by the AI judge or by the learner (self-assessment)."""
+    a, r = sentence_words(answer), sentence_words(reference)
+    used = any(f and set(sentence_words(f)) <= set(a) for f in forms) if forms else True
+    if not a:
+        return {"verdict": "incorrect", "correct": False, "used_word": False}
+    if a == r:
+        return {"verdict": "correct", "correct": True, "used_word": True}
+    if sorted(a) == sorted(r):
+        return {"verdict": "wrong_order", "correct": False, "used_word": used}
+    return {"verdict": "mismatch", "correct": None, "used_word": used}

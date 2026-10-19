@@ -91,8 +91,23 @@ function Player({ initial }: { initial: Session }) {
     }
   }, [it, busy, s, qc, fire]);
 
+  const selfAssess = useCallback(async (ok: boolean) => {
+    if (!it || busy) return;
+    setBusy(true);
+    try {
+      const r = await vocab.answer(s.id, { item_id: it.id, self: ok ? "correct" : "wrong" });
+      const next = { ...s, results: { ...s.results, [it.id]: r } };
+      setS(next);
+      qc.setQueryData(["vocab-session", s.id], next);
+    } catch (e) {
+      toast.error(e instanceof Error ? e.message : "Không lưu được");
+    } finally {
+      setBusy(false);
+    }
+  }, [it, busy, s, qc]);
+
   useEffect(() => {
-    if (!result) return;
+    if (!result || result.verdict === "mismatch") return; // a translation waiting for self-assessment
     const k = (e: KeyboardEvent) => { if (e.key === "Enter" && !(e.target instanceof HTMLTextAreaElement)) { e.preventDefault(); setIdx((i) => i + 1); } };
     const t = setTimeout(() => window.addEventListener("keydown", k), 150);
     return () => { clearTimeout(t); window.removeEventListener("keydown", k); };
@@ -125,7 +140,7 @@ function Player({ initial }: { initial: Session }) {
             {!it.scheduled && it.type !== "learn" && <Badge>Luyện thêm — không đổi lịch ôn</Badge>}
           </div>
           <div data-testid={`item-${it.type}`}><ItemView key={it.id} it={it} sid={s.id} submit={submit} busy={busy || !!result} aiDown={aiDown} /></div>
-          {result && <Feedback r={result} onNext={() => setIdx((i) => i + 1)} last={idx + 1 >= s.items.length} />}
+          {result && <Feedback r={result} onNext={() => setIdx((i) => i + 1)} last={idx + 1 >= s.items.length} onSelf={selfAssess} busy={busy} />}
         </CardContent>
       </Card>
     </div>
@@ -141,18 +156,34 @@ function Timer() {
   return <span className="inline-flex items-center gap-1 text-sm text-muted" title="Chỉ là nhịp gợi ý, không bị tính sai khi hết giờ"><Clock size={14} />{t}s</span>;
 }
 
-export function Feedback({ r, onNext, last }: { r: AnswerResult; onNext: () => void; last: boolean }) {
+export function Feedback({ r, onNext, last, onSelf, busy }: { r: AnswerResult; onNext: () => void; last: boolean; onSelf?: (ok: boolean) => void; busy?: boolean }) {
   const ok = !!r.correct;
+  const pending = r.verdict === "mismatch";
   const near = ["spelling", "wrong_form", "minor_issues", "hard", "self_partly"].includes(r.verdict);
   return (
-    <div role="status" aria-live="polite" data-testid="feedback" className={`space-y-3 rounded-2xl border p-4 ${ok ? (near ? "border-warning/40 bg-warning-soft" : "border-success/40 bg-success-soft") : "border-danger/40 bg-danger-soft"}`}>
+    <div role="status" aria-live="polite" data-testid="feedback" className={`space-y-3 rounded-2xl border p-4 ${ok ? (near ? "border-warning/40 bg-warning-soft" : "border-success/40 bg-success-soft") : pending ? "border-warning/40 bg-warning-soft" : "border-danger/40 bg-danger-soft"}`}>
       <div className="flex flex-wrap items-center gap-2">
         {ok ? <CheckCircle2 className="text-success" size={20} /> : <XCircle className="text-danger" size={20} />}
         <span className="font-semibold">{VERDICT_LABELS[r.verdict] ?? r.verdict}</span>
         <Link to={`/vocabulary/word/${encodeURIComponent(r.entry_id)}`} className="font-semibold text-primary underline-offset-2 hover:underline">{r.entry.headword}</Link>
         <Ipa uk={r.entry.ipa_uk} us={r.entry.ipa_us} />
       </div>
-      {r.expected && !ok && r.type !== "flashcard" && <p className="text-sm">Đáp án: <b>{r.expected}</b>{typeof r.answer === "string" && r.answer && <> · bạn viết: <s>{r.answer}</s></>}</p>}
+      {r.type === "translate" && (
+        <div className="space-y-1 text-sm">
+          <p>Câu mẫu: <b>{r.expected}</b></p>
+          {r.answer && r.verdict !== "correct" && <p className="text-muted">Bạn viết: {r.answer}</p>}
+          {r.verdict === "wrong_order" && <p>Bạn dùng đúng các từ nhưng <b>sai trật tự</b> — tiếng Anh thường theo thứ tự Chủ ngữ → Động từ → Tân ngữ → Nơi chốn → Thời gian.</p>}
+          {r.used_word === false && <p>Câu của bạn chưa dùng từ <b>{r.entry.headword}</b>.</p>}
+          {pending && onSelf && (
+            <div className="flex flex-wrap items-center gap-2 pt-1">
+              <span>{r.ai_unavailable ? "AI chưa kiểm tra được. " : ""}So sánh với câu mẫu: câu của bạn có cùng ý và đúng ngữ pháp không?</span>
+              <Button size="sm" variant="success" disabled={busy} onClick={() => onSelf(true)}>Câu của tôi cũng đúng</Button>
+              <Button size="sm" variant="outline" disabled={busy} onClick={() => onSelf(false)}>Tôi dịch chưa đúng</Button>
+            </div>
+          )}
+        </div>
+      )}
+      {r.expected && !ok && r.type !== "flashcard" && r.type !== "translate" && <p className="text-sm">Đáp án: <b>{r.expected}</b>{typeof r.answer === "string" && r.answer && <> · bạn viết: <s>{r.answer}</s></>}</p>}
       {r.verdict === "spelling" && <p className="text-sm">Gần đúng — chú ý chính tả: <b>{r.expected}</b></p>}
       {r.verdict === "wrong_form" && <p className="text-sm">Đúng từ nhưng sai dạng. Dạng cần dùng: <b>{r.expected}</b>.</p>}
       {r.verdict === "wrong_meaning" && r.confused_meaning && <p className="text-sm">Từ bạn viết có nghĩa “{r.confused_meaning}”, khác với từ cần tìm.</p>}
@@ -175,7 +206,7 @@ export function Feedback({ r, onNext, last }: { r: AnswerResult; onNext: () => v
       {r.type === "use_it" && r.verdict === "missing_word" && <p className="text-sm">{r.explanation_vi}</p>}
       {r.schedule && <p className="text-xs text-muted">Lịch ôn tiếp: {relDue(r.schedule.due)} (FSRS · {VERDICT_LABELS[r.schedule.rating_name]})</p>}
       {r.retry_added && <p className="text-xs text-muted">Từ này sẽ được hỏi lại ở cuối phiên.</p>}
-      <div className="text-right"><Button onClick={onNext}>{last ? "Xem tổng kết" : "Tiếp tục"} <ArrowRight size={16} /> <kbd className="text-xs opacity-70">Enter</kbd></Button></div>
+      <div className="text-right"><Button onClick={onNext} disabled={pending && !!onSelf}>{last ? "Xem tổng kết" : "Tiếp tục"} <ArrowRight size={16} /> <kbd className="text-xs opacity-70">Enter</kbd></Button></div>
     </div>
   );
 }
@@ -252,7 +283,7 @@ function Stat({ n, of, label }: { n: number; of?: number; label: string }) {
 
 /** Only same-app paths are allowed as a return target. */
 function safeReturn(v: string | null): string {
-  return v && /^\/(today|review|vocabulary)(\/|$|\?)/.test(v) ? v : "/vocabulary";
+  return v && /^\/(today|review|vocabulary|writing-daily)(\/|$|\?)/.test(v) ? v : "/vocabulary";
 }
 
 /**

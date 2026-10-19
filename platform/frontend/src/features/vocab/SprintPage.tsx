@@ -18,7 +18,7 @@ const RETURN = "/vocabulary/sprint";
 
 /** Intensive vocabulary: batches of 10 words from one topic — triage what you already know, then learn the rest. */
 export default function SprintPage() {
-  const q = useQuery({ queryKey: ["vocab-sprint"], queryFn: vocab.sprint });
+  const q = useQuery({ queryKey: ["vocab-sprint"], queryFn: vocab.sprint, refetchOnMount: "always" });
   const qc = useQueryClient();
   const nav = useNavigate();
   const [known, setKnown] = useState<Set<string>>(new Set());
