@@ -444,10 +444,12 @@ async def pronunciation_assess(audio: UploadFile = File(...), reference: str = F
     data = await audio.read(ai.settings.max_audio_bytes + 1)
     if not data or len(data) > ai.settings.max_audio_bytes:
         raise HTTPException(413, "File ghi âm rỗng hoặc quá lớn")
-    out = await run_in_threadpool(ai.pronunciation.assess, db, user.id, audio=data, content_type=audio.content_type or "",
-                                  reference=reference, source=source, source_ref=source_ref, seconds=seconds, level=level)
-    db.commit()
-    return out
+    def run():  # DB writes and the commit stay off the event loop
+        out = ai.pronunciation.assess(db, user.id, audio=data, content_type=audio.content_type or "", reference=reference,
+                                      source=source, source_ref=source_ref, seconds=seconds, level=level)
+        db.commit()
+        return out
+    return await run_in_threadpool(run)
 
 
 @router.get("/pronunciation/summary")

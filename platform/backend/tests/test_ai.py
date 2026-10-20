@@ -182,8 +182,10 @@ def test_read_aloud_checks_pronunciation_word_by_word(c):
     assert fb["match"]["word_match_percent"] == 100 and fb["pronunciation"]["score"] == 100
     assert all(w["status"] == "ok" for w in fb["pronunciation"]["words"])
     # a second sentence read badly: the next target is read with two words changed
+    from app.ai.pronunciation import words_of
+
     nxt = s2["turns"][-1]["text"]
-    words = nxt.split()
+    words = words_of(nxt)  # real words only (sentences may contain "—", digits, quotes)
     bad = " ".join(["?" + words[0]] + ["zzz"] + words[2:])
     s3 = c.post(f"/api/ai/speaking/session/{s['id']}/answer", files={"audio": ("b.webm", io.BytesIO(bad.encode()), "audio/webm")},
                 data={"seconds": "4", "client_turn_id": "turn-ra-02"}).json()
@@ -192,6 +194,15 @@ def test_read_aloud_checks_pronunciation_word_by_word(c):
     assert st == {"unclear", "different"} and p["score"] < 100 and p["words"][1]["heard"] == "zzz"
     end = c.post(f"/api/ai/speaking/session/{s['id']}/end").json()
     assert end["summary"]["average_pronunciation"] is not None and end["summary"]["words_to_practise"]
+
+
+def test_pronunciation_alignment_tokenises_both_sides_alike():
+    from app.ai.pronunciation import align
+
+    ws = align("It’s a well-known café, isn't it?", [("it's", 0.99), ("a", 0.99), ("well-known", 0.99), ("cafe", 0.99), ("isn't", 0.99), ("it", 0.99)])
+    assert [w["status"] for w in ws] == ["ok", "ok", "ok", "ok", "different", "ok", "ok"]  # only café ≠ cafe
+    assert all(w["status"] == "ok" for w in align("The museum opens at 9 a.m.", [("the", .99), ("museum", .99), ("opens", .99), ("at", .99), ("nine", .99), ("am", .99)]))
+    assert all(w["status"] == "ok" for w in align("The train leaves at 8:15.", [("the", .99), ("train", .99), ("leaves", .99), ("at", .99), ("815", .99)]))
 
 
 def test_pronunciation_assess_explains_and_tracks_progress(c, ai_app):

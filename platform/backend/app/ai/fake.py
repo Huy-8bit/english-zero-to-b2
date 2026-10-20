@@ -341,7 +341,7 @@ class FakeProvider:
     def transcribe_words(self, *, model, audio, filename):
         """Test audio is UTF-8 text: a word written "?word" is heard with low confidence (0.4)."""
         text, usage = self.transcribe(model=model, audio=audio, filename=filename)
-        words = [(re.sub(r"[^A-Za-z0-9']", "", w).lower(), 0.4 if w.startswith("?") else 0.98) for w in text.split()]
+        words = [(re.sub(r"[^A-Za-z0-9'’-]", "", w).lower(), 0.4 if w.startswith("?") else 0.98) for w in text.split()]
         return text.replace("?", ""), [w for w in words if w[0]], usage
 
     def speech(self, *, model, text, voice, instructions=""):

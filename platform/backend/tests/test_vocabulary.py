@@ -158,8 +158,14 @@ def shift_days(app, entry_id, days):
 
 def test_session_never_sends_answer_keys(client, app):
     s = start(client, "daily")
-    blob = json.dumps(s)
-    assert s["items"] and "private" not in blob and '"answer"' not in blob and '"target"' not in blob
+
+    def keys_in(x):  # every dict key in the payload (a word such as "answer" may legitimately be an option text)
+        if isinstance(x, dict):
+            return set(x) | {k for v in x.values() for k in keys_in(v)}
+        if isinstance(x, list):
+            return {k for v in x for k in keys_in(v)}
+        return set()
+    assert s["items"] and not keys_in(s["items"]) & {"private", "answer", "target", "expected"}
     k = keys(app, s["id"])
     def strings(x):
         if isinstance(x, dict):

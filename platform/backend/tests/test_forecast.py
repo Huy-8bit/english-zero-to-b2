@@ -70,5 +70,5 @@ def test_in_progress_time_is_subtracted_and_no_data_uses_goal():
 
 
 def test_duration_text():
-    assert F.duration_vi(0.4) == "dưới 1 ngày" and F.duration_vi(12.2) == "~13 ngày"
-    assert F.duration_vi(90) == "~13 tuần" and F.duration_vi(400) == "~13,2 tháng"
+    assert F.duration_vi(0.4) == "dưới 1 ngày" and F.duration_vi(12.2) == "≈13 ngày"
+    assert F.duration_vi(90) == "≈13 tuần" and F.duration_vi(400) == "≈13,2 tháng"

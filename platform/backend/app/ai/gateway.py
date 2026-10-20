@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import logging
 import threading
 import time
 from collections import defaultdict, deque
@@ -16,6 +17,9 @@ from ..models import AICache, AIUsageLog, LearningProfile, utcnow
 from .errors import AIBudgetExceeded, AIConfigError, AIDailyLimit, AIDisabled, AIError, AIRateLimited
 from .provider import AIProvider, Usage
 from .settings import AISettings, estimate_cost
+
+
+log = logging.getLogger(__name__)
 
 
 class AIGateway:
@@ -100,9 +104,23 @@ class AIGateway:
 
             logging.getLogger("english.ai").exception("could not write AI usage logs")
 
+    def _guard(self, db: Session, feature: str) -> None:
+        """An AI call takes seconds to minutes. If the request already wrote to SQLite, its write lock would be held all
+        that time and every other writer (heartbeats, usage logs, other tabs) fails with "database is locked".
+        Services must call AI first and write afterwards (or commit before). Tests (fake provider) fail loudly."""
+        try:
+            raw = db.connection().connection.driver_connection
+        except Exception:  # noqa: BLE001 — non-SQLite or closed session: nothing to check
+            return
+        if getattr(raw, "in_transaction", False):
+            if self.settings.provider == "fake":
+                raise AssertionError(f"AI call '{feature}' while holding a database write transaction")
+            log.warning("AI call %s while holding a database write transaction", feature)
+
     def _run(self, db: Session, user_id: int, feature: str, model: str, fn):
         if model not in self.settings.pricing:
             raise AIConfigError("model pricing missing; configure OPENAI_PRICING_JSON")
+        self._guard(db, feature)
         self.check(db, user_id)
         try:
             result, usage = fn()
@@ -204,6 +222,31 @@ class AIGateway:
         audio, _ = self._run(db, user_id, feature, model, lambda: self.provider.speech(
             model=model, text=text, voice=voice or self.settings.tts_voice, instructions=instructions))
         return audio
+
+    def speech_many(self, db: Session, user_id: int, *, feature: str, items: list[tuple[str, str, str]], workers: int = 6) -> list[bytes]:
+        """TTS for several texts in parallel — e.g. every line of a listening dialogue. Counts as one request for the
+        per-minute rate limit (one learner action); each line's usage and cost is still logged."""
+        if not items:
+            return []
+        model = self.settings.model("tts")
+        if model not in self.settings.pricing:
+            raise AIConfigError("model pricing missing; configure OPENAI_PRICING_JSON")
+        self._guard(db, feature)
+        self.check(db, user_id)
+
+        def one(it: tuple[str, str, str]) -> bytes:
+            text, voice, instructions = it
+            try:
+                audio, usage = self.provider.speech(model=model, text=text, voice=voice, instructions=instructions)
+            except AIError as e:
+                self._log(user_id, feature, model, None, "error", e.code)
+                raise
+            self._log(user_id, feature, model, usage, "ok")
+            return audio
+        from concurrent.futures import ThreadPoolExecutor
+
+        with ThreadPoolExecutor(max_workers=max(1, min(workers, len(items)))) as ex:
+            return list(ex.map(one, items))
 
     def realtime_secret(self, db: Session, user_id: int, *, instructions: str, voice: str | None = None) -> dict:
         model = self.settings.model("realtime")

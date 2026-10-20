@@ -122,21 +122,23 @@ class SpeakingService:
             raise AIBadInput("Chế độ luyện nói không hợp lệ.")
         if mode == "roleplay" and topic not in ROLEPLAYS:
             raise AIBadInput("Chọn một tình huống role-play.")
+        # AI calls first, database writes after: a write transaction must not be open while waiting for OpenAI
         s = SpeakingSession(id=str(uuid.uuid4()), user_id=user_id, mode=mode, topic=(ROLEPLAYS.get(topic) or topic or "everyday life")[:200], level=level)
-        db.add(s)
-        db.flush()
         if mode == "read_aloud":
             sentence = self._read_aloud_sentence(level, topic, set())
-            db.add(SpeakingTurn(session_id=s.id, role="ai", text=sentence, audio_file=self._tts(db, user_id, sentence),
-                                feedback={"type": "read_aloud_target"}))
+            first = SpeakingTurn(session_id=s.id, role="ai", text=sentence, audio_file=self._tts(db, user_id, sentence),
+                                 feedback={"type": "read_aloud_target"})
         else:
             q = self.gw.structured(db, user_id, feature="speaking_question", task="tutor", instructions=prompts.SPEAKING,
                                    input=f"Mode: {MODES[mode]}. Level: {level}. Topic/situation: <learner_text>{s.topic}</learner_text>. "
                                          "Start the conversation with ONE short first question (or opening line in role-play). "
                                          "hint_vi tells the learner in Vietnamese how to answer; give 3 useful_expressions.",
                                    schema=SpeakingQuestion, max_output_tokens=500)
-            db.add(SpeakingTurn(session_id=s.id, role="ai", text=q.question_en, audio_file=self._tts(db, user_id, q.question_en),
-                                feedback={"hint_vi": q.hint_vi, "useful_expressions": q.useful_expressions}))
+            first = SpeakingTurn(session_id=s.id, role="ai", text=q.question_en, audio_file=self._tts(db, user_id, q.question_en),
+                                 feedback={"hint_vi": q.hint_vi, "useful_expressions": q.useful_expressions})
+        db.add(s)
+        db.flush()
+        db.add(first)
         db.commit()
         return s
 
@@ -160,7 +162,11 @@ class SpeakingService:
             raise AIBadInput("Phiên đã đủ số lượt — hãy kết thúc để xem tổng kết.")
         last_ai = next((t for t in reversed(turns) if t.role == "ai"), None)
         pron = None
+        nxt = nxt_audio = None
         if s.mode == "read_aloud":
+            # the next sentence and its audio first (AI), then the check, which writes its attempt
+            nxt = self._read_aloud_sentence(s.level, s.topic, {t.text for t in turns if t.role == "ai"})
+            nxt_audio = self._tts(db, user_id, nxt)
             # pronunciation check against the target sentence (unprompted transcription, word by word)
             pron = self.pron.assess(db, user_id, audio=audio, content_type=ctype, reference=last_ai.text if last_ai else "",
                                     source="read_aloud", source_ref=s.id, seconds=seconds, level=s.level)
@@ -183,9 +189,7 @@ class SpeakingService:
                   "pronunciation": pron}
             db.add(SpeakingTurn(session_id=s.id, client_turn_id=client_turn_id, role="user", text=transcript, audio_file=audio_file,
                                 audio_seconds=seconds, feedback=fb))
-            used = {t.text for t in turns if t.role == "ai"}
-            nxt = self._read_aloud_sentence(s.level, s.topic, used)
-            db.add(SpeakingTurn(session_id=s.id, role="ai", text=nxt, audio_file=self._tts(db, user_id, nxt), feedback={"type": "read_aloud_target"}))
+            db.add(SpeakingTurn(session_id=s.id, role="ai", text=nxt, audio_file=nxt_audio, feedback={"type": "read_aloud_target"}))
         else:
             history = "\n".join(f"{t.role.upper()}: {t.text}" for t in turns[-8:])
             fb_ai = self.gw.structured(db, user_id, feature="speaking_feedback", task="grading", instructions=prompts.SPEAKING,
@@ -193,6 +197,7 @@ class SpeakingService:
                                              f"<learner_text>\n{history}\n</learner_text>\nLearner's latest answer (speech-to-text):\n"
                                              f"<learner_answer>{transcript}</learner_answer>\nGive feedback on the latest answer and the next question.",
                                        schema=SpeakingTurnFeedback, max_output_tokens=1400)
+            next_audio = None if fb_ai.should_end else self._tts(db, user_id, fb_ai.next_question_en)  # AI before any write
             fb = {"type": "conversation", **fb_ai.model_dump(), "indicators": indicators}
             if pron:
                 fb["pronunciation"] = pron | {"note_vi": "Máy chưa nghe rõ các từ này — hãy nói chậm, rõ âm cuối. Bấm vào từ để luyện."}
@@ -207,7 +212,7 @@ class SpeakingService:
                                         corrected_answer=e.correction, error_type=e.category, explanation=e.explanation_vi, topic_id=None)
             if not fb_ai.should_end:
                 db.add(SpeakingTurn(session_id=s.id, role="ai", text=fb_ai.next_question_en,
-                                    audio_file=self._tts(db, user_id, fb_ai.next_question_en), feedback={"hint_vi": fb_ai.next_hint_vi}))
+                                    audio_file=next_audio, feedback={"hint_vi": fb_ai.next_hint_vi}))
         P.activity(db, user_id).items_answered += 1
         P.log_study(db, user_id, "speaking-studio", kind="module", items=1)
         db.commit()

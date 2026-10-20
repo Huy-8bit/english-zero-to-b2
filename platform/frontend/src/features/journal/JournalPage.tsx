@@ -28,9 +28,9 @@ export default function JournalPage() {
         {pace.has_data
           ? <Kpi label="Nhịp thực tế" v={`${pace.minutes_per_study_day} phút/ngày học`} sub={`Học ${pace.study_days}/${pace.calendar_days} ngày · ${pace.lessons_per_study_day} bài/ngày học`} />
           : <Kpi label="Nhịp thực tế" v="Chưa có dữ liệu" sub="Học một bài để bắt đầu đo" />}
-        <Kpi label="Tốc độ mỗi bài" v={pace.speed.minutes_per_lesson ? `~${pace.speed.minutes_per_lesson} phút` : "Chưa đo được"}
+        <Kpi label="Tốc độ mỗi bài" v={pace.speed.minutes_per_lesson ? `≈${pace.speed.minutes_per_lesson} phút` : "Chưa đo được"}
           sub={pace.speed.overall_ratio ? `×${pace.speed.overall_ratio} thời lượng gợi ý · ${pace.speed.samples} bài` : "Cần ≥ 2 bài có đo thời gian"} />
-        <Kpi label={`Còn lại tới ${eta.target_level}`} v={`${eta.remaining_lessons} bài`} sub={`~${eta.remaining_hours} giờ học bài`} />
+        <Kpi label={`Còn lại tới ${eta.target_level}`} v={`${eta.remaining_lessons} bài`} sub={`≈${eta.remaining_hours} giờ học bài`} />
         <Kpi label="Dự kiến hoàn thành" v={vnDate(eta.finish_date)} sub={`${eta.duration_vi} · khoảng ${vnDate(eta.range.fast.finish_date)} – ${vnDate(eta.range.slow.finish_date)}`} />
       </div>
       <div className="mt-4 grid grid-cols-1 gap-4 lg:grid-cols-3">
@@ -49,7 +49,7 @@ export default function JournalPage() {
           <CardContent className="space-y-1.5 text-sm">
             {eta.milestones.map((m) => (
               <div key={m.level} className="flex justify-between gap-2">
-                <span className="text-muted">{m.level} · {m.lessons} bài · ~{m.hours} giờ{m.speed_basis !== "measured" && <span title="Tốc độ ở cấp này được suy ra từ các bài bạn đã học"> *</span>}</span>
+                <span className="text-muted">{m.level} · {m.lessons} bài · ≈{m.hours} giờ{m.speed_basis !== "measured" && <span title="Tốc độ ở cấp này được suy ra từ các bài bạn đã học"> *</span>}</span>
                 <b>{vnDate(m.finish_date)}</b>
               </div>
             ))}

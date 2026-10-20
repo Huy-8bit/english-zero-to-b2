@@ -531,11 +531,11 @@ class SessionService:
                 return self._self_assess(db, user_id, s, item_id, prev, payload["self"] == "correct")
             return prev
         e = db.get(VocabEntry, it["entry_id"])
+        duration = payload.get("duration_ms")
+        out = self._grade(db, user_id, it, e, payload)  # may call AI: before any write (no SQLite write lock while waiting)
         p = get_progress(db, user_id, it["entry_id"], source="session")
         mark_seen(p)
         was_learned = p.learned_at is not None
-        duration = payload.get("duration_ms")
-        out = self._grade(db, user_id, it, e, payload)
         out["item_id"] = item_id
         out["type"] = it["type"]
         out["entry_id"] = it["entry_id"]

@@ -149,7 +149,7 @@ function CardView({ c, onNavigate }: { c: AssistantCard; onNavigate: () => void 
       <div className="rounded-2xl border border-border p-3 text-sm">
         <div className="mb-1 flex items-center justify-between"><p className="font-medium">{c.title}</p>
           {c.link && <Link to={c.link} onClick={onNavigate} className="text-xs text-primary">Xem chi tiết</Link>}</div>
-        {c.rows.map(([k, v]) => <div key={k} className="flex justify-between gap-2"><span className="text-muted">{k}</span><b className="text-right">{v}</b></div>)}
+        {c.rows.map(([k, v]) => <div key={k} className="flex justify-between gap-2"><span className="text-muted">{k}</span><b className="text-right">{v.replace(/^~/, "≈")}</b></div>)}
       </div>
     );
   }

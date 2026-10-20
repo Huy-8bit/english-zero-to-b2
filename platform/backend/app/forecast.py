@@ -68,10 +68,10 @@ def duration_vi(days: float | None) -> str:
         return "dưới 1 ngày"
     d = math.ceil(days)
     if d <= 60:
-        return f"~{d} ngày"
+        return f"≈{d} ngày"
     if d <= 182:
-        return f"~{round(d / 7)} tuần"
-    return f"~{d / 30.4:.1f} tháng".replace(".", ",")
+        return f"≈{round(d / 7)} tuần"
+    return f"≈{d / 30.4:.1f} tháng".replace(".", ",")
 
 
 def _weight(age_days: int) -> float:
@@ -331,7 +331,7 @@ def observations(p: dict, speed: dict, samples: list[Sample], eta: dict, low_sco
         best = max(p["weekday"], key=lambda w: w["avg_minutes"])
         worst = min(p["weekday"], key=lambda w: w["avg_minutes"])
         if best["avg_minutes"] - worst["avg_minutes"] >= 30:
-            out.append(f"Bạn học nhiều nhất vào {best['weekday']} (~{best['avg_minutes']} phút), ít nhất vào {worst['weekday']} (~{worst['avg_minutes']} phút).")
+            out.append(f"Bạn học nhiều nhất vào {best['weekday']} (≈{best['avg_minutes']} phút), ít nhất vào {worst['weekday']} (≈{worst['avg_minutes']} phút).")
     if eta.get("goal_gain_days") and eta["goal_gain_days"] > 0:
         g = next(s for s in eta["scenarios"] if s["kind"] == "goal")
         out.append(f"Nếu học đủ {p['goal_minutes']} phút mỗi ngày, bạn xong sớm hơn khoảng {eta['goal_gain_days']} ngày (khoảng {g['finish_date'][8:10]}/{g['finish_date'][5:7]}/{g['finish_date'][:4]}).")

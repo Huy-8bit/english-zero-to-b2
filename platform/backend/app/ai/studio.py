@@ -59,10 +59,13 @@ class StudioService:
         voice_of = {sp: VOICES[i % len(VOICES)] for i, sp in enumerate(dict.fromkeys([s.speaker for s in segments] or speakers))}
         audio = bytearray()
         model = self.gw.settings.model("tts")
-        for seg in segments:  # one TTS call per segment, cached by text+voice; never repeated on replay
-            rel = media.tts_name(model, voice_of[seg.speaker], seg.text, provider=self.gw.provider.name)
-            if not media.exists(rel):
-                media.write(rel, self.gw.speech(db, user_id, feature="listening_tts", text=seg.text, voice=voice_of[seg.speaker]))
+        # one TTS call per segment, cached by text+voice (never repeated on replay); missing ones are made in parallel
+        rels = [media.tts_name(model, voice_of[seg.speaker], seg.text, provider=self.gw.provider.name) for seg in segments]
+        todo = list(dict.fromkeys(i for i, rel in enumerate(rels) if not media.exists(rel)))
+        made = self.gw.speech_many(db, user_id, feature="listening_tts", items=[(segments[i].text, voice_of[segments[i].speaker], "") for i in todo])
+        for i, data in zip(todo, made):
+            media.write(rels[i], data)
+        for rel in rels:
             audio += media.resolve(rel).read_bytes()
         rel = media.write(f"listening/{set_id}.mp3", bytes(audio))
         es = ExerciseSet(id=set_id, user_id=user_id, kind="listening", title=title[:200], lesson_id=None, topic_ids=["listening"],

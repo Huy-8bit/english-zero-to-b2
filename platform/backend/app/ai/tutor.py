@@ -84,7 +84,7 @@ class TutorService:
         if conv is None:
             conv = TutorConversation(user_id=user_id, unit_id=unit_id)
             db.add(conv)
-            db.flush()
+            db.commit()  # an empty conversation is harmless; never hold the write lock during the AI call
         return conv
 
     def ask(self, db: Session, user_id: int, *, unit_id: str, action: str, message: str, step_index: int | None,

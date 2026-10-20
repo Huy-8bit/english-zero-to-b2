@@ -39,7 +39,7 @@ export function ListeningStudioPage() {
   );
   return (
     <div>
-      <PageHeader title="Listening Studio" subtitle="AI viết đoạn hội thoại/bài nói theo trình độ, đọc bằng giọng tổng hợp (TTS) và tạo câu hỏi chỉ trả lời được khi nghe." />
+      <PageHeader title="Listening Studio" subtitle="AI viết đoạn hội thoại/bài nói theo trình độ, đọc bằng giọng AI tự nhiên (OpenAI TTS, giọng máy tạo) và tạo câu hỏi chỉ trả lời được khi nghe. Tạo một bài mất khoảng 30–90 giây." />
       <SimulatedBanner />
       {st.data && !st.data.enabled && <div className="mb-4"><AIUnavailable /></div>}
       <div className="grid gap-6 lg:grid-cols-[1fr_22rem]">
@@ -88,7 +88,7 @@ function ListeningSetPageSession({ setId }: { setId: string }) {
       <div className="flex flex-wrap gap-2"><Badge>{ls.level}</Badge><Badge>{String(ls.meta.mode) === "test" ? "Chế độ kiểm tra" : "Luyện tập"}</Badge></div>
       <SimulatedBanner />
       <Player src={ls.audio_url} />
-      <p className="text-xs text-muted">🔊 Giọng đọc tổng hợp (TTS) do AI tạo — không phải bản ghi âm người thật. Nghe lại không tạo thêm yêu cầu AI.</p>
+      <p className="text-xs text-muted">🔊 Giọng đọc AI (OpenAI TTS) — giọng máy tạo, không phải bản ghi âm người thật. Nghe lại không tạo thêm yêu cầu AI.</p>
       {canToggle && <Button size="sm" variant="outline" onClick={() => setReveal((v) => !v)}>{reveal ? <EyeOff size={14} /> : <Eye size={14} />}{reveal ? "Ẩn transcript" : "Hiện transcript (hỗ trợ)"}</Button>}
       {ls.transcript && (
         <Card className="p-4"><p className="mb-2 text-xs font-semibold uppercase text-muted">Transcript</p>

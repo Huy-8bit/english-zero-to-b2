@@ -366,10 +366,10 @@ def fallback_text(action: str, s: dict) -> str:
                  f"khoảng {_vn(e['range']['fast']['finish_date'])} – {_vn(e['range']['slow']['finish_date'])} tùy các ngày tới bạn học nhiều hay ít."]
         if e["milestones"]:
             lines.append("\nMốc từng cấp (nhịp hiện tại):")
-            lines += [f"- **{m['level']}**: {m['lessons']} bài, ~{m['hours']} giờ → xong khoảng {_vn(m['finish_date'])}"
+            lines += [f"- **{m['level']}**: {m['lessons']} bài, ≈{m['hours']} giờ → xong khoảng {_vn(m['finish_date'])}"
                       + ("" if m["speed_basis"] == "measured" else " _(tốc độ suy ra)_") for m in e["milestones"]]
         if e.get("count_check") and e["count_check"]["days"]:
-            lines.append(f"\nĐối chiếu theo số bài: {e['count_check']['lessons_per_study_day']} bài/ngày học → ~{e['count_check']['days']} ngày "
+            lines.append(f"\nĐối chiếu theo số bài: {e['count_check']['lessons_per_study_day']} bài/ngày học → ≈{e['count_check']['days']} ngày "
                          "(chưa tính bài cấp cao dài hơn).")
         if e["scenarios"]:
             lines.append("\nNếu thay đổi thời gian học:")
@@ -443,11 +443,11 @@ def cards_for(action: str | None, s: dict) -> list[dict]:
                       ["Nhớ lại đúng", _pct(v["recall_accuracy"])]], "link": "/vocabulary"})
     if action == "eta":
         pc = s["pace"]
-        rows = [["Bài còn lại", str(e["remaining_lessons"])], ["Thời gian học bài còn lại", f"~{e['remaining_hours']} giờ"]]
+        rows = [["Bài còn lại", str(e["remaining_lessons"])], ["Thời gian học bài còn lại", f"≈{e['remaining_hours']} giờ"]]
         if pc.get("has_data"):
             rows.append(["Nhịp thực tế", f"{pc['minutes_per_study_day']} phút/ngày học · {pc['study_days']}/{pc['calendar_days']} ngày"])
         if pc.get("speed", {}).get("minutes_per_lesson"):
-            rows.append(["Tốc độ của bạn", f"~{pc['speed']['minutes_per_lesson']} phút/bài (×{pc['speed']['overall_ratio']} gợi ý)"])
+            rows.append(["Tốc độ của bạn", f"≈{pc['speed']['minutes_per_lesson']} phút/bài (×{pc['speed']['overall_ratio']} gợi ý)"])
         rows += [["Dự kiến xong", f"{_vn(e['finish_date'])} ({e['duration_vi']})"],
                  ["Khoảng", f"{_vn(e['range']['fast']['finish_date'])} – {_vn(e['range']['slow']['finish_date'])}"],
                  ["Độ tin cậy", e["confidence"]]]
@@ -538,6 +538,7 @@ class Assistant:
             "vocab": {k: v for k, v in s["vocab"].items() if k not in ("weak_word_ids", "by_level")},
             "journal": [d for d in s["journal"] if d["minutes"] or d["items"]][:21]}
         ai_used, notice = True, None
+        db.commit()  # quest XP / new conversation are independent; never hold SQLite's write lock while waiting for AI
         try:
             # quick questions are self-contained (cacheable while the data is unchanged); free questions see recent turns
             history = "" if action else "\n".join(f"{m.role}: {m.content[:400]}" for m in prior)

@@ -132,7 +132,7 @@ class OpenAIProvider:
             else:
                 words[-1][0] += tok
                 words[-1][1] = min(words[-1][1], p)
-        pairs = [(re.sub(r"[^A-Za-z0-9']", "", w).lower(), round(p, 3)) for w, p in words]
+        pairs = [(re.sub(r"[^A-Za-z0-9'’-]", "", w).lower(), round(p, 3)) for w, p in words]  # hyphens kept; split when aligned
         usage = Usage(latency_ms=ms)
         u = getattr(tr, "usage", None)
         if u is not None:

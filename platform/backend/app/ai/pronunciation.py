@@ -32,7 +32,7 @@ ALLOWED_AUDIO = {"audio/webm", "audio/ogg", "audio/mpeg", "audio/mp4", "audio/wa
 EXT = {"audio/webm": "webm", "audio/ogg": "ogg", "audio/mpeg": "mp3", "audio/mp4": "m4a", "audio/wav": "wav", "audio/x-wav": "wav",
        "audio/m4a": "m4a", "audio/x-m4a": "m4a"}
 SOURCES = {"read_aloud", "conversation", "practice", "word", "lesson", "vocab"}
-WORD_RX = re.compile(r"[A-Za-z0-9]+(?:'[A-Za-z]+)?")
+WORD_RX = re.compile(r"[A-Za-z0-9]+(?:['’][A-Za-z]+)?")  # "well-known" → well, known; "don’t" = "don't"
 NUMBERS = {"0": "zero", "1": "one", "2": "two", "3": "three", "4": "four", "5": "five", "6": "six", "7": "seven", "8": "eight",
            "9": "nine", "10": "ten", "11": "eleven", "12": "twelve", "20": "twenty"}
 
@@ -66,6 +66,9 @@ TIPS: list[tuple[re.Pattern, str]] = [
 
 
 def words_of(text: str) -> list[str]:
+    # dotted abbreviations are one word, as recognisers write them: "a.m." → "am", "U.S." → "US"
+    text = re.sub(r"\b((?:[A-Za-z]\.){2,})", lambda m: m.group(1).replace(".", "") + " ", text)
+    text = re.sub(r"(?<=\d)[:.,](?=\d)", "", text)  # 8:15, 2.5, 1,000 are one token, as the recogniser writes them
     return [m.group(0) for m in WORD_RX.finditer(text)]
 
 
@@ -79,8 +82,14 @@ def tips_for(word: str) -> list[str]:
     return [tip for rx, tip in TIPS if rx.search(w)][:2]
 
 
+def split_heard(heard: list[tuple[str, float]]) -> list[tuple[str, float]]:
+    """Recogniser words tokenised exactly like the reference (hyphenated words split, curly apostrophes unified)."""
+    return [(part.lower(), p) for w, p in heard for part in words_of(w.replace("’", "'"))]
+
+
 def align(reference: str, heard: list[tuple[str, float]]) -> list[dict]:
     """Word-by-word comparison of the reference text with what the speech model heard."""
+    heard = split_heard(heard)
     ref = words_of(reference)
     a = [norm(w) for w in ref]
     b = [norm(w) for w, _ in heard]
@@ -161,6 +170,8 @@ class PronunciationService:
             if w["status"] != "ok":
                 w["ipa"] = dictionary_ipa(db, w["word"])
                 w["tips_vi"] = tips_for(w["word"])
+        if db.in_transaction() and db.new | db.dirty:
+            db.commit()
         problems = [w for w in words if w["status"] != "ok"]
         explanation = self.explain(db, user_id, problems, level) if explain else None
         if explanation:

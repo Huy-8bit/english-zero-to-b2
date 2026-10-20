@@ -1,6 +1,7 @@
 """SQLAlchemy engine/session. SQLite locally; any SQLAlchemy URL (e.g. PostgreSQL) via DATABASE_URL."""
 from __future__ import annotations
 
+import os
 from pathlib import Path
 
 from sqlalchemy import create_engine, event
@@ -19,7 +20,8 @@ def make_engine(url: str = DATABASE_URL):
         path = url.replace("sqlite:///", "", 1)
         if path and path != ":memory:":
             Path(path).parent.mkdir(parents=True, exist_ok=True)
-        kwargs["connect_args"] = {"check_same_thread": False}
+        # wait up to 30 s for another writer instead of the default 5 s ("database is locked")
+        kwargs["connect_args"] = {"check_same_thread": False, "timeout": float(os.environ.get("SQLITE_BUSY_TIMEOUT", "5"))}
         if ":memory:" in url:
             from sqlalchemy.pool import StaticPool
 
