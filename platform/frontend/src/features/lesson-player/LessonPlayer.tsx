@@ -2,6 +2,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { FocusBadge } from "@/features/focus/FocusBadge";
 import { BlockTimerChip } from "@/features/plan/BlockTimer";
 import { Link, useNavigate, useParams, useSearchParams } from "react-router-dom";
+import { lessonExitPath } from "@/lib/lessonExit";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { AnimatePresence, motion } from "motion/react";
 import {
@@ -222,7 +223,7 @@ function LessonSession({ unitId, onJourney }: { unitId: string; onJourney?: () =
     <div className={cn("min-h-screen bg-bg transition-[padding] duration-200 motion-reduce:transition-none", tutorOpen && "md:pr-[22rem] xl:pr-[26rem]")}>
       <header className="sticky top-0 z-30 border-b border-border bg-bg/90 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center gap-2 px-3 py-2 sm:px-6">
-          <Button variant="ghost" size="icon" onClick={() => nav(-1)} aria-label="Thoát bài học"><X size={18} /></Button>
+          <Button variant="ghost" size="icon" onClick={() => nav(lessonExitPath())} aria-label="Thoát bài học"><X size={18} /></Button>
           <div className="min-w-0 flex-1">
             <div className="flex items-center gap-2">
               <h1 className="truncate text-sm font-semibold sm:text-base">{unit.id} · {unit.title}</h1>

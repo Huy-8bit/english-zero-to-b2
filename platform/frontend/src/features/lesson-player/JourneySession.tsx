@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { lessonExitPath } from "@/lib/lessonExit";
 import { useQueryClient } from "@tanstack/react-query";
 import { motion } from "motion/react";
 import { ArrowRight, BookOpenText, Bot, CalendarClock, CheckCircle2, Flag, Flame, ListChecks, RotateCcw, Sparkles, Star, Target, X } from "lucide-react";
@@ -190,7 +191,7 @@ export function JourneySession({ unitId, data, lesson, onClassic }: { unitId: st
     <div className={cn("min-h-screen bg-bg", tutorOpen && "md:pr-[22rem] xl:pr-[26rem]")}>
       <header className="sticky top-0 z-30 border-b border-border bg-bg/90 backdrop-blur">
         <div className="mx-auto flex max-w-4xl items-center gap-2 px-3 py-2 sm:px-6">
-          <Button variant="ghost" size="icon" onClick={() => nav(-1)} aria-label="Thoát bài học"><X size={18} /></Button>
+          <Button variant="ghost" size="icon" onClick={() => nav(lessonExitPath())} aria-label="Thoát bài học"><X size={18} /></Button>
           <div className="min-w-0 flex-1">
             <div className="flex items-center gap-2">
               <h1 className="truncate text-sm font-semibold sm:text-base">{data.unit.id} · {data.unit.title}</h1>

@@ -9,6 +9,7 @@ import { cn } from "@/lib/utils";
 import { useUI } from "@/stores/ui";
 import { AssistantButton, AssistantHost } from "@/features/assistant/AssistantPanel";
 import { useModuleHeartbeat } from "@/features/journal/useModuleHeartbeat";
+import { rememberLessonExit } from "@/lib/lessonExit";
 import { FocusBadge } from "@/features/focus/FocusBadge";
 import { BlockTimerChip } from "@/features/plan/BlockTimer";
 
@@ -114,6 +115,7 @@ export function Layout() {
   const { sidebarOpen, setSidebarOpen } = useUI();
   const loc = useLocation();
   useEffect(() => { setSidebarOpen(false); }, [loc.pathname, setSidebarOpen]);
+  useEffect(() => { rememberLessonExit(loc.pathname + loc.search); }, [loc.pathname, loc.search]);
   useModuleHeartbeat(loc.pathname, loc.search);
   return (
     <div className="min-h-screen">

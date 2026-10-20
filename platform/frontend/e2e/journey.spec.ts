@@ -87,3 +87,13 @@ test("a question I cannot answer: 'Không biết — xem đáp án' shows the an
   await page.getByRole("button", { name: /^Tiếp/ }).click();
   await expect(page.getByText(/Đoán trước 2\/2/)).toBeVisible();
 });
+
+test("X after moving to the next lesson goes back to where I started, not to the previous lesson", async ({ page }) => {
+  await page.goto("/today");
+  await expect(page.getByRole("heading", { name: "Lịch học hôm nay" })).toBeVisible();
+  await page.goto("/learn/A0-G012");
+  await expect(page.getByRole("button", { name: "Thoát bài học" })).toBeVisible();
+  await page.goto("/learn/A0-G013");
+  await page.getByRole("button", { name: "Thoát bài học" }).click();
+  await expect(page).toHaveURL(/\/today$/);
+});

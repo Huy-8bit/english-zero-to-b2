@@ -175,4 +175,7 @@ test("next lesson restores its own slide and drafts without overwriting either l
   expect(saved.progress.state.checklist).toEqual({ ownLesson: true });
   await page.reload();
   await expect(page.locator("#slide-title")).toHaveText(target.steps[3].title);
+  // X leaves the lessons (it used to go "back" to the lesson just finished)
+  await page.getByRole("button", { name: "Thoát bài học" }).click();
+  await expect(page).toHaveURL(/\/path$/);
 });
