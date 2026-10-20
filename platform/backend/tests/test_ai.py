@@ -441,3 +441,14 @@ def test_studio_respects_requested_question_count(c, kind):
     response = c.post(f'/api/ai/{kind}/generate', json={'level': 'A2', 'topic': 'weekend', 'question_count': 8})
     assert response.status_code == 200, response.text
     assert len(response.json()['questions']) == 8
+
+
+def test_generated_question_with_english_explanation_is_kept_with_evidence():
+    from types import SimpleNamespace
+
+    from app.ai.studio import patch_explanations
+
+    q = SimpleNamespace(explanation_vi="The answer is in the second line.", evidence_quote="I get up at seven.")
+    ok = SimpleNamespace(explanation_vi="Câu trả lời ở dòng thứ hai.", evidence_quote="x")
+    patch_explanations([q, ok])
+    assert q.explanation_vi == "Đáp án nằm ở đoạn: “I get up at seven.”." and ok.explanation_vi.startswith("Câu trả lời")

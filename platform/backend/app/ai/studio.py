@@ -23,6 +23,15 @@ READING_TYPES = {"multiple_choice", "true_false", "matching", "reading_comprehen
 LISTENING_TYPES = {"multiple_choice", "true_false", "short_answer", "listening_comprehension"}
 
 
+def patch_explanations(questions) -> None:
+    """A question whose only flaw is an English or missing explanation is kept: the explanation points to the evidence."""
+    from .validators import has_vietnamese
+
+    for q in questions:
+        if (not q.explanation_vi.strip() or not has_vietnamese(q.explanation_vi)) and q.evidence_quote:
+            q.explanation_vi = f"Đáp án nằm ở đoạn: “{q.evidence_quote.strip()}”."
+
+
 class StudioService:
     def __init__(self, gateway: AIGateway, store: ContentStore, kb: KnowledgeBase, exercises: ExerciseService):
         self.gw, self.store, self.kb, self.ex = gateway, store, kb, exercises
@@ -34,27 +43,34 @@ class StudioService:
             raise AIBadInput("Tham số bài nghe không hợp lệ.")
         words = int(minutes * {"A0": 90, "A1": 100, "A2": 115, "B1": 130, "B2": 145}[level])
         accepted, vocab, segments, title = [], [], [], ""
+        best: tuple | None = None
         for _ in range(2):
             gen = self.gw.structured(db, user_id, feature="listening_generate", task="exercise", instructions=prompts.LISTENING,
                                      input=f"Level {level}; difficulty {difficulty}; format: {fmt} (dialogue = 2 speakers, monologue = 1); "
-                                           f"about {words} words; {question_count + 1} questions. Topic: <learner_text>{topic[:200]}</learner_text>. "
+                                           f"the whole script MUST be about {words} words (at least {int(words * 0.8)}), split into many short "
+                                           f"segments; {question_count + 3} questions. Topic: <learner_text>{topic[:200]}</learner_text>. "
                                            "source_lesson_id: use 'listening'.",
                                      schema=ListeningGeneration, max_output_tokens=6000)
             transcript = "\n".join(s.text for s in gen.segments)
             if len(gen.segments) < 2 or len(transcript.split()) < 30:
                 continue
+            patch_explanations(gen.questions)
             ok, _ = validate_batch(gen.questions, allowed_types=LISTENING_TYPES, avoid=[], passage=transcript)
             ok = [q for q in ok if q.evidence_quote]
             for q in ok:
                 q.context_passage = transcript
             if self.gw.settings.verify_exercises and ok:
                 ok, _, _ = self.ex._blind_verify(db, user_id, ok)
-            if len(ok) >= question_count:
-                accepted, vocab, segments, title = ok[:question_count], gen.vocabulary, gen.segments, gen.title
-                speakers = gen.speakers
+            # enough questions (a couple fewer than asked is fine) and a script that is not far too short
+            enough = len(ok) >= max(3, question_count - 2)
+            long_enough = len(transcript.split()) >= words * 0.5
+            if enough and (best is None or len(ok) > len(best[0])):
+                best = (ok[:question_count], gen.vocabulary, gen.segments, gen.title, gen.speakers)
+            if enough and long_enough and len(ok) >= question_count:
                 break
-        if not accepted:
+        if best is None:
             raise AIInvalidOutput("listening questions failed validation")
+        accepted, vocab, segments, title, speakers = best
         set_id = str(uuid.uuid4())
         voice_of = {sp: VOICES[i % len(VOICES)] for i, sp in enumerate(dict.fromkeys([s.speaker for s in segments] or speakers))}
         audio = bytearray()
@@ -101,19 +117,21 @@ class StudioService:
         accepted, gen = [], None
         for _ in range(2):
             gen = self.gw.structured(db, user_id, feature="reading_generate", task="exercise", instructions=prompts.READING,
-                                     input=f"Level {level}; text type: {text_type}; about {words} words; {question_count + 1} questions; "
+                                     input=f"Level {level}; text type: {text_type}; about {words} words; {question_count + 3} questions; "
                                            f"question types: {sorted(types)}; topic: <learner_text>{topic[:200]}</learner_text>. "
                                            "source_lesson_id: use 'reading'.",
                                      schema=ReadingGeneration, max_output_tokens=7000)
+            patch_explanations(gen.questions)
             ok, _ = validate_batch(gen.questions, allowed_types=types, avoid=[], passage=gen.passage)
             ok = [q for q in ok if q.evidence_quote or q.question_type == "matching"]
             for q in ok:
                 q.context_passage = gen.passage
             if self.gw.settings.verify_exercises and ok:
                 ok, _, _ = self.ex._blind_verify(db, user_id, ok)
-            if len(gen.passage.split()) >= 50 and len(ok) >= question_count:
+            if len(gen.passage.split()) >= 50 and len(ok) >= max(3, question_count - 2) and len(ok) > len(accepted):
                 accepted = ok[:question_count]
-                break
+                if len(ok) >= question_count:
+                    break
         if not accepted or gen is None:
             raise AIInvalidOutput("reading questions failed validation")
         set_id = str(uuid.uuid4())
