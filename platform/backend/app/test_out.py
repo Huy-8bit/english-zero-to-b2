@@ -153,22 +153,23 @@ def sprint_overview(db: Session, user: User, store: ContentStore) -> dict:
         units.append({"id": u.id, "title": u.title, "level": u.level, "status": status, "minutes": u.minutes,
                       "done_today": bool(p and p.completed_at and p.completed_at >= start_local),
                       "in_progress": bool(p and not p.completed_at and (p.max_step or 0) > 0),
-                      "_touched": p.updated_at if p else None})
+                      # last activity on this lesson: progress saved or a sprint/test-out started
+                      "_touched": max([d for d in (p.updated_at if p else None, t.started_at if t else None) if d] or [None])})
         lv = levels.setdefault(u.level, {"level": u.level, "total": 0, "done": 0})
         lv["total"] += 1
         lv["done"] += status == "done"
     done = sum(1 for u in units if u["status"] == "done")
     # continue where the learner last worked: the most recently touched unfinished lesson, else the first one to do
     # after the most recently touched lesson, else the first one to do in the route
-    touched = sorted((u for u in units if u["_touched"]), key=lambda u: u["_touched"], reverse=True)
+    touched = [u for u in units if u["_touched"]]
     nxt = None
-    for u in touched:
-        if u["status"] == "todo" and u["in_progress"]:
-            nxt = u
-            break
-    if nxt is None and touched:
-        i = units.index(touched[0])
-        nxt = next((u for u in units[i + 1:] if u["status"] == "todo"), None)
+    if touched:
+        last = max(touched, key=lambda u: u["_touched"])  # the lesson the learner touched most recently
+        if last["status"] == "todo":
+            nxt = last
+        else:
+            i = units.index(last)
+            nxt = next((u for u in units[i + 1:] if u["status"] == "todo"), None)
     nxt = nxt or next((u for u in units if u["status"] == "todo"), None)
     for u in units:
         u.pop("_touched")

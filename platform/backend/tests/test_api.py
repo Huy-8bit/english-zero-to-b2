@@ -293,6 +293,13 @@ def test_grammar_sprint_continues_from_the_lesson_worked_on_last(client, store, 
     assert s["next"]["id"] == "A0-G006"  # the lesson in progress, not the low-score gap A0-G002
     assert [u["id"] for u in s["study"]] == ["A0-G002"] and s["queue"][:3] == ["A0-G006", "A0-G007", "A0-G008"]
     assert s["queue"][-2:] == ["A0-G004", "A0-G005"]  # earlier gaps come at the end
+    # the lesson worked on last was not passed in a sprint → continue with the one after it, not an old open lesson
+    t = client.post("/api/lessons/A0-G006/test-out?size=6").json()
+    for i in t["items"]:
+        _answer(client, store, i, right=False)
+    client.post(f"/api/lessons/A0-G006/test-out/{t['test_id']}/finish")
+    s = client.get("/api/grammar-sprint").json()
+    assert s["next"]["id"] == "A0-G007" and "A0-G006" in [u["id"] for u in s["study"]]
 
 
 def test_each_question_carries_its_group_instruction(client):
