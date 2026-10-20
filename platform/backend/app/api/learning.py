@@ -210,15 +210,24 @@ def complete(unit_id: str, db: Session = Depends(get_db), store: ContentStore = 
             "new_achievements": badges, "level_completed": level_done, "pass_score": P.PASS_SCORE}
 
 
+@router.get("/grammar-sprint")
+def grammar_sprint(db: Session = Depends(get_db), store: ContentStore = Depends(get_store), user: User = Depends(current_user)):
+    """Grammar sprint: every grammar lesson A0→B2 with its status, the next one, today's count."""
+    from .. import test_out
+
+    return test_out.sprint_overview(db, user, store)
+
+
 @router.post("/lessons/{unit_id}/test-out")
-def test_out_start(unit_id: str, db: Session = Depends(get_db), store: ContentStore = Depends(get_store), user: User = Depends(current_user)):
+def test_out_start(unit_id: str, size: int = 8, db: Session = Depends(get_db), store: ContentStore = Depends(get_store),
+                   user: User = Depends(current_user)):
     """'Kiểm tra vượt bài': the server picks the questions; answer them with the normal quiz endpoint, then call finish."""
     from .. import test_out
 
     if store.built(unit_id) is None:
         raise HTTPException(404, "Lesson not found")
     try:
-        return test_out.start(db, user, store, unit_id)
+        return test_out.start(db, user, store, unit_id, size=size)
     except ValueError as e:
         raise HTTPException(422, str(e)) from None
     except PermissionError as e:

@@ -4,7 +4,7 @@ import { BlockTimerChip } from "@/features/plan/BlockTimer";
 import { Link, useNavigate, useParams, useSearchParams } from "react-router-dom";
 import { lessonExitPath } from "@/lib/lessonExit";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
-import { AnimatePresence, motion } from "motion/react";
+import { motion } from "motion/react";
 import {
   ArrowLeft, ArrowRight, Bot, BookOpenText, Sparkles, CheckCircle2, ChevronLeft, Clock, Flag, Focus, List, NotebookPen, Trophy, X, Route,
 } from "lucide-react";
@@ -25,6 +25,7 @@ import { isAnswered, toResponse, type Draft } from "@/features/quizzes/draft";
 import { usePlayerState } from "./usePlayerState";
 import { JourneySession } from "./JourneySession";
 import { journeyApplies } from "./journey";
+import { SprintLesson } from "./SprintLesson";
 import { useHeartbeat } from "./useHeartbeat";
 import { NotesPanel } from "./NotesPanel";
 import { TutorPanel } from "@/features/tutor/TutorPanel";
@@ -74,6 +75,9 @@ function LessonModes({ unitId }: { unitId: string }) {
   if (steps.isLoading) return <div className="mx-auto max-w-3xl space-y-4 p-6"><Skeleton className="h-8 w-2/3" /><Skeleton className="h-72" /></div>;
   if (!steps.data) return <LessonSession unitId={unitId} />; // shows the load error with retry
   const can = journeyApplies(steps.data.unit.kind, steps.data.steps);
+  if (forced === "sprint" && steps.data.unit.kind === "grammar") {
+    return <SprintLesson unitId={unitId} data={steps.data} lesson={lesson.data} />;
+  }
   if (pref === "journey" && can) {
     return <JourneySession unitId={unitId} data={steps.data} lesson={lesson.data} onClassic={() => choose("classic")} />;
   }
@@ -222,7 +226,7 @@ function LessonSession({ unitId, onJourney }: { unitId: string; onJourney?: () =
   return (
     <div className={cn("min-h-screen bg-bg transition-[padding] duration-200 motion-reduce:transition-none", tutorOpen && "md:pr-[22rem] xl:pr-[26rem]")}>
       <header className="sticky top-0 z-30 border-b border-border bg-bg/90 backdrop-blur">
-        <div className="mx-auto flex max-w-6xl items-center gap-2 px-3 py-2 sm:px-6">
+        <div className="mx-auto flex max-w-[90rem] items-center gap-2 px-3 py-2 sm:px-8">
           <Button variant="ghost" size="icon" onClick={() => nav(lessonExitPath())} aria-label="Thoát bài học"><X size={18} /></Button>
           <div className="min-w-0 flex-1">
             <div className="flex items-center gap-2">
@@ -256,15 +260,16 @@ function LessonSession({ unitId, onJourney }: { unitId: string; onJourney?: () =
         )}
       </header>
 
-      <div className={cn("mx-auto flex max-w-6xl gap-6 px-3 sm:px-6", focusMode && "max-w-4xl")}>
+      <div className={cn("lesson-big mx-auto flex max-w-[90rem] gap-8 px-3 sm:px-8", focusMode && "max-w-5xl")}>
         {!focusMode && (
           <aside className={cn("sticky top-20 hidden h-[calc(100vh-10rem)] w-64 shrink-0 overflow-y-auto py-6", tutorOpen ? "2xl:block" : "lg:block")} aria-label="Các slide">
             <Outline steps={allSteps} current={ps.step} onPick={go} results={ps.results} />
           </aside>
         )}
         <main className={cn("min-w-0 flex-1 pt-6", tutorOpen ? "pb-[calc(46dvh+6rem)] md:pb-28" : "pb-28")}>
-          <AnimatePresence mode="wait">
-            <motion.section key={step.id} initial={{ opacity: 0, x: 16 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -16 }} transition={{ duration: 0.18 }}
+          {/* enter animation only: an exit animation (AnimatePresence mode="wait") could freeze the previous slide when
+              moving quickly, leaving inputs that ignore typing (same fix as the journey view) */}
+            <motion.section key={step.id} initial={{ opacity: 0, x: 16 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.18 }}
               aria-labelledby="slide-title">
               <p className="text-xs font-semibold uppercase tracking-wider text-primary">{TYPE_LABEL[step.type] ?? step.type}{"section" in step && step.section ? ` · Mục ${step.section}` : ""}</p>
               <h2 id="slide-title" className="mb-5 mt-1 text-xl font-bold tracking-tight sm:text-2xl">{step.title}</h2>
@@ -278,12 +283,11 @@ function LessonSession({ unitId, onJourney }: { unitId: string; onJourney?: () =
                   deferred={!!(step as Step).defer && isExam} examSubmitted={examSubmitted} registerPrimary={registerPrimary} onXp={onXp} />
               )}
             </motion.section>
-          </AnimatePresence>
         </main>
       </div>
 
       <footer className={cn("fixed inset-x-0 bottom-0 z-30 border-t border-border bg-surface/95 backdrop-blur transition-[right] duration-200 motion-reduce:transition-none", tutorOpen && "bottom-[46dvh] md:bottom-0 md:right-[22rem] xl:right-[26rem]")}>
-        <div className="mx-auto flex max-w-6xl items-center gap-2 px-3 py-3 sm:px-6">
+        <div className="mx-auto flex max-w-[90rem] items-center gap-2 px-3 py-3 sm:px-8">
           <Button variant="outline" onClick={() => go(ps.step - 1)} disabled={ps.step === 0} aria-label="Slide trước (phím ←)"><ArrowLeft size={16} /><span className="hidden sm:inline">Trước</span></Button>
           <span className={cn("mx-auto hidden text-xs text-muted", tutorOpen ? "2xl:block" : "md:block")}>← → chuyển slide · Enter để kiểm tra / tiếp tục</span>
           {primaryLabel && (

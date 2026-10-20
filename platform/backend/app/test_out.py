@@ -15,17 +15,16 @@ from sqlalchemy.orm import Session
 from .content.store import ContentStore
 from .models import Attempt, LessonProgress, LessonTestOut, User, utcnow
 from .services import progress as P
+from .services.grading import answer_variants
 
-SIZE = 8
-PASS_RATIO = 0.875  # 7 of 8: one slip allowed
+SIZE = 8  # "Kiểm tra vượt bài"; the grammar sprint uses 6
 CLOSED = {"mc", "tfng", "choice", "multi", "order"}
 COOLDOWN = timedelta(hours=24)
 
 
 def pass_mark(total: int) -> int:
-    """Correct answers needed (7 of 8, 5 of 6, 5 of 5)."""
-    import math
-    return max(1, math.ceil(total * PASS_RATIO))
+    """Correct answers needed: one slip allowed from 6 questions up (7/8, 5/6), all of them below."""
+    return total - 1 if total >= 6 else total
 
 
 def _candidates(store: ContentStore, unit_id: str) -> list[tuple[int, str, str]]:
@@ -42,12 +41,14 @@ def _candidates(store: ContentStore, unit_id: str) -> list[tuple[int, str, str]]
                 continue
             if it.kind in CLOSED and it.correct_option:
                 out.append((i, x["id"], "closed"))
-            elif it.kind == "text" and it.key is not None and not x.get("multiline"):
+            elif it.kind == "text" and it.key is not None and not x.get("multiline") and answer_variants(it.key.answer_md):
+                # typed answers only when the key has an English form the grader can match exactly
                 out.append((i, x["id"], "text"))
     return out
 
 
-def start(db: Session, user: User, store: ContentStore, unit_id: str) -> dict:
+def start(db: Session, user: User, store: ContentStore, unit_id: str, size: int = SIZE) -> dict:
+    size = 6 if size <= 6 else SIZE
     cands = _candidates(store, unit_id)
     if len(cands) < 5:
         raise ValueError("Bài này không có đủ câu tự chấm để kiểm tra vượt bài.")
@@ -66,9 +67,9 @@ def start(db: Session, user: User, store: ContentStore, unit_id: str) -> dict:
         rng.shuffle(v)
         v.sort(key=lambda c: c[2] != "closed")
     picked: list[str] = []
-    while len(picked) < SIZE and any(by_step.values()):
+    while len(picked) < size and any(by_step.values()):
         for k in list(by_step):
-            if by_step[k] and len(picked) < SIZE:
+            if by_step[k] and len(picked) < size:
                 picked.append(by_step[k].pop(0)[1])
     t = LessonTestOut(user_id=user.id, unit_id=unit_id, items=picked)
     db.add(t)
@@ -116,3 +117,44 @@ def finish(db: Session, user: User, store: ContentStore, unit_id: str, test_id: 
 
 def _result(t: LessonTestOut) -> dict:
     return {"test_id": t.id, "passed": bool(t.passed), "correct": t.correct, "total": t.total, "pass_mark": pass_mark(t.total or len(t.items))}
+
+
+# ------------------------------------------------------------------ grammar sprint
+LEVEL_ORDER = ["A0", "A1", "A2", "B1", "B2"]
+
+
+def sprint_overview(db: Session, user: User, store: ContentStore) -> dict:
+    """Every grammar lesson A0→B2 in route order with its status, today's count and totals per level.
+
+    done        lesson completed (full study, test-out or sprint)
+    study       the last sprint/test-out within 24 h was not passed → study it fully later
+    todo        not done yet (the queue)
+    """
+    from .vocabulary.service import day_bounds
+
+    start_local, _ = day_bounds()  # the learner's day (local midnight, as naive UTC)
+    prog = {p.unit_id: p for p in db.scalars(select(LessonProgress).where(LessonProgress.user_id == user.id))}
+    tests: dict[str, LessonTestOut] = {}
+    for t in db.scalars(select(LessonTestOut).where(LessonTestOut.user_id == user.id).order_by(LessonTestOut.id)):
+        tests[t.unit_id] = t
+    units, levels = [], {}
+    for u in store.unit_list:
+        if u.kind != "grammar" or u.level not in LEVEL_ORDER:
+            continue
+        p, t = prog.get(u.id), tests.get(u.id)
+        if p and p.completed_at and p.status == "completed":
+            status = "done"
+        elif t and t.finished_at and not t.passed and utcnow() - t.started_at < COOLDOWN:
+            status = "study"
+        else:
+            status = "todo"
+        units.append({"id": u.id, "title": u.title, "level": u.level, "status": status, "minutes": u.minutes,
+                      "done_today": bool(p and p.completed_at and p.completed_at >= start_local)})
+        lv = levels.setdefault(u.level, {"level": u.level, "total": 0, "done": 0})
+        lv["total"] += 1
+        lv["done"] += status == "done"
+    done = sum(1 for u in units if u["status"] == "done")
+    return {"units": units, "total": len(units), "done": done, "remaining": len(units) - done,
+            "today": sum(1 for u in units if u["done_today"]), "study": [u for u in units if u["status"] == "study"],
+            "next": next((u for u in units if u["status"] == "todo"), None),
+            "levels": [levels[lv] for lv in LEVEL_ORDER if lv in levels]}

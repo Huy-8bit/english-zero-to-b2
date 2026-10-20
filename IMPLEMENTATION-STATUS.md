@@ -1,3 +1,16 @@
+# Grammar sprint and wider lesson layout — 2026-10-20
+
+Request: show lessons better, make them more engaging and focusing, and finish all grammar in 3–4 days.
+
+Assessment given to the learner:
+- 104 grammar lessons remain out of 128. 3–4 days means 26–35 lessons a day, about 8 minutes each at 4 h/day.
+- Full lessons (≈18 steps, ≈33 questions) cannot fit that. A sprint pass plus spaced review and full study of the gaps can.
+
+| Feature | Status | Files | Evidence / remaining work |
+|---|---|---|---|
+| Grammar sprint (`/grammar-sprint`, `/learn/{id}?mode=sprint`) | COMPLETE_AND_TESTED | `backend/app/test_out.py` (`sprint_overview`, `size=6`), `api/learning.py` (`GET /api/grammar-sprint`); `frontend/src/features/lesson-player/SprintPage.tsx`, `SprintLesson.tsx`, `sprintPlan.ts`, `TestOut.tsx` | Core screen: form + recap key points (review schedule and links cut) + mistakes + tip. Then 6 server-picked questions graded from the first answers; 5/6 completes the lesson. A failed lesson goes to "Cần học kỹ" for 24 h. Typed questions are picked only when the key has an English form the grader can match. The daily target comes from a 3/4/7-day plan; timer, streak, today/target. Tests: `test_grammar_sprint_*`, vitest (core, next), E2E `grammar-sprint.spec.ts`; the page is in the a11y and mobile checks. |
+| Wider, larger lesson layout | COMPLETE_AND_TESTED | `LessonPlayer.tsx`, `JourneySession.tsx`, `styles/index.css` (`.lesson-big`) | Up to 1440 px; reading type 1.1 rem and roomier tables from 1280 px; zebra rows. The classic view's exit animation was removed (same freeze as the journey view). |
+
 # Faster lessons, help button, listening fix — 2026-10-20
 
 The changes come from the learner's own record (17–20/10):

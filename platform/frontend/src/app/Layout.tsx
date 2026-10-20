@@ -3,8 +3,7 @@ import { useEffect, useRef, useState, type FormEvent } from "react";
 import {
   BookOpen, BookText, Brain, ClipboardCheck, Ear, FlaskConical, GraduationCap, Headphones, Home, Library, LineChart,
   Map, Menu, Mic, Moon, PenLine, Search, Sun, X, Layers, Sparkles, PenSquare, AudioLines, Headset, BookOpenCheck, Target,
-  NotebookPen, PencilLine, Settings, CalendarDays, Lock, CalendarClock,
-} from "lucide-react";
+  NotebookPen, PencilLine, Settings, CalendarDays, Lock, CalendarClock, Zap } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useUI } from "@/stores/ui";
 import { AssistantButton, AssistantHost } from "@/features/assistant/AssistantPanel";
@@ -18,6 +17,7 @@ export const NAV_GROUPS = [
     { to: "/", label: "Dashboard", icon: Home },
     { to: "/today", label: "Lịch học hôm nay", icon: CalendarClock },
     { to: "/path", label: "Lộ trình học", icon: Map },
+    { to: "/grammar-sprint", label: "Sprint ngữ pháp", icon: Zap },
     { to: "/grammar", label: "Ngữ pháp", icon: BookText },
     { to: "/vocabulary", label: "Từ vựng", icon: Layers },
     { to: "/pronunciation", label: "Phát âm", icon: Ear },

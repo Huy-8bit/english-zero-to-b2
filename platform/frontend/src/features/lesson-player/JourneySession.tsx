@@ -234,7 +234,7 @@ export function JourneySession({ unitId, data, lesson, onClassic }: { unitId: st
         </div>
       </header>
 
-      <main className="mx-auto max-w-3xl px-3 pb-28 pt-6 sm:px-6">
+      <main className="lesson-big mx-auto max-w-4xl px-3 pb-28 pt-6 sm:px-6 xl:max-w-5xl">
         {/* enter animation only: an exit animation (AnimatePresence mode="wait") could freeze the old screen when
             the learner moved on quickly, leaving an input that ignored typing */}
           <motion.section key={card.key} initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.18 }} aria-live="polite">
@@ -272,7 +272,7 @@ export function JourneySession({ unitId, data, lesson, onClassic }: { unitId: st
 
       {card.kind !== "finish" && !testOut && (
         <footer className={cn("fixed inset-x-0 bottom-0 z-30 border-t border-border bg-surface/95 backdrop-blur", tutorOpen && "bottom-[46dvh] md:bottom-0 md:right-[22rem] xl:right-[26rem]")}>
-          <div className="mx-auto flex max-w-3xl items-center gap-2 px-3 py-3 sm:px-6">
+          <div className="mx-auto flex max-w-4xl items-center gap-2 px-3 py-3 sm:px-6 xl:max-w-5xl">
             <span className="text-xs text-muted">{pos + 1}/{cards.length} · Enter để tiếp tục</span>
             {isQ(card) && !result ? (
               <>

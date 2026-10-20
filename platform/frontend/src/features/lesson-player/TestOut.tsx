@@ -12,10 +12,14 @@ import type { ItemResult, QuizItem, StepsPayload } from "@/types/content";
 import { ItemCard } from "@/features/quizzes/ItemCard";
 import { isAnswered, toResponse, type Draft } from "@/features/quizzes/draft";
 
-type Result = Awaited<ReturnType<typeof api.testOutFinish>>;
+export type TestOutResult = Awaited<ReturnType<typeof api.testOutFinish>>;
+type Result = TestOutResult;
 
 /** "Kiểm tra vượt bài": about 8 questions picked by the server; 7/8 right on the first try completes the lesson. */
-export function TestOut({ unitId, data, nextId, onStudy }: { unitId: string; data: StepsPayload; nextId: string | null; onStudy: () => void }) {
+export function TestOut({ unitId, data, nextId, onStudy, size = 8, onFinished }: {
+  unitId: string; data: StepsPayload; nextId: string | null; onStudy: () => void;
+  size?: number; onFinished?: (r: Result) => void;
+}) {
   const [test, setTest] = useState<{ test_id: number; items: string[]; pass_mark: number } | null>(null);
   const [err, setErr] = useState<string | null>(null);
   const [idx, setIdx] = useState(0);
@@ -24,8 +28,8 @@ export function TestOut({ unitId, data, nextId, onStudy }: { unitId: string; dat
   const [busy, setBusy] = useState(false);
   const [done, setDone] = useState<Result | null>(null);
   useEffect(() => {
-    api.testOutStart(unitId).then(setTest).catch((e) => setErr(e instanceof Error ? e.message : "Không bắt đầu được"));
-  }, [unitId]);
+    api.testOutStart(unitId, size).then(setTest).catch((e) => setErr(e instanceof Error ? e.message : "Không bắt đầu được"));
+  }, [unitId, size]);
   const byId = useMemo(() => {
     const m: Record<string, { item: QuizItem; quizId: string; intro: string }> = {};
     data.steps.forEach((s) => (s.items ?? []).forEach((item) => { m[item.id] = { item, quizId: s.quiz_id!, intro: s.intro_md ?? "" }; }));
@@ -71,7 +75,9 @@ export function TestOut({ unitId, data, nextId, onStudy }: { unitId: string; dat
     if (idx + 1 < test.items.length) return setIdx(idx + 1);
     setBusy(true);
     try {
-      setDone(await api.testOutFinish(unitId, test.test_id));
+      const r = await api.testOutFinish(unitId, test.test_id);
+      if (onFinished) onFinished(r);
+      else setDone(r);
     } catch (e) {
       toast.error(e instanceof Error ? e.message : "Không chấm được bài kiểm tra");
     } finally {
@@ -82,7 +88,7 @@ export function TestOut({ unitId, data, nextId, onStudy }: { unitId: string; dat
   return (
     <div className="space-y-3" data-testid="test-out">
       <div className="flex flex-wrap items-center gap-2">
-        <Badge tone="primary"><Rocket size={12} />Kiểm tra vượt bài</Badge>
+        <Badge tone="primary"><Rocket size={12} />{onFinished ? "Kiểm tra nhanh" : "Kiểm tra vượt bài"}</Badge>
         <span className="text-sm text-muted">Câu {idx + 1}/{test.items.length} · cần đúng {test.pass_mark} câu ngay lần đầu · không có gợi ý</span>
         <Button size="sm" variant="ghost" className="ml-auto" onClick={onStudy}><X size={14} />Thôi, học bài</Button>
       </div>

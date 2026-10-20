@@ -9,7 +9,7 @@ test.beforeEach(async ({ page }) => {
 test("mobile layout: menu, lesson player usable", async ({ page }) => {
   await page.goto("/");
   await page.getByRole("button", { name: "Mở menu" }).click();
-  await page.getByRole("link", { name: "Ngữ pháp" }).click();
+  await page.getByRole("link", { name: "Ngữ pháp", exact: true }).click();
   await expect(page).toHaveURL(/\/grammar$/);
   await expect(page.getByRole("heading", { name: "Ngữ pháp", exact: true })).toBeVisible();
   await page.goto("/learn/A0-G001");
@@ -20,7 +20,7 @@ test("mobile layout: menu, lesson player usable", async ({ page }) => {
 });
 
 test("mobile vocabulary: pages fit the screen and a flashcard can be rated", async ({ page }) => {
-  for (const url of ["/vocabulary", "/vocabulary/explore?level=A1", "/vocabulary/word/achieve", "/vocabulary/today", "/vocabulary/stats", "/vocabulary/notebook", "/journal", "/today", "/review", "/vocabulary/sprint", "/writing-daily"]) {
+  for (const url of ["/vocabulary", "/vocabulary/explore?level=A1", "/vocabulary/word/achieve", "/vocabulary/today", "/vocabulary/stats", "/vocabulary/notebook", "/journal", "/today", "/review", "/vocabulary/sprint", "/writing-daily", "/grammar-sprint"]) {
     await page.goto(url);
     await page.waitForLoadState("networkidle");
     const overflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);

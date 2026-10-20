@@ -96,3 +96,26 @@ describe("shorter lessons: challenge stage", () => {
     expect(pickChallenge(qs, new Set(), 12)).toHaveLength(3);
   });
 });
+
+describe("grammar sprint", () => {
+  it("core screen: form, key points without the review schedule, mistakes, memory tip", async () => {
+    const { coreSteps } = await import("./SprintLesson");
+    const steps = [step("intro", "intro"), step("w", "concept"), { ...step("f", "formula"), title: "FORM" },
+      { ...step("m", "mistakes") }, { ...step("t", "concept"), title: "Mẹo ghi nhớ" },
+      { ...step("r", "recap"), md: "### 3 lỗi cần nhớ\n1. a\n\n### Lịch ôn tập\n| Ngày | Việc |\n\n### Liên kết\n- x" }] as Step[];
+    const c = coreSteps(steps);
+    expect(c.form.map((s) => s.id)).toEqual(["f"]);
+    expect(c.recap?.md).toContain("3 lỗi cần nhớ");
+    expect(c.recap?.md).not.toMatch(/Lịch ôn|Liên kết/);
+    expect(c.mistakes?.id).toBe("m");
+    expect(c.tip?.id).toBe("t");
+  });
+  it("next lesson: the first one still to do after the current one", async () => {
+    const { nextAfter } = await import("./SprintLesson");
+    const u = (id: string, status: "done" | "study" | "todo") => ({ id, title: id, level: "A1", status, minutes: 30, done_today: false });
+    const units = [u("A", "todo"), u("B", "done"), u("C", "todo"), u("D", "study"), u("E", "todo")];
+    expect(nextAfter(units, "C")?.id).toBe("E");
+    expect(nextAfter(units, "E")?.id).toBe("A");
+    expect(nextAfter([u("A", "done")], "A")).toBeNull();
+  });
+});

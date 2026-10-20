@@ -230,7 +230,7 @@ def _answer(client, store, item_id, right=True):
 
 def test_test_out_passes_from_first_answers_and_completes_the_lesson(client, store):
     t = client.post("/api/lessons/A1-G001/test-out").json()
-    assert 5 <= len(t["items"]) <= 8 and t["pass_mark"] == -(-len(t["items"]) * 7 // 8)
+    assert 5 <= len(t["items"]) <= 8 and t["pass_mark"] == (len(t["items"]) - 1 if len(t["items"]) >= 6 else len(t["items"]))
     assert client.post(f"/api/lessons/A1-G001/test-out/{t['test_id']}/finish").status_code == 409  # unanswered
     assert client.post(f"/api/quizzes/help/{t['items'][0]}").status_code == 409  # no help during the test
     for i in t["items"]:
@@ -251,3 +251,23 @@ def test_test_out_failed_keeps_the_lesson_open(client, store):
     assert not r["passed"] and r["correct"] < r["pass_mark"]
     assert all(x["unit_id"] != "A1-G002" or x["status"] != "completed" for x in client.get("/api/progress").json())
     assert client.post("/api/lessons/PLACEMENT-TEST/test-out").status_code == 422  # exams cannot be tested out
+
+
+
+def test_grammar_sprint_queue_six_questions_and_study_later(client, store):
+    s = client.get("/api/grammar-sprint").json()
+    assert s["total"] == 128 and s["done"] == 0 and s["next"]["id"] == "A0-G001"
+    assert [lv["level"] for lv in s["levels"]] == ["A0", "A1", "A2", "B1", "B2"]
+    t = client.post("/api/lessons/A0-G002/test-out?size=6").json()
+    assert len(t["items"]) == 6 and t["pass_mark"] == 5
+    for i in t["items"]:
+        _answer(client, store, i, right=False)
+    assert not client.post(f"/api/lessons/A0-G002/test-out/{t['test_id']}/finish").json()["passed"]
+    s = client.get("/api/grammar-sprint").json()
+    assert [u["id"] for u in s["study"]] == ["A0-G002"]
+    t = client.post("/api/lessons/A0-G001/test-out?size=6").json()
+    for i in t["items"]:
+        _answer(client, store, i, right=True)
+    assert client.post(f"/api/lessons/A0-G001/test-out/{t['test_id']}/finish").json()["passed"]
+    s = client.get("/api/grammar-sprint").json()
+    assert s["done"] == 1 and s["today"] == 1 and s["next"]["id"] == "A0-G003"  # G002 waits in "study"

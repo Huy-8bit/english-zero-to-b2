@@ -49,7 +49,8 @@ export const api = {
       method: "PUT", body: json({ current_step, state }), keepalive: true,
     }),
   /** "Kiểm tra vượt bài": server-picked questions; answer them with submitQuiz, then finish. */
-  testOutStart: (id: string) => request<{ test_id: number; items: string[]; pass_mark: number }>(`/api/lessons/${encodeURIComponent(id)}/test-out`, { method: "POST" }),
+  testOutStart: (id: string, size = 8) => request<{ test_id: number; items: string[]; pass_mark: number }>(`/api/lessons/${encodeURIComponent(id)}/test-out?size=${size}`, { method: "POST" }),
+  grammarSprint: () => request<GrammarSprint>("/api/grammar-sprint"),
   testOutFinish: (id: string, testId: number) =>
     request<{ test_id: number; passed: boolean; correct: number; total: number; pass_mark: number; xp_gained?: number }>(
       `/api/lessons/${encodeURIComponent(id)}/test-out/${testId}/finish`, { method: "POST" }),
@@ -99,3 +100,9 @@ export const api = {
   saveProfile: (body: Partial<{ name: string; daily_goal_minutes: number; weekly_goal_lessons: number }>) =>
     request<{ name: string; daily_goal_minutes: number; weekly_goal_lessons: number }>("/api/profile", { method: "PUT", body: json(body) }),
 };
+
+export interface SprintUnit { id: string; title: string; level: string; status: "done" | "study" | "todo"; minutes: number | null; done_today: boolean }
+export interface GrammarSprint {
+  units: SprintUnit[]; total: number; done: number; remaining: number; today: number; study: SprintUnit[]; next: SprintUnit | null;
+  levels: { level: string; total: number; done: number }[];
+}

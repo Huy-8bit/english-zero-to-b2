@@ -94,3 +94,12 @@ mark.em-hl { background: #fde68a; color: inherit; border-radius: 0.2em; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
 }
+
+/* Lessons on wide screens: larger reading type, roomier tables, zebra rows (easier to scan a FORM table). */
+.lesson-big .prose-em tbody tr:nth-child(even) td { background: color-mix(in srgb, var(--surface-2) 55%, transparent); }
+.lesson-big .prose-em td:first-child { font-weight: 600; }
+@media (min-width: 1280px) {
+  .lesson-big .prose-em { font-size: 1.1rem; }
+  .lesson-big .prose-em table { font-size: 1.02rem; }
+  .lesson-big .prose-em th, .lesson-big .prose-em td { padding: 0.7em 1em; }
+}
