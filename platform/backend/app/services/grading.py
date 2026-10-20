@@ -24,15 +24,22 @@ CONTRACTIONS = [
 ]
 
 
+NUMBER_WORDS = {"0": "zero", "1": "one", "2": "two", "3": "three", "4": "four", "5": "five", "6": "six", "7": "seven", "8": "eight",
+                "9": "nine", "10": "ten", "11": "eleven", "12": "twelve", "13": "thirteen", "14": "fourteen", "15": "fifteen",
+                "16": "sixteen", "17": "seventeen", "18": "eighteen", "19": "nineteen", "20": "twenty"}
+
+
 def normalize(text: str) -> str:
     s = strip_md(text or "")
     s = s.replace("’", "'").replace("‘", "'").replace("“", '"').replace("”", '"').replace("…", "...")
     s = s.lower().strip()
+    s = re.sub(r"\b((?:[a-z]\.){2,})", lambda m: m.group(1).replace(".", ""), s)  # a.m. = am, u.s. = us
     for pat, rep in CONTRACTIONS:
         s = re.sub(pat, rep, s)
     s = re.sub(r"[^\w' ]+", " ", s, flags=re.UNICODE)
     s = s.replace("'", "'")
-    return re.sub(r"\s+", " ", s).strip()
+    s = re.sub(r"\s+", " ", s).strip()
+    return " ".join(NUMBER_WORDS.get(t, t) for t in s.split(" "))  # "7" = "seven"
 
 
 def _is_vietnamese(text: str) -> bool:

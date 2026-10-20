@@ -48,6 +48,11 @@ export const api = {
     request<{ current_step: number; max_step: number; status: string }>(`/api/progress/${encodeURIComponent(id)}`, {
       method: "PUT", body: json({ current_step, state }), keepalive: true,
     }),
+  /** "Kiểm tra vượt bài": server-picked questions; answer them with submitQuiz, then finish. */
+  testOutStart: (id: string) => request<{ test_id: number; items: string[]; pass_mark: number }>(`/api/lessons/${encodeURIComponent(id)}/test-out`, { method: "POST" }),
+  testOutFinish: (id: string, testId: number) =>
+    request<{ test_id: number; passed: boolean; correct: number; total: number; pass_mark: number; xp_gained?: number }>(
+      `/api/lessons/${encodeURIComponent(id)}/test-out/${testId}/finish`, { method: "POST" }),
   complete: (id: string) =>
     request<{ status: string; score: number | null; correct: number; graded: number; xp_gained: number; new_achievements: string[]; level_completed: string | null; pass_score: number }>(
       `/api/lessons/${encodeURIComponent(id)}/complete`, { method: "POST" }),

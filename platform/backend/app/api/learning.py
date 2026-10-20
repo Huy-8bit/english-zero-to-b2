@@ -210,6 +210,34 @@ def complete(unit_id: str, db: Session = Depends(get_db), store: ContentStore = 
             "new_achievements": badges, "level_completed": level_done, "pass_score": P.PASS_SCORE}
 
 
+@router.post("/lessons/{unit_id}/test-out")
+def test_out_start(unit_id: str, db: Session = Depends(get_db), store: ContentStore = Depends(get_store), user: User = Depends(current_user)):
+    """'Kiểm tra vượt bài': the server picks the questions; answer them with the normal quiz endpoint, then call finish."""
+    from .. import test_out
+
+    if store.built(unit_id) is None:
+        raise HTTPException(404, "Lesson not found")
+    try:
+        return test_out.start(db, user, store, unit_id)
+    except ValueError as e:
+        raise HTTPException(422, str(e)) from None
+    except PermissionError as e:
+        raise HTTPException(429, str(e)) from None
+
+
+@router.post("/lessons/{unit_id}/test-out/{test_id}/finish")
+def test_out_finish(unit_id: str, test_id: int, db: Session = Depends(get_db), store: ContentStore = Depends(get_store),
+                    user: User = Depends(current_user)):
+    from .. import test_out
+
+    try:
+        return test_out.finish(db, user, store, unit_id, test_id)
+    except LookupError as e:
+        raise HTTPException(404, str(e)) from None
+    except ValueError as e:
+        raise HTTPException(409, str(e)) from None
+
+
 @router.get("/mistakes")
 def mistakes(db: Session = Depends(get_db), store: ContentStore = Depends(get_store), user: User = Depends(current_user)):
     out = []

@@ -6,6 +6,7 @@ import { Input, Textarea } from "@/components/ui/misc";
 import { cn } from "@/lib/utils";
 import { SpeakButton } from "@/components/SpeakButton";
 import { ResultPanel } from "./ResultPanel";
+import { QuizHelpButton } from "./QuizHelp";
 import { WritingEditor, wordTarget } from "./WritingEditor";
 import { SpeakingRecorder } from "./SpeakingRecorder";
 import type { Draft, SpeakingDraft } from "./draft";
@@ -23,6 +24,8 @@ interface Props {
   onEnter?: () => void;
   /** "I don't know": show the answer without answering (graded as not correct). Not offered in exams. */
   onReveal?: () => void;
+  /** grade answers that differ from the key with AI automatically (journey grades them itself first) */
+  aiAuto?: boolean;
 }
 
 function shuffleOrder(n: number, seed: string): number[] {
@@ -38,7 +41,7 @@ function shuffleOrder(n: number, seed: string): number[] {
   return idx;
 }
 
-export function ItemCard({ item, unitId, docPath, draft, onDraft, result, locked, onSelfAssess, onRetry, onEnter, onReveal }: Props) {
+export function ItemCard({ item, unitId, docPath, draft, onDraft, result, locked, onSelfAssess, onRetry, onEnter, onReveal, aiAuto }: Props) {
   const disabled = locked || !!result;
   const showPrompt = item.kind !== "long" || item.prompt_md.length < 1200;
   return (
@@ -57,12 +60,13 @@ export function ItemCard({ item, unitId, docPath, draft, onDraft, result, locked
       <div className="mt-3">
         <Answer item={item} unitId={unitId} draft={draft} onDraft={onDraft} disabled={disabled} result={result} onEnter={onEnter} />
       </div>
+      {!result && !locked && onReveal && <QuizHelpButton key={item.id} itemId={item.id} />}
       {!result && !locked && onReveal && (
         <button type="button" onClick={onReveal} className="mt-2 inline-flex items-center gap-1.5 text-xs font-medium text-muted hover:text-primary">
           <Eye size={14} />Không biết — xem đáp án
         </button>
       )}
-      {result && <ResultPanel result={result} docPath={docPath} onSelfAssess={onSelfAssess} onRetry={locked ? undefined : onRetry} />}
+      {result && <ResultPanel key={result.attempt_id} result={result} docPath={docPath} onSelfAssess={onSelfAssess} onRetry={locked ? undefined : onRetry} aiAuto={aiAuto} />}
     </div>
   );
 }

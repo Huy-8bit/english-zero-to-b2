@@ -104,6 +104,7 @@ export interface PronunciationSummary {
   attempts: number; average_score: number | null; recent: { id: number; reference: string; score: number; source: string; created_at: string }[];
   hard_words: { word: string; missed: number; seen: number; ipa: string | null; tips_vi: string[] }[];
 }
+export interface QuizHelp { words: { word: string; lemma: string; entry_id: string; ipa: string | null; meaning_vi: string }[]; hint_vi: string | null; ai: boolean }
 export interface SpeakingSession {
   id: string; mode: string; mode_label: string; topic: string; level: string; status: string; summary: Record<string, unknown> | null;
   created_at: string; ended_at: string | null; turns: SpeakingTurn[];
@@ -183,6 +184,7 @@ export const ai = {
     fd.append("level", opts.level ?? "A1");
     return call<PronunciationResult>("/api/pronunciation/assess", { method: "POST", body: fd });
   },
+  quizHelp: (itemId: string) => post<QuizHelp>(`/api/quizzes/help/${encodeURIComponent(itemId)}`),
   pronunciationSummary: () => call<PronunciationSummary>("/api/pronunciation/summary"),
   endSpeaking: (id: string) => post<SpeakingSession>(`/api/ai/speaking/session/${id}/end`),
   speakingSessions: () => call<{ sessions: { id: string; mode: string; topic: string; level: string; status: string; answers: number; created_at: string }[] }>("/api/speaking/sessions"),

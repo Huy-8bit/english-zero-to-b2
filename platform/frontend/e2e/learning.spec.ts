@@ -74,9 +74,9 @@ test("slide navigation by buttons and keyboard, quiz grading, persistence after 
   await page.getByRole("button", { name: /Kiểm tra \(/ }).first().click();
   await expect(page.locator('[data-item="A1-G011:L3.1"]').getByText("Chính xác!")).toBeVisible();
   const mis = page.locator('[data-item="A1-G011:L3.2"]');
-  await expect(mis.getByText(/Chưa khớp đáp án mẫu/)).toBeVisible();
-  await mis.getByRole("button", { name: "Tôi làm đúng" }).click();
-  await expect(mis.getByText(/Tự đánh giá: đúng/)).toBeVisible();
+  // differs from the model answer → graded by AI right away (no self-assessment needed)
+  await expect(mis.getByText(/AI chấm: (đúng|chưa đúng)/)).toBeVisible();
+  await expect(mis.getByRole("button", { name: "Tôi làm đúng" })).toHaveCount(0);
 
   // results persist after reload
   await page.reload();

@@ -8,7 +8,7 @@ test.describe.configure({ mode: "serial" });
 async function answerAndContinue(page: Page) {
   const counter = page.locator("footer span").first();
   const before = await counter.textContent();
-  const check = page.getByRole("button", { name: /^Kiểm tra/ });
+  const check = page.getByRole("button", { name: "Kiểm tra", exact: true });
   const go = page.getByRole("button", { name: /^(Bắt đầu|Tiếp|Hoàn thành bài)/ });
   if (await check.isVisible()) {
     const live = "main [data-item]";
@@ -80,7 +80,7 @@ test("a question I cannot answer: 'Không biết — xem đáp án' shows the an
   await page.goto("/learn/A0-G013");
   await page.getByRole("button", { name: "Bắt đầu" }).click();
   await expect(page.getByText(/Đoán trước 1\/2/)).toBeVisible();
-  await expect(page.getByRole("button", { name: /^Kiểm tra/ })).toBeDisabled(); // nothing typed or chosen
+  await expect(page.getByRole("button", { name: "Kiểm tra", exact: true })).toBeDisabled(); // nothing typed or chosen
   await page.getByRole("button", { name: "Không biết — xem đáp án" }).click();
   await expect(page.getByText("Đáp án — câu này tính là chưa đúng và sẽ được ôn lại")).toBeVisible();
   await expect(page.getByText(/sẽ được hỏi lại ở cuối bài/)).toBeVisible();
@@ -96,4 +96,46 @@ test("X after moving to the next lesson goes back to where I started, not to the
   await page.goto("/learn/A0-G013");
   await page.getByRole("button", { name: "Thoát bài học" }).click();
   await expect(page).toHaveURL(/\/today$/);
+});
+
+test("help: meanings of the words in a question and a hint, without the answer", async ({ page }) => {
+  await page.goto("/learn/A1-G001");
+  await page.getByRole("button", { name: "Bắt đầu" }).click();
+  await expect(page.locator("main [data-item]")).toBeVisible();
+  await page.getByRole("button", { name: /Gợi ý \(nghĩa từ & cách làm\)/ }).click();
+  const help = page.getByTestId("quiz-help");
+  await expect(help).toBeVisible();
+  await expect(help.getByText(/Không biết — xem đáp án/)).toBeVisible();
+});
+
+test("test-out: about 8 questions, no help; not enough correct answers → study the lesson", async ({ page }) => {
+  await page.goto("/learn/A1-G002");
+  await page.getByRole("button", { name: "Kiểm tra vượt bài" }).click();
+  const t = page.getByTestId("test-out");
+  await expect(t).toBeVisible();
+  await expect(t.getByText(/cần đúng \d+ câu ngay lần đầu/)).toBeVisible();
+  await expect(page.getByRole("button", { name: /Gợi ý/ })).toHaveCount(0);
+  await expect(page.getByRole("button", { name: /Không biết — xem đáp án/ })).toHaveCount(0);
+  for (let i = 0; i < 12; i++) {
+    if (await page.getByTestId("test-out-result").isVisible()) break;
+    const radio = page.locator("main [data-item] [role=radio]:not([disabled])");
+    const tokens = page.locator("main [data-item] button[aria-label^='Thêm']");
+    const input = page.locator("main [data-item] input:not([disabled]), main [data-item] textarea:not([disabled])");
+    await radio.or(tokens).or(input).first().waitFor({ timeout: 5000 });
+    if (await radio.count()) await radio.last().click();
+    else if (await tokens.count()) { while (await tokens.count()) await tokens.first().click(); }
+    else await input.first().fill("zzz");
+    await page.getByRole("button", { name: "Kiểm tra", exact: true }).click();
+    const nextBtn = page.getByRole("button", { name: /^(Câu tiếp|Xem kết quả)/ });
+    const last = (await nextBtn.textContent())?.startsWith("Xem kết quả");
+    await nextBtn.click();
+    if (last) break;
+  }
+  const result = page.getByTestId("test-out-result");
+  await expect(result).toBeVisible();
+  await expect(result.getByText(/Đúng \d+\/\d+ câu ngay lần đầu/)).toBeVisible();
+  if (await result.getByText("Chưa đủ để vượt bài").isVisible()) {
+    await result.getByRole("button", { name: "Học bài" }).click();
+    await expect(page.getByText("Nhiệm vụ hôm nay")).toBeVisible();
+  }
 });

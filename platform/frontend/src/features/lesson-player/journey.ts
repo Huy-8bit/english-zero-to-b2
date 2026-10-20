@@ -2,7 +2,8 @@
  * "Journey" view of a lesson: the same curriculum steps, re-sequenced for attention and retrieval.
  *
  *   mission → pre-test (2 questions) → stage 1 (explanations with a check after every 2 slides) → checkpoint
- *   → stage 2 (same) → checkpoint → stage 3 challenge (remaining questions, one per screen)
+ *   → stage 2 (same) → checkpoint → stage 3 challenge (up to MAX_CHALLENGE remaining questions, one per screen: spread over
+ *     the lesson's exercises, questions not tried before first; the rest come up the next time the lesson is studied)
  *   → retry round for wrong answers (added at runtime) → recap → finish
  *
  * Rationale: pretesting primes attention; frequent retrieval checks keep the learner active and give immediate
@@ -20,7 +21,38 @@ export type Card =
   | { kind: "recap"; key: string; step: Step | null; stepIndex: number }
   | { kind: "finish"; key: string };
 
-export interface Journey { cards: Card[]; stageOf: number[]; stages: string[]; autoItems: number; questionCount: number }
+export interface Journey {
+  cards: Card[]; stageOf: number[]; stages: string[]; autoItems: number; questionCount: number;
+  /** challenge questions used (to persist), and how many were left for another time */
+  picked: string[]; skipped: number;
+}
+
+export const MAX_CHALLENGE = 12;
+
+export interface JourneyOptions {
+  /** challenge questions chosen earlier for this journey (resume) */
+  challenge?: string[];
+  /** questions the learner already answered in earlier sessions (asked later than new ones) */
+  attempted?: Set<string>;
+  max?: number;
+}
+
+type Q = { item: QuizItem; quizId: string; stepIndex: number; level: string; intro: string };
+
+/** Up to `max` questions, round-robin over the lesson's exercises; within one exercise, new questions first. */
+export function pickChallenge(rest: Q[], attempted: Set<string>, max: number): Q[] {
+  if (rest.length <= max) return rest;
+  const groups = new Map<number, Q[]>();
+  rest.forEach((q) => groups.set(q.stepIndex, [...(groups.get(q.stepIndex) ?? []), q]));
+  const queues = [...groups.values()].map((g) => [...g.filter((q) => !attempted.has(q.item.id)), ...g.filter((q) => attempted.has(q.item.id))]);
+  const chosen = new Set<string>();
+  for (let round = 0; chosen.size < max && queues.some((q) => q.length > round); round++) {
+    for (const q of queues) {
+      if (q[round] && chosen.size < max) chosen.add(q[round].item.id);
+    }
+  }
+  return rest.filter((q) => chosen.has(q.item.id));
+}
 
 export const STAGES = ["Hiểu", "Vận dụng", "Thử thách"];
 const AUTO = new Set(["mc", "tfng", "choice", "multi", "order", "text"]);
@@ -28,7 +60,7 @@ const AUTO = new Set(["mc", "tfng", "choice", "multi", "order", "text"]);
 /** Instantly graded by the server (has a key) and quick to answer: suitable for checks and the pre-test. */
 export const isAuto = (i: QuizItem) => AUTO.has(i.kind) && i.has_key && !i.multiline;
 
-export function buildJourney(steps: Step[]): Journey {
+export function buildJourney(steps: Step[], opts: JourneyOptions = {}): Journey {
   const intro = steps.find((s) => s.type === "intro") ?? null;
   const recapIdx = steps.findIndex((s) => s.type === "recap");
   const content = steps.map((s, i) => ({ s, i })).filter(({ s }) => s.type !== "quiz" && s.type !== "intro" && s.type !== "recap");
@@ -62,14 +94,18 @@ export function buildJourney(steps: Step[]): Journey {
     });
     if (part.length) cards.push({ kind: "checkpoint", key: `cp:${stage}`, stage, title: STAGES[stage] });
   });
-  questions.filter((q) => !used.has(q.item.id)).forEach((q) => {
+  const rest = questions.filter((q) => !used.has(q.item.id));
+  const challenge = opts.challenge ? rest.filter((q) => opts.challenge!.includes(q.item.id))
+    : pickChallenge(rest, opts.attempted ?? new Set(), opts.max ?? MAX_CHALLENGE);
+  challenge.forEach((q) => {
     cards.push({ kind: "item", key: `it:${q.item.id}`, item: q.item, quizId: q.quizId, stepIndex: q.stepIndex, level: q.level, intro: q.intro });
   });
   cards.push({ kind: "recap", key: "recap", step: recapIdx >= 0 ? steps[recapIdx] : null, stepIndex: recapIdx >= 0 ? recapIdx : steps.length - 1 });
   cards.push({ kind: "finish", key: "finish" });
   const stageOf = cards.map((c) => (c.kind === "content" || c.kind === "check" ? c.stage : c.kind === "checkpoint" ? c.stage
     : c.kind === "item" || c.kind === "recap" || c.kind === "finish" ? 2 : 0));
-  return { cards, stageOf, stages: STAGES, autoItems: auto.length, questionCount: questions.length };
+  return { cards, stageOf, stages: STAGES, autoItems: auto.length, questionCount: questions.length,
+           picked: challenge.map((q) => q.item.id), skipped: rest.length - challenge.length };
 }
 
 /** Journey mode needs a lesson with practice questions; exams keep their own (deferred-answers) flow. */

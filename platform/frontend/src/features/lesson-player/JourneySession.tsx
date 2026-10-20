@@ -3,8 +3,9 @@ import { Link, useNavigate } from "react-router-dom";
 import { lessonExitPath } from "@/lib/lessonExit";
 import { useQueryClient } from "@tanstack/react-query";
 import { motion } from "motion/react";
-import { ArrowRight, BookOpenText, Bot, CalendarClock, CheckCircle2, Flag, Flame, ListChecks, RotateCcw, Sparkles, Star, Target, X } from "lucide-react";
+import { ArrowRight, BookOpenText, Bot, CalendarClock, CheckCircle2, Flag, Flame, ListChecks, Rocket, RotateCcw, Sparkles, Star, Target, X } from "lucide-react";
 import { api } from "@/services/api";
+import { ai } from "@/services/ai";
 import type { ItemResult, JourneyState, LessonDetail, QuizItem, Step, StepsPayload } from "@/types/content";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -13,6 +14,7 @@ import { useCelebrate } from "@/components/Celebrate";
 import { cn } from "@/lib/utils";
 import { Markdown } from "@/components/Markdown";
 import { ItemCard } from "@/features/quizzes/ItemCard";
+import { TestOut } from "./TestOut";
 import { isAnswered, toResponse, type Draft } from "@/features/quizzes/draft";
 import { TutorPanel } from "@/features/tutor/TutorPanel";
 import { FocusBadge } from "@/features/focus/FocusBadge";
@@ -25,7 +27,7 @@ import { buildJourney, isAuto, stars, type Card } from "./journey";
 type QCard = Extract<Card, { item: QuizItem }> | { kind: "retry"; key: string; item: QuizItem; quizId: string; stepIndex: number; intro: string };
 const EMPTY: JourneyState = { pos: 0, done: [], wrong: [], retry: [], retryPass: 0, first: {}, xp: 0, startedAt: 0 };
 const isQ = (c: Card | QCard): c is QCard => "item" in c;
-const good = (r?: ItemResult) => !!r && (r.verdict === "correct" || r.self_correct === true);
+const good = (r?: ItemResult) => !!r && (r.verdict === "correct" || r.self_correct === true || r.ai_correct === true);
 
 /** Journey view of a lesson: one thing at a time, retrieval every few minutes, wrong answers come back, stars at the end. */
 export function JourneySession({ unitId, data, lesson, onClassic }: { unitId: string; data: StepsPayload; lesson?: LessonDetail & { next_id?: string | null }; onClassic: () => void }) {
@@ -34,8 +36,11 @@ export function JourneySession({ unitId, data, lesson, onClassic }: { unitId: st
   const fire = useCelebrate((s) => s.fire);
   const ps = usePlayerState(unitId, data);
   useHeartbeat(unitId);
-  const j = useMemo(() => buildJourney(data.steps), [data.steps]);
   const js: JourneyState = { ...EMPTY, ...(ps.state.journey ?? {}) };
+  // questions answered in earlier sessions are asked after new ones; the pick is saved so a reload keeps the same screens
+  const attempted = useMemo(() => new Set(Object.keys(data.results ?? {})), [data.results]);
+  const savedChallenge = ps.ready ? js.challenge : undefined;
+  const j = useMemo(() => buildJourney(data.steps, { challenge: savedChallenge, attempted }), [data.steps, savedChallenge, attempted]);
   const byId = useMemo(() => {
     const m: Record<string, QCard> = {};
     j.cards.forEach((c) => { if (isQ(c)) m[c.item.id] = c; });
@@ -54,6 +59,11 @@ export function JourneySession({ unitId, data, lesson, onClassic }: { unitId: st
   const [tutorOpen, setTutorOpen] = useState(false);
   const [finish, setFinish] = useState<{ score: number | null; xp: number; status: string } | null>(null);
   const finishing = useRef(false);
+  const [testOut, setTestOut] = useState(false);
+  useEffect(() => {
+    if (ps.ready && !js.challenge) setJ((s) => ({ ...s, challenge: j.picked }));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [ps.ready, js.challenge]);
 
   const setJ = useCallback((fn: (s: JourneyState) => JourneyState) => {
     ps.update((st) => ({ ...st, journey: fn({ ...EMPTY, ...(st.journey ?? {}) }) }));
@@ -107,11 +117,20 @@ export function JourneySession({ unitId, data, lesson, onClassic }: { unitId: st
     setBusy(true);
     try {
       const r = await api.submitQuiz(c.quizId, { [c.item.id]: toResponse(c.item, d) });
-      const res = r.results[c.item.id];
-      ps.setResults(r.results);
+      let res = r.results[c.item.id];
+      if (res.verdict === "mismatch" && res.has_key) {
+        // differs from the model answer: let the AI decide now instead of asking the learner to self-assess
+        try {
+          const g = await ai.gradeAttempt(res.attempt_id);
+          res = { ...res, ai_correct: g.score >= 0.75 };
+        } catch {
+          /* AI unavailable: self-assessment stays available */
+        }
+      }
+      ps.setResults({ ...r.results, [c.item.id]: res });
       if (r.xp_gained) setJ((s) => ({ ...s, xp: s.xp + r.xp_gained }));
       // "mismatch" (open answer not equal to the model): provisionally wrong until the learner self-assesses
-      if (res.verdict !== "submitted") record(c, res.verdict === "correct");
+      if (res.verdict !== "submitted") record(c, res.verdict === "correct" || res.ai_correct === true);
       else setJ((s) => ({ ...s, done: s.done.includes(c.item.id) ? s.done : [...s.done, c.item.id] }));
       qc.invalidateQueries({ queryKey: ["day-plan"] });
     } catch (e) {
@@ -169,7 +188,7 @@ export function JourneySession({ unitId, data, lesson, onClassic }: { unitId: st
     const k = (e: KeyboardEvent) => {
       if (e.target instanceof HTMLTextAreaElement || e.target instanceof HTMLInputElement) return;
       if (e.key === "Enter" || e.key === "ArrowRight") {
-        if (!card || card.kind === "finish") return;
+        if (!card || card.kind === "finish" || testOut) return;  // the test-out screen has its own buttons
         e.preventDefault();
         if (isQ(card) && !result) void check(card);
         else if (canNext) next();
@@ -177,7 +196,7 @@ export function JourneySession({ unitId, data, lesson, onClassic }: { unitId: st
     };
     window.addEventListener("keydown", k);
     return () => window.removeEventListener("keydown", k);
-  }, [card, result, canNext, check, next]);
+  }, [card, result, canNext, check, next, testOut]);
 
   if (!ps.ready || !card) return null;
   const stage = j.stageOf[Math.min(pos, j.stageOf.length - 1)] ?? 2;
@@ -219,7 +238,9 @@ export function JourneySession({ unitId, data, lesson, onClassic }: { unitId: st
         {/* enter animation only: an exit animation (AnimatePresence mode="wait") could freeze the old screen when
             the learner moved on quickly, leaving an input that ignored typing */}
           <motion.section key={card.key} initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.18 }} aria-live="polite">
-            {card.kind === "mission" && <Mission data={data} j={j} />}
+            {card.kind === "mission" && (testOut
+              ? <TestOut unitId={unitId} data={data} nextId={lesson?.next_id ?? null} onStudy={() => setTestOut(false)} />
+              : <Mission data={data} j={j} onTestOut={() => setTestOut(true)} />)}
             {card.kind === "content" && <ContentCard step={card.step} data={data} checklist={ps.state.checklist ?? {}} onChecklist={(c) => ps.update((s) => ({ ...s, checklist: c }))} />}
             {isQ(card) && (
               <div>
@@ -229,10 +250,11 @@ export function JourneySession({ unitId, data, lesson, onClassic }: { unitId: st
                 {card.kind === "pretest" && !result && <p className="mb-3 text-sm text-muted">Trả lời theo phỏng đoán. Bài học sẽ cho bạn biết vì sao — đoán trước giúp não chú ý hơn.</p>}
                 {card.intro && <ExerciseIntro md={card.intro} docPath={data.unit.path} />}
                 <ItemCard item={card.item} unitId={unitId} docPath={data.unit.path} draft={drafts[card.item.id]} onDraft={(d) => ps.setDraft(card.item.id, d)}
-                  result={result} locked={false} onSelfAssess={(ok) => void selfAssess(card, ok)} onRetry={() => ps.clearResult(card.item.id)} onEnter={() => void check(card)}
+                  result={result} locked={false} aiAuto={false} onSelfAssess={(ok) => void selfAssess(card, ok)} onRetry={() => ps.clearResult(card.item.id)} onEnter={() => void check(card)}
                   onReveal={() => void reveal(card)} />
                 {result && !(good(result) && card.kind !== "pretest") && <p className="mt-2 text-sm text-muted">{good(result) ? "Đoán đúng! Xem bài để chắc chắn vì sao."
-                  : result.verdict === "mismatch" && result.self_correct === null ? "So sánh với đáp án: nếu đúng ý, bấm “Tôi làm đúng”; nếu không, câu này sẽ được hỏi lại ở cuối bài."
+                  : result.verdict === "mismatch" && result.ai_correct === false ? "AI chấm chưa đúng — đọc chỗ sai bên dưới; câu này sẽ được hỏi lại ở cuối bài."
+                  : result.verdict === "mismatch" && result.self_correct === null ? "AI chưa chấm được — so sánh với đáp án: nếu đúng ý, bấm “Tôi làm đúng”; nếu không, câu này sẽ được hỏi lại ở cuối bài."
                   : result.verdict === "submitted" ? "Tự đánh giá câu trả lời của bạn rồi bấm Tiếp."
                   : result.verdict === "revealed" ? "Đọc kỹ đáp án và giải thích — câu này sẽ được hỏi lại ở cuối bài." : "Chưa đúng — câu này sẽ được hỏi lại ở cuối bài."}</p>}
               </div>
@@ -248,7 +270,7 @@ export function JourneySession({ unitId, data, lesson, onClassic }: { unitId: st
           </motion.section>
       </main>
 
-      {card.kind !== "finish" && (
+      {card.kind !== "finish" && !testOut && (
         <footer className={cn("fixed inset-x-0 bottom-0 z-30 border-t border-border bg-surface/95 backdrop-blur", tutorOpen && "bottom-[46dvh] md:bottom-0 md:right-[22rem] xl:right-[26rem]")}>
           <div className="mx-auto flex max-w-3xl items-center gap-2 px-3 py-3 sm:px-6">
             <span className="text-xs text-muted">{pos + 1}/{cards.length} · Enter để tiếp tục</span>
@@ -312,7 +334,7 @@ function ContentCard({ step, data, checklist, onChecklist }: { step: Step; data:
   );
 }
 
-function Mission({ data, j }: { data: StepsPayload; j: ReturnType<typeof buildJourney> }) {
+function Mission({ data, j, onTestOut }: { data: StepsPayload; j: ReturnType<typeof buildJourney>; onTestOut: () => void }) {
   const intro = j.cards[0].kind === "mission" ? j.cards[0].intro : null;
   const content = j.cards.filter((c) => c.kind === "content").length;
   const pre = j.cards.filter((c) => c.kind === "pretest").length;
@@ -325,6 +347,7 @@ function Mission({ data, j }: { data: StepsPayload; j: ReturnType<typeof buildJo
         <div className="mt-3 flex flex-wrap gap-2 text-sm">
           {data.unit.minutes ? <Badge><CalendarClock size={12} />~{data.unit.minutes} phút</Badge> : null}
           <Badge><ListChecks size={12} />{content} phần giải thích · {j.questionCount} câu hỏi</Badge>
+          {j.skipped > 0 && <Badge tone="primary">Bài rút gọn: làm {j.questionCount - j.skipped} câu · {j.skipped} câu còn lại để lần ôn sau</Badge>}
         </div>
       </div>
       <ol className="grid gap-2 sm:grid-cols-3">
@@ -332,6 +355,11 @@ function Mission({ data, j }: { data: StepsPayload; j: ReturnType<typeof buildJo
           <li key={t} className="rounded-2xl border border-border p-3"><p className="font-semibold">{t}</p><p className="text-xs text-muted">{d}</p></li>
         ))}
       </ol>
+      <div className="flex flex-wrap items-center gap-3 rounded-2xl border border-primary/30 p-4">
+        <Rocket size={18} className="text-primary" />
+        <p className="min-w-0 flex-1 text-sm"><b>Đã biết bài này?</b> Làm 8 câu kiểm tra nhanh — đúng 7/8 ngay lần đầu là vượt bài, sang bài tiếp theo.</p>
+        <Button variant="outline" onClick={onTestOut}>Kiểm tra vượt bài</Button>
+      </div>
       {pre > 0 && <p className="rounded-2xl bg-warning-soft px-4 py-3 text-sm text-warning"><Sparkles size={14} className="mr-1 inline" />Bắt đầu bằng {pre} câu đoán trước — trả lời theo cảm nhận, sai cũng không sao.</p>}
       {intro && <details className="rounded-2xl border border-border p-4"><summary className="cursor-pointer text-sm font-medium">Mục tiêu & giới thiệu bài</summary><div className="mt-3"><ConceptSlide step={intro} docPath={data.unit.path} /></div></details>}
     </div>

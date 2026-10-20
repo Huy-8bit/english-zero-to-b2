@@ -82,7 +82,7 @@ export interface ItemResult {
   response: string;
   verdict: Verdict;
   auto: boolean;
-  self_correct: boolean | null;
+  self_correct: boolean | null; ai_correct?: boolean | null;
   correct_option: string | null;
   model_md: string;
   explanation_md: string;
@@ -125,6 +125,8 @@ export interface JourneyState {
   xp: number;
   startedAt: number;
   completed?: boolean;
+  /** questions picked for the challenge stage when this journey started (kept so a reload shows the same screens) */
+  challenge?: string[];
 }
 
 export interface StepsPayload {

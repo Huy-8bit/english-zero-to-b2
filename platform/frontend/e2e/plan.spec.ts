@@ -9,7 +9,8 @@ test("4-hour plan: interleaved blocks, start a block with a timer, break screen 
   await page.goto("/today");
   await expect(page.getByRole("heading", { name: "Lịch học hôm nay" })).toBeVisible();
   await expect(page.locator("li", { hasText: "Khởi động: ôn từ đến hạn" })).toBeVisible();
-  await expect(page.locator("li", { hasText: "Nói / Viết với AI" })).toBeVisible();
+  await expect(page.locator("li", { hasText: "Viết: dịch câu & tự đặt câu" })).toBeVisible();
+  await expect(page.locator("li", { hasText: "Nói: phát âm & hội thoại" })).toBeVisible();
   await expect(page.getByText(/Nghỉ dài 20 phút/).first()).toBeVisible();
   await expect(page.getByText("Nhiệm vụ hôm nay")).toBeVisible();
   // start the lesson block → goes to the lesson, header shows the block timer

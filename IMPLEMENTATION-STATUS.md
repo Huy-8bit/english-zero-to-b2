@@ -1,3 +1,23 @@
+# Faster lessons, help button, listening fix — 2026-10-20
+
+The changes come from the learner's own record (17–20/10):
+- About 120 min/day against a goal of 240.
+- 84 % of the time on grammar lessons; writing and speaking about 3 %.
+- First-try accuracy on closed questions: A0 95 %, A1 87 %.
+- 197 typed answers "different from the key"; 164 of them were never self-assessed. AI re-graded 62 of them: 19 right, 43 wrong.
+- 101 of 452 questions were repeated.
+- All 54 "show answer" uses were in A1.
+
+| Feature | Status | Files | Evidence / remaining work |
+|---|---|---|---|
+| AI grades typed answers that differ from the key automatically | COMPLETE_AND_TESTED | `frontend/src/features/quizzes/AIGrade.tsx`, `ResultPanel.tsx`, `lesson-player/JourneySession.tsx`, `TestOut.tsx`; `backend/app/api/results.py` (`ai_correct`) | Classic view and smart review grade on display. Journey grades before showing the result, and the AI verdict decides right/wrong and the retry. Self-assessment remains only as a fallback. Normalisation now treats a.m. = am and digits 0–20 = words; on the learner's 197 past mismatches this alone accepts 1 more, so the AI verdict carries the benefit. |
+| Help button (word meanings + hint) | COMPLETE_AND_TESTED | `backend/app/quiz_help.py`, `api/ai.py` (`POST /api/quizzes/help/{item}`), `frontend/src/features/quizzes/QuizHelp.tsx` | Glossary from the lexicon, excluding answer-key words. An AI hint (cached) is discarded if it contains an answer word that is not already visible in the question. Refused during a test-out. Tests: `test_quiz_help_*`, E2E "help". |
+| Test-out ("Kiểm tra vượt bài") | COMPLETE_AND_TESTED | `backend/app/test_out.py`, `api/learning.py`, model `LessonTestOut` + migration `0008`, `frontend/src/features/lesson-player/TestOut.tsx` | The server picks about 8 questions (closed first), grades the first answer after the start, passes at 7/8 (5/6, 5/5), allows one test-out per lesson per 24 h, and excludes exams. A pass marks the lesson completed with that score and XP. Tests: `test_test_out_*` (pass, fail, cooldown, unanswered, exam), E2E. |
+| Shorter lessons | COMPLETE_AND_TESTED | `frontend/src/features/lesson-player/journey.ts` (`pickChallenge`, `MAX_CHALLENGE = 12`) | Round-robin over the lesson's exercises, new questions first. The pick is saved in the journey state so a reload keeps the screens. Vitest: 3 new tests. |
+| 4-hour plan rebalanced | COMPLETE_AND_TESTED | `backend/app/study_plan.py` | 9 blocks: separate writing (/writing-daily) and speaking (/speaking-studio) blocks; lessons + review ≈ 52 %. Test `test_plan.py` updated. |
+| Listening "Lỗi 504" | FIXED | `ai/studio.py`, `gateway.py::speech_many`, `nginx.conf` | Dialogue lines are voiced in parallel (one rate-limit check), and /api/ai/ allows 300 s. Generation keeps questions whose only flaw is an English explanation and accepts a near-full set. Live check: two 2-minute A1 dialogues, 8 questions each, 84–90 s. |
+| "database is locked" | FIXED | speaking, tutor, assistant, vocabulary sessions, `gateway._guard` | No AI call while holding SQLite's write lock (asserted in tests). The busy timeout stays 5 s: 30 s made E2E hang for minutes (60/60 in 3.7 min after reverting). |
+
 # Pronunciation check and natural AI voice — 2026-10-20
 
 Request: "sửa lại chỗ nói nó chấm chữa phát âm và sửa lại cho tôi, đồng thời phần nói trong APP dùng OpenAI model để giọng nghe tự nhiên hơn".

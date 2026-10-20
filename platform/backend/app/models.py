@@ -366,6 +366,20 @@ class SpeakingTurn(Base):
     created_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
 
 
+class LessonTestOut(Base):
+    """'Kiểm tra vượt bài': questions picked by the server; passed from the learner's first answers after started_at."""
+    __tablename__ = "lesson_test_outs"
+    id: Mapped[int] = mapped_column(Integer, primary_key=True)
+    user_id: Mapped[int] = mapped_column(ForeignKey("users.id"))
+    unit_id: Mapped[str] = mapped_column(String(64))
+    items: Mapped[list] = mapped_column(JSON)
+    started_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
+    finished_at: Mapped[datetime | None] = mapped_column(DateTime, nullable=True)
+    correct: Mapped[int | None] = mapped_column(Integer, nullable=True)
+    total: Mapped[int | None] = mapped_column(Integer, nullable=True)
+    passed: Mapped[bool | None] = mapped_column(Boolean, nullable=True)
+
+
 class PronunciationAttempt(Base):
     """One recording checked word by word against a reference sentence or word (see app/ai/pronunciation.py)."""
     __tablename__ = "pronunciation_attempts"

@@ -21,14 +21,18 @@ from .services import progress as P
 
 # id, category, share of the daily target, title, why (Vietnamese, one line)
 TEMPLATE = [
+    # rebalanced 2026-10-20 from the learner's record: 84 % of study time went to grammar lessons and ~3 % to writing and
+    # speaking, while typed answers (production) were the weak point. Lessons + error review ≈ 52 %, writing + speaking
+    # ≈ 21 %, vocabulary ≈ 19 %, listening/reading ≈ 8 %.
     ("warmup", "vocab_review", 15, "Khởi động: ôn từ đến hạn", "Nhớ lại đầu buổi đánh thức trí nhớ và đúng lịch lặp lại ngắt quãng."),
-    ("gaps", "review", 30, "Ôn lỗ hổng: câu sai, lỗi viết/nói", "Sửa lỗi khi còn mới giúp không lặp lại lỗi cũ (học từ lỗi sai)."),
-    ("lesson1", "lesson", 45, "Bài mới (lộ trình)", "Học kiến thức mới khi đầu óc còn tươi nhất trong ngày."),
-    ("input", "input", 35, "Nghe / Đọc hiểu", "Đổi sang tiếp nhận ngôn ngữ thật để não nghỉ khỏi ngữ pháp mà vẫn học."),
-    ("vocab_new", "vocab_new", 25, "Từ mới & collocation", "Học từ theo cụm và ngữ cảnh, xen giữa các khối dài."),
+    ("gaps", "review", 25, "Ôn lỗ hổng: câu sai, lỗi viết/nói", "Sửa lỗi khi còn mới giúp không lặp lại lỗi cũ (học từ lỗi sai)."),
+    ("lesson1", "lesson", 45, "Bài mới (lộ trình)", "Học kiến thức mới khi đầu óc còn tươi nhất trong ngày. Đã biết bài? Kiểm tra vượt bài."),
+    ("write", "output", 25, "Viết: dịch câu & tự đặt câu", "Tự viết ra (output) là điểm yếu nhất hiện tại — luyện ngay sau bài mới."),
+    ("vocab_new", "vocab_new", 30, "Từ mới & collocation", "Học từ theo cụm và ngữ cảnh, xen giữa các khối dài."),
     ("lesson2", "lesson", 45, "Bài mới thứ hai", "Buổi hai: tiếp tục lộ trình sau nghỉ dài — sự chú ý đã hồi phục."),
-    ("output", "output", 30, "Nói / Viết với AI", "Tự tạo câu (output) biến kiến thức thụ động thành chủ động."),
-    ("final", "review", 15, "Kiểm tra cuối ngày", "Ôn trộn ngắn cuối ngày giúp củng cố trước khi ngủ."),
+    ("speak", "output", 25, "Nói: phát âm & hội thoại", "Đọc to được chấm từng từ, rồi nói chuyện ngắn với AI."),
+    ("input", "input", 20, "Nghe / Đọc hiểu", "Đổi sang tiếp nhận ngôn ngữ thật để não nghỉ khỏi ngữ pháp mà vẫn học."),
+    ("final", "review", 10, "Kiểm tra cuối ngày", "Ôn trộn ngắn cuối ngày giúp củng cố trước khi ngủ."),
 ]
 BREAKS = [
     "Đứng dậy, vươn vai, đi lại 2 phút",
@@ -63,8 +67,8 @@ def _category(store: ContentStore, row: StudyLog) -> str | None:
 def _blocks_for(target: int) -> list[tuple]:
     """Scale the 240-minute template to the learner's daily target: about one block per 30 minutes, keeping the most
     important blocks (retrieval warm-up, gap review, a new lesson, the final check) when time is short."""
-    priority = ["warmup", "gaps", "lesson1", "final", "vocab_new", "input", "output", "lesson2"]
-    n = max(3, min(len(TEMPLATE), round(target / 30)))
+    priority = ["warmup", "gaps", "lesson1", "write", "final", "vocab_new", "speak", "lesson2", "input"]
+    n = max(3, min(len(TEMPLATE), round(target / 27)))
     keep = set(priority[:n])
     chosen = [t for t in TEMPLATE if t[0] in keep]
     scale = target / sum(t[2] for t in chosen)
@@ -164,8 +168,10 @@ def _action(bid: str, cat: str, nexts: dict, vp: dict, gaps: dict, today) -> dic
             return {"label": f"Học cấp tốc: còn {vp['new_left']} từ (đợt 10 từ)", "type": "link", "link": "/vocabulary/sprint"}
         return {"label": f"Học {vp['new_left']} từ mới" if vp["new_left"] else "Luyện collocation", "type": "vocab_session",
                 "kind": "learn" if vp["new_left"] else "collocation"}
-    if bid == "output":
-        return {"label": "Speaking Studio" if even else "Luyện viết mỗi ngày", "type": "link", "link": "/speaking-studio" if even else "/writing-daily"}
+    if bid == "write":
+        return {"label": "Luyện viết mỗi ngày (dịch câu, đặt câu, đoạn văn)", "type": "link", "link": "/writing-daily"}
+    if bid == "speak":
+        return {"label": "Speaking Studio: Phát âm → hội thoại", "type": "link", "link": "/speaking-studio"}
     return {"label": "Mở", "type": "link", "link": "/"}
 
 

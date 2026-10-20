@@ -452,3 +452,20 @@ def test_generated_question_with_english_explanation_is_kept_with_evidence():
     ok = SimpleNamespace(explanation_vi="Câu trả lời ở dòng thứ hai.", evidence_quote="x")
     patch_explanations([q, ok])
     assert q.explanation_vi == "Đáp án nằm ở đoạn: “I get up at seven.”." and ok.explanation_vi.startswith("Câu trả lời")
+
+
+def test_quiz_help_glossary_and_hint_never_reveal_the_answer(c, ai_app):
+    r = c.post("/api/quizzes/help/A1-G001:L2.3").json()  # "The baby (cry) ___ at night." → key: cries
+    words = {w["lemma"] for w in r["words"]}
+    assert "baby" in words and "night" in words and all(w["meaning_vi"] for w in r["words"])
+    assert "cries" not in {w["word"].lower() for w in r["words"]}
+    assert r["ai"] is True and r["hint_vi"] and "cries" not in r["hint_vi"].lower()
+    # an AI hint that leaks the answer is discarded
+    from app import quiz_help as H
+
+    class Leaky:
+        def text(self, *a, **k):
+            return "Đáp án là cries vì chủ ngữ số ít."
+    with ai_app.state.sessionmaker() as db:
+        assert H.ai_hint(db, Leaky(), ai_app.state.store, 1, "A1-G001:L2.3") is None
+    assert c.post("/api/quizzes/help/A1-G001:nope").status_code == 404

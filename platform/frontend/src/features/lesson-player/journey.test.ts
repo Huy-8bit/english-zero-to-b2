@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import type { QuizItem, Step } from "@/types/content";
-import { buildJourney, journeyApplies, stars } from "./journey";
+import { buildJourney, journeyApplies, pickChallenge, stars } from "./journey";
 
 const item = (id: string, kind: QuizItem["kind"] = "mc", has_key = true): QuizItem =>
   ({ id, label: id, kind, prompt_md: id, instruction_md: "", options: [{ key: "A", text: "a" }], prefill: null, tokens: null, multiline: false, has_key });
@@ -64,5 +64,35 @@ describe("journeyApplies / stars", () => {
     expect(stars(9, 10)).toBe(3);
     expect(stars(7, 10)).toBe(2);
     expect(stars(5, 10)).toBe(1);
+  });
+});
+
+describe("shorter lessons: challenge stage", () => {
+  const many: Step[] = [step("intro", "intro"), step("c1", "concept"), step("c2", "concept"),
+    step("Q1", "quiz", Array.from({ length: 10 }, (_, i) => item(`a${i}`))),
+    step("Q2", "quiz", Array.from({ length: 10 }, (_, i) => item(`b${i}`, "text"))),
+    step("Q3", "quiz", Array.from({ length: 10 }, (_, i) => item(`c${i}`, "long", false))), step("recap", "recap")];
+
+  it("keeps at most 12 challenge questions, spread over the exercises, and says how many were left", () => {
+    const j = buildJourney(many);
+    const ids = j.cards.filter((c) => c.kind === "item").map((c) => ("item" in c ? c.item.id : ""));
+    expect(ids.length).toBe(12);
+    expect(new Set(ids.map((id) => id[0]))).toEqual(new Set(["a", "b", "c"]));
+    expect(j.skipped).toBe(j.questionCount - j.cards.filter((c) => "item" in c).length);
+    expect(j.picked).toEqual(ids);
+  });
+
+  it("asks questions not tried before first, and a saved pick is reused exactly", () => {
+    const tried = new Set(["c0", "c1", "c2", "c3"]);
+    const j = buildJourney(many, { attempted: tried });
+    const ids = j.cards.filter((c) => c.kind === "item").map((c) => ("item" in c ? c.item.id : ""));
+    expect(ids.filter((id) => tried.has(id))).toEqual([]);
+    const again = buildJourney(many, { challenge: j.picked });
+    expect(again.cards.map((c) => c.key)).toEqual(j.cards.map((c) => c.key));
+  });
+
+  it("pickChallenge returns everything when there are few questions", () => {
+    const qs = [1, 2, 3].map((n) => ({ item: item(`x${n}`), quizId: "q", stepIndex: 1, level: "", intro: "" }));
+    expect(pickChallenge(qs, new Set(), 12)).toHaveLength(3);
   });
 });

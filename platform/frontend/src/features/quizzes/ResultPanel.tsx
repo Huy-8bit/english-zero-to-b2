@@ -3,7 +3,12 @@ import type { ItemResult } from "@/types/content";
 import { Markdown } from "@/components/Markdown";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { AIGradeButton } from "./AIGrade";
+import { useState } from "react";
+import { AIGradeButton, type AIGradeState } from "./AIGrade";
+
+const AI_OK = { label: "AI chấm: đúng — cách viết khác đáp án mẫu nhưng hợp lệ", icon: CheckCircle2, cls: "border-success/40 bg-success-soft text-success" };
+const AI_WRONG = { label: "AI chấm: chưa đúng — xem chỗ sai bên dưới", icon: XCircle, cls: "border-danger/40 bg-danger-soft text-danger" };
+const AI_PENDING = { label: "Khác đáp án mẫu — AI đang chấm…", icon: CircleHelp, cls: "border-primary/30 bg-primary-soft text-primary" };
 
 const META = {
   correct: { label: "Chính xác!", icon: CheckCircle2, cls: "border-success/40 bg-success-soft text-success" },
@@ -13,12 +18,17 @@ const META = {
   revealed: { label: "Đáp án — câu này tính là chưa đúng và sẽ được ôn lại", icon: Eye, cls: "border-warning/40 bg-warning-soft text-warning" },
 };
 
-export function ResultPanel({ result, docPath, onSelfAssess, onRetry }: {
-  result: ItemResult; docPath?: string; onSelfAssess?: (correct: boolean) => void; onRetry?: () => void;
+export function ResultPanel({ result, docPath, onSelfAssess, onRetry, aiAuto = true }: {
+  result: ItemResult; docPath?: string; onSelfAssess?: (correct: boolean) => void; onRetry?: () => void; aiAuto?: boolean;
 }) {
-  const meta = META[result.verdict];
+  // an answer that differs from the key is graded by AI right away; self-assessment is only the fallback
+  const aiGraded = result.verdict === "mismatch" && result.has_key;
+  const [ai, setAi] = useState<{ s: AIGradeState; ok?: boolean }>(() =>
+    result.ai_correct != null ? { s: "done", ok: result.ai_correct } : { s: aiGraded && aiAuto ? "pending" : "failed" });
+  const aiDone = aiGraded && ai.s === "done";
+  const meta = aiDone ? (ai.ok ? AI_OK : AI_WRONG) : aiGraded && ai.s === "pending" ? AI_PENDING : META[result.verdict];
   const Icon = meta.icon;
-  const needsSelf = (result.verdict === "mismatch" || result.verdict === "submitted") && result.self_correct === null;
+  const needsSelf = (result.verdict === "submitted" || (result.verdict === "mismatch" && (!aiGraded || ai.s === "failed"))) && result.self_correct === null;
   return (
     <div className={cn("mt-3 rounded-xl border p-3 text-sm", meta.cls)} role="status">
       <p className="flex items-center gap-2 font-semibold"><Icon size={16} />{meta.label}</p>
@@ -46,7 +56,10 @@ export function ResultPanel({ result, docPath, onSelfAssess, onRetry }: {
           <Button size="sm" variant="outline" onClick={() => onSelfAssess(false)}>Tôi cần xem lại</Button>
         </div>
       )}
-      {(result.verdict === "mismatch" || result.verdict === "submitted") && result.has_key && <AIGradeButton key={result.attempt_id} attemptId={result.attempt_id} />}
+      {(result.verdict === "mismatch" || result.verdict === "submitted") && result.has_key && (
+        <AIGradeButton key={result.attempt_id} attemptId={result.attempt_id} auto={aiGraded && aiAuto}
+          onState={(s, res) => aiGraded && setAi({ s, ok: res ? res.score >= 0.75 : undefined })} />
+      )}
       {result.self_correct !== null && (
         <p className="mt-2 text-xs text-muted">Tự đánh giá: {result.self_correct ? "đúng ✓" : "cần xem lại"}</p>
       )}

@@ -41,11 +41,18 @@ describe("ItemCard", () => {
     expect(screen.getByText("Động từ nguyên mẫu.")).toBeInTheDocument();
     expect(screen.getAllByRole("radio")[0]).toBeDisabled();
   });
-  it("offers self-assessment for open answers", async () => {
+  it("offers self-assessment for open answers when the AI does not grade them", async () => {
     const onSelf = vi.fn();
     const text: QuizItem = { ...mc, kind: "text", options: null };
-    render(<MemoryRouter><ItemCard item={text} unitId="x" docPath="" draft="Shut the window" onDraft={() => {}} result={{ ...result, verdict: "mismatch", auto: false, correct_option: null }} locked={false} onSelfAssess={onSelf} onRetry={() => {}} /></MemoryRouter>);
+    render(<MemoryRouter><ItemCard item={text} unitId="x" docPath="" draft="Shut the window" onDraft={() => {}} aiAuto={false} result={{ ...result, verdict: "mismatch", auto: false, correct_option: null }} locked={false} onSelfAssess={onSelf} onRetry={() => {}} /></MemoryRouter>);
     await userEvent.click(screen.getByRole("button", { name: "Tôi làm đúng" }));
     expect(onSelf).toHaveBeenCalledWith(true);
+  });
+
+  it("an answer the AI already graded shows the AI verdict instead of self-assessment", () => {
+    const text: QuizItem = { ...mc, kind: "text", options: null };
+    render(<MemoryRouter><ItemCard item={text} unitId="x" docPath="" draft="Shut the window" onDraft={() => {}} result={{ ...result, verdict: "mismatch", auto: false, correct_option: null, ai_correct: true }} locked={false} onSelfAssess={() => {}} onRetry={() => {}} /></MemoryRouter>);
+    expect(screen.getByText(/AI chấm: đúng/)).toBeTruthy();
+    expect(screen.queryByRole("button", { name: "Tôi làm đúng" })).toBeNull();
   });
 });

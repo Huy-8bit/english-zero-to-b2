@@ -434,6 +434,33 @@ async def speaking_transcribe(audio: UploadFile = File(...), seconds: float | No
     return {"transcript": text, "indicators": fluency_indicators(text, seconds)}
 
 
+# ------------------------------------------------------------------ help for a lesson question
+@router.post("/quizzes/help/{item_id}")
+def quiz_help(item_id: str, db: Session = Depends(get_db), ai: AIServices = Depends(get_ai), store: ContentStore = Depends(get_store),
+              user: User = Depends(current_user)):
+    """Words in the question with dictionary meanings + an AI hint that never contains the answer."""
+    from .. import quiz_help as H
+    from ..ai.errors import AIError
+
+    if store.item(item_id) is None:
+        raise HTTPException(404, "Không có câu hỏi này")
+    from ..models import LessonTestOut
+
+    open_tests = db.scalars(select(LessonTestOut).where(LessonTestOut.user_id == user.id, LessonTestOut.finished_at.is_(None),
+                                                        LessonTestOut.unit_id == item_id.split(":", 1)[0]))
+    if any(item_id in t.items for t in open_tests):
+        raise HTTPException(409, "Không dùng gợi ý trong lúc kiểm tra vượt bài.")
+    words = H.glossary(db, store, item_id)
+    db.commit()  # the lexicon import (first use only) must not hold the write lock during the AI call
+    hint, ai_ok = None, True
+    try:
+        hint = H.ai_hint(db, ai.gateway, store, user.id, item_id)
+    except AIError:
+        ai_ok = False
+    db.commit()
+    return {"words": words, "hint_vi": hint, "ai": ai_ok}
+
+
 # ------------------------------------------------------------------ pronunciation & natural voice
 @router.post("/pronunciation/assess")
 async def pronunciation_assess(audio: UploadFile = File(...), reference: str = Form(..., min_length=1, max_length=400),

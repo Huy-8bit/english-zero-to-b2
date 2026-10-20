@@ -102,6 +102,10 @@ platform/
 | Điền từ, sửa lỗi, viết lại, dịch, sắp xếp | Khớp với các biến thể ghi trong đáp án (chuẩn hóa hoa/thường, dấu câu, viết tắt) → **Đúng**. Không khớp → *không* kết luận sai: hiện đáp án mẫu để người học tự đánh giá |
 | Viết đoạn, nói, tự kiểm tra | Hiện bài mẫu/rubric của giáo trình, người học tự đánh giá |
 
+**Gợi ý.** Mỗi câu (trừ bài kiểm tra và lúc kiểm tra vượt bài) có nút **“Gợi ý (nghĩa từ & cách làm)”**: nghĩa và IPA (từ điển) của các từ trong câu hỏi — trừ những từ nằm trong đáp án — và một gợi ý ngắn của AI về quy tắc hay manh mối. Gợi ý nào chứa một từ của đáp án (chưa có trong câu hỏi) sẽ bị server loại. Dùng gợi ý không làm thay đổi cách chấm.
+
+**Câu tự gõ khác đáp án mẫu** được AI chấm ngay (không còn bắt tự đánh giá): đúng → tính đúng và không bị hỏi lại; chưa đúng → chỉ ra chỗ sai. Chỉ khi AI không dùng được mới hiện nút tự đánh giá. So khớp đáp án cũng linh hoạt hơn (a.m. = am, 7 = seven).
+
 **Không biết làm?** Mỗi câu (trừ bài kiểm tra) có nút **“Không biết — xem đáp án”**: hiện ngay đáp án và giải thích mà không cần trả lời. Câu đó được tính là *chưa đúng*: nó vào Sổ lỗi sai và Ôn tập thông minh, được hỏi lại cuối bài (chế độ Hành trình), không được tự đánh giá thành “đúng” và không cộng XP. Bài kiểm tra chỉ hiện đáp án sau khi nộp cả bài.
 
 Điểm bài = (câu tự chấm đúng + câu tự đánh giá đúng) / số câu đã chấm, **tính ở server** từ lần trả lời gần nhất. Dưới 60% → trạng thái *Cần ôn lại*. Không thể hoàn thành bài khi chưa đi tới slide cuối.
@@ -227,6 +231,12 @@ Bài học mở mặc định ở chế độ Hành trình:
 6. **Tổng kết:** ⭐ và XP.
 
 Nội dung giáo trình giữ nguyên. Nút 📖 (hoặc `?mode=classic`) mở lại cách xem slide đầy đủ như cũ.
+
+## Bài học nhanh hơn (2026-10-20)
+
+- **Kiểm tra vượt bài:** ở màn “Nhiệm vụ hôm nay” của mỗi bài. Server chọn khoảng 8 câu (ưu tiên câu chấm chính xác được), chấm từ câu trả lời *đầu tiên* sau khi bắt đầu. Đúng 7/8 → bài được tính là hoàn thành (vẫn được hẹn ôn lại); chưa đủ → học bài. Không có gợi ý/xem đáp án trong lúc kiểm tra; mỗi bài một lần mỗi 24 giờ.
+- **Bài rút gọn:** chặng Thử thách giữ tối đa 12 câu, rải đều các bài tập trong bài, câu chưa từng làm trước. Số câu còn lại được ghi trên màn Nhiệm vụ và sẽ gặp ở lần ôn sau.
+- **Lịch 4 giờ cân lại:** bài học + ôn lỗi ≈ 52 %, viết 25 phút + nói 25 phút (trước đây 30 phút chung), từ vựng ≈ 19 %, nghe/đọc ≈ 8 %.
 
 ## Lịch học hôm nay & Ôn tập thông minh
 

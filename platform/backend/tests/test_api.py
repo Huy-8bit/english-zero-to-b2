@@ -216,3 +216,38 @@ def test_reveal_is_refused_in_exams_and_needs_something_to_grade(client):
     assert r.status_code == 409
     assert client.post("/api/quizzes/A0-G001:q1/submit", json={"answers": {}}).status_code == 422
     assert client.post("/api/quizzes/A0-G001:q1/submit", json={"reveal": ["A0-G002:L1.1"]}).status_code == 422
+
+
+def _answer(client, store, item_id, right=True):
+    it = store.item(item_id)
+    if it.correct_option:
+        ans = it.correct_option if right else next(o["key"] for o in it.options if o["key"] != it.correct_option)
+    else:
+        from app.services.grading import answer_variants
+        ans = sorted(answer_variants(it.key.answer_md))[0] if right else "zzz qqq"
+    return client.post(f"/api/quizzes/{it.quiz_id}/submit", json={"answers": {item_id: ans}}).json()
+
+
+def test_test_out_passes_from_first_answers_and_completes_the_lesson(client, store):
+    t = client.post("/api/lessons/A1-G001/test-out").json()
+    assert 5 <= len(t["items"]) <= 8 and t["pass_mark"] == -(-len(t["items"]) * 7 // 8)
+    assert client.post(f"/api/lessons/A1-G001/test-out/{t['test_id']}/finish").status_code == 409  # unanswered
+    assert client.post(f"/api/quizzes/help/{t['items'][0]}").status_code == 409  # no help during the test
+    for i in t["items"]:
+        _answer(client, store, i, right=True)
+        _answer(client, store, i, right=False)  # later answers do not change the result
+    r = client.post(f"/api/lessons/A1-G001/test-out/{t['test_id']}/finish").json()
+    assert r["passed"] and r["correct"] == r["total"] and r["xp_gained"] == 50
+    p = next(x for x in client.get("/api/progress").json() if x["unit_id"] == "A1-G001")
+    assert p["status"] == "completed"
+    assert client.post("/api/lessons/A1-G001/test-out").status_code == 429  # once per 24 h
+
+
+def test_test_out_failed_keeps_the_lesson_open(client, store):
+    t = client.post("/api/lessons/A1-G002/test-out").json()
+    for n, i in enumerate(t["items"]):
+        _answer(client, store, i, right=n % 2 == 0)
+    r = client.post(f"/api/lessons/A1-G002/test-out/{t['test_id']}/finish").json()
+    assert not r["passed"] and r["correct"] < r["pass_mark"]
+    assert all(x["unit_id"] != "A1-G002" or x["status"] != "completed" for x in client.get("/api/progress").json())
+    assert client.post("/api/lessons/PLACEMENT-TEST/test-out").status_code == 422  # exams cannot be tested out

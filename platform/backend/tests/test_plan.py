@@ -7,10 +7,12 @@ from app.models import MistakeRecord, StudyLog, utcnow
 def test_plan_has_interleaved_blocks_breaks_and_tracks_progress(client, app):
     client.put("/api/profile", json={"daily_goal_minutes": 240})
     p = client.get("/api/plan/today").json()
-    assert p["target_minutes"] == 240 and [b["id"] for b in p["blocks"]] == ["warmup", "gaps", "lesson1", "input", "vocab_new", "lesson2", "output", "final"]
+    assert p["target_minutes"] == 240 and [b["id"] for b in p["blocks"]] == ["warmup", "gaps", "lesson1", "write", "vocab_new", "lesson2", "speak", "input", "final"]
     assert sum(b["minutes"] for b in p["blocks"]) == 240
     breaks = [t for t in p["timeline"] if t["type"] == "break"]
-    assert len(breaks) == 7 and sum(1 for b in breaks if b["long"]) == 1  # one long break after ~2 hours
+    assert len(breaks) == 8 and sum(1 for b in breaks if b["long"]) == 1  # one long break after ~2 hours
+    output = sum(b["minutes"] for b in p["blocks"] if b["category"] == "output")
+    assert output >= 45 and {b["action"]["link"] for b in p["blocks"] if b["category"] == "output"} == {"/writing-daily", "/speaking-studio"}
     cats = [b["category"] for b in p["blocks"]]
     assert all(cats[i] != cats[i + 1] for i in range(len(cats) - 1))  # never two blocks of the same kind in a row
     assert p["blocks"][2]["action"]["link"].startswith("/learn/")
