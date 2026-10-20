@@ -1,3 +1,14 @@
+# Sprint fixes from use — 2026-10-20
+
+| Issue reported | Cause | Fix | Evidence |
+|---|---|---|---|
+| A lesson showed "-75 phút" and 35 screens when 8–10 min was expected | The lesson had opened in the journey (full study) view. Sprint ran only when opened from the sprint page. The badge showed the curriculum's full-study time, and its "~" read as a minus. | Sprint is a lesson mode: it becomes the default for grammar once chosen (sprint page plan, mission card, header button). "Học đầy đủ" switches back. The badge now reads "Học đầy đủ: ≈75 phút theo giáo trình" plus the screen count. Every visible "~" became "≈". | E2E "sprint becomes the default…" |
+| Could not continue from A1-G006 | The queue started at the first gap, A1-G002 (completed at 38 %, status review). | Low-score lessons go to "Cần học kỹ". The queue continues from the lesson worked on last (A1-G006 in progress), then the rest, then earlier gaps. Added "Học tiếp" and a picker for any lesson. | `test_grammar_sprint_continues_from_the_lesson_worked_on_last`, vitest `nextAfter`, E2E picker |
+| "Viết câu phủ định" but the answer was a Wh- question | In exercises with several instruction groups, only the first item of a group carried its instruction. Single-question views (sprint, journey, smart review) showed the step intro, which is the first group's instruction. 105 quiz steps were affected. | Each item gets `group_md`. Single views show it; the AI grader and the help button receive it. | `test_each_question_carries_its_group_instruction`, vitest `singleIntro` |
+| Wanted a Vietnamese explanation of the lesson | — | Sprint "Bài này học gì": Vietnamese name from the intro table, objectives, and the WHAT table. | vitest `lessonOverview`, E2E |
+| Literal asterisks in "*my sister**'s** room*" | CommonMark cannot open bold between a letter and an apostrophe (19 places in the curriculum). | At render time the apostrophe moves outside the bold (sister'**s**); the source is unchanged. | vitest `Markdown.test.tsx` |
+| Buttons "Câu tiếp" / "Làm lại câu này" felt dead or laggy | A typed answer waited 3–8 s for the AI verdict before showing. "Làm lại" in a test was a no-op. | The result shows at once ("AI đang chấm…") and the verdict updates it. The test-out waits for pending grades before scoring. No retry link in tests. | E2E sprint/journey |
+
 # Grammar sprint and wider lesson layout — 2026-10-20
 
 Request: show lessons better, make them more engaging and focusing, and finish all grammar in 3–4 days.

@@ -479,7 +479,7 @@ class StepBuilder:
                                                      self_check_only=True)
                         if not ans:
                             self.warnings.append(f"no-kc-answer {iid}")
-                        items.append({"id": iid, "label": f"KC{num}", "kind": "long", "prompt_md": q, "instruction_md": "",
+                        items.append({"id": iid, "label": f"KC{num}", "kind": "long", "prompt_md": q, "instruction_md": "", "group_md": "",
                                       "options": None, "prefill": None, "tokens": None, "multiline": True, "has_key": bool(ans)})
                     self.add({"type": "quiz", "title": "Tự kiểm tra kiến thức", "section": "M", "quiz_id": quiz_id,
                               "intro_md": "Trả lời bằng lời của bạn trước, rồi so với đáp án gợi ý và tự đánh giá.",
@@ -595,7 +595,7 @@ class StepBuilder:
         self.items[iid] = ServerItem(id=iid, unit_id=self.unit.id, quiz_id=quiz_id, label=label, kind=kind, options=None,
                                      key=key, correct_option=None, model_md=model, explanation_md="", self_check_only=True)
         self.add({"type": "quiz", "title": title, "section": "", "quiz_id": quiz_id, "intro_md": "",
-                  "items": [{"id": iid, "label": label, "kind": kind, "prompt_md": _trim_rules(body), "instruction_md": "",
+                  "items": [{"id": iid, "label": label, "kind": kind, "prompt_md": _trim_rules(body), "instruction_md": "", "group_md": "",
                              "options": None, "prefill": None, "tokens": None, "multiline": True, "has_key": bool(model)}],
                   "variant": "task", "defer": self.unit.kind == "exam"})
         return True
