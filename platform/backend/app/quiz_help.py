@@ -33,7 +33,8 @@ def _question(store: ContentStore, item_id: str) -> tuple[str, str, list[str]]:
         for x in st.get("items") or []:
             if x["id"] == item_id:
                 opts = [strip_md(o.get("text", "")) for o in (x.get("options") or [])]
-                return strip_md(x.get("prompt_md") or ""), strip_md((st.get("intro_md") or "") + "\n" + (x.get("instruction_md") or "")), opts
+                instr = x.get("group_md") or x.get("instruction_md") or st.get("intro_md") or ""  # the item's own group instruction
+                return strip_md(x.get("prompt_md") or ""), strip_md(instr), opts
     return "", "", []
 
 

@@ -39,6 +39,8 @@ export interface QuizItem {
   kind: ItemKind;
   prompt_md: string;
   instruction_md: string;
+  /** the instruction of the item's group (only the first item of a group carries instruction_md); "" = the step intro */
+  group_md?: string;
   options: { key: string; text: string }[] | null;
   prefill: string | null;
   tokens: string[] | null;

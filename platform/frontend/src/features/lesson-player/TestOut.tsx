@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle2, Rocket, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -11,6 +11,7 @@ import { ai } from "@/services/ai";
 import type { ItemResult, QuizItem, StepsPayload } from "@/types/content";
 import { ItemCard } from "@/features/quizzes/ItemCard";
 import { isAnswered, toResponse, type Draft } from "@/features/quizzes/draft";
+import { singleIntro, withoutRepeatedInstruction } from "./journey";
 
 export type TestOutResult = Awaited<ReturnType<typeof api.testOutFinish>>;
 type Result = TestOutResult;
@@ -27,12 +28,17 @@ export function TestOut({ unitId, data, nextId, onStudy, size = 8, onFinished }:
   const [results, setResults] = useState<Record<string, ItemResult>>({});
   const [busy, setBusy] = useState(false);
   const [done, setDone] = useState<Result | null>(null);
+  // AI grading of typed answers runs in the background: the result shows at once, the verdict follows
+  const grading = useRef<Record<string, Promise<void>>>({});
+  const [pendingAi, setPendingAi] = useState<Record<string, boolean>>({});
   useEffect(() => {
     api.testOutStart(unitId, size).then(setTest).catch((e) => setErr(e instanceof Error ? e.message : "Không bắt đầu được"));
   }, [unitId, size]);
   const byId = useMemo(() => {
     const m: Record<string, { item: QuizItem; quizId: string; intro: string }> = {};
-    data.steps.forEach((s) => (s.items ?? []).forEach((item) => { m[item.id] = { item, quizId: s.quiz_id!, intro: s.intro_md ?? "" }; }));
+    data.steps.forEach((s) => (s.items ?? []).forEach((item) => {
+      m[item.id] = { item: withoutRepeatedInstruction(item), quizId: s.quiz_id!, intro: singleIntro(s.intro_md ?? "", item) };
+    }));
     return m;
   }, [data.steps]);
 
@@ -60,11 +66,15 @@ export function TestOut({ unitId, data, nextId, onStudy, size = 8, onFinished }:
     setBusy(true);
     try {
       const r = await api.submitQuiz(q.quizId, { [id]: toResponse(q.item, drafts[id]) });
-      let res = r.results[id];
-      if (res.verdict === "mismatch" && res.has_key) {
-        try { res = { ...res, ai_correct: (await ai.gradeAttempt(res.attempt_id)).score >= 0.75 }; } catch { /* counts as not correct */ }
-      }
+      const res = r.results[id];
       setResults((x) => ({ ...x, [id]: res }));
+      if (res.verdict === "mismatch" && res.has_key) {
+        setPendingAi((x) => ({ ...x, [id]: true }));
+        grading.current[id] = ai.gradeAttempt(res.attempt_id)
+          .then((g) => setResults((x) => ({ ...x, [id]: { ...x[id], ai_correct: g.score >= 0.75 } })))
+          .catch(() => { /* not graded: counts as not correct */ })
+          .finally(() => setPendingAi((x) => ({ ...x, [id]: false })));
+      }
     } catch (e) {
       toast.error(e instanceof Error ? e.message : "Không chấm được");
     } finally {
@@ -75,6 +85,7 @@ export function TestOut({ unitId, data, nextId, onStudy, size = 8, onFinished }:
     if (idx + 1 < test.items.length) return setIdx(idx + 1);
     setBusy(true);
     try {
+      await Promise.allSettled(Object.values(grading.current)); // the server scores AI-graded answers too
       const r = await api.testOutFinish(unitId, test.test_id);
       if (onFinished) onFinished(r);
       else setDone(r);
@@ -95,10 +106,10 @@ export function TestOut({ unitId, data, nextId, onStudy, size = 8, onFinished }:
       <Progress value={(100 * idx) / test.items.length} label={`Câu ${idx + 1}/${test.items.length}`} />
       {q.intro && <Markdown docPath={data.unit.path} className="text-sm text-muted">{q.intro}</Markdown>}
       <ItemCard item={q.item} unitId={unitId} docPath={data.unit.path} draft={drafts[id]} onDraft={(d) => setDrafts((x) => ({ ...x, [id]: d }))}
-        result={result} locked={false} aiAuto={false} onSelfAssess={() => {}} onRetry={() => {}} onEnter={() => void (result ? next() : check())} />
+        result={result} locked={false} aiAuto={false} aiPending={!!pendingAi[id]} onSelfAssess={() => {}} onEnter={() => void (result ? next() : check())} />
       <div className="flex justify-end">
-        {result ? <Button onClick={() => void next()} disabled={busy}>{idx + 1 < test.items.length ? "Câu tiếp" : "Xem kết quả"}<ArrowRight size={16} /></Button>
-          : <Button onClick={() => void check()} disabled={busy || !isAnswered(q.item, drafts[id])}>Kiểm tra</Button>}
+        {result ? <Button onClick={() => void next()} disabled={busy}>{busy ? "Đang tổng hợp…" : idx + 1 < test.items.length ? "Câu tiếp" : "Xem kết quả"}<ArrowRight size={16} /></Button>
+          : <Button onClick={() => void check()} disabled={busy || !isAnswered(q.item, drafts[id])}>{busy ? "Đang chấm…" : "Kiểm tra"}</Button>}
       </div>
     </div>
   );

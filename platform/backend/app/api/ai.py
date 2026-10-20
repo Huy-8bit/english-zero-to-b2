@@ -300,12 +300,14 @@ def grade_attempt(attempt_id: int, db: Session = Depends(get_db), ai: AIServices
     unit = store.units[a.unit_id]
     b = store.built(a.unit_id)
     prompt = next((x["prompt_md"] for st in b.steps for x in st.get("items") or [] if x["id"] == a.item_id), "")
+    # what the learner was asked to do: the item's group instruction (e.g. "Write Wh- questions"), else the step intro
+    task = next(((x.get("group_md") or st.get("intro_md") or "") for st in b.steps for x in st.get("items") or [] if x["id"] == a.item_id), "")
     from ..ai import prompts
     from ..ai.schemas import GradingBatch
 
     batch = ai.gateway.structured(db, user.id, feature="curriculum_grade", task="complex_grading" if len(a.response.split()) > 25 else "grading",
                                   instructions=prompts.GRADER,
-                                  input=json.dumps({"question_number": 1, "lesson": unit.id, "level": unit.level, "question": strip_md(prompt)[:1500],
+                                  input=json.dumps({"question_number": 1, "lesson": unit.id, "level": unit.level, "instructions": strip_md(task)[:600], "question": strip_md(prompt)[:1500],
                                                     "reference_answers": [strip_md(it.model_md)[:1500]], "criteria": strip_md(it.explanation_md)[:500]},
                                                    ensure_ascii=False) + f"\n<learner_answer n=\"1\">{a.response[:3000]}</learner_answer>",
                                   schema=GradingBatch, max_output_tokens=1500)

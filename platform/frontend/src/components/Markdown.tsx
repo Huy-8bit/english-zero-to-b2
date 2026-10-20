@@ -53,10 +53,19 @@ function MarkdownImpl({ children, docPath, className, inline }: Props) {
   };
   const md = (
     <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[[rehypeSanitize, codeLanguageSchema]]} components={components}>
-      {children}
+      {fixIntrawordBold(children)}
     </ReactMarkdown>
   );
   return inline ? <span className={className}>{md}</span> : <div className={cn("prose-em", className)}>{md}</div>;
+}
+
+/**
+ * The curriculum bolds the apostrophe part of a word: "sister**'s**", "I**'m**". By CommonMark rules a "**" between a
+ * letter and punctuation cannot open emphasis, so the asterisks showed up literally. Move the apostrophe outside the
+ * bold ("sister'**s**"); a bold apostrophe alone ("students**'**") becomes a plain apostrophe. The source is unchanged.
+ */
+export function fixIntrawordBold(md: string): string {
+  return md.replace(/([A-Za-z])\*\*(['’])([A-Za-z]*)\*\*/g, (_, before: string, apo: string, rest: string) => (rest ? `${before}${apo}**${rest}**` : `${before}${apo}`));
 }
 
 export const Markdown = memo(MarkdownImpl);

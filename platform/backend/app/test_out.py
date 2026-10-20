@@ -127,8 +127,10 @@ def sprint_overview(db: Session, user: User, store: ContentStore) -> dict:
     """Every grammar lesson A0→B2 in route order with its status, today's count and totals per level.
 
     done        lesson completed (full study, test-out or sprint)
-    study       the last sprint/test-out within 24 h was not passed → study it fully later
+    study       studied but not good enough (score below the pass mark, or a sprint/test-out within 24 h not
+                passed) → study it fully later; it does not block the queue
     todo        not done yet (the queue)
+    The queue continues from the lesson the learner worked on most recently (not from the first gap in the route).
     """
     from .vocabulary.service import day_bounds
 
@@ -144,17 +146,38 @@ def sprint_overview(db: Session, user: User, store: ContentStore) -> dict:
         p, t = prog.get(u.id), tests.get(u.id)
         if p and p.completed_at and p.status == "completed":
             status = "done"
-        elif t and t.finished_at and not t.passed and utcnow() - t.started_at < COOLDOWN:
+        elif (p and p.completed_at and p.status == "review") or (t and t.finished_at and not t.passed and utcnow() - t.started_at < COOLDOWN):
             status = "study"
         else:
             status = "todo"
         units.append({"id": u.id, "title": u.title, "level": u.level, "status": status, "minutes": u.minutes,
-                      "done_today": bool(p and p.completed_at and p.completed_at >= start_local)})
+                      "done_today": bool(p and p.completed_at and p.completed_at >= start_local),
+                      "in_progress": bool(p and not p.completed_at and (p.max_step or 0) > 0),
+                      "_touched": p.updated_at if p else None})
         lv = levels.setdefault(u.level, {"level": u.level, "total": 0, "done": 0})
         lv["total"] += 1
         lv["done"] += status == "done"
     done = sum(1 for u in units if u["status"] == "done")
-    return {"units": units, "total": len(units), "done": done, "remaining": len(units) - done,
+    # continue where the learner last worked: the most recently touched unfinished lesson, else the first one to do
+    # after the most recently touched lesson, else the first one to do in the route
+    touched = sorted((u for u in units if u["_touched"]), key=lambda u: u["_touched"], reverse=True)
+    nxt = None
+    for u in touched:
+        if u["status"] == "todo" and u["in_progress"]:
+            nxt = u
+            break
+    if nxt is None and touched:
+        i = units.index(touched[0])
+        nxt = next((u for u in units[i + 1:] if u["status"] == "todo"), None)
+    nxt = nxt or next((u for u in units if u["status"] == "todo"), None)
+    for u in units:
+        u.pop("_touched")
+    if nxt is not None:  # queue order: from the next lesson on, then the earlier gaps
+        i = units.index(nxt)
+        queue = [u["id"] for u in units[i:] + units[:i] if u["status"] == "todo"]
+    else:
+        queue = []
+    return {"units": units, "queue": queue, "total": len(units), "done": done, "remaining": len(units) - done,
             "today": sum(1 for u in units if u["done_today"]), "study": [u for u in units if u["status"] == "study"],
-            "next": next((u for u in units if u["status"] == "todo"), None),
+            "next": nxt,
             "levels": [levels[lv] for lv in LEVEL_ORDER if lv in levels]}

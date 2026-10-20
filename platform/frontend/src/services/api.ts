@@ -101,8 +101,8 @@ export const api = {
     request<{ name: string; daily_goal_minutes: number; weekly_goal_lessons: number }>("/api/profile", { method: "PUT", body: json(body) }),
 };
 
-export interface SprintUnit { id: string; title: string; level: string; status: "done" | "study" | "todo"; minutes: number | null; done_today: boolean }
+export interface SprintUnit { id: string; title: string; level: string; status: "done" | "study" | "todo"; minutes: number | null; done_today: boolean; in_progress: boolean }
 export interface GrammarSprint {
-  units: SprintUnit[]; total: number; done: number; remaining: number; today: number; study: SprintUnit[]; next: SprintUnit | null;
+  units: SprintUnit[]; queue: string[]; total: number; done: number; remaining: number; today: number; study: SprintUnit[]; next: SprintUnit | null;
   levels: { level: string; total: number; done: number }[];
 }

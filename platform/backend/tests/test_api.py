@@ -271,3 +271,35 @@ def test_grammar_sprint_queue_six_questions_and_study_later(client, store):
     assert client.post(f"/api/lessons/A0-G001/test-out/{t['test_id']}/finish").json()["passed"]
     s = client.get("/api/grammar-sprint").json()
     assert s["done"] == 1 and s["today"] == 1 and s["next"]["id"] == "A0-G003"  # G002 waits in "study"
+
+
+
+def test_grammar_sprint_continues_from_the_lesson_worked_on_last(client, store, app):
+    from app.models import LessonProgress
+    from app.models import utcnow
+    from datetime import timedelta
+
+    client.get("/api/profile")  # creates the learner
+    with app.state.sessionmaker() as db:
+        now = utcnow()
+        for uid, status, done, step, ago in [("A0-G001", "completed", True, 20, 300), ("A0-G002", "review", True, 17, 200),
+                                             ("A0-G003", "completed", True, 17, 100), ("A0-G006", "in_progress", False, 4, 1),
+                                             ("A0-G015", "in_progress", False, 11, 5000)]:
+            db.add(LessonProgress(user_id=1, unit_id=uid, status=status, current_step=step, max_step=step, total_steps=18, state={},
+                                  score=40 if status == "review" else 90, best_score=40 if status == "review" else 90,
+                                  completed_at=now if done else None, completions=int(done), updated_at=now - timedelta(minutes=ago)))
+        db.commit()
+    s = client.get("/api/grammar-sprint").json()
+    assert s["next"]["id"] == "A0-G006"  # the lesson in progress, not the low-score gap A0-G002
+    assert [u["id"] for u in s["study"]] == ["A0-G002"] and s["queue"][:3] == ["A0-G006", "A0-G007", "A0-G008"]
+    assert s["queue"][-2:] == ["A0-G004", "A0-G005"]  # earlier gaps come at the end
+
+
+def test_each_question_carries_its_group_instruction(client):
+    """A1-G002 Level 2 has three groups; L2.9 belongs to 'Wh- questions', not to the step intro 'negative sentences'."""
+    steps = client.get("/api/lessons/A1-G002/steps").json()["steps"]
+    l2 = next(s for s in steps if s["title"].startswith("Level 2"))
+    by = {i["id"]: i for i in l2["items"]}
+    assert l2["intro_md"].startswith("Viết câu phủ định")
+    assert by["A1-G002:L2.1"]["group_md"] == ""  # first group → the step intro
+    assert "Yes/No" in by["A1-G002:L2.5"]["group_md"] and "Wh-" in by["A1-G002:L2.9"]["group_md"]

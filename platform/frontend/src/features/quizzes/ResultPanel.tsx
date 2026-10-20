@@ -18,13 +18,15 @@ const META = {
   revealed: { label: "Đáp án — câu này tính là chưa đúng và sẽ được ôn lại", icon: Eye, cls: "border-warning/40 bg-warning-soft text-warning" },
 };
 
-export function ResultPanel({ result, docPath, onSelfAssess, onRetry, aiAuto = true }: {
+export function ResultPanel({ result, docPath, onSelfAssess, onRetry, aiAuto = true, aiPending = false }: {
   result: ItemResult; docPath?: string; onSelfAssess?: (correct: boolean) => void; onRetry?: () => void; aiAuto?: boolean;
+  /** the caller is grading this answer with AI right now (shown at once, updated when the verdict arrives) */
+  aiPending?: boolean;
 }) {
   // an answer that differs from the key is graded by AI right away; self-assessment is only the fallback
   const aiGraded = result.verdict === "mismatch" && result.has_key;
-  const [ai, setAi] = useState<{ s: AIGradeState; ok?: boolean }>(() =>
-    result.ai_correct != null ? { s: "done", ok: result.ai_correct } : { s: aiGraded && aiAuto ? "pending" : "failed" });
+  const [own, setAi] = useState<{ s: AIGradeState; ok?: boolean }>(() => ({ s: aiGraded && aiAuto ? "pending" : "failed" }));
+  const ai: { s: AIGradeState; ok?: boolean } = result.ai_correct != null ? { s: "done", ok: result.ai_correct } : aiPending ? { s: "pending" } : own;
   const aiDone = aiGraded && ai.s === "done";
   const meta = aiDone ? (ai.ok ? AI_OK : AI_WRONG) : aiGraded && ai.s === "pending" ? AI_PENDING : META[result.verdict];
   const Icon = meta.icon;

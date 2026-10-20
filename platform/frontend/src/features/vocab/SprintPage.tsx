@@ -74,7 +74,7 @@ export default function SprintPage() {
                 <p className="text-3xl font-bold tabular-nums">{s.learned_today}<span className="text-lg font-normal text-muted"> / {s.goal} từ</span></p>
               </div>
               <div className="text-right text-sm text-muted">
-                <p>Đợt {Math.min(s.batches_done + (done ? 0 : 1), s.batches_total)}/{s.batches_total} · ~{s.minutes_per_batch} phút/đợt</p>
+                <p>Đợt {Math.min(s.batches_done + (done ? 0 : 1), s.batches_total)}/{s.batches_total} · ≈{s.minutes_per_batch} phút/đợt</p>
                 {!done && <p>Còn khoảng {s.minutes_left} phút học từ mới</p>}
               </div>
             </div>

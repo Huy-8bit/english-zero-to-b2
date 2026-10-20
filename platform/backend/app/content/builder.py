@@ -294,6 +294,10 @@ class StepBuilder:
             public.append({
                 "id": iid, "label": raw.label, "kind": info["kind"], "prompt_md": info["prompt_md"],
                 "instruction_md": raw.instruction, "options": info["options"], "prefill": info["prefill"],
+                # the instruction of this item's group ("" = the step intro): only the FIRST item of a group carries
+                # `instruction_md`, so views that show one question at a time need this (e.g. L2.9 "Write Wh- questions",
+                # not the step intro "Write negative sentences")
+                "group_md": current_instr,
                 "tokens": info["tokens"], "multiline": info["multiline"], "has_key": key is not None,
             })
         return public

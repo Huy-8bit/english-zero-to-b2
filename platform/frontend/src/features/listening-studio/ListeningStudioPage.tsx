@@ -47,7 +47,7 @@ export function ListeningStudioPage() {
           <CardContent className="space-y-3 text-sm">
             <div className="grid gap-3 sm:grid-cols-3">
               <label>Trình độ{sel("level", LEVELS.map((l) => [l, l]))}</label>
-              <label>Độ dài{sel("minutes", [[1, "~1 phút"], [1.5, "~1,5 phút"], [2, "~2 phút"], [3, "~3 phút"]])}</label>
+              <label>Độ dài{sel("minutes", [[1, "≈1 phút"], [1.5, "≈1,5 phút"], [2, "≈2 phút"], [3, "≈3 phút"]])}</label>
               <label>Số câu hỏi{sel("question_count", [[3, "3"], [5, "5"], [8, "8"]])}</label>
               <label>Dạng{sel("format", [["dialogue", "Hội thoại (2 giọng)"], ["monologue", "Bài nói (1 giọng)"]])}</label>
               <label>Độ khó{sel("difficulty", [["easy", "Dễ"], ["normal", "Vừa"], ["hard", "Khó"]])}</label>

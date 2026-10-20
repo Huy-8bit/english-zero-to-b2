@@ -9,6 +9,7 @@ import { Progress } from "@/components/ui/progress";
 import { ErrorBox, PageHeader, Skeleton } from "@/components/ui/misc";
 import { Ring } from "@/features/plan/TodayPlanPage";
 import { api } from "@/services/api";
+import { safeStorage } from "@/lib/utils";
 import { dailyTarget, getCombo, loadPlan, savePlan } from "./sprintPlan";
 
 /** Grammar sprint: get through every grammar lesson A0→B2 in a few days — core on one screen, 6-question check, next. */
@@ -24,12 +25,14 @@ export default function SprintPage() {
     const p = { days, start: new Date().toISOString().slice(0, 10), startRemaining: s.remaining + s.today };
     savePlan(p);
     setPlan(p);
+    safeStorage().set("em-lesson-mode", "sprint"); // grammar lessons open in sprint mode from the path and today's plan too
   };
-  const queue = s.units.filter((u) => u.status === "todo").slice(0, 8);
+  const byId = new Map(s.units.map((u) => [u.id, u]));
+  const queue = s.queue.slice(0, 8).map((id) => byId.get(id)!).filter(Boolean);
   const combo = getCombo();
   return (
     <div>
-      <PageHeader title="Sprint ngữ pháp" subtitle="Đi qua toàn bộ ngữ pháp A0→B2 thật nhanh: mỗi bài ≈8 phút — nắm cốt lõi trên một màn hình, kiểm tra 6 câu, qua là sang bài tiếp." />
+      <PageHeader title="Sprint ngữ pháp" subtitle="Đi qua toàn bộ ngữ pháp A0→B2 thật nhanh: mỗi bài ≈8 phút — nắm cốt lõi trên một màn hình, kiểm tra 6 câu, qua là sang bài tiếp. Chọn số ngày để mọi bài ngữ pháp mở ở chế độ Sprint." />
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
         <Card className="lg:col-span-2">
           <CardContent className="flex flex-wrap items-center gap-6 pt-5">
@@ -46,8 +49,23 @@ export default function SprintPage() {
                 <p className="text-xs text-muted">≈ {Math.round((day.target * 8) / 60 * 10) / 10} giờ hôm nay với nhịp 8 phút/bài.</p>
               </div>
               {s.next ? (
-                <Button size="lg" onClick={() => nav(`/learn/${s.next!.id}?mode=sprint`)}><Play size={18} />Bắt đầu: {s.next.id} · {s.next.title}</Button>
+                <Button size="lg" className="h-auto whitespace-normal py-2.5 text-left" onClick={() => nav(`/learn/${s.next!.id}?mode=sprint`)}>
+                  <Play size={18} className="shrink-0" />{s.next.in_progress ? "Học tiếp" : "Bắt đầu"}: {s.next.id} · {s.next.title}</Button>
               ) : <p className="font-semibold text-success">Đã đi hết toàn bộ ngữ pháp 🎉</p>}
+              <label className="flex flex-wrap items-center gap-2 text-sm">
+                <span className="text-muted">Hoặc chọn bài:</span>
+                <select aria-label="Chọn bài để học" defaultValue="" onChange={(e) => e.target.value && nav(`/learn/${e.target.value}?mode=sprint`)}
+                  className="h-9 min-w-0 max-w-full flex-1 rounded-xl border border-border bg-surface px-2">
+                  <option value="">— chọn bài ngữ pháp —</option>
+                  {s.levels.map((l) => (
+                    <optgroup key={l.level} label={`${l.level} (${l.done}/${l.total})`}>
+                      {s.units.filter((u) => u.level === l.level).map((u) => (
+                        <option key={u.id} value={u.id}>{u.status === "done" ? "✓ " : u.status === "study" ? "⚠ " : u.in_progress ? "▶ " : ""}{u.id} · {u.title}</option>
+                      ))}
+                    </optgroup>
+                  ))}
+                </select>
+              </label>
             </div>
           </CardContent>
         </Card>

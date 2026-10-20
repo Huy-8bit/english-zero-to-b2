@@ -20,12 +20,16 @@ interface Props {
   result?: ItemResult;
   locked: boolean;
   onSelfAssess: (correct: boolean) => void;
-  onRetry: () => void;
+  onRetry?: () => void;
   onEnter?: () => void;
   /** "I don't know": show the answer without answering (graded as not correct). Not offered in exams. */
   onReveal?: () => void;
   /** grade answers that differ from the key with AI automatically (journey grades them itself first) */
   aiAuto?: boolean;
+  /** shown on its own (not under its exercise): show the group instruction when the item has none of its own */
+  single?: boolean;
+  /** the parent is grading this answer with AI (non-blocking) */
+  aiPending?: boolean;
 }
 
 function shuffleOrder(n: number, seed: string): number[] {
@@ -41,12 +45,12 @@ function shuffleOrder(n: number, seed: string): number[] {
   return idx;
 }
 
-export function ItemCard({ item, unitId, docPath, draft, onDraft, result, locked, onSelfAssess, onRetry, onEnter, onReveal, aiAuto }: Props) {
+export function ItemCard({ item, unitId, docPath, draft, onDraft, result, locked, onSelfAssess, onRetry, onEnter, onReveal, aiAuto, single, aiPending }: Props) {
   const disabled = locked || !!result;
   const showPrompt = item.kind !== "long" || item.prompt_md.length < 1200;
   return (
     <div className="rounded-2xl border border-border bg-surface p-4" data-item={item.id}>
-      {item.instruction_md && <Markdown docPath={docPath} className="mb-2 text-sm text-muted">{item.instruction_md}</Markdown>}
+      {(item.instruction_md || (single && item.group_md)) && <Markdown docPath={docPath} className="mb-2 text-sm text-muted">{item.instruction_md || item.group_md!}</Markdown>}
       <div className="flex items-start gap-2">
         <span className="mt-0.5 shrink-0 rounded-lg bg-primary-soft px-2 py-0.5 text-xs font-semibold text-primary">{item.label}</span>
         <div className="min-w-0 flex-1">
@@ -66,7 +70,7 @@ export function ItemCard({ item, unitId, docPath, draft, onDraft, result, locked
           <Eye size={14} />Không biết — xem đáp án
         </button>
       )}
-      {result && <ResultPanel key={result.attempt_id} result={result} docPath={docPath} onSelfAssess={onSelfAssess} onRetry={locked ? undefined : onRetry} aiAuto={aiAuto} />}
+      {result && <ResultPanel key={result.attempt_id} result={result} docPath={docPath} onSelfAssess={onSelfAssess} onRetry={locked ? undefined : onRetry} aiAuto={aiAuto} aiPending={aiPending} />}
     </div>
   );
 }

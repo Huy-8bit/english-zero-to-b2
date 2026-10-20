@@ -105,7 +105,7 @@ export function PronunciationFeedback({ result, level, source = "practice", sour
       <div className="flex flex-wrap items-center gap-3">
         <p className="text-lg font-bold tabular-nums">Độ rõ: {r.score}%</p>
         {delta !== null && delta !== 0 && <Badge tone={delta > 0 ? "success" : "warning"}>{delta > 0 ? "+" : ""}{delta} so với lần trước</Badge>}
-        {r.words_per_minute && <span className="text-xs text-muted">~{r.words_per_minute} từ/phút</span>}
+        {r.words_per_minute && <span className="text-xs text-muted">≈{r.words_per_minute} từ/phút</span>}
         <Progress className="min-w-32 flex-1" value={r.score} label={`Độ rõ ${r.score}%`} />
       </div>
       <p className="text-[17px] leading-relaxed" aria-label="Câu mẫu, từ được tô màu theo kết quả">

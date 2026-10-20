@@ -24,7 +24,8 @@ def test_steps_never_contain_answer_keys(store):
     # the answer text for an MC item must not be present as a field
     for st in b.steps:
         for item in st.get("items", []):
-            assert set(item) == {"id", "label", "kind", "prompt_md", "instruction_md", "options", "prefill", "tokens", "multiline", "has_key"}
+            # group_md is the instruction of the item's group (visible text in the lesson), not an answer
+            assert set(item) == {"id", "label", "kind", "prompt_md", "instruction_md", "group_md", "options", "prefill", "tokens", "multiline", "has_key"}
 
 
 def test_grammar_lesson_maps_template_sections(store):

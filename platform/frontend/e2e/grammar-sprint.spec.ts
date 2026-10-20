@@ -34,4 +34,29 @@ test("grammar sprint: plan in days, core on one screen, 6-question check, next l
   await page.goto("/grammar-sprint");
   const passed = await page.getByText("1/128").isVisible();
   if (!passed) await expect(page.getByRole("link", { name: /A0-G001/ }).first()).toBeVisible(); // in "Cần học kỹ"
+  // the queue continues from the lesson worked on last (A0-G002 was opened after A0-G001)
+  await expect(page.getByRole("button", { name: /(Học tiếp|Bắt đầu): A0-G00[23]/ })).toBeVisible();
+  // any lesson can be chosen
+  await page.getByLabel("Chọn bài để học").selectOption("A2-G001");
+  await expect(page).toHaveURL(/\/learn\/A2-G001\?mode=sprint/);
+});
+
+test("sprint becomes the default for grammar lessons: from the journey mission, and after choosing a plan", async ({ page }) => {
+  await page.goto("/learn/A1-G006");
+  await expect(page.getByText(/Học đầy đủ: ≈\d+ phút theo giáo trình/)).toBeVisible();
+  await page.getByRole("button", { name: "Sprint ≈8 phút" }).last().click();
+  await expect(page.getByText("📐 Công thức")).toBeVisible();
+  // what the lesson is about: Vietnamese name, objectives and the main idea
+  const overview = page.getByTestId("sprint-overview");
+  await expect(overview.getByRole("heading", { name: "Tính từ sở hữu, đại từ sở hữu và sở hữu cách" })).toBeVisible();
+  await expect(overview.getByText("Học xong bạn sẽ:")).toBeVisible();
+  await expect(overview.getByText(/Ý chính: Ba cách thể hiện sở hữu/)).toBeVisible();
+  await page.goto("/learn/A1-G007"); // opened like from the path: no ?mode
+  await expect(page.getByText("1 · Nắm cốt lõi (≈3 phút)")).toBeVisible();
+  await page.getByRole("button", { name: "Học đầy đủ", exact: true }).click(); // back to full lessons
+  await expect(page.getByText("Nhiệm vụ hôm nay")).toBeVisible();
+  await page.goto("/grammar-sprint");
+  await page.getByRole("button", { name: "3 ngày", exact: true }).click();
+  await page.goto("/learn/A1-G008");
+  await expect(page.getByText("📐 Công thức")).toBeVisible();
 });

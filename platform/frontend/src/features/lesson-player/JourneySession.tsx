@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { lessonExitPath } from "@/lib/lessonExit";
 import { useQueryClient } from "@tanstack/react-query";
 import { motion } from "motion/react";
-import { ArrowRight, BookOpenText, Bot, CalendarClock, CheckCircle2, Flag, Flame, ListChecks, Rocket, RotateCcw, Sparkles, Star, Target, X } from "lucide-react";
+import { ArrowRight, BookOpenText, Bot, CalendarClock, CheckCircle2, Flag, Flame, ListChecks, Rocket, RotateCcw, Sparkles, Star, Target, X, Zap } from "lucide-react";
 import { api } from "@/services/api";
 import { ai } from "@/services/ai";
 import type { ItemResult, JourneyState, LessonDetail, QuizItem, Step, StepsPayload } from "@/types/content";
@@ -30,7 +30,7 @@ const isQ = (c: Card | QCard): c is QCard => "item" in c;
 const good = (r?: ItemResult) => !!r && (r.verdict === "correct" || r.self_correct === true || r.ai_correct === true);
 
 /** Journey view of a lesson: one thing at a time, retrieval every few minutes, wrong answers come back, stars at the end. */
-export function JourneySession({ unitId, data, lesson, onClassic }: { unitId: string; data: StepsPayload; lesson?: LessonDetail & { next_id?: string | null }; onClassic: () => void }) {
+export function JourneySession({ unitId, data, lesson, onClassic, onSprint }: { unitId: string; data: StepsPayload; lesson?: LessonDetail & { next_id?: string | null }; onClassic: () => void; onSprint?: () => void }) {
   const nav = useNavigate();
   const qc = useQueryClient();
   const fire = useCelebrate((s) => s.fire);
@@ -60,6 +60,7 @@ export function JourneySession({ unitId, data, lesson, onClassic }: { unitId: st
   const [finish, setFinish] = useState<{ score: number | null; xp: number; status: string } | null>(null);
   const finishing = useRef(false);
   const [testOut, setTestOut] = useState(false);
+  const [aiPending, setAiPending] = useState<Record<string, boolean>>({});
   useEffect(() => {
     if (ps.ready && !js.challenge) setJ((s) => ({ ...s, challenge: j.picked }));
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -117,20 +118,18 @@ export function JourneySession({ unitId, data, lesson, onClassic }: { unitId: st
     setBusy(true);
     try {
       const r = await api.submitQuiz(c.quizId, { [c.item.id]: toResponse(c.item, d) });
-      let res = r.results[c.item.id];
-      if (res.verdict === "mismatch" && res.has_key) {
-        // differs from the model answer: let the AI decide now instead of asking the learner to self-assess
-        try {
-          const g = await ai.gradeAttempt(res.attempt_id);
-          res = { ...res, ai_correct: g.score >= 0.75 };
-        } catch {
-          /* AI unavailable: self-assessment stays available */
-        }
-      }
-      ps.setResults({ ...r.results, [c.item.id]: res });
+      const res = r.results[c.item.id];
+      ps.setResults(r.results);
       if (r.xp_gained) setJ((s) => ({ ...s, xp: s.xp + r.xp_gained }));
-      // "mismatch" (open answer not equal to the model): provisionally wrong until the learner self-assesses
-      if (res.verdict !== "submitted") record(c, res.verdict === "correct" || res.ai_correct === true);
+      if (res.verdict === "mismatch" && res.has_key) {
+        // differs from the model answer: the AI decides (in the background — the result shows at once)
+        const id = c.item.id;
+        setAiPending((x) => ({ ...x, [id]: true }));
+        ai.gradeAttempt(res.attempt_id)
+          .then((g) => { ps.setResults({ [id]: { ...res, ai_correct: g.score >= 0.75 } }); record(c, g.score >= 0.75); })
+          .catch(() => record(c, false)) // AI unavailable: provisionally wrong; self-assessment stays available
+          .finally(() => setAiPending((x) => ({ ...x, [id]: false })));
+      } else if (res.verdict !== "submitted") record(c, res.verdict === "correct");
       else setJ((s) => ({ ...s, done: s.done.includes(c.item.id) ? s.done : [...s.done, c.item.id] }));
       qc.invalidateQueries({ queryKey: ["day-plan"] });
     } catch (e) {
@@ -230,6 +229,7 @@ export function JourneySession({ unitId, data, lesson, onClassic }: { unitId: st
           {combo >= 3 && <Badge tone="warning"><Flame size={12} />{combo}</Badge>}
           <Badge tone="primary" title="XP trong bài này">+{js.xp} XP</Badge>
           <Button variant={tutorOpen ? "secondary" : "ghost"} size="sm" onClick={() => setTutorOpen((o) => !o)} aria-label="Hỏi AI về bài này" aria-expanded={tutorOpen}><Bot size={18} /><span className="hidden md:inline">Hỏi AI</span></Button>
+          {onSprint && <Button variant="ghost" size="sm" onClick={onSprint} aria-label="Sprint ≈8 phút" title="Sprint ≈8 phút: cốt lõi trên một màn hình + 6 câu kiểm tra"><Zap size={16} /><span className="hidden md:inline">Sprint</span></Button>}
           <Button variant="ghost" size="icon" onClick={onClassic} aria-label="Xem đầy đủ (cách học cũ)" title="Xem đầy đủ (cách học cũ)"><BookOpenText size={18} /></Button>
         </div>
       </header>
@@ -240,7 +240,7 @@ export function JourneySession({ unitId, data, lesson, onClassic }: { unitId: st
           <motion.section key={card.key} initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.18 }} aria-live="polite">
             {card.kind === "mission" && (testOut
               ? <TestOut unitId={unitId} data={data} nextId={lesson?.next_id ?? null} onStudy={() => setTestOut(false)} />
-              : <Mission data={data} j={j} onTestOut={() => setTestOut(true)} />)}
+              : <Mission data={data} j={j} onTestOut={() => setTestOut(true)} onSprint={onSprint} />)}
             {card.kind === "content" && <ContentCard step={card.step} data={data} checklist={ps.state.checklist ?? {}} onChecklist={(c) => ps.update((s) => ({ ...s, checklist: c }))} />}
             {isQ(card) && (
               <div>
@@ -250,9 +250,10 @@ export function JourneySession({ unitId, data, lesson, onClassic }: { unitId: st
                 {card.kind === "pretest" && !result && <p className="mb-3 text-sm text-muted">Trả lời theo phỏng đoán. Bài học sẽ cho bạn biết vì sao — đoán trước giúp não chú ý hơn.</p>}
                 {card.intro && <ExerciseIntro md={card.intro} docPath={data.unit.path} />}
                 <ItemCard item={card.item} unitId={unitId} docPath={data.unit.path} draft={drafts[card.item.id]} onDraft={(d) => ps.setDraft(card.item.id, d)}
-                  result={result} locked={false} aiAuto={false} onSelfAssess={(ok) => void selfAssess(card, ok)} onRetry={() => ps.clearResult(card.item.id)} onEnter={() => void check(card)}
+                  result={result} locked={false} aiAuto={false} aiPending={!!aiPending[card.item.id]} onSelfAssess={(ok) => void selfAssess(card, ok)} onRetry={() => ps.clearResult(card.item.id)} onEnter={() => void check(card)}
                   onReveal={() => void reveal(card)} />
                 {result && !(good(result) && card.kind !== "pretest") && <p className="mt-2 text-sm text-muted">{good(result) ? "Đoán đúng! Xem bài để chắc chắn vì sao."
+                  : result.verdict === "mismatch" && aiPending[card.item.id] ? "AI đang chấm — bạn có thể bấm Tiếp, kết quả tự cập nhật."
                   : result.verdict === "mismatch" && result.ai_correct === false ? "AI chấm chưa đúng — đọc chỗ sai bên dưới; câu này sẽ được hỏi lại ở cuối bài."
                   : result.verdict === "mismatch" && result.self_correct === null ? "AI chưa chấm được — so sánh với đáp án: nếu đúng ý, bấm “Tôi làm đúng”; nếu không, câu này sẽ được hỏi lại ở cuối bài."
                   : result.verdict === "submitted" ? "Tự đánh giá câu trả lời của bạn rồi bấm Tiếp."
@@ -334,7 +335,7 @@ function ContentCard({ step, data, checklist, onChecklist }: { step: Step; data:
   );
 }
 
-function Mission({ data, j, onTestOut }: { data: StepsPayload; j: ReturnType<typeof buildJourney>; onTestOut: () => void }) {
+function Mission({ data, j, onTestOut, onSprint }: { data: StepsPayload; j: ReturnType<typeof buildJourney>; onTestOut: () => void; onSprint?: () => void }) {
   const intro = j.cards[0].kind === "mission" ? j.cards[0].intro : null;
   const content = j.cards.filter((c) => c.kind === "content").length;
   const pre = j.cards.filter((c) => c.kind === "pretest").length;
@@ -345,7 +346,8 @@ function Mission({ data, j, onTestOut }: { data: StepsPayload; j: ReturnType<typ
         <h2 className="mt-1 text-2xl font-bold">{data.unit.title}</h2>
         {data.unit.title_vi && <p className="text-muted">{data.unit.title_vi}</p>}
         <div className="mt-3 flex flex-wrap gap-2 text-sm">
-          {data.unit.minutes ? <Badge><CalendarClock size={12} />~{data.unit.minutes} phút</Badge> : null}
+          {data.unit.minutes ? <Badge title="Thời lượng giáo trình gợi ý cho việc học đầy đủ (giảng dạy + toàn bộ bài tập)"><CalendarClock size={12} />Học đầy đủ: ≈{data.unit.minutes} phút theo giáo trình</Badge> : null}
+          <Badge>{j.cards.length} màn</Badge>
           <Badge><ListChecks size={12} />{content} phần giải thích · {j.questionCount} câu hỏi</Badge>
           {j.skipped > 0 && <Badge tone="primary">Bài rút gọn: làm {j.questionCount - j.skipped} câu · {j.skipped} câu còn lại để lần ôn sau</Badge>}
         </div>
@@ -355,6 +357,13 @@ function Mission({ data, j, onTestOut }: { data: StepsPayload; j: ReturnType<typ
           <li key={t} className="rounded-2xl border border-border p-3"><p className="font-semibold">{t}</p><p className="text-xs text-muted">{d}</p></li>
         ))}
       </ol>
+      {onSprint && (
+        <div className="flex flex-wrap items-center gap-3 rounded-2xl border border-warning/40 bg-warning-soft/40 p-4">
+          <Zap size={18} className="text-warning" />
+          <p className="min-w-0 flex-1 text-sm"><b>Chỉ có 8–10 phút?</b> Sprint: cốt lõi trên một màn hình + 6 câu kiểm tra. Từ giờ bài ngữ pháp sẽ mở ở chế độ Sprint (đổi lại bất cứ lúc nào).</p>
+          <Button onClick={onSprint}><Zap size={16} />Sprint ≈8 phút</Button>
+        </div>
+      )}
       <div className="flex flex-wrap items-center gap-3 rounded-2xl border border-primary/30 p-4">
         <Rocket size={18} className="text-primary" />
         <p className="min-w-0 flex-1 text-sm"><b>Đã biết bài này?</b> Làm 8 câu kiểm tra nhanh — đúng 7/8 ngay lần đầu là vượt bài, sang bài tiếp theo.</p>

@@ -55,6 +55,22 @@ export function pickChallenge(rest: Q[], attempted: Set<string>, max: number): Q
 }
 
 export const STAGES = ["Hiểu", "Vận dụng", "Thử thách"];
+
+/** For a question shown on its own: the step's shared context (when it is more than an instruction) plus the
+ *  instruction of the question's own group — an exercise can have several groups ("Write negatives…", then
+ *  "Write Wh- questions…"), and the step intro only states the first one. */
+export function singleIntro(stepIntro: string, item: QuizItem): string {
+  const group = (item.group_md ?? "").trim();
+  const intro = stepIntro.trim();
+  if (!group) return intro;
+  const justAnInstruction = intro.length < 200 && !intro.includes("\n\n") && !intro.includes("|");
+  return !intro || justAnInstruction ? group : `${intro}\n\n**Yêu cầu:** ${group}`;
+}
+
+/** The same item without its own instruction line when that line is already shown as the group instruction. */
+export function withoutRepeatedInstruction(item: QuizItem): QuizItem {
+  return item.group_md && item.instruction_md.trim() === item.group_md.trim() ? { ...item, instruction_md: "" } : item;
+}
 const AUTO = new Set(["mc", "tfng", "choice", "multi", "order", "text"]);
 
 /** Instantly graded by the server (has a key) and quick to answer: suitable for checks and the pre-test. */
@@ -68,7 +84,8 @@ export function buildJourney(steps: Step[], opts: JourneyOptions = {}): Journey 
   const questions: { item: QuizItem; quizId: string; stepIndex: number; level: string; intro: string }[] = [];
   steps.forEach((s, i) => {
     if (s.type === "quiz" && s.quiz_id && !s.defer) {
-      (s.items ?? []).forEach((item) => questions.push({ item, quizId: s.quiz_id!, stepIndex: i, level: s.title, intro: s.intro_md ?? "" }));
+      (s.items ?? []).forEach((item) => questions.push({ item: withoutRepeatedInstruction(item), quizId: s.quiz_id!, stepIndex: i, level: s.title,
+                                                         intro: singleIntro(s.intro_md ?? "", item) }));
     }
   });
   const auto = questions.filter((q) => isAuto(q.item));

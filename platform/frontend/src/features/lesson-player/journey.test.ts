@@ -112,10 +112,42 @@ describe("grammar sprint", () => {
   });
   it("next lesson: the first one still to do after the current one", async () => {
     const { nextAfter } = await import("./SprintLesson");
-    const u = (id: string, status: "done" | "study" | "todo") => ({ id, title: id, level: "A1", status, minutes: 30, done_today: false });
+    const u = (id: string, status: "done" | "study" | "todo") => ({ id, title: id, level: "A1", status, minutes: 30, done_today: false, in_progress: false });
     const units = [u("A", "todo"), u("B", "done"), u("C", "todo"), u("D", "study"), u("E", "todo")];
     expect(nextAfter(units, "C")?.id).toBe("E");
     expect(nextAfter(units, "E")?.id).toBe("A");
     expect(nextAfter([u("A", "done")], "A")).toBeNull();
+    // the server queue continues from the lesson worked on last: C → E → A
+    expect(nextAfter(units, "C", ["C", "E", "A"])?.id).toBe("E");
+    expect(nextAfter(units, "E", ["C", "E", "A"])?.id).toBe("A");
+  });
+});
+
+describe("one question at a time keeps its own group instruction", () => {
+  it("A1-G002 L2.9 says 'Wh- questions', not the step intro 'negative sentences'", async () => {
+    const { singleIntro, withoutRepeatedInstruction } = await import("./journey");
+    const l29 = { ...item("L2.9", "text"), group_md: "Viết câu hỏi Wh- cho phần **in đậm**." };
+    expect(singleIntro("Viết câu phủ định.", l29)).toBe("Viết câu hỏi Wh- cho phần **in đậm**.");
+    const l21 = { ...item("L2.1", "text"), group_md: "" };
+    expect(singleIntro("Viết câu phủ định.", l21)).toBe("Viết câu phủ định.");
+    const passage = "Read the text.\n\n| a | b |";
+    expect(singleIntro(passage, l29)).toContain("Read the text.");
+    expect(singleIntro(passage, l29)).toContain("Wh-");
+    const first = { ...l29, instruction_md: "Viết câu hỏi Wh- cho phần **in đậm**." };
+    expect(withoutRepeatedInstruction(first).instruction_md).toBe("");
+  });
+});
+
+describe("sprint overview", () => {
+  it("Vietnamese name from the intro table, objectives and the WHAT section", async () => {
+    const { lessonOverview } = await import("./SprintLesson");
+    const steps = [{ ...step("i", "intro"), md: "| Mục | Nội dung |\n|---|---|\n| **Tên tiếng Việt** | Tính từ sở hữu, đại từ sở hữu và sở hữu cách |\n| **CEFR Level** | A1 |\n\n**Learning Objectives:**\n\n1. Dùng **my**.\n2. Dùng **mine**.\n\n**Tóm tắt:** x" },
+      { ...step("w", "concept"), title: "WHAT: Ba cách thể hiện sở hữu" }] as Step[];
+    const o = lessonOverview(steps, "Sở hữu trong tiếng Anh");
+    expect(o.nameVi).toBe("Tính từ sở hữu, đại từ sở hữu và sở hữu cách");
+    expect(o.objectives).toContain("1. Dùng **my**.");
+    expect(o.objectives).not.toContain("Tóm tắt");
+    expect(o.what?.id).toBe("w");
+    expect(lessonOverview([], "Sở hữu").nameVi).toBe("Sở hữu");
   });
 });

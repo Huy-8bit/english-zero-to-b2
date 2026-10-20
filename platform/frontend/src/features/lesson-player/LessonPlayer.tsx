@@ -6,8 +6,7 @@ import { lessonExitPath } from "@/lib/lessonExit";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { motion } from "motion/react";
 import {
-  ArrowLeft, ArrowRight, Bot, BookOpenText, Sparkles, CheckCircle2, ChevronLeft, Clock, Flag, Focus, List, NotebookPen, Trophy, X, Route,
-} from "lucide-react";
+  ArrowLeft, ArrowRight, Bot, BookOpenText, Sparkles, CheckCircle2, ChevronLeft, Clock, Flag, Focus, List, NotebookPen, Trophy, X, Route, Zap } from "lucide-react";
 import { api } from "@/services/api";
 import type { ItemResult, Step } from "@/types/content";
 import { Button } from "@/components/ui/button";
@@ -59,15 +58,18 @@ export default function LessonPlayer() {
   return <LessonModes key={unitId} unitId={unitId} />;
 }
 
-/** Journey view (one thing at a time, checks every few slides) by default; the full slide view stays available. */
+type Mode = "journey" | "classic" | "sprint";
+
+/** Journey view (one thing at a time, checks every few slides) by default; the full slide view stays available.
+ *  "sprint" (≈8 min: core on one screen + 6 questions) becomes the default for grammar lessons once chosen. */
 function LessonModes({ unitId }: { unitId: string }) {
   const [sp, setSp] = useSearchParams();
   const storage = safeStorage();
   const forced = sp.get("mode");
-  const [pref, setPref] = useState<"journey" | "classic">(() => (forced === "classic" || forced === "journey" ? forced : storage.get(MODE_KEY, "journey")));
+  const [pref, setPref] = useState<Mode>(() => (forced === "classic" || forced === "journey" || forced === "sprint" ? forced : storage.get<Mode>(MODE_KEY, "journey")));
   const steps = useQuery({ queryKey: ["steps", unitId], queryFn: () => api.steps(unitId), staleTime: Infinity, gcTime: 0 });
   const lesson = useQuery({ queryKey: ["lesson", unitId], queryFn: () => api.lesson(unitId) });
-  const choose = (m: "journey" | "classic") => {
+  const choose = (m: Mode) => {
     storage.set(MODE_KEY, m);
     setPref(m);
     if (sp.get("mode")) { sp.delete("mode"); setSp(sp, { replace: true }); }
@@ -75,16 +77,18 @@ function LessonModes({ unitId }: { unitId: string }) {
   if (steps.isLoading) return <div className="mx-auto max-w-3xl space-y-4 p-6"><Skeleton className="h-8 w-2/3" /><Skeleton className="h-72" /></div>;
   if (!steps.data) return <LessonSession unitId={unitId} />; // shows the load error with retry
   const can = journeyApplies(steps.data.unit.kind, steps.data.steps);
-  if (forced === "sprint" && steps.data.unit.kind === "grammar") {
-    return <SprintLesson unitId={unitId} data={steps.data} lesson={lesson.data} />;
+  const grammar = steps.data.unit.kind === "grammar";
+  if (pref === "sprint" && grammar) {
+    return <SprintLesson unitId={unitId} data={steps.data} lesson={lesson.data} onFull={() => choose(can ? "journey" : "classic")} />;
   }
-  if (pref === "journey" && can) {
-    return <JourneySession unitId={unitId} data={steps.data} lesson={lesson.data} onClassic={() => choose("classic")} />;
+  const onSprint = grammar ? () => choose("sprint") : undefined;
+  if ((pref === "journey" || pref === "sprint") && can) {
+    return <JourneySession unitId={unitId} data={steps.data} lesson={lesson.data} onClassic={() => choose("classic")} onSprint={onSprint} />;
   }
-  return <LessonSession unitId={unitId} onJourney={can ? () => choose("journey") : undefined} />;
+  return <LessonSession unitId={unitId} onJourney={can ? () => choose("journey") : undefined} onSprint={onSprint} />;
 }
 
-function LessonSession({ unitId, onJourney }: { unitId: string; onJourney?: () => void }) {
+function LessonSession({ unitId, onJourney, onSprint }: { unitId: string; onJourney?: () => void; onSprint?: () => void }) {
   const nav = useNavigate();
   const qc = useQueryClient();
   const { focusMode, setFocusMode } = useUI();
@@ -244,6 +248,7 @@ function LessonSession({ unitId, onJourney }: { unitId: string; onJourney?: () =
           </div>
           <div className="flex items-center">
             {!focusMode && <Button variant="ghost" size="icon" onClick={() => setOutline(true)} aria-label="Danh sách slide" className={tutorOpen ? "2xl:hidden" : "lg:hidden"}><List size={18} /></Button>}
+            {onSprint && <Button variant="ghost" size="sm" onClick={onSprint} aria-label="Sprint ≈8 phút" title="Sprint ≈8 phút: cốt lõi trên một màn hình + 6 câu kiểm tra"><Zap size={18} /><span className="hidden md:inline">Sprint</span></Button>}
             {onJourney && <Button variant="ghost" size="sm" onClick={onJourney} aria-label="Chế độ hành trình" title="Chế độ hành trình: từng bước, có kiểm tra xen kẽ"><Route size={18} /><span className="hidden md:inline">Hành trình</span></Button>}
             <Button variant="ghost" size="icon" onClick={() => setNotes(true)} aria-label="Ghi chú"><NotebookPen size={18} /></Button>
             <Button ref={tutorTrigger} variant={tutorOpen ? "secondary" : "ghost"} size="sm" onClick={() => setTutorOpen((open) => !open)} aria-expanded={tutorOpen} aria-controls="lesson-tutor" aria-label="Hỏi AI về bài này" title="Ask AI / Giải thích với AI"><Bot size={18} /><span className={tutorOpen ? "hidden 2xl:inline" : "hidden md:inline"}>Hỏi AI</span></Button>

@@ -11,16 +11,34 @@ import { cn } from "@/lib/utils";
 import { lessonExitPath } from "@/lib/lessonExit";
 import { api, type GrammarSprint, type SprintUnit } from "@/services/api";
 import type { LessonDetail, Step, StepsPayload } from "@/types/content";
+import { Markdown } from "@/components/Markdown";
 import { ConceptSlide, FormulaSlide, MistakesSlide } from "./slides";
 import { TestOut, type TestOutResult } from "./TestOut";
 import { dailyTarget, getCombo, loadPlan, setCombo } from "./sprintPlan";
 
 const TARGET_SECONDS = 8 * 60;
 
-/** The next lesson to sprint: the first one still to do after this lesson in route order (then any earlier one). */
-export function nextAfter(units: SprintUnit[], id: string): SprintUnit | null {
+/** The next lesson to sprint: the one after this lesson in the server's queue (which continues from the lesson
+ *  worked on last), else the first one still to do after it in route order. */
+export function nextAfter(units: SprintUnit[], id: string, queue: string[] = []): SprintUnit | null {
+  const byId = new Map(units.map((u) => [u.id, u]));
+  const q = queue.filter((x) => x !== id && byId.get(x)?.status === "todo");
+  const at = queue.indexOf(id);
+  const fromQueue = at >= 0 ? queue.slice(at + 1).find((x) => x !== id && byId.get(x)?.status === "todo") : q[0];
+  if (fromQueue) return byId.get(fromQueue) ?? null;
   const i = units.findIndex((u) => u.id === id);
   return units.slice(i + 1).find((u) => u.status === "todo") ?? units.slice(0, Math.max(0, i)).find((u) => u.status === "todo") ?? null;
+}
+
+/** What the lesson is about, from its intro table and its WHAT section: the Vietnamese name, the objectives and the
+ *  main idea (e.g. "three ways to show possession"). */
+export function lessonOverview(steps: Step[], titleVi?: string | null) {
+  const intro = steps.find((s) => s.type === "intro")?.md ?? "";
+  const nameVi = /\|\s*\*\*Tên tiếng Việt\*\*\s*\|\s*([^|\n]+?)\s*\|/.exec(intro)?.[1] || titleVi || "";
+  const after = intro.split(/\*\*(?:Learning Objectives|Mục tiêu[^*:]*):?\*\*:?/i)[1] ?? "";
+  const objectives = after.split(/\n\s*\n(?=\*\*|#|>|---)/)[0].trim();
+  const what = steps.find((s) => s.type === "concept" && /^(WHAT|Khái niệm|Là gì)\b/i.test(s.title)) ?? null;
+  return { nameVi, objectives, what };
 }
 
 /** The core of a grammar lesson on one wide screen: form, short summary, common mistakes, memory tip. */
@@ -44,7 +62,7 @@ function Clock({ start }: { start: number }) {
     <Timer size={14} />{String(Math.floor(s / 60)).padStart(2, "0")}:{String(s % 60).padStart(2, "0")}</span>;
 }
 
-export function SprintLesson({ unitId, data, lesson }: { unitId: string; data: StepsPayload; lesson?: LessonDetail & { next_id?: string | null } }) {
+export function SprintLesson({ unitId, data, lesson, onFull }: { unitId: string; data: StepsPayload; lesson?: LessonDetail & { next_id?: string | null }; onFull?: () => void }) {
   const nav = useNavigate();
   const qc = useQueryClient();
   const fire = useCelebrate((s) => s.fire);
@@ -54,8 +72,9 @@ export function SprintLesson({ unitId, data, lesson }: { unitId: string; data: S
   const [start] = useState(Date.now());
   const [combo, setComboState] = useState(getCombo());
   const core = useMemo(() => coreSteps(data.steps), [data.steps]);
+  const overview = useMemo(() => lessonOverview(data.steps, data.unit.title_vi), [data.steps, data.unit.title_vi]);
   const s = sprint.data;
-  const next = s ? nextAfter(s.units, unitId) : null;
+  const next = s ? nextAfter(s.units, unitId, s.queue) : null;
   const day = s ? dailyTarget(loadPlan(), s.remaining, s.today) : null;
   const goNext = () => nav(next ? `/learn/${next.id}?mode=sprint` : "/grammar-sprint");
 
@@ -93,6 +112,7 @@ export function SprintLesson({ unitId, data, lesson }: { unitId: string; data: S
             {combo > 0 && <span className="inline-flex items-center gap-1 font-semibold text-warning" title="Số bài qua liên tiếp"><Flame size={15} />{combo}</span>}
             {s && day && <span className="tabular-nums text-muted" title="Bài ngữ pháp đã qua hôm nay / mục tiêu hôm nay">Hôm nay <b className="text-fg">{s.today}</b>/{day.target}</span>}
             {s && <span className="hidden tabular-nums text-muted md:inline">Tổng {s.done}/{s.total}</span>}
+            {onFull && <Button size="sm" variant="ghost" onClick={onFull} title="Bài ngữ pháp sẽ mở ở chế độ học đầy đủ (Hành trình)"><BookOpenText size={15} />Học đầy đủ</Button>}
           </span>
         </div>
         {s && <Progress className="h-1 rounded-none" value={(100 * s.done) / s.total} label={`Đã qua ${s.done}/${s.total} bài ngữ pháp`} />}
@@ -107,6 +127,25 @@ export function SprintLesson({ unitId, data, lesson }: { unitId: string; data: S
 
         {phase === "core" && (
           <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="space-y-5">
+            <section className="rounded-3xl border border-primary/30 bg-gradient-to-br from-primary-soft/60 to-surface p-5 sm:p-6" aria-label="Bài này học gì" data-testid="sprint-overview">
+              <p className="text-xs font-semibold uppercase tracking-wider text-primary">🎯 Bài này học gì</p>
+              {overview.nameVi && <h2 className="mt-1 text-2xl font-bold sm:text-3xl">{overview.nameVi}</h2>}
+              <p className="text-muted">{data.unit.title}</p>
+              <div className={cn("mt-4 grid grid-cols-1 gap-5", overview.what && overview.objectives && "xl:grid-cols-2")}>
+                {overview.objectives && (
+                  <div className="text-[16px] xl:text-[17px]">
+                    <p className="mb-1 text-sm font-semibold">Học xong bạn sẽ:</p>
+                    <Markdown docPath={data.unit.path}>{overview.objectives}</Markdown>
+                  </div>
+                )}
+                {overview.what && (
+                  <div className="text-[16px] xl:text-[17px]">
+                    <p className="mb-1 text-sm font-semibold">Ý chính: {overview.what.title.replace(/^WHAT:\s*/i, "")}</p>
+                    <ConceptSlide step={overview.what} docPath={data.unit.path} />
+                  </div>
+                )}
+              </div>
+            </section>
             <div className="grid grid-cols-1 gap-5 xl:grid-cols-2">
               <section className="rounded-3xl border border-border bg-surface p-5 text-[16px] sm:p-6 xl:text-[17px]" aria-label="Công thức">
                 <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-primary">📐 Công thức</p>
