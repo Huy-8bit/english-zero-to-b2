@@ -60,3 +60,15 @@ test("sprint becomes the default for grammar lessons: from the journey mission, 
   await page.goto("/learn/A1-G008");
   await expect(page.getByText("📐 Công thức")).toBeVisible();
 });
+
+test("a lesson not passed can be checked again right away; 'Học đầy đủ' leaves the sprint screen", async ({ page }) => {
+  await page.goto("/learn/A1-G010?mode=sprint");
+  for (let round = 0; round < 2; round++) {
+    await page.getByRole("button", { name: /Đã nắm — kiểm tra 6 câu/ }).click();
+    await expect(page.getByTestId("test-out").getByText(/Câu 1\/6/)).toBeVisible(); // no "once per 24 h" refusal
+    await page.goto("/learn/A1-G010?mode=sprint");
+  }
+  await page.getByRole("link", { name: /Học đầy đủ bài này/ }).click();
+  await expect(page).toHaveURL(/mode=journey/);
+  await expect(page.getByText("Nhiệm vụ hôm nay")).toBeVisible();
+});

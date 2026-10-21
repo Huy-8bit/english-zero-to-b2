@@ -1,5 +1,8 @@
 # Sprint fixes from use — 2026-10-20
 
+- **Test-out/sprint check without a 24 h limit (learner's request).** A retake prefers questions not used in earlier attempts; a lesson stays in "Cần học kỹ" until passed. Test: `test_test_out_retake_prefers_new_questions`.
+- **"Học bài" from a sprint stayed on the sprint screen.** The player is now keyed by lesson and `?mode=`.
+
 | Issue reported | Cause | Fix | Evidence |
 |---|---|---|---|
 | A lesson showed "-75 phút" and 35 screens when 8–10 min was expected | The lesson had opened in the journey (full study) view. Sprint ran only when opened from the sprint page. The badge showed the curriculum's full-study time, and its "~" read as a minus. | Sprint is a lesson mode: it becomes the default for grammar once chosen (sprint page plan, mission card, header button). "Học đầy đủ" switches back. The badge now reads "Học đầy đủ: ≈75 phút theo giáo trình" plus the screen count. Every visible "~" became "≈". | E2E "sprint becomes the default…" |

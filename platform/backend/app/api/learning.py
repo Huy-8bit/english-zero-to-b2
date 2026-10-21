@@ -230,8 +230,6 @@ def test_out_start(unit_id: str, size: int = 8, db: Session = Depends(get_db), s
         return test_out.start(db, user, store, unit_id, size=size)
     except ValueError as e:
         raise HTTPException(422, str(e)) from None
-    except PermissionError as e:
-        raise HTTPException(429, str(e)) from None
 
 
 @router.post("/lessons/{unit_id}/test-out/{test_id}/finish")

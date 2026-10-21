@@ -240,7 +240,8 @@ def test_test_out_passes_from_first_answers_and_completes_the_lesson(client, sto
     assert r["passed"] and r["correct"] == r["total"] and r["xp_gained"] == 50
     p = next(x for x in client.get("/api/progress").json() if x["unit_id"] == "A1-G001")
     assert p["status"] == "completed"
-    assert client.post("/api/lessons/A1-G001/test-out").status_code == 429  # once per 24 h
+    again = client.post("/api/lessons/A1-G001/test-out").json()  # no waiting period
+    assert again["test_id"] != t["test_id"]
 
 
 def test_test_out_failed_keeps_the_lesson_open(client, store):
@@ -310,3 +311,14 @@ def test_each_question_carries_its_group_instruction(client):
     assert l2["intro_md"].startswith("Viết câu phủ định")
     assert by["A1-G002:L2.1"]["group_md"] == ""  # first group → the step intro
     assert "Yes/No" in by["A1-G002:L2.5"]["group_md"] and "Wh-" in by["A1-G002:L2.9"]["group_md"]
+
+
+
+def test_test_out_retake_prefers_new_questions(client, store):
+    first = client.post("/api/lessons/A1-G003/test-out?size=6").json()
+    for i in first["items"]:
+        _answer(client, store, i, right=False)
+    client.post(f"/api/lessons/A1-G003/test-out/{first['test_id']}/finish")
+    retake = client.post("/api/lessons/A1-G003/test-out?size=6").json()
+    assert retake["test_id"] != first["test_id"]
+    assert len(set(retake["items"]) & set(first["items"])) < len(first["items"])  # mostly other questions

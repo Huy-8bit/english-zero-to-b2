@@ -237,7 +237,7 @@ Nội dung giáo trình giữ nguyên. Nút 📖 (hoặc `?mode=classic`) mở l
 Đi qua toàn bộ 128 bài ngữ pháp A0→B2 trong vài ngày (chọn 3, 4 hoặc 7 ngày; mục tiêu mỗi ngày = số bài còn lại ÷ số ngày còn lại):
 1. **Cốt lõi trên một màn hình** (≈3 phút): bảng công thức, tóm tắt các điểm chính, lỗi hay gặp, mẹo ghi nhớ.
 2. **Kiểm tra 6 câu** do server chọn và chấm từ câu trả lời đầu tiên; đúng 5/6 → bài được tính là hoàn thành.
-3. **Qua bài → Enter sang bài tiếp.** Chưa qua → bài vào danh sách “Cần học kỹ” (học đầy đủ ở chế độ Hành trình), sprint đi tiếp.
+3. **Qua bài → Enter sang bài tiếp.** Chưa qua → bài vào danh sách “Cần học kỹ” (học đầy đủ ở chế độ Hành trình, hoặc kiểm tra lại ngay — câu hỏi mới được ưu tiên), sprint đi tiếp.
 
 Đồng hồ ≈8 phút mỗi bài, chuỗi bài qua liên tiếp 🔥, số bài hôm nay / mục tiêu, tiến độ theo cấp. Sprint giúp đi qua và tìm chỗ hổng nhanh; nhớ lâu vẫn cần ôn theo lịch và học kỹ những bài chưa qua.
 
@@ -245,7 +245,7 @@ Bài học hiển thị rộng hơn trên màn hình lớn (tới 1440 px), ch�
 
 ## Bài học nhanh hơn (2026-10-20)
 
-- **Kiểm tra vượt bài:** ở màn “Nhiệm vụ hôm nay” của mỗi bài. Server chọn khoảng 8 câu (ưu tiên câu chấm chính xác được), chấm từ câu trả lời *đầu tiên* sau khi bắt đầu. Đúng 7/8 → bài được tính là hoàn thành (vẫn được hẹn ôn lại); chưa đủ → học bài. Không có gợi ý/xem đáp án trong lúc kiểm tra; mỗi bài một lần mỗi 24 giờ.
+- **Kiểm tra vượt bài:** ở màn “Nhiệm vụ hôm nay” của mỗi bài. Server chọn khoảng 8 câu (ưu tiên câu chấm chính xác được), chấm từ câu trả lời *đầu tiên* sau khi bắt đầu. Đúng 7/8 → bài được tính là hoàn thành (vẫn được hẹn ôn lại); chưa đủ → học bài. Không có gợi ý/xem đáp án trong lúc kiểm tra. Làm lại được bất cứ lúc nào; lần làm lại ưu tiên câu chưa hỏi ở các lần trước.
 - **Bài rút gọn:** chặng Thử thách giữ tối đa 12 câu, rải đều các bài tập trong bài, câu chưa từng làm trước. Số câu còn lại được ghi trên màn Nhiệm vụ và sẽ gặp ở lần ôn sau.
 - **Lịch 4 giờ cân lại:** bài học + ôn lỗi ≈ 52 %, viết 25 phút + nói 25 phút (trước đây 30 phút chung), từ vựng ≈ 19 %, nghe/đọc ≈ 8 %.
 

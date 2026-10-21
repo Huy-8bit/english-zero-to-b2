@@ -53,9 +53,10 @@ const MODE_KEY = "em-lesson-mode";
 
 export default function LessonPlayer() {
   const { unitId = "" } = useParams();
-  // React Router reuses this route when only the ID changes. Each lesson needs its
-  // own drafts, save timer and completion state; unmount flushes the previous one.
-  return <LessonModes key={unitId} unitId={unitId} />;
+  const [sp] = useSearchParams();
+  // React Router reuses this route when only the ID (or ?mode=) changes. Each lesson needs its own drafts, save timer
+  // and completion state; unmount flushes the previous one. A new ?mode= (e.g. "Học bài" from a sprint) must switch view.
+  return <LessonModes key={`${unitId}:${sp.get("mode") ?? ""}`} unitId={unitId} />;
 }
 
 type Mode = "journey" | "classic" | "sprint";

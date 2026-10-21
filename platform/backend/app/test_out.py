@@ -1,8 +1,9 @@
 """'Kiểm tra vượt bài' (lesson test-out): a learner who already knows a lesson proves it in about 8 questions and moves on.
 
 Integrity: the server picks the questions and grades them from the learner's FIRST answer to each one after the test
-started (normal quiz submissions; "Không biết" counts as wrong). One test-out per lesson per 24 h, so it cannot be
-retaken until the answers are memorised. Exams are excluded.
+started (normal quiz submissions; "Không biết" counts as wrong). It can be retaken at any time (the learner asked for
+no waiting period); a retake picks questions not used in earlier attempts first, so passing needs more than
+remembering the last answers. Exams are excluded.
 """
 from __future__ import annotations
 
@@ -19,7 +20,6 @@ from .services.grading import answer_variants
 
 SIZE = 8  # "Kiểm tra vượt bài"; the grammar sprint uses 6
 CLOSED = {"mc", "tfng", "choice", "multi", "order"}
-COOLDOWN = timedelta(hours=24)
 
 
 def pass_mark(total: int) -> int:
@@ -52,12 +52,12 @@ def start(db: Session, user: User, store: ContentStore, unit_id: str, size: int 
     cands = _candidates(store, unit_id)
     if len(cands) < 5:
         raise ValueError("Bài này không có đủ câu tự chấm để kiểm tra vượt bài.")
-    last = db.scalar(select(LessonTestOut).where(LessonTestOut.user_id == user.id, LessonTestOut.unit_id == unit_id)
-                     .order_by(LessonTestOut.id.desc()))
-    if last is not None and utcnow() - last.started_at < COOLDOWN:
-        if last.finished_at is None:  # resume the unfinished one
-            return {"test_id": last.id, "items": last.items, "pass_mark": pass_mark(len(last.items))}
-        raise PermissionError("Mỗi bài chỉ kiểm tra vượt bài một lần mỗi 24 giờ — hãy học bài để lấp phần còn thiếu.")
+    earlier = list(db.scalars(select(LessonTestOut).where(LessonTestOut.user_id == user.id, LessonTestOut.unit_id == unit_id)
+                              .order_by(LessonTestOut.id.desc())))
+    last = earlier[0] if earlier else None
+    if last is not None and last.finished_at is None and utcnow() - last.started_at < timedelta(hours=2):
+        return {"test_id": last.id, "items": last.items, "pass_mark": pass_mark(len(last.items))}  # resume the unfinished one
+    used = {i for t in earlier for i in t.items}
     rng = random.Random()
     # spread over the lesson's exercises; closed questions (exact grading) first, typed ones to fill up
     by_step: dict[int, list[tuple[int, str, str]]] = {}
@@ -65,7 +65,7 @@ def start(db: Session, user: User, store: ContentStore, unit_id: str, size: int 
         by_step.setdefault(c[0], []).append(c)
     for v in by_step.values():
         rng.shuffle(v)
-        v.sort(key=lambda c: c[2] != "closed")
+        v.sort(key=lambda c: (c[1] in used, c[2] != "closed"))  # questions not asked before first
     picked: list[str] = []
     while len(picked) < size and any(by_step.values()):
         for k in list(by_step):
@@ -146,7 +146,7 @@ def sprint_overview(db: Session, user: User, store: ContentStore) -> dict:
         p, t = prog.get(u.id), tests.get(u.id)
         if p and p.completed_at and p.status == "completed":
             status = "done"
-        elif (p and p.completed_at and p.status == "review") or (t and t.finished_at and not t.passed and utcnow() - t.started_at < COOLDOWN):
+        elif (p and p.completed_at and p.status == "review") or (t and t.finished_at and not t.passed):
             status = "study"
         else:
             status = "todo"
