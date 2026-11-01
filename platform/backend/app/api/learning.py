@@ -232,6 +232,17 @@ def test_out_start(unit_id: str, size: int = 8, db: Session = Depends(get_db), s
         raise HTTPException(422, str(e)) from None
 
 
+@router.get("/lessons/{unit_id}/quick-check")
+def quick_check(unit_id: str, size: int = 3, store: ContentStore = Depends(get_store), user: User = Depends(current_user)):
+    """'Ngữ pháp 1 đêm': a few one-click questions picked by the server; answered with the normal quiz endpoint."""
+    from .. import test_out
+
+    b = store.built(unit_id)
+    if b is None or b.unit.kind == "exam":
+        raise HTTPException(404, "Lesson not found")
+    return {"items": test_out.quick_check(store, unit_id, size=max(1, min(size, 6)))}
+
+
 @router.post("/lessons/{unit_id}/test-out/{test_id}/finish")
 def test_out_finish(unit_id: str, test_id: int, db: Session = Depends(get_db), store: ContentStore = Depends(get_store),
                     user: User = Depends(current_user)):

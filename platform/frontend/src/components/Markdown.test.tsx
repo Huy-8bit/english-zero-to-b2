@@ -6,6 +6,7 @@ describe("intraword bold with an apostrophe (curriculum style)", () => {
   it("moves the apostrophe outside the bold so it renders", () => {
     expect(fixIntrawordBold("*my sister**'s** room, Nam**'s** car*")).toBe("*my sister'**s** room, Nam'**s** car*");
     expect(fixIntrawordBold("I**'m** happy; the students**'** books")).toBe("I'**m** happy; the students' books");
+    expect(fixIntrawordBold("*I**'ve found** a job.* It**'s** fine. **He** left")).toBe("*I'**ve found** a job.* It'**s** fine. **He** left");
   });
   it("renders without literal asterisks", () => {
     const { container } = render(<Markdown>{"| a |\n|---|\n| *my sister**'s** room* |"}</Markdown>);

@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { Eye, RotateCcw } from "lucide-react";
 import type { ItemResult, QuizItem } from "@/types/content";
+import { NoExampleVi } from "@/components/ExampleVi";
 import { InlineMd, Markdown } from "@/components/Markdown";
 import { Input, Textarea } from "@/components/ui/misc";
 import { cn } from "@/lib/utils";
@@ -49,29 +50,31 @@ export function ItemCard({ item, unitId, docPath, draft, onDraft, result, locked
   const disabled = locked || !!result;
   const showPrompt = item.kind !== "long" || item.prompt_md.length < 1200;
   return (
-    <div className="rounded-2xl border border-border bg-surface p-4" data-item={item.id}>
-      {(item.instruction_md || (single && item.group_md)) && <Markdown docPath={docPath} className="mb-2 text-sm text-muted">{item.instruction_md || item.group_md!}</Markdown>}
-      <div className="flex items-start gap-2">
-        <span className="mt-0.5 shrink-0 rounded-lg bg-primary-soft px-2 py-0.5 text-xs font-semibold text-primary">{item.label}</span>
-        <div className="min-w-0 flex-1">
-          {showPrompt ? <Markdown docPath={docPath} className="text-[15px]">{item.prompt_md || "(xem hướng dẫn phía trên)"}</Markdown>
-            : <details><summary className="cursor-pointer text-sm text-primary">Xem đề bài</summary><Markdown docPath={docPath}>{item.prompt_md}</Markdown></details>}
+    <NoExampleVi>
+      <div className="rounded-2xl border border-border bg-surface p-4" data-item={item.id}>
+        {(item.instruction_md || (single && item.group_md)) && <Markdown docPath={docPath} className="mb-2 text-sm text-muted">{item.instruction_md || item.group_md!}</Markdown>}
+        <div className="flex items-start gap-2">
+          <span className="mt-0.5 shrink-0 rounded-lg bg-primary-soft px-2 py-0.5 text-xs font-semibold text-primary">{item.label}</span>
+          <div className="min-w-0 flex-1">
+            {showPrompt ? <Markdown docPath={docPath} className="text-[15px]">{item.prompt_md || "(xem hướng dẫn phía trên)"}</Markdown>
+              : <details><summary className="cursor-pointer text-sm text-primary">Xem đề bài</summary><Markdown docPath={docPath}>{item.prompt_md}</Markdown></details>}
+          </div>
+          {(item.kind === "mc" || item.kind === "text" || item.kind === "choice") && item.prompt_md.length < 200 && /[a-z]{3}/i.test(item.prompt_md) && (
+            <SpeakButton text={item.prompt_md.replace(/_{2,}/g, "blank")} label="Nghe câu hỏi" />
+          )}
         </div>
-        {(item.kind === "mc" || item.kind === "text" || item.kind === "choice") && item.prompt_md.length < 200 && /[a-z]{3}/i.test(item.prompt_md) && (
-          <SpeakButton text={item.prompt_md.replace(/_{2,}/g, "blank")} label="Nghe câu hỏi" />
+        <div className="mt-3">
+          <Answer item={item} unitId={unitId} draft={draft} onDraft={onDraft} disabled={disabled} result={result} onEnter={onEnter} />
+        </div>
+        {!result && !locked && onReveal && <QuizHelpButton key={item.id} itemId={item.id} />}
+        {!result && !locked && onReveal && (
+          <button type="button" onClick={onReveal} className="mt-2 inline-flex items-center gap-1.5 text-xs font-medium text-muted hover:text-primary">
+            <Eye size={14} />Không biết — xem đáp án
+          </button>
         )}
+        {result && <ResultPanel key={result.attempt_id} result={result} docPath={docPath} onSelfAssess={onSelfAssess} onRetry={locked ? undefined : onRetry} aiAuto={aiAuto} aiPending={aiPending} />}
       </div>
-      <div className="mt-3">
-        <Answer item={item} unitId={unitId} draft={draft} onDraft={onDraft} disabled={disabled} result={result} onEnter={onEnter} />
-      </div>
-      {!result && !locked && onReveal && <QuizHelpButton key={item.id} itemId={item.id} />}
-      {!result && !locked && onReveal && (
-        <button type="button" onClick={onReveal} className="mt-2 inline-flex items-center gap-1.5 text-xs font-medium text-muted hover:text-primary">
-          <Eye size={14} />Không biết — xem đáp án
-        </button>
-      )}
-      {result && <ResultPanel key={result.attempt_id} result={result} docPath={docPath} onSelfAssess={onSelfAssess} onRetry={locked ? undefined : onRetry} aiAuto={aiAuto} aiPending={aiPending} />}
-    </div>
+    </NoExampleVi>
   );
 }
 

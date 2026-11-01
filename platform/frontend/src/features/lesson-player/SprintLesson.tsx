@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { motion } from "motion/react";
 import { ArrowRight, BookOpenText, Flame, Rocket, Timer, Trophy, X, Zap } from "lucide-react";
+import { ViToggle } from "@/components/ExampleVi";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
@@ -112,6 +113,7 @@ export function SprintLesson({ unitId, data, lesson, onFull }: { unitId: string;
             {combo > 0 && <span className="inline-flex items-center gap-1 font-semibold text-warning" title="Số bài qua liên tiếp"><Flame size={15} />{combo}</span>}
             {s && day && <span className="tabular-nums text-muted" title="Bài ngữ pháp đã qua hôm nay / mục tiêu hôm nay">Hôm nay <b className="text-fg">{s.today}</b>/{day.target}</span>}
             {s && <span className="hidden tabular-nums text-muted md:inline">Tổng {s.done}/{s.total}</span>}
+            <ViToggle />
             {onFull && <Button size="sm" variant="ghost" onClick={onFull} title="Bài ngữ pháp sẽ mở ở chế độ học đầy đủ (Hành trình)"><BookOpenText size={15} />Học đầy đủ</Button>}
           </span>
         </div>

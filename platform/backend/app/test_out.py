@@ -119,6 +119,35 @@ def _result(t: LessonTestOut) -> dict:
     return {"test_id": t.id, "passed": bool(t.passed), "correct": t.correct, "total": t.total, "pass_mark": pass_mark(t.total or len(t.items))}
 
 
+
+# ------------------------------------------------------------------ grammar in one night
+SINGLE_CHOICE = {"mc", "tfng", "choice"}
+
+
+def quick_check(store: ContentStore, unit_id: str, size: int = 3) -> list[str]:
+    """'Ngữ pháp 1 đêm': a few one-click questions (single choice with a key), spread over the lesson's exercises.
+
+    Nothing is recorded here: the learner answers with the normal quiz endpoint and the lesson is not completed by it
+    (a reading pass, not a test-out). Fewer (or none) when the lesson has no such questions.
+    """
+    b = store.built(unit_id)
+    by_step: dict[int, list[str]] = {}
+    for i, item_id, _ in _candidates(store, unit_id):
+        if b.items[item_id].kind in SINGLE_CHOICE:
+            by_step.setdefault(i, []).append(item_id)
+    rng = random.Random()
+    groups = list(by_step.values())
+    for g in groups:
+        rng.shuffle(g)
+    rng.shuffle(groups)
+    picked: list[str] = []
+    while len(picked) < size and any(groups):
+        for g in groups:
+            if g and len(picked) < size:
+                picked.append(g.pop(0))
+    return picked
+
+
 # ------------------------------------------------------------------ grammar sprint
 LEVEL_ORDER = ["A0", "A1", "A2", "B1", "B2"]
 

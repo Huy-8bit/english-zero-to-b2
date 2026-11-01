@@ -241,6 +241,32 @@ Nội dung giáo trình giữ nguyên. Nút 📖 (hoặc `?mode=classic`) mở l
 
 Đồng hồ ≈8 phút mỗi bài, chuỗi bài qua liên tiếp 🔥, số bài hôm nay / mục tiêu, tiến độ theo cấp. Sprint giúp đi qua và tìm chỗ hổng nhanh; nhớ lâu vẫn cần ôn theo lịch và học kỹ những bài chưa qua.
 
+## Bản dịch câu ví dụ
+
+Câu ví dụ tiếng Anh in nghiêng trong bài (bảng công thức, so sánh, WHAT, đoạn giải thích) và các câu hội thoại có thêm một dòng tiếng Việt ngay bên dưới. Nút **Dịch ví dụ / Ẩn dịch** trên đầu bài bật/tắt bản dịch cho mọi chế độ học. Bản dịch không hiện trong bài tập. Câu sai mà bài cố ý đưa ra để minh hoạ lỗi được ghi là “✗ câu sai — ý định nói: …”.
+
+Giáo trình Markdown giữ nguyên. Bản dịch nằm trong `backend/app/content/data/example_vi.json` và đi kèm từng bài qua `example_vi` của `/api/lessons/{id}/steps`. Câu ví dụ được lấy bằng đúng bộ phân tích Markdown dùng để hiển thị bài (`frontend/src/lib/exampleExtract.ts`), nên khoá tra cứu luôn khớp. Khi giáo trình thay đổi, chạy lại 3 lệnh; chỉ những câu chưa có bản dịch mới được gửi cho AI (`OPENAI_MODEL_EXERCISE`):
+
+```bash
+cd platform/backend
+.venv/bin/python -m app.content.example_vi dump /tmp/lessons.json
+node ../frontend/scripts/example-sentences.ts /tmp/lessons.json /tmp/examples.json
+.venv/bin/python -m app.content.example_vi translate /tmp/examples.json   # lưu sau mỗi lô; chạy lại để dịch nốt
+.venv/bin/python -m app.content.example_vi status
+```
+
+## Ngữ pháp 1 đêm (`/grammar-night`)
+
+Lượt đọc tổng quan toàn bộ ngữ pháp trong một đêm. Chọn 4, 6, 8 hoặc 10 giờ, và chỉ đọc các bài chưa qua hoặc đọc cả 128 bài. Ví dụ 128 bài trong 8 giờ là ≈3½ phút mỗi bài, đã trừ 5 phút nghỉ sau mỗi 50 phút học. Mỗi bài là một vòng nhớ, xây trên các hiệu ứng ghi nhớ đã được nghiên cứu:
+1. **⏪ Nhớ lại bài cũ** (từ bài thứ 4): một câu từ bài đã đọc. Câu từng sai mà đến hạn được hỏi trước. Câu sai quay lại sau 2 bài, đúng thì hỏi lại lần nữa sau ~7 bài, đúng tiếp thì tính là “đã cứu lại”. Đây là nhớ lại giãn cách và xen kẽ.
+2. **🎯 Đoán** (pretest): một câu trắc nghiệm trước khi học. App chỉ báo đúng/sai, không lộ đáp án; câu này được ghim trên đầu bài để bạn vừa đọc vừa tìm đáp án.
+3. **📖 Học từng thẻ ngắn:** 💡 Hiểu (WHAT) → 📐 Công thức → 🧠 Mẹo nhớ (đọc to) → ⚠️ Bẫy. Ở thẻ Bẫy, câu sai hiện trước; bạn tự sửa trong đầu rồi mới lật câu đúng (có nút nghe). Chữ đậm được tô như bút dạ, dạng sai gạch đỏ. Enter / → đi tiếp, ← quay lại.
+4. **✍️ Nhớ lại không xem bài:** câu đoán lúc đầu và 2 câu mới. Bấm đáp án hoặc phím 1–4 là chấm ngay, có giải thích. Sai không bị chặn.
+
+Đủ 50 phút thì app đề nghị “Ôn 5 câu rồi nghỉ”: trộn câu sai và các bài trong khối vừa học, sau đó đếm ngược 5 phút. Trang tổng có phần “Ôn 10 câu trước khi ngủ” và danh sách “Chưa nhớ” gồm các bài còn câu sai chưa nhớ lại được và các bài bị bỏ qua. Khi chọn từ 8 giờ trở lên, app nhắc ngủ sau khi học, vì giấc ngủ là lúc não củng cố trí nhớ.
+
+Khi đêm học đang chạy, bài ngữ pháp mở ở chế độ đêm (`?mode=night`), có nút giao diện tối. Kết thúc đêm học thì trả về chế độ cũ. Trên đầu bài có đồng hồ so với nhịp cần, báo nhanh/chậm bao nhiêu bài và giờ dự kiến xong. Lượt đọc này không tính bài là “hoàn thành”; chốt từng bài bằng Sprint ngữ pháp. Kế hoạch và hàng đợi câu hỏi lại lưu trong trình duyệt (`nightPlan.ts`), còn câu trả lời ghi như bài tập thường.
+
 Bài học hiển thị rộng hơn trên màn hình lớn (tới 1440 px), chữ và bảng lớn hơn, hàng bảng xen màu.
 
 ## Bài học nhanh hơn (2026-10-20)

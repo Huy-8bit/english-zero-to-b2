@@ -8,6 +8,9 @@ interface UIState {
   focusMode: boolean;
   sidebarOpen: boolean;
   ttsRate: number;
+  /** Vietnamese under the English examples of a lesson. */
+  showVi: boolean;
+  toggleVi: () => void;
   setTheme: (t: "light" | "dark") => void;
   toggleTheme: () => void;
   setFocusMode: (v: boolean) => void;
@@ -23,6 +26,11 @@ export const useUI = create<UIState>((set, get) => ({
   focusMode: storage.get("em-focus", false),
   sidebarOpen: false,
   ttsRate: storage.get("em-tts-rate", 1),
+  showVi: storage.get("em-example-vi", true),
+  toggleVi: () => {
+    storage.set("em-example-vi", !get().showVi);
+    set({ showVi: !get().showVi });
+  },
   setTheme: (t) => {
     document.documentElement.classList.toggle("dark", t === "dark");
     try {

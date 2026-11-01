@@ -9,6 +9,7 @@ import {
   ArrowLeft, ArrowRight, Bot, BookOpenText, Sparkles, CheckCircle2, ChevronLeft, Clock, Flag, Focus, List, NotebookPen, Trophy, X, Route, Zap } from "lucide-react";
 import { api } from "@/services/api";
 import type { ItemResult, Step } from "@/types/content";
+import { ExampleViProvider, ViToggle } from "@/components/ExampleVi";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
@@ -25,6 +26,7 @@ import { usePlayerState } from "./usePlayerState";
 import { JourneySession } from "./JourneySession";
 import { journeyApplies } from "./journey";
 import { SprintLesson } from "./SprintLesson";
+import { NightLesson } from "./NightLesson";
 import { useHeartbeat } from "./useHeartbeat";
 import { NotesPanel } from "./NotesPanel";
 import { TutorPanel } from "@/features/tutor/TutorPanel";
@@ -59,15 +61,16 @@ export default function LessonPlayer() {
   return <LessonModes key={`${unitId}:${sp.get("mode") ?? ""}`} unitId={unitId} />;
 }
 
-type Mode = "journey" | "classic" | "sprint";
+type Mode = "journey" | "classic" | "sprint" | "night";
 
 /** Journey view (one thing at a time, checks every few slides) by default; the full slide view stays available.
- *  "sprint" (≈8 min: core on one screen + 6 questions) becomes the default for grammar lessons once chosen. */
+ *  "sprint" (≈8 min: core on one screen + 6 questions) becomes the default for grammar lessons once chosen;
+ *  "night" (≈4 min: core + 3 one-click questions, see nightPlan.ts) while a "Ngữ pháp 1 đêm" session runs. */
 function LessonModes({ unitId }: { unitId: string }) {
   const [sp, setSp] = useSearchParams();
   const storage = safeStorage();
   const forced = sp.get("mode");
-  const [pref, setPref] = useState<Mode>(() => (forced === "classic" || forced === "journey" || forced === "sprint" ? forced : storage.get<Mode>(MODE_KEY, "journey")));
+  const [pref, setPref] = useState<Mode>(() => (forced === "classic" || forced === "journey" || forced === "sprint" || forced === "night" ? forced : storage.get<Mode>(MODE_KEY, "journey")));
   const steps = useQuery({ queryKey: ["steps", unitId], queryFn: () => api.steps(unitId), staleTime: Infinity, gcTime: 0 });
   const lesson = useQuery({ queryKey: ["lesson", unitId], queryFn: () => api.lesson(unitId) });
   const choose = (m: Mode) => {
@@ -77,16 +80,16 @@ function LessonModes({ unitId }: { unitId: string }) {
   };
   if (steps.isLoading) return <div className="mx-auto max-w-3xl space-y-4 p-6"><Skeleton className="h-8 w-2/3" /><Skeleton className="h-72" /></div>;
   if (!steps.data) return <LessonSession unitId={unitId} />; // shows the load error with retry
-  const can = journeyApplies(steps.data.unit.kind, steps.data.steps);
-  const grammar = steps.data.unit.kind === "grammar";
-  if (pref === "sprint" && grammar) {
-    return <SprintLesson unitId={unitId} data={steps.data} lesson={lesson.data} onFull={() => choose(can ? "journey" : "classic")} />;
-  }
+  const data = steps.data;
+  const can = journeyApplies(data.unit.kind, data.steps);
+  const grammar = data.unit.kind === "grammar";
+  const onFull = () => choose(can ? "journey" : "classic");
   const onSprint = grammar ? () => choose("sprint") : undefined;
-  if ((pref === "journey" || pref === "sprint") && can) {
-    return <JourneySession unitId={unitId} data={steps.data} lesson={lesson.data} onClassic={() => choose("classic")} onSprint={onSprint} />;
-  }
-  return <LessonSession unitId={unitId} onJourney={can ? () => choose("journey") : undefined} onSprint={onSprint} />;
+  const view = pref === "sprint" && grammar ? <SprintLesson unitId={unitId} data={data} lesson={lesson.data} onFull={onFull} />
+    : pref === "night" && grammar ? <NightLesson unitId={unitId} data={data} onFull={onFull} />
+      : pref !== "classic" && can ? <JourneySession unitId={unitId} data={data} lesson={lesson.data} onClassic={() => choose("classic")} onSprint={onSprint} />
+        : <LessonSession unitId={unitId} onJourney={can ? () => choose("journey") : undefined} onSprint={onSprint} />;
+  return <ExampleViProvider value={data.example_vi}>{view}</ExampleViProvider>;
 }
 
 function LessonSession({ unitId, onJourney, onSprint }: { unitId: string; onJourney?: () => void; onSprint?: () => void }) {
@@ -251,6 +254,7 @@ function LessonSession({ unitId, onJourney, onSprint }: { unitId: string; onJour
             {!focusMode && <Button variant="ghost" size="icon" onClick={() => setOutline(true)} aria-label="Danh sách slide" className={tutorOpen ? "2xl:hidden" : "lg:hidden"}><List size={18} /></Button>}
             {onSprint && <Button variant="ghost" size="sm" onClick={onSprint} aria-label="Sprint ≈8 phút" title="Sprint ≈8 phút: cốt lõi trên một màn hình + 6 câu kiểm tra"><Zap size={18} /><span className="hidden md:inline">Sprint</span></Button>}
             {onJourney && <Button variant="ghost" size="sm" onClick={onJourney} aria-label="Chế độ hành trình" title="Chế độ hành trình: từng bước, có kiểm tra xen kẽ"><Route size={18} /><span className="hidden md:inline">Hành trình</span></Button>}
+            <ViToggle />
             <Button variant="ghost" size="icon" onClick={() => setNotes(true)} aria-label="Ghi chú"><NotebookPen size={18} /></Button>
             <Button ref={tutorTrigger} variant={tutorOpen ? "secondary" : "ghost"} size="sm" onClick={() => setTutorOpen((open) => !open)} aria-expanded={tutorOpen} aria-controls="lesson-tutor" aria-label="Hỏi AI về bài này" title="Ask AI / Giải thích với AI"><Bot size={18} /><span className={tutorOpen ? "hidden 2xl:inline" : "hidden md:inline"}>Hỏi AI</span></Button>
             <Button variant="ghost" size="sm" onClick={() => setPracticeOpen(true)} aria-label="Tạo bài tập với AI" title="Practice with AI / Tạo bài tập"><Sparkles size={18} /><span className={tutorOpen ? "hidden 2xl:inline" : "hidden md:inline"}>Tạo bài tập</span></Button>

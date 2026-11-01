@@ -138,7 +138,12 @@ export interface StepsPayload {
   results: Record<string, ItemResult>;
   progress: { current_step: number; max_step: number; state: LessonState; status: Status; score: number | null } | null;
   content_version: number;
+  /** Vietnamese of the lesson's English examples, by exampleKey (see components/ExampleVi). */
+  example_vi?: ExampleVi;
 }
+
+/** `wrong`: the example is an intentional mistake; `vi` is what it was meant to say. */
+export type ExampleVi = Record<string, { vi: string; wrong?: boolean }>;
 
 export interface UnitBrief { id: string; title: string; title_vi: string; kind: UnitKind; level: string | null }
 

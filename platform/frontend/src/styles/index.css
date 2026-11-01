@@ -95,6 +95,21 @@ mark.em-hl { background: #fde68a; color: inherit; border-radius: 0.2em; }
   *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
 }
 
+/* Vietnamese of an English example: under it in tables and lists, in brackets after it in running text. */
+.vi-tr { display: block; font-style: normal; font-weight: 400; font-size: 0.86em; line-height: 1.4; color: var(--muted); }
+.prose-em p > .vi-tr { display: inline; }
+.prose-em p > .vi-tr::before { content: " ("; }
+.prose-em p > .vi-tr::after { content: ")"; }
+.prose-em td .vi-tr, .prose-em li .vi-tr { display: block; }
+.prose-em td .vi-tr::before, .prose-em td .vi-tr::after, .prose-em li .vi-tr::before, .prose-em li .vi-tr::after { content: none; }
+.vi-tr.vi-wrong { color: var(--danger); }
+.prose-em :is(h1, h2, h3, h4, h5, h6) .vi-tr { display: none; }
+
+/* Ngữ pháp 1 đêm: key forms stand out like a highlighter pen; crossed-out forms read as wrong. */
+.night-card strong { background: linear-gradient(transparent 58%, color-mix(in srgb, var(--primary) 26%, transparent) 58%); border-radius: 0.15em; padding: 0 0.08em; }
+.night-card del { color: var(--danger); text-decoration-thickness: 2px; }
+.night-card .night-wrong strong { background: none; color: var(--danger); text-decoration: line-through 2px; }
+
 /* Lessons on wide screens: larger reading type, roomier tables, zebra rows (easier to scan a FORM table). */
 .lesson-big .prose-em tbody tr:nth-child(even) td { background: color-mix(in srgb, var(--surface-2) 55%, transparent); }
 .lesson-big .prose-em td:first-child { font-weight: 600; }

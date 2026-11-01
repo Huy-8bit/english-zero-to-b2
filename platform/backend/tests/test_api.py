@@ -314,6 +314,18 @@ def test_each_question_carries_its_group_instruction(client):
 
 
 
+def test_quick_check_three_one_click_questions_without_completing(client, store):
+    r = client.get("/api/lessons/A1-G001/quick-check").json()
+    assert len(r["items"]) == 3 and len(set(r["items"])) == 3
+    b = store.built("A1-G001")
+    assert all(b.items[i].kind in {"mc", "tfng", "choice"} and b.items[i].correct_option for i in r["items"])
+    for i in r["items"]:
+        _answer(client, store, i, right=True)
+    assert all(x["unit_id"] != "A1-G001" or x["status"] != "completed" for x in client.get("/api/progress").json())
+    assert client.get("/api/lessons/A0-G007/quick-check").json()["items"] == []  # no closed questions: reading only
+    assert client.get("/api/lessons/PLACEMENT-TEST/quick-check").status_code == 404
+
+
 def test_test_out_retake_prefers_new_questions(client, store):
     first = client.post("/api/lessons/A1-G003/test-out?size=6").json()
     for i in first["items"]:
@@ -322,3 +334,10 @@ def test_test_out_retake_prefers_new_questions(client, store):
     retake = client.post("/api/lessons/A1-G003/test-out?size=6").json()
     assert retake["test_id"] != first["test_id"]
     assert len(set(retake["items"]) & set(first["items"])) < len(first["items"])  # mostly other questions
+
+
+def test_lesson_steps_carry_the_vietnamese_of_their_examples(client):
+    vi = client.get("/api/lessons/A1-G009/steps").json()["example_vi"]
+    assert vi["The milk is in the fridge."] == {"vi": "Sữa ở trong tủ lạnh."}
+    assert vi["at the table, at my bag, at the chair"]["wrong"] is True  # an intentional mistake, marked as such
+    assert "Sit next to me." in vi

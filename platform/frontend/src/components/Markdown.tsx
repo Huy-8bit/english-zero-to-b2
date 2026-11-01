@@ -1,10 +1,14 @@
-import { memo, type ReactNode } from "react";
+import { memo, useContext, type ReactNode } from "react";
 import ReactMarkdown, { type Components } from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeSanitize, { defaultSchema } from "rehype-sanitize";
 import { Link } from "react-router-dom";
 import { Mermaid } from "./Mermaid";
+import { ExampleViContext, ViText } from "./ExampleVi";
 import { cn, resolveDocPath } from "@/lib/utils";
+import { fixIntrawordBold } from "@/lib/markdownSource";
+
+export { fixIntrawordBold };
 
 // Allow `language-*` classes on code so Mermaid blocks can be detected after sanitising.
 const codeLanguageSchema = {
@@ -24,8 +28,19 @@ interface Props {
  * Renders curriculum Markdown. Raw HTML is not interpreted (react-markdown default) and the tree is
  * sanitised, so scripts embedded in Markdown can never run.
  */
+type HastNode = { type: string; value?: string; children?: HastNode[] };
+const hastText = (n?: HastNode): string => (n?.type === "text" ? n.value ?? "" : (n?.children ?? []).map(hastText).join(""));
+
 function MarkdownImpl({ children, docPath, className, inline }: Props) {
+  const vi = useContext(ExampleViContext);
   const components: Components = {
+    // an English example of the lesson: its Vietnamese right under it (in tables and lists) or after it
+    ...(vi ? {
+      em({ children: c, node }) {
+        const text = hastText(node as HastNode);
+        return <><em>{c}</em><ViText text={text} /></>;
+      },
+    } : {}),
     a({ href, children: c }) {
       if (!href) return <span>{c}</span>;
       if (/^https?:/.test(href)) return <a href={href} target="_blank" rel="noreferrer noopener">{c}</a>;
@@ -57,15 +72,6 @@ function MarkdownImpl({ children, docPath, className, inline }: Props) {
     </ReactMarkdown>
   );
   return inline ? <span className={className}>{md}</span> : <div className={cn("prose-em", className)}>{md}</div>;
-}
-
-/**
- * The curriculum bolds the apostrophe part of a word: "sister**'s**", "I**'m**". By CommonMark rules a "**" between a
- * letter and punctuation cannot open emphasis, so the asterisks showed up literally. Move the apostrophe outside the
- * bold ("sister'**s**"); a bold apostrophe alone ("students**'**") becomes a plain apostrophe. The source is unchanged.
- */
-export function fixIntrawordBold(md: string): string {
-  return md.replace(/([A-Za-z])\*\*(['’])([A-Za-z]*)\*\*/g, (_, before: string, apo: string, rest: string) => (rest ? `${before}${apo}**${rest}**` : `${before}${apo}`));
 }
 
 export const Markdown = memo(MarkdownImpl);

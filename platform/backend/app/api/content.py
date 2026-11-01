@@ -4,6 +4,7 @@ from __future__ import annotations
 from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlalchemy.orm import Session
 
+from ..content import example_vi
 from ..content.catalog import LEVEL_NAMES, LEVELS, MODULES
 from ..content.store import ContentStore
 from ..models import User
@@ -97,6 +98,7 @@ def lesson_steps(unit_id: str, db: Session = Depends(get_db), store: ContentStor
         "progress": None if p is None else {"current_step": p.current_step, "max_step": p.max_step, "state": p.state or {},
                                             "status": p.status, "score": p.score},
         "content_version": store.version,
+        "example_vi": example_vi.for_unit(unit_id),  # Vietnamese under the italic English examples
     }
 
 

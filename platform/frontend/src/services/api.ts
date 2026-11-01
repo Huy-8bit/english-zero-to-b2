@@ -51,6 +51,8 @@ export const api = {
   /** "Kiểm tra vượt bài": server-picked questions; answer them with submitQuiz, then finish. */
   testOutStart: (id: string, size = 8) => request<{ test_id: number; items: string[]; pass_mark: number }>(`/api/lessons/${encodeURIComponent(id)}/test-out?size=${size}`, { method: "POST" }),
   grammarSprint: () => request<GrammarSprint>("/api/grammar-sprint"),
+  /** "Ngữ pháp 1 đêm": a few one-click questions; answered with submitQuiz, nothing else is recorded. */
+  quickCheck: (id: string, size = 3) => request<{ items: string[] }>(`/api/lessons/${encodeURIComponent(id)}/quick-check?size=${size}`),
   testOutFinish: (id: string, testId: number) =>
     request<{ test_id: number; passed: boolean; correct: number; total: number; pass_mark: number; xp_gained?: number }>(
       `/api/lessons/${encodeURIComponent(id)}/test-out/${testId}/finish`, { method: "POST" }),

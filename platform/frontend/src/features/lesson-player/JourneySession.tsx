@@ -7,6 +7,7 @@ import { ArrowRight, BookOpenText, Bot, CalendarClock, CheckCircle2, Flag, Flame
 import { api } from "@/services/api";
 import { ai } from "@/services/ai";
 import type { ItemResult, JourneyState, LessonDetail, QuizItem, Step, StepsPayload } from "@/types/content";
+import { ViToggle } from "@/components/ExampleVi";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { toast } from "@/components/ui/toast";
@@ -230,6 +231,7 @@ export function JourneySession({ unitId, data, lesson, onClassic, onSprint }: { 
           <Badge tone="primary" title="XP trong bài này">+{js.xp} XP</Badge>
           <Button variant={tutorOpen ? "secondary" : "ghost"} size="sm" onClick={() => setTutorOpen((o) => !o)} aria-label="Hỏi AI về bài này" aria-expanded={tutorOpen}><Bot size={18} /><span className="hidden md:inline">Hỏi AI</span></Button>
           {onSprint && <Button variant="ghost" size="sm" onClick={onSprint} aria-label="Sprint ≈8 phút" title="Sprint ≈8 phút: cốt lõi trên một màn hình + 6 câu kiểm tra"><Zap size={16} /><span className="hidden md:inline">Sprint</span></Button>}
+          <ViToggle />
           <Button variant="ghost" size="icon" onClick={onClassic} aria-label="Xem đầy đủ (cách học cũ)" title="Xem đầy đủ (cách học cũ)"><BookOpenText size={18} /></Button>
         </div>
       </header>

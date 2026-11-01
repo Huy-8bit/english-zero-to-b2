@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 import { Eye, EyeOff, Lightbulb, Pause, Play } from "lucide-react";
 import type { Card, Step } from "@/types/content";
+import { NoExampleVi, ViText } from "@/components/ExampleVi";
 import { InlineMd, Markdown } from "@/components/Markdown";
 import { SpeakButton, TtsNote } from "@/components/SpeakButton";
 import { Button } from "@/components/ui/button";
@@ -70,6 +71,7 @@ export function ExamplesSlide({ step, docPath }: { step: Step; docPath: string }
   const [open, setOpen] = useState<Record<number, boolean>>({});
   const examples = step.examples ?? [];
   return (
+    <NoExampleVi>
     <div className="space-y-4">
       <div className="flex flex-wrap items-center gap-2">
         <Button size="sm" variant="outline" onClick={() => setShowVi((v) => !v)} aria-pressed={showVi}>
@@ -101,6 +103,7 @@ export function ExamplesSlide({ step, docPath }: { step: Step; docPath: string }
       </ul>
       {step.md && <Markdown docPath={docPath}>{step.md}</Markdown>}
     </div>
+    </NoExampleVi>
   );
 }
 
@@ -163,6 +166,7 @@ export function DialogueSlide({ step, docPath }: { step: Step; docPath: string }
               <div className={cn("max-w-[85%] rounded-2xl border px-3 py-2 text-[15px]", right ? "border-primary/30 bg-primary-soft" : "border-border bg-surface", current === i && "ring-2 ring-primary")}>
                 <p className="text-xs font-semibold text-muted">{l.speaker}</p>
                 <p>{l.text}</p>
+                <ViText text={l.text} className="mt-0.5" />
               </div>
               <button type="button" className="mb-1 rounded-lg p-1 text-muted hover:text-primary" aria-label={`Nghe câu của ${l.speaker}`}
                 onClick={() => speak(l.text, { rate, voiceIndex: speakers.indexOf(l.speaker) })}>▶</button>
