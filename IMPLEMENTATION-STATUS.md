@@ -1,3 +1,42 @@
+# VSTEP B2 rush and irregular verbs — 2026-11-02
+
+Request: add irregular verbs, and an urgent review of the vocabulary B2 VSTEP Speaking and Writing need, in 2 days / 10 hours.
+
+| Feature | Status | Files | Evidence |
+|---|---|---|---|
+| `/vstep-rush`: a 10-block plan of 112 irregular verbs and 312 chunks (Task 1 letter, Task 2 essay, Speaking Parts 1–3, 8 topics). Each batch of 8 goes read aloud → pick → recall; misses are asked again; an item is learnt at box 2. "Ôn lỗi" and "ôn tổng"; study time is counted. `/irregular-verbs`: search, pattern filter, listen. | COMPLETE_AND_TESTED | `frontend/src/features/vstep/*` | vitest `store.test.ts`; E2E `vstep-rush.spec.ts`; both pages are in the a11y and mobile checks |
+
+The vocabulary lexicon was not used: its Wiktionary verb forms are noisy (go → "gan", break → "breaked") and many B2 words are missing. Content was curated by hand.
+
+# Vietnamese under the lesson examples — 2026-11-01
+
+Request: every example in the course should come with its Vietnamese translation.
+
+| Feature | Status | Files | Evidence / remaining work |
+|---|---|---|---|
+| Translations under italic examples and dialogue lines, with a toggle in every lesson mode; none inside exercises; intentional mistakes marked | COMPLETE_AND_TESTED (display) | `frontend/src/components/ExampleVi.tsx`, `Markdown.tsx` (`em`), `lib/exampleKey.ts`, `lib/exampleExtract.ts`, `scripts/example-sentences.ts`; `backend/app/content/example_vi.py`, `api/content.py` (`example_vi`) | vitest `ExampleVi.test.tsx` checks that the extractor and the renderer use the same keys; `test_lesson_steps_carry_the_vietnamese_of_their_examples`; full E2E 68/68 twice |
+| Translations of all 5,313 examples (201 lessons) | PARTIAL: 65 (A1-G009, hand-translated) | `backend/app/content/data/example_vi.json` | The OpenAI key in `platform/.env` returns 401: the app's last successful AI call was on 2026-10-21, and the 2026-10-31 call failed with `config_error`. After the key is replaced, run `python -m app.content.example_vi translate`. |
+
+# Grammar night: a memory loop per lesson — 2026-11-01
+
+Request: redesign the night lessons and their UI so they are easier to learn and to remember.
+
+| Change | Why (memory research) | Evidence |
+|---|---|---|
+| Lesson loop: ⏪ one question from an earlier lesson → 🎯 a pretest guess (answer hidden, pinned while reading) → 📖 cards → ✍️ the guess again + 2 new | Retrieval practice, pretesting, interleaving | E2E `grammar-night.spec.ts` |
+| Missed questions come back after 2 lessons, then after ~7. A second right answer counts as recovered. "Chưa nhớ" lists lessons with misses not yet recalled. | Spaced retrieval | vitest `nightPlan.test.ts` |
+| Cards one at a time: WHAT → form → the curriculum's "Mẹo ghi nhớ" (127/128 lessons; the first version left it out) → traps shown wrong first, fixed by the learner, then revealed | Segmenting, generation, production effect (read aloud, TTS on the right forms) | screenshots, E2E |
+| Bold forms highlighted, wrong forms struck through in red, dark-mode toggle in the lesson header | Signalling / isolation | — |
+| "Ôn 5 câu rồi nghỉ" before each break; "Ôn 10 câu trước khi ngủ"; sleep advice for nights of 8 h or more; 4-hour plans for splitting over two nights | Consolidation during rest and sleep | E2E (bedtime review) |
+
+# Grammar in one night — 2026-10-31
+
+Request: read all the grammar in one night (8 h). Skip the long exercises and keep a few multiple-choice questions. Add this as a new mode; leave the existing ones unchanged.
+
+| Feature | Status | Files | Evidence / remaining work |
+|---|---|---|---|
+| Ngữ pháp 1 đêm (`/grammar-night`, `/learn/{id}?mode=night`) | COMPLETE_AND_TESTED | `backend/app/test_out.py` (`quick_check`), `api/learning.py` (`GET /api/lessons/{id}/quick-check`); `frontend/src/features/lesson-player/NightPage.tsx`, `NightLesson.tsx`, `nightPlan.ts` | Plan: 6/8/10 h, either the lessons not passed or all of them. The pace leaves out a 5-min break per 50 min. Each lesson shows the core (key points, mistakes, form), then 3 single-choice questions graded on click (keys 1–4) and Enter to go on. A lesson under 2/3 right, or skipped, goes to "Cần xem lại". The header shows lesson time against the needed pace, lessons ahead or behind, time left and the projected finish. A break overlay appears. This is a reading pass and does not complete lessons. Tests: `test_quick_check_*`, vitest `nightPlan.test.ts`, E2E `grammar-night.spec.ts`; the page is in the a11y and mobile checks. |
+
 # Sprint fixes from use — 2026-10-20
 
 - **Test-out/sprint check without a 24 h limit (learner's request).** A retake prefers questions not used in earlier attempts; a lesson stays in "Cần học kỹ" until passed. Test: `test_test_out_retake_prefers_new_questions`.
