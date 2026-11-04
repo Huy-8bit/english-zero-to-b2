@@ -241,6 +241,19 @@ Nội dung giáo trình giữ nguyên. Nút 📖 (hoặc `?mode=classic`) mở l
 
 Đồng hồ ≈8 phút mỗi bài, chuỗi bài qua liên tiếp 🔥, số bài hôm nay / mục tiêu, tiến độ theo cấp. Sprint giúp đi qua và tìm chỗ hổng nhanh; nhớ lâu vẫn cần ôn theo lịch và học kỹ những bài chưa qua.
 
+## Cấp tốc VSTEP B2 (`/vstep-rush`) và Động từ bất quy tắc (`/irregular-verbs`)
+
+Ôn gấp cho bài Nói và Viết B2 trong 2 ngày / 10 giờ, chia thành 10 khối khoảng 1 giờ:
+- 112 động từ bất quy tắc, chia theo 4 kiểu (A–A–A, A–B–B, A–B–C, A–B–A).
+- 312 cụm câu và collocation: thư Task 1, bài luận Task 2, Nói Part 1–3, và 8 chủ đề VSTEP hay gặp (Giáo dục, Công nghệ, Môi trường, Sức khỏe, Công việc, Xã hội & đô thị, Du lịch & văn hóa, Gia đình).
+
+Mỗi lô 8 mục:
+1. **📖 Đọc to** cụm từ và câu ví dụ (có nút nghe).
+2. **🎯 Chọn** câu tiếng Anh đúng nghĩa (phím 1–4).
+3. **✍️ Nhớ lại** không nhìn: nói hoặc gõ, rồi tự chấm. Động từ thì gõ V2 và V3, app chấm tự động và chấp nhận mọi dạng đúng (learnt/learned…).
+
+Mục sai được hỏi lại ở cuối lô. Một mục tính là đã thuộc khi nhớ lại đúng 2 lần liên tiếp. Có thêm “Ôn lỗi” và “Ôn tổng ngẫu nhiên”. Trang động từ có ô tìm kiếm, bộ lọc theo nhóm và nút nghe cả 3 dạng. Nội dung nằm ở `frontend/src/features/vstep/` (`decks.ts`, `verbs.ts`); tiến độ và thời gian học lưu trong trình duyệt.
+
 ## Bản dịch câu ví dụ
 
 Câu ví dụ tiếng Anh in nghiêng trong bài (bảng công thức, so sánh, WHAT, đoạn giải thích) và các câu hội thoại có thêm một dòng tiếng Việt ngay bên dưới. Nút **Dịch ví dụ / Ẩn dịch** trên đầu bài bật/tắt bản dịch cho mọi chế độ học. Bản dịch không hiện trong bài tập. Câu sai mà bài cố ý đưa ra để minh hoạ lỗi được ghi là “✗ câu sai — ý định nói: …”.

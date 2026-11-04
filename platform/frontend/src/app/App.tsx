@@ -17,6 +17,9 @@ const VocabToday = lazy(() => import("@/features/vocab/TodayPage"));
 const VocabSprint = lazy(() => import("@/features/vocab/SprintPage"));
 const GrammarSprint = lazy(() => import("@/features/lesson-player/SprintPage"));
 const GrammarNight = lazy(() => import("@/features/lesson-player/NightPage"));
+const VstepRush = lazy(() => import("@/features/vstep/RushPage"));
+const RushSession = lazy(() => import("@/features/vstep/RushSession"));
+const IrregularVerbs = lazy(() => import("@/features/vstep/VerbsPage"));
 const VocabExplorer = lazy(() => import("@/features/vocab/ExplorerPage"));
 const VocabWord = lazy(() => import("@/features/vocab/WordPage"));
 const VocabNotebook = lazy(() => import("@/features/vocab/NotebookPage"));
@@ -63,12 +66,15 @@ export default function App() {
       <Suspense fallback={<Loading />}>
         <Routes>
           <Route path="/learn/:unitId" element={<LessonPlayer />} />
+          <Route path="/rush/:deckId" element={<RushSession />} />
           <Route element={<Layout />}>
             <Route index element={<Dashboard />} />
             <Route path="today" element={<TodayPlanPage />} />
             <Route path="path" element={<PathPage />} />
             <Route path="grammar-sprint" element={<GrammarSprint />} />
             <Route path="grammar-night" element={<GrammarNight />} />
+            <Route path="vstep-rush" element={<VstepRush />} />
+            <Route path="irregular-verbs" element={<IrregularVerbs />} />
             <Route path="grammar" element={<ModulePage kind="grammar" />} />
             <Route path="vocabulary" element={<VocabHome />} />
             <Route path="vocabulary/today" element={<VocabToday />} />
