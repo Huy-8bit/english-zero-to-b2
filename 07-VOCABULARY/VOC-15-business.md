@@ -1,5 +1,7 @@
 # VOC-15 · Business — Kinh doanh
 
+Bạn sẽ gặp từ và cụm từ về hoạt động kinh doanh, khách hàng và kết quả làm việc. Hãy đặt chúng vào một tình huống nhỏ, như một cửa hàng bán hàng hoặc xử lý đơn đặt mua. Chú ý cụm quen dùng như *make a profit*.
+
 | Mục | Nội dung |
 |---|---|
 | **Cấp độ** | B1 → B2 |

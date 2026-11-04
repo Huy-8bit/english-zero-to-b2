@@ -1,5 +1,7 @@
 # W10 · Advantages & Disadvantages — Bài luận ưu và nhược điểm
 
+Bạn sẽ luyện phân biệt việc liệt kê ưu–nhược điểm với việc đánh giá bên nào đáng kể hơn. Đọc kỹ câu hỏi trước khi lập dàn ý. Khi đề yêu cầu so sánh, hãy giải thích vì sao một tác động quan trọng hơn, thay vì chỉ đếm số ý.
+
 | Mục | Nội dung |
 |---|---|
 | **Cấp độ** | B1 → B2 |

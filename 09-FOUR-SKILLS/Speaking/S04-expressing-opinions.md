@@ -1,5 +1,7 @@
 # S04 · Expressing Opinions — Bày tỏ quan điểm khi nói
 
+Nêu ý kiến rõ ràng trước, sau đó giải thích bằng một lý do và một ví dụ. Bài này giúp bạn luyện cách đồng tình hoặc phản đối lịch sự. Nếu chưa chắc, bạn có thể nói rõ giới hạn của ý kiến thay vì cố khẳng định tuyệt đối.
+
 | Mục | Nội dung |
 |---|---|
 | **Cấp độ** | B1 → B2 |

@@ -30,7 +30,7 @@
 | **Prerequisites** | [B1-G018 — Linking Words](../../04-B1-INTERMEDIATE/grammar/B1-G018-linking-words.md) |
 | **Estimated Time** | 75 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Mở rộng vốn từ nối **ngoài** *and, but, so, because, however*.
 2. Dùng từ nối cho **ví dụ, làm rõ, khái quát hóa, trình tự** trong văn viết.
@@ -54,7 +54,7 @@
 
 ## C. WHAT
 
-**Phương tiện liên kết** (cohesive devices) gồm không chỉ **từ nối** mà còn **quy chiếu** (reference) — dùng đại từ hoặc cụm danh từ để **nhắc lại ý trước** mà không lặp từ.
+**Phương tiện liên kết (cohesive devices)** giúp người đọc theo được các ý mà bạn không phải lặp lại toàn bộ câu chữ. Ngoài từ nối, bạn có thể dùng đại từ hoặc cụm danh từ để nhắc lại người, vật hay ý vừa nói. Điều quan trọng là người đọc hiểu rõ từ đó đang nhắc đến điều gì.
 
 | Chức năng | Phương tiện B2 |
 |---|---|
@@ -136,16 +136,16 @@ Danh từ tóm tắt thường dùng: *situation, problem, issue, trend, approac
 |---|---|---|---|
 | 1 | *The hotel was dirty and overpriced, **not to mention** the rude staff.* | Khách sạn bẩn và đắt, chưa kể nhân viên thô lỗ. | not to mention |
 | 2 | ***In addition to** reducing pollution, cycling improves health.* | Ngoài giảm ô nhiễm, đạp xe còn tốt cho sức khỏe. | + V-ing |
-| 3 | *Many Asian cities, **such as** Seoul and Tokyo, have excellent metro systems.* | Nhiều thành phố châu Á như Seoul, Tokyo... | such as |
-| 4 | *The report focuses on two issues, **namely** unemployment and housing.* | ... cụ thể là thất nghiệp và nhà ở. | namely |
-| 5 | *Older people, **in particular**, find online banking difficult.* | Đặc biệt người cao tuổi... | in particular |
+| 3 | *Many Asian cities, **such as** Seoul and Tokyo, have excellent metro systems.* | Nhiều thành phố châu Á, như Seoul và Tokyo, có hệ thống tàu điện ngầm rất tốt. | such as |
+| 4 | *The report focuses on two issues, **namely** unemployment and housing.* | Báo cáo tập trung vào hai vấn đề, cụ thể là thất nghiệp và nhà ở. | namely |
+| 5 | *Older people, **in particular**, find online banking difficult.* | Người lớn tuổi là nhóm đặc biệt gặp khó khăn khi dùng dịch vụ ngân hàng trực tuyến. | in particular |
 | 6 | *The project is behind schedule and over budget. **In other words,** it's failing.* | Nói cách khác, dự án đang thất bại. | Làm rõ |
 | 7 | ***On the whole,** the feedback from customers was positive.* | Nhìn chung, phản hồi tích cực. | Khái quát |
 | 8 | ***By and large,** people here are very friendly.* | Nói chung, mọi người ở đây rất thân thiện. | Khái quát — thân mật hơn |
 | 9 | *You can choose between a laptop and a tablet. **The former** is more powerful, while **the latter** is lighter.* | Cái trước mạnh hơn, cái sau nhẹ hơn. | former/latter |
-| 10 | *More young people are delaying marriage. **This trend** is common in many countries.* | Xu hướng này... | Danh từ tóm tắt |
+| 10 | *More young people are delaying marriage. **This trend** is common in many countries.* | Nhiều người trẻ đang kết hôn muộn hơn. Xu hướng này xuất hiện ở nhiều nước. | Danh từ tóm tắt |
 | 11 | *Some schools have banned phones. **Such policies** are controversial.* | Những chính sách như vậy gây tranh cãi. | such + N |
-| 12 | ***To begin with,** let's look at the causes. **Subsequently,** we'll discuss solutions.* | Trước tiên... Tiếp theo... | Trình tự |
+| 12 | ***To begin with,** let's look at the causes. **Subsequently,** we'll discuss solutions.* | Trước hết, hãy xem các nguyên nhân. Tiếp đó, chúng ta sẽ bàn về giải pháp. | Trình tự |
 
 ---
 

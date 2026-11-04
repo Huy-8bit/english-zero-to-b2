@@ -1,5 +1,7 @@
 # VOC-18 · Word Families — Họ từ
 
+Một gốc từ có thể tạo ra nhiều dạng, như động từ, danh từ và tính từ. Muốn chọn dạng đúng, bạn cần nhìn vị trí trong câu. Khi học một họ từ, ghi cả nghĩa, cách phát âm và một câu mẫu cho từng dạng thực sự dùng.
+
 | Mục | Nội dung |
 |---|---|
 | **Cấp độ** | B1 → B2 |

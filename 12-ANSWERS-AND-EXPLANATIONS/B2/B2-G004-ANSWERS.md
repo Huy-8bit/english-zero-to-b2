@@ -62,7 +62,7 @@
 >
 > *Last year, several accidents happened that **could have been prevented** if these rules had been followed. Please remember that nobody enjoys **being told off**, but rules exist for everyone's safety. Any equipment that is damaged **should be reported** immediately so that it can **be repaired**.*
 
-**Rubric (0–2 mỗi tiêu chí):** ≥ 4 modal bị động hiện tại · ≥ 1 modal bị động quá khứ · có *to be V3* và *being V3* · cụm động từ bị động đúng · 120–150 từ.
+**Tiêu chí tự đánh giá (0–2 điểm cho mỗi tiêu chí):** ≥ 4 modal bị động hiện tại · ≥ 1 modal bị động quá khứ · có *to be V3* và *being V3* · cụm động từ bị động đúng · 120–150 từ.
 
 **L5.2.** Mẫu: *Last summer our flight to Phu Quoc got cancelled at the last minute. We weren't told anything for three hours — we should have been informed much earlier. Then our luggage got lost, and when it was finally found, one suitcase had been damaged. Honestly, most of the problems could have been avoided if the staff had been better trained.*
 

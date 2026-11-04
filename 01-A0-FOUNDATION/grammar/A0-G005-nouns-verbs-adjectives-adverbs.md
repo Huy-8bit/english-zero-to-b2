@@ -30,7 +30,7 @@
 | **Prerequisites** | [A0-G004 — Parts of Speech](A0-G004-parts-of-speech.md) |
 | **Estimated Time** | 90 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Phân loại danh từ: người/vật/nơi chốn/ý niệm; danh từ riêng – danh từ chung.
 2. Phân biệt động từ hành động (action verbs) và động từ trạng thái (state verbs) ở mức cơ bản.
@@ -42,7 +42,7 @@
 
 ## B. Warm-up: Tình huống thực tế
 
-Bạn muốn nói: **"Tôi có một chiếc xe đạp màu xanh mới."**
+Bạn muốn nói: **"Tôi có một chiếc xe đạp mới màu xanh."**
 
 Ba người học viết:
 
@@ -56,7 +56,7 @@ Ba người học viết:
 
 ## C. WHAT: Bốn từ loại nội dung
 
-Bốn từ loại này mang **phần lớn ý nghĩa** của câu (đã giới thiệu ở A0-G004). Bài này đi sâu vào **loại nhỏ** và **vị trí** của chúng.
+Ở bài trước, bạn đã nhận diện danh từ, động từ, tính từ và trạng từ. Bài này giúp bạn chọn và đặt chúng đúng chỗ. Với *a new bike*, *bike* gọi tên đồ vật, còn *new* cho biết chiếc xe đó như thế nào. Ta sẽ lần lượt xem bốn nhóm từ này.
 
 ### C1. Noun — Danh từ
 

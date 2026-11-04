@@ -1,5 +1,7 @@
 # LAB-10 · Monthly Review — Bài kiểm tra tổng hợp hằng tháng
 
+Bài ôn tháng giúp bạn xem kiến thức nào vẫn dùng được sau một thời gian. Làm ở cấp phù hợp và ghi điều kiện làm bài để so sánh với lần sau. Khi chữa, gom lỗi theo chủ điểm rồi chọn bài ôn cụ thể.
+
 | Mục | Nội dung |
 |---|---|
 | **Cấp độ** | A2 → B2 (câu được xếp từ dễ đến khó) |
@@ -9,7 +11,7 @@
 
 ## Phần A — Ngữ pháp (16 câu)
 
-Chọn đáp án đúng.
+Chọn đáp án phù hợp với câu và ngữ cảnh.
 
 **A1.** She ___ to work by bus every day.
 A. go  B. going  C. is go  D. goes

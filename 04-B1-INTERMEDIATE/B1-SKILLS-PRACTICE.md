@@ -1,5 +1,7 @@
 # B1 Skills Practice — Ba unit tích hợp nghe, nói, đọc, viết
 
+Bạn sẽ luyện cách theo dõi một ý dài hơn và tự trình bày ý kiến có lý do. Khi trả lời, hãy nói hoặc viết điều cần thiết trước, rồi thêm chi tiết hỗ trợ. Sau mỗi unit, xem riêng kết quả từng kỹ năng để biết phần nào cần ôn.
+
 Ba unit dùng sau các khối trong [thứ tự B1](README.md): **Unit 1** sau khối B1-1 và B1-2 (G001–G009); **Unit 2** sau khối B1-3 và B1-4 (G010–G017); **Unit 3** sau khối B1-5 (G018–G026). Mỗi unit có một bài nghe, một bài đọc, hai nhiệm vụ nói và một bài viết. Đây là luyện tích hợp trong phạm vi chương trình, không phải chứng nhận trình độ.
 
 Dành 75–90 phút cho mỗi unit. [Đáp án và rubric](../12-ANSWERS-AND-EXPLANATIONS/SKILLS/B1-SKILLS-ANSWERS.md) nằm riêng. [Transcript](../12-ANSWERS-AND-EXPLANATIONS/SKILLS/B1-LISTENING-TRANSCRIPTS.md) chỉ dùng để tạo âm thanh hoặc đối chiếu sau khi nghe. Không có audio đính kèm; xem [cách dùng TTS](../09-FOUR-SKILLS/Listening/README.md).

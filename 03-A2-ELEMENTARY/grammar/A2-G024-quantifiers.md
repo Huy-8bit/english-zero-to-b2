@@ -19,7 +19,7 @@ Tủ lạnh còn hai quả trứng. Một người nói “We have a few eggs”
 
 ## C. WHAT
 
-**Quantifier — lượng từ** cho biết số lượng hoặc lượng, thường đứng trước danh từ. Bài này dùng **a few/few + danh từ đếm được số nhiều**, **a little/little + danh từ không đếm được**. A few/a little nhấn mạnh vẫn có một số/một ít. Few/little nhấn mạnh ít, thường ít hơn mong muốn. **No** đi trước danh từ; **none** thay cụm danh từ đã biết.
+**Lượng từ (quantifiers)** giúp bạn nói có bao nhiêu hoặc có nhiều hay ít. **A few/few** đi với danh từ đếm được số nhiều; **a little/little** đi với danh từ không đếm được. *A few* và *a little* nhấn mạnh vẫn có một ít. *Few* và *little* thường nhấn mạnh lượng ít hơn mong muốn. **No** đi trước danh từ, còn **none** thay cho cụm danh từ đã rõ.
 
 ## D. WHY
 

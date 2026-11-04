@@ -62,7 +62,7 @@
 >
 > ***Much as** I appreciate the security of a large organisation, I think personal growth is more important at the start of a career. Small companies are, of course, riskier; some of them close within a few years. **Even so**, the skills you gain there will be valuable wherever you go next.*
 
-**Rubric (0–2 mỗi tiêu chí):** đủ cấu trúc yêu cầu · chuỗi nhượng bộ – phản bác rõ · lập luận mạch lạc · ngữ pháp chính xác · 160–200 từ.
+**Tiêu chí tự đánh giá (0–2 điểm cho mỗi tiêu chí):** đủ cấu trúc yêu cầu · chuỗi nhượng bộ – phản bác rõ · lập luận mạch lạc · ngữ pháp chính xác · 160–200 từ.
 
 **L5.2.** Mẫu: *I believe everyone should learn English. Admittedly, some people will never travel abroad, so they may not need it. But even at home, much of the information online is in English. Much as I understand that learning a language takes time, even a basic level opens many doors. Some say translation apps make learning unnecessary. Even so, apps can't help you build real relationships.*
 

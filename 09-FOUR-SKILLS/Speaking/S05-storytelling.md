@@ -1,5 +1,7 @@
 # S05 · Storytelling — Kể chuyện
 
+Để người nghe theo được câu chuyện, hãy cho biết bối cảnh, chuyện xảy ra và kết quả. Bạn sẽ luyện chọn thì và dùng từ nối theo thứ tự sự việc. Kể một chuyện ngắn mà rõ trước, rồi thêm cảm xúc hoặc chi tiết sau.
+
 | Mục | Nội dung |
 |---|---|
 | **Cấp độ** | A2 → B2 |

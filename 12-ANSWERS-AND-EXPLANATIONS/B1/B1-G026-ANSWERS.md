@@ -64,7 +64,7 @@
 >
 > *So overall, I believe phones can be a valuable learning tool, as long as teachers set clear rules.*
 
-**Rubric (0–2 mỗi tiêu chí):** đúng cấu trúc 5 bước · ≥ 4 cụm quan điểm khác nhau · có nhượng bộ ý kiến trái chiều · ngữ pháp chính xác · 130–160 từ.
+**Tiêu chí tự đánh giá (0–2 điểm cho mỗi tiêu chí):** đúng cấu trúc 5 bước · ≥ 4 cụm quan điểm khác nhau · có nhượng bộ ý kiến trái chiều · ngữ pháp chính xác · 130–160 từ.
 
 **L5.2.** Mẫu đoạn hội thoại:
 > *A: I think buying a house is always better — you're investing in your future.*

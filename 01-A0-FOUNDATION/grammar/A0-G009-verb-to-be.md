@@ -30,7 +30,7 @@
 | **Prerequisites** | [A0-G006 — Subject Pronouns](A0-G006-subject-pronouns.md), [A0-G008 — Sentence Patterns](A0-G008-sentence-patterns.md) |
 | **Estimated Time** | 90 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Chia đúng *am / is / are* theo chủ ngữ.
 2. Tạo câu khẳng định, phủ định, nghi vấn và trả lời ngắn với *be*.
@@ -56,7 +56,7 @@ Nhiều người mới học sẽ viết:
 
 ## C. WHAT: *To be* là gì?
 
-**To be** là một động từ rất thường gặp trong tiếng Anh. Trong bài này, be là động từ liên kết, dùng để:
+Trong bài này, **be** là động từ nối: nó nối người hoặc vật được nói đến với thông tin về người hoặc vật đó. Ví dụ, *I am tired* nghĩa là “Tôi mệt”. Ở hiện tại, bạn dùng *am, is* hoặc *are* tùy chủ ngữ. Ta dùng các dạng này để:
 
 - **Nối** chủ ngữ với thông tin về chủ ngữ (là linking verb — bài [A0-G008](A0-G008-sentence-patterns.md)).
 - Diễn tả **trạng thái**, **đặc điểm**, **danh tính**, **vị trí**.
@@ -294,7 +294,7 @@ Câu nghi vấn: **be** "nhảy" lên trước chủ ngữ.
 
 ### Level 1 — Recognition
 
-Chọn đáp án đúng.
+Chọn đáp án phù hợp với câu và ngữ cảnh.
 
 **L1.1.** I ___ a student.  A. is  B. am  C. are
 **L1.2.** My parents ___ teachers.  A. is  B. am  C. are
@@ -365,7 +365,7 @@ Dịch sang tiếng Anh:
 
 ### Checklist
 
-- [ ] Tôi chia *am/is/are* đúng 100% với đại từ.
+- [ ] Tôi chọn được *am/is/are* theo đại từ và tự giải thích lựa chọn của mình.
 - [ ] Tôi tạo được câu phủ định, nghi vấn, trả lời ngắn.
 - [ ] Tôi không còn viết thiếu *be* trước tính từ.
 - [ ] Tôi không ghép *be* với động từ hành động.

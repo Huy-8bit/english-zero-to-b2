@@ -30,7 +30,7 @@
 | **Prerequisites** | [B2-G011 — Advanced Modals](B2-G011-advanced-modals.md), [B2-G005 — Passive Reporting](B2-G005-passive-reporting.md) |
 | **Estimated Time** | 75 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Hiểu **hedging** (rào đón): làm mềm/giảm độ chắc chắn của khẳng định để **chính xác và thận trọng**.
 2. Dùng 6 nhóm phương tiện rào đón: **modal, động từ, trạng từ, tính từ, lượng từ, cấu trúc phi ngôi**.
@@ -53,7 +53,7 @@ So sánh:
 
 ## C. WHAT
 
-**Hedging** là dùng ngôn ngữ để thể hiện mức độ **không hoàn toàn chắc chắn**, **giới hạn phạm vi** khẳng định, hoặc **giữ khoảng cách** với thông tin.
+**Hedging — cách diễn đạt thận trọng, có giới hạn** giúp bạn tránh nói chắc hơn điều mình biết. Bạn có thể giới hạn phạm vi hoặc nêu khả năng, như *may, tends to, in some cases*. Hãy dùng khi bằng chứng chưa đủ để kết luận tuyệt đối; không cần làm mọi câu trở nên mơ hồ.
 
 | Mục đích | Ví dụ |
 |---|---|
@@ -132,16 +132,16 @@ Dùng **khi có bằng chứng mạnh** hoặc khi khẳng định quan điểm 
 |---|---|---|---|
 | 1 | *Regular exercise **may reduce** the risk of heart disease.* | Tập thể dục đều đặn có thể giảm nguy cơ bệnh tim. | Modal |
 | 2 | *Students who sleep well **tend to** perform better.* | Học sinh ngủ đủ thường học tốt hơn. | tend to |
-| 3 | *The data **suggest** that the policy has had a positive effect.* | Dữ liệu cho thấy... | suggest (*data* — số nhiều trong văn học thuật; *suggests* cũng phổ biến) |
+| 3 | *The data **suggest** that the policy has had a positive effect.* | Dữ liệu gợi ý rằng chính sách đã có tác động tích cực. | suggest (*data* — số nhiều trong văn học thuật; *suggests* cũng phổ biến) |
 | 4 | *This is **probably** the most important factor.* | Đây có lẽ là yếu tố quan trọng nhất. | Trạng từ |
 | 5 | ***It is likely that** prices will continue to rise.* | Có khả năng giá sẽ tiếp tục tăng. | Tính từ, phi ngôi |
-| 6 | ***In most cases**, the problem can be solved quickly.* | Trong hầu hết trường hợp... | Lượng từ |
-| 7 | ***It could be argued that** technology has made us less social.* | Có thể lập luận rằng... | Phi ngôi |
-| 8 | *The decline in sales **appears to** be linked to the new competitor.* | Doanh số giảm dường như liên quan... | appear to |
-| 9 | ***Arguably**, education is the key to reducing poverty.* | Có thể nói giáo dục là chìa khóa... | Trạng từ |
+| 6 | ***In most cases**, the problem can be solved quickly.* | Trong phần lớn trường hợp, vấn đề có thể được giải quyết nhanh chóng. | Lượng từ |
+| 7 | ***It could be argued that** technology has made us less social.* | Có thể đưa ra lập luận rằng công nghệ khiến chúng ta ít giao tiếp với người khác hơn. | Phi ngôi |
+| 8 | *The decline in sales **appears to** be linked to the new competitor.* | Doanh số giảm dường như có liên quan đến đối thủ cạnh tranh mới. | appear to |
+| 9 | ***Arguably**, education is the key to reducing poverty.* | Có thể cho rằng giáo dục là yếu tố then chốt để giảm nghèo. | Trạng từ |
 | 10 | *The results are **largely** consistent with previous research.* | Kết quả phần lớn phù hợp với nghiên cứu trước. | largely |
-| 11 | *There is **some evidence** that green spaces improve mental health.* | Có một số bằng chứng... | some evidence |
-| 12 | *There is **clear evidence** that air pollution damages the lungs.* | Có bằng chứng rõ ràng... | Booster — khi bằng chứng mạnh |
+| 11 | *There is **some evidence** that green spaces improve mental health.* | Có một số bằng chứng cho thấy không gian xanh giúp cải thiện sức khỏe tinh thần. | some evidence |
+| 12 | *There is **clear evidence** that air pollution damages the lungs.* | Có bằng chứng rõ ràng cho thấy ô nhiễm không khí gây hại cho phổi. | Booster — khi bằng chứng mạnh |
 
 ---
 

@@ -1,5 +1,7 @@
 # PRON-01 · IPA Reference — Bảng ký hiệu phiên âm quốc tế
 
+Bảng IPA giúp bạn đọc phiên âm trong từ điển, không yêu cầu học thuộc mọi ký hiệu trong một buổi. Chọn vài từ bạn đang dùng, nghe mẫu rồi đối chiếu từng âm với ký hiệu. Khi cần, quay lại bảng để tra.
+
 | Mục | Nội dung |
 |---|---|
 | **Cấp độ** | A0 → B2 (tra cứu) |

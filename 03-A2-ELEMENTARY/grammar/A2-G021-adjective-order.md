@@ -19,7 +19,7 @@ Bạn bán một chiếc túi. Thông tin là “nhỏ, đỏ, đẹp”. Ngư�
 
 ## C. WHAT
 
-**Adjective — tính từ** mô tả người/vật. Khi nhiều tính từ đứng **trước cùng một danh từ**, chúng thường có thứ tự quen thuộc: đánh giá chung đứng xa danh từ hơn, đặc điểm phân loại như màu/chất liệu đứng gần hơn.
+Khi nhiều **tính từ (adjectives)** cùng đứng trước một danh từ, chúng thường có thứ tự quen thuộc. Trong *a lovely red bag*, nhận xét *lovely* đứng trước màu sắc *red*. Những đặc điểm giúp phân loại đồ vật, như màu hoặc chất liệu, thường đứng gần danh từ hơn. Đây là xu hướng dùng từ, không phải lý do để ghép thật nhiều tính từ vào một cụm.
 
 **Head noun — danh từ chính** cho biết đang nói về cái gì: trong *a small wooden box*, box là danh từ chính; small nói kích thước; wooden nói chất liệu. Tính từ tiếng Anh thường không thêm -s theo danh từ số nhiều: *two small wooden boxes*, không *smalls*.
 

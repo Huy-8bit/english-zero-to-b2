@@ -1,5 +1,7 @@
 # R09 · VSTEP-style Reading Strategies — Chiến lược đọc theo định dạng VSTEP
 
+Bạn sẽ luyện phân chia thời gian và chọn cách đọc cho từng loại câu hỏi trong bài mô phỏng. Thời gian ở bảng là điểm bắt đầu để thử, không phải lịch bắt buộc cho mọi người. Hãy điều chỉnh sau khi biết mình thường chậm ở phần nào.
+
 | Mục | Nội dung |
 |---|---|
 | **Cấp độ** | B1 → B2 |

@@ -1,5 +1,7 @@
 # S07 · VSTEP-style Speaking — Chiến lược cho phần Nói định dạng VSTEP
 
+Bài này giúp bạn làm quen các nhiệm vụ nói mô phỏng định dạng VSTEP. Trước mỗi lượt, xác định người nghe cần biết điều gì rồi sắp xếp ý ngắn gọn. Sau khi ghi âm, dùng tiêu chí trong bài để tự xem lại cách triển khai ý và diễn đạt.
+
 | Mục | Nội dung |
 |---|---|
 | **Cấp độ** | B1 → B2 |

@@ -1,5 +1,7 @@
 # PRON-08 · Weak Forms — Dạng yếu của từ chức năng
 
+Những từ ngắn như *to, a, can* có thể nghe khác khi không được nhấn. Bạn sẽ luyện nhận ra dạng yếu trong cả câu, rồi so sánh với dạng mạnh. Hãy nghe câu mẫu trước, vì cách đọc còn phụ thuộc vào điều người nói muốn nhấn.
+
 | Mục | Nội dung |
 |---|---|
 | **Cấp độ** | A2 → B2 |
@@ -11,7 +13,7 @@
 Nhiều **từ chức năng** (mạo từ, giới từ, trợ động từ, đại từ, liên từ) có hai cách đọc:
 
 - **Dạng yếu** (weak form): dùng khi từ **không được nhấn** — phổ biến nhất trong lời nói. Nguyên âm thường thành **/ə/**.
-- **Dạng mạnh** (strong form): dùng khi từ **đứng cuối câu**, được **nhấn mạnh/đối lập**, hoặc **đọc riêng**.
+- **Dạng mạnh** (strong form): thường dùng khi đọc riêng hoặc nhấn để làm rõ, đối lập. Trợ động từ đứng cuối lời đáp ngắn cũng thường có dạng mạnh, như *Yes, I can*. Cách đọc còn tùy từ và vị trí trong câu.
 
 | Ví dụ | Dạng |
 |---|---|

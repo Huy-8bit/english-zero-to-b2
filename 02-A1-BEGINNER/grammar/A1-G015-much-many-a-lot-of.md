@@ -30,7 +30,7 @@
 | **Prerequisites** | [A1-G014 — Some / Any](A1-G014-some-any.md) |
 | **Estimated Time** | 60 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Dùng *many* với danh từ đếm được số nhiều, *much* với danh từ không đếm được.
 2. Dùng *a lot of / lots of* với cả hai loại, đặc biệt trong câu khẳng định.
@@ -54,7 +54,7 @@ Tiếng Việt chỉ có một từ "nhiều". Tiếng Anh có *many, much, a lo
 
 ## C. WHAT: *Much, many, a lot of* là gì?
 
-Đây là các **quantifiers** (lượng từ) mang nghĩa **"nhiều"**:
+**Much, many** và **a lot of** đều có thể mang nghĩa **“nhiều”**. Để chọn, hãy xem danh từ đếm được hay không đếm được, rồi xem bạn đang khẳng định, phủ định hay hỏi. Bảng sau giúp bạn chọn theo từng trường hợp:
 
 | Từ | Đi với | Ví dụ |
 |---|---|---|
@@ -191,7 +191,7 @@ none ── not much / not many ── some ── a lot of / lots of ── too
 ## J. MEMORY TRICKS
 
 1. **"Many – nhiều cái (m-a-n-y: có chữ *y* như *yes, I can count*); Much – nhiều khối"**. (Mẹo gợi nhớ.)
-2. **"A lot of — vé thông hành"**: Khi không chắc, *a lot of* luôn đúng trong câu khẳng định với mọi danh từ.
+2. **Nhớ một cặp ví dụ với a lot of:** *a lot of books* và *a lot of water*. Cụm này dùng với danh từ đếm được số nhiều hoặc danh từ không đếm được; không đặt trước mọi danh từ, chẳng hạn không nói *a lot of book*.
 3. **"How much $"**: Hỏi giá luôn là *How much* — vì tiền là không đếm được (kể cả khi bạn trả bằng nhiều tờ).
 
 ---

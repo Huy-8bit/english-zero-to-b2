@@ -1,5 +1,7 @@
 # R03 · Scanning — Đọc quét tìm thông tin
 
+Khi đã biết mình cần tìm gì, bạn không nhất thiết đọc lại toàn bài. Bài này luyện tìm nhanh một tên, số, ngày hoặc chi tiết. Sau khi thấy chỗ có vẻ đúng, hãy đọc kỹ câu đó và câu xung quanh để xác nhận.
+
 | Mục | Nội dung |
 |---|---|
 | **Cấp độ** | A1 → B2 |

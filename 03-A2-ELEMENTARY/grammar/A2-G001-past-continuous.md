@@ -30,7 +30,7 @@
 | **Prerequisites** | [A1-G004 — Present Continuous](../../02-A1-BEGINNER/grammar/A1-G004-present-continuous.md), [A1-G016 — was/were](../../02-A1-BEGINNER/grammar/A1-G016-past-simple-be.md), [A1-G018](../../02-A1-BEGINNER/grammar/A1-G018-past-simple-negatives-questions.md) |
 | **Estimated Time** | 90 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Tạo câu với **was/were + V-ing** ở thể khẳng định, phủ định, nghi vấn.
 2. Dùng quá khứ tiếp diễn cho hành động **đang diễn ra tại một thời điểm cụ thể** trong quá khứ.
@@ -54,7 +54,7 @@ Bạn muốn trả lời: "Lúc 9 giờ tối qua, tôi **đang xem** TV với v
 
 ## C. WHAT: Quá khứ tiếp diễn là gì?
 
-**Thì quá khứ tiếp diễn (Past Continuous)** diễn tả một hành động **đang diễn ra (chưa kết thúc) tại một thời điểm** hoặc **trong một khoảng thời gian** trong quá khứ.
+**Thì quá khứ tiếp diễn (Past Continuous)** cho biết một việc đang diễn ra tại một thời điểm hoặc trong một khoảng thời gian ở quá khứ. *At seven, I was cooking dinner* là “Lúc bảy giờ, tôi đang nấu bữa tối”. Ta nhìn vào lúc việc ấy đang diễn ra, chưa nhìn toàn bộ việc từ đầu đến cuối.
 
 | Cách dùng | Ví dụ |
 |---|---|

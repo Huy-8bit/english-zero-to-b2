@@ -30,7 +30,7 @@
 | **Prerequisites** | [B1-G012 — Passive across Tenses](../../04-B1-INTERMEDIATE/grammar/B1-G012-passive-all-tenses.md) |
 | **Estimated Time** | 90 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Chuyển bị động cho động từ có **hai tân ngữ** (*give, send, offer, show, tell...*).
 2. Dùng **bị động với modal**: *can be done, must be done, should have been done*.
@@ -53,7 +53,7 @@
 
 ## C. WHAT
 
-Ở B1, bạn đã học bị động ở các thì (*is done, was done, has been done, will be done...*). B2 mở rộng bị động sang:
+Bạn đã học bị động với các thì. Bài này mở rộng sang những mẫu khác, như động từ tình thái hoặc động từ đi kèm tân ngữ. Điểm chung vẫn là: xác định ai hoặc vật gì nhận tác động, rồi chọn dạng bị động phù hợp với cấu trúc ban đầu.
 
 | Dạng | Cấu trúc | Ví dụ |
 |---|---|---|

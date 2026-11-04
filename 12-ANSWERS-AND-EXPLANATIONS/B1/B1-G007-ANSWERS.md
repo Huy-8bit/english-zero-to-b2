@@ -56,7 +56,7 @@
 
 > *If I could change one thing about Ho Chi Minh City, I would improve public transport. If there were more metro lines and better buses, fewer people would ride motorbikes. The streets would be safer, and the air would be much cleaner. If the journey to work took only twenty minutes, people could spend more time with their families. Shops and offices might even open earlier because staff would arrive on time. Of course, it would cost a lot of money, and building new lines would take years. But if the city didn't invest now, the traffic would only get worse. I think that if everyone used public transport for just two days a week, we would notice a big difference.*
 
-**Rubric (0–2 mỗi tiêu chí):** ≥ 5 câu loại 2 đúng · đa dạng *would/could/might* · lập luận nhân–quả rõ · 100–130 từ, ít lỗi.
+**Tiêu chí tự đánh giá (0–2 điểm cho mỗi tiêu chí):** ≥ 5 câu loại 2 đúng · đa dạng *would/could/might* · lập luận nhân–quả rõ · 100–130 từ, ít lỗi.
 
 **L5.2.** Mẫu:
 - *If I won 10 billion dong, I'd buy a house for my parents and I'd travel to South America.*

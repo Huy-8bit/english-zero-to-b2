@@ -30,7 +30,7 @@
 | **Prerequisites** | [A0-G016 — Sentence Types](A0-G016-sentence-types.md) |
 | **Estimated Time** | 75 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Biết nghĩa và cách dùng các từ để hỏi: *What, Where, When, Who, Why, How, Which, Whose* và các cụm *How old / How many / How much / What time*.
 2. Tạo câu hỏi Wh- theo công thức: **Wh- + câu hỏi Yes/No**.
@@ -52,7 +52,7 @@ Bạn biết hỏi câu Yes/No: *Are you a teacher? Do you live in Hanoi?* — n
 
 ## C. WHAT: Từ để hỏi là gì?
 
-**Question words** (từ để hỏi), còn gọi là **Wh-words** vì hầu hết bắt đầu bằng *wh-*, dùng để hỏi **thông tin cụ thể** — câu trả lời không phải *Yes/No*.
+**Từ để hỏi (question words)** giúp bạn hỏi một thông tin cụ thể. Ví dụ, *Where do you live?* hỏi nơi ở; người nghe sẽ trả lời bằng một địa điểm. Nhóm này thường được gọi là **Wh-words**, vì nhiều từ bắt đầu bằng *wh-*. *How* cũng thuộc nhóm này.
 
 | Từ để hỏi | Hỏi về | Nghĩa | Ví dụ trả lời |
 |---|---|---|---|

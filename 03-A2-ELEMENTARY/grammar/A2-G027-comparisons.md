@@ -19,7 +19,7 @@ Hai balô cùng giá 300.000 đồng nhưng khác màu. Bạn nói *The blue bag
 
 ## C. WHAT
 
-**Equality comparison — so sánh bằng** dùng **as + tính từ/trạng từ nguyên dạng + as** để nói hai đối tượng bằng nhau trên một đặc điểm: as tall as, as quickly as. **Not as ... as — không bằng về một đặc điểm**: not as heavy as = không nặng bằng. **The same as — giống như** và **different from — khác với** so sánh sự giống/khác; thường cần nêu khía cạnh hoặc ngữ cảnh để tránh hiểu quá rộng.
+**As ... as** dùng để so sánh bằng nhau về một đặc điểm: *as tall as* — cao bằng; *as quickly as* — nhanh bằng. **Not as ... as** nghĩa là không bằng về đặc điểm đó. **The same as** nói đến sự giống nhau; **different from** nói đến sự khác nhau. Hãy nêu rõ đang so sánh chiều cao, cách làm hay điều gì khác nếu ngữ cảnh chưa rõ.
 
 ## D. WHY
 

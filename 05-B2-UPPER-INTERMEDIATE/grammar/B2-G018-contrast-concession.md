@@ -30,7 +30,7 @@
 | **Prerequisites** | [B2-G017 — Advanced Linking Devices](B2-G017-advanced-linking-devices.md), [B1-G023 — Adverbial Clauses](../../04-B1-INTERMEDIATE/grammar/B1-G023-adverbial-clauses.md) |
 | **Estimated Time** | 90 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Hệ thống các cách diễn đạt **tương phản** (hai điều khác nhau) và **nhượng bộ** (thừa nhận một điều nhưng vẫn giữ quan điểm).
 2. Dùng ***nevertheless, nonetheless, even so, all the same***.
@@ -51,6 +51,8 @@
 ---
 
 ## C. WHAT
+
+**Tương phản (contrast)** đặt hai điều khác nhau cạnh nhau. **Nhượng bộ (concession)** thừa nhận một điều nhưng nêu kết quả khác với điều ta thường chờ đợi. Trong *Although it was raining, we went out*, trời mưa là thật, nhưng chúng tôi vẫn ra ngoài.
 
 | Khái niệm | Ý nghĩa | Ví dụ |
 |---|---|---|
@@ -132,14 +134,14 @@ flowchart LR
 |---|---|---|---|
 | 1 | ***Even though** she had studied for months, she failed the exam.* | Dù đã học nhiều tháng, cô ấy vẫn trượt. | even though — nhấn mạnh |
 | 2 | *The flat is small. It's in a great location, **though**.* | Căn hộ nhỏ. Nhưng vị trí tuyệt vời. | *though* cuối câu |
-| 3 | *Northern dishes tend to be milder, **whereas** southern ones are often sweeter.* | Món miền Bắc thường thanh hơn, trong khi... | whereas — đối lập (khái quát, có ngoại lệ) |
+| 3 | *Northern dishes tend to be milder, **whereas** southern ones are often sweeter.* | Món ăn miền Bắc thường có vị nhẹ hơn, trong khi món miền Nam thường ngọt hơn. | whereas — đối lập (khái quát, có ngoại lệ) |
 | 4 | ***Much as** I'd like to help, I simply don't have time.* | Dù rất muốn giúp, tôi không có thời gian. | much as |
 | 5 | ***Strange as** it may seem, I've never been to the beach.* | Nghe có vẻ lạ, nhưng tôi chưa từng đi biển. | adj + as + may |
 | 6 | ***Hard as** they tried, they couldn't save the business.* | Dù cố gắng hết sức, họ vẫn không cứu được công ty. | adv + as |
 | 7 | ***Despite the fact that** the economy is growing, many people are struggling.* | Mặc dù kinh tế tăng trưởng, nhiều người vẫn khó khăn. | despite the fact that |
 | 8 | *The evidence is limited. **Nevertheless**, the results are encouraging.* | Bằng chứng còn hạn chế. Tuy vậy, kết quả đáng khích lệ. | Trang trọng |
 | 9 | *I know he didn't mean it. **Even so**, it hurt.* | Tôi biết anh ấy không cố ý. Dù vậy, vẫn đau. | even so |
-| 10 | ***Admittedly**, online courses are convenient. **However**, they require strong self-discipline.* | Phải thừa nhận... Tuy nhiên... | Nhượng bộ – phản bác |
+| 10 | ***Admittedly**, online courses are convenient. **However**, they require strong self-discipline.* | Phải thừa nhận các khóa học trực tuyến rất tiện. Tuy nhiên, người học cần có tính tự giác cao. | Nhượng bộ – phản bác |
 | 11 | *"I suppose you hated the trip." — "**On the contrary**, I loved every minute."* | Ngược lại, tôi thích từng phút. | on the contrary |
 | 12 | ***However much** you earn, you'll always want more.* | Dù kiếm bao nhiêu, bạn vẫn muốn nhiều hơn. | however + adj/adv |
 

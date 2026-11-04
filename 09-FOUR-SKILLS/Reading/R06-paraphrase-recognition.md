@@ -1,5 +1,7 @@
 # R06 · Paraphrase Recognition — Nhận diện diễn đạt khác khi đọc
 
+Hai câu có thể dùng từ khác nhau mà vẫn cùng ý. Bạn sẽ luyện nhận ra điều đó, đồng thời kiểm tra những phần dễ đổi nghĩa như phủ định, số lượng và mức độ chắc chắn. Đừng chỉ thay từng từ bằng từ đồng nghĩa.
+
 | Mục | Nội dung |
 |---|---|
 | **Cấp độ** | B1 → B2 |
@@ -9,7 +11,7 @@
 
 ## 1. Nguyên tắc
 
-Câu hỏi đọc hiểu B1–B2 **hiếm khi lặp lại nguyên văn** câu trong bài. Bạn phải nhận ra **cùng một ý** được viết bằng **từ/cấu trúc khác**.
+Câu hỏi đọc hiểu có thể diễn đạt thông tin khác với câu trong bài. Hãy kiểm tra xem **ý có giữ nguyên** không: ai làm, làm gì, bao nhiêu và chắc đến mức nào. Trùng từ chưa đủ để chứng minh hai câu cùng nghĩa.
 
 | Bài đọc | Câu hỏi |
 |---|---|

@@ -80,7 +80,7 @@
 > *Catch up soon,*
 > *Tuan*
 
-**Rubric (0–2 mỗi tiêu chí):** văn phong đúng cho mỗi email · từ vựng khác biệt rõ · ngữ pháp khác biệt (rút gọn, bị động, câu hỏi) · mở/kết thư đúng · độ dài phù hợp.
+**Tiêu chí tự đánh giá (0–2 điểm cho mỗi tiêu chí):** văn phong đúng cho mỗi email · từ vựng khác biệt rõ · ngữ pháp khác biệt (rút gọn, bị động, câu hỏi) · mở/kết thư đúng · độ dài phù hợp.
 
 **L5.2.** Mẫu (1): *Good morning, Ms Lan. I was wondering if I could take a few days of annual leave next month. I'd like to visit my family in Hue from 10 to 14 March. I'll make sure all my tasks are completed before then.* — (2): *Guess what? I'm taking a few days off next month! Heading back to Hue to see my family. Can't wait!*
 

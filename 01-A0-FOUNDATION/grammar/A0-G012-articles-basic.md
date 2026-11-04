@@ -30,7 +30,7 @@
 | **Prerequisites** | [A0-G005](A0-G005-nouns-verbs-adjectives-adverbs.md); nên học [A0-G001](A0-G001-alphabet.md)–[G003](A0-G003-english-sounds-ipa.md) để phân biệt nguyên âm |
 | **Estimated Time** | 75 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Dùng *a/an* với danh từ số ít, đếm được, khi nhắc đến **lần đầu** hoặc **một trong nhiều**.
 2. Chọn *a* hay *an* dựa trên **âm** (không phải chữ cái) đầu tiên.
@@ -54,7 +54,7 @@ Gợi ý: Hãy nghĩ về **người nghe**. Ở câu 1, người nghe biết g�
 
 ## C. WHAT: Mạo từ là gì?
 
-**Article** (mạo từ) là từ nhỏ đứng **trước danh từ** để cho người nghe biết danh từ đó là **xác định** hay **không xác định**.
+**Mạo từ (article)** gồm *a, an* và *the*. Chúng đứng trước danh từ hoặc trước tính từ đi kèm danh từ. Bạn dùng *a/an* khi giới thiệu một người hoặc vật chưa xác định, và *the* khi người nghe biết bạn đang nói đến đối tượng nào. Ví dụ: *a book* — một quyển sách; *the book on the table* — quyển sách trên bàn.
 
 | Mạo từ | Tên gọi | Ý nghĩa cốt lõi | Tương đương gần đúng |
 |---|---|---|---|

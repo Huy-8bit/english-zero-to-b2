@@ -32,7 +32,7 @@
 
 > ℹ️ **Thứ tự học:** Bài này dùng *to have + V3* (nguyên mẫu hoàn thành) từ [B2-G013](B2-G013-perfect-infinitives-gerunds.md). Nên học G013 trước G005; mã bài được giữ nguyên theo Curriculum Map.
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Dùng **It is said / believed / thought / reported / expected... that + mệnh đề**.
 2. Dùng **S + is said / believed... + to V** (sự việc **cùng lúc** với lúc nói).
@@ -58,7 +58,7 @@ Tin tức:
 
 ## C. WHAT
 
-Cấu trúc bị động tường thuật dùng để thuật lại **thông tin, ý kiến, tin đồn** mà **không nói rõ ai** là người nói/tin. Đặc trưng của **báo chí, văn học thuật, báo cáo**.
+**Bị động tường thuật (passive reporting structures)** dùng để thuật lại điều người ta nói, tin hoặc cho rằng đúng mà không cần nêu người nói. *It is said that...* gần nghĩa với “Người ta nói rằng...”. Cách viết này thường gặp trong báo chí và báo cáo. Bản thân cấu trúc không bảo đảm thông tin là sự thật.
 
 | Chủ động | It-passive | Subject-passive |
 |---|---|---|

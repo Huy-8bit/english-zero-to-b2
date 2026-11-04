@@ -30,7 +30,7 @@
 | **Prerequisites** | [A2-G002](../../03-A2-ELEMENTARY/grammar/A2-G002-past-simple-vs-past-continuous.md), [B1-G002](B1-G002-past-perfect.md), [B1-G003](B1-G003-past-perfect-continuous.md) |
 | **Estimated Time** | 90 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Xác định **vai trò** của từng thì quá khứ trong một câu chuyện: sự kiện chính, bối cảnh, sự việc trước đó, quá trình trước đó.
 2. Chọn thì phù hợp trong đoạn văn kể chuyện **không ghi sẵn tên thì**.
@@ -54,7 +54,7 @@
 
 ## C. WHAT
 
-**Narrative tenses** là nhóm các thì quá khứ dùng phối hợp khi kể chuyện. Mỗi thì giữ một **vai trò**:
+Khi kể chuyện, bạn dùng các **thì kể chuyện (narrative tenses)** để người nghe biết việc nào đang diễn ra, việc nào xảy đến và việc nào có từ trước. Bạn không cần đổi thì cho đa dạng; hãy chọn theo thứ tự và góc nhìn của câu chuyện. Mỗi thì thường đảm nhận một vai trò:
 
 | Thì | Vai trò trong câu chuyện | Ví dụ |
 |---|---|---|

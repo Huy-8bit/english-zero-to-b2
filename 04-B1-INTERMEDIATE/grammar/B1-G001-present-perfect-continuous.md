@@ -56,7 +56,7 @@ Một người bạn khác nhìn bàn làm việc của bạn đầy giấy tờ
 
 ## C. WHAT
 
-**Present Perfect Continuous** (hiện tại hoàn thành tiếp diễn) nói về một **hoạt động kéo dài** (*activity*) có liên hệ tới **bây giờ**. Có hai trường hợp chính:
+**Hiện tại hoàn thành tiếp diễn (Present Perfect Continuous)** nhấn mạnh một hoạt động kéo dài có liên hệ với hiện tại. *I've been cooking* có thể cho biết tôi nấu ăn từ trước đến giờ, hoặc vừa nấu xong nên vẫn còn dấu hiệu của việc đó. Hai trường hợp chính là:
 
 | Trường hợp | Ví dụ | Ý nghĩa |
 |---|---|---|

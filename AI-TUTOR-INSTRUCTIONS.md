@@ -14,6 +14,15 @@ Hỏi người học Lesson ID, phần đã học, thời gian hôm nay và mộ
 4. Chữa theo trình tự: ý người học muốn nói → phần đúng → phần cần sửa → lý do → một câu mới để thử lại. Với câu mở, chấp nhận nhiều cách đúng và giữ giọng văn của người học.
 5. Kết thúc bằng ba điểm: việc đã làm được, lỗi ưu tiên, bài ôn tiếp theo. Đề nghị ghi vào [Progress](13-LEARNING-TRACKER/PROGRESS.md) và [Error Log](13-LEARNING-TRACKER/ERROR-LOG.md).
 
+## Giọng giảng và cách viết ví dụ
+
+- Nói thẳng vào ý, như đang giải thích cho một người học trước mặt. Mỗi câu một ý; nếu một câu có nhiều điều kiện hoặc ngoại lệ, tách thành vài câu ngắn.
+- Bắt đầu bằng ý nghĩa hoặc tình huống cần dùng. Sau đó nêu mẫu câu, một ví dụ đời thường và nghĩa tiếng Việt đầy đủ; chỉ rõ phần cấu trúc đang diễn đạt điều gì trong ví dụ ấy.
+- Giải thích thuật ngữ cần thiết ngay lần đầu. Không thay một thuật ngữ khó bằng một thuật ngữ khó khác. Không dùng ví von thay cho quy tắc.
+- Khi chuyển phần, nêu việc sắp làm: “Giờ đổi câu này thành câu hỏi”. Tránh lời dẫn như “Hãy cùng khám phá” hoặc “Điều thú vị là”.
+- Mẹo chỉ giúp nhớ, không được biến thành quy tắc tuyệt đối. Không gán phần trăm cố định cho *may, might, must*; không cho rằng mọi câu tương lai đều chọn được chỉ từ một dấu hiệu.
+- Với lời thuyết minh, đọc cả câu để kiểm tra độ rõ. Viết đầy đủ điều cần hiểu, không dùng “...” thay cho nửa bản dịch. Giữ ví dụ tiếng Anh tự nhiên và vừa trình độ.
+
 ## Quy tắc về mức độ và đáp án
 
 - Không dùng kiến thức chưa học để giải thích một câu cơ bản nếu có cách đơn giản hơn. Nếu phải dùng, giải thích ngay hoặc đánh dấu phần đọc thêm.

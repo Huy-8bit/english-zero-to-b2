@@ -56,7 +56,7 @@
 
 > *The person who influenced me most is my grandfather. When I was a child, he **taught me to read** before I started school. He **made me practise** writing every afternoon, but he always **let me choose** the stories. He **encouraged me to ask** questions about everything, and he never **told me to be** quiet. When I was fifteen, I wanted to **give up** studying maths. He **persuaded me to continue** and **suggested that I study** with a friend. I finally **succeeded in getting** a good grade. Later, he **advised me to become** an engineer, but he also said it was my decision. I will always **thank him for believing** in me, and I **look forward to telling** my own children about him.*
 
-**Rubric (0–2 mỗi tiêu chí):** đủ số lượng từng mẫu · đúng *to*/không *to* · giới từ + V-ing đúng · nội dung mạch lạc · 120–150 từ.
+**Tiêu chí tự đánh giá (0–2 điểm cho mỗi tiêu chí):** đủ số lượng từng mẫu · đúng *to*/không *to* · giới từ + V-ing đúng · nội dung mạch lạc · 120–150 từ.
 
 **L5.2.** Mẫu: *I'd advise you to research the company carefully. I suggest that you prepare answers to common questions. I recommend practising with a friend. Don't let them make you feel nervous — remind yourself to breathe slowly. And remember to thank them for meeting you at the end.*
 

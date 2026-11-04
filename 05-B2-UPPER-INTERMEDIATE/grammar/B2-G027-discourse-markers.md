@@ -30,7 +30,7 @@
 | **Prerequisites** | [B2-G017 — Advanced Linking Devices](B2-G017-advanced-linking-devices.md) |
 | **Estimated Time** | 75 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Hiểu **discourse markers** (DM): từ/cụm **tổ chức** cuộc nói chuyện hoặc văn bản, thể hiện **thái độ** người nói.
 2. Dùng DM để **mở đầu, chuyển chủ đề, quay lại chủ đề**: *By the way, Anyway, Speaking of...*
@@ -53,7 +53,7 @@
 
 ## C. WHAT
 
-**Dấu hiệu diễn ngôn** không thay đổi nội dung chính của câu, nhưng giúp người nghe/đọc hiểu:
+**Từ hoặc cụm dẫn dắt ý (discourse markers)** giúp người nghe hoặc người đọc theo được cuộc trò chuyện hay lập luận. Chúng có thể báo bạn đang đổi ý, giải thích thêm hay quay lại ý chính. Ý nghĩa cụ thể còn tùy vị trí, tình huống và giọng nói:
 
 - **Cấu trúc** cuộc nói chuyện (bắt đầu, chuyển ý, kết thúc).
 - **Thái độ** người nói (bất ngờ, thẳng thắn, đồng ý miễn cưỡng).
@@ -142,18 +142,18 @@ Trong bài thi nói B2, tiêu chí **Fluency & Coherence** đánh giá khả nă
 
 | # | English | Tiếng Việt | Chức năng |
 |---|---|---|---|
-| 1 | ***Well**, I'm not really sure, but I'd guess about 200 people.* | À, tôi không chắc lắm... | Câu giờ |
-| 2 | ***By the way**, have you heard that Mai got a new job?* | Nhân tiện... | Chuyển chủ đề |
+| 1 | ***Well**, I'm not really sure, but I'd guess about 200 people.* | À, tôi không chắc lắm, nhưng đoán là khoảng 200 người. | Câu giờ |
+| 2 | ***By the way**, have you heard that Mai got a new job?* | Nhân tiện, bạn đã nghe tin Mai có việc mới chưa? | Chuyển chủ đề |
 | 3 | ***Anyway**, let's get back to the main point.* | Dù sao, quay lại ý chính. | Quay lại |
-| 4 | ***Speaking of** jobs, how's your new position going?* | Nói về công việc... | Chuyển liên quan |
-| 5 | *Everyone says it's expensive. **Actually**, it's quite reasonable.* | Thật ra... | Sửa thông tin |
-| 6 | ***To be honest**, I didn't enjoy the film much.* | Thành thật mà nói... | Thẳng thắn |
-| 7 | *The flat is small. **Mind you**, it's in a great location.* | Nhưng mà... | Ý trái chiều nhẹ |
-| 8 | *It's not ideal — **I mean**, it works, but it's slow.* | Ý tôi là... | Làm rõ |
-| 9 | ***Let me think**... the best time to visit would be October.* | Để tôi nghĩ... | Câu giờ |
+| 4 | ***Speaking of** jobs, how's your new position going?* | Nhắc đến công việc, công việc mới của bạn thế nào rồi? | Chuyển liên quan |
+| 5 | *Everyone says it's expensive. **Actually**, it's quite reasonable.* | Ai cũng bảo là đắt. Thật ra giá khá hợp lý. | Sửa thông tin |
+| 6 | ***To be honest**, I didn't enjoy the film much.* | Thành thật mà nói, tôi không thích bộ phim ấy lắm. | Thẳng thắn |
+| 7 | *The flat is small. **Mind you**, it's in a great location.* | Căn hộ nhỏ. Bù lại, vị trí rất thuận tiện. | Ý trái chiều nhẹ |
+| 8 | *It's not ideal — **I mean**, it works, but it's slow.* | Cũng chưa được như ý. Ý tôi là nó dùng được, nhưng chậm. | Làm rõ |
+| 9 | ***Let me think**... the best time to visit would be October.* | Để tôi nghĩ một chút. Tháng Mười có lẽ là thời điểm thích hợp nhất để đến thăm. | Câu giờ |
 | 10 | *"I can't come because I have an exam." — "**Fair enough**."* | Hợp lý thôi. | Chấp nhận |
-| 11 | ***Interestingly**, younger users preferred the older design.* | Điều thú vị là... | Đánh giá (văn viết) |
-| 12 | ***So, basically**, we need to find a cheaper supplier.* | Vậy tóm lại là... | Tóm tắt (văn nói) |
+| 11 | ***Interestingly**, younger users preferred the older design.* | Điểm đáng chú ý là người dùng trẻ lại thích thiết kế cũ hơn. | Đánh giá (văn viết) |
+| 12 | ***So, basically**, we need to find a cheaper supplier.* | Vậy tóm lại, chúng ta cần tìm một nhà cung cấp rẻ hơn. | Tóm tắt (văn nói) |
 
 ---
 

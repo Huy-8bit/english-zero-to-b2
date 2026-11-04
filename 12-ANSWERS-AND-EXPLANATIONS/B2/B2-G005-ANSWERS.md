@@ -64,7 +64,7 @@
 
 > ℹ️ Bản tin giả định để luyện tập.
 
-**Rubric (0–2 mỗi tiêu chí):** ≥ 2 It-passive · ≥ 4 Subject-passive · ≥ 3 dạng nguyên mẫu khác nhau · văn phong bản tin · 120–150 từ.
+**Tiêu chí tự đánh giá (0–2 điểm cho mỗi tiêu chí):** ≥ 2 It-passive · ≥ 4 Subject-passive · ≥ 3 dạng nguyên mẫu khác nhau · văn phong bản tin · 120–150 từ.
 
 **L5.2.** Mẫu: *In my hometown there's a lake called Ho Tien. It is said that a fairy once came down to bathe there. The lake is believed to have been formed more than a thousand years ago. There is said to be a golden turtle living at the bottom...*
 

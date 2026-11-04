@@ -30,7 +30,7 @@
 | **Prerequisites** | [A2-G025 — Too / Enough](../../03-A2-ELEMENTARY/grammar/A2-G025-too-enough.md) |
 | **Estimated Time** | 75 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Dùng **so + tính từ/trạng từ** và **such + (a/an) + tính từ + danh từ** để nhấn mạnh.
 2. Dùng **so/such ... that** để nói **kết quả**.
@@ -51,6 +51,8 @@
 ---
 
 ## C. WHAT
+
+*So* và *such* có thể nhấn mạnh mức độ, còn phần bắt đầu bằng *that* có thể nêu kết quả. So sánh *It was so hot that we stayed inside* với *It was such a hot day that we stayed inside*. Cùng ý “nóng đến nỗi”, nhưng sau *so* và *such* là hai kiểu cụm từ khác nhau.
 
 | Cấu trúc | Nghĩa | Ví dụ |
 |---|---|---|

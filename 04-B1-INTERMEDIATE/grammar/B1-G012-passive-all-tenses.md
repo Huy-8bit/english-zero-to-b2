@@ -30,7 +30,7 @@
 | **Prerequisites** | [A2-G019 — Passive Voice (basic)](../../03-A2-ELEMENTARY/grammar/A2-G019-passive-voice-basic.md), [B1-G001](B1-G001-present-perfect-continuous.md) (các thì hoàn thành) |
 | **Estimated Time** | 90 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Tạo câu bị động ở **8 dạng**: hiện tại đơn/tiếp diễn/hoàn thành, quá khứ đơn/tiếp diễn/hoàn thành, tương lai *will*, *be going to*.
 2. Tạo bị động với **modal verbs**: *can/must/should be + V3*.
@@ -53,7 +53,7 @@
 
 ## C. WHAT
 
-**Passive voice** (thể bị động) đặt **đối tượng chịu tác động** lên vị trí chủ ngữ. Ta dùng bị động khi:
+**Thể bị động (passive voice)** đưa người hoặc vật nhận tác động lên làm chủ ngữ. *The room is being cleaned* nhấn mạnh căn phòng đang được dọn, thay vì ai dọn. Bạn chọn thì cho phần *be*, còn động từ chính ở dạng phân từ quá khứ. Bị động hữu ích khi:
 
 | Lý do | Ví dụ |
 |---|---|

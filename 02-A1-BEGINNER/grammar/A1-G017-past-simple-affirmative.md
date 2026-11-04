@@ -30,7 +30,7 @@
 | **Prerequisites** | [A1-G016 — was/were](A1-G016-past-simple-be.md) |
 | **Estimated Time** | 90 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Hiểu quá khứ đơn diễn tả hành động **đã xảy ra và kết thúc** tại một thời điểm xác định trong quá khứ.
 2. Tạo dạng quá khứ (**V2**) của động từ có quy tắc: *-ed, -d, -ied*, gấp đôi phụ âm.
@@ -56,11 +56,11 @@ Một người học viết:
 
 ## C. WHAT: Thì quá khứ đơn là gì?
 
-**Thì quá khứ đơn (Past Simple)** diễn tả hành động hoặc sự việc:
+**Thì quá khứ đơn (Past Simple)** dùng để kể việc đã xảy ra trong một khoảng thời gian đã qua. Người nói có thể nêu mốc, như *yesterday*, hoặc để ngữ cảnh cho biết. Bạn dùng thì này để kể một việc, một chuỗi sự việc, hay thói quen và trạng thái trong quá khứ:
 
-- **Đã xảy ra** trong quá khứ,
-- **Đã kết thúc** hoàn toàn,
-- Tại một **thời điểm xác định** (người nói biết hoặc ngữ cảnh cho biết khi nào).
+- Một sự việc được nhìn như một việc đã qua.
+- Một thói quen hoặc trạng thái trong giai đoạn quá khứ.
+- Mốc thời gian có thể được nói rõ hoặc đã hiểu từ ngữ cảnh. Câu quá khứ không tự chứng minh mọi ảnh hưởng của sự việc đã hết.
 
 *I **visited** Hue **last year**.* — Việc thăm Huế đã xong, xảy ra năm ngoái.
 
@@ -75,9 +75,9 @@ Một người học viết:
 
 Phần lớn động từ tiếng Anh tạo quá khứ bằng cách thêm **-ed** (*work → worked*). Đó là **regular verbs** (động từ có quy tắc).
 
-Nhưng những động từ **cổ xưa và dùng nhiều nhất** (*go, eat, see, come, have, make, take...*) có nguồn gốc từ tiếng Anh cổ với cách tạo quá khứ khác — thường bằng cách **đổi nguyên âm** (*sing → sang, drink → drank*). Vì dùng quá thường xuyên nên chúng "sống sót" qua hàng nghìn năm mà không bị chuẩn hóa thành *-ed*. Đó là **irregular verbs** (động từ bất quy tắc).
+Một số động từ không tạo quá khứ bằng cách thêm *-ed*. Bạn cần học dạng quá khứ riêng, như *go → went* và *eat → ate*. Đây là **động từ bất quy tắc (irregular verbs)**. Có những nhóm gần nhau về âm, nhưng không dùng nhóm âm để tự đoán mọi động từ.
 
-> 💡 Tin tốt: chỉ khoảng **100–150 động từ bất quy tắc** thường gặp — và khoảng **40 từ** chiếm phần lớn trường hợp sử dụng hằng ngày. Học thuộc 40 từ trong bài này là bạn đã nắm phần lớn.
+> Bắt đầu với các động từ trong bảng của bài. Với mỗi từ, đặt một câu kể việc bạn đã làm. Ôn lại trong câu sẽ giúp bạn nhớ cách dùng, thay vì chỉ nhớ một dãy từ.
 
 ---
 

@@ -1,5 +1,7 @@
 # LAB-06 · Real-life Dialogues — Hội thoại tình huống thực tế
 
+Bạn sẽ hoàn thiện hội thoại rồi thử dùng chúng trong một tình huống khác. Sau lượt điền từ, đọc thành lời và kiểm tra hai người có đang trả lời đúng ý nhau không. Đổi một vài thông tin để tránh chỉ nhớ nguyên đoạn mẫu.
+
 | Mục | Nội dung |
 |---|---|
 | **Cấp độ** | A2 → B2 |

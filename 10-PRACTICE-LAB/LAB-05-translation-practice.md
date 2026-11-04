@@ -1,5 +1,7 @@
 # LAB-05 · Translation Practice — Luyện dịch Việt ↔ Anh
 
+Mỗi câu tiếng Việt có thể có hơn một bản dịch tự nhiên. Hãy xác định ý và ngữ cảnh trước, rồi viết bằng mẫu tiếng Anh bạn đã biết. Sau khi xem đáp án, so sánh cách diễn đạt thay vì chỉ đếm những từ khác nhau.
+
 | Mục | Nội dung |
 |---|---|
 | **Cấp độ** | A1 → B2 |

@@ -30,7 +30,7 @@
 | **Prerequisites** | [A0-G007 — Subject, Verb, Object](../../01-A0-FOUNDATION/grammar/A0-G007-subject-verb-object.md), [A1-G006](A1-G006-possessives.md) |
 | **Estimated Time** | 60 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Dùng đúng 7 đại từ tân ngữ: *me, you, him, her, it, us, them*.
 2. Đặt đại từ tân ngữ **sau động từ** và **sau giới từ**.
@@ -54,7 +54,7 @@ Người nhận hiểu ý, nhưng câu nghe rất lạ.
 
 ## C. WHAT: Đại từ tân ngữ là gì?
 
-**Object pronoun** (đại từ tân ngữ) là đại từ đứng ở vị trí **tân ngữ** — người/vật **chịu tác động** của hành động — hoặc đứng **sau giới từ**.
+**Đại từ tân ngữ (object pronoun)** như *me, him, her, us, them* thay cho tên người hoặc vật ở vị trí tân ngữ, hoặc sau giới từ. So sánh *I know Lan* với *I know her*. Trong *Sit next to me*, *me* đứng sau cụm giới từ *next to*.
 
 | Vị trí chủ ngữ (làm hành động) | Vị trí tân ngữ (chịu hành động) |
 |---|---|

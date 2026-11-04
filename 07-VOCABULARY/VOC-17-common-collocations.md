@@ -1,5 +1,7 @@
 # VOC-17 · Common Collocations — Kết hợp từ thông dụng
 
+Bạn có thể biết từng từ mà vẫn ghép chưa tự nhiên. Bài này giúp bạn học các cụm thường đi cùng nhau, như *make a decision* và *do homework*. Hãy luyện cả cụm trong một câu thay vì dịch từng từ riêng lẻ.
+
 | Mục | Nội dung |
 |---|---|
 | **Cấp độ** | A2 → B2 |

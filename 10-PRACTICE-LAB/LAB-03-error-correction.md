@@ -1,5 +1,7 @@
 # LAB-03 · Error Correction — Tìm và sửa lỗi sai
 
+Bạn sẽ luyện tìm và sửa lỗi, nhưng cần giữ ý người viết muốn diễn đạt. Sau mỗi câu, chỉ ra phần thay đổi và nói ngắn vì sao cần sửa. Viết lại cả câu giúp bạn kiểm tra bản sửa có còn thiếu hoặc thêm nhầm từ không.
+
 | Mục | Nội dung |
 |---|---|
 | **Cấp độ** | A2 → B2 |

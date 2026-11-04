@@ -1,5 +1,7 @@
 # VOC-06 · Food & Health — Ăn uống và sức khỏe
 
+Bạn sẽ học từ để nói về món ăn, cách ăn uống và sức khỏe trong những tình huống thường ngày. Luyện bằng cách gọi một món hoặc mô tả một triệu chứng đơn giản. Các câu về sức khỏe là bài tập ngôn ngữ, không thay cho hướng dẫn điều trị.
+
 | Mục | Nội dung |
 |---|---|
 | **Cấp độ** | A1 → B2 |

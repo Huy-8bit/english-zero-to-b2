@@ -30,7 +30,7 @@
 | **Prerequisites** | [B1-G016 — Gerund vs Infinitive](B1-G016-gerund-vs-infinitive.md) |
 | **Estimated Time** | 90 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Dùng mẫu **V + O + to-infinitive**: *ask/tell/want/advise/allow/encourage/remind/warn someone to do*.
 2. Dùng mẫu **V + O + bare infinitive**: *make/let someone do*, và bị động *be made to do*.
@@ -50,7 +50,7 @@
 
 ## C. WHAT
 
-**Verb patterns** là các "khuôn" mà một động từ yêu cầu phía sau. Ở B1, bạn cần nắm 5 khuôn mở rộng (ngoài *V + to V* và *V + V-ing* đã học ở [B1-G016](B1-G016-gerund-vs-infinitive.md)):
+**Mẫu đi kèm động từ (verb patterns)** cho biết bạn đặt phần nào sau một động từ: tân ngữ, *to + động từ*, *V-ing* hay một phần câu. Ví dụ, *want to go* khác với *want someone to go*. Bài này mở rộng những mẫu đã học ở A2 và B1-G016:
 
 | Mẫu | Ví dụ |
 |---|---|

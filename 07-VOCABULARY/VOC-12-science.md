@@ -1,5 +1,7 @@
 # VOC-12 · Science — Khoa học
 
+Bạn sẽ học từ để đọc và nói về nghiên cứu, phát hiện và công nghệ. Khi phân biệt hai từ, như *discover* và *invent*, hãy hỏi: thứ đó đã có sẵn hay do con người tạo ra? Sau đó kiểm tra bằng ví dụ trong bài.
+
 | Mục | Nội dung |
 |---|---|
 | **Cấp độ** | B1 → B2 |

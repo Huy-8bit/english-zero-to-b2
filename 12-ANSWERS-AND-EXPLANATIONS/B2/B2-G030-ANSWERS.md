@@ -66,7 +66,7 @@
 >
 > ***In conclusion**, **while** shopping centres have some economic value, parks **clearly** offer greater benefits for public health and social equality. **For these reasons**, governments should give priority to creating and maintaining green spaces.*
 
-**Rubric (0–2 mỗi tiêu chí):**
+**Tiêu chí tự đánh giá (0–2 điểm cho mỗi tiêu chí):**
 
 | Tiêu chí | 2 điểm |
 |---|---|

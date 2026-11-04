@@ -30,7 +30,7 @@
 | **Prerequisites** | [B2-G007 — Reduced Relative Clauses](B2-G007-relative-clause-reduction.md), [B1-G023 — Adverbial Clauses](../../04-B1-INTERMEDIATE/grammar/B1-G023-adverbial-clauses.md) |
 | **Estimated Time** | 90 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Dùng **V-ing** để rút gọn mệnh đề chỉ **thời gian, lý do, kết quả, hành động đồng thời** (chủ động).
 2. Dùng **V3** để rút gọn mệnh đề **bị động**.
@@ -52,7 +52,7 @@
 
 ## C. WHAT
 
-**Mệnh đề phân từ** (participle clause) là cách rút gọn **mệnh đề trạng ngữ** khi **chủ ngữ của hai mệnh đề giống nhau**.
+**Mệnh đề phân từ (participle clause)** có thể giúp gộp thông tin về hành động, thời gian hoặc lý do. Trong các mẫu rút gọn của bài, người thực hiện hành động ở hai phần phải là cùng một chủ thể. Với *Walking home, I saw Lan*, người đi bộ cũng là “tôi”. Nếu không kiểm tra điều này, câu dễ bị hiểu sai.
 
 | Mệnh đề đầy đủ | Mệnh đề phân từ |
 |---|---|
@@ -126,13 +126,13 @@ Mệnh đề phân từ chủ yếu xuất hiện trong **văn viết** (truyệ
 | 3 | ***Not wanting** to wake the baby, we whispered.* | Không muốn đánh thức em bé, chúng tôi thì thầm. | Phủ định |
 | 4 | *The typhoon hit the coast, **causing** serious damage.* | Bão đổ bộ, gây thiệt hại nghiêm trọng. | Kết quả |
 | 5 | ***Surrounded** by mountains, the village is very peaceful.* | Được bao quanh bởi núi, ngôi làng rất yên bình. | V3 |
-| 6 | ***Made** from recycled plastic, these bags are eco-friendly.* | Làm từ nhựa tái chế, ... | V3 |
+| 6 | ***Made** from recycled plastic, these bags are eco-friendly.* | Những chiếc túi này được làm từ nhựa tái chế nên thân thiện với môi trường. | V3 |
 | 7 | ***Having finished** her degree, she moved to Singapore.* | Học xong, cô ấy chuyển đến Singapore. | Having V3 |
-| 8 | ***Having been rejected** three times, he finally got the job.* | Sau ba lần bị từ chối, ... | Having been V3 |
-| 9 | ***After graduating**, I worked as a journalist.* | Sau khi tốt nghiệp, ... | after + V-ing |
-| 10 | ***When asked** about his salary, he refused to answer.* | Khi được hỏi về lương, ... | when + V3 |
-| 11 | ***Since starting** yoga, I've felt much calmer.* | Từ khi tập yoga, ... | since + V-ing |
-| 12 | ***If used** correctly, this app can save you hours.* | Nếu được dùng đúng cách, ... | if + V3 |
+| 8 | ***Having been rejected** three times, he finally got the job.* | Sau ba lần bị từ chối, cuối cùng anh ấy cũng nhận được công việc đó. | Having been V3 |
+| 9 | ***After graduating**, I worked as a journalist.* | Sau khi tốt nghiệp, tôi làm nhà báo. | after + V-ing |
+| 10 | ***When asked** about his salary, he refused to answer.* | Khi được hỏi về lương, anh ấy từ chối trả lời. | when + V3 |
+| 11 | ***Since starting** yoga, I've felt much calmer.* | Từ khi bắt đầu tập yoga, tôi thấy bình tĩnh hơn nhiều. | since + V-ing |
+| 12 | ***If used** correctly, this app can save you hours.* | Nếu dùng đúng cách, ứng dụng này có thể giúp bạn tiết kiệm hàng giờ. | if + V3 |
 
 ---
 

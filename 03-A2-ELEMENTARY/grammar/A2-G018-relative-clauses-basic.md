@@ -19,7 +19,7 @@ Có ba người trước cửa. Bạn nói “Người đàn ông là thầy tô
 
 ## C. WHAT
 
-**Relative clause — mệnh đề quan hệ** bổ sung thông tin về một danh từ. Bài này tập trung **defining relative clause — mệnh đề quan hệ xác định**: thông tin cần để biết đang nói người/vật nào. Nó đứng ngay sau danh từ được mô tả và thông thường không tách bằng dấu phẩy.
+**Mệnh đề quan hệ (relative clause)** cho biết thêm thông tin về một danh từ. Bài này học loại **xác định (defining)**: thông tin giúp người nghe biết bạn đang nói đến ai hoặc vật nào. Trong *The woman who lives next door is a doctor*, *who lives next door* cho biết đó là người phụ nữ nào. Phần này thường đứng ngay sau danh từ và không tách bằng dấu phẩy.
 
 **Relative pronoun — đại từ quan hệ** như *who/which/that* có vai trò trong mệnh đề theo sau. *The woman who teaches us* có *who* làm chủ ngữ của *teaches*. Không viết *who she teaches us* vì khi đó lặp chủ ngữ.
 

@@ -30,7 +30,7 @@
 | **Prerequisites** | [B1-G018 — Linking Words](B1-G018-linking-words.md), [B1-G013 — Relative Clauses](B1-G013-defining-non-defining-relatives.md) |
 | **Estimated Time** | 90 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Phân biệt **câu đơn** (simple), **câu ghép** (compound), **câu phức** (complex).
 2. Phân biệt **liên từ đẳng lập** (FANBOYS) và **liên từ phụ thuộc** (*because, when, if, although...*).
@@ -53,6 +53,8 @@ Hai đoạn văn cùng nội dung:
 ---
 
 ## C. WHAT
+
+Một câu có thể nêu một ý chính, nối hai ý chính ngang hàng, hoặc thêm một phần giải thích thời gian, lý do, điều kiện. Đó là cơ sở để phân biệt **câu đơn (simple)**, **câu ghép (compound)** và **câu phức (complex)**. Hãy xem những phần câu nào có thể đứng riêng rồi đối chiếu bảng:
 
 | Loại câu | Cấu trúc | Ví dụ |
 |---|---|---|
@@ -237,7 +239,7 @@ Xác định loại câu: **S** (simple), **C** (compound), **X** (complex).
 **L1.3.** Because we missed the train, we took a bus.
 **L1.4.** I don't know what time it is.
 
-Chọn đáp án đúng.
+Chọn đáp án phù hợp với câu và ngữ cảnh.
 
 **L1.5.** I don't understand ___.  A. what does he mean  B. what he means  C. what means he
 **L1.6.** Câu nào là **comma splice** (lỗi)?  A. I was hungry, so I ate.  B. I was hungry, I ate.  C. Because I was hungry, I ate.

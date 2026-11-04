@@ -1,5 +1,7 @@
 # L07 · Concentration Exercises — Bài luyện tập trung khi nghe
 
+Nếu bỏ lỡ một đoạn, đừng cố dịch lại đoạn ấy trong đầu trong khi người nói đã tiếp tục. Bài này luyện giữ sự chú ý, quay lại câu hỏi hiện tại và ghi từ khóa vừa đủ. Sau lượt nghe, bạn mới kiểm tra những chỗ chưa chắc.
+
 | Mục | Nội dung |
 |---|---|
 | **Cấp độ** | A2 → B2 |

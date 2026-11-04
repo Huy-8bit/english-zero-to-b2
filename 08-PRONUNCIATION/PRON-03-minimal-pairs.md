@@ -1,5 +1,7 @@
 # PRON-03 · Minimal Pairs — Cặp từ tối thiểu
 
+Chỉ một âm khác nhau cũng có thể đổi từ bạn muốn nói. Bạn sẽ luyện nghe, chọn từ rồi đọc lại theo các cặp như *ship/sheep*. Bắt đầu chậm để nhận ra khác biệt, sau đó mới đưa từ vào câu ngắn.
+
 | Mục | Nội dung |
 |---|---|
 | **Cấp độ** | A1 → B1 |

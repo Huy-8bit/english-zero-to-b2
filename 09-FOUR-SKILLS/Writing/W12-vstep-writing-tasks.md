@@ -1,5 +1,7 @@
 # W12 · VSTEP-style Writing Tasks — Chiến lược bài Viết theo định dạng VSTEP
 
+Bài này giúp bạn luyện hai kiểu nhiệm vụ viết mô phỏng định dạng VSTEP. Hãy đọc yêu cầu, xác định người nhận hoặc dạng lập luận, rồi dành thời gian kiểm tra bản nháp. Các gợi ý phân chia thời gian cần được thử và điều chỉnh theo khả năng của bạn.
+
 | Mục | Nội dung |
 |---|---|
 | **Cấp độ** | B1 → B2 |
@@ -24,7 +26,7 @@
 Xem chi tiết ở [W06 — Email Writing](W06-email-writing.md). Điểm then chốt:
 
 1. **Đọc kỹ đề**: viết cho ai? (bạn bè → thân mật; công ty, người lạ → trang trọng)
-2. **Liệt kê các ý bắt buộc** (thường 3 gạch đầu dòng) — mỗi ý ít nhất 2–3 câu.
+2. **Liệt kê các ý đề yêu cầu**, rồi ghi thông tin cần trả lời cho mỗi ý. Viết đủ để người nhận hiểu; số câu tùy nội dung, không có mức 2–3 câu bắt buộc cho từng ý.
 3. **Mở – thân – kết** đúng văn phong.
 4. **120–150 từ** là vừa; viết quá dài lấy mất thời gian Task 2.
 

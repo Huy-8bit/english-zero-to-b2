@@ -67,7 +67,7 @@
 > *Cheers,*
 > *Minh*
 
-**Rubric (0–2 mỗi tiêu chí):** ≥ 2 *I'd rather you + V2* · *I'd rather + V ... than* · ≥ 2 *It's (high) time* · ≥ 2 *as if/as though* · giọng lịch sự, khéo léo.
+**Tiêu chí tự đánh giá (0–2 điểm cho mỗi tiêu chí):** ≥ 2 *I'd rather you + V2* · *I'd rather + V ... than* · ≥ 2 *It's (high) time* · ≥ 2 *as if/as though* · giọng lịch sự, khéo léo.
 
 **L5.2.** Mẫu: *Personally, I'd rather live in the countryside. I'd rather breathe fresh air than sit in traffic every day. If I had children, I'd rather they grew up close to nature. To be honest, it's high time cities did more about pollution — sometimes people in cities act as if green space didn't matter.*
 

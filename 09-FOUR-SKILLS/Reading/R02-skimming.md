@@ -1,5 +1,7 @@
 # R02 · Skimming — Đọc lướt lấy ý chính
 
+Bạn sẽ luyện đọc lướt để biết văn bản nói về gì và được sắp xếp thế nào. Bắt đầu từ tiêu đề, đoạn đầu và các câu có ý chính. Tốc độ luyện cần phù hợp với độ khó; mục tiêu là nắm được ý, không phải đọc nhanh bằng mọi giá.
+
 | Mục | Nội dung |
 |---|---|
 | **Cấp độ** | A2 → B2 |
@@ -8,7 +10,7 @@
 
 ## 1. Skimming là gì?
 
-Đọc lướt nhanh để trả lời: **văn bản nói về gì? mục đích? cấu trúc?** — không cần hiểu từng chi tiết. Tốc độ gấp 2–3 lần đọc thường.
+Đọc lướt để biết **văn bản nói về gì, viết nhằm mục đích gì và được sắp xếp ra sao**. Bạn chưa cần hiểu từng chi tiết. Tốc độ tùy độ khó và mức quen thuộc với chủ đề; không có một mức “nhanh gấp mấy lần” phù hợp cho mọi bài.
 
 ## 2. Đọc những phần nào?
 

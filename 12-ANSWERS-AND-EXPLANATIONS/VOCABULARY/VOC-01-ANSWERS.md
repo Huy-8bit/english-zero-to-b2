@@ -22,6 +22,6 @@
 
 **14. Mẫu:** *On weekdays I wake up at 6 and get up a few minutes later. After I have a shower and get dressed, I have breakfast with my family. My commute takes about 30 minutes. I usually work until 5, then run some errands on the way home. In the evening I do the washing-up and unwind by reading. I try not to stay up too late, but sometimes I procrastinate and go to bed after midnight.*
 
-**Rubric (0–2 mỗi tiêu chí):** dùng ≥ 6 từ/collocation đúng · thì hiện tại đơn và trạng từ tần suất đúng · trình tự rõ.
+**Tiêu chí tự đánh giá (0–2 điểm cho mỗi tiêu chí):** dùng ≥ 6 từ/collocation đúng · thì hiện tại đơn và trạng từ tần suất đúng · trình tự rõ.
 
 **15. Mẫu ý:** *To be honest, my work-life balance isn't great. My schedule is quite hectic, and I often check emails late at night. However, I try to prioritise my well-being by exercising at weekends...*

@@ -19,7 +19,7 @@ Bạn đứng cạnh cửa sổ trong lớp. Bạn có thể nói *Can I open th
 
 ## C. WHAT
 
-**Permission — sự cho phép:** hỏi xem mình có được làm gì không. **Request — lời nhờ/yêu cầu:** đề nghị người khác làm việc gì cho mình. Câu hỏi có modal có thể mang hình thức hỏi khả năng nhưng được hiểu là lời nhờ nhờ vào ngữ cảnh.
+**Xin phép (permission)** là hỏi mình có được làm gì không. **Nhờ ai làm gì (request)** là muốn người đó giúp mình. So sánh *Can I open the window?* — Tôi mở cửa sổ được không?, với *Could you open the window?* — Bạn mở cửa sổ giúp tôi được không? Cùng một động từ tình thái có thể mang ý khác nhau theo tình huống.
 
 *Could you help me?* trong một cuộc trò chuyện hiện tại thường có nghĩa “Bạn giúp tôi được không?”, không phải kiểm tra khả năng trong quá khứ. *Could* có nhiều nghĩa; bài này chỉ học chức năng lịch sự trong xin phép/nhờ giúp.
 

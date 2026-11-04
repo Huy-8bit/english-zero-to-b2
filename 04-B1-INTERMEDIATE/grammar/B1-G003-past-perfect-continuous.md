@@ -30,7 +30,7 @@
 | **Prerequisites** | [B1-G001 — Present Perfect Continuous](B1-G001-present-perfect-continuous.md), [B1-G002 — Past Perfect](B1-G002-past-perfect.md) |
 | **Estimated Time** | 75 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Tạo câu với **had been + V-ing**.
 2. Diễn tả hoạt động **kéo dài đến (hoặc đến ngay trước) một thời điểm trong quá khứ**.
@@ -53,7 +53,7 @@ Hai cảnh trong một bộ phim:
 
 ## C. WHAT
 
-**Past Perfect Continuous** (quá khứ hoàn thành tiếp diễn) diễn tả một **hoạt động kéo dài** đã bắt đầu **trước** một thời điểm quá khứ và:
+**Quá khứ hoàn thành tiếp diễn (Past Perfect Continuous)** nhấn mạnh hoạt động kéo dài trước một mốc quá khứ. *I'd been walking for an hour when it started to rain* là “Tôi đã đi bộ được một giờ thì trời bắt đầu mưa”. Hoạt động ấy có thể vẫn tiếp diễn đến mốc đó hoặc vừa dừng lại:
 
 - **vẫn đang tiếp diễn** tại thời điểm đó, hoặc
 - **vừa dừng ngay trước** thời điểm đó, để lại dấu vết.

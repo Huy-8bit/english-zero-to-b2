@@ -30,7 +30,7 @@
 | **Prerequisites** | [A0-G009 — To Be](A0-G009-verb-to-be.md), [A0-G010 — Have/Has](A0-G010-have-has.md), [A0-G015 — There is/are](A0-G015-there-is-there-are.md) |
 | **Estimated Time** | 90 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Hiểu khái niệm **khẳng định** (affirmative), **phủ định** (negative), **nghi vấn** (interrogative).
 2. Nắm mô hình **"hai gia đình động từ"**: (1) gia đình *be* tự biến đổi; (2) gia đình động từ thường cần trợ động từ *do/does*.
@@ -57,6 +57,8 @@ Bạn muốn hỏi người đối diện. Nhiều người học viết:
 ---
 
 ## C. WHAT: Ba loại câu
+
+Cùng một thông tin, bạn có thể **khẳng định**, **phủ định** hoặc **đặt câu hỏi**. Chẳng hạn: *She is a nurse*; *She isn't a nurse*; *Is she a nurse?* Trước khi đổi dạng câu, hãy xem câu dùng *be* hay động từ thường.
 
 | Loại câu | English | Chức năng | Ví dụ |
 |---|---|---|---|

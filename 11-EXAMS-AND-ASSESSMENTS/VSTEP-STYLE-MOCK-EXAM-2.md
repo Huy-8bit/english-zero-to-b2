@@ -1,5 +1,7 @@
 # VSTEP-style Mock Exam 2 — Đề mô phỏng định dạng VSTEP (bậc 3–5)
 
+Đề thứ hai giúp bạn thử lại sau khi đã luyện những điểm còn yếu từ đề đầu. Giữ điều kiện làm bài tương tự để việc so sánh có ý nghĩa. Sau mỗi phần, ghi một việc cụ thể cần cải thiện cho lần luyện tiếp theo.
+
 > ⚠️ **Đề mô phỏng, KHÔNG phải đề thi VSTEP chính thức.** Đề do giáo trình tự biên soạn, mô phỏng cấu trúc chung của bài thi VSTEP bậc 3–5 theo các mô tả định dạng được công bố rộng rãi. Không quy đổi được ra bậc VSTEP hay điểm chính thức. Hãy kiểm tra quy định và định dạng mới nhất từ đơn vị tổ chức thi được cấp phép trước khi đăng ký thi thật.
 
 [Đáp án, transcript, giải thích và rubric](../12-ANSWERS-AND-EXPLANATIONS/EXAMS/VSTEP-STYLE-MOCK-EXAM-2-ANSWERS.md) · Làm sau [Mock Exam 1](VSTEP-STYLE-MOCK-EXAM-1.md) ít nhất 2 tuần.

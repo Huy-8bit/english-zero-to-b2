@@ -60,7 +60,7 @@
 >
 > *Hoa*
 
-**Rubric (0–2 mỗi tiêu chí):** ≥ 4 liên từ thời gian · ≥ 2 cấu trúc mục đích · ≥ 2 cấu trúc nhượng bộ · không *will* sai chỗ · 100–130 từ, giọng văn phù hợp.
+**Tiêu chí tự đánh giá (0–2 điểm cho mỗi tiêu chí):** ≥ 4 liên từ thời gian · ≥ 2 cấu trúc mục đích · ≥ 2 cấu trúc nhượng bộ · không *will* sai chỗ · 100–130 từ, giọng văn phù hợp.
 
 **L5.2.** Mẫu: *As soon as I reach B2, I'll apply for a job in an international company. Once I've got some experience, I'd like to study for a master's degree abroad. By the time I'm 30, I'll have worked in at least two countries. That's why I'm studying hard now, so that I can achieve these goals.*
 

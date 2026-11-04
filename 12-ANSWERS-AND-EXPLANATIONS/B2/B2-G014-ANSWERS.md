@@ -67,7 +67,7 @@
 > *See you soon,*
 > *Nam*
 
-**Rubric (0–2 mỗi tiêu chí):** ≥ 2 cụm cố định + V-ing · ≥ 2 *to* giới từ + V-ing · *for + O + to V* · sở hữu + V-ing · 120–150 từ.
+**Tiêu chí tự đánh giá (0–2 điểm cho mỗi tiêu chí):** ≥ 2 cụm cố định + V-ing · ≥ 2 *to* giới từ + V-ing · *for + O + to V* · sở hữu + V-ing · 120–150 từ.
 
 **L5.2.** Mẫu: *When I started university in Hanoi, I wasn't used to living alone. I had difficulty cooking for myself, and I couldn't help feeling homesick. There was no point in calling my mum every day, so I joined a club. It was definitely worth doing — I made lots of friends.*
 

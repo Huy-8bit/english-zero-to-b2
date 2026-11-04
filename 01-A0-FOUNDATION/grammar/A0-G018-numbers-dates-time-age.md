@@ -30,7 +30,7 @@
 | **Prerequisites** | [A0-G009 — To Be](A0-G009-verb-to-be.md), [A0-G017 — Question Words](A0-G017-question-words.md) |
 | **Estimated Time** | 90 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Đọc và viết **số đếm** (cardinal numbers) từ 0 đến hàng triệu; phân biệt *-teen* và *-ty*.
 2. Dùng **số thứ tự** (ordinal numbers) cho ngày tháng, tầng, thứ hạng.
@@ -54,6 +54,8 @@ Bạn gọi điện đặt bàn nhà hàng:
 ---
 
 ## C. WHAT: Các nhóm thông tin con số
+
+Bạn gặp số khi nói giá tiền, địa chỉ, ngày sinh, giờ hẹn và tuổi. Bài này chia thành năm nhóm để bạn luyện từng việc. Ví dụ, số 3 đọc là *three*, nhưng “thứ ba” trong một thứ tự là *third*.
 
 | Nhóm | English | Ví dụ |
 |---|---|---|

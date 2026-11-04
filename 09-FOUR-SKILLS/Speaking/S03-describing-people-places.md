@@ -1,5 +1,7 @@
 # S03 · Describing People & Places — Miêu tả người và nơi chốn
 
+Khi tả một người hoặc nơi chốn, hãy nói điều giúp người nghe hình dung trước rồi thêm chi tiết. Bạn sẽ luyện chọn đặc điểm đáng nói, sắp xếp ý và dùng ví dụ cụ thể. Không cần liệt kê mọi tính từ mình biết.
+
 | Mục | Nội dung |
 |---|---|
 | **Cấp độ** | A2 → B1 |

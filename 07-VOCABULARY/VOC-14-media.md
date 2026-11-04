@@ -1,5 +1,7 @@
 # VOC-14 · Media — Truyền thông
 
+Các từ trong bài giúp bạn nói về tin tức, báo chí, quảng cáo và nội dung trên mạng. Thử kể lại một bản tin ngắn: ai đưa tin, nội dung là gì và bạn biết điều đó từ đâu? Cách luyện này cũng giúp bạn phân biệt tin tức với ý kiến.
+
 | Mục | Nội dung |
 |---|---|
 | **Cấp độ** | B1 → B2 |

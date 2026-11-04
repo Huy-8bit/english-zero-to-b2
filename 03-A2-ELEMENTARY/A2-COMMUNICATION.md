@@ -1,5 +1,7 @@
 # A2 Communication — Giao tiếp trong sáu tình huống
 
+Một cuộc trò chuyện không phải lúc nào cũng đi đúng dự tính. Bạn sẽ luyện cách hỏi lại, làm rõ thông tin và xác nhận điều hai bên đã thống nhất. Hãy ưu tiên giải quyết được việc trong tình huống, thay vì cố dùng thật nhiều cấu trúc khó.
+
 Dùng sau [30 bài A2](README.md) và ba unit [Skills Practice](A2-SKILLS-PRACTICE.md). Mục tiêu là hoàn thành việc giao tiếp: hỏi đúng thông tin, nghe câu trả lời, xử lý thay đổi và xác nhận kết quả. Không cần cố đưa mọi cấu trúc đã học vào mỗi lượt nói.
 
 Mỗi buổi 30–40 phút: đọc thẻ vai 3 phút, chọn tối đa năm cụm hỗ trợ, nói lần đầu 2–3 phút, nghe lại và ghi hai điểm cần sửa, đổi vai và đổi dữ kiện rồi nói lại. Nếu tự học, ghi âm hai vai, dừng 3–5 giây giữa lượt. Không đọc [mẫu đáp án](../12-ANSWERS-AND-EXPLANATIONS/SKILLS/A2-COMMUNICATION-ANSWERS.md) trước lượt đầu.

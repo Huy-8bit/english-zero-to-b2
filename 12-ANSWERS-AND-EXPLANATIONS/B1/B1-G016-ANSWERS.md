@@ -56,7 +56,7 @@
 
 > *This year I've changed some habits. I stopped drinking bubble tea every day because it had too much sugar. I also stopped checking my phone in bed. Now, when I feel stressed, I stop to take a few deep breaths instead. I still regret not exercising when I was a student, so I've started running twice a week. I've tried using an app to remember new English words, and it really works. But I often forget to drink enough water, so I must remember to bring a bottle to work every day.*
 
-**Rubric (0–2 mỗi tiêu chí):** ≥ 6 cấu trúc trong bài, đúng nghĩa · ý mạch lạc · 90–110 từ · ít lỗi.
+**Tiêu chí tự đánh giá (0–2 điểm cho mỗi tiêu chí):** ≥ 6 cấu trúc trong bài, đúng nghĩa · ý mạch lạc · 90–110 từ · ít lỗi.
 
 **L5.2.** Mẫu: *Try drinking herbal tea before bed. · Try turning off apps you don't use. · Try writing new words on sticky notes. · Try going for a short walk at lunchtime. · Try turning the printer off and on again.*
 

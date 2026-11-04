@@ -30,7 +30,7 @@
 | **Prerequisites** | [A1-G012 — Can/Can't](A1-G012-can-cant.md), [A0-G019 — Likes](../../01-A0-FOUNDATION/grammar/A0-G019-likes-and-hobbies.md) |
 | **Estimated Time** | 60 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Dùng ***I'd like + N*** và ***I'd like to + V*** để nói mong muốn/gọi món lịch sự.
 2. Dùng ***Would you like + N / to V?*** để mời.
@@ -53,7 +53,7 @@
 
 ## C. WHAT: *Would like* là gì?
 
-**Would like** là cách **lịch sự** để nói "muốn". Nó dùng cho mong muốn **cụ thể, ở hiện tại hoặc sắp tới** — không phải sở thích chung.
+**Would like** là cách nói **“muốn”** lịch sự, thường dùng khi gọi món, yêu cầu hoặc mời. *I'd like some water* nghĩa là “Tôi muốn xin ít nước”. Bạn đang nói về điều mình muốn trong tình huống này, thay vì một sở thích nói chung.
 
 | Chức năng | Mẫu | Ví dụ |
 |---|---|---|

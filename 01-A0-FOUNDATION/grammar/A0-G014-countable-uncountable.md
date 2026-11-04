@@ -30,7 +30,7 @@
 | **Prerequisites** | [A0-G013 — Singular & Plural](A0-G013-singular-plural-nouns.md) |
 | **Estimated Time** | 75 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Phân biệt **countable nouns** (danh từ đếm được) và **uncountable nouns** (danh từ không đếm được).
 2. Biết các nhóm danh từ không đếm được thường gặp: chất lỏng, chất liệu, thực phẩm dạng hạt/khối, khái niệm trừu tượng.
@@ -53,6 +53,8 @@ Nhân viên hiểu ý bạn, nhưng trong sách ngữ pháp, *coffee* và *water
 ---
 
 ## C. WHAT: Đếm được và không đếm được
+
+**Danh từ đếm được (countable noun)** có thể đếm theo từng đơn vị, như *one apple, two apples*. **Danh từ không đếm được (uncountable noun)** được dùng như một lượng hoặc một khái niệm, như *water* hay *information*. Cách dùng của danh từ quyết định bạn có thể thêm *a/an*, thêm đuôi số nhiều hay cần một đơn vị đo.
 
 | | Countable nouns (đếm được) | Uncountable nouns (không đếm được) |
 |---|---|---|

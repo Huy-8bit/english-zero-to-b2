@@ -1,5 +1,7 @@
 # L04 · Listening for Details — Nghe chi tiết
 
+Bạn sẽ luyện lấy đúng thông tin cụ thể, như tên, số tiền, thời gian hoặc lý do. Trước khi nghe, xem câu hỏi cần loại thông tin nào. Khi nghe được đáp án, vẫn chú ý phần nói tiếp để biết người nói có đính chính hay không.
+
 | Mục | Nội dung |
 |---|---|
 | **Cấp độ** | A2 → B2 |

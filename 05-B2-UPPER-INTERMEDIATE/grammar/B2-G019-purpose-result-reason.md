@@ -30,7 +30,7 @@
 | **Prerequisites** | [B2-G017 — Advanced Linking Devices](B2-G017-advanced-linking-devices.md), [B1-G023 — Adverbial Clauses](../../04-B1-INTERMEDIATE/grammar/B1-G023-adverbial-clauses.md) |
 | **Estimated Time** | 90 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Dùng cụm mục đích nâng cao: ***with a view to + V-ing, for fear of + V-ing / for fear that***.
 2. Dùng cụm lý do: ***owing to / on account of / due to + N***, ***given that / seeing that / now that + mệnh đề***.
@@ -49,6 +49,8 @@
 ---
 
 ## C. WHAT
+
+Trước khi chọn từ nối, hãy xác định bạn muốn nói **để làm gì**, **vì sao** hay **dẫn đến điều gì**. Ba câu hỏi ấy lần lượt giúp bạn phân biệt mục đích, lý do và kết quả. Bài này mở rộng các mẫu quen thuộc như *to, because, so*:
 
 | Chức năng | B1 | B2 bổ sung |
 |---|---|---|
@@ -126,15 +128,15 @@ Văn nghị luận và báo cáo B2 thường phải giải thích **vì sao** m
 | 1 | *She moved closer to the office **with a view to** spending less time commuting.* | Cô ấy chuyển gần văn phòng với mục đích bớt thời gian đi lại. | with a view to + V-ing |
 | 2 | *He didn't tell anyone **for fear of** losing his job.* | Anh ấy không nói vì sợ mất việc. | for fear of |
 | 3 | *All flights were cancelled **owing to** the typhoon.* | Mọi chuyến bay bị hủy do bão. | owing to + N |
-| 4 | ***Given that** the budget is limited, we must prioritise.* | Vì ngân sách hạn chế, ... | given that |
-| 5 | ***Now that** the children have left home, we have more free time.* | Giờ các con đã ra ở riêng... | now that |
+| 4 | ***Given that** the budget is limited, we must prioritise.* | Vì ngân sách có hạn, chúng ta phải chọn việc ưu tiên. | given that |
+| 5 | ***Now that** the children have left home, we have more free time.* | Giờ các con đã ra ở riêng, chúng tôi có nhiều thời gian rảnh hơn. | now that |
 | 6 | *The new law is controversial **in that** it limits freedom of speech.* | Luật mới gây tranh cãi ở chỗ hạn chế tự do ngôn luận. | in that |
-| 7 | *Sales fell by 30%. **Consequently**, the company cut 200 jobs.* | Do đó... | consequently |
-| 8 | *The government lowered taxes, **thereby encouraging** investment.* | ..., nhờ đó khuyến khích đầu tư. | thereby + V-ing |
-| 9 | *The road was blocked, **which meant that** we had to take a longer route.* | ..., điều đó có nghĩa là... | which means that |
-| 10 | *Deforestation **has led to** more frequent landslides.* | Phá rừng đã dẫn đến... | lead to |
+| 7 | *Sales fell by 30%. **Consequently**, the company cut 200 jobs.* | Doanh số giảm 30%. Vì vậy, công ty đã cắt giảm 200 việc làm. | consequently |
+| 8 | *The government lowered taxes, **thereby encouraging** investment.* | Chính phủ giảm thuế, qua đó khuyến khích đầu tư. | thereby + V-ing |
+| 9 | *The road was blocked, **which meant that** we had to take a longer route.* | Đường bị chặn, vì thế chúng tôi phải đi đường vòng xa hơn. | which means that |
+| 10 | *Deforestation **has led to** more frequent landslides.* | Việc phá rừng đã khiến sạt lở đất xảy ra thường xuyên hơn. | lead to |
 | 11 | *Many health problems **stem from** a poor diet.* | Nhiều vấn đề sức khỏe bắt nguồn từ chế độ ăn kém. | stem from |
-| 12 | *Heavy rain fell for three days, **resulting in** widespread flooding.* | ..., dẫn đến lũ lụt diện rộng. | resulting in |
+| 12 | *Heavy rain fell for three days, **resulting in** widespread flooding.* | Mưa lớn kéo dài ba ngày, gây ngập lụt trên diện rộng. | resulting in |
 
 ---
 
@@ -233,7 +235,7 @@ KẾT QUẢ     ──── result from / stem from / be caused by ────
 
 ### Level 2 — Controlled Practice
 
-Viết lại câu bằng từ trong ngoặc.
+Dùng từ trong ngoặc để viết lại câu, giữ nguyên ý.
 
 **L2.1.** The match was cancelled because it rained heavily. (owing to)
 **L2.2.** Because he has no experience, he shouldn't expect a high salary. (Given that)

@@ -30,7 +30,7 @@
 | **Prerequisites** | [A2-G003](A2-G003-present-perfect-form.md) |
 | **Estimated Time** | 75 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Dùng hiện tại hoàn thành cho trạng thái/hành động **bắt đầu trong quá khứ và vẫn tiếp tục đến hiện tại**.
 2. Phân biệt ***since*** + **mốc** thời gian và ***for*** + **khoảng** thời gian.
@@ -55,7 +55,7 @@ Nhiều người học nói:
 
 ## C. WHAT: Hành động kéo dài đến hiện tại
 
-Cách dùng thứ ba của hiện tại hoàn thành: nói về một **trạng thái hoặc hành động bắt đầu trong quá khứ và vẫn còn tiếp diễn ở hiện tại**.
+Bạn cũng dùng hiện tại hoàn thành khi một việc hoặc trạng thái bắt đầu trước đây và kéo dài đến hiện tại. *I've lived here for two years* nghĩa là “Tôi sống ở đây được hai năm rồi”. **Since** chỉ mốc bắt đầu; **for** chỉ khoảng thời gian.
 
 | Câu | Ý nghĩa |
 |---|---|
@@ -250,7 +250,7 @@ Chọn *since* hoặc *for*.
 
 **L1.1.** ___ 2010  **L1.2.** ___ six months  **L1.3.** ___ last summer  **L1.4.** ___ ages  **L1.5.** ___ I was ten  **L1.6.** ___ half an hour
 
-Chọn đáp án đúng.
+Chọn đáp án phù hợp với câu và ngữ cảnh.
 
 **L1.7.** I ___ at this company for three years and I still work here. I really like it.  A. work  B. worked  C. have worked  D. am working
 **L1.8.** My grandfather ___ in the army for ten years, from 1970 to 1980.  A. has been  B. was  C. is  D. has
@@ -316,7 +316,7 @@ Dịch sang tiếng Anh:
 
 ### Checklist
 
-- [ ] Tôi chọn đúng *since/for* 100%.
+- [ ] Tôi phân biệt được mốc bắt đầu với khoảng thời gian và dùng đúng *since/for* trong câu của mình.
 - [ ] Tôi dùng HTHT (không phải hiện tại đơn) với *How long...?* cho trạng thái đến nay.
 - [ ] Tôi phân biệt được "còn tiếp diễn" và "đã kết thúc".
 

@@ -71,7 +71,7 @@
 > *Yours faithfully,*
 > *Le Thi Mai*
 
-**Rubric (0–2 mỗi tiêu chí):** ≥ 10 collocation · ≥ 4 mẫu · collocation chính xác · văn phong email phàn nàn phù hợp · 130–160 từ.
+**Tiêu chí tự đánh giá (0–2 điểm cho mỗi tiêu chí):** ≥ 10 collocation · ≥ 4 mẫu · collocation chính xác · văn phong email phàn nàn phù hợp · 130–160 từ.
 
 **L5.2.** Mẫu: *Yesterday was terrible. I got stuck in heavy traffic and arrived late for an important meeting. I made a silly mistake in my presentation because I wasn't paying attention. Then I had an argument with a colleague. I took a deep breath and tried to calm down, but I deeply regret what I said...*
 

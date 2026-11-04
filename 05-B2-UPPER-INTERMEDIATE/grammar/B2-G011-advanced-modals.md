@@ -30,7 +30,7 @@
 | **Prerequisites** | [B1-G014 — Modals of Deduction](../../04-B1-INTERMEDIATE/grammar/B1-G014-modals-deduction-present.md), [B1-G015 — Modal Perfects](../../04-B1-INTERMEDIATE/grammar/B1-G015-modal-perfects.md) |
 | **Estimated Time** | 90 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Phân biệt ***needn't have done*** (đã làm, nhưng không cần) và ***didn't need to do*** (không cần, thường là không làm).
 2. Phân biệt ***could*** (khả năng chung) và ***was able to / managed to*** (làm được trong một tình huống cụ thể).
@@ -51,7 +51,7 @@
 
 ## C. WHAT
 
-Ở B1 bạn đã học modal suy luận (*must, might, can't*) và modal hoàn thành (*should have, could have*). B2 bổ sung những **sắc thái tinh tế** mà người học trung cấp hay nhầm:
+Bạn đã học động từ tình thái để suy luận và nói về quá khứ. Bài này phân biệt thêm các ý dễ lẫn, như không cần làm với đã làm dù không cần, hoặc một khả năng đã không thành hiện thực. Hãy xác định chuyện thực tế đã xảy ra trước, rồi chọn mẫu diễn đạt.
 
 | Nhóm | Cấu trúc | Ý nghĩa |
 |---|---|---|
@@ -147,7 +147,7 @@ Những phân biệt này **thay đổi nghĩa thực tế** của câu — ngư
 | 5 | *If you leave your bike unlocked, it**'s bound to** be stolen.* | Nếu không khóa xe, chắc chắn sẽ bị trộm. | bound to |
 | 6 | *Unemployment **is likely to** fall next year.* | Thất nghiệp có khả năng giảm. | likely to — văn báo cáo |
 | 7 | *You **'re supposed to** take your shoes off before entering.* | Lẽ ra bạn phải cởi giày trước khi vào. | supposed to — quy tắc |
-| 8 | *I **was supposed to** call her, but I forgot.* | Lẽ ra tôi phải gọi cô ấy... | Quá khứ — việc không làm |
+| 8 | *I **was supposed to** call her, but I forgot.* | Lẽ ra tôi phải gọi cho cô ấy, nhưng tôi quên mất. | Quá khứ — việc không làm |
 | 9 | *This restaurant **is meant to** be the best in town.* | Nhà hàng này được cho là ngon nhất. | meant to = nghe nói |
 | 10 | *There's nothing on TV. We **might as well** go to bed.* | Không có gì xem. Thôi đi ngủ cho rồi. | might as well |
 | 11 | *When I was a child, my grandmother **would** tell me stories every night.* | Hồi nhỏ, bà thường kể chuyện cho tôi mỗi tối. | would — thói quen |
@@ -160,11 +160,11 @@ Những phân biệt này **thay đổi nghĩa thực tế** của câu — ngư
 ### Thang khả năng tương lai
 
 ```text
-100% ── be bound to / will definitely
- 80% ── be likely to / should
- 50% ── may / might / could
- 20% ── be unlikely to
-  0% ── won't / can't
+Người nói nhấn mạnh sự chắc chắn: be bound to / will definitely
+Người nói xem là có khả năng cao: be likely to / should
+Người nói nêu một khả năng:       may / might / could
+Người nói xem là ít khả năng:     be unlikely to
+Người nói phủ định/dự đoán không: won't / can't (xem ngữ cảnh)
 ```
 
 ### needn't have vs didn't need to
@@ -246,7 +246,7 @@ didn't need to buy:    🚫 (thường) KHÔNG MUA  →  😌 không cần
 
 ### Level 2 — Controlled Practice
 
-Viết lại câu bằng từ trong ngoặc.
+Dùng từ trong ngoặc để viết lại câu, giữ nguyên ý.
 
 **L2.1.** I took a taxi, but it wasn't necessary because the station was very close. (needn't have)
 **L2.2.** It wasn't necessary for us to buy tickets, so we didn't. (didn't need to)

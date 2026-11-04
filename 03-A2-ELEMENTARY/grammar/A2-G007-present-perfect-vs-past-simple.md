@@ -30,7 +30,7 @@
 | **Prerequisites** | [A2-G004](A2-G004-present-perfect-experience.md), [A2-G005](A2-G005-present-perfect-just-already-yet.md), [A2-G006](A2-G006-present-perfect-since-for.md) |
 | **Estimated Time** | 90 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Chọn đúng giữa HTHT và QKĐ dựa trên **thời gian đóng/mở** và **mối liên hệ với hiện tại**.
 2. Nhận diện dấu hiệu thời gian của mỗi thì — và biết khi nào dấu hiệu **không đủ**.
@@ -57,6 +57,8 @@ Cùng một người có thể dùng cả hai thì. Hãy xác định đang tổ
 ---
 
 ## C. WHAT: Hai cách nhìn về quá khứ
+
+*I met her in 2019* kể một lần gặp ở thời gian đã qua. *I've met her before* nói rằng đến nay tôi đã có trải nghiệm gặp cô ấy. Khi chọn thì, hãy xem bạn đang kể một việc ở quá khứ hay muốn nói điều có liên hệ với hiện tại.
 
 | | Past Simple | Present Perfect |
 |---|---|---|

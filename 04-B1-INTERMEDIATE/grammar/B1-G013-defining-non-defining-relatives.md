@@ -30,7 +30,7 @@
 | **Prerequisites** | [A2-G018 — Relative Clauses (basic)](../../03-A2-ELEMENTARY/grammar/A2-G018-relative-clauses-basic.md) |
 | **Estimated Time** | 90 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Phân biệt **mệnh đề quan hệ xác định** (cần thiết để biết "cái nào/ai") và **không xác định** (thông tin thêm).
 2. Đặt **dấu phẩy** đúng với mệnh đề không xác định.
@@ -53,7 +53,7 @@ So sánh hai câu:
 
 ## C. WHAT
 
-**Relative clause** (mệnh đề quan hệ) là mệnh đề bổ sung thông tin cho một danh từ, bắt đầu bằng **relative pronoun/adverb** (đại từ/trạng từ quan hệ).
+**Mệnh đề quan hệ (relative clause)** nói thêm về một danh từ. Điểm cần phân biệt là thông tin ấy **giúp xác định đối tượng** hay **chỉ bổ sung thêm**. *My brother who lives in Hue* giúp chọn người anh/em nào; *My brother, who lives in Hue,* thêm thông tin về người đã rõ. Dấu phẩy làm cách hiểu thay đổi.
 
 | | **Defining** (xác định) | **Non-defining** (không xác định) |
 |---|---|---|

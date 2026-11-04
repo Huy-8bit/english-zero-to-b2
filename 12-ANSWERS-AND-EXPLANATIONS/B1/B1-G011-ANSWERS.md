@@ -56,7 +56,7 @@
 
 > *Yesterday I went to see a doctor because of my back pain. First, she asked me how long I had had the problem. I told her it had started two weeks before. Then she asked whether I sat at a computer all day, and I said I did. She asked if I did any exercise, and I admitted that I didn't. After examining me, she told me to take a break every hour and asked me not to carry heavy bags for a while. She also told me to come back if the pain didn't improve. I promised I would start doing yoga.*
 
-**Rubric (0–2 mỗi tiêu chí):** ≥ 3 câu hỏi tường thuật đúng (có Yes/No và Wh-) · ≥ 2 yêu cầu/mệnh lệnh tường thuật đúng · lùi thì/đổi đại từ nhất quán · 100–120 từ.
+**Tiêu chí tự đánh giá (0–2 điểm cho mỗi tiêu chí):** ≥ 3 câu hỏi tường thuật đúng (có Yes/No và Wh-) · ≥ 2 yêu cầu/mệnh lệnh tường thuật đúng · lùi thì/đổi đại từ nhất quán · 100–120 từ.
 
 **L5.2.** Mẫu: *He asked me where I was from and what I did. Then he asked if I liked my job and how long I had lived here. He asked whether I could cook — I said I couldn't! Finally, he asked if I would come to his party.*
 

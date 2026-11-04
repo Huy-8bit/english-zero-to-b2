@@ -30,7 +30,7 @@
 | **Prerequisites** | [A1-G002](A1-G002-present-simple-negatives-questions.md) |
 | **Estimated Time** | 60 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Tạo câu mệnh lệnh khẳng định (**V...**) và phủ định (**Don't + V...**).
 2. Dùng câu mệnh lệnh cho: hướng dẫn, chỉ đường, lời khuyên, cảnh báo, lời mời, biển báo.
@@ -52,7 +52,7 @@ Bạn đọc hướng dẫn trên một gói mì ăn liền bằng tiếng Anh:
 
 ## C. WHAT: Câu mệnh lệnh là gì?
 
-**Imperative** (câu mệnh lệnh) là câu dùng để **yêu cầu, hướng dẫn, khuyên bảo, cảnh báo hoặc mời** ai đó làm (hoặc không làm) điều gì.
+**Câu mệnh lệnh (imperative)** dùng để hướng dẫn, yêu cầu, khuyên, cảnh báo hoặc mời ai làm gì. *Please sit down* là lời mời ngồi; *Don't touch that* là lời nhắc đừng chạm vào vật đó. Ý nghĩa và mức độ lịch sự còn phụ thuộc vào tình huống và giọng nói.
 
 - Người thực hiện **luôn là người nghe** (*you*), nên chủ ngữ được **lược bỏ**.
 - Động từ ở **dạng nguyên mẫu** (base form), **không** chia theo ngôi, **không** có *-s*.

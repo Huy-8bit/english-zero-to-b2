@@ -30,7 +30,7 @@
 | **Prerequisites** | [A0-G009 — To Be](../../01-A0-FOUNDATION/grammar/A0-G009-verb-to-be.md), [A0-G019 — V-ing spelling](../../01-A0-FOUNDATION/grammar/A0-G019-likes-and-hobbies.md), [A1-G002](A1-G002-present-simple-negatives-questions.md) |
 | **Estimated Time** | 90 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Tạo câu khẳng định, phủ định, nghi vấn với **am/is/are + V-ing**.
 2. Dùng thì hiện tại tiếp diễn cho việc **đang xảy ra lúc nói** và **tạm thời quanh thời điểm hiện tại**.
@@ -53,7 +53,7 @@
 
 ## C. WHAT: Hiện tại tiếp diễn là gì?
 
-**Thì hiện tại tiếp diễn (Present Continuous)** diễn tả hành động **đang diễn ra** — chưa kết thúc — **ngay lúc nói** hoặc **trong giai đoạn hiện tại**.
+**Thì hiện tại tiếp diễn (Present Continuous)** cho biết một việc đang diễn ra ngay lúc nói hoặc trong giai đoạn hiện tại. *I'm cooking dinner* nghĩa là “Tôi đang nấu bữa tối”. Việc ấy đang diễn ra, chưa được nhìn như một việc đã xong.
 
 | Ý nghĩa | Ví dụ | Dịch |
 |---|---|---|

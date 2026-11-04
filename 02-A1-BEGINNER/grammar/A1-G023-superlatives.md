@@ -30,7 +30,7 @@
 | **Prerequisites** | [A1-G022 — Comparatives](A1-G022-comparatives.md) |
 | **Estimated Time** | 75 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Tạo so sánh nhất: **the + adj-est** và **the most + adj**.
 2. Dùng đúng dạng bất quy tắc: *the best, the worst, the furthest*.
@@ -52,7 +52,7 @@ Một du khách hỏi bạn về Việt Nam:
 
 ## C. WHAT: So sánh nhất là gì?
 
-**Superlative** (so sánh nhất) dùng khi so sánh **một** người/vật với **cả nhóm** (thường từ ba trở lên trong bài tập cơ bản), để nói nó ở **mức cao nhất (hoặc thấp nhất)** trong nhóm.
+**So sánh nhất (superlative)** giúp bạn chỉ người hoặc vật đứng đầu một nhóm theo một đặc điểm. *This is the biggest room in the house* là “Đây là phòng rộng nhất nhà”. Trong bài tập cơ bản, nhóm thường có ít nhất ba đối tượng. Cũng có cách nói mức thấp nhất, như *the least expensive*.
 
 | Tính từ | So sánh hơn | So sánh nhất |
 |---|---|---|

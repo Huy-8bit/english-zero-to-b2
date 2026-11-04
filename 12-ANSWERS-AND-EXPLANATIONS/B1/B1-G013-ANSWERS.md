@@ -56,7 +56,7 @@
 
 > *I live in Can Tho, which is the largest city in the Mekong Delta. The thing that I love most is the floating market, where farmers sell fruit from their boats early in the morning. My favourite seller is Mrs Sau, whose pineapples are the sweetest in town. The best time to visit is in December, when the weather is dry and cool. Ninh Kieu Wharf, which is next to the Hau River, is beautiful at night. Last year, a new bridge was opened, which made travelling much easier. The people who live here are friendly and relaxed, so visitors always feel welcome.*
 
-**Rubric (0–2 mỗi tiêu chí):** ≥ 6 mệnh đề quan hệ đúng · ≥ 3 non-defining có dấu phẩy đúng · có *whose*, *where/when*, *which* thay cả mệnh đề · 100–130 từ.
+**Tiêu chí tự đánh giá (0–2 điểm cho mỗi tiêu chí):** ≥ 6 mệnh đề quan hệ đúng · ≥ 3 non-defining có dấu phẩy đúng · có *whose*, *where/when*, *which* thay cả mệnh đề · 100–130 từ.
 
 **L5.2.** Mẫu: *The man who is holding the baby is my brother, who works as a chef. The baby, whose name is Bin, is only six months old. The woman who is standing next to him is his wife. The house where we took the photo belongs to my grandparents.*
 

@@ -1,5 +1,7 @@
 # L05 · Understanding Paraphrases — Nhận diện cách diễn đạt khác
 
+Trong bài nghe, cùng một ý có thể được nói bằng những từ khác với câu hỏi. Bạn sẽ luyện nhận ra sự tương đương về nghĩa. Hãy kiểm tra cả câu, vì chỉ nghe thấy một từ giống đáp án chưa đủ để chọn.
+
 | Mục | Nội dung |
 |---|---|
 | **Cấp độ** | B1 → B2 |
@@ -8,7 +10,7 @@
 
 ## 1. Vì sao paraphrase quan trọng?
 
-Trong bài nghe B1–B2, **đáp án đúng hiếm khi dùng đúng từ trong bài nói**. Người ra đề **diễn đạt lại** (paraphrase). Ngược lại, đáp án sai thường **lặp lại từ** trong bài để đánh lừa.
+Câu hỏi và đáp án có thể diễn đạt cùng một ý bằng những từ khác với đoạn nghe. Đó là **paraphrase — diễn đạt lại**. Cũng có lựa chọn lặp từ đã nghe nhưng khác nghĩa. Vì vậy, hãy đối chiếu cả ý, không chọn hoặc loại chỉ vì từ có trùng nhau hay không.
 
 | Bài nói | Câu hỏi/đáp án |
 |---|---|

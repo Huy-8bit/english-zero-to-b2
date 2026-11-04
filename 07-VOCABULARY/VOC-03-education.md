@@ -1,5 +1,7 @@
 # VOC-03 · Education — Giáo dục
 
+Các từ trong bài giúp bạn kể về việc học, khóa học, bằng cấp và kỳ thi. Hãy thử dùng chúng để mô tả một việc bạn đã làm hoặc muốn làm. Chú ý học cả cụm, chẳng hạn *take an exam*, thay vì chỉ ghi nghĩa của từng từ.
+
 | Mục | Nội dung |
 |---|---|
 | **Cấp độ** | A2 → B2 |

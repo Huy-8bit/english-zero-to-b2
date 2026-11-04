@@ -56,7 +56,7 @@
 
 > *A man moved into the flat opposite mine last month, and he's a real mystery. He leaves at 11 p.m. every night and comes back at 7 a.m., so he must work night shifts. He might be a doctor or a security guard. He always carries a big black case — it could be a musical instrument. I sometimes hear piano music at noon, so he must be a musician! He can't be married, because I never see anyone else. He might be shy, or he may just be very busy.*
 
-**Rubric (0–2 mỗi tiêu chí):** ≥ 6 suy luận dùng modal đúng · mỗi suy luận có manh mối · đa dạng *must/might/could/can't* · 80–100 từ.
+**Tiêu chí tự đánh giá (0–2 điểm cho mỗi tiêu chí):** ≥ 6 suy luận dùng modal đúng · mỗi suy luận có manh mối · đa dạng *must/might/could/can't* · 80–100 từ.
 
 **L5.2.** Mẫu:
 - (a) *She must be a painter or an artist.*

@@ -1,5 +1,7 @@
 # B1 Exit Test — Kiểm tra cuối chương trình B1
 
+Bài kiểm tra này giúp bạn chuẩn bị cho B2 bằng cách nhận ra những phần B1 còn chưa vững. Giữ đúng điều kiện làm bài và tự làm trước khi xem đáp án. Khi chữa, chú ý cả việc chọn cấu trúc và khả năng giải thích, phát triển ý.
+
 Đề tự biên soạn để tìm phần cần ôn trước B2; **không phải đề CEFR/VSTEP chuẩn hóa và không cấp chứng nhận B1**. Làm sau 26 bài ngữ pháp B1 và ba [unit kỹ năng](../04-B1-INTERMEDIATE/B1-SKILLS-PRACTICE.md). Không xem [đáp án/transcript](../12-ANSWERS-AND-EXPLANATIONS/EXAMS/B1-EXIT-TEST-ANSWERS.md) trước khi làm.
 
 ## Cách tổ chức và điểm

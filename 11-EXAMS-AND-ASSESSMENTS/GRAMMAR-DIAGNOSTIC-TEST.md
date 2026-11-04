@@ -1,5 +1,7 @@
 # Grammar Diagnostic Test — Bài chẩn đoán ngữ pháp A0–B2
 
+Mỗi nhóm câu giúp bạn tìm một phần ngữ pháp cần ôn. Làm trước, rồi dùng mã bài trong đáp án để quay về đúng chủ điểm. Nếu chọn đúng nhưng chưa giải thích được, hãy ghi câu đó vào nhóm cần kiểm tra lại.
+
 Bài chẩn đoán **50 câu**, chia 5 phần theo cấp độ (10 câu/cấp). Mục đích: tìm **chính xác bài ngữ pháp** bạn cần ôn — mỗi câu trong [đáp án](../12-ANSWERS-AND-EXPLANATIONS/EXAMS/GRAMMAR-DIAGNOSTIC-TEST-ANSWERS.md) được gắn với mã bài học tương ứng.
 
 > Bài tự biên soạn, **không** phải bài kiểm tra chuẩn hóa và không xác định chứng chỉ CEFR. Để chọn điểm bắt đầu học, dùng [Placement Test](../00-GETTING-STARTED/PLACEMENT-TEST.md) (có cả kỹ năng). Bài này phù hợp khi bạn **đã học một thời gian** và muốn biết lỗ hổng ngữ pháp cụ thể.

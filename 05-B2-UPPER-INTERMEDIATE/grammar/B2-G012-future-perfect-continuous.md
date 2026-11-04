@@ -30,7 +30,7 @@
 | **Prerequisites** | [B1-G006 — Future Perfect](../../04-B1-INTERMEDIATE/grammar/B1-G006-future-perfect.md), [B1-G001 — Present Perfect Continuous](../../04-B1-INTERMEDIATE/grammar/B1-G001-present-perfect-continuous.md) |
 | **Estimated Time** | 75 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Dùng **will have been + V-ing** để nói về **khoảng thời gian** một hành động sẽ kéo dài **tính đến** một mốc tương lai.
 2. Phân biệt *will have done* (kết quả) và *will have been doing* (quá trình, thời lượng).
@@ -50,6 +50,8 @@
 ---
 
 ## C. WHAT
+
+Bài này nối hai cách nhìn về thời gian: một hoạt động sẽ kéo dài đến mốc tương lai, và một dự định hoặc sự việc còn ở phía trước khi nhìn từ quá khứ. Trước mỗi ví dụ, hãy hỏi: “Người nói đang nhìn từ mốc nào?”.
 
 ### Tương lai hoàn thành tiếp diễn
 
@@ -122,9 +124,9 @@ Thường đi với: ***by + mốc tương lai*** + ***for + khoảng thời gia
 | 5 | *They told us the bus **would** arrive at noon.* | Họ nói với chúng tôi xe sẽ đến lúc trưa. | Tường thuật |
 | 6 | *I had a feeling that something bad **would** happen.* | Tôi đã có linh cảm điều gì đó tệ sẽ xảy ra. | would — dự đoán |
 | 7 | *We **were about to** start dinner when the power went out.* | Chúng tôi sắp ăn tối thì mất điện. | about to |
-| 8 | *The young lawyer **was to** become one of the country's most famous judges.* | Luật sư trẻ ấy về sau trở thành... | was to — số phận |
-| 9 | *The bridge **was to have opened** in 2020, but construction was delayed.* | Cây cầu lẽ ra khánh thành năm 2020... | was to have V3 — không thành |
-| 10 | *The plane **was due to** land at 10, but it was diverted.* | Máy bay dự kiến hạ cánh lúc 10 giờ... | was due to |
+| 8 | *The young lawyer **was to** become one of the country's most famous judges.* | Người luật sư trẻ ấy về sau trở thành một trong những thẩm phán nổi tiếng nhất nước. | was to — số phận |
+| 9 | *The bridge **was to have opened** in 2020, but construction was delayed.* | Cây cầu theo kế hoạch phải khánh thành năm 2020, nhưng việc xây dựng đã bị chậm. | was to have V3 — không thành |
+| 10 | *The plane **was due to** land at 10, but it was diverted.* | Máy bay dự kiến hạ cánh lúc 10 giờ, nhưng đã phải đổi hướng. | was due to |
 | 11 | ***How long will** you **have been learning** English by the time you take the exam?* | Đến lúc thi, bạn sẽ học tiếng Anh được bao lâu? | Câu hỏi FPC |
 | 12 | *I **wasn't going to** tell anyone, but she guessed.* | Tôi đã không định nói với ai, nhưng cô ấy đoán ra. | Phủ định |
 

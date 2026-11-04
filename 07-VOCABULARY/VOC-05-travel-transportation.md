@@ -1,5 +1,7 @@
 # VOC-05 · Travel & Transportation — Du lịch và giao thông
 
+Hãy hình dung bạn đang chuẩn bị một chuyến đi: đặt vé, đến ga hoặc sân bay, rồi tìm nơi ở. Các từ trong bài gắn với những việc đó. Khi học một động từ, ghi kèm thứ thường đi sau nó, như *miss the train* — lỡ tàu.
+
 | Mục | Nội dung |
 |---|---|
 | **Cấp độ** | A1 → B2 |

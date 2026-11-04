@@ -1,5 +1,7 @@
 # VSTEP-style Mock Exam 1 — Đề mô phỏng định dạng VSTEP (bậc 3–5)
 
+Dùng đề mô phỏng này để luyện cách phân chia thời gian và chuyển giữa bốn kỹ năng. Đọc kỹ điều kiện của từng phần trước khi bắt đầu. Khi xem kết quả, phân biệt lỗi kiến thức với việc chưa quen nhiệm vụ hoặc chưa quản lý được thời gian.
+
 > ⚠️ **Đề mô phỏng, KHÔNG phải đề thi VSTEP chính thức.** Đề do giáo trình tự biên soạn, mô phỏng **cấu trúc chung** của bài thi VSTEP bậc 3–5 theo các mô tả định dạng được công bố rộng rãi (4 kỹ năng: Nghe ~40 phút/35 câu; Đọc 60 phút/40 câu; Viết 60 phút/2 bài; Nói ~12 phút/3 phần). Nội dung câu hỏi, độ khó và cách chấm **không** được kiểm định bởi cơ quan tổ chức thi, nên **không quy đổi được ra bậc VSTEP** hay điểm chính thức. Trước khi đăng ký thi thật, hãy kiểm tra quy định và định dạng mới nhất từ đơn vị tổ chức thi được cấp phép.
 
 [Đáp án, transcript, giải thích và rubric](../12-ANSWERS-AND-EXPLANATIONS/EXAMS/VSTEP-STYLE-MOCK-EXAM-1-ANSWERS.md) · Tham khảo chiến lược: [S07](../09-FOUR-SKILLS/Speaking/S07-vstep-speaking.md), [R09](../09-FOUR-SKILLS/Reading/R09-vstep-reading-strategies.md), [W12](../09-FOUR-SKILLS/Writing/W12-vstep-writing-tasks.md).

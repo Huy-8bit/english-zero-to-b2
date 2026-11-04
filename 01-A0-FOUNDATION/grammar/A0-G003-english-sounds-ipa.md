@@ -30,7 +30,7 @@
 | **Prerequisites** | [A0-G002 — Basic Phonics](A0-G002-phonics-basics.md) |
 | **Estimated Time** | 90 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Hiểu IPA là gì và vì sao nó đáng tin hơn mặt chữ khi học phát âm.
 2. Phân biệt **chất lượng và độ dài nguyên âm**, **nguyên âm đơn – đôi**.
@@ -58,7 +58,7 @@ Từ điển ghi:
 
 ## C. WHAT: IPA là gì?
 
-**IPA (International Phonetic Alphabet)** — Bảng ký hiệu ngữ âm quốc tế — là hệ thống ký hiệu giúp mô tả âm nói. Phiên âm giữa hai dấu / / trong từ điển ghi các âm vị theo quy ước của giọng được chọn; không mô tả hết mọi biến thể phát âm trong lời nói. Điều này khác với chữ viết tiếng Anh, nơi một chữ có thể đọc nhiều cách.
+**IPA (International Phonetic Alphabet)** là bảng ký hiệu ngữ âm quốc tế. Các ký hiệu giúp bạn biết từ được đọc bằng những âm nào. Ví dụ, *cat* có phiên âm /kæt/. Phiên âm giữa hai dấu / / ghi các âm theo giọng mẫu của từ điển, chứ không ghi hết mọi cách phát âm trong lời nói. Vì vậy, bạn nên vừa xem phiên âm vừa nghe từ mẫu.
 
 | Chữ viết | Có thể đọc là | IPA ghi rõ |
 |---|---|---|

@@ -58,7 +58,7 @@
 >
 > *My flatmate Tuan was in the living room. He **appeared to be sleeping** on the sofa, but when I asked him about the kitchen, he immediately sat up. At first, he denied **having used** it, but then he admitted **having invited** a few friends over. He said he regretted **having left** such a mess and promised to clean it up. He **seems to have learned** his lesson — the kitchen has been spotless ever since.*
 
-**Rubric (0–2 mỗi tiêu chí):** ≥ 3 *seem/appear to have V3* · *to be V-ing* · *to have been V3* · ≥ 2 *having V3* · 120–150 từ.
+**Tiêu chí tự đánh giá (0–2 điểm cho mỗi tiêu chí):** ≥ 3 *seem/appear to have V3* · *to be V-ing* · *to have been V3* · ≥ 2 *having V3* · 120–150 từ.
 
 **L5.2.** Mẫu: *This man seems to have just finished a marathon — he's wearing a number and he appears to be exhausted. He seems to have been running in the rain, because his clothes are wet. The people around him appear to be congratulating him.*
 

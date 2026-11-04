@@ -60,7 +60,7 @@
 >
 > *To be honest, if I were a more confident person, I would have tried the exam again the following year. But I didn't, and I'm glad. If I had become an architect, I might have been successful — but I doubt I would be as happy as I am now.*
 
-**Rubric (0–2 mỗi tiêu chí):** ≥ 3 type A · ≥ 1 type B · ≥ 1 loại 3 · trình tự câu chuyện rõ · 150–180 từ.
+**Tiêu chí tự đánh giá (0–2 điểm cho mỗi tiêu chí):** ≥ 3 type A · ≥ 1 type B · ≥ 1 loại 3 · trình tự câu chuyện rõ · 150–180 từ.
 
 **L5.2.** Mẫu ý: *If Steve Jobs hadn't returned to Apple in 1997, we might not have smartphones like the ones we use today... If he hadn't dropped out of college, he might not have taken that calligraphy class, so computers wouldn't have such beautiful fonts now...* (Chấp nhận nhân vật bất kỳ; chấm cấu trúc, không chấm độ chính xác lịch sử ngoài các sự kiện phổ biến.)
 

@@ -62,7 +62,7 @@
 >
 > *Mai then **suggested buying** a dishwasher and **offered to pay** half. Linh **agreed to think** about it. In the end, both of them **apologised for raising** their voices, and they **promised to discuss** problems calmly in the future.*
 
-**Rubric (0–2 mỗi tiêu chí):** ≥ 8 động từ tường thuật · ≥ 4 mẫu cấu trúc · cấu trúc đúng · không lạm dụng *said/told* · 130–160 từ.
+**Tiêu chí tự đánh giá (0–2 điểm cho mỗi tiêu chí):** ≥ 8 động từ tường thuật · ≥ 4 mẫu cấu trúc · cấu trúc đúng · không lạm dụng *said/told* · 130–160 từ.
 
 **L5.2.** Mẫu: *In the scene, the father refused to let his daughter go to the concert. She insisted on going and accused him of treating her like a child. He reminded her that she had exams the next week. Finally, they agreed to compromise: she promised to study all weekend, and he offered to drive her there.*
 

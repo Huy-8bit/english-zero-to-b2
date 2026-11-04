@@ -30,7 +30,7 @@
 | **Prerequisites** | Không bắt buộc; nên học sau [B2-G021 — Nominalisation](B2-G021-nominalisation.md). Xem thêm [VOC-17 — Common Collocations](../../07-VOCABULARY/VOC-17-common-collocations.md). |
 | **Estimated Time** | 75 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Hiểu **collocation** = những từ **thường đi cùng nhau** theo thói quen của người bản ngữ.
 2. Phân biệt **make / do / take / have / pay / give** + danh từ.
@@ -54,7 +54,7 @@ Câu nào nghe tự nhiên?
 
 ## C. WHAT
 
-**Collocation** là sự **kết hợp từ cố định hoặc ưa dùng** trong một ngôn ngữ. Không có quy tắc ngữ pháp nào cấm *big rain*, nhưng người bản ngữ **luôn** nói *heavy rain*.
+**Collocation — kết hợp từ quen dùng** là những từ thường xuất hiện cùng nhau, như *heavy rain* — mưa to, hoặc *make a decision* — đưa ra quyết định. Bạn khó suy ra mọi cụm từ quy tắc ngữ pháp. Học cả cụm và một câu có ngữ cảnh sẽ giúp bạn chọn từ tự nhiên hơn.
 
 | Mẫu | Ví dụ |
 |---|---|
@@ -140,11 +140,11 @@ flowchart LR
 | 3 | *Could you **do me a favour**?* | Bạn giúp tôi một việc được không? | do + a favour |
 | 4 | *The meeting will **take place** next Monday.* | Cuộc họp sẽ diễn ra thứ Hai tới. | take + place |
 | 5 | *Please **pay attention to** the instructions.* | Vui lòng chú ý hướng dẫn. | pay + attention |
-| 6 | *Flights were cancelled due to **heavy rain** and **strong winds**.* | ... mưa lớn và gió mạnh. | adj + N |
-| 7 | *It's **highly unlikely** that he'll arrive on time.* | Rất khó có khả năng... | adv + adj |
+| 6 | *Flights were cancelled due to **heavy rain** and **strong winds**.* | Các chuyến bay bị hủy vì mưa lớn và gió mạnh. | adj + N |
+| 7 | *It's **highly unlikely** that he'll arrive on time.* | Rất khó có khả năng anh ấy sẽ đến đúng giờ. | adv + adj |
 | 8 | *I was **bitterly disappointed** by the result.* | Tôi vô cùng thất vọng. | adv + adj |
 | 9 | *We **strongly recommend** booking in advance.* | Chúng tôi đặc biệt khuyên đặt trước. | V + adv |
-| 10 | *English is **widely used** in international business.* | Tiếng Anh được dùng rộng rãi... | adv + V3 |
+| 10 | *English is **widely used** in international business.* | Tiếng Anh được sử dụng rộng rãi trong kinh doanh quốc tế. | adv + V3 |
 | 11 | *The hotel is **fully booked** for the holidays.* | Khách sạn đã kín phòng. | adv + adj |
 | 12 | *Her speech received **a long round of applause**.* | Bài phát biểu nhận tràng pháo tay dài. | N + of + N |
 

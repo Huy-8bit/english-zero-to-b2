@@ -1,5 +1,7 @@
 # W05 · Cohesion & Coherence — Liên kết và mạch lạc
 
+Bạn sẽ kiểm tra hai việc khác nhau: các ý có được sắp xếp hợp lý không, và các câu có nối với nhau rõ không. Từ nối chỉ giúp khi quan hệ ý nghĩa đã đúng. Hãy sửa mạch ý trước rồi mới chọn từ liên kết.
+
 | Mục | Nội dung |
 |---|---|
 | **Cấp độ** | B1 → B2 |

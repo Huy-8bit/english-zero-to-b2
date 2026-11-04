@@ -30,7 +30,7 @@
 | **Prerequisites** | [A0-G016 — Sentence Types](../../01-A0-FOUNDATION/grammar/A0-G016-sentence-types.md), [A0-G010 — Have/Has](../../01-A0-FOUNDATION/grammar/A0-G010-have-has.md) |
 | **Estimated Time** | 90 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Hiểu thì hiện tại đơn diễn tả **thói quen, sự thật, trạng thái lâu dài, lịch trình**.
 2. Chia động từ đúng: **V** (I/you/we/they) và **V-s/es** (he/she/it).
@@ -54,13 +54,11 @@ Lúc này bạn **không** ở ngân hàng, **không** đang đi làm. Vậy mà
 
 ## C. WHAT: Thì hiện tại đơn là gì?
 
-**Thì hiện tại đơn (Present Simple)** dùng để nói về những điều **"nói chung là đúng"** ở hiện tại — không gắn với một khoảnh khắc cụ thể:
+**Thì hiện tại đơn (Present Simple)** thường dùng để nói về thói quen, việc xảy ra thường xuyên hoặc điều nhìn chung là đúng. *I work in a café* cho biết công việc của tôi; câu này không có nghĩa là ngay lúc nói tôi đang làm việc. Bài này tập trung vào câu khẳng định:
 
 - Những việc **lặp đi lặp lại**: thói quen, công việc hằng ngày.
 - Những điều **luôn đúng**: sự thật, quy luật tự nhiên.
 - Những **trạng thái lâu dài**: nơi sống, công việc, sở thích, cảm xúc ổn định.
-
-Khi bạn nói *I **work** in a bank*, bạn đang mô tả **cuộc sống của bạn**, không mô tả **việc bạn làm ngay lúc nói**. Có thể lúc đó bạn đang ngủ, đang ăn — câu vẫn đúng.
 
 **Khi nào KHÔNG dùng?** Khi nói về việc **đang diễn ra ngay lúc nói** (*Bây giờ tôi đang xem phim*) — dùng thì hiện tại tiếp diễn [A1-G004](A1-G004-present-continuous.md).
 
@@ -78,7 +76,7 @@ flowchart LR
 
 Những việc lặp lại nhiều lần trong quá khứ, hiện tại và (có lẽ) tương lai → được "tóm gọn" thành **một câu hiện tại đơn**.
 
-**Vì sao ngôi thứ ba số ít lại thêm *-s*?** Đây là phần còn sót lại từ tiếng Anh cổ, khi động từ thay đổi theo mọi ngôi. Ngày nay chỉ còn lại *-s* cho *he/she/it*. Nó không có lý do logic về nghĩa — đơn giản là quy tắc hòa hợp chủ ngữ – động từ (*subject–verb agreement*) bạn **phải** tuân theo. Người bản ngữ vẫn hiểu *she work*, nhưng nghe ngay ra đó là lỗi.
+**Vì sao phải chú ý đuôi -s?** Ở câu khẳng định hiện tại đơn với động từ thường, chủ ngữ *he/she/it* cần dạng động từ có *-s/-es*: *She works here*. Với *I/you/we/they*, dùng *work*. Việc chọn dạng động từ theo chủ ngữ gọi là **hòa hợp chủ–vị (subject–verb agreement)**. Bạn sẽ luyện từng nhóm ở bảng sau.
 
 ---
 
@@ -297,7 +295,7 @@ Chọn dạng đúng.
 
 ### Level 2 — Controlled Practice
 
-Chia động từ trong ngoặc.
+Điền dạng phù hợp của động từ trong ngoặc.
 
 **L2.1.** Nam (watch) ___ TV after dinner.
 **L2.2.** My parents (go) ___ for a walk every evening.

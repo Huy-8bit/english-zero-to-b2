@@ -1,5 +1,7 @@
 # VOC-11 · Communication — Giao tiếp
 
+Nhóm từ này giúp bạn mô tả việc trao đổi thông tin, giải thích, thuyết phục và xử lý hiểu nhầm. Hãy đặt từ vào một lời nhờ hoặc câu hỏi bạn có thể dùng ngay. Chú ý mẫu đi kèm, như *explain something to someone*.
+
 | Mục | Nội dung |
 |---|---|
 | **Cấp độ** | A2 → B2 |

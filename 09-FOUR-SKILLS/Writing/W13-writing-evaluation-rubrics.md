@@ -1,5 +1,7 @@
 # W13 · Writing Evaluation Rubrics — Tự đánh giá bài viết
 
+Bạn sẽ dùng bảng tiêu chí để sửa bài theo từng phần: đáp ứng đề, sắp xếp ý, từ vựng và ngữ pháp. Với mỗi nhận xét, tìm một câu làm bằng chứng. Sau khi sửa, đọc lại cả đoạn để chắc rằng ý vẫn rõ và không bị đổi.
+
 | Mục | Nội dung |
 |---|---|
 | **Cấp độ** | A2 → B2 |

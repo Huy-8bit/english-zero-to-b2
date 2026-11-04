@@ -1,5 +1,7 @@
 # LAB-07 · Speaking Challenges — Thử thách nói 30 ngày
 
+Chọn một thử thách vừa sức và ghi âm câu trả lời đầu tiên. Nghe lại, chọn một điểm cần cải thiện rồi nói lần hai. So sánh hai bản ghi sẽ giúp bạn nhận ra thay đổi cụ thể, thay vì chỉ cảm thấy mình “nói chưa tốt”.
+
 | Mục | Nội dung |
 |---|---|
 | **Cấp độ** | A2 → B2 (mỗi ngày có đề cơ bản và đề nâng cao) |

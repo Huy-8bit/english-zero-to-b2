@@ -19,7 +19,7 @@ Bạn giải thích chiếc đèn bàn của mình: “Nếu tôi nhấn nút xa
 
 ## C. WHAT
 
-**Conditional sentence — câu điều kiện** nối một **condition — điều kiện** với một **result — kết quả**. *If* nghĩa là “nếu”. **Clause — mệnh đề** là phần câu có chủ ngữ và động từ: *I press the button* là một mệnh đề; *the light comes on* là mệnh đề còn lại.
+**Câu điều kiện (conditional sentence)** nối điều kiện với kết quả. *If I press this button, the light comes on* nghĩa là “Nếu tôi bấm nút này, đèn sáng”. Mỗi phần có chủ ngữ và động từ được gọi là một **mệnh đề (clause)**. Bài này tập trung vào điều thường đúng khi điều kiện xảy ra.
 
 Câu điều kiện loại 0 thường nói điều đúng nói chung, thói quen hoặc kết quả thường xảy ra khi điều kiện được đáp ứng. Nó không chỉ dành cho sự thật khoa học. *If I'm tired, I go to bed early* mô tả thói quen cá nhân, không phải mọi người mệt đều ngủ sớm.
 

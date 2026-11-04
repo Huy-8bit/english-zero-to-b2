@@ -1,5 +1,7 @@
 # A1 Exit Test — Bài kiểm tra cuối cấp A1
 
+Bài này giúp bạn kiểm tra nền A1 trước khi chuyển sang A2. Làm một lượt theo hướng dẫn, rồi đối chiếu những câu chưa chắc và các nhiệm vụ nói, viết. Dùng kết quả để chọn bài ôn, không chỉ để ghi một tổng điểm.
+
 > **Mục đích:** tìm phần cần ôn trước khi học A2. Đây là đề tự biên soạn, chưa chuẩn hóa; A1 là nhãn của giáo trình, không phải chứng nhận CEFR. Làm trong điều kiện thi thật: không xem tài liệu, không tra từ điển, bấm giờ. Đáp án và transcript: [A1-EXIT-TEST-ANSWERS](../12-ANSWERS-AND-EXPLANATIONS/EXAMS/A1-EXIT-TEST-ANSWERS.md).
 
 | Phần | Nội dung | Điểm | Thời gian gợi ý |

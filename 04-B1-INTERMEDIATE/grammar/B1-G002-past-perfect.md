@@ -30,7 +30,7 @@
 | **Prerequisites** | [A2-G002 — Past Simple vs Past Continuous](../../03-A2-ELEMENTARY/grammar/A2-G002-past-simple-vs-past-continuous.md), [A2-G003 — Present Perfect Form (V3)](../../03-A2-ELEMENTARY/grammar/A2-G003-present-perfect-form.md) |
 | **Estimated Time** | 90 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Tạo câu với **had + V3** cho mọi chủ ngữ.
 2. Dùng quá khứ hoàn thành cho hành động xảy ra **trước một thời điểm/hành động khác trong quá khứ**.
@@ -53,7 +53,7 @@ So sánh hai câu:
 
 ## C. WHAT
 
-**Past Perfect** (quá khứ hoàn thành) diễn tả một hành động/trạng thái **đã xảy ra (và thường đã hoàn tất) trước** một thời điểm hoặc một sự việc khác **trong quá khứ**. Nó là "quá khứ của quá khứ".
+**Quá khứ hoàn thành (Past Perfect)** giúp bạn nhìn từ một mốc quá khứ về việc xảy ra trước đó. *When I arrived, Lan had left* nghĩa là “Khi tôi đến, Lan đã đi rồi”. Việc Lan đi xảy ra trước việc tôi đến. Thì này dùng cho cả hành động và trạng thái.
 
 | Thời điểm mốc (quá khứ) | Sự việc xảy ra trước mốc |
 |---|---|

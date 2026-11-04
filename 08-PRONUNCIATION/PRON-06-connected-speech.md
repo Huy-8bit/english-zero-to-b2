@@ -1,5 +1,7 @@
 # PRON-06 · Connected Speech — Lời nói liền mạch
 
+Khi nghe hội thoại, bạn có thể không nhận ra những từ mình vốn đã biết. Một lý do là các âm thay đổi khi đứng cạnh nhau. Bài này giúp bạn nghe ra cách nói liền mạch; hãy ưu tiên hiểu và nói rõ trước khi thử bắt chước tốc độ.
+
 | Mục | Nội dung |
 |---|---|
 | **Cấp độ** | B1 → B2 |

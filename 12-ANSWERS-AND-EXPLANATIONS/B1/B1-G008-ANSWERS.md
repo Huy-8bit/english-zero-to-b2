@@ -58,7 +58,7 @@
 
 > *When I was 22, I decided to turn down a well-paid job in a bank and join a small start-up instead. My parents were shocked. The start-up failed after two years, but I learned more there than anywhere else. If I had taken the bank job, I would have had a stable salary, and I might have bought a flat earlier. However, I wouldn't have learned how to manage a team, and I could never have started my own business. If the start-up hadn't failed, I wouldn't have understood how important planning is. Looking back, I don't regret my decision — it made me who I am today.*
 
-**Rubric (0–2 mỗi tiêu chí):** kể sự việc bằng quá khứ đơn rõ ràng · ≥ 4 câu loại 3 đúng · có *would/could/might have* · 100–130 từ, mạch lạc.
+**Tiêu chí tự đánh giá (0–2 điểm cho mỗi tiêu chí):** kể sự việc bằng quá khứ đơn rõ ràng · ≥ 4 câu loại 3 đúng · có *would/could/might have* · 100–130 từ, mạch lạc.
 
 **L5.2.** Mẫu: *I regret that I didn't learn English earlier. If I had started at school, I would have got a better job sooner. Also, if I hadn't stayed up so late before my final exam, I would have got a higher score. On the other hand, I'm lucky: if I hadn't joined that volunteer club, I wouldn't have met my best friend...*
 

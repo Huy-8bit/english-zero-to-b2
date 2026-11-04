@@ -19,7 +19,7 @@ Bạn đang xem một bộ phim chậm và muốn nói “Tôi chán”. Nếu n
 
 ## C. WHAT
 
-Nhóm **-ed adjectives — tính từ đuôi -ed** trong bài thường mô tả cảm giác/trạng thái của bên trải nghiệm: tired, interested, excited. Nhóm **-ing adjectives — tính từ đuôi -ing** thường mô tả đặc điểm hoặc tác động gây cảm giác: tiring, interesting, exciting. Đây là nhóm từ liên quan đến cảm xúc, không phải quy tắc giải thích mọi từ tận cùng -ed/-ing trong tiếng Anh.
+Với các cặp từ cảm xúc trong bài, đuôi **-ed** thường nói về người hoặc bên có cảm giác; đuôi **-ing** thường nói về điều gây ra cảm giác ấy. *I'm bored because the film is boring* nghĩa là “Tôi thấy chán vì bộ phim chán”. Mẹo này áp dụng cho nhóm từ đang học, không giải thích mọi từ tận cùng bằng -ed hoặc -ing.
 
 ## D. WHY
 

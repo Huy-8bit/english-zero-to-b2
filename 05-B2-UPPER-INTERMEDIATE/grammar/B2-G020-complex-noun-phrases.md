@@ -30,7 +30,7 @@
 | **Prerequisites** | [B2-G007 — Reduced Relative Clauses](B2-G007-relative-clause-reduction.md), [A2-G021 — Adjective Order](../../03-A2-ELEMENTARY/grammar/A2-G021-adjective-order.md) |
 | **Estimated Time** | 75 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Phân tích cụm danh từ thành **từ hạn định + bổ ngữ trước + danh từ chính + bổ ngữ sau**.
 2. Tạo **tính từ ghép** đúng: *a **ten-minute** walk, a **well-paid** job, a **time-consuming** task*.
@@ -52,7 +52,7 @@ Câu B: *the **new five-star** hotel **near the beach built last year***
 
 ## C. WHAT
 
-**Cụm danh từ phức** (complex noun phrase) có cấu trúc:
+**Cụm danh từ phức (complex noun phrase)** có một danh từ chính và các phần mô tả đi kèm. Trong *the small café near my house*, *café* là danh từ chính; các phần khác giúp bạn biết đó là quán nào. Bạn cần tìm danh từ chính trước, rồi đọc các thông tin bổ sung:
 
 ```text
 [Từ hạn định] + [Bổ ngữ trước] + DANH TỪ CHÍNH + [Bổ ngữ sau]
@@ -233,7 +233,7 @@ Gạch chân **danh từ chính** của cụm in nghiêng.
 **L1.2.** *A recently published report on youth unemployment* shows worrying trends.
 **L1.3.** *The government's plan to build a second airport* has been approved.
 
-Chọn đáp án đúng.
+Chọn đáp án phù hợp với câu và ngữ cảnh.
 
 **L1.4.** We stayed in a ___ hotel.  A. five-stars  B. five-star  C. five star's
 **L1.5.** It's a ___ walk from here.  A. ten-minute  B. ten-minutes  C. ten minutes

@@ -30,7 +30,7 @@
 | **Prerequisites** | [B1-G016 — Gerund vs Infinitive](../../04-B1-INTERMEDIATE/grammar/B1-G016-gerund-vs-infinitive.md), [B1-G025 — Both, Either, Neither](../../04-B1-INTERMEDIATE/grammar/B1-G025-both-either-neither-each-every.md) |
 | **Estimated Time** | 60 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Hiểu nguyên tắc **song song**: các thành phần được nối phải có **cùng dạng ngữ pháp**.
 2. Viết danh sách song song: *reading, writing **and** speaking* (không ~~reading, writing and to speak~~).
@@ -53,7 +53,7 @@ Câu nào nghe "trơn tru" hơn?
 
 ## C. WHAT
 
-**Cấu trúc song song** (parallelism) = khi nối hai hay nhiều thành phần bằng *and, or, but, both...and, not only...but also, than, as...*, các thành phần đó phải có **cùng dạng ngữ pháp**:
+**Cấu trúc song song (parallel structures)** giúp các ý ngang hàng có dạng ngữ pháp tương ứng. *I like cooking and reading* nối hai hoạt động cùng dạng *V-ing*. Hãy xác định những phần nào đang được nối bằng *and, or, both...and* hoặc mẫu so sánh, rồi kiểm tra chúng có cùng vai trò trong câu không.
 
 | Dạng | ✅ Song song |
 |---|---|
@@ -128,15 +128,15 @@ Khi các thành phần cần **giới từ khác nhau**, phải viết đủ:
 | # | English | Tiếng Việt | Phân tích |
 |---|---|---|---|
 | 1 | *A good leader should be **honest**, **confident** and **fair**.* | Lãnh đạo giỏi nên trung thực, tự tin và công bằng. | 3 tính từ |
-| 2 | *In my free time I enjoy **reading**, **cooking** and **gardening**.* | ... đọc sách, nấu ăn và làm vườn. | 3 V-ing |
-| 3 | *The aim of the course is **to improve** your grammar and **(to) expand** your vocabulary.* | ... cải thiện ngữ pháp và mở rộng vốn từ. | 2 to V |
+| 2 | *In my free time I enjoy **reading**, **cooking** and **gardening**.* | Lúc rảnh, tôi thích đọc sách, nấu ăn và làm vườn. | 3 V-ing |
+| 3 | *The aim of the course is **to improve** your grammar and **(to) expand** your vocabulary.* | Khóa học nhằm giúp bạn cải thiện ngữ pháp và mở rộng vốn từ. | 2 to V |
 | 4 | *She is **not only** a talented singer **but also** a skilled dancer.* | Cô ấy không chỉ là ca sĩ tài năng mà còn là vũ công giỏi. | N – N |
 | 5 | *You can apply **either** online **or** in person.* | Bạn có thể nộp trực tuyến hoặc trực tiếp. | trạng ngữ – trạng ngữ |
 | 6 | *He enjoys **neither** swimming **nor** running.* | Anh ấy không thích bơi cũng không thích chạy. | V-ing – V-ing |
 | 7 | *Living in the city is more expensive **than living** in the countryside.* | Sống ở thành phố đắt hơn sống ở nông thôn. | V-ing – V-ing |
 | 8 | *The population of Hanoi is larger than **that of** Da Nang.* | Dân số Hà Nội lớn hơn của Đà Nẵng. | *that of* — so sánh đúng đối tượng |
 | 9 | *She said **that** she was busy and **that** she would call later.* | Cô ấy nói rằng bận và rằng sẽ gọi sau. | 2 mệnh đề *that* |
-| 10 | *We are committed **to reducing** waste and **(to) protecting** the environment.* | ... giảm rác thải và bảo vệ môi trường. | *to* giới từ + V-ing |
+| 10 | *We are committed **to reducing** waste and **(to) protecting** the environment.* | Chúng tôi cam kết giảm rác thải và bảo vệ môi trường. | *to* giới từ + V-ing |
 | 11 | *He was **both** surprised **and** delighted by the news.* | Anh ấy vừa ngạc nhiên vừa vui mừng. | adj – adj |
 | 12 | *Education is **not a privilege** but **a right**.* | Giáo dục không phải đặc quyền mà là quyền. | Song song đối lập |
 

@@ -19,7 +19,7 @@ Bạn nhận xét một người: “She is careful.” Bạn nhận xét cách 
 
 ## C. WHAT
 
-**Adverb of manner — trạng từ chỉ cách thức** trả lời câu hỏi “How?” (như thế nào) về một hành động: speak slowly = nói chậm. **Adjective — tính từ** mô tả người/vật: a slow bus = xe buýt chậm. Không phải mọi trạng từ đều chỉ cách thức; often chỉ tần suất, yesterday chỉ thời gian. Bài này tập trung cách một hành động diễn ra.
+**Trạng từ chỉ cách thức (adverb of manner)** cho biết một hành động diễn ra như thế nào. *She speaks slowly* là “Cô ấy nói chậm”. So sánh với tính từ trong *a slow bus* — một chiếc xe buýt chậm. Bài này học cách thức; những trạng từ như *often* và *yesterday* lần lượt chỉ tần suất và thời gian.
 
 ## D. WHY
 

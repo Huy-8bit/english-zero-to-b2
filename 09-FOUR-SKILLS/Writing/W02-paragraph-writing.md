@@ -1,5 +1,7 @@
 # W02 · Paragraph Writing — Viết đoạn văn
 
+Một đoạn văn nên giúp người đọc theo được một ý chính. Bạn sẽ luyện viết câu nêu ý, thêm lời giải thích và một ví dụ có liên quan. Khi đọc lại, kiểm tra từng câu có thực sự hỗ trợ ý chính hay đang đi sang chuyện khác.
+
 | Mục | Nội dung |
 |---|---|
 | **Cấp độ** | A2 → B1 |

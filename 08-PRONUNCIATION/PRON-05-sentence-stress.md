@@ -1,5 +1,7 @@
 # PRON-05 · Sentence Stress & Rhythm — Trọng âm câu và nhịp điệu
 
+Trong một câu, một số từ nổi bật hơn vì mang thông tin bạn muốn nhấn. Bạn sẽ luyện nói cùng một câu với điểm nhấn khác nhau để nghe ý thay đổi thế nào. Đọc rõ thông tin quan trọng trước, rồi mới luyện nhịp nói nhanh hơn.
+
 | Mục | Nội dung |
 |---|---|
 | **Cấp độ** | A2 → B2 |
@@ -8,11 +10,11 @@
 
 ## 1. Tiếng Anh có nhịp "theo trọng âm"
 
-Tiếng Việt đọc mỗi âm tiết với độ dài gần bằng nhau (nhịp âm tiết). Tiếng Anh có xu hướng giữ khoảng cách **giữa các âm tiết được nhấn** tương đối đều; các âm tiết không nhấn bị **rút ngắn, đọc nhẹ** để "chen" vào giữa.
+Trong lời nói tiếng Anh, một số âm tiết nổi bật hơn những âm khác. Những phần ít quan trọng thường được đọc nhẹ hoặc ngắn hơn. Bạn có thể luyện bằng cách giữ rõ các điểm nhấn và nối những phần còn lại, nhưng không cần ép các khoảng cách thành nhịp đều như máy.
 
 ```text
   CATS     CHASE     MICE.                 (3 trọng âm)
-  The CATS   have CHASED the  MICE.        (vẫn 3 trọng âm — thời gian gần như tương đương)
+  The CATS   have CHASED the  MICE.        (vẫn có thể nhấn 3 từ; thời lượng tùy cách nói)
   The CATS will have been CHASing the MICE.
 ```
 

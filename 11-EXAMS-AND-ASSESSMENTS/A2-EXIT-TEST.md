@@ -1,5 +1,7 @@
 # A2 Exit Test — Kiểm tra cuối chương trình A2
 
+Bạn sẽ kiểm tra khả năng dùng kiến thức A2 qua nhiều kỹ năng. Sau khi làm, tìm xem khó khăn đến từ từ vựng, cấu trúc hay cách hiểu yêu cầu. Đọc phần hướng dẫn và mốc tự học bên dưới để quyết định việc ôn trước B1.
+
 Đề tự biên soạn để tìm phần cần ôn trước B1; **không phải đề CEFR/VSTEP chuẩn hóa và không cấp chứng nhận A2**. Làm sau 30 bài ngữ pháp, ba [unit kỹ năng](../03-A2-ELEMENTARY/A2-SKILLS-PRACTICE.md) và [giao tiếp A2](../03-A2-ELEMENTARY/A2-COMMUNICATION.md). Không xem [đáp án/transcript](../12-ANSWERS-AND-EXPLANATIONS/EXAMS/A2-EXIT-TEST-ANSWERS.md) trước khi làm.
 
 ## Cách tổ chức và điểm

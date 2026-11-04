@@ -30,7 +30,7 @@
 | **Prerequisites** | [A2-G017 — First Conditional](../../03-A2-ELEMENTARY/grammar/A2-G017-first-conditional.md), [A1-G017 — Past Simple](../../02-A1-BEGINNER/grammar/A1-G017-past-simple-affirmative.md) |
 | **Estimated Time** | 90 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Tạo câu **If + quá khứ đơn, would/could/might + V**.
 2. Diễn tả tình huống **không có thật ở hiện tại** hoặc **khó xảy ra trong tương lai**.
@@ -53,7 +53,7 @@ Hai người bạn nói về xổ số:
 
 ## C. WHAT
 
-**Second Conditional** (câu điều kiện loại 2) dùng để nói về:
+**Câu điều kiện loại 2 (Second Conditional)** giúp bạn tưởng tượng một tình huống khác với hiện tại, hoặc một khả năng tương lai được xem là khó xảy ra. *If I had more time, I'd cook more often* nghĩa là “Nếu có nhiều thời gian hơn, tôi sẽ nấu ăn thường xuyên hơn”. Trong cách dùng này, dạng quá khứ không kể một sự việc quá khứ.
 
 | Loại tình huống | Ví dụ | Ý nghĩa |
 |---|---|---|
@@ -234,7 +234,7 @@ flowchart TD
 
 ### Level 2 — Controlled Practice
 
-Chia động từ trong ngoặc.
+Điền dạng phù hợp của động từ trong ngoặc.
 
 **L2.1.** If I (be) ___ taller, I (play) ___ basketball.
 **L2.2.** We (go) ___ to the beach if it (not / be) ___ so cold.

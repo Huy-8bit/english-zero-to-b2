@@ -30,7 +30,7 @@
 | **Prerequisites** | [A2-G024 — Quantifiers](../../03-A2-ELEMENTARY/grammar/A2-G024-quantifiers.md) |
 | **Estimated Time** | 75 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Dùng ***both, either, neither*** cho **hai** người/vật; ***all, none, any*** cho **ba trở lên**.
 2. Dùng ***each*** và ***every*** đúng sắc thái và hòa hợp **động từ số ít**.
@@ -52,6 +52,8 @@
 ---
 
 ## C. WHAT
+
+Khi chọn **both, either, neither, each, every, all** hoặc **none**, hãy xác định bạn đang nói đến hai đối tượng hay một nhóm lớn hơn, và muốn nói tất cả, từng người hay không ai. *Both doors are open* là cả hai cửa đều mở; *Neither door is open* là không cửa nào trong hai cửa mở.
 
 | Số lượng | Khẳng định tất cả | Bất kỳ một | Phủ định tất cả |
 |---|---|---|---|

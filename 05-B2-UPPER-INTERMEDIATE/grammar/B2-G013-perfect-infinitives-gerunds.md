@@ -32,7 +32,7 @@
 
 > ℹ️ Học bài này **trước** [B2-G005 — Passive Reporting](B2-G005-passive-reporting.md), vì G005 dùng *to have + V3*.
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Dùng **to have + V3** để chỉ hành động xảy ra **trước** động từ chính: *He seems **to have left**.*
 2. Dùng **to be + V-ing** cho hành động **đang diễn ra**: *She seems **to be sleeping**.*
@@ -54,6 +54,8 @@
 ---
 
 ## C. WHAT
+
+**Dạng hoàn thành** trong nguyên mẫu và danh động từ thường giúp bạn nói việc xảy ra trước một mốc khác. So sánh *He seems to know* với *He seems to have forgotten*. Câu sau nhìn từ nhận xét hiện tại về việc quên đã xảy ra trước đó. Bảng dưới đây đặt các dạng cạnh nhau để bạn so sánh thời gian.
 
 | Dạng | Cấu trúc | Thời gian so với động từ chính | Ví dụ |
 |---|---|---|---|

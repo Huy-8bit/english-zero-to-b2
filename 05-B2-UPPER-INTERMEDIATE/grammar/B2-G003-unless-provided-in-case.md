@@ -30,7 +30,7 @@
 | **Prerequisites** | [A2-G017 — First Conditional](../../03-A2-ELEMENTARY/grammar/A2-G017-first-conditional.md), [B1-G023 — Adverbial Clauses](../../04-B1-INTERMEDIATE/grammar/B1-G023-adverbial-clauses.md) |
 | **Estimated Time** | 75 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Dùng ***unless*** = *if ... not* và biết khi nào **không** thay được.
 2. Dùng ***provided (that), providing, as long as, on condition that*** để nêu **điều kiện bắt buộc**.
@@ -50,6 +50,8 @@
 ---
 
 ## C. WHAT
+
+Các từ nối điều kiện không hoàn toàn thay thế cho nhau. **Unless** thường mang ý “trừ khi”; **as long as/provided that** là “miễn là”; **in case** là “phòng khi”. So sánh *Take a jacket if it gets cold* với *Take a jacket in case it gets cold*: câu sau khuyên chuẩn bị áo trước.
 
 | Liên từ | Nghĩa | Ví dụ |
 |---|---|---|
@@ -132,7 +134,7 @@ Giống mệnh đề *if* loại 1: **hiện tại** cho tương lai; không dù
 | 1 | ***Unless** you book now, there won't be any seats left.* | Nếu không đặt ngay, sẽ không còn chỗ. | unless = if not |
 | 2 | *I won't sign the contract **unless** they change clause 5.* | Tôi sẽ không ký trừ khi họ sửa điều 5. | Ngoại lệ duy nhất |
 | 3 | *You can use my car **provided that** you fill it up afterwards.* | Bạn dùng xe tôi được, miễn là đổ đầy xăng sau đó. | Điều kiện bắt buộc |
-| 4 | ***As long as** you're honest with me, we won't have any problems.* | Miễn là bạn trung thực, ... | Thân mật |
+| 4 | ***As long as** you're honest with me, we won't have any problems.* | Miễn là bạn thành thật với tôi thì chúng ta sẽ không gặp vấn đề gì. | Thân mật |
 | 5 | *The loan was approved **on condition that** the company reduced its costs.* | Khoản vay được duyệt với điều kiện công ty giảm chi phí. | Trang trọng, quá khứ |
 | 6 | *Save the file every ten minutes **in case** the computer crashes.* | Lưu file mỗi 10 phút phòng khi máy bị treo. | Đề phòng |
 | 7 | *I'll give you my number **in case** you need anything.* | Tôi cho bạn số, phòng khi bạn cần gì. | Đề phòng |

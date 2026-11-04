@@ -19,7 +19,7 @@ Bạn chọn hộp đựng sách. Hộp A rất lớn nhưng vẫn dùng đượ
 
 ## C. WHAT
 
-**Too — quá mức cần/phù hợp** diễn tả vượt một ngưỡng, thường gây trở ngại: too hot to drink. **Enough — đủ** diễn tả đạt ngưỡng cần thiết: cool enough to drink. **Not ... enough — chưa đủ** diễn tả chưa đạt ngưỡng. Ngưỡng tùy nhiệm vụ: một túi đủ lớn cho sách nhưng có thể quá nhỏ cho quần áo đi xa.
+**Too** nghĩa là quá mức phù hợp; **enough** nghĩa là đủ cho một việc. *The tea is too hot to drink* là “Trà nóng quá, chưa uống được”. *It's cool enough to drink* là “Trà đã nguội đủ để uống”. **Not ... enough** nghĩa là chưa đủ. Mức “đủ” luôn gắn với việc bạn muốn làm.
 
 ## D. WHY
 

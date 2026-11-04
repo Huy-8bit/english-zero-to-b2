@@ -30,7 +30,7 @@
 | **Prerequisites** | [A2-G015 — Gerunds & Infinitives (basic)](../../03-A2-ELEMENTARY/grammar/A2-G015-gerunds-infinitives-basic.md) |
 | **Estimated Time** | 90 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Ôn lại nhóm động từ chỉ đi với **V-ing** (*enjoy, avoid, finish...*) và chỉ đi với **to V** (*want, decide, hope...*).
 2. Phân biệt nghĩa của ***stop, remember, forget, try, regret*** khi đi với V-ing và to V.
@@ -53,7 +53,7 @@ Hai câu chỉ khác dạng động từ:
 
 ## C. WHAT
 
-Ở A2, bạn đã học: một số động từ **chỉ** đi với V-ing, một số **chỉ** đi với to V. Bài này tập trung vào nhóm khó hơn: động từ đi được **cả hai**, nhưng **nghĩa thay đổi**.
+Bạn đã gặp động từ đi với *V-ing* hoặc *to + động từ nguyên mẫu*. Bài này học nhóm có thể đi với cả hai nhưng nghĩa khác nhau. *I stopped smoking* là tôi bỏ hút thuốc; *I stopped to smoke* là tôi dừng việc đang làm để hút thuốc. Hãy đọc cả tình huống trước khi chọn dạng.
 
 | Động từ | + V-ing | + to V |
 |---|---|---|

@@ -30,7 +30,7 @@
 | **Prerequisites** | [A0-G009 — To Be](../../01-A0-FOUNDATION/grammar/A0-G009-verb-to-be.md), [A0-G015 — There is/are](../../01-A0-FOUNDATION/grammar/A0-G015-there-is-there-are.md) |
 | **Estimated Time** | 75 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Chia đúng *was* (I/he/she/it) và *were* (you/we/they).
 2. Tạo câu phủ định, nghi vấn, trả lời ngắn với *was/were*.
@@ -54,7 +54,7 @@ Bạn muốn trả lời: "Tuyệt lắm! Tôi **ở** Đà Lạt. Thời tiết
 
 ## C. WHAT: *Was / were* là gì?
 
-**Was** và **were** là dạng **quá khứ đơn** của *be* (am/is/are). Chúng dùng để nói về **trạng thái, vị trí, cảm xúc, đặc điểm ở một thời điểm đã qua và đã kết thúc**.
+**Was/were** là dạng quá khứ của *am/is/are*. Bạn dùng chúng để kể về trạng thái, vị trí, cảm xúc hoặc đặc điểm ở một thời điểm đã qua. *I was tired yesterday* nghĩa là “Hôm qua tôi mệt”; câu này không tự cho biết hôm nay tôi còn mệt hay không.
 
 | Hiện tại | Quá khứ |
 |---|---|
@@ -80,7 +80,7 @@ flowchart LR
     P["QUÁ KHỨ<br/>was / were<br/>(đã kết thúc)"] --> N["HIỆN TẠI<br/>am / is / are"]
 ```
 
-Tin tốt: *be* ở quá khứ **đơn giản hơn** hiện tại — chỉ có 2 dạng (*was/were*) thay vì 3.
+Ở quá khứ đơn, bạn chỉ cần chọn giữa *was* và *were* theo chủ ngữ. Hãy đối chiếu từng nhóm trong bảng rồi tự đặt câu.
 
 ---
 

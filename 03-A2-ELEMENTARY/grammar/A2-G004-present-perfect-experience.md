@@ -30,7 +30,7 @@
 | **Prerequisites** | [A2-G003](A2-G003-present-perfect-form.md) |
 | **Estimated Time** | 75 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Dùng hiện tại hoàn thành để nói về **trải nghiệm trong đời** (từ khi sinh ra đến nay).
 2. Hỏi với ***Have you ever + V3...?*** và trả lời tự nhiên.
@@ -54,7 +54,7 @@ Bạn muốn nói: "Có, tôi **từng** làm việc với người Nhật và n
 
 ## C. WHAT: Trải nghiệm trong đời
 
-Một trong những cách dùng phổ biến nhất của hiện tại hoàn thành: nói về những gì một người **đã từng / chưa từng** làm **trong cuộc đời họ tính đến thời điểm hiện tại**.
+Bạn dùng hiện tại hoàn thành để nói về **trải nghiệm tính đến bây giờ**: đã từng làm gì hoặc chưa từng làm gì. *I've been to Hue* nghĩa là “Tôi đã từng đến Huế”. Nếu muốn kể chuyến đi xảy ra khi nào, bạn thường chuyển sang quá khứ đơn.
 
 | Câu | Nghĩa |
 |---|---|

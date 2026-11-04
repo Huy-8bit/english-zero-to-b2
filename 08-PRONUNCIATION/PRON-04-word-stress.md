@@ -1,5 +1,7 @@
 # PRON-04 · Word Stress — Trọng âm từ
 
+Người nghe cần nhận ra âm tiết nào nổi bật trong một từ. Bạn sẽ luyện trọng âm bằng cách nghe từ mẫu, đánh dấu âm tiết được nhấn rồi nói lại. Hãy học trọng âm cùng từ mới, thay vì đợi đến khi biết nghĩa mới bổ sung cách đọc.
+
 | Mục | Nội dung |
 |---|---|
 | **Cấp độ** | A2 → B2 |
@@ -8,11 +10,11 @@
 
 ## 1. Trọng âm là gì và vì sao quan trọng?
 
-Trong từ có từ hai âm tiết trở lên, **một âm tiết được nhấn**: đọc **to hơn, dài hơn, cao hơn**, nguyên âm rõ ràng. Các âm tiết khác đọc nhẹ, thường thành /ə/.
+Với từ có từ hai âm tiết trở lên, hãy tìm âm tiết mang **trọng âm chính**. Âm tiết đó thường nổi bật hơn nhờ độ dài, độ rõ của nguyên âm hoặc giọng đọc. Các âm tiết còn lại thường nhẹ hơn, nhưng không phải mọi nguyên âm không nhấn đều đổi thành /ə/. Một số từ còn có trọng âm phụ.
 
 *banana* /bəˈnɑːnə/ → ba-**NA**-na
 
-Tiếng Việt mỗi âm tiết có thanh điệu riêng và đọc đều nhau; người Việt hay **nhấn đều mọi âm tiết** hoặc **nhấn sai chỗ**, khiến người nghe khó nhận ra từ — ngay cả khi từng âm đều đúng. Sai trọng âm có thể đổi nghĩa: ***DES**ert* (sa mạc) vs *de**SSERT*** (tráng miệng).
+Tiếng Việt có thanh điệu; trọng âm từ tiếng Anh là một điểm khác cần luyện riêng. Nếu nhấn sai âm tiết, người nghe có thể khó nhận ra từ dù bạn đọc khá rõ từng âm. Hãy nghe và đánh dấu chỗ nhấn, nhất là ở những từ gần âm nhau: ***DES**ert* (sa mạc) vs *de**SSERT*** (tráng miệng).
 
 ## 2. Đọc trọng âm trong từ điển
 

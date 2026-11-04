@@ -1,5 +1,7 @@
 # L03 · Listening for Main Ideas — Nghe ý chính
 
+Bài này luyện nghe để biết người nói đang nói về điều gì và nhằm mục đích gì. Đừng vội dừng ở một từ quen; hãy nghe xem các ý cùng hướng về chủ đề nào. Sau lượt đầu, thử tóm tắt thông điệp bằng một câu.
+
 | Mục | Nội dung |
 |---|---|
 | **Cấp độ** | A2 → B2 |

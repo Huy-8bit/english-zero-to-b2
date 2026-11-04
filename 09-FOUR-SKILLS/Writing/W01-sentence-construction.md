@@ -1,5 +1,7 @@
 # W01 · Sentence Construction — Xây dựng câu viết
 
+Một câu viết tốt trước hết phải chuyển được ý bạn muốn nói. Bài này giúp bạn kiểm tra câu có đủ ý, nối câu đúng và đặt từ đúng chỗ. Viết rõ một câu ngắn trước, rồi mới mở rộng bằng lý do hoặc thông tin bổ sung.
+
 | Mục | Nội dung |
 |---|---|
 | **Cấp độ** | A1 → B1 |
@@ -9,7 +11,7 @@
 
 ## 1. Câu hoàn chỉnh cần gì?
 
-Một câu tiếng Anh hoàn chỉnh cần **chủ ngữ + động từ chia** và thể hiện **một ý trọn vẹn**.
+Trong các mẫu câu trần thuật đầy đủ đang luyện, bạn cần **chủ ngữ và động từ được chia phù hợp**, đồng thời diễn đạt một ý trọn vẹn. Câu mệnh lệnh như *Sit down* có thể không nêu chủ ngữ. Những lời đáp ngắn trong hội thoại cũng có cách lược riêng; bài này tập trung vào câu viết đầy đủ.
 
 | ❌ Không phải câu | Vì sao | ✅ |
 |---|---|---|

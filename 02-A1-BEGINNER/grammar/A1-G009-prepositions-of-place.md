@@ -30,7 +30,7 @@
 | **Prerequisites** | [A0-G015 — There is/are](../../01-A0-FOUNDATION/grammar/A0-G015-there-is-there-are.md) |
 | **Estimated Time** | 75 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Phân biệt **in / on / at** chỉ nơi chốn theo "cách nhìn không gian".
 2. Dùng đúng các giới từ vị trí: *under, next to, between, behind, in front of, opposite, near, above, below*.
@@ -54,7 +54,7 @@ Tiếng Việt có "ở" rất linh hoạt. Nhiều người học dịch "ở" 
 
 ## C. WHAT: Giới từ chỉ nơi chốn là gì?
 
-**Prepositions of place** (giới từ chỉ nơi chốn) cho biết **vị trí** của người/vật so với một người/vật khác. Chúng đứng **trước danh từ hoặc đại từ tân ngữ**: *on **the table**, next to **me***.
+**Giới từ chỉ nơi chốn (prepositions of place)** giúp bạn nói người hoặc vật đang ở đâu. *The keys are on the table* nghĩa là “Chìa khóa ở trên bàn”. Giới từ đứng trước danh từ hoặc đại từ: *on the table, next to me*.
 
 Cấu trúc thường gặp: **S + be + giới từ + danh từ** (*The keys are on the table.*) hoặc **There is/are + N + giới từ + danh từ** (*There's a cat under the bed.*).
 

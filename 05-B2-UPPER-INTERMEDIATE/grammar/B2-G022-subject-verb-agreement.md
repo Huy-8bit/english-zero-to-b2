@@ -30,7 +30,7 @@
 | **Prerequisites** | [B2-G020 — Complex Noun Phrases](B2-G020-complex-noun-phrases.md), [B1-G025 — Both, Either, Neither, Each, Every](../../04-B1-INTERMEDIATE/grammar/B1-G025-both-either-neither-each-every.md) |
 | **Estimated Time** | 75 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Hòa hợp động từ với **danh từ chính** trong cụm danh từ dài.
 2. Dùng đúng ***a number of*** (+ V số nhiều) và ***the number of*** (+ V số ít).
@@ -56,7 +56,7 @@ Chọn *is* hoặc *are*:
 
 ## C. WHAT
 
-**Hòa hợp chủ – vị** (subject–verb agreement): động từ chia theo **danh từ chính của chủ ngữ**, không phải theo danh từ **gần nhất**.
+**Hòa hợp chủ–vị (subject–verb agreement)** là chọn dạng động từ phù hợp với chủ ngữ. Với chủ ngữ là một cụm danh từ, hãy tìm danh từ chính thay vì chọn theo từ đứng gần động từ nhất. Trong *The price of these books is high*, chủ ngữ chính là *the price*, nên dùng *is*. Các nhóm đặc biệt sẽ được xét riêng bên dưới.
 
 Ở B2, khó khăn đến từ:
 
@@ -149,18 +149,18 @@ Lỗi hòa hợp là **lỗi ngữ pháp phổ biến nhất** trong bài viết
 
 | # | English | Tiếng Việt | Phân tích |
 |---|---|---|---|
-| 1 | *The impact of these policies on small businesses **has** been significant.* | Tác động của các chính sách... | Danh từ chính: *impact* |
-| 2 | *One of the main reasons for the delays **was** bad weather.* | Một trong những lý do chính... | *One of* → số ít |
-| 3 | *A number of companies **have** moved to the suburbs.* | Một số công ty đã chuyển... | a number of → số nhiều |
+| 1 | *The impact of these policies on small businesses **has** been significant.* | Những chính sách này đã tác động đáng kể đến các doanh nghiệp nhỏ. | Danh từ chính: *impact* |
+| 2 | *One of the main reasons for the delays **was** bad weather.* | Một trong những nguyên nhân chính gây chậm trễ là thời tiết xấu. | *One of* → số ít |
+| 3 | *A number of companies **have** moved to the suburbs.* | Một số công ty đã chuyển ra vùng ngoại ô. | a number of → số nhiều |
 | 4 | *The number of unemployed people **has** fallen.* | Số người thất nghiệp đã giảm. | the number of → số ít |
 | 5 | *Most of the information **was** out of date.* | Phần lớn thông tin đã lỗi thời. | + không đếm được |
 | 6 | *Over 60% of the respondents **were** women.* | Hơn 60% người trả lời là nữ. | % + số nhiều |
 | 7 | *Learning a new language **requires** patience.* | Học ngôn ngữ mới đòi hỏi kiên nhẫn. | V-ing chủ ngữ |
 | 8 | *Economics **is** my favourite subject.* | Kinh tế học là môn yêu thích của tôi. | Môn học -s → số ít |
 | 9 | *The police **have** arrested two suspects.* | Cảnh sát đã bắt hai nghi phạm. | police → số nhiều |
-| 10 | *Five hundred dollars **is** a lot to pay for a phone.* | 500 đô là nhiều... | Số tiền → số ít |
-| 11 | *The manager, as well as his assistants, **is** attending the conference.* | Quản lý, cùng các trợ lý... | as well as không cộng |
-| 12 | *The elderly **are** particularly vulnerable to heatwaves.* | Người cao tuổi đặc biệt dễ bị tổn thương... | the + adj → số nhiều |
+| 10 | *Five hundred dollars **is** a lot to pay for a phone.* | Trả năm trăm đô la cho một chiếc điện thoại là khá nhiều tiền. | Số tiền → số ít |
+| 11 | *The manager, as well as his assistants, **is** attending the conference.* | Người quản lý cùng các trợ lý của ông ấy đang tham dự hội nghị. | as well as không cộng |
+| 12 | *The elderly **are** particularly vulnerable to heatwaves.* | Người lớn tuổi đặc biệt dễ bị ảnh hưởng nặng trong các đợt nắng nóng. | the + adj → số nhiều |
 
 ---
 

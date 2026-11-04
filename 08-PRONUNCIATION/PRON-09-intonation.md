@@ -1,5 +1,7 @@
 # PRON-09 · Intonation — Ngữ điệu
 
+Cùng một câu, giọng lên xuống khác nhau có thể gợi thái độ hoặc mục đích khác nhau. Bạn sẽ thử nghe và nói lại vài mẫu quen thuộc. Các mũi tên trong bài là gợi ý để luyện, không phải khuôn giọng bắt buộc cho mọi tình huống.
+
 | Mục | Nội dung |
 |---|---|
 | **Cấp độ** | A2 → B2 |

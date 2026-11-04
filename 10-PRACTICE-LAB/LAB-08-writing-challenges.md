@@ -1,5 +1,7 @@
 # LAB-08 · Writing Challenges — Thử thách viết 20 đề
 
+Chọn một nhiệm vụ viết ở cấp đang học, đọc kỹ yêu cầu rồi lập vài ý ngắn. Sau bản đầu, sửa theo một hoặc hai tiêu chí trước khi viết lại. Giữ cả hai bản để nhìn thấy mình đã làm rõ ý hoặc sửa lỗi ở đâu.
+
 | Mục | Nội dung |
 |---|---|
 | **Cấp độ** | A2 → B2 |

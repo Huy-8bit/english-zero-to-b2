@@ -30,7 +30,7 @@
 | **Prerequisites** | [A2-G001 — Past Continuous](A2-G001-past-continuous.md), [A1-G017](../../02-A1-BEGINNER/grammar/A1-G017-past-simple-affirmative.md) |
 | **Estimated Time** | 90 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Phân biệt cách nhìn **đang diễn ra tại mốc quá khứ** với cách kể **sự việc như một tổng thể**; không chọn thì chỉ theo dài/ngắn.
 2. Dùng mẫu **hành động bị cắt ngang**: *I was cooking when the phone rang.*
@@ -52,6 +52,8 @@ So sánh hai câu:
 ---
 
 ## C. WHAT: Hai thì quá khứ phối hợp
+
+Khi kể chuyện, bạn thường cần cả **quá khứ đơn** và **quá khứ tiếp diễn**. *I was cooking when the phone rang* nghĩa là “Tôi đang nấu ăn thì điện thoại reo”. Việc nấu ăn làm nền; tiếng chuông là sự việc xảy đến trong lúc đó. Bảng sau so sánh hai cách nhìn:
 
 | | Past Continuous | Past Simple |
 |---|---|---|

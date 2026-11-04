@@ -1,5 +1,7 @@
 # A1 Communication — Các tình huống giao tiếp A1
 
+Bạn sẽ luyện những việc thường gặp như gọi món, hỏi đường và mua hàng. Sau khi đọc hội thoại, hãy thay món ăn, địa điểm hoặc giá tiền để cuộc trò chuyện thành tình huống của bạn. Mục tiêu là hỏi được điều cần biết và hiểu câu trả lời.
+
 > Mỗi tình huống gồm: **mẫu câu thiết yếu → hội thoại mẫu → nhiệm vụ luyện tập**. Đáp án và câu trả lời mẫu: [A1-COMMUNICATION-ANSWERS](../12-ANSWERS-AND-EXPLANATIONS/SKILLS/A1-COMMUNICATION-ANSWERS.md).
 >
 > **Cách luyện:** (1) đọc to mẫu câu; (2) shadowing hội thoại mẫu (tạo audio bằng TTS nếu cần); (3) che hội thoại, tự đóng vai cả hai người; (4) làm nhiệm vụ luyện tập, ghi âm.

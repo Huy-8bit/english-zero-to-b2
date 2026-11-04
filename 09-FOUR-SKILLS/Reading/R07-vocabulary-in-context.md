@@ -1,5 +1,7 @@
 # R07 · Vocabulary in Context — Đoán nghĩa từ qua ngữ cảnh
 
+Ngữ cảnh có thể giúp bạn đoán nghĩa của từ mới. Hãy nhìn cả câu, các ví dụ và sự đối lập xung quanh từ ấy. Cách đoán cần phù hợp với ý của đoạn; sau khi làm bài, bạn có thể tra lại để kiểm tra.
+
 | Mục | Nội dung |
 |---|---|
 | **Cấp độ** | A2 → B2 |

@@ -30,7 +30,7 @@
 | **Prerequisites** | [B1-G019 — Complex Sentences](../../04-B1-INTERMEDIATE/grammar/B1-G019-complex-sentences.md), [B2-G002 — Advanced Conditionals](B2-G002-advanced-conditionals.md) |
 | **Estimated Time** | 90 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Hiểu **đảo ngữ** = trợ động từ đứng **trước** chủ ngữ (như câu hỏi) trong câu khẳng định, để **nhấn mạnh**.
 2. Đảo ngữ sau ***Never, Rarely, Seldom, Little, At no time, Under no circumstances, On no account***.
@@ -51,7 +51,7 @@
 
 ## C. WHAT
 
-**Đảo ngữ** (inversion) là đưa **trạng từ phủ định/hạn chế** lên **đầu câu**, rồi **đảo trợ động từ** lên trước chủ ngữ — giống trật tự câu hỏi.
+**Đảo ngữ (inversion)** có nhiều dạng. Bài này tập trung vào việc đưa từ hoặc cụm mang ý phủ định, hạn chế lên đầu câu, rồi đặt trợ động từ trước chủ ngữ. Ví dụ: *Never have I seen...* Trật tự giống câu hỏi, nhưng cả câu vẫn là một lời khẳng định.
 
 ```text
 Trạng từ phủ định/hạn chế + TRỢ ĐỘNG TỪ + S + V ...

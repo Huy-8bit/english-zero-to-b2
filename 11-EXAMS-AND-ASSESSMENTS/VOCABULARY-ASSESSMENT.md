@@ -1,5 +1,7 @@
 # Vocabulary Assessment — Đánh giá vốn từ vựng A1–B2
 
+Bạn sẽ kiểm tra không chỉ nghĩa từ mà cả cách ghép từ và dùng từ trong câu. Sau khi chấm, gom những lỗi cùng nhóm để ôn theo chủ đề. Một câu chưa đúng không có nghĩa bạn phải học lại toàn bộ danh sách từ.
+
 Bài đánh giá **60 câu** chia 4 phần, giúp bạn biết: (1) vốn từ theo **chủ đề** ở cấp nào, (2) mức độ dùng **collocation, cụm động từ, họ từ**, và (3) những **từ dễ nhầm** cần ôn. [Đáp án và bản đồ ôn tập](../12-ANSWERS-AND-EXPLANATIONS/EXAMS/VOCABULARY-ASSESSMENT-ANSWERS.md) nằm riêng.
 
 > Bài tự biên soạn để định hướng ôn tập, **không** đo chính xác số lượng từ bạn biết và không quy đổi ra CEFR.

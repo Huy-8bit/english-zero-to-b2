@@ -56,7 +56,7 @@
 
 > *The large-scale **migration** of people to urban areas has resulted in the rapid **growth** of Vietnamese cities. This **expansion** has led to a sharp **increase in** housing prices and severe **congestion** on the roads. In response, the government has begun the **construction** of new satellite towns as a **solution to** these problems. However, there is still a lack **of awareness of** these towns among the public. Furthermore, there are **concerns about** the **availability** of schools and hospitals, which may limit their **attractiveness** to young families. The long-term **success** of this policy will therefore depend on **investment in** public services.*
 
-**Rubric (0–2 mỗi tiêu chí):** ≥ 6 danh từ hóa · ≥ 4 cặp danh từ + giới từ đúng · giữ đủ ý gốc · văn phong học thuật mạch lạc · 100–130 từ.
+**Tiêu chí tự đánh giá (0–2 điểm cho mỗi tiêu chí):** ≥ 6 danh từ hóa · ≥ 4 cặp danh từ + giới từ đúng · giữ đủ ý gốc · văn phong học thuật mạch lạc · 100–130 từ.
 
 **L5.2.** Mẫu: *The announcement of a new metro line in Hanoi has attracted public attention. According to officials, the completion of the project is expected within five years. The decision follows a significant increase in traffic congestion. However, there are concerns about the cost of construction and its impact on local businesses.*
 

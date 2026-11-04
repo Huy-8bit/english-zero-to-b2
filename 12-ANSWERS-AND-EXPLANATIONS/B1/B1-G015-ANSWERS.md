@@ -56,7 +56,7 @@
 
 > *Last Monday was a terrible day. I arrived at the airport and found that my flight to Hanoi had already left. I must have read the wrong time on my ticket — it said 7:00, not 9:00. The airline staff were kind, but the next flight was full. I should have checked the ticket the night before, and I shouldn't have stayed up so late. My phone battery was also dead, so I couldn't call my boss. He must have been very angry when I didn't arrive at the meeting. I could have taken a bus, but it would have been too slow. In the end, I learned to set two alarms.*
 
-**Rubric (0–2 mỗi tiêu chí):** ≥ 3 suy luận *must/might/can't have* · ≥ 3 câu *should(n't)/could have* · kể sự việc rõ ràng · 100–120 từ.
+**Tiêu chí tự đánh giá (0–2 điểm cho mỗi tiêu chí):** ≥ 3 suy luận *must/might/can't have* · ≥ 3 câu *should(n't)/could have* · kể sự việc rõ ràng · 100–120 từ.
 
 **L5.2.** Mẫu: *Someone must have come in through the window. The food is gone, so they must have been hungry — or the cat might have eaten it! The muddy footprints are too big to be the cat's, so a person must have walked across the floor. The cat must have been frightened — that's why it's hiding. I should have closed the window before I left.*
 

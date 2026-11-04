@@ -1,5 +1,7 @@
 # W07 · Essay Writing — Nền tảng viết bài luận
 
+Bài luận cần một câu trả lời rõ cho đề, được phát triển qua các đoạn có lý do và ví dụ. Bài này giúp bạn lập dàn ý trước khi viết dài. Số đoạn và số từ phải phục vụ nhiệm vụ, không thay cho nội dung lập luận.
+
 | Mục | Nội dung |
 |---|---|
 | **Cấp độ** | B1 → B2 |

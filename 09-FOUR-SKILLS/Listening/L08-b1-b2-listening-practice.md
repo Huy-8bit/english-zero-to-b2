@@ -1,5 +1,7 @@
 # L08 · B1–B2 Listening Practice — Luyện nghe tổng hợp B1–B2
 
+Bạn sẽ kết hợp các cách nghe đã luyện: nắm ý chính, tìm chi tiết và nhận ra cách diễn đạt khác. Làm theo số lượt nghe của từng nhiệm vụ. Khi chữa bài, chỉ ra đoạn lời nói làm căn cứ cho mỗi câu trả lời.
+
 | Mục | Nội dung |
 |---|---|
 | **Cấp độ** | B1 → B2 |

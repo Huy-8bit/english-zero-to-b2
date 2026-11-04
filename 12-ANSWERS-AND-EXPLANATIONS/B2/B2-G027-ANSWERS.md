@@ -73,7 +73,7 @@
 > *B: **Absolutely**. **So**, how about lunch on Saturday?*
 > *A: Perfect. **Basically**, I want to hear everything!*
 
-**Rubric (0–2 mỗi tiêu chí):** ≥ 10 DM · ≥ 5 chức năng · đúng chức năng từng DM · hội thoại tự nhiên · không lạm dụng.
+**Tiêu chí tự đánh giá (0–2 điểm cho mỗi tiêu chí):** ≥ 10 DM · ≥ 5 chức năng · đúng chức năng từng DM · hội thoại tự nhiên · không lạm dụng.
 
 **L5.2.** Không có đáp án cố định. Tự kiểm tra: (1) Có dùng DM câu giờ thay vì im lặng không? (2) Có ≥ 1 DM thái độ, ≥ 1 DM làm rõ, ≥ 1 DM tóm tắt? (3) Có DM nào lặp quá 2 lần? Ở lần ghi âm thứ hai, thay các DM lặp bằng DM khác.
 

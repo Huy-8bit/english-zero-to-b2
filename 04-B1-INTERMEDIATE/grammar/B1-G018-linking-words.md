@@ -30,7 +30,7 @@
 | **Prerequisites** | [A1-G021 — Basic Conjunctions](../../02-A1-BEGINNER/grammar/A1-G021-basic-conjunctions.md) |
 | **Estimated Time** | 90 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Dùng các từ nối theo **5 chức năng**: bổ sung, tương phản, nguyên nhân, kết quả, trình tự.
 2. Phân biệt 3 loại cấu trúc: **liên từ** (*although* + mệnh đề), **giới từ** (*despite* + danh từ/V-ing), **trạng từ liên kết** (*However,* + câu mới).
@@ -54,7 +54,7 @@ Ba câu cùng một ý: "Trời mưa nhưng chúng tôi vẫn đi dạo."
 
 ## C. WHAT
 
-**Linking words** (từ nối, còn gọi *connectors*) giúp người đọc thấy **quan hệ logic** giữa các ý. Ở bài thi viết (kể cả VSTEP), dùng đa dạng và chính xác từ nối là tiêu chí quan trọng của điểm **coherence and cohesion** (mạch lạc và liên kết).
+**Từ nối (linking words/connectors)** giúp người đọc theo dõi quan hệ giữa các ý. *However* báo một ý đối lập; *therefore* báo một kết quả. Chọn từ theo điều bạn muốn nói và cấu trúc câu đi kèm. Một bài viết rõ ý cần liên kết đúng, không cần thật nhiều từ nối.
 
 | Chức năng | Từ nối thông dụng (B1) |
 |---|---|
@@ -129,11 +129,11 @@ flowchart TD
 | # | English | Tiếng Việt | Phân tích |
 |---|---|---|---|
 | 1 | ***Although** the hotel was expensive, we enjoyed our stay.* | Mặc dù khách sạn đắt, chúng tôi vẫn thích kỳ nghỉ. | *although* + mệnh đề |
-| 2 | ***Despite** the high price, we enjoyed our stay.* | Bất chấp giá cao, ... | *despite* + cụm danh từ |
+| 2 | ***Despite** the high price, we enjoyed our stay.* | Dù giá cao, chúng tôi vẫn có một kỳ nghỉ dễ chịu ở đó. | *despite* + cụm danh từ |
 | 3 | *The hotel was expensive. **However,** the service was excellent.* | Khách sạn đắt. Tuy nhiên, dịch vụ tuyệt vời. | *However* đầu câu mới |
 | 4 | ***In spite of feeling** ill, she went to work.* | Dù cảm thấy ốm, cô ấy vẫn đi làm. | *in spite of* + V-ing |
 | 5 | *The match was cancelled **because of** the storm.* | Trận đấu bị hủy vì bão. | Giới từ + danh từ |
-| 6 | *The match was cancelled **because** it was stormy.* | ... vì trời bão. | Liên từ + mệnh đề |
+| 6 | *The match was cancelled **because** it was stormy.* | Trận đấu bị hủy vì có bão. | Liên từ + mệnh đề |
 | 7 | *Prices have risen sharply. **As a result,** many families are spending less.* | Giá tăng mạnh. Do đó, nhiều gia đình chi tiêu ít hơn. | Kết quả — văn trang trọng |
 | 8 | *Cycling is cheap. **Moreover,** it's good for your health.* | Đạp xe rẻ. Hơn nữa, tốt cho sức khỏe. | Bổ sung |
 | 9 | *My brother loves football, **whereas** I prefer tennis.* | Anh tôi thích bóng đá, trong khi tôi thích tennis. | Đối lập 2 người |

@@ -62,7 +62,7 @@
 >
 > ***Despite** these problems, I believe part-time work is beneficial if students choose carefully. **In conclusion**, students should work no more than fifteen hours a week, **so that** their studies come first.*
 
-**Rubric (0–2 mỗi tiêu chí):**
+**Tiêu chí tự đánh giá (0–2 điểm cho mỗi tiêu chí):**
 
 | Tiêu chí | 2 điểm |
 |---|---|

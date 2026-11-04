@@ -30,7 +30,7 @@
 | **Prerequisites** | [A0-G010 — Have/Has](../../01-A0-FOUNDATION/grammar/A0-G010-have-has.md), [A1-G002](A1-G002-present-simple-negatives-questions.md) |
 | **Estimated Time** | 60 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Hiểu *have got / has got* = *have / has* (sở hữu, quan hệ, đặc điểm, bệnh) — phổ biến trong tiếng Anh – Anh.
 2. Tạo câu phủ định (*haven't got / hasn't got*) và câu hỏi (*Have you got...?*) **không cần do/does**.
@@ -56,7 +56,7 @@ Bạn đã học ở A0-G010: *I have a headache. Do you have a pen? She doesn't
 
 ## C. WHAT: *Have got* là gì?
 
-**Have got** là một cách nói khác của **have** khi mang nghĩa **"có"** — sở hữu, quan hệ, đặc điểm, bệnh tật. Nó đặc biệt phổ biến trong **tiếng Anh – Anh văn nói**. Người Mỹ cũng hiểu và dùng, nhưng thường dùng *have* hơn.
+**Have got** cũng có thể mang nghĩa **“có”**, như *have*. *I've got a bike* nghĩa là “Tôi có một chiếc xe đạp”. Cách nói này thường gặp trong hội thoại Anh–Anh khi nói về sở hữu, quan hệ, đặc điểm hoặc bệnh. Người Mỹ cũng dùng, nhưng thường chọn *have* hơn.
 
 | Nghĩa | *have* | *have got* |
 |---|---|---|

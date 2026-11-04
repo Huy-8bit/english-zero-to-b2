@@ -1,5 +1,7 @@
 # VOC-07 · Shopping & Money — Mua sắm và tiền bạc
 
+Bài này giúp bạn nói về giá cả, thanh toán, mua bán và việc dùng tiền. Khi học từ, đặt vào một cuộc mua hàng cụ thể: bạn muốn mua gì, hỏi gì và trả tiền thế nào? Với từ dễ lẫn, chú ý ai đưa và ai nhận đồ hoặc tiền.
+
 | Mục | Nội dung |
 |---|---|
 | **Cấp độ** | A1 → B2 |

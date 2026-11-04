@@ -1,5 +1,7 @@
 # R04 · Finding Main Ideas — Tìm ý chính
 
+Ý chính bao quát điều một đoạn muốn nói; ví dụ và số liệu giúp giải thích ý ấy. Bạn sẽ luyện tóm tắt đoạn bằng một câu, rồi kiểm tra xem các chi tiết có cùng hỗ trợ câu đó không. Đừng chọn tiêu đề chỉ vì có một từ trùng với bài.
+
 | Mục | Nội dung |
 |---|---|
 | **Cấp độ** | A2 → B2 |

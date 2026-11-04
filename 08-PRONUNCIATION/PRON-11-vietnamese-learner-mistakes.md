@@ -1,5 +1,7 @@
 # PRON-11 · Vietnamese Learner Mistakes — Lỗi phát âm thường gặp của người Việt
 
+Hãy dùng bảng lỗi để chọn đúng điểm mình cần luyện, thay vì cố sửa tất cả cùng lúc. Nghe bản ghi của mình, tìm lỗi khiến người khác khó hiểu nhất rồi luyện một cặp từ hoặc một câu ngắn. Ghi lại lần nữa để đối chiếu.
+
 | Mục | Nội dung |
 |---|---|
 | **Cấp độ** | A0 → B2 |

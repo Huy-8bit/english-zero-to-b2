@@ -30,7 +30,7 @@
 | **Prerequisites** | [B2-G018 — Contrast & Concession](B2-G018-contrast-concession.md), [B2-G025 — Hedging](B2-G025-hedging-academic-language.md) |
 | **Estimated Time** | 90 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Xây dựng đoạn lập luận theo mô hình **PEEL**: Point – Explanation – Evidence/Example – Link.
 2. Dùng ngôn ngữ **nêu lập trường, đưa lý do, dẫn chứng**.
@@ -54,7 +54,7 @@ Hai lập luận về việc cấm xe máy ở trung tâm:
 
 ## C. WHAT
 
-**Lập luận** (argumentation) là trình bày **quan điểm** kèm **lý do** và **bằng chứng**, đồng thời xem xét **ý kiến khác** một cách công bằng.
+**Lập luận (argumentation)** là nêu quan điểm, đưa lý do và dùng bằng chứng hoặc ví dụ để người đọc hiểu vì sao bạn nghĩ như vậy. Bạn cũng cần xem xét ý kiến khác một cách công bằng. Mục tiêu là làm rõ vấn đề và bảo vệ ý bằng lý lẽ, không phải dùng thật nhiều từ khó.
 
 | Thành phần | Câu hỏi | Ngôn ngữ |
 |---|---|---|

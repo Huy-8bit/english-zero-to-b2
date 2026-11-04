@@ -1,5 +1,7 @@
 # L01 · Basic Listening — Nền tảng kỹ năng nghe
 
+Bạn sẽ luyện nghe những thông tin ngắn như tên, số và giờ. Lần đầu, cố hiểu tình huống chung; lần sau mới tập trung vào chi tiết cần trả lời. Sau khi chấm, nghe lại chỗ mình bỏ sót và đối chiếu bản chép lời.
+
 | Mục | Nội dung |
 |---|---|
 | **Cấp độ** | A0 → A2 |

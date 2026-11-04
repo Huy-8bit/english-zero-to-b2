@@ -62,7 +62,7 @@
 >
 > *Overall, living alone **brings about** both opportunities and challenges, and its impact depends largely on individual circumstances.*
 
-**Rubric (0–2 mỗi tiêu chí):** ≥ 3 lý do · ≥ 3 kết quả · ≥ 2 động từ nhân quả · mục đích nâng cao · 180–220 từ, bố cục rõ.
+**Tiêu chí tự đánh giá (0–2 điểm cho mỗi tiêu chí):** ≥ 3 lý do · ≥ 3 kết quả · ≥ 2 động từ nhân quả · mục đích nâng cao · 180–220 từ, bố cục rõ.
 
 **L5.2.** Mẫu: *House prices have risen sharply, mainly owing to land speculation and rapid urbanisation. This has led to a situation where young couples can't afford to buy homes, which means that they have to rent for longer. Consequently, many delay having children...*
 

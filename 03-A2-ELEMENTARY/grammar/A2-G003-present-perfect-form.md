@@ -30,7 +30,7 @@
 | **Prerequisites** | [A1-G017 — Past Simple](../../02-A1-BEGINNER/grammar/A1-G017-past-simple-affirmative.md), [A1-G018](../../02-A1-BEGINNER/grammar/A1-G018-past-simple-negatives-questions.md) |
 | **Estimated Time** | 90 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Hiểu bản chất: hiện tại hoàn thành nói về **quá khứ có liên quan đến hiện tại**, không nhấn mạnh **khi nào**.
 2. Tạo câu với **have/has + V3** ở thể khẳng định, phủ định, nghi vấn, trả lời ngắn.
@@ -56,7 +56,7 @@ Một người học dịch: *Oh no, I **lost** my keys!* — Câu này không s
 
 ## C. WHAT: Hiện tại hoàn thành là gì?
 
-**Thì hiện tại hoàn thành (Present Perfect)** nói về **hành động hoặc trạng thái trong quá khứ nhưng có liên hệ với hiện tại**. Người nói quan tâm đến **ảnh hưởng/kết quả/trải nghiệm ở hiện tại**, không quan tâm (hoặc không nói) **thời điểm chính xác** sự việc xảy ra.
+**Thì hiện tại hoàn thành (Present Perfect)** nối việc trong quá khứ với hiện tại. *I've lost my keys* thường cho biết tôi đã làm mất chìa khóa và bây giờ chưa có chúng. Tùy ngữ cảnh, thì này còn nói về trải nghiệm hoặc việc kéo dài đến nay. Mốc một sự việc cụ thể xảy ra thường không phải điều người nói muốn nhấn mạnh.
 
 Tiếng Việt dùng "đã", "rồi", "chưa", "từng" nhưng không có một hình thức khớp hoàn toàn với have/has + V3. Các từ ấy cũng có thể dịch bằng quá khứ đơn; hãy nhìn mốc thời gian và ý nghĩa, không dịch từng từ máy móc.
 

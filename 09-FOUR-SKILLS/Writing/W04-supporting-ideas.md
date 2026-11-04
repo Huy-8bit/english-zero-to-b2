@@ -1,5 +1,7 @@
 # W04 · Supporting Ideas — Phát triển ý hỗ trợ
 
+Sau khi nêu ý, bạn cần giúp người đọc hiểu vì sao hoặc bằng cách nào. Bài này luyện phát triển ý bằng lời giải thích, chi tiết và ví dụ. Nếu hai câu chỉ nói lại cùng một điều, thử thay một câu bằng một ví dụ cụ thể.
+
 | Mục | Nội dung |
 |---|---|
 | **Cấp độ** | B1 → B2 |

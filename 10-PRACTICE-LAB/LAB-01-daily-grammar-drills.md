@@ -1,5 +1,7 @@
 # LAB-01 · Daily Grammar Drills — Luyện ngữ pháp mỗi ngày
 
+Mỗi bộ câu giúp bạn ôn nhanh nhiều điểm đã học. Làm một bộ ở cấp phù hợp, rồi giải thích ngắn vì sao mình chọn từng đáp án. Với câu sai, đặt thêm một câu mới theo mẫu đúng trước khi chuyển sang bộ tiếp theo.
+
 | Mục | Nội dung |
 |---|---|
 | **Cấp độ** | A1 → B2 |

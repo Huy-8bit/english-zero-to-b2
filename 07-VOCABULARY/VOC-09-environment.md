@@ -1,5 +1,7 @@
 # VOC-09 · Environment — Môi trường
 
+Các từ trong bài giúp bạn nói rõ về rác thải, năng lượng và môi trường. Chọn một vấn đề gần nơi bạn sống, rồi viết một câu mô tả và một câu nêu cách cải thiện. Đừng chỉ liệt kê từ; hãy cho thấy chúng liên quan nhau thế nào.
+
 | Mục | Nội dung |
 |---|---|
 | **Cấp độ** | A2 → B2 |

@@ -30,7 +30,7 @@
 | **Prerequisites** | [A0-G005 — Adjectives](../../01-A0-FOUNDATION/grammar/A0-G005-nouns-verbs-adjectives-adverbs.md), [A0-G009 — To Be](../../01-A0-FOUNDATION/grammar/A0-G009-verb-to-be.md) |
 | **Estimated Time** | 75 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Tạo so sánh hơn với tính từ **ngắn** (*-er*) và tính từ **dài** (*more*).
 2. Áp dụng quy tắc chính tả: *-r, -ier*, gấp đôi phụ âm.
@@ -55,7 +55,7 @@ Bạn muốn nói: "Căn B **rộng hơn** và **yên tĩnh hơn**, nhưng **đ�
 
 ## C. WHAT: So sánh hơn là gì?
 
-**Comparative** (so sánh hơn) dùng để **so sánh hai** người, vật, nơi chốn — cho biết bên nào có đặc điểm **ở mức cao hơn**.
+**So sánh hơn (comparative)** giúp bạn so sánh hai người, vật hoặc tình huống. *This room is bigger than that one* nghĩa là “Phòng này rộng hơn phòng kia”. Với *less*, bạn cũng có thể nói một đặc điểm ở mức thấp hơn, như *less expensive* — ít đắt hơn.
 
 | Tính từ | So sánh hơn | Ví dụ |
 |---|---|---|
@@ -69,7 +69,7 @@ Bạn muốn nói: "Căn B **rộng hơn** và **yên tĩnh hơn**, nhưng **đ�
 
 ## D. WHY: Vì sao có *-er* và *more*?
 
-Tiếng Anh thích **sự cân bằng âm tiết**. Thêm *-er* vào một từ ngắn (*big → bigger*) thì dễ đọc. Nhưng thêm *-er* vào một từ dài (*expensive → expensiver*) sẽ tạo ra từ quá dài, khó phát âm. Vì vậy, với tính từ dài, tiếng Anh dùng một từ riêng — **more** — đặt phía trước.
+Để tạo dạng so sánh, hãy xem số âm tiết và cách dùng của tính từ. Từ một âm tiết thường thêm *-er*, như *small → smaller*. Từ dài thường dùng *more*, như *more expensive*. Với từ hai âm tiết, có nhóm thêm *-er*, có nhóm dùng *more*, và có từ chấp nhận cả hai. Dùng sơ đồ để định hướng rồi kiểm tra những từ chưa chắc.
 
 ```mermaid
 flowchart TD

@@ -30,7 +30,7 @@
 | **Prerequisites** | [A1-G007 — Object Pronouns](../../02-A1-BEGINNER/grammar/A1-G007-object-pronouns.md), [B1-G016 — Gerund vs Infinitive](B1-G016-gerund-vs-infinitive.md) |
 | **Estimated Time** | 90 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Hiểu phrasal verb = động từ + tiểu từ (*up, out, off, on, down, away, back...*) với **nghĩa mới**.
 2. Phân biệt 4 loại: **nội động từ** (*break down*), **tách được** (*turn the TV off*), **không tách được** (*look after the kids*), **3 thành phần** (*look forward to*).
@@ -52,7 +52,7 @@
 
 ## C. WHAT
 
-**Phrasal verb** = **động từ** + **tiểu từ** (particle: trạng từ hoặc giới từ), thường mang nghĩa **khác** với động từ gốc.
+**Cụm động từ (phrasal verb)** gồm một động từ và một tiểu từ, như *turn off* hoặc *give up*. Nghĩa của cả cụm có thể khác nghĩa từng từ. Một số cụm tách được khi có tân ngữ, một số không. Vì vậy, hãy học cả nghĩa, cách đặt tân ngữ và một câu mẫu.
 
 | Phrasal verb | Nghĩa từng phần | Nghĩa thực |
 |---|---|---|
@@ -150,12 +150,12 @@ Tân ngữ (cả danh từ và đại từ) luôn đứng **sau** tiểu từ.
 | # | English | Tiếng Việt | Phân tích |
 |---|---|---|---|
 | 1 | *Could you **turn** the music **down**? I'm trying to sleep.* | Bạn vặn nhỏ nhạc được không? | Tách được |
-| 2 | *I've **lost** my glasses — can you help me **look for** them?* | ... giúp tôi tìm nó? | Không tách: *look for them* |
+| 2 | *I've **lost** my glasses — can you help me **look for** them?* | Tôi làm mất kính rồi. Bạn tìm giúp tôi được không? | Không tách: *look for them* |
 | 3 | *The interview was **put off** until next week.* | Buổi phỏng vấn bị hoãn. | Bị động của phrasal verb |
 | 4 | *She **turned down** the job because the salary was low.* | Cô ấy từ chối công việc. | |
 | 5 | *We **ran out of** petrol in the middle of nowhere.* | Chúng tôi hết xăng ở nơi hẻo lánh. | 3 thành phần |
 | 6 | *I really **take after** my mum — we both love cooking.* | Tôi rất giống mẹ. | Không tách |
-| 7 | *If you don't know a word, **look** it **up**.* | ... tra nó. | Đại từ ở giữa |
+| 7 | *If you don't know a word, **look** it **up**.* | Nếu không biết một từ, hãy tra từ đó. | Đại từ ở giữa |
 | 8 | *The plane **took off** two hours late.* | Máy bay cất cánh trễ 2 giờ. | Nội động từ |
 | 9 | *Please **take off** your shoes before entering.* | Vui lòng cởi giày. | Cùng *take off* — nghĩa khác, có tân ngữ |
 | 10 | *I can't **put up with** his rudeness any more.* | Tôi không thể chịu đựng sự thô lỗ của anh ấy nữa. | 3 thành phần |

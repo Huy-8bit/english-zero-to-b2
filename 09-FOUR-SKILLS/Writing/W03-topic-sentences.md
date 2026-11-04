@@ -1,5 +1,7 @@
 # W03 · Topic Sentences — Câu chủ đề
 
+Câu chủ đề cho người đọc biết đoạn sắp nói về điều gì và bạn muốn nói gì về điều đó. Bạn sẽ luyện chọn ý vừa đủ để giải thích trong một đoạn. Nếu câu quá rộng, hãy thu hẹp trước khi tìm ví dụ.
+
 | Mục | Nội dung |
 |---|---|
 | **Cấp độ** | B1 → B2 |
@@ -13,7 +15,7 @@ TOPIC (chủ đề)  +  CONTROLLING IDEA (ý kiểm soát: điều bạn nói v�
 Working from home      can significantly improve employees' work-life balance.
 ```
 
-Ý kiểm soát **giới hạn** nội dung đoạn: mọi câu sau phải chứng minh *work-life balance*, không nói về chi phí hay công nghệ.
+Phần nêu ý cụ thể giúp bạn giữ đoạn tập trung vào *work-life balance*. Những câu sau nên giải thích, cho ví dụ hoặc làm rõ giới hạn của ý này. Chỉ thêm chuyện chi phí hay công nghệ nếu bạn cho thấy nó liên quan thế nào đến sự cân bằng công việc và cuộc sống.
 
 ## 2. Quá rộng – quá hẹp – vừa đủ
 

@@ -63,7 +63,7 @@
 > *Love,*
 > *Hoa*
 
-**Rubric (0–2 mỗi tiêu chí):** ≥ 8 phrasal verb · đủ các loại yêu cầu · vị trí đại từ đúng · văn phong thân mật phù hợp · 100–130 từ.
+**Tiêu chí tự đánh giá (0–2 điểm cho mỗi tiêu chí):** ≥ 8 phrasal verb · đủ các loại yêu cầu · vị trí đại từ đúng · văn phong thân mật phù hợp · 100–130 từ.
 
 **L5.2.** Mẫu: *I **get up** at six and **turn off** the alarm quickly. I **set off** for work at seven. After work, I **pick up** my daughter from school and **look after** her until my husband comes home. In the evening I **catch up with** the news, and then I **turn** the lights **off** and go to bed.*
 

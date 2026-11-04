@@ -56,7 +56,7 @@
 
 > *Every year, my family gets very busy before Tet. Last week, we had the whole house cleaned by a professional company. Right now, we're having the gate repainted red. My mother is going to have a new áo dài made at her favourite tailor. I usually get my hair cut a few days before the holiday. However, we do some things ourselves: my father decorates the peach tree, and my sister and I wrap bánh chưng together. That's my favourite part of the preparations.*
 
-**Rubric (0–2 mỗi tiêu chí):** ≥ 5 câu nhờ bảo đúng · ≥ 3 thì khác nhau · phân biệt rõ việc tự làm · 80–100 từ.
+**Tiêu chí tự đánh giá (0–2 điểm cho mỗi tiêu chí):** ≥ 5 câu nhờ bảo đúng · ≥ 3 thì khác nhau · phân biệt rõ việc tự làm · 80–100 từ.
 
 **L5.2.** Mẫu: *I have my hair cut every month at a small barbershop near my house. I get my motorbike serviced every three months. The last time I had it serviced was in May, and I also had the tyres changed. Every year, I have my teeth cleaned at the dentist's...*
 

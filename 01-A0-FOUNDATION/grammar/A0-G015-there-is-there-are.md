@@ -30,7 +30,7 @@
 | **Prerequisites** | [A0-G009 — To Be](A0-G009-verb-to-be.md), [A0-G014 — Countable & Uncountable](A0-G014-countable-uncountable.md) |
 | **Estimated Time** | 75 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Dùng *there is* với danh từ số ít/không đếm được và *there are* với danh từ số nhiều.
 2. Tạo câu phủ định (*there isn't / there aren't*) và câu hỏi (*Is there...? / Are there...?*).
@@ -58,7 +58,7 @@ Nhiều người học dịch:
 
 ## C. WHAT: *There is / There are* là gì?
 
-**There is / There are** dùng để nói rằng **một cái gì đó tồn tại** hoặc **có mặt** ở một nơi nào đó. Đây là cách tự nhiên nhất để **giới thiệu thông tin mới** về sự vật ở một địa điểm.
+Bạn dùng **there is/there are** để giới thiệu có người hoặc vật ở một nơi nào đó. *There is a café near my house* nghĩa là “Có một quán cà phê gần nhà tôi”. Hãy nhìn danh từ phía sau để chọn *is* hay *are* trong các mẫu cơ bản của bài.
 
 | Cấu trúc | Dùng với | Ví dụ |
 |---|---|---|

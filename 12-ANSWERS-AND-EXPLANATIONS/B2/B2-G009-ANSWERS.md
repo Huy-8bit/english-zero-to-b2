@@ -62,7 +62,7 @@
 >
 > ***Only when** I finally stood at the top, above the clouds, **did I understand** why people climb mountains. **So incredible was** the view **that** I forgot how tired I was. **Under no circumstances will I** forget that morning.*
 
-**Rubric (0–2 mỗi tiêu chí):** ≥ 5 cấu trúc khác nhau · đúng nhóm yêu cầu · đảo đúng trợ động từ · văn phong phù hợp (kịch tính/trang trọng) · 130–160 từ.
+**Tiêu chí tự đánh giá (0–2 điểm cho mỗi tiêu chí):** ≥ 5 cấu trúc khác nhau · đúng nhóm yêu cầu · đảo đúng trợ động từ · văn phong phù hợp (kịch tính/trang trọng) · 130–160 từ.
 
 **L5.2.** Mẫu: *It was an ordinary morning in the small fishing village. Little did the fishermen know that a storm was approaching. No sooner had they reached the open sea than the sky turned black. Only then did they realise the danger...*
 

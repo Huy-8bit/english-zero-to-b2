@@ -30,7 +30,7 @@
 | **Prerequisites** | [B1-G013 — Defining & Non-defining Relative Clauses](../../04-B1-INTERMEDIATE/grammar/B1-G013-defining-non-defining-relatives.md), [B1-G012 — Passive across Tenses](../../04-B1-INTERMEDIATE/grammar/B1-G012-passive-all-tenses.md) |
 | **Estimated Time** | 90 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Rút gọn mệnh đề quan hệ **chủ động** bằng **V-ing**: *the man **standing** there*.
 2. Rút gọn mệnh đề quan hệ **bị động** bằng **V3**: *the car **parked** outside*.
@@ -56,7 +56,7 @@ So sánh:
 
 ## C. WHAT
 
-**Rút gọn mệnh đề quan hệ** = bỏ **đại từ quan hệ** (*who/which/that*) và **trợ động từ *be*** (nếu có), giữ lại **phân từ** hoặc **nguyên mẫu**.
+**Rút gọn mệnh đề quan hệ (reduced relative clauses)** giúp cụm danh từ gọn hơn khi ý vẫn rõ. *The people waiting outside* có thể thay cho *the people who are waiting outside*. Bạn có thể gặp dạng *V-ing*, phân từ quá khứ hoặc *to + động từ*. Không phải cứ bỏ *who/which/that* là tạo được một cụm đúng.
 
 | Mệnh đề đầy đủ | Rút gọn | Dạng |
 |---|---|---|
@@ -150,10 +150,10 @@ Cũng dùng **to V** để chỉ **mục đích/việc cần làm**: *I have a l
 | 5 | *Neil Armstrong was the first person **to walk** on the moon.* | Neil Armstrong là người đầu tiên đi trên Mặt Trăng. | to V |
 | 6 | *She was the last candidate **to be interviewed**.* | Cô ấy là ứng viên cuối cùng được phỏng vấn. | to be V3 |
 | 7 | *The children **in the garden** are my cousins.* | Bọn trẻ trong vườn là anh em họ tôi. | Cụm giới từ |
-| 8 | *Hanoi, **the capital of Vietnam**, has a population of over 8 million.* | Hà Nội, thủ đô VN, ... | Đồng vị ngữ (số liệu làm tròn, minh họa) |
-| 9 | *The new hospital **being built** near my house will open next year.* | Bệnh viện mới đang được xây... | being V3 |
+| 8 | *Hanoi, **the capital of Vietnam**, is where I grew up.* | Hà Nội, thủ đô Việt Nam, là nơi tôi lớn lên. | Cụm đồng vị bổ sung thông tin về Hà Nội; câu do người nói trong ví dụ kể. |
+| 9 | *The new hospital **being built** near my house will open next year.* | Bệnh viện mới đang được xây gần nhà tôi sẽ mở cửa vào năm sau. | being V3 |
 | 10 | *The company **for which** she works is based in Singapore.* | Công ty mà cô ấy làm việc có trụ sở ở Singapore. | Giới từ + which |
-| 11 | *The survey had 500 respondents, **most of whom** were under 30.* | ... phần lớn trong số họ dưới 30 tuổi. | most of whom |
+| 11 | *The survey had 500 respondents, **most of whom** were under 30.* | Khảo sát có 500 người tham gia, phần lớn trong số đó dưới 30 tuổi. | most of whom |
 | 12 | *There are many problems **to be solved**.* | Có nhiều vấn đề cần được giải quyết. | to be V3 |
 
 ---

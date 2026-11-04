@@ -30,7 +30,7 @@
 | **Prerequisites** | [A1-G018 — Past Simple: Negatives & Questions](../../02-A1-BEGINNER/grammar/A1-G018-past-simple-negatives-questions.md) |
 | **Estimated Time** | 75 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Dùng ***used to + V*** để nói về **thói quen** và **trạng thái** trong quá khứ **nay không còn nữa**.
 2. Tạo phủ định ***didn't use to*** và câu hỏi ***Did ... use to...?*** (chú ý chính tả *use*).
@@ -52,7 +52,7 @@ Bạn xem lại ảnh cũ và kể cho bạn bè:
 
 ## C. WHAT: *Used to* là gì?
 
-**Used to + V (nguyên mẫu)** diễn tả:
+**Used to + động từ nguyên mẫu** dùng để kể thói quen hoặc trạng thái trước đây mà nay không còn như thế. *I used to walk to school* nghĩa là “Trước đây tôi thường đi bộ đến trường”. Bài này giúp bạn phân biệt hai trường hợp:
 
 | Loại | Ví dụ | Ý nghĩa |
 |---|---|---|

@@ -30,7 +30,7 @@
 | **Prerequisites** | [B2-G027 — Discourse Markers](B2-G027-discourse-markers.md), [B1-G020 — Phrasal Verbs](../../04-B1-INTERMEDIATE/grammar/B1-G020-phrasal-verbs.md) |
 | **Estimated Time** | 75 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Nhận biết **ba mức văn phong**: trang trọng, trung tính, thân mật.
 2. Thay **phrasal verb/từ thân mật** bằng **từ trang trọng** tương đương (và ngược lại).
@@ -54,7 +54,7 @@ Hai tin nhắn cùng nội dung:
 
 ## C. WHAT
 
-**Register** (văn phong) là mức độ trang trọng của ngôn ngữ, phụ thuộc vào **người nhận, mục đích, tình huống**.
+**Văn phong (register)** là cách chọn từ và cấu trúc cho phù hợp với người nhận, mục đích và tình huống. Cùng một lời nhờ, bạn có thể nói khác nhau với bạn thân và với khách hàng. Trang trọng hơn không có nghĩa là luôn tốt hơn; điều cần là phù hợp.
 
 | Mức | Khi nào dùng | Ví dụ |
 |---|---|---|
@@ -251,7 +251,7 @@ Xác định văn phong: **F** (formal), **N** (neutral), **I** (informal).
 **L1.3.** *Gimme a call when you're free!*
 **L1.4.** *Please find attached my CV.*
 
-Chọn đáp án đúng.
+Chọn đáp án phù hợp với câu và ngữ cảnh.
 
 **L1.5.** Thư bắt đầu *"Dear Sir or Madam,"* nên kết thúc bằng:  A. Yours sincerely,  B. Yours faithfully,  C. Love,
 **L1.6.** Từ trang trọng của *"find out"* là:  A. discover  B. look for  C. get

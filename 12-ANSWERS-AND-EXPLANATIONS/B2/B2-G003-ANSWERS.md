@@ -65,7 +65,7 @@
 > 7. *Members will not be removed from the club **unless** they miss five meetings in a row.*
 > 8. *New members can vote **only if** they have attended at least two meetings.*
 
-**Rubric (0–2 mỗi tiêu chí):** đủ số liên từ yêu cầu · đúng nghĩa từng liên từ · đúng thì · văn phong quy định rõ ràng · 100–130 từ.
+**Tiêu chí tự đánh giá (0–2 điểm cho mỗi tiêu chí):** đủ số liên từ yêu cầu · đúng nghĩa từng liên từ · đúng thì · văn phong quy định rõ ràng · 100–130 từ.
 
 **L5.2.** Mẫu:
 > *Tenant: I'll sign the contract provided that you lower the rent by 500,000 dong.*

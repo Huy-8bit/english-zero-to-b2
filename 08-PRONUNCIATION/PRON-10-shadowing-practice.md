@@ -1,5 +1,7 @@
 # PRON-10 · Shadowing Practice — Luyện nói đuổi (shadowing)
 
+Bạn sẽ luyện nghe và nói bám theo một đoạn ngắn. Trước tiên cần hiểu nội dung và nhận ra các cụm từ, rồi mới nói theo người đọc. Chọn tốc độ vừa sức; mục tiêu là nói rõ hơn, không phải chạy kịp một đoạn quá khó.
+
 | Mục | Nội dung |
 |---|---|
 | **Cấp độ** | A2 → B2 |
@@ -9,7 +11,7 @@
 
 ## 1. Shadowing là gì?
 
-**Shadowing** = nghe một đoạn tiếng Anh và **nói theo gần như cùng lúc** (chậm hơn nửa nhịp), bắt chước **mọi thứ**: âm, trọng âm, nối âm, ngữ điệu, tốc độ. Giống như "cái bóng" đi theo người nói.
+**Shadowing — nói bám theo lời nghe** là nghe một đoạn ngắn rồi nói theo sát người đọc. Ban đầu, chọn một điểm để bắt chước, như trọng âm hoặc cách ngắt cụm. Khi đã theo được, bạn mới kết hợp thêm âm, nối âm và ngữ điệu. Không cần giữ một độ trễ cố định hay bắt chước mọi chi tiết ngay lần đầu.
 
 > **Về nguồn âm thanh:** Giáo trình không đính kèm audio. Dùng (1) transcript trong giáo trình đọc bằng TTS chất lượng tốt; (2) hoặc các nguồn nghe có transcript công khai (podcast học tiếng Anh, bản tin có phụ đề, video có phụ đề). Hãy chọn nguồn **có transcript** để kiểm tra. TTS hữu ích nhưng đôi khi nối âm và ngữ điệu kém tự nhiên hơn người thật — xen kẽ cả hai.
 

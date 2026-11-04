@@ -1,5 +1,7 @@
 # R05 · Inference — Suy luận khi đọc
 
+Suy luận là hiểu thêm điều được gợi ra từ bằng chứng, không phải đoán một câu chuyện mới. Bạn sẽ luyện tìm chi tiết trong bài để giải thích vì sao mình chọn đáp án. Nếu không chỉ ra được căn cứ, hãy đọc lại trước khi kết luận.
+
 | Mục | Nội dung |
 |---|---|
 | **Cấp độ** | B1 → B2 |

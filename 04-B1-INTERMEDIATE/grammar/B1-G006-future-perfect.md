@@ -30,7 +30,7 @@
 | **Prerequisites** | [B1-G005 — Future Continuous](B1-G005-future-continuous.md), [A2-G003 — V3](../../03-A2-ELEMENTARY/grammar/A2-G003-present-perfect-form.md) |
 | **Estimated Time** | 75 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Tạo câu với **will have + V3**.
 2. Nói về việc **sẽ hoàn tất trước một mốc thời gian trong tương lai**.
@@ -52,7 +52,7 @@ Bạn xin nghỉ phép để chuẩn bị đám cưới. Sếp lo lắng về d�
 
 ## C. WHAT
 
-**Future Perfect** (tương lai hoàn thành) diễn tả một hành động **sẽ đã hoàn tất trước hoặc tại một thời điểm trong tương lai**. Người nói "đứng" ở mốc tương lai đó và **nhìn lại**.
+**Tương lai hoàn thành (Future Perfect)** cho biết một việc sẽ xong trước hoặc vào một mốc tương lai. *By Friday, I'll have finished the report* là “Đến thứ Sáu, tôi sẽ làm xong báo cáo”. Thì này cũng có thể nói một tình trạng đã kéo dài được bao lâu tính đến mốc đó. Hãy xác định mốc trước, rồi nhìn lại việc hoặc khoảng thời gian được nói đến.
 
 | Ví dụ | Ý nghĩa |
 |---|---|

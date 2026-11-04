@@ -1,5 +1,7 @@
 # VOC-02 · Family & Relationships — Gia đình và các mối quan hệ
 
+Bạn sẽ học cách nói về người thân, các mối quan hệ và những thay đổi trong gia đình. Khi gặp hai từ dễ lẫn, như *niece* và *nephew*, hãy nghĩ đến người cụ thể hoặc vẽ một sơ đồ gia đình nhỏ để phân biệt.
+
 | Mục | Nội dung |
 |---|---|
 | **Cấp độ** | A1 → B2 |

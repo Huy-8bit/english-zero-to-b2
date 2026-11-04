@@ -30,7 +30,7 @@
 | **Prerequisites** | [A0-G005](A0-G005-nouns-verbs-adjectives-adverbs.md), [A0-G006](A0-G006-subject-pronouns.md) |
 | **Estimated Time** | 75 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Xác định **chủ ngữ (S)**, **động từ (V)**, **tân ngữ (O)** trong câu đơn.
 2. Hiểu rằng chủ ngữ có thể là **một từ** hoặc **một cụm từ** (*My old friend*).
@@ -54,6 +54,8 @@ Cùng các từ, chỉ đổi chỗ — nghĩa hoàn toàn khác. Câu 1 là chu
 ---
 
 ## C. WHAT: Ba thành phần cốt lõi của câu
+
+Để hiểu một câu, trước hết hãy tìm **ai hoặc điều gì được nói đến**, rồi tìm **hành động hoặc trạng thái**. Nếu có tân ngữ, bạn tìm tiếp hành động hướng đến ai hay cái gì. Với *Lan reads books*, ta lần lượt có *Lan*, *reads* và *books*:
 
 | Thành phần | English | Câu hỏi để tìm | Ví dụ: *Lan reads books.* |
 |---|---|---|---|

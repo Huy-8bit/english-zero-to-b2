@@ -30,7 +30,7 @@
 | **Prerequisites** | [B1-G018 — Linking Words](B1-G018-linking-words.md), [B1-G019 — Complex Sentences](B1-G019-complex-sentences.md) |
 | **Estimated Time** | 90 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Dùng các cụm **nêu quan điểm** ở nhiều mức độ trang trọng.
 2. Dùng đúng **I don't think ...** (chuyển phủ định lên động từ *think*).
@@ -52,7 +52,7 @@
 
 ## C. WHAT
 
-Bài này kết hợp **ngữ pháp** (mệnh đề *that*, phủ định chuyển, đảo ngữ ngắn với *so/neither*) và **chức năng giao tiếp** (functional language) — thứ mà phần thi Nói và Viết B1–B2 đòi hỏi liên tục.
+Bài này giúp bạn nêu ý kiến, đồng tình hoặc phản đối sao cho người nghe hiểu rõ và dễ tiếp tục trò chuyện. Bạn sẽ dùng các mẫu như *I think...*, *I agree, but...*, rồi thêm lý do hoặc ví dụ. Các mẫu câu đi cùng kiến thức về phần câu bắt đầu bằng *that*, cách phủ định và câu đáp với *so/neither*.
 
 | Chức năng | Cụm điển hình |
 |---|---|
@@ -134,14 +134,14 @@ flowchart LR
 | 1 | ***In my opinion,** online learning is just as effective as classroom learning.* | Theo tôi, học online hiệu quả không kém học trên lớp. | Trung tính |
 | 2 | *I **don't think** homework should be banned.* | Tôi không nghĩ nên cấm bài tập về nhà. | Phủ định chuyển |
 | 3 | ***As far as I'm concerned,** health is more important than money.* | Theo quan điểm của tôi, sức khỏe quan trọng hơn tiền. | Trang trọng |
-| 4 | *"Cities should ban cars." — "**I agree up to a point, but** what about people with disabilities?"* | Tôi đồng ý phần nào, nhưng... | Đồng ý một phần |
-| 5 | *"**I see what you mean, but** I'm not sure it would work in practice."* | Tôi hiểu ý bạn, nhưng... | Phản đối lịch sự |
+| 4 | *"Cities should ban cars." — "**I agree up to a point, but** what about people with disabilities?"* | “Các thành phố nên cấm ô tô.” — “Tôi đồng ý phần nào, nhưng còn người khuyết tật thì sao?” | Đồng ý một phần |
+| 5 | *"**I see what you mean, but** I'm not sure it would work in practice."* | Tôi hiểu ý bạn, nhưng chưa chắc cách đó sẽ hiệu quả trong thực tế. | Phản đối lịch sự |
 | 6 | *"Exams are stressful." — "**I couldn't agree more.**"* | Tôi hoàn toàn đồng ý. | Đồng ý mạnh |
 | 7 | *"I don't like horror films." — "**Neither do I.**"* | Tôi cũng không. | Neither + trợ động từ + S |
 | 8 | *"I've been to Japan." — "**So have I!**"* | Tôi cũng vậy! | Khớp *have* |
-| 9 | ***It seems to me that** people are working longer hours than before.* | Tôi thấy dường như... | Làm mềm |
-| 10 | *"**What's your view on** working from home?"* | Bạn nghĩ sao về... | Hỏi ý kiến |
-| 11 | ***Personally,** I'd rather live in a small town.* | Cá nhân tôi... | |
+| 9 | ***It seems to me that** people are working longer hours than before.* | Tôi có cảm giác mọi người đang làm việc nhiều giờ hơn trước. | Làm mềm |
+| 10 | *"**What's your view on** working from home?"* | Bạn nghĩ thế nào về việc làm việc tại nhà? | Hỏi ý kiến |
+| 11 | ***Personally,** I'd rather live in a small town.* | Riêng tôi thì thích sống ở một thị trấn nhỏ hơn. | |
 | 12 | *"**I'm afraid I disagree.** I think the price is too high."* | Tôi e là tôi không đồng ý. | Phản đối trang trọng |
 
 ---

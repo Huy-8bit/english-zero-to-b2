@@ -1,5 +1,7 @@
 # W08 · Opinion Essays — Bài luận nêu quan điểm
 
+Bạn sẽ luyện nêu quan điểm và giải thích vì sao mình chọn quan điểm đó. Trước khi viết, chọn vài lý do có thể phát triển bằng ví dụ. Nếu chỉ đồng ý một phần, hãy nói rõ phần nào đồng ý và phần nào còn băn khoăn.
+
 | Mục | Nội dung |
 |---|---|
 | **Cấp độ** | B1 → B2 |

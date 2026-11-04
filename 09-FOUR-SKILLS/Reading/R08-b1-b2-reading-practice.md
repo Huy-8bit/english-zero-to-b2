@@ -1,5 +1,7 @@
 # R08 · B1–B2 Reading Practice — Luyện đọc tổng hợp B1–B2
 
+Bạn sẽ áp dụng các cách đọc đã học với văn bản dài hơn. Trước khi chọn đáp án, xác định câu hỏi cần ý chính, chi tiết hay suy luận. Khi chữa bài, ghi lại bằng chứng và lý do một phương án gần đúng vẫn chưa phù hợp.
+
 | Mục | Nội dung |
 |---|---|
 | **Cấp độ** | B1 → B2 |

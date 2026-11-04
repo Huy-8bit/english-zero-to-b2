@@ -60,7 +60,7 @@
 >
 > *I **do** believe that street food is part of our cultural identity, and it deserves protection. **All** we need **is** a little creativity from city planners. In the next ten minutes, I'll suggest three practical solutions.*
 
-**Rubric (0–2 mỗi tiêu chí):** ≥ 2 It-cleft · ≥ 2 Wh-cleft · *The reason ... is that* và *All ... is* · emphatic *do* · văn phong thuyết trình mạch lạc.
+**Tiêu chí tự đánh giá (0–2 điểm cho mỗi tiêu chí):** ≥ 2 It-cleft · ≥ 2 Wh-cleft · *The reason ... is that* và *All ... is* · emphatic *do* · văn phong thuyết trình mạch lạc.
 
 **L5.2.** Mẫu: *No, it was Phu Quoc that I went to, not Da Lat. And it was with Linh that I travelled, not Nam. It wasn't last summer either — it was in December that we went. And what we did there was mostly diving, not hiking!*
 

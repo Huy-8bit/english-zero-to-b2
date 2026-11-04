@@ -30,7 +30,7 @@
 | **Prerequisites** | [B1-G007 — Second Conditional](B1-G007-second-conditional.md), [B1-G002 — Past Perfect](B1-G002-past-perfect.md) |
 | **Estimated Time** | 90 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Tạo câu **If + had + V3, would have + V3**.
 2. Nói về điều **không xảy ra trong quá khứ** và kết quả tưởng tượng của nó.
@@ -54,7 +54,7 @@ Nhưng thực tế: bạn **đã dậy muộn**, và bạn **đã lỡ** chuyế
 
 ## C. WHAT
 
-**Third Conditional** (câu điều kiện loại 3) nói về một **điều kiện trái với sự thật trong quá khứ** và **kết quả tưởng tượng** của nó — cũng trong quá khứ. Vì quá khứ không thay đổi được, câu loại 3 thường dùng để:
+**Câu điều kiện loại 3 (Third Conditional)** giúp bạn tưởng tượng quá khứ đã khác đi và kết quả cũng khác. *If I'd left earlier, I wouldn't have missed the bus* là “Nếu đi sớm hơn, tôi đã không lỡ xe buýt”. Thực tế là tôi đi muộn và lỡ xe. Bạn thường dùng mẫu này để:
 
 | Chức năng | Ví dụ |
 |---|---|

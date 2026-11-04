@@ -60,7 +60,7 @@
 >
 > *Next year, I'm going to be more realistic. By the end of 2027, I **will have been studying** English seriously for three years, and I hope to take the B2 exam. By then, I **will have been working** at my company for five years, so it might be time for a new challenge.*
 
-**Rubric (0–2 mỗi tiêu chí):** ≥ 2 *was going to* · *was about to* · *would* (quá khứ) · ≥ 2 FPC · 120–150 từ.
+**Tiêu chí tự đánh giá (0–2 điểm cho mỗi tiêu chí):** ≥ 2 *was going to* · *was about to* · *would* (quá khứ) · ≥ 2 FPC · 120–150 từ.
 
 **L5.2.** Mẫu: *By the end of this year, I will have been learning English for eight years. By the time I'm 30, I will have been working as an engineer for about seven years. And by 2030, my wife and I will have been living in our new flat for three years.*
 

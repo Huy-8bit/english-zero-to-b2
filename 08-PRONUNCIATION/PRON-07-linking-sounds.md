@@ -1,18 +1,20 @@
 # PRON-07 · Linking Sounds — Nối âm
 
+Nối âm giúp các từ đi liền nhau khi nói. Hãy nghe một cụm ngắn, tìm chỗ hai từ nối lại rồi đọc cả cụm. Không cần thêm âm hoặc nuốt âm để nói thật nhanh; mục tiêu trước hết là rõ và liền mạch.
+
 | Mục | Nội dung |
 |---|---|
 | **Cấp độ** | A2 → B2 |
 | **Mục tiêu** | Nối âm giữa các từ để nói trôi chảy; nghe ra các cụm từ bị nối |
 | **Liên quan** | [PRON-06 Connected speech](PRON-06-connected-speech.md) |
 
-Người Việt thường đọc từng từ tách rời (do mỗi âm tiết tiếng Việt độc lập), khiến câu nghe "gãy". Nối âm giúp câu **liền mạch** và giúp bạn **nghe hiểu** người bản ngữ.
+Nếu đọc từng từ với một khoảng dừng, cả câu có thể khó theo dõi. Nối âm giúp các từ đi liền nhau và giúp bạn nhận ra chúng khi nghe hội thoại. Bạn vẫn cần giữ rõ những âm quan trọng, không cố nối mọi chỗ.
 
 Ký hiệu trong bài: **‿** = nối.
 
 ## 1. Phụ âm + Nguyên âm (C + V)
 
-Phụ âm cuối của từ trước **chuyển sang** đầu từ sau.
+Bạn nối phụ âm cuối của từ trước với nguyên âm đầu của từ sau, nên hai từ nghe liền nhau. Phụ âm đó vẫn thuộc từ trước; không thêm một âm mới.
 
 | Viết | Nghe như | |
 |---|---|---|

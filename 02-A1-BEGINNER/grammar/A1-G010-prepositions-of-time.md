@@ -30,7 +30,7 @@
 | **Prerequisites** | [A0-G018 — Numbers, Dates, Time](../../01-A0-FOUNDATION/grammar/A0-G018-numbers-dates-time-age.md), [A1-G009](A1-G009-prepositions-of-place.md) |
 | **Estimated Time** | 75 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Dùng **at** với giờ và thời điểm; **on** với ngày/thứ; **in** với tháng, năm, mùa, buổi.
 2. Biết khi nào **không** dùng giới từ: *this, next, last, every, today, tomorrow, yesterday*.
@@ -54,7 +54,7 @@ Người nhận vẫn hiểu, nhưng email có 4 lỗi giới từ.
 
 ## C. WHAT: Giới từ chỉ thời gian
 
-**Prepositions of time** cho biết **khi nào** một việc xảy ra. Ba giới từ quan trọng nhất là **at, on, in**. Ngoài ra còn các giới từ chỉ **khoảng thời gian** và **trình tự**: *from...to, until, before, after, during*.
+**Giới từ chỉ thời gian (prepositions of time)** giúp bạn nói việc xảy ra khi nào. Ví dụ: *at seven* — lúc bảy giờ; *on Monday* — vào thứ Hai; *in June* — vào tháng Sáu. Ngoài *at, on, in*, bài còn có các từ chỉ khoảng thời gian và thứ tự như *from...to, until, before, after, during*.
 
 ---
 

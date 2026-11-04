@@ -1,5 +1,7 @@
 # A0 Skills Practice — Luyện bốn kỹ năng cấp độ A0
 
+Bạn sẽ dùng kiến thức A0 để nghe thông tin ngắn, đọc những câu quen thuộc và tự giới thiệu. Làm phần tương ứng sau mỗi khối ngữ pháp. Với bài nói, hãy thử nói bằng thông tin của mình trước khi xem câu mẫu.
+
 > Dùng file này **song song** với bài ngữ pháp, sau khi học xong mỗi khối. Đáp án: [A0-SKILLS-ANSWERS](../12-ANSWERS-AND-EXPLANATIONS/SKILLS/A0-SKILLS-ANSWERS.md). Transcript bài nghe: [A0-LISTENING-TRANSCRIPTS](../12-ANSWERS-AND-EXPLANATIONS/SKILLS/A0-LISTENING-TRANSCRIPTS.md).
 
 ## Mục lục
@@ -40,7 +42,7 @@ Bạn sẽ nghe 10 mục thông tin độc lập được đánh vần hoặc đ
 
 ### Listening 2 — Meeting a new classmate (khối 3, 4)
 
-Nghe hội thoại giữa **Kim** và **Daniel**. Chọn đáp án đúng.
+Nghe hội thoại giữa **Kim** và **Daniel**. Chọn đáp án phù hợp với câu và ngữ cảnh.
 
 **1.** Where is Daniel from?  A. England  B. Ireland  C. New Zealand
 **2.** How old is Daniel?  A. 23  B. 33  C. 30

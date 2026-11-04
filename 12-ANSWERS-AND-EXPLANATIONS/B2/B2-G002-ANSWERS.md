@@ -67,7 +67,7 @@
 > *Yours sincerely,*
 > *Le Van Nam*
 
-**Rubric (0–2 mỗi tiêu chí):** ≥ 2 đảo ngữ đúng · *otherwise* đúng thì · *but for/without/if it weren't for* đúng · văn phong trang trọng · 120–150 từ.
+**Tiêu chí tự đánh giá (0–2 điểm cho mỗi tiêu chí):** ≥ 2 đảo ngữ đúng · *otherwise* đúng thì · *but for/without/if it weren't for* đúng · văn phong trang trọng · 120–150 từ.
 
 **L5.2.** Mẫu: *Supposing I could change one decision, I'd choose to study abroad after high school. If I had gone to Australia, I would speak English much more fluently now... What if I had never come back? ... But honestly, if it hadn't been for my decision to stay, I wouldn't have met my best friends.*
 

@@ -56,7 +56,7 @@
 
 > *Last weekend I stayed at Sunrise Homestay in Sa Pa. The view from my room was **so** amazing **that** I woke up at 5 a.m. just to watch the sunrise. The owners were **such** warm people **that** I felt like part of the family. Dinner was **so** delicious **that** I asked for the recipe. However, the bathroom was **too** small **to** turn around in, and the Wi-Fi wasn't strong **enough** to make video calls. It was **such** a cold night **that** I needed three blankets. Overall, it was **so** peaceful **that** I'd definitely recommend it.*
 
-**Rubric (0–2 mỗi tiêu chí):** đủ số cấu trúc · đúng *so/such/a* · *too/enough* đúng vị trí · văn phong review tự nhiên · 100–130 từ.
+**Tiêu chí tự đánh giá (0–2 điểm cho mỗi tiêu chí):** đủ số cấu trúc · đúng *so/such/a* · *too/enough* đúng vị trí · văn phong review tự nhiên · 100–130 từ.
 
 **L5.2.** Mẫu: *It was such a disaster! First, I was so tired that I slept through my alarm. Then there was so much traffic that I arrived at work an hour late. My boss was so angry that she didn't speak to me all day...*
 

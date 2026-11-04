@@ -56,7 +56,7 @@
 
 > *The day before my university entrance exam, I was terribly nervous. I had been studying for the exam for almost a year, and I had been sleeping only five hours a night for weeks. By that evening, I had finished every practice test in my book. My mother came into my room and saw that I had been crying. She sat down and reminded me that I had worked harder than anyone she knew. We went for a walk by the lake, and for the first time in months, I didn't think about maths. The next morning, I felt calm because I had slept well at last. I passed — and I learned that rest is part of studying.*
 
-**Rubric (0–2 mỗi tiêu chí):** đủ ≥ 3 *had been + V-ing* đúng · ≥ 2 *had + V3* đúng · mốc thời gian rõ (*when/by/because*) · 100–130 từ, mạch lạc.
+**Tiêu chí tự đánh giá (0–2 điểm cho mỗi tiêu chí):** đủ ≥ 3 *had been + V-ing* đúng · ≥ 2 *had + V3* đúng · mốc thời gian rõ (*when/by/because*) · 100–130 từ, mạch lạc.
 
 **L5.2.** Mẫu: *When I came home, my little brother was sitting on the floor. His hands were blue — he had been painting a picture of the sea. There was water everywhere because he had been washing his brushes in my glass. He had been working on it for hours, and he had finished a beautiful wave...*
 ✅ Tiêu chí: mô tả cảnh bằng quá khứ đơn/tiếp diễn; giải thích dấu vết bằng *had been + V-ing*; nói ≈ 1 phút.

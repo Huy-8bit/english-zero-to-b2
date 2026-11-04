@@ -1,5 +1,7 @@
 # B2 Skills Practice — Ba unit tích hợp nghe, nói, đọc, viết
 
+Ở B2, bạn cần theo được lập luận, nhận ra giới hạn của thông tin và trình bày quan điểm rõ ràng. Các unit dưới đây giúp bạn luyện những việc đó qua nghe, đọc, nói và viết. Cấu trúc phức tạp chỉ hữu ích khi giúp bạn diễn đạt ý chính xác hơn.
+
 Ba unit dùng sau các khối trong [thứ tự B2](README.md): **Unit 1** sau khối B2-1 và B2-2; **Unit 2** sau khối B2-3 và B2-4; **Unit 3** sau khối B2-5 đến B2-7. Mỗi unit có bài nghe, bài đọc dài, hai nhiệm vụ nói và một bài viết. Đây là luyện tích hợp trong phạm vi chương trình, không phải chứng nhận trình độ.
 
 Dành 90–120 phút cho mỗi unit. [Đáp án và rubric](../12-ANSWERS-AND-EXPLANATIONS/SKILLS/B2-SKILLS-ANSWERS.md) nằm riêng. [Transcript](../12-ANSWERS-AND-EXPLANATIONS/SKILLS/B2-LISTENING-TRANSCRIPTS.md) chỉ dùng để tạo âm thanh hoặc đối chiếu sau khi nghe. Không có audio đính kèm; xem [cách dùng TTS](../09-FOUR-SKILLS/Listening/README.md). Ở B2, nghe ở tốc độ tự nhiên (khoảng 150–170 từ/phút) và chỉ nghe **hai lần**.

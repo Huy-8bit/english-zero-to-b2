@@ -1,5 +1,7 @@
 # LAB-02 · Mixed Grammar Exercises — Bài tập ngữ pháp tổng hợp
 
+Khi các chủ điểm được trộn chung, bạn phải nhìn ngữ cảnh để chọn cấu trúc. Đừng cố đoán tên bài học trước. Hãy xác định thời gian, người thực hiện và ý muốn nói, rồi mới chọn dạng từ hoặc dạng câu.
+
 | Mục | Nội dung |
 |---|---|
 | **Cấp độ** | A2 → B2 (chia 3 phần) |

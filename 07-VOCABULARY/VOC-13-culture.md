@@ -1,5 +1,7 @@
 # VOC-13 · Culture — Văn hóa
 
+Bài này giúp bạn giới thiệu phong tục, hoạt động văn hóa và những điều quen thuộc ở nơi mình sống. Chọn một dịp lễ hoặc một thói quen, rồi mô tả cho người chưa biết về nó. Giải thích ngắn điều người ta làm và ý nghĩa của việc đó.
+
 | Mục | Nội dung |
 |---|---|
 | **Cấp độ** | A2 → B2 |

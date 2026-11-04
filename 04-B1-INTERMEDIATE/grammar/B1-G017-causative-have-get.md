@@ -30,7 +30,7 @@
 | **Prerequisites** | [B1-G012 — Passive across Tenses](B1-G012-passive-all-tenses.md) |
 | **Estimated Time** | 75 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Dùng ***have/get + O + V3*** khi **người khác làm dịch vụ** cho mình (cắt tóc, sửa xe...).
 2. Chia *have/get* theo mọi thì (*I'm having my car repaired, I've had my hair cut*).
@@ -52,7 +52,7 @@ Thực ra bạn đi tiệm cắt tóc.
 
 ## C. WHAT
 
-**Causative** (thể nhờ bảo) diễn tả việc **chủ ngữ sắp xếp/nhờ/thuê/khiến người khác làm việc gì đó**, thường là một dịch vụ.
+**Cấu trúc nhờ làm (causative)** giúp bạn nói mình sắp xếp để người khác làm việc gì. *I had my bike repaired* thường nghĩa là “Tôi mang xe đi sửa”, chứ không phải chính tôi sửa. Bài này tập trung vào *have/get* và các cách dùng liên quan.
 
 | Cấu trúc | Ý nghĩa | Ví dụ |
 |---|---|---|

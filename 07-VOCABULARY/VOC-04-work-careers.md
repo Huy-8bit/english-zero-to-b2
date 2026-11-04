@@ -1,5 +1,7 @@
 # VOC-04 · Work & Careers — Công việc và nghề nghiệp
 
+Bạn sẽ dùng nhóm từ này để nói về công việc, tìm việc và kế hoạch nghề nghiệp. Hãy nghĩ đến một vị trí bạn biết: người đó làm gì, có trách nhiệm nào và cần kỹ năng gì? Dùng câu trả lời để tự đặt ví dụ.
+
 | Mục | Nội dung |
 |---|---|
 | **Cấp độ** | A2 → B2 |

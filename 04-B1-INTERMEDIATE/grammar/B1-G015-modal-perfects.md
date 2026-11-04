@@ -30,7 +30,7 @@
 | **Prerequisites** | [B1-G014 — Modals of Deduction (present)](B1-G014-modals-deduction-present.md), [A2-G014 — Should](../../03-A2-ELEMENTARY/grammar/A2-G014-should-ought-to.md) |
 | **Estimated Time** | 90 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Suy luận về **quá khứ** với ***must have / might have / can't have + V3***.
 2. Nói về **khả năng đã có nhưng không xảy ra** với ***could have + V3***.
@@ -56,7 +56,7 @@ Sáng nay bạn thấy đường phố ướt sũng, cây đổ ngổn ngang. B�
 
 ## C. WHAT
 
-Cấu trúc **modal + have + V3** dùng để nói về **quá khứ**:
+**Động từ tình thái + have + phân từ quá khứ (V3)** giúp bạn suy luận, đánh giá hoặc tiếc về việc đã qua. *She might have left* là “Có thể cô ấy đã đi rồi”; *You should have called* là “Lẽ ra bạn nên gọi”. Cùng một mẫu hình thức nhưng ý nghĩa thay đổi theo động từ tình thái.
 
 | Cấu trúc | Chức năng | Nghĩa | Ví dụ |
 |---|---|---|---|

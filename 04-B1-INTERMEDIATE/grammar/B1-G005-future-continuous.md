@@ -30,7 +30,7 @@
 | **Prerequisites** | [A2-G008 — Future forms](../../03-A2-ELEMENTARY/grammar/A2-G008-present-continuous-future.md), [A2-G001 — Past Continuous](../../03-A2-ELEMENTARY/grammar/A2-G001-past-continuous.md) |
 | **Estimated Time** | 75 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Tạo câu với **will be + V-ing**.
 2. Nói về hoạt động **đang diễn ra tại một thời điểm trong tương lai**.
@@ -54,7 +54,7 @@ Một đồng nghiệp hỏi bạn: *"**Will** you **be going** past the bank th
 
 ## C. WHAT
 
-**Future Continuous** (tương lai tiếp diễn) có ba cách dùng chính:
+**Tương lai tiếp diễn (Future Continuous)** thường giúp bạn nói một việc sẽ đang diễn ra ở một mốc tương lai. *At eight tonight, I'll be cooking* nghĩa là “Tám giờ tối nay, tôi sẽ đang nấu ăn”. Ngoài cách dùng này, bạn còn gặp:
 
 | Cách dùng | Ví dụ | Ý nghĩa |
 |---|---|---|

@@ -1,5 +1,7 @@
 # VOC-08 · Technology — Công nghệ
 
+Bạn sẽ gặp những từ thường dùng khi nói về điện thoại, máy tính và Internet. Thử mô tả một vấn đề quen thuộc, như hết pin hoặc mất kết nối. Học từ cùng tình huống sẽ giúp bạn dễ gọi tên vấn đề khi cần nhờ trợ giúp.
+
 | Mục | Nội dung |
 |---|---|
 | **Cấp độ** | A2 → B2 |

@@ -1,5 +1,7 @@
 # S06 · Fluency Exercises — Bài luyện độ trôi chảy
 
+Nói trôi chảy không có nghĩa là nói thật nhanh hoặc không bao giờ dừng. Bạn sẽ luyện giữ mạch ý và giảm những lần ngừng quá lâu. Thử nói cùng một chủ đề vài lượt, mỗi lượt sửa một điểm cụ thể thay vì sửa mọi lỗi ngay giữa câu.
+
 | Mục | Nội dung |
 |---|---|
 | **Cấp độ** | A2 → B2 |

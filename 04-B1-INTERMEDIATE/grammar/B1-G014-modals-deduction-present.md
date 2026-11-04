@@ -30,7 +30,7 @@
 | **Prerequisites** | [A2-G009 — Might/May](../../03-A2-ELEMENTARY/grammar/A2-G009-might-may-possibility.md), [A2-G012 — Must/Have to](../../03-A2-ELEMENTARY/grammar/A2-G012-must-have-to.md) |
 | **Estimated Time** | 75 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Dùng ***must*** khi kết luận **gần như chắc chắn đúng** dựa trên bằng chứng.
 2. Dùng ***can't*** khi kết luận **gần như chắc chắn sai**.
@@ -54,7 +54,7 @@ Bạn gọi cho đồng nghiệp Lan nhiều lần nhưng cô ấy không nghe m
 
 ## C. WHAT
 
-**Modals of deduction** (động từ khuyết thiếu chỉ suy luận) diễn tả **mức độ chắc chắn** của người nói về một điều **ở hiện tại**, dựa trên **bằng chứng** hoặc **suy luận logic**.
+**Động từ tình thái chỉ suy luận (modals of deduction)** giúp bạn nói mình chắc đến mức nào về một điều ở hiện tại. *She must be home* thường là một suy luận dựa vào điều bạn biết, không phải mệnh lệnh. Bạn chọn *must, might/may/could* hoặc *can't* theo ý nghĩa và bằng chứng, không theo một phần trăm cố định.
 
 | Modal | Mức độ | Nghĩa | Ví dụ |
 |---|---|---|---|
@@ -117,14 +117,14 @@ Vì sao đối lập của *must* (suy luận) là *can't*, không phải *mustn
 ### Thang chắc chắn
 
 ```text
-✅ ~100%  │ She IS at home.          (biết chắc)
-   ~95%   │ She MUST be at home.     (suy luận mạnh)
-   ~50%   │ She MIGHT/MAY/COULD be at home.
-   ~5%    │ She CAN'T be at home.    (suy luận mạnh: sai)
-❌ ~0%    │ She ISN'T at home.       (biết chắc)
+Khẳng định trực tiếp:       She IS at home.
+Suy luận rất chắc là đúng:  She MUST be at home.
+Nêu một khả năng:           She MIGHT/MAY/COULD be at home.
+Suy luận rất chắc là không: She CAN'T be at home.
+Phủ định trực tiếp:         She ISN'T at home.
 ```
 
-> Các con số chỉ để hình dung thứ tự, không phải định nghĩa chính xác.
+> Các mẫu thể hiện cách người nói nhìn sự việc, không phải phần trăm đo được. *Must/can’t* trong bảng là suy luận; một câu khẳng định trực tiếp cũng có thể sai nếu người nói có thông tin sai.
 
 ### Sơ đồ chọn modal
 

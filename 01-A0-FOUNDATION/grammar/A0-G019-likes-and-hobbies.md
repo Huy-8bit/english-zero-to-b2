@@ -30,7 +30,7 @@
 | **Prerequisites** | [A0-G010 — Have/Has](A0-G010-have-has.md), [A0-G016 — Sentence Types](A0-G016-sentence-types.md) |
 | **Estimated Time** | 75 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Dùng thang mức độ: *love – really like – like – don't mind – don't like – hate*.
 2. Dùng động từ sở thích + **danh từ** và + **V-ing**: *I like music / I like listening to music*.
@@ -55,6 +55,8 @@ Bạn muốn nói "Tôi thích đọc sách và chơi cầu lông". Bạn viết
 ---
 
 ## C. WHAT: Các động từ chỉ sở thích
+
+Để nói về sở thích, bạn chọn từ phù hợp với mức độ mình muốn diễn đạt. *I like cooking* là “Tôi thích nấu ăn”; *I don't mind cooking* là “Tôi nấu ăn cũng được, không ngại”. Các mức dưới đây là gợi ý để so sánh, không phải một thang điểm cố định.
 
 | Mức độ | Động từ / cụm | Nghĩa |
 |---|---|---|

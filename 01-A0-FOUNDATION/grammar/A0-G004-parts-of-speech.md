@@ -30,7 +30,7 @@
 | **Prerequisites** | Không bắt buộc (nên học sau A0-G001–G003 để đọc đúng ví dụ) |
 | **Estimated Time** | 60 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Biết tên tiếng Anh – tiếng Việt của 9 từ loại.
 2. Hiểu mỗi từ loại "làm công việc gì" trong câu.
@@ -57,7 +57,7 @@ Câu trả lời nằm ở **vị trí, nghĩa và cách kết hợp của từ 
 
 ## C. WHAT: Từ loại là gì?
 
-**Từ loại (part of speech / word class)** là nhóm từ có cách kết hợp và đặc điểm ngữ pháp tương tự. Đừng nhầm từ loại với vai trò: một danh từ có thể làm chủ ngữ hoặc tân ngữ. Bạn có thể hình dung một câu tiếng Anh như một **đội bóng**: mỗi cầu thủ có một vị trí và nhiệm vụ riêng — thủ môn, hậu vệ, tiền đạo. Từ loại chính là "vị trí" của từ trong đội hình câu.
+**Từ loại (part of speech / word class)** cho biết một từ thuộc nhóm nào, chẳng hạn danh từ hay động từ. Những từ cùng nhóm thường có cách dùng giống nhau. Ví dụ, *work* là động từ trong *I work here*, nhưng là danh từ trong *My work is interesting*. Từ loại khác với vai trò trong câu: một danh từ có thể làm chủ ngữ hoặc tân ngữ.
 
 Biết từ loại giúp bạn:
 
@@ -71,7 +71,7 @@ Biết từ loại giúp bạn:
 
 ## D. WHY: Vì sao phải biết từ loại?
 
-Tiếng Việt là ngôn ngữ **không biến đổi hình thái từ**: "đẹp" vẫn là "đẹp" dù nó đứng ở đâu. Tiếng Anh thì **thường thay đổi hình thức** theo từ loại:
+Trong tiếng Anh, một ý có thể được diễn đạt bằng các từ cùng gốc nhưng khác từ loại. Thay đổi đuôi từ thường giúp bạn nhận ra nhóm từ. Hãy so sánh:
 
 | Ý nghĩa gốc | Danh từ (n) | Động từ (v) | Tính từ (adj) | Trạng từ (adv) |
 |---|---|---|---|---|

@@ -1,5 +1,7 @@
 # VOC-19 · Commonly Confused Words — Từ dễ nhầm lẫn
 
+Có những từ gần nghĩa trong tiếng Việt nhưng cách dùng tiếng Anh khác nhau. Bài này đặt chúng cạnh nhau để bạn so sánh. Với mỗi cặp, chú ý tình huống và từ đi kèm, rồi tự đặt hai câu khác nhau để kiểm tra mình đã phân biệt được chưa.
+
 | Mục | Nội dung |
 |---|---|
 | **Cấp độ** | A2 → B2 |

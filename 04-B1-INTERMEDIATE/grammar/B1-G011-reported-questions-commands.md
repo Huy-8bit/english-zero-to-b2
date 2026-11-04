@@ -30,7 +30,7 @@
 | **Prerequisites** | [B1-G010 — Reported Statements](B1-G010-reported-statements.md), [A2-G028 — Indirect Questions](../../03-A2-ELEMENTARY/grammar/A2-G028-indirect-questions.md) |
 | **Estimated Time** | 90 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Tường thuật câu hỏi Yes/No với ***if / whether***.
 2. Tường thuật câu hỏi Wh- với **trật tự câu kể** (S + V, không đảo).
@@ -55,6 +55,8 @@ Một người học viết:
 ---
 
 ## C. WHAT
+
+Khi kể lại câu hỏi, lời nhờ hoặc mệnh lệnh, bạn chọn mẫu theo điều người nói muốn làm. *“Please help me”* có thể kể lại là *She asked me to help her*. Còn câu hỏi cần được lồng vào lời tường thuật với trật tự chủ ngữ trước động từ. Bảng sau phân biệt các mẫu:
 
 | Loại câu gốc | Cách tường thuật | Ví dụ |
 |---|---|---|

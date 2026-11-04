@@ -1,5 +1,7 @@
 # VOC-10 · Society — Xã hội
 
+Bạn sẽ học cách nói về những vấn đề trong đời sống cộng đồng. Với mỗi nhóm từ, thử nghĩ một ví dụ cụ thể về người, nơi chốn hoặc tình huống. Khi nêu ý kiến, phân biệt điều bạn biết với điều bạn chỉ đang suy đoán.
+
 | Mục | Nội dung |
 |---|---|
 | **Cấp độ** | B1 → B2 |

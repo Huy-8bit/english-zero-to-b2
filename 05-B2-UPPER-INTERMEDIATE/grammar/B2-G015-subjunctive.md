@@ -30,7 +30,7 @@
 | **Prerequisites** | [B1-G021 — Verb Patterns](../../04-B1-INTERMEDIATE/grammar/B1-G021-verb-patterns.md), [B2-G006 — Advanced Reported Speech](B2-G006-advanced-reported-speech.md) |
 | **Estimated Time** | 75 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Dùng **thức giả định** (động từ **nguyên mẫu không chia**) sau *suggest, recommend, insist, demand, request, propose, require, ask that...*
 2. Dùng giả định sau **tính từ**: *It is essential / vital / important / necessary / crucial that...*
@@ -51,7 +51,7 @@
 
 ## C. WHAT
 
-**Thức giả định** (subjunctive) dùng **dạng nguyên mẫu không *to*** của động từ, **giống nhau cho mọi ngôi** — không thêm *-s*, không chia thì.
+Bài này tập trung vào **thức giả định trong lời đề nghị hoặc yêu cầu trang trọng (mandative subjunctive)**. Sau những mẫu như *suggest that*, động từ có thể dùng dạng nguyên mẫu không *to*: *I suggest that he rest*. Dạng này không thêm *-s* theo chủ ngữ. Các cách dùng khác của thức giả định cần được phân biệt theo ngữ cảnh.
 
 | Câu bình thường (chỉ sự thật) | Câu giả định (yêu cầu/đề xuất) |
 |---|---|
@@ -208,7 +208,7 @@ Giả định:       He  work    /  She  be   /  They  not go
 
 1. **"Lệnh — không chia"** 📜: Yêu cầu/đề xuất → động từ "đứng nghiêm", không *-s*, không *is*.
 2. **"Not đứng một mình"**: phủ định giả định = *not + V*, không cần *don't*.
-3. **"Không chắc → thêm should"**: Nếu quên giả định, dùng *should + V* — luôn đúng trong Anh–Anh.
+3. **Nhớ một mẫu có should:** *I suggest that he should rest*. Đây là cách thường gặp trong Anh–Anh khi đưa đề nghị. Chỉ dùng khi ý và cấu trúc phù hợp; thêm *should* không tự làm mọi câu trở thành đúng.
 
 ---
 

@@ -30,7 +30,7 @@
 | **Prerequisites** | [B1-G011 — Reported Questions & Commands](../../04-B1-INTERMEDIATE/grammar/B1-G011-reported-questions-commands.md), [B1-G021 — Verb Patterns](../../04-B1-INTERMEDIATE/grammar/B1-G021-verb-patterns.md) |
 | **Estimated Time** | 90 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Thay *say/tell* bằng **động từ tường thuật** thể hiện **chức năng** của lời nói (hứa, từ chối, cảnh báo, xin lỗi...).
 2. Dùng đúng **5 mẫu cấu trúc** của động từ tường thuật.
@@ -55,7 +55,7 @@ Tường thuật kiểu B2: *Tom **apologised for breaking** my vase.*
 
 ## C. WHAT
 
-**Động từ tường thuật** (reporting verbs) mô tả **chức năng** của lời nói: hứa, đề nghị, từ chối, buộc tội... Thay vì chép lại lời, ta **tóm tắt ý định** của người nói.
+**Động từ tường thuật (reporting verbs)** giúp bạn nói rõ người kia đã hứa, đề nghị, từ chối hay làm điều gì qua lời nói. Ví dụ, *She promised to help* tóm tắt một lời hứa. Mỗi động từ có mẫu đi kèm riêng; hãy học cả mẫu, không chỉ học nghĩa tiếng Việt.
 
 | Lời nói | Chức năng | Tường thuật |
 |---|---|---|

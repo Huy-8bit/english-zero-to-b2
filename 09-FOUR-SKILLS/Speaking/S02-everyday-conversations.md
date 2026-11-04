@@ -1,5 +1,7 @@
 # S02 · Everyday Conversations — Hội thoại hằng ngày
 
+Bạn sẽ luyện các cuộc trò chuyện ngắn trong đời sống hằng ngày. Sau khi thử vai lần đầu, đổi một chi tiết như thời gian, địa điểm hoặc yêu cầu rồi nói lại. Nhớ phản hồi điều người kia vừa nói, thay vì chỉ đọc đến lượt của mình.
+
 | Mục | Nội dung |
 |---|---|
 | **Cấp độ** | A1 → B1 |

@@ -62,7 +62,7 @@
 >
 > *Next time, we're **bound to** forget something else — but that's part of the fun.*
 
-**Rubric (0–2 mỗi tiêu chí):** đủ cấu trúc yêu cầu · đúng nghĩa từng modal · ngữ pháp sau modal đúng · câu chuyện mạch lạc · 130–160 từ.
+**Tiêu chí tự đánh giá (0–2 điểm cho mỗi tiêu chí):** đủ cấu trúc yêu cầu · đúng nghĩa từng modal · ngữ pháp sau modal đúng · câu chuyện mạch lạc · 130–160 từ.
 
 **L5.2.** Mẫu: *When I was a kid, I used to live in a small town. Every afternoon, my friends and I would ride our bikes to the river. We would catch fish and we'd often come home covered in mud. I used to be very shy, but outdoors I felt free. Nowadays, children are likely to spend more time on screens, and they're bound to have different memories from mine.*
 

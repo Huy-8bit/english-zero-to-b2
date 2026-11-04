@@ -1,5 +1,7 @@
 # W11 · Problem–Solution Essays — Bài luận vấn đề – giải pháp
 
+Một giải pháp cần giải quyết được vấn đề đã nêu. Bạn sẽ luyện nối vấn đề với nguyên nhân và một hành động cụ thể. Với mỗi giải pháp, hãy trả lời: ai làm, làm gì và vì sao việc đó có thể giúp cải thiện tình hình?
+
 | Mục | Nội dung |
 |---|---|
 | **Cấp độ** | B1 → B2 |

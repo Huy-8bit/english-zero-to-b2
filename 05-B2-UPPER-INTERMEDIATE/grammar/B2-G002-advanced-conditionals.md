@@ -30,7 +30,7 @@
 | **Prerequisites** | [B2-G001 — Mixed Conditionals](B2-G001-mixed-conditionals.md) |
 | **Estimated Time** | 90 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Đảo ngữ ba loại câu điều kiện: ***Should** you need..., **Were** I you..., **Had** I known...*
 2. Dùng ***But for / Without + N*** và ***If it weren't for / If it hadn't been for***.
@@ -55,6 +55,8 @@ Và một câu trong bài phát biểu nhận giải:
 ---
 
 ## C. WHAT
+
+Ngoài *if*, bạn có thể dùng những mẫu điều kiện khác để phù hợp với văn phong và điều mình muốn nhấn mạnh. *Had I known* gần nghĩa với *If I had known* nhưng trang trọng hơn. Bài này giúp bạn nhận diện, đổi dạng và dùng các mẫu ấy mà vẫn giữ đúng ý.
 
 | Cấu trúc | Tương đương | Văn phong |
 |---|---|---|
@@ -129,16 +131,16 @@ flowchart TD
 | # | English | Tiếng Việt | Phân tích |
 |---|---|---|---|
 | 1 | ***Should** the flight **be** delayed, passengers will receive a meal voucher.* | Nếu chuyến bay bị hoãn, hành khách sẽ nhận phiếu ăn. | Đảo loại 1 — thông báo |
-| 2 | ***Were** I in your position, I would talk to a lawyer.* | Nếu tôi ở vị trí của bạn, ... | Đảo loại 2 — lời khuyên |
-| 3 | ***Were** the government **to raise** taxes, many businesses would close.* | Nếu chính phủ tăng thuế, ... | *Were + S + to V* |
-| 4 | ***Had** we **left** five minutes later, we would have been caught in the storm.* | Nếu chúng tôi đi muộn hơn 5 phút, ... | Đảo loại 3 |
-| 5 | ***Had** she **not** warned us, we would have lost everything.* | Nếu cô ấy không cảnh báo, ... | Đảo phủ định |
-| 6 | ***But for** the doctor's quick action, the patient would have died.* | Nếu không nhờ bác sĩ hành động nhanh, ... | But for + N |
+| 2 | ***Were** I in your position, I would talk to a lawyer.* | Nếu ở vào hoàn cảnh của bạn, tôi sẽ nói chuyện với luật sư. | Đảo loại 2 — lời khuyên |
+| 3 | ***Were** the government **to raise** taxes, many businesses would close.* | Giả sử chính phủ tăng thuế, nhiều doanh nghiệp sẽ phải đóng cửa. | *Were + S + to V* |
+| 4 | ***Had** we **left** five minutes later, we would have been caught in the storm.* | Nếu đi muộn hơn năm phút, chúng tôi đã mắc kẹt trong cơn bão. | Đảo loại 3 |
+| 5 | ***Had** she **not** warned us, we would have lost everything.* | Nếu cô ấy không cảnh báo, chúng tôi đã mất tất cả. | Đảo phủ định |
+| 6 | ***But for** the doctor's quick action, the patient would have died.* | Nếu bác sĩ không hành động kịp thời, bệnh nhân đã không qua khỏi. | But for + N |
 | 7 | ***Without** water, plants cannot survive.* | Không có nước, cây không sống được. | Without — sự thật chung |
-| 8 | ***If it weren't for** my glasses, I wouldn't be able to read this.* | Nếu không có kính, ... | Hiện tại |
-| 9 | *Take an umbrella, **otherwise** you'll get wet.* | ..., nếu không bạn sẽ bị ướt. | Otherwise + loại 1 |
-| 10 | *I didn't have his number; **otherwise** I would have called him.* | ..., nếu không thì tôi đã gọi. | Otherwise + loại 3 |
-| 11 | ***Supposing** you lost your job, how would you pay the rent?* | Giả sử bạn mất việc, ... | Supposing + V2 |
+| 8 | ***If it weren't for** my glasses, I wouldn't be able to read this.* | Nếu không có kính, tôi không đọc được dòng này. | Hiện tại |
+| 9 | *Take an umbrella, **otherwise** you'll get wet.* | Mang theo ô đi, nếu không bạn sẽ bị ướt. | Otherwise + loại 1 |
+| 10 | *I didn't have his number; **otherwise** I would have called him.* | Tôi không có số của anh ấy; nếu có thì tôi đã gọi rồi. | Otherwise + loại 3 |
+| 11 | ***Supposing** you lost your job, how would you pay the rent?* | Giả sử bạn mất việc, bạn sẽ trả tiền thuê nhà bằng cách nào? | Supposing + V2 |
 | 12 | ***What if** nobody comes to the party?* | Lỡ không ai đến dự tiệc thì sao? | What if — lo lắng |
 
 ---

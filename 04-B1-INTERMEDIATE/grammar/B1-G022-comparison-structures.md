@@ -30,7 +30,7 @@
 | **Prerequisites** | [A2-G027 — Comparisons](../../03-A2-ELEMENTARY/grammar/A2-G027-comparisons.md) |
 | **Estimated Time** | 75 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Dùng **"càng... càng..."**: *The more you practise, the better you get.*
 2. Dùng **"ngày càng..."**: *It's getting **hotter and hotter** / **more and more expensive**.*
@@ -50,7 +50,7 @@
 
 ## C. WHAT
 
-Ở A2 bạn đã học *taller than, the tallest, as tall as*. B1 mở rộng để so sánh **chính xác hơn** và **diễn tả xu hướng**:
+Bạn đã biết *taller than, the tallest* và *as tall as*. Bài này giúp bạn nói rõ chênh lệch lớn hay nhỏ, và hai thay đổi liên quan nhau thế nào. Ví dụ, *a little cheaper* là rẻ hơn một chút; *The more you practise, the easier it gets* nói việc luyện tập nhiều hơn đi cùng cảm giác dễ hơn.
 
 | Cấu trúc | Nghĩa | Ví dụ |
 |---|---|---|

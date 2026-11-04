@@ -56,7 +56,7 @@
 
 > *In five years, my life will look very different. By then, I'll have finished my master's degree in Australia, and I'll have worked for an international company for at least two years. I hope I'll have saved enough money to buy a small flat. By the time I'm 32, I'll have visited at least ten countries. I'll probably be living in Da Nang, and I'll be working on projects with people from all over the world. Most importantly, I'll have become more confident in English — I'll be using it every day.*
 
-**Rubric (0–2 mỗi tiêu chí):** ≥ 4 câu *will have + V3* đúng · ≥ 2 câu *will be + V-ing* · dùng *by / by the time* đúng (hiện tại đơn sau *by the time*) · 90–110 từ, mạch lạc.
+**Tiêu chí tự đánh giá (0–2 điểm cho mỗi tiêu chí):** ≥ 4 câu *will have + V3* đúng · ≥ 2 câu *will be + V-ing* · dùng *by / by the time* đúng (hiện tại đơn sau *by the time*) · 90–110 từ, mạch lạc.
 
 **L5.2.** Mẫu: *By Monday, we'll have finished the market survey. By the end of the month, we'll have designed the new packaging and we'll have tested it with 50 customers. However, we won't have received the final prices from the supplier by then, so we may need one more week.*
 

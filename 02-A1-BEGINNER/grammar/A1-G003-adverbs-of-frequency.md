@@ -30,7 +30,7 @@
 | **Prerequisites** | [A1-G002](A1-G002-present-simple-negatives-questions.md) |
 | **Estimated Time** | 60 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Sắp xếp các trạng từ tần suất theo mức độ: *always → never*.
 2. Đặt trạng từ tần suất đúng vị trí: **trước động từ thường**, **sau *be***.
@@ -53,7 +53,7 @@ Bác sĩ hỏi bạn về thói quen sinh hoạt:
 
 ## C. WHAT: Trạng từ tần suất là gì?
 
-**Adverbs of frequency** (trạng từ chỉ tần suất) cho biết một việc xảy ra **thường xuyên đến mức nào**. Chúng đi rất tự nhiên với thì hiện tại đơn — vì thì này nói về thói quen.
+**Trạng từ chỉ tần suất (adverbs of frequency)** cho biết bạn làm một việc thường xuyên đến mức nào. *I usually cook at home* nghĩa là “Tôi thường nấu ăn ở nhà”. Bạn dùng nhóm từ này để kể về thói quen, thay vì chỉ nói việc đó có xảy ra hay không.
 
 | Trạng từ | Nghĩa | Tần suất ước lượng |
 |---|---|---|

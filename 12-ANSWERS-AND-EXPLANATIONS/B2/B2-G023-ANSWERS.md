@@ -71,7 +71,7 @@
 > *A: Will it be expensive?*
 > *B: **I'm afraid so**, but it'll be worth it!*
 
-**Rubric (0–2 mỗi tiêu chí):** ≥ 2 *one/ones* · ≥ 3 *so/not* · *do so/do the same* · ≥ 3 tỉnh lược sau trợ động từ, ≥ 2 sau *to* · *If so/If not*.
+**Tiêu chí tự đánh giá (0–2 điểm cho mỗi tiêu chí):** ≥ 2 *one/ones* · ≥ 3 *so/not* · *do so/do the same* · ≥ 3 tỉnh lược sau trợ động từ, ≥ 2 sau *to* · *If so/If not*.
 
 **L5.2.** Mẫu câu trả lời: *I do. / No, but I'd like to. / I hope not. / I think so. / I'm afraid so. / I have. / I can't, but my brother can. / I will. / I'd love to. / I don't think so.*
 

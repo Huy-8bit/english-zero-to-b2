@@ -60,7 +60,7 @@
 >
 > *Best, Minh*
 
-**Rubric (0–2 mỗi tiêu chí):** ≥ 6 câu tường thuật đúng cấu trúc · dùng đúng cả *said* và *told + người* · lùi thì/đổi đại từ nhất quán · 100–120 từ, văn phong email công việc.
+**Tiêu chí tự đánh giá (0–2 điểm cho mỗi tiêu chí):** ≥ 6 câu tường thuật đúng cấu trúc · dùng đúng cả *said* và *told + người* · lùi thì/đổi đại từ nhất quán · 100–120 từ, văn phong email công việc.
 
 **L5.2.**
 - *Nam said (that) he was getting married.*

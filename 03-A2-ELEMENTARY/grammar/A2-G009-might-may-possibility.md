@@ -30,7 +30,7 @@
 | **Prerequisites** | [A1-G019 — Will](../../02-A1-BEGINNER/grammar/A1-G019-future-will.md), [A1-G012 — Can](../../02-A1-BEGINNER/grammar/A1-G012-can-cant.md) |
 | **Estimated Time** | 60 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Dùng ***might / may + V*** để nói điều **có thể** xảy ra (không chắc chắn) ở hiện tại và tương lai.
 2. Dùng ***might not / may not*** cho khả năng phủ định.
@@ -52,7 +52,7 @@ Bạn chưa chắc: "Tôi **có thể** đến, nhưng tôi **có thể** phải
 
 ## C. WHAT: *Might* và *may* là gì?
 
-**Might** và **may** là **modal verbs** (động từ khuyết thiếu) diễn tả **khả năng** — điều gì đó **có thể đúng** hoặc **có thể xảy ra**, nhưng người nói **không chắc chắn**. Không có quy tắc may = một phần trăm và might = một phần trăm khác.
+**May/might** cho biết một điều **có thể đúng hoặc có thể xảy ra**, nhưng người nói chưa chắc. *It might rain* nghĩa là “Có thể trời sẽ mưa”. Đây là động từ tình thái; không gán cho *may* và *might* những phần trăm xác suất cố định.
 
 | Câu | Mức độ chắc chắn |
 |---|---|
@@ -78,7 +78,7 @@ Tiếng Việt dùng “có lẽ”, “có thể”, “chắc là”. Khi lự
 
 Đây là các cách diễn đạt, không phải thang 0–100%. Tùy ngữ cảnh, will còn là lời hứa, sự sẵn lòng hoặc dự đoán; không tự gắn mức chắc chắn tuyệt đối.
 
-Vì *might/may* là modal verb, nó tuân theo **ba quy tắc vàng** ([A1-G012](../../02-A1-BEGINNER/grammar/A1-G012-can-cant.md)): không chia, không *to*, không *do*.
+Vì *might/may* là modal verb, nó tuân theo **ba điểm cần nhớ** ([A1-G012](../../02-A1-BEGINNER/grammar/A1-G012-can-cant.md)): không chia, không *to*, không *do*.
 
 ---
 

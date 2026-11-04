@@ -1,5 +1,7 @@
 # PRON-02 · Vowels & Consonants — Nguyên âm và phụ âm khó với người Việt
 
+Bài này giúp bạn nghe và tạo ra các âm dễ lẫn. Hãy luyện từng cặp từ với âm thanh mẫu, rồi ghi âm để đối chiếu. Chú ý cả vị trí lưỡi, môi và độ dài; kéo dài một âm chưa chắc đã tạo được âm kia.
+
 | Mục | Nội dung |
 |---|---|
 | **Cấp độ** | A1 → B1 |
@@ -10,7 +12,7 @@
 
 ## 1. Nguyên âm dài – ngắn
 
-Tiếng Việt không phân biệt nguyên âm dài – ngắn theo nghĩa, nhưng tiếng Anh **có**: *ship* ≠ *sheep*.
+Nguyên âm trong *ship* /ʃɪp/ và *sheep* /ʃiːp/ khác nhau. Khi luyện, chú ý cả vị trí lưỡi và âm nghe được, không chỉ kéo dài âm. Nghe hai từ mẫu rồi ghi âm để đối chiếu.
 
 | Ngắn | Dài | Mẹo |
 |---|---|---|

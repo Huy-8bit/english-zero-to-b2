@@ -1,5 +1,7 @@
 # W09 · Discussion Essays — Bài luận thảo luận hai quan điểm
 
+Với bài thảo luận hai quan điểm, bạn cần giải thích công bằng vì sao mỗi bên nghĩ như vậy. Sau đó nêu ý kiến của mình theo đúng yêu cầu đề. Chỉ liệt kê hai ý trái nhau chưa đủ; mỗi ý cần lý do hoặc ví dụ để người đọc hiểu.
+
 | Mục | Nội dung |
 |---|---|
 | **Cấp độ** | B1 → B2 |

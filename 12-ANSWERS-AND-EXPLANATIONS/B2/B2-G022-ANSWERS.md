@@ -58,7 +58,7 @@
 >
 > ***Half of** the students **have** a part-time job. **Working** while studying **is** often necessary because living costs are high. **One of** the most surprising findings **is** that **the number of** students who cook at home **has** increased. **Some of** the money they save **is** used for travel.*
 
-**Rubric (0–2 mỗi tiêu chí):** ≥ 2 *the number of* · *a number of* · ≥ 3 lượng từ + of (cả hai loại danh từ) · V-ing chủ ngữ và *one of* · mọi động từ hòa hợp đúng.
+**Tiêu chí tự đánh giá (0–2 điểm cho mỗi tiêu chí):** ≥ 2 *the number of* · *a number of* · ≥ 3 lượng từ + of (cả hai loại danh từ) · V-ing chủ ngữ và *one of* · mọi động từ hòa hợp đúng.
 
 **L5.2.** Mẫu: *I asked eight people how they get to work. Most of them ride a motorbike. None of them walks — it's too far. The number of people who take the bus is just two. A number of people said they would use the metro if there were a station nearby.*
 

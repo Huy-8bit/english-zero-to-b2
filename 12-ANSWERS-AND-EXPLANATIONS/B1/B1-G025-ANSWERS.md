@@ -56,7 +56,7 @@
 
 > *I have worked at two companies: a bank and a start-up. **Both** jobs taught me a lot, but they were very different. At the bank, **every** employee had to wear a uniform, and **each** department had strict rules. At the start-up, **neither** the boss **nor** the staff wore formal clothes. **Both** companies paid well, but **neither** of them offered much holiday. At the bank, **all** decisions were made by managers, whereas at the start-up, **each** of us could suggest ideas. I enjoyed **both** the stability of the bank **and** the creativity of the start-up. If I had to choose again, **either** would be fine, but I'd probably pick the start-up.*
 
-**Rubric (0–2 mỗi tiêu chí):** ≥ 6 từ hạn định · ≥ 2 cặp liên từ · hòa hợp động từ · không phủ định kép · 100–130 từ.
+**Tiêu chí tự đánh giá (0–2 điểm cho mỗi tiêu chí):** ≥ 6 từ hạn định · ≥ 2 cặp liên từ · hòa hợp động từ · không phủ định kép · 100–130 từ.
 
 **L5.2.** Mẫu: *I asked five people whether they drink coffee. All of them drink tea, but only two drink coffee. Both my parents drink coffee every morning. Neither of my sisters likes it. Each person drinks at least one cup of tea a day. None of them drinks energy drinks.*
 

@@ -1,5 +1,7 @@
 # S01 · Basic Sentence Building — Xây dựng câu nói cơ bản
 
+Hãy bắt đầu bằng câu ngắn có ý rõ, rồi thêm thông tin khi cần. Bạn sẽ luyện nói ai làm gì, ở đâu hoặc như thế nào. Nếu bị vướng, nói lại ý đó bằng một câu đơn giản hơn trước khi tìm cách diễn đạt dài hơn.
+
 | Mục | Nội dung |
 |---|---|
 | **Cấp độ** | A0 → A2 |

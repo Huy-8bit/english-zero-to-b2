@@ -1,5 +1,7 @@
 # W06 · Email Writing — Viết email và thư
 
+Trước khi viết email, xác định bạn đang viết cho ai và muốn người nhận biết hoặc làm gì. Bạn sẽ luyện trả lời đủ các yêu cầu bằng giọng phù hợp. Sau khi viết, đối chiếu từng ý của đề để tìm phần còn thiếu.
+
 | Mục | Nội dung |
 |---|---|
 | **Cấp độ** | A2 → B2 |
@@ -19,7 +21,7 @@
 
 ## 2. Quy tắc vàng: trả lời **đủ mọi ý** của đề
 
-Đề thường có 3 gạch đầu dòng — **mỗi gạch đầu dòng = ít nhất một đoạn/vài câu**. Thiếu một ý = mất điểm "hoàn thành nhiệm vụ" dù ngôn ngữ tốt.
+Đề có thể yêu cầu bạn trả lời nhiều ý. Hãy đánh dấu từng ý và kiểm tra mình đã trả lời đủ chưa. Độ dài cần cho mỗi ý tùy thông tin; không bắt buộc mỗi gạch đầu dòng phải thành một đoạn riêng. Bài viết đúng ngữ pháp nhưng bỏ sót yêu cầu vẫn chưa hoàn thành nhiệm vụ.
 
 **Kỹ thuật:** đánh số các ý của đề, viết xong đánh dấu ✓ từng ý.
 

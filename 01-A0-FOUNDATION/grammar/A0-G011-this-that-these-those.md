@@ -30,7 +30,7 @@
 | **Prerequisites** | [A0-G009 — To Be](A0-G009-verb-to-be.md) |
 | **Estimated Time** | 60 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Chọn đúng *this/that/these/those* dựa trên **khoảng cách** (gần/xa) và **số lượng** (một/nhiều).
 2. Dùng từ chỉ định **trước danh từ** (*this book*) và **thay cho danh từ** (*This is my book*).
@@ -52,7 +52,7 @@ Bạn đi chợ cùng một người bạn nước ngoài. Bạn cầm một qu�
 
 ## C. WHAT: Từ chỉ định là gì?
 
-**Demonstratives** (từ chỉ định) là từ dùng để **chỉ ra** người hoặc vật cụ thể, cho biết nó ở **gần** hay **xa** người nói, và là **một** hay **nhiều**.
+**Từ chỉ định (demonstratives)** giúp người nghe biết bạn đang chỉ người hoặc vật nào. Hãy nhìn hai điều: **gần hay xa**, **một hay nhiều**. Ví dụ, *this book* là quyển sách ở gần bạn; *those books* là những quyển sách ở xa hơn.
 
 | | Gần (near) | Xa (far) |
 |---|---|---|

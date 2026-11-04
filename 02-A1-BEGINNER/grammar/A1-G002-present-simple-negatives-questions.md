@@ -30,7 +30,7 @@
 | **Prerequisites** | [A1-G001](A1-G001-present-simple-affirmative.md), [A0-G017 — Question Words](../../01-A0-FOUNDATION/grammar/A0-G017-question-words.md) |
 | **Estimated Time** | 90 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Tạo câu phủ định với *don't / doesn't* + V nguyên mẫu với **mọi** động từ thường.
 2. Tạo câu hỏi Yes/No và trả lời ngắn chính xác.
@@ -50,13 +50,13 @@ Bạn đang trò chuyện với một đồng nghiệp người Úc trong giờ 
 
 Và trả lời câu hỏi của anh ấy: "Tôi không ăn thịt bò."
 
-🤔 **Hãy suy nghĩ:** Ở [A0-G016](../../01-A0-FOUNDATION/grammar/A0-G016-sentence-types.md) bạn đã gặp *do/does* với *have* và *like*. Liệu mọi động từ thường (*drink, eat, work, speak...*) có hoạt động theo cùng một cơ chế không? Còn câu hỏi 2 — chủ ngữ là "vợ anh" (*your wife*) — sẽ dùng *do* hay *does*?
+🤔 **Hãy suy nghĩ:** Ở [A0-G016](../../01-A0-FOUNDATION/grammar/A0-G016-sentence-types.md) bạn đã gặp *do/does* với *have* và *like*. Với các động từ như *drink, eat, work, speak*, bạn sẽ đặt *do/does* ở đâu? Còn câu hỏi 2 — chủ ngữ là "vợ anh" (*your wife*) — sẽ dùng *do* hay *does*?
 
 ---
 
 ## C. WHAT: Phủ định và câu hỏi ở hiện tại đơn
 
-Ở bài trước bạn đã học câu khẳng định. Bài này hoàn thiện thì hiện tại đơn với:
+Bạn đã biết nói *I drink coffee* — Tôi uống cà phê. Bài này giúp bạn nói “Tôi không uống cà phê” và hỏi “Bạn có uống cà phê không?”. Với động từ thường, ta dùng thêm *do/does*. Các dạng câu cần luyện là:
 
 | Loại câu | Mục đích | Ví dụ |
 |---|---|---|
@@ -65,7 +65,7 @@ Và trả lời câu hỏi của anh ấy: "Tôi không ăn thịt bò."
 | **Wh- question** | Hỏi thông tin cụ thể | *What **does** your wife **do**?* |
 | **Short answer** | Trả lời ngắn, tự nhiên | *Yes, I **do**. / No, she **doesn't**.* |
 
-Tin tốt: **mọi** động từ thường (*work, go, eat, speak, watch, study...*) đều dùng chung **một** cơ chế với *do/does* — bạn chỉ cần học một lần.
+Với các động từ thường đang học, bạn dùng chung mẫu *do/does + động từ nguyên mẫu*. Sau khi nắm mẫu, hãy thay động từ để tạo câu về việc của mình.
 
 ---
 
@@ -73,7 +73,7 @@ Tin tốt: **mọi** động từ thường (*work, go, eat, speak, watch, study
 
 Như bạn biết, động từ thường không tự đảo lên đầu câu hay tự gắn *not*. Chúng cần **trợ động từ** (auxiliary verb) *do/does*.
 
-Điều thú vị: *does* **"lấy đi"** chữ *-s* của động từ chính. Thông tin "ngôi thứ ba số ít" chỉ cần thể hiện **một lần** trong câu:
+Khi dùng *does*, động từ chính trở về nguyên mẫu: *works* thành *work*. Dạng *does* đã cho biết chủ ngữ là *he/she/it* hoặc một người, một vật:
 
 ```mermaid
 flowchart LR

@@ -1,5 +1,7 @@
 # A1 Skills Practice — Luyện bốn kỹ năng cấp độ A1
 
+Bạn đã học cách nói về thói quen, chuyện đã qua và dự định. Các nhiệm vụ dưới đây giúp bạn dùng chúng khi nghe, đọc, nói và viết. Nếu vướng ở một cấu trúc, ghi lại chỗ đó để ôn, rồi thử làm lại bằng thông tin khác.
+
 > Dùng sau mỗi khối ngữ pháp A1. Đáp án: [A1-SKILLS-ANSWERS](../12-ANSWERS-AND-EXPLANATIONS/SKILLS/A1-SKILLS-ANSWERS.md) · Transcript: [A1-LISTENING-TRANSCRIPTS](../12-ANSWERS-AND-EXPLANATIONS/SKILLS/A1-LISTENING-TRANSCRIPTS.md).
 
 ## Mục lục
@@ -41,7 +43,7 @@ Ba người nói về thói quen buổi sáng. Nối người (1–3) với thô
 
 ### Listening 3 — A weekend story (khối 4)
 
-Nghe **Nga** kể về cuối tuần. Chọn đáp án đúng.
+Nghe **Nga** kể về cuối tuần. Chọn đáp án phù hợp với câu và ngữ cảnh.
 
 **1.** Where did Nga go on Saturday?  A. to the beach  B. to the mountains  C. to her grandmother's house
 **2.** How did she travel?  A. by bus  B. by car  C. by motorbike

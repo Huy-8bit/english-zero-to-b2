@@ -1,5 +1,7 @@
 # A0 Exit Test — Bài kiểm tra cuối cấp A0
 
+Bạn sẽ dùng những kiến thức A0 trong các nhiệm vụ nghe, đọc, nói và viết. Kết quả giúp bạn chọn phần cần ôn trước A1. Hãy xem riêng từng kỹ năng, vì điểm ngữ pháp tốt chưa cho biết bạn đã làm được mọi nhiệm vụ giao tiếp.
+
 > **Mục đích:** Tìm phần nền móng cần ôn trước khi học A1. Đây là đề tự biên soạn chưa chuẩn hóa; A0 là nhãn của giáo trình, không phải chứng nhận CEFR. Làm trong điều kiện giống thi thật: **không xem bài học, không tra từ điển, bấm giờ**.
 
 | Phần | Nội dung | Điểm | Thời gian gợi ý |

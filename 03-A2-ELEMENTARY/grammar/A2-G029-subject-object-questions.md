@@ -19,7 +19,7 @@ Câu gốc: “Lan called Minh.” Nếu không biết người gọi, hỏi “
 
 ## C. WHAT
 
-**Subject question — câu hỏi chủ ngữ** hỏi người/vật thực hiện hành động hoặc giữ vai trò chủ ngữ: *Who called you?* Who thay ngay vị trí chủ ngữ. **Object question — câu hỏi tân ngữ** hỏi đối tượng của hành động: *Who did you call?* You vẫn là chủ ngữ. Từ who không tự quyết định loại câu hỏi; phải xem vai trò trong câu.
+So sánh *Who called you?* — Ai gọi cho bạn?, với *Who did you call?* — Bạn đã gọi cho ai? Câu đầu hỏi **chủ ngữ (subject)**, tức người thực hiện hành động. Câu sau hỏi **tân ngữ (object)**, tức người được gọi; *you* vẫn là chủ ngữ. Hãy nhìn vai trò của từ hỏi trong câu, thay vì chỉ nhìn thấy *who*.
 
 ## D. WHY
 

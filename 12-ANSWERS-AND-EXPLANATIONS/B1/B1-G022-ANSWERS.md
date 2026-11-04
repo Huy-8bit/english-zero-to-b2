@@ -56,7 +56,7 @@
 
 > *Life in my hometown, Quang Ngai, is very different from what it was twenty years ago. People are much richer now, and the roads are far better. Twenty years ago, few families had a motorbike, but today there are probably five times as many motorbikes as before. Houses are getting bigger and bigger, and more and more young people are moving to big cities for work. However, life is not as peaceful as it used to be. The air is slightly more polluted, and traffic is becoming more and more dangerous. In my opinion, the more a town develops, the more it loses its traditional character. Still, I think most people prefer life today because they have better healthcare and education.*
 
-**Rubric (0–2 mỗi tiêu chí):** đủ số cấu trúc yêu cầu · chính xác hình thức · nội dung so sánh rõ hai thời kỳ · mạch lạc · 120–150 từ.
+**Tiêu chí tự đánh giá (0–2 điểm cho mỗi tiêu chí):** đủ số cấu trúc yêu cầu · chính xác hình thức · nội dung so sánh rõ hai thời kỳ · mạch lạc · 120–150 từ.
 
 **L5.2.** Mẫu ý: *A dormitory is much cheaper than a private room — often half as expensive. However, a private room is far more comfortable. The more freedom you want, the more you'll have to pay. Dorms aren't as quiet as private rooms, but they are slightly safer...*
 

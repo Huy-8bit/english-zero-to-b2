@@ -19,7 +19,7 @@ Lan chụp một người bạn: “Lan took a photo of her.” Lan dùng máy �
 
 ## C. WHAT
 
-**Reflexive pronoun — đại từ phản thân** như myself, yourself, herself dùng khi chủ ngữ và đối tượng của hành động cùng một người/vật trong các mẫu của bài: *I taught myself*. Chúng còn dùng để **emphasise — nhấn mạnh** ai tự làm: *I made this cake myself*. Cụm **by + reflexive pronoun** thường nghĩa một mình hoặc không được giúp đỡ: *I travelled by myself*. Phân biệt theo ngữ cảnh, không dịch mọi trường hợp chỉ bằng “bản thân”.
+**Đại từ phản thân (reflexive pronoun)** như *myself, yourself, herself* có vài cách dùng. *I taught myself* là tôi tự học, còn *I made it myself* nhấn mạnh chính tôi làm. **By myself** thường có nghĩa một mình hoặc không có ai giúp. Vì vậy, bạn cần nhìn cả câu, không dịch mọi trường hợp thành “bản thân”.
 
 ## D. WHY
 

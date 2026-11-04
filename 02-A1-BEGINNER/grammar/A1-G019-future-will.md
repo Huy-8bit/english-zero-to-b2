@@ -30,7 +30,7 @@
 | **Prerequisites** | [A1-G012 — Can](A1-G012-can-cant.md) (modal verbs), [A1-G002](A1-G002-present-simple-negatives-questions.md) |
 | **Estimated Time** | 75 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Tạo câu với **will / won't + V** cho mọi chủ ngữ.
 2. Dùng *will* cho: **quyết định tức thời**, **dự đoán** (ý kiến), **lời hứa**, **lời đề nghị giúp đỡ**, **sự thật tương lai**.
@@ -55,7 +55,7 @@ Trên đường về, trời bắt đầu tối. Bạn nói với bạn mình: "
 
 ## C. WHAT: *Will* là gì?
 
-**Will** là modal verb dùng để nói về **tương lai** — nhưng không phải mọi tương lai. *Will* đặc biệt phù hợp khi tương lai đó xuất phát từ **suy nghĩ, ý kiến, quyết định hoặc lời hứa của người nói tại thời điểm nói**.
+**Will** thường dùng cho quyết định ngay lúc nói, lời hứa, lời đề nghị giúp đỡ và dự đoán. *I'll help you* có thể hiểu là “Để tôi giúp bạn”. *Will* không tương đương với mọi cách dùng từ “sẽ” trong tiếng Việt; bạn cần xem người nói muốn diễn đạt điều gì.
 
 | Cách dùng | Ví dụ | Nghĩa |
 |---|---|---|
@@ -69,7 +69,7 @@ Trên đường về, trời bắt đầu tối. Bạn nói với bạn mình: "
 
 ## D. WHY: *Will* là "quyết định trong đầu người nói"
 
-Hãy hình dung *will* như một **bóng đèn bật sáng trong đầu** ngay lúc nói 💡. Không có kế hoạch, không có bằng chứng bên ngoài — chỉ có suy nghĩ, ý chí hoặc niềm tin của người nói.
+Nếu vừa quyết định giúp ai, bạn có thể nói *I’ll help you*. Đây là một cách dùng quen thuộc của *will*. Tuy vậy, không phải mọi câu có *will* đều là quyết định mới nảy ra: nó còn dùng cho lời hứa, dự đoán và những ý khác trong bảng.
 
 ```mermaid
 flowchart LR
@@ -78,7 +78,7 @@ flowchart LR
 
 So sánh với *be going to* (bài sau [A1-G020](A1-G020-be-going-to.md)): *going to* nói về **kế hoạch đã có trước** hoặc **dự đoán dựa trên bằng chứng nhìn thấy**.
 
-Vì *will* là modal verb, nó tuân theo **ba quy tắc vàng** ([A1-G012](A1-G012-can-cant.md)): không chia, không *to*, không *do*.
+Vì *will* là modal verb, nó tuân theo **ba điểm cần nhớ** ([A1-G012](A1-G012-can-cant.md)): không chia, không *to*, không *do*.
 
 ---
 
@@ -200,7 +200,7 @@ Sau *when, if, before, after, as soon as*... nói về tương lai, dùng **hi�
 
 ## J. MEMORY TRICKS
 
-1. **"Will = bóng đèn 💡"**: ý tưởng/quyết định bật ra ngay lúc nói.
+1. **Gắn will với một lời đề nghị:** *I’ll carry that for you* — Để tôi mang giúp bạn. Câu này minh họa sự sẵn lòng; đừng dùng nó làm quy tắc cho mọi câu tương lai.
 2. **"Won't = will + not"** — viết khác hẳn (không phải *willn't*), đọc /wəʊnt/ như "wâunt".
 3. **"Shall chỉ đi với I và We"** trong câu hỏi đề nghị: *Shall I...? Shall we...?*
 

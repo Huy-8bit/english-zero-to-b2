@@ -30,7 +30,7 @@
 | **Prerequisites** | [B2-G013 — Perfect Infinitives & Gerunds](B2-G013-perfect-infinitives-gerunds.md), [B1-G021 — Verb Patterns](../../04-B1-INTERMEDIATE/grammar/B1-G021-verb-patterns.md) |
 | **Estimated Time** | 90 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Dùng **tính từ sở hữu / tân ngữ + V-ing**: *Do you mind **my/me opening** the window?*
 2. Dùng các **cụm cố định + V-ing**: *It's no use..., There's no point (in)..., can't help..., be worth..., have difficulty (in)...*
@@ -52,7 +52,7 @@
 
 ## C. WHAT
 
-Bài B1 đã dạy các nhóm cơ bản (*enjoy doing, want to do, stop/remember/try*). B2 bổ sung những mẫu **ít quy tắc hơn**, hay gặp trong bài đọc và biến đổi câu:
+Bạn đã gặp *enjoy doing, want to do* và những cặp đổi nghĩa như *stop doing/stop to do*. Bài này học thêm các mẫu cần ghi nhớ theo cụm. Khi gặp động từ mới, hãy ghi lại cả phần đi sau và một câu có ngữ cảnh, thay vì đoán từ nghĩa tiếng Việt.
 
 | Nhóm | Ví dụ |
 |---|---|

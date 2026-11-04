@@ -30,7 +30,7 @@
 | **Prerequisites** | [B1-G009 — Wish / If only](../../04-B1-INTERMEDIATE/grammar/B1-G009-wish-if-only.md), [B1-G007 — Second Conditional](../../04-B1-INTERMEDIATE/grammar/B1-G007-second-conditional.md) |
 | **Estimated Time** | 75 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Hiểu **quá khứ giả định** (unreal past): dùng **dạng quá khứ** để nói về **hiện tại/tương lai không có thật**.
 2. Dùng ***would rather + V*** (cùng chủ ngữ) và ***would rather + S + V2*** (khác chủ ngữ).
@@ -52,7 +52,7 @@
 
 ## C. WHAT
 
-**Quá khứ giả định** = dùng **thì quá khứ** không phải để nói về quá khứ, mà để đánh dấu điều gì đó là **không có thật / mong muốn / chưa xảy ra**. Bạn đã gặp ở:
+Đôi khi dạng quá khứ diễn tả điều người nói muốn khác đi, chứ không kể một chuyện đã qua. Đây thường được gọi là **quá khứ giả định (unreal past)**. Ví dụ, *It's time we left* gần nghĩa “Đến lúc chúng ta đi rồi”. Bạn đã gặp cách dùng dạng quá khứ này ở:
 
 - Câu điều kiện loại 2: *If I **had** money...*
 - *Wish*: *I wish I **knew** the answer.*
@@ -135,7 +135,7 @@ Những cấu trúc này giúp bạn **yêu cầu lịch sự**, **phàn nàn kh
 | 8 | *It looks **as if** the shop **is** closed.* | Có vẻ như cửa hàng đóng cửa. | Có thể thật |
 | 9 | *He spends money **as if** he **were** a millionaire.* | Anh ta tiêu tiền như thể là triệu phú. | Không thật |
 | 10 | *She looked **as though** she **hadn't slept** for days.* | Cô ấy trông như thể nhiều ngày chưa ngủ. | Không thật — quá khứ |
-| 11 | ***Suppose** you **lost** your job tomorrow. What **would** you do?* | Giả sử mai bạn mất việc... | Suppose + V2 |
+| 11 | ***Suppose** you **lost** your job tomorrow. What **would** you do?* | Giả sử ngày mai bạn mất việc. Bạn sẽ làm gì? | Suppose + V2 |
 | 12 | *I'd sooner **walk** than wait an hour for the bus.* | Tôi thà đi bộ còn hơn đợi xe buýt một tiếng. | would sooner = would rather |
 
 ---
@@ -234,7 +234,7 @@ It's time ...      It's time we knew           —
 
 ### Level 2 — Controlled Practice
 
-Viết lại câu bằng từ trong ngoặc.
+Dùng từ trong ngoặc để viết lại câu, giữ nguyên ý.
 
 **L2.1.** I prefer to walk rather than drive. (would rather)
 **L2.2.** Please don't call me after 10 p.m. (I'd rather you)
@@ -245,7 +245,7 @@ Viết lại câu bằng từ trong ngoặc.
 **L2.7.** He behaves like a king, but he isn't one. (as if)
 **L2.8.** She looked very shocked. It seemed she had heard terrible news. (as though)
 
-Chia động từ trong ngoặc.
+Điền dạng phù hợp của động từ trong ngoặc.
 
 **L2.9.** It sounds as if someone (knock) ___ at the door. (có thể thật — đang gõ)
 **L2.10.** Suppose you (meet) ___ your favourite actor — what would you say?

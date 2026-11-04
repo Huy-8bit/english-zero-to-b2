@@ -56,7 +56,7 @@
 
 > *My first wish is about the present: I wish I lived closer to my parents. They are getting older, and if I lived nearer, I could visit them every weekend. My second wish is a regret. I wish I had studied English seriously at school. If I had started earlier, I would have got a job abroad by now. My third wish is for my city. I wish people would stop throwing rubbish in the rivers. If everyone cared a little more, our city would be much more beautiful. Of course, wishes don't change anything by themselves, but they show me what really matters to me.*
 
-**Rubric (0–2 mỗi tiêu chí):** đủ 3 loại điều ước với cấu trúc đúng · có lý do/giải thích (có thể dùng điều kiện) · 100–120 từ · mạch lạc.
+**Tiêu chí tự đánh giá (0–2 điểm cho mỗi tiêu chí):** đủ 3 loại điều ước với cấu trúc đúng · có lý do/giải thích (có thể dùng điều kiện) · 100–120 từ · mạch lạc.
 
 > Ghi chú: *would have got a job abroad by now* trong mẫu là cách nói tự nhiên dù chạm cả hiện tại — điều kiện hỗn hợp sẽ học ở B2.
 

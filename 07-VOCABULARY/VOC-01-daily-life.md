@@ -1,5 +1,7 @@
 # VOC-01 · Daily Life — Cuộc sống hằng ngày
 
+Hãy bắt đầu từ một ngày của bạn: thức dậy, đi làm, làm việc nhà rồi nghỉ ngơi. Bạn sẽ học từ và cụm từ để kể những việc đó. Với mỗi cụm, thử đặt một câu có thời gian hoặc hoàn cảnh cụ thể của mình.
+
 | Mục | Nội dung |
 |---|---|
 | **Cấp độ** | A1 → B1 |

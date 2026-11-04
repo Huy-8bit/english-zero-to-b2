@@ -30,7 +30,7 @@
 | **Prerequisites** | [B1-G007 — Second Conditional](../../04-B1-INTERMEDIATE/grammar/B1-G007-second-conditional.md), [B1-G008 — Third Conditional](../../04-B1-INTERMEDIATE/grammar/B1-G008-third-conditional.md) |
 | **Estimated Time** | 90 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Hiểu vì sao cần **trộn** loại 2 và loại 3 khi thời gian của điều kiện và kết quả **khác nhau**.
 2. Dùng **Mixed type A**: *If + had V3, would + V* (quá khứ → hiện tại).
@@ -53,7 +53,7 @@
 
 ## C. WHAT
 
-**Câu điều kiện hỗn hợp** (mixed conditional) kết hợp **mệnh đề *if* của một loại** với **mệnh đề chính của loại khác**, vì điều kiện và kết quả nằm ở **hai thời điểm khác nhau**.
+**Câu điều kiện hỗn hợp (mixed conditional)** dùng khi điều kiện và kết quả tưởng tượng nói về hai mốc thời gian khác nhau. *If I'd gone to bed earlier, I wouldn't be so tired now* là “Nếu tối qua ngủ sớm hơn, giờ tôi đã không mệt thế này”. Hãy xác định thời gian của từng phần trước khi chọn dạng động từ.
 
 | Kiểu | Điều kiện | Kết quả | Ví dụ |
 |---|---|---|---|
@@ -64,7 +64,7 @@
 
 ## D. WHY
 
-Câu điều kiện "chuẩn" giả sử điều kiện và kết quả **cùng thời điểm**. Nhưng đời thực thường không vậy: **một quyết định trong quá khứ** ảnh hưởng **cuộc sống hiện tại**; **một đặc điểm lâu dài** đã gây ra **một sự kiện quá khứ**.
+Ở loại 3, bạn tưởng tượng điều kiện và kết quả đều khác với quá khứ. Với câu hỗn hợp, một quyết định trước đây có thể ảnh hưởng cuộc sống bây giờ. Chiều ngược lại, bạn có thể tưởng tượng một đặc điểm lâu dài khác đi và vì thế một việc quá khứ đã có kết quả khác. Đặc điểm ấy cần phù hợp cả với thời điểm sự việc quá khứ, không phải một thay đổi hiện tại gây ngược về quá khứ.
 
 ```mermaid
 flowchart LR
@@ -76,7 +76,7 @@ flowchart LR
     end
 ```
 
-Ở trình độ B2, bài thi (Writing, Speaking) đánh giá cao khả năng diễn đạt **quan hệ nhân quả xuyên thời gian** như vậy.
+Bạn dùng mẫu này khi thực sự cần nối hai mốc thời gian. Đừng trộn các dạng chỉ để làm câu phức tạp hơn; trước hết hãy nói rõ điều kiện và kết quả thuộc lúc nào.
 
 ---
 
@@ -91,7 +91,7 @@ If + S + had + V3 ...,   S + would/could/might + V (nguyên mẫu) ... (now)
 | Ví dụ | Thực tế |
 |---|---|
 | *If I **had gone** to bed earlier, I **wouldn't be** so tired now.* | Tôi đã ngủ muộn → bây giờ mệt. |
-| *If she **hadn't moved** to Hanoi, she **wouldn't know** her husband.* | Cô ấy đã chuyển đến Hà Nội → giờ cô ấy biết chồng mình. |
+| *If she **hadn't moved** to Hanoi, she **wouldn't live** near us now.* | Cô ấy đã chuyển đến Hà Nội → bây giờ cô ấy sống gần chúng tôi. |
 | *If they **had booked** earlier, they **could be** on the beach right now.* | Họ không đặt sớm → giờ không ở biển. |
 
 ### E2. Type B — hiện tại/luôn đúng → quá khứ
@@ -122,11 +122,11 @@ If + S + V2 / were ...,   S + would/could/might + have + V3 ...
 |---|---|---|---|
 | 1 | *If I **had learned** English as a child, I **would be** fluent now.* | Nếu hồi nhỏ học tiếng Anh, giờ tôi đã thành thạo. | Type A |
 | 2 | *If he **hadn't lost** his passport, he **would be** in Paris today.* | Nếu không mất hộ chiếu, hôm nay anh ấy đã ở Paris. | Type A — *today* |
-| 3 | *If we **had left** on time, we **would be sitting** in the theatre now.* | ... giờ chúng ta đã đang ngồi trong rạp. | Type A + tiếp diễn |
+| 3 | *If we **had left** on time, we **would be sitting** in the theatre now.* | Nếu lúc nãy chúng ta đi đúng giờ, giờ này chúng ta đang ngồi trong rạp rồi. | Type A + tiếp diễn |
 | 4 | *If I **were** better at maths, I **would have passed** the exam.* | Nếu tôi giỏi toán hơn, tôi đã đỗ kỳ thi. | Type B — năng lực lâu dài |
 | 5 | *If she **didn't live** so far away, she **would have come** to the party.* | Nếu cô ấy không sống quá xa, cô ấy đã đến bữa tiệc. | Type B |
 | 6 | *If you **weren't** so stubborn, you **would have listened** to my advice.* | Nếu bạn không bướng thế, bạn đã nghe lời tôi. | Type B — tính cách |
-| 7 | *If the government **had invested** in public transport, traffic **wouldn't be** so bad today.* | Nếu chính phủ đã đầu tư..., giao thông hôm nay đã không tệ vậy. | Type A — văn nghị luận |
+| 7 | *If the government **had invested** in public transport, traffic **wouldn't be** so bad today.* | Nếu trước đây chính phủ đầu tư vào giao thông công cộng, tình hình giao thông bây giờ đã không tệ thế này. | Type A — văn nghị luận |
 | 8 | *If I **hadn't met** you, my life **would be** completely different.* | Nếu không gặp bạn, đời tôi giờ đã hoàn toàn khác. | Type A |
 | 9 | *If I **spoke** Japanese, I **could have helped** the tourists yesterday.* | Nếu tôi nói tiếng Nhật, hôm qua tôi đã giúp được du khách. | Type B + *could* |
 | 10 | *If he **had taken** the medicine, he **might feel** better now.* | Nếu anh ấy đã uống thuốc, giờ có thể đã khỏe hơn. | Type A + *might* |
@@ -231,14 +231,14 @@ Xác định loại: **2**, **3**, **A** (mixed quá khứ→hiện tại), **B*
 **L1.3.** If she weren't so busy, she would have come to the wedding.
 **L1.4.** If they had played better, they would have won the final.
 
-Chọn đáp án đúng.
+Chọn đáp án phù hợp với câu và ngữ cảnh.
 
 **L1.5.** If I hadn't broken my leg, I ___ skiing with my friends right now.  A. would have been  B. would be  C. will be
 **L1.6.** If he ___ so lazy, he would have finished the project on time.  A. hadn't been  B. weren't  C. wouldn't be
 
 ### Level 2 — Controlled Practice
 
-Chia động từ trong ngoặc.
+Điền dạng phù hợp của động từ trong ngoặc.
 
 **L2.1.** If I (accept) ___ that job in Da Nang, I (live) ___ near the beach now.
 **L2.2.** If she (be) ___ more organised, she (not / miss) ___ the deadline last week.
@@ -267,7 +267,7 @@ Viết câu điều kiện hỗn hợp từ tình huống thực tế.
 
 **L4.1.** Dịch: *"Nếu tôi đã học tiếng Anh nghiêm túc từ hồi đại học, giờ tôi đã có công việc tốt hơn."*
 **L4.2.** Dịch: *"Nếu anh ấy không nhút nhát như vậy, anh ấy đã tỏ tình với cô ấy từ năm ngoái."*
-**L4.3.** Dịch: *"Nếu chúng ta không bị lạc đường, giờ chúng ta đã đang ăn tối ở nhà hàng rồi."*
+**L4.3.** Dịch: *"Nếu lúc nãy không bị lạc đường, bây giờ chúng ta đã ngồi ăn tối ở nhà hàng rồi."*
 **L4.4.** Viết 2 câu (1 type A, 1 type B) về cuộc sống của chính bạn.
 
 **L4.5.** **Explain:** Vì sao câu *"If I had taken the job, I would live in Singapore now"* không dùng *would have lived*? (tiếng Việt, 2 câu)

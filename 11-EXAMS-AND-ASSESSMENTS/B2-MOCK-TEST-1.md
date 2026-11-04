@@ -1,5 +1,7 @@
 # B2 Mock Test 1 — Đề luyện tập tổng hợp cấp B2
 
+Bạn sẽ thử một lượt làm bài tổng hợp sau khi học B2. Hãy ghi thời gian thực tế và xem kết quả từng phần để chọn việc cần luyện tiếp. Những câu sai cần được chữa bằng ngữ cảnh và quy tắc, không chỉ bằng việc ghi nhớ đáp án.
+
 Đề **tự biên soạn** để kiểm tra mức sẵn sàng sau 30 bài ngữ pháp B2 và ba [unit kỹ năng B2](../05-B2-UPPER-INTERMEDIATE/B2-SKILLS-PRACTICE.md). **Không phải đề CEFR/VSTEP chính thức, không quy đổi ra điểm thi chuẩn hóa và không cấp chứng nhận.** Không xem [đáp án, transcript và rubric](../12-ANSWERS-AND-EXPLANATIONS/EXAMS/B2-MOCK-TEST-1-ANSWERS.md) trước khi làm.
 
 ## Cách tổ chức và điểm

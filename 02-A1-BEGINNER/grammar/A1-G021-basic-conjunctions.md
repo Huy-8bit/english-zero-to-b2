@@ -30,7 +30,7 @@
 | **Prerequisites** | [A0-G008 — Sentence Patterns](../../01-A0-FOUNDATION/grammar/A0-G008-sentence-patterns.md) |
 | **Estimated Time** | 60 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Dùng *and* (thêm ý), *but* (tương phản), *or* (lựa chọn), *so* (kết quả), *because* (lý do).
 2. Nối hai câu đơn thành một câu ghép tự nhiên.
@@ -46,7 +46,7 @@
 
 > *I live in Hue. I work in a hotel. I like my job. It is tiring. I want to change my job. I want to earn more money.*
 
-Mọi câu đều đúng, nhưng đoạn văn nghe như **robot** — các ý rời rạc, không thấy mối quan hệ.
+Các câu đều đúng, nhưng người đọc chưa thấy rõ ý nào bổ sung, đối lập hay giải thích cho ý nào. Bạn có thể nối những ý liên quan để đoạn văn dễ theo dõi hơn.
 
 🤔 **Hãy suy nghĩ:** Trong tiếng Việt, bạn sẽ nối các câu này bằng những từ nào? ("và", "nhưng", "vì", "nên"...) Tiếng Anh có những từ tương đương không?
 
@@ -54,7 +54,7 @@ Mọi câu đều đúng, nhưng đoạn văn nghe như **robot** — các ý r�
 
 ## C. WHAT: Liên từ là gì?
 
-**Conjunctions** (liên từ) là những từ **nối** từ, cụm từ hoặc câu, đồng thời cho biết **mối quan hệ logic** giữa chúng.
+**Liên từ (conjunctions)** nối từ, cụm từ hoặc các phần câu. Chúng cho người nghe biết hai ý liên quan thế nào: thêm ý, đối lập, lựa chọn, nguyên nhân hay kết quả. So sánh *I was tired, so I went home* với *I went home because I was tired*.
 
 | Liên từ | Quan hệ | Nghĩa | Ví dụ |
 |---|---|---|---|

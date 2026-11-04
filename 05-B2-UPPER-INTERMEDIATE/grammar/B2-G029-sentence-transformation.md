@@ -30,7 +30,7 @@
 | **Prerequisites** | Toàn bộ B2-G001 → G028, đặc biệt [B2-G002](B2-G002-advanced-conditionals.md), [B2-G005](B2-G005-passive-reporting.md), [B2-G009](B2-G009-inversion.md), [B2-G016](B2-G016-unreal-past-would-rather.md), [B2-G018](B2-G018-contrast-concession.md) |
 | **Estimated Time** | 120 phút (có thể chia 2 buổi) |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Nắm **quy trình 5 bước** làm bài biến đổi câu với từ khóa (key word transformation).
 2. Nhận diện **12 "cặp biến đổi"** thường gặp ở trình độ B2.
@@ -52,7 +52,7 @@
 
 ## C. WHAT
 
-**Key word transformation** (biến đổi câu với từ khóa): viết lại câu thứ hai sao cho **cùng nghĩa** với câu gốc, dùng **từ khóa cho sẵn** (không được thay đổi từ đó), trong **giới hạn số từ** (thường 2–5 hoặc 3–6 từ, tính cả từ khóa).
+Trong **bài biến đổi câu với từ khóa (key word transformation)**, bạn viết lại một câu sao cho giữ được ý gốc. Bạn phải dùng nguyên từ khóa và tuân theo giới hạn từ của đề. Hãy kiểm tra cả nghĩa, thời gian, phủ định và mức độ chắc chắn, thay vì chỉ thay một công thức.
 
 Đây là dạng bài kinh điển trong nhiều bài thi B2 quốc tế, và là cách luyện **paraphrase** — kỹ năng quan trọng cho Reading, Writing và Speaking.
 

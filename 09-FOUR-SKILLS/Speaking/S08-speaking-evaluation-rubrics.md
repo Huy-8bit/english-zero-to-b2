@@ -1,5 +1,7 @@
 # S08 · Speaking Evaluation Rubrics — Tự đánh giá kỹ năng nói
 
+Bảng tiêu chí giúp bạn nghe lại bản ghi và tìm điểm cần cải thiện. Hãy chọn bằng chứng cụ thể: một chỗ phát âm khó hiểu, một lần dừng quá lâu hoặc một ý chưa giải thích đủ. Điểm tự chấm dùng để theo dõi việc luyện, không thay cho kết quả thi.
+
 | Mục | Nội dung |
 |---|---|
 | **Cấp độ** | A1 → B2 |

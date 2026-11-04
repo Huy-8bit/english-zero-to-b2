@@ -1,5 +1,7 @@
 # LAB-09 · Weekly Review — Bộ ôn tập cuối tuần
 
+Cuối tuần, bạn sẽ tự kiểm tra kiến thức mà không dựa ngay vào bài học. Dùng kết quả để chọn vài chỗ cần ôn, không cần học lại mọi thứ từ đầu. Làm xong bài tập rồi mới ghi kết quả vào nhật ký tuần.
+
 | Mục | Nội dung |
 |---|---|
 | **Thời lượng** | 45–60 phút, mỗi tuần một lần |

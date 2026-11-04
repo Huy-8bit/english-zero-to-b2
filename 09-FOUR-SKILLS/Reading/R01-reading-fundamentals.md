@@ -1,5 +1,7 @@
 # R01 · Reading Fundamentals — Nền tảng kỹ năng đọc
 
+Khi đọc một câu, bạn cần nhận ra ý chính trước khi xử lý từng từ lạ. Bài này luyện tìm chủ ngữ, động từ và những thông tin bổ sung. Với từ chưa biết, thử đọc cả câu rồi mới quyết định có cần tra từ điển không.
+
 | Mục | Nội dung |
 |---|---|
 | **Cấp độ** | A1 → A2 |

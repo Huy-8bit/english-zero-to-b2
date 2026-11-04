@@ -30,7 +30,7 @@
 | **Prerequisites** | [A2-G003](A2-G003-present-perfect-form.md) |
 | **Estimated Time** | 75 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Dùng ***just*** cho việc **vừa mới** xảy ra.
 2. Dùng already cho việc đã xảy ra tính đến một mốc, thường sớm hơn mong đợi hoặc không cần làm lại.
@@ -56,6 +56,8 @@ Bạn trả lời:
 ---
 
 ## C. WHAT: Ba trạng từ của "sự mong đợi"
+
+Các từ **just, already, yet** và **still** giúp bạn nói rõ việc vừa xảy ra, đã xong hay vẫn chưa xong. So sánh *I've already sent it* — Tôi gửi rồi, với *I haven't sent it yet* — Tôi chưa gửi. Chọn từ theo điều bạn muốn nhấn mạnh, rồi đặt từ vào vị trí phù hợp.
 
 | Trạng từ | Nghĩa | Loại câu | Ví dụ |
 |---|---|---|---|

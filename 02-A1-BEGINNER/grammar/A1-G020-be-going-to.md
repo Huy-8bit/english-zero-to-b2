@@ -30,7 +30,7 @@
 | **Prerequisites** | [A1-G019 — Will](A1-G019-future-will.md), [A1-G004 — Present Continuous](A1-G004-present-continuous.md) |
 | **Estimated Time** | 90 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Tạo câu với **am/is/are + going to + V**.
 2. Dùng *be going to* cho **dự định/kế hoạch đã có trước** thời điểm nói.
@@ -52,7 +52,7 @@
 
 ## C. WHAT: *Be going to* là gì?
 
-**Be going to + V** diễn tả tương lai **đã có "mầm mống" từ hiện tại**:
+**Be going to + động từ nguyên mẫu** thường dùng cho dự định đã có trước, hoặc dự đoán dựa vào dấu hiệu hiện tại. *I'm going to cook tonight* là “Tối nay tôi định nấu ăn”. Hai cách dùng chính là:
 
 | Cách dùng | Ví dụ | Nghĩa |
 |---|---|---|
@@ -65,7 +65,7 @@ Lưu ý: *going to* ở đây **không** mang nghĩa "đang đi đến". Cả c�
 
 ## D. WHY: *Going to* — tương lai đã bắt đầu từ hiện tại
 
-Cấu trúc này dùng **thì hiện tại tiếp diễn** (*am/is/are + going*) — như thể bạn **đang "trên đường" tiến tới** sự việc đó. Ý định đã có trong đầu bạn, hoặc dấu hiệu đã xuất hiện trước mắt bạn — tương lai đã "khởi động" từ hiện tại.
+Trong cấu trúc chỉ tương lai này, *be going to* đi với một động từ nguyên mẫu: *am going to cook*. Đừng hiểu là người nói đang di chuyển đến đâu. Bạn dùng cấu trúc để nêu dự định hoặc một dự đoán có căn cứ ở hiện tại.
 
 ```mermaid
 flowchart LR
@@ -195,7 +195,7 @@ BẰNG CHỨNG:
 
 1. **Ba biểu tượng**: 💡 *will* (bật ra lúc nói) · 📅 *going to* (kế hoạch có sẵn) · 👀 *going to* (thấy bằng chứng).
 2. **"Going to = đang trên đường tới"**: Bạn đã "lên đường" (đã định / đã có dấu hiệu) → *going to*.
-3. **Câu kiểm tra**: Hỏi "Quyết định này có **trước** khi tôi mở miệng không?" Có → *going to*. Không → *will*.
+3. **Câu hỏi hỗ trợ:** Đây có phải dự định đã có hoặc dự đoán từ dấu hiệu hiện tại không? Nếu có, *going to* thường phù hợp. *Will* và *going to* có phần giao nhau; hãy đọc cả ngữ cảnh, không chọn chỉ từ một dấu hiệu.
 
 ---
 

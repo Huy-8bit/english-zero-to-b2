@@ -19,7 +19,7 @@ Mục tiêu: dùng câu mở đầu lịch sự để hỏi thông tin; giữ tr
 
 ## C. WHAT
 
-**Embedded question — câu hỏi được lồng vào một câu khác** xuất hiện sau các cụm như *Could you tell me...? Do you know...? I wonder...*. Trong chương trình này, đây là dạng **indirect question — câu hỏi gián tiếp** dùng để hỏi lịch sự hoặc nói điều mình chưa biết. Nó không tự động là reported speech (lời tường thuật) và không bắt buộc lùi thì; tường thuật có bối cảnh quá khứ học ở B1.
+Bạn có thể lồng câu hỏi vào một lời hỏi lịch sự, như *Could you tell me where the bank is?* — Bạn chỉ giúp tôi ngân hàng ở đâu được không? Phần *where the bank is* là **câu hỏi lồng (embedded question)**. Bài gọi đây là một dạng **câu hỏi gián tiếp (indirect question)**. Cách hỏi này không tự động yêu cầu lùi thì như khi tường thuật lời nói ở quá khứ.
 
 ## D. WHY
 

@@ -19,7 +19,7 @@ Bạn thấy thông báo: *The classroom is cleaned every day.* — Phòng học
 
 ## C. WHAT
 
-**Active voice — thể chủ động:** chủ ngữ là người/vật thực hiện hành động. **Passive voice — thể bị động:** chủ ngữ là người/vật nhận tác động. Công thức cốt lõi là **be + past participle (V3) — be + phân từ quá khứ**.
+Ở câu **chủ động (active)**, chủ ngữ thường thực hiện hành động: *Lan made this cake*. Ở câu **bị động (passive)**, ta nói về người hoặc vật nhận tác động: *This cake was made by Lan*. Dạng cơ bản của bị động là **be + phân từ quá khứ (past participle, V3)**.
 
 Tiếng Việt dùng “được” hoặc “bị” tùy cảm nhận: *The window was broken* có thể dịch “Cửa sổ bị vỡ/bị làm vỡ”. Tiếng Anh dùng cùng cấu trúc bị động, không thêm một từ riêng để phân loại tốt/xấu. Không phải mọi câu tiếng Việt có “được” đều nên chuyển máy móc thành bị động tiếng Anh.
 

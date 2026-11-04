@@ -30,7 +30,7 @@
 | **Prerequisites** | [B2-G020 — Complex Noun Phrases](B2-G020-complex-noun-phrases.md), [VOC-18 — Word Families](../../07-VOCABULARY/VOC-18-word-families.md) |
 | **Estimated Time** | 75 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Nắm các **hậu tố** tạo danh từ: *-tion/-sion, -ment, -ance/-ence, -ity, -ness, -al, -ure, -th*.
 2. **Viết lại** câu dùng động từ/tính từ thành câu dùng **danh từ** (văn học thuật).
@@ -52,7 +52,7 @@
 
 ## C. WHAT
 
-**Danh từ hóa** (nominalisation) = diễn đạt **hành động** hoặc **tính chất** bằng **danh từ** thay vì động từ/tính từ.
+**Danh từ hóa (nominalisation)** là diễn đạt một hành động hoặc tính chất bằng danh từ. Chẳng hạn, *decide* chuyển thành *decision*. Cách viết này có thể giúp gói một ý để nói tiếp trong báo cáo, nhưng dùng quá nhiều sẽ làm câu nặng và khó đọc.
 
 | Động từ/tính từ | Danh từ | Câu với danh từ |
 |---|---|---|

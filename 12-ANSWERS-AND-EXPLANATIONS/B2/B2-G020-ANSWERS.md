@@ -56,7 +56,7 @@
 
 > ***The growing number of motorbikes in Vietnamese cities** has led to **serious traffic congestion and a significant decline in air quality**. In response, **the government's plan to expand the urban metro network** aims to provide **a cleaner, more efficient alternative to private vehicles**. However, **the high cost of construction** and **the long time required to complete such large-scale projects** remain **major obstacles to rapid progress**. Nevertheless, many experts believe that **a well-designed public transport system** is **the most sustainable long-term solution**.*
 
-**Rubric (0–2 mỗi tiêu chí):** ≥ 5 cụm danh từ phức · giữ đủ thông tin gốc · ngữ pháp/hòa hợp đúng · văn phong học thuật · 80–120 từ.
+**Tiêu chí tự đánh giá (0–2 điểm cho mỗi tiêu chí):** ≥ 5 cụm danh từ phức · giữ đủ thông tin gốc · ngữ pháp/hòa hợp đúng · văn phong học thuật · 80–120 từ.
 
 **L5.2.** Mẫu: *I'd like to introduce a lightweight, water-resistant laptop with a twelve-hour battery. It has a fourteen-inch touch screen and a high-quality camera designed for video calls. It's the perfect choice for university students looking for a reliable, affordable device.*
 

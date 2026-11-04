@@ -30,7 +30,7 @@
 | **Prerequisites** | [B1-G002 — Past Perfect](B1-G002-past-perfect.md), [A1-G007 — Object Pronouns](../../02-A1-BEGINNER/grammar/A1-G007-object-pronouns.md) |
 | **Estimated Time** | 90 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Chuyển câu trực tiếp sang câu tường thuật với ***say*** và ***tell***.
 2. Áp dụng **lùi thì** (*backshift*) khi động từ tường thuật ở quá khứ.
@@ -56,7 +56,7 @@ Hôm nay, bạn kể lại với sếp:
 
 ## C. WHAT
 
-**Reported speech** (câu tường thuật, còn gọi *indirect speech* — lời nói gián tiếp) là cách kể lại lời người khác **mà không trích dẫn nguyên văn**.
+**Câu tường thuật (reported speech/indirect speech)** là cách kể lại lời người khác mà không chép nguyên văn. Thay vì nhắc lại *Lan said, “I'm tired”*, bạn có thể nói *Lan said she was tired*. Bạn cần xem ai nói, nói lúc nào và điều đó còn đúng hay không để đổi từ và chọn thì phù hợp.
 
 | | Ví dụ |
 |---|---|

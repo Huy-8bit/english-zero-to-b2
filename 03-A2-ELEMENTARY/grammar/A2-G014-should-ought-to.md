@@ -19,7 +19,7 @@ Bạn có 20 từ mới nhưng cố học hết trong năm phút rồi quên nha
 
 ## C. WHAT
 
-**Advice — lời khuyên** là ý kiến về việc nên làm. *Should + V* thường có nghĩa “nên”; *shouldn't + V* là “không nên”. *Ought to + V* thường có nghĩa tương tự *should*, nhưng ít dùng hơn trong hội thoại thường ngày và có thể nghe trang trọng hơn.
+**Should/ought to** thường dùng để đưa lời khuyên: bạn nghĩ người kia nên làm gì. *You should rest* nghĩa là “Bạn nên nghỉ ngơi”. *Shouldn't* là “không nên”. *Ought to* thường gần nghĩa với *should*, nhưng ít gặp hơn trong hội thoại và có thể nghe trang trọng hơn.
 
 Người nghe vẫn có thể cân nhắc lựa chọn. Tuy nhiên, *should* đôi khi mang kỳ vọng mạnh tùy giọng và tình huống; không phải câu nào có *should* cũng nhẹ nhàng. Bài này dùng nó để đưa lời khuyên. Các nghĩa khác như dự đoán/kỳ vọng không phải mục tiêu kiểm tra ở đây.
 

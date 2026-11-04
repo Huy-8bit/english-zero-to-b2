@@ -30,7 +30,7 @@
 | **Prerequisites** | [A0-G004 — Parts of Speech](A0-G004-parts-of-speech.md) |
 | **Estimated Time** | 60 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Thuộc 7 đại từ chủ ngữ: *I, you, he, she, it, we, they*.
 2. Hiểu khái niệm **ngôi** (person) và **số** (number).
@@ -58,7 +58,7 @@
 
 ## C. WHAT: Đại từ nhân xưng là gì?
 
-**Personal pronoun** (đại từ nhân xưng) là từ dùng để **thay thế cho người hoặc vật** đã được nhắc đến hoặc đã rõ trong ngữ cảnh.
+**Đại từ nhân xưng (personal pronoun)** giúp bạn nói về người hoặc vật mà không phải nhắc lại tên. Khi người nghe đã biết bạn đang nói về Lan, bạn có thể dùng *she*. Bài này tập trung vào đại từ làm chủ ngữ, như *I, you, he, she, it, we, they*.
 
 **Subject pronoun** (đại từ chủ ngữ) là đại từ đứng ở vị trí **chủ ngữ** — thường ở đầu câu, trước động từ, chỉ người/vật **thực hiện hành động** hoặc **được nói đến**.
 

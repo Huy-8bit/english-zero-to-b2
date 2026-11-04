@@ -30,7 +30,7 @@
 | **Prerequisites** | [A0-G009 — To Be](A0-G009-verb-to-be.md) |
 | **Estimated Time** | 75 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Dùng đúng *have* và *has* theo chủ ngữ.
 2. Tạo câu phủ định với **don't / doesn't have** và câu hỏi với **Do / Does ... have?**
@@ -56,7 +56,7 @@ Trong tiếng Việt, từ "có" không bao giờ thay đổi. Nhưng trong ti�
 
 ## C. WHAT: Have / Has là gì?
 
-**Have** (và dạng **has**) là động từ có nghĩa cơ bản là **"có"** — sở hữu, có quan hệ, có đặc điểm. Ngoài ra, *have* còn được dùng trong nhiều cụm cố định như *have breakfast* (ăn sáng), *have a shower* (tắm).
+**Have/has** thường có nghĩa là **“có”**. Bạn dùng chúng để nói về đồ mình sở hữu, quan hệ hoặc đặc điểm: *I have a bike* — Tôi có một chiếc xe đạp. Một số cụm có nghĩa riêng, như *have breakfast* là ăn sáng và *have a shower* là tắm.
 
 | Chủ ngữ | Dạng |
 |---|---|

@@ -58,7 +58,7 @@ Bạn đọc "en – gờ – u – y – ê – en" theo kiểu tiếng Việt.
 
 ## C. WHAT: Bảng chữ cái tiếng Anh là gì?
 
-**Bảng chữ cái (alphabet)** tiếng Anh có **26 chữ cái (letters)**. Mỗi chữ cái có:
+**Bảng chữ cái tiếng Anh (alphabet)** có **26 chữ cái (letters)**. Bạn dùng tên chữ cái khi đánh vần tên, địa chỉ email hoặc mã đặt chỗ. Mỗi chữ có ba phần cần nhận biết:
 
 - **Chữ in hoa (capital letter / uppercase):** A, B, C...
 - **Chữ thường (small letter / lowercase):** a, b, c...

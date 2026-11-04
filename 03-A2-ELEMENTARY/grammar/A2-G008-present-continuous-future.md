@@ -30,7 +30,7 @@
 | **Prerequisites** | [A1-G004](../../02-A1-BEGINNER/grammar/A1-G004-present-continuous.md), [A1-G019 — Will](../../02-A1-BEGINNER/grammar/A1-G019-future-will.md), [A1-G020 — Going to](../../02-A1-BEGINNER/grammar/A1-G020-be-going-to.md) |
 | **Estimated Time** | 75 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Dùng hiện tại tiếp diễn cho **kế hoạch đã sắp xếp cụ thể** (có người khác tham gia, có giờ, có địa điểm, đã đặt chỗ).
 2. Phân biệt bốn cách nói tương lai: **present continuous, be going to, will, present simple (lịch trình)**.
@@ -54,7 +54,7 @@ Bạn trả lời: "Tối thứ Sáu tôi **ăn tối** với Lan ở Pizza 4P's
 
 ## C. WHAT: Kế hoạch đã được sắp xếp
 
-**Present continuous for future** (hiện tại tiếp diễn chỉ tương lai) dùng cho **kế hoạch cá nhân đã được sắp xếp** (*arrangements*) — thường:
+Bạn dùng **hiện tại tiếp diễn chỉ tương lai (present continuous for future arrangements)** để nói về kế hoạch cá nhân đã được sắp xếp. *I'm meeting Lan tomorrow* là “Mai tôi có hẹn gặp Lan”. Người nói thường đã thống nhất hoặc chuẩn bị một phần cho cuộc hẹn, chứ không chỉ mới nghĩ đến nó:
 
 - **Có người khác** tham gia hoặc biết (bạn bè, bác sĩ, khách hàng...).
 - **Đã chốt**: có ngày giờ, địa điểm, đã đặt vé/đặt chỗ/hẹn.
@@ -118,7 +118,7 @@ Giống hiện tại tiếp diễn ([A1-G004](../../02-A1-BEGINNER/grammar/A1-G0
 | 5 | *What **are** you **doing** **tonight**?* | Tối nay bạn làm gì? | What + are + you + doing + tonight: hỏi kế hoạch, không thêm do; câu trả lời có thể chưa có kế hoạch. |
 | 6 | *She'**s starting** her new job **on Monday**.* | Thứ Hai cô ấy bắt đầu công việc mới. | She is starting + on Monday nêu ngày bắt đầu đã xác định; không tự khẳng định hình thức hợp đồng. |
 | 7 | *I'**m not coming** to the party — I'm too tired.* | Tôi không đi tiệc đâu — mệt quá. | Am not coming thông báo không tham dự bữa tiệc đã rõ trong ngữ cảnh; not sau am, come → coming. |
-| 8 | *We'**re flying** to Da Nang **at 6 a.m.**, so we need to get up early.* | Chúng tôi bay ra Đà Nẵng lúc 6 giờ sáng... | We are flying nêu lịch của nhóm; at six cho giờ. Cần ngữ cảnh chuyến sắp tới; không suy thời gian cố định là bảo đảm không thay đổi. |
+| 8 | *We'**re flying** to Da Nang **at 6 a.m.**, so we need to get up early.* | Chúng tôi sẽ bay đến Đà Nẵng lúc 6 giờ sáng, nên cần dậy sớm. | We are flying nêu lịch của nhóm; at six cho giờ. Cần ngữ cảnh chuyến sắp tới; không suy thời gian cố định là bảo đảm không thay đổi. |
 | 9 | *The train **leaves** at 6:30.* | Tàu chạy lúc 6:30. | Leaves chia hiện tại đơn cho thời gian biểu trong tình huống. Is leaving cũng có thể nói chuyến cụ thể; không phải chỉ một dạng hợp ngữ pháp. |
 | 10 | *Is Nam **coming** to the meeting **this afternoon**?* | Chiều nay Nam có đến họp không? | Is đảo trước Nam; coming giữ V-ing; this afternoon làm rõ mốc kế hoạch tương lai. |
 

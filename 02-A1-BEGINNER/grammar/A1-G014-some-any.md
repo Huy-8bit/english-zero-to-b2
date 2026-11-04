@@ -30,7 +30,7 @@
 | **Prerequisites** | [A0-G014 — Countable & Uncountable](../../01-A0-FOUNDATION/grammar/A0-G014-countable-uncountable.md), [A1-G013](A1-G013-would-like.md) |
 | **Estimated Time** | 60 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Dùng *some* trong câu khẳng định, *any* trong câu phủ định và câu hỏi.
 2. Dùng *some/any* với **danh từ số nhiều** và **danh từ không đếm được**.
@@ -54,7 +54,7 @@ Tiếng Việt dùng nhiều từ khác nhau: "ít", "không có", "cái gì". T
 
 ## C. WHAT: *Some* và *any* là gì?
 
-*Some* và *any* là **determiners** (từ hạn định) chỉ **một lượng không xác định** — không nói chính xác bao nhiêu. Chúng đi với:
+Bạn dùng **some** và **any** khi không cần nói chính xác số lượng. *I need some water* là “Tôi cần ít nước”. Hai từ này thuộc nhóm **từ hạn định (determiners)**. Trong các mẫu cơ bản của bài, chúng đi với:
 
 - **Danh từ số nhiều**: *some eggs, any eggs*.
 - **Danh từ không đếm được**: *some milk, any milk*.

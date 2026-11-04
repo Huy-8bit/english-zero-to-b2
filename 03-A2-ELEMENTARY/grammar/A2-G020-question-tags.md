@@ -19,7 +19,7 @@ Bạn nghĩ Mai học ở lớp này nhưng muốn chắc chắn: *You're in thi
 
 ## C. WHAT
 
-**Question tag — câu hỏi đuôi** là cụm hỏi ngắn gắn sau câu kể. Trong mẫu xác nhận cơ bản, câu kể khẳng định thường đi với đuôi phủ định; câu kể phủ định đi với đuôi khẳng định.
+**Câu hỏi đuôi (question tag)** là phần hỏi ngắn thêm sau câu kể, như *isn't it?* trong *It's cold, isn't it?* Với mẫu xác nhận cơ bản, câu khẳng định thường có đuôi phủ định; câu phủ định có đuôi khẳng định. Ta chọn trợ động từ và đại từ theo câu phía trước.
 
 Mục đích không chỉ là “trang trí” câu. Người nói có thể kiểm tra thông tin chưa chắc hoặc tìm sự đồng thuận. Ngữ điệu lên thường cho thấy đang hỏi để biết; ngữ điệu xuống thường gợi người nói đã khá chắc và muốn xác nhận. Quan hệ giữa ngữ điệu và thái độ còn phụ thuộc hoàn cảnh, không phải quy tắc đọc máy móc.
 

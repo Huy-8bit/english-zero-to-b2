@@ -30,7 +30,7 @@
 | **Prerequisites** | [A1-G017](A1-G017-past-simple-affirmative.md), [A1-G002](A1-G002-present-simple-negatives-questions.md) |
 | **Estimated Time** | 90 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Tạo phủ định: **didn't + V nguyên mẫu** cho mọi chủ ngữ.
 2. Tạo câu hỏi: **Did + S + V?** và trả lời ngắn *Yes, S did / No, S didn't*.
@@ -53,6 +53,8 @@ Bạn đã biết: hiện tại dùng *Do/Does* để hỏi (*Do you go...?*). Q
 ---
 
 ## C. WHAT: Phủ định và câu hỏi ở quá khứ
+
+Để phủ định hoặc đặt câu hỏi với động từ thường ở quá khứ đơn, bạn dùng **did/didn't + động từ nguyên mẫu**. So sánh *I went out* với *I didn't go out*. *Did* đã cho biết quá khứ, nên động từ chính trở về *go*.
 
 | Loại | Ví dụ | Nghĩa |
 |---|---|---|

@@ -30,7 +30,7 @@
 | **Prerequisites** | [A1-G002](A1-G002-present-simple-negatives-questions.md), [A1-G011](A1-G011-imperatives.md) |
 | **Estimated Time** | 75 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Hiểu *can* là **modal verb** (động từ khuyết thiếu): không chia, không *to*, không *do/does*.
 2. Dùng *can/can't* để nói về **khả năng** (biết làm gì).
@@ -54,7 +54,7 @@ Bạn muốn viết: "Tôi **biết** nói tiếng Anh và tiếng Nhật. Tôi 
 
 ## C. WHAT: *Can* là gì?
 
-**Can** là một **modal verb** (động từ khuyết thiếu / động từ tình thái) — loại động từ đứng **trước động từ chính** để thêm một **"sắc thái"** vào nghĩa: khả năng, sự cho phép, khả năng xảy ra...
+**Can** giúp bạn nói mình làm được gì, xin phép hoặc nhờ ai làm gì. *I can swim* nghĩa là “Tôi biết bơi”. *Can* thuộc nhóm **modal verbs — động từ tình thái**, cũng thường gọi là động từ khuyết thiếu. Sau *can*, động từ chính dùng dạng nguyên mẫu không *to*.
 
 | Nghĩa của *can* | Tiếng Việt | Ví dụ |
 |---|---|---|
@@ -78,7 +78,7 @@ flowchart LR
     D["❌ She cans swim<br/>❌ She can to swim<br/>❌ Does she can swim?"]
 ```
 
-**Ba quy tắc vàng của modal verbs** (áp dụng cho *can, could, will, would, must, should, may, might* mà bạn sẽ học sau):
+**Ba điểm cần nhớ của modal verbs** (áp dụng cho *can, could, will, would, must, should, may, might* mà bạn sẽ học sau):
 
 1. **Không chia** theo ngôi: *he can* (không phải ~~he cans~~).
 2. Động từ theo sau ở **nguyên mẫu không *to***: *can swim* (không phải ~~can to swim~~, ~~can swims~~).
@@ -302,7 +302,7 @@ Dịch sang tiếng Anh:
 
 ### 5 câu hỏi tự kiểm tra
 
-1. Ba quy tắc vàng của modal verbs là gì?
+1. Ba điểm cần nhớ của modal verbs là gì?
 2. Kể 4 nghĩa của *can*.
 3. *Can I...?* và *Can you...?* khác nhau thế nào?
 4. Làm sao phân biệt *can* và *can't* khi nghe?

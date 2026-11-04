@@ -53,6 +53,33 @@ Số thứ tự câu trong file đáp án phải **khớp chính xác** với fi
 
 ## 5. Quality Gates — điều kiện để đánh dấu COMPLETED
 
+### Trình tự giải thích một kiến thức
+
+1. Nêu tình huống và điều người học muốn nói bằng một hoặc hai câu.
+2. Giải thích ý nghĩa bằng từ thông dụng, rồi mới giới thiệu tên cấu trúc và dạng câu.
+3. Cho một ví dụ tự nhiên có từ vựng vừa cấp độ, kèm nghĩa tiếng Việt đầy đủ khi cần.
+4. Chỉ ra cấu trúc đang giúp diễn đạt điều gì trong ví dụ, và khi nào nên dùng.
+5. So sánh một lỗi hoặc điểm dễ lẫn. Phân biệt lỗi ngữ pháp với câu đúng nhưng khác nghĩa hoặc khác văn phong.
+6. Chỉ thêm mẹo khi mẹo giúp nhớ đúng. Nêu giới hạn ngay cạnh mẹo; không dùng lời hứa “luôn đúng” thay cho giải thích.
+
+Đây là trình tự triển khai trong các mục A–N hiện có, không phải yêu cầu thêm sáu mục lặp lại ở mỗi phần.
+
+### Ngôn ngữ, bản dịch và lời thuyết minh
+
+- Mỗi câu phát triển một ý. Tách câu nếu cần gánh cùng lúc định nghĩa, điều kiện và ngoại lệ. Đọc thành tiếng để thử xem người nghe có theo được mà không nhìn công thức không.
+- Dùng lời dẫn theo việc sắp làm: “So sánh hai câu”, “Giờ thêm phần phủ định”. Không dùng mở bài sáo rỗng như “Hãy cùng khám phá”, không lặp lại định nghĩa chỉ để kéo dài bài.
+- Thuật ngữ cần được giải thích khi xuất hiện lần đầu. Giữ tên tiếng Anh để tra cứu, nhưng không bắt người mới học hiểu sẵn các chữ viết tắt.
+- Ví dụ cần đúng và tự nhiên trong tình huống. Không gọi một biến thể đúng là lỗi; không thêm thông tin vào bản dịch mà câu gốc không có. Không dùng dấu ba chấm thay cho phần bản dịch người học cần hiểu.
+- Không dùng số liệu về dân số, xác suất hoặc mức độ phổ biến nếu không cần cho mục tiêu học. Nếu dùng dữ kiện thực tế có thể đổi, ghi nguồn và thời điểm; nếu chỉ cần ngữ cảnh, chọn tình huống giả định rõ ràng.
+- Câu hỏi phải đủ ngữ cảnh để đáp án đóng có thể xác định. Với câu mở, giữ tiêu chí và chấp nhận các cách đúng. Không sửa cách diễn đạt của đề mà vô tình đổi cấu trúc hoặc ý cần kiểm tra.
+- Giữ mã bài, mã câu, thứ tự đáp án, nhãn bảng và heading dùng để nhập nội dung. Sau khi sửa, kiểm tra lại liên kết, mã câu hỏi, đáp án và các loại bài tương tác. Sửa nội dung nguồn; không thay logic chấm hoặc giao diện để che một lỗi biên soạn.
+
+### Prompt dùng khi tạo hoặc viết lại nội dung
+
+> Viết cho người học ở cấp [cấp độ], đã biết [kiến thức tiên quyết]. Mục tiêu là [việc người học làm được]. Giải thích bằng tiếng Việt tự nhiên như khi giảng trực tiếp: tình huống → ý nghĩa → dạng câu → ví dụ có nghĩa tiếng Việt → cách dùng → điểm dễ nhầm. Mỗi câu một ý, thuật ngữ được giải thích tại chỗ. Ví dụ dùng từ vừa trình độ; không thêm kiến thức khó chỉ để làm câu có vẻ hay hơn. Giữ mọi phân biệt quan trọng, giới hạn của mẹo và biến thể đúng. Với bài tập, giữ mã, đáp án và yêu cầu gốc; nếu phát hiện câu thiếu ngữ cảnh hoặc đáp án sai, nêu rõ điểm cần sửa và đối chiếu lại cặp đề–đáp án. Tránh lời dẫn sáo rỗng, khẳng định tuyệt đối không có căn cứ và bản dịch bỏ lửng. Cuối lượt, tự đọc thành tiếng và bỏ những câu lặp ý không cần thiết.
+
+### Điều kiện nghiệm thu
+
 1. Có mục tiêu học tập cụ thể.
 2. Giải thích bằng tiếng Việt đủ dễ hiểu.
 3. Có công thức và phân tích.

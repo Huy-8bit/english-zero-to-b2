@@ -21,7 +21,7 @@ Bạn đến một câu lạc bộ. Nội quy ghi: phải xuất trình thẻ, k
 
 ## C. WHAT
 
-**Obligation — nghĩa vụ/sự bắt buộc:** *must* hoặc *have to* cho biết cần làm một việc. **Prohibition — sự cấm đoán:** *must not/mustn't* cho biết không được làm. **Lack of necessity — không cần thiết:** *don't/doesn't have to* cho biết có thể làm hoặc không, tùy lựa chọn.
+Hãy tách ba ý trước khi chọn từ: **phải làm**, **không được làm** và **không cần làm**. *Must/have to* thường nói việc phải làm. *Mustn't* nói việc bị cấm. *Don't/doesn't have to* nói việc không bắt buộc, nên bạn vẫn có thể chọn làm.
 
 Bài này học *must* mang nghĩa bắt buộc. Nghĩa suy luận như “chắc hẳn” sẽ học ở B1; không cần dùng nó để làm bài tập ở đây.
 

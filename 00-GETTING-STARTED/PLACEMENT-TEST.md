@@ -1,5 +1,7 @@
 # 🎯 Placement Test — Bài kiểm tra trình độ đầu vào
 
+Bài này giúp bạn chọn điểm bắt đầu học phù hợp. Nếu chưa biết một câu, bạn có thể để trống để kết quả phản ánh rõ phần cần học. Đọc hướng dẫn và cách tính kết quả trước khi bắt đầu; mục tiêu là chọn đúng bài, không phải đạt điểm cao nhất.
+
 > **Mục đích:** Giúp bạn biết nên bắt đầu học từ cấp nào. Đây **không phải** bài thi lấy điểm — hãy làm trung thực, không tra từ điển, không đoán bừa. Nếu không biết, hãy để trống: một câu "đoán trúng" có thể khiến bạn bắt đầu ở cấp quá cao.
 
 | Thông tin | Chi tiết |

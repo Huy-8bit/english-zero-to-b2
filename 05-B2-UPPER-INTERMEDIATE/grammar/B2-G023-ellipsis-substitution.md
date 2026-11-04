@@ -30,7 +30,7 @@
 | **Prerequisites** | [A2-G020 — Question Tags](../../03-A2-ELEMENTARY/grammar/A2-G020-question-tags.md), [B1-G026 — Expressing Opinions](../../04-B1-INTERMEDIATE/grammar/B1-G026-expressing-opinions.md) |
 | **Estimated Time** | 75 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Thay danh từ bằng ***one / ones*** để tránh lặp: *I like the red **one**.*
 2. Thay mệnh đề bằng ***so / not*** sau *think, hope, expect, suppose, believe, afraid*.
@@ -53,6 +53,8 @@
 ---
 
 ## C. WHAT
+
+Khi người nghe đã hiểu bạn đang nhắc đến điều gì, bạn có thể **thay thế (substitution)** một phần câu hoặc **lược bỏ (ellipsis)** phần lặp. *I need a pen. Do you have one?* dùng *one* thay cho *a pen*. Bạn chỉ nên lược hoặc thay khi người nghe vẫn theo được ý.
 
 | Kỹ thuật | Định nghĩa | Ví dụ |
 |---|---|---|
@@ -145,12 +147,12 @@ Cũng dùng: ***If so**, ...* (nếu vậy) / ***If not**, ...* (nếu không).
 | 2 | *"Is the shop open on Sundays?" — "I **think so**."* | Tôi nghĩ vậy. | so |
 | 3 | *"Will it be expensive?" — "I **hope not**."* | Hy vọng là không. | hope not |
 | 4 | *"Did you fail the test?" — "I'm **afraid so**."* | E là vậy. | afraid so |
-| 5 | *You may leave early. If you **do so**, please inform reception.* | Nếu bạn làm vậy... | do so — trang trọng |
+| 5 | *You may leave early. If you **do so**, please inform reception.* | Bạn có thể về sớm. Nếu về sớm, hãy báo cho lễ tân. | do so — trang trọng |
 | 6 | *My sister became a vegetarian, and later I **did the same**.* | Sau đó tôi cũng làm vậy. | do the same |
-| 7 | *I can't speak French, but my brother **can**.* | ... nhưng anh tôi nói được. | Tỉnh lược sau *can* |
-| 8 | *"Have you been to Japan?" — "No, but I'd **like to**."* | ... nhưng tôi muốn đi. | Tỉnh lược sau *to* |
+| 7 | *I can't speak French, but my brother **can**.* | Tôi không nói được tiếng Pháp, nhưng anh trai tôi thì nói được. | Tỉnh lược sau *can* |
+| 8 | *"Have you been to Japan?" — "No, but I'd **like to**."* | “Bạn đã từng đến Nhật chưa?” — “Chưa, nhưng tôi muốn đến.” | Tỉnh lược sau *to* |
 | 9 | *She promised to help, and she **did**.* | Cô ấy hứa giúp và đã giúp. | Tỉnh lược sau *did* |
-| 10 | *Is the meeting still on? **If so**, I'll be there at 3.* | Nếu vậy... | If so |
+| 10 | *Is the meeting still on? **If so**, I'll be there at 3.* | Cuộc họp vẫn diễn ra chứ? Nếu vậy, tôi sẽ đến lúc 3 giờ. | If so |
 | 11 | *Some people prefer tea; others, coffee.* | Một số người thích trà; số khác thích cà phê. | Tỉnh lược động từ (văn viết) |
 | 12 | *"Who wants pizza?" — "I **do**!"* | Tôi! | Tỉnh lược sau *do* |
 

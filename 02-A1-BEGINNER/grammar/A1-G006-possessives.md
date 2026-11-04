@@ -30,7 +30,7 @@
 | **Prerequisites** | [A0-G006 — Subject Pronouns](../../01-A0-FOUNDATION/grammar/A0-G006-subject-pronouns.md) |
 | **Estimated Time** | 75 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Dùng **tính từ sở hữu** (*my, your, his, her, its, our, their*) trước danh từ.
 2. Dùng **đại từ sở hữu** (*mine, yours, his, hers, ours, theirs*) thay cho "tính từ sở hữu + danh từ".
@@ -56,6 +56,8 @@ Bạn muốn nói:
 ---
 
 ## C. WHAT: Ba cách thể hiện sở hữu
+
+Bạn có ba cách quen thuộc để nói đồ vật thuộc về ai: *my phone*, *This phone is mine* và *Lan's phone*. Điểm cần nhớ là từ nào phải đi kèm danh từ, từ nào có thể đứng một mình. Bảng dưới đây đặt ba cách cạnh nhau để bạn dễ so sánh.
 
 | Cách | Tên | Vị trí | Ví dụ |
 |---|---|---|---|

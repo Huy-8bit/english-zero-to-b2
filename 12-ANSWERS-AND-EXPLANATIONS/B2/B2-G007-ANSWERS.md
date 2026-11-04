@@ -64,7 +64,7 @@
 >
 > *Hoi An, a UNESCO World Heritage Site **of which** locals are very proud, is often described as one of the best places in Vietnam **to see** traditional architecture.*
 
-**Rubric (0–2 mỗi tiêu chí):** ≥ 3 V-ing · ≥ 3 V3 · ≥ 1 *first/only... to V* · ≥ 1 giới từ + *which/whom* · 130–160 từ.
+**Tiêu chí tự đánh giá (0–2 điểm cho mỗi tiêu chí):** ≥ 3 V-ing · ≥ 3 V3 · ≥ 1 *first/only... to V* · ≥ 1 giới từ + *which/whom* · 130–160 từ.
 
 > Ghi chú: mẫu chỉ minh họa ngữ pháp; trước khi dùng làm thông tin du lịch, người học nên kiểm tra các dữ kiện lịch sử từ nguồn chính thức.
 

@@ -30,7 +30,7 @@
 | **Prerequisites** | [A0-G007 — Subject, Verb, Object](A0-G007-subject-verb-object.md) |
 | **Estimated Time** | 90 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Nhận diện và tạo câu theo 3 mẫu: **S + V**, **S + V + O**, **S + V + C**.
 2. Hiểu **bổ ngữ (complement)** là gì và khác **tân ngữ (object)** thế nào.
@@ -56,7 +56,7 @@ Sự khác biệt này là nội dung chính của bài: **tân ngữ trực ti�
 
 ## C. WHAT: Mẫu câu là gì?
 
-**Sentence pattern** (mẫu câu) là "khung xương" của câu — các thành phần **bắt buộc** phải có để câu đủ nghĩa. Bài này chọn ba mẫu câu đơn để luyện. Câu phức có thể gồm nhiều mệnh đề, mỗi mệnh đề có khung riêng; không phải mọi câu chỉ thuộc đúng ba mẫu này.
+**Mẫu câu (sentence pattern)** là cách sắp xếp những phần cần có để câu đủ nghĩa. Ví dụ, *I sleep* đã đủ ý, còn *I like* thường khiến người nghe chờ bạn nói thích gì. Bài này luyện ba mẫu câu đơn. Những câu dài hơn có thể gồm nhiều phần câu, mỗi phần có cách sắp xếp riêng.
 
 | Ký hiệu | Tên | Ý nghĩa |
 |---|---|---|

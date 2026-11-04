@@ -1,5 +1,7 @@
 # VOC-16 · Common Phrasal Verbs — Cụm động từ thông dụng
 
+Với cụm động từ, nghĩa cả cụm và vị trí tân ngữ đều quan trọng. So sánh *turn off the light* với *turn it off*. Khi học một cụm mới, ghi lại nghĩa đang dùng và thử đặt một câu có tân ngữ nếu cấu trúc đó cần.
+
 | Mục | Nội dung |
 |---|---|
 | **Cấp độ** | A2 → B2 |
@@ -7,7 +9,7 @@
 | **Thời gian gợi ý** | 4 buổi × 30 phút (15 cụm/buổi) |
 | **Ngữ pháp** | [B1-G020 — Phrasal Verbs](../04-B1-INTERMEDIATE/grammar/B1-G020-phrasal-verbs.md) (tách được / không tách được, vị trí đại từ) |
 
-> **Ký hiệu:** **[T]** = tách được (*turn **it** off*); **[K]** = không tách được (*look after **her***); **[N]** = nội động từ (không tân ngữ). Một cụm có thể có nhiều nghĩa; bảng chỉ liệt kê nghĩa phổ biến nhất. IPA không ghi cho cụm vì phát âm là tổng các từ đã quen — chú ý **trọng âm thường rơi vào tiểu từ**: *give **UP**, turn **OFF***.
+> **Ký hiệu:** **[T]** = tách được (*turn **it** off*); **[K]** = không tách được (*look after **her***); **[N]** = nội động từ (không tân ngữ). Một cụm có thể có nhiều nghĩa; bảng chỉ liệt kê nghĩa phổ biến nhất. Bảng không ghi IPA cho từng cụm. Khi luyện, nghe mẫu cả cụm vì trọng âm và nối âm có thể làm cách đọc khác với từng từ riêng. Ở nhiều ví dụ cơ bản, tiểu từ được nhấn, như *give **UP**, turn **OFF***; điểm nhấn còn tùy câu.
 
 ## 1. UP
 

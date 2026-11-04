@@ -30,7 +30,7 @@
 | **Prerequisites** | [A0-G001 — Bảng chữ cái](A0-G001-alphabet.md) |
 | **Estimated Time** | 75 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Phân biệt **tên chữ cái** (letter name) và **âm của chữ cái** (letter sound).
 2. Đọc đúng 5 nguyên âm ngắn: *a* /æ/, *e* /e/, *i* /ɪ/, *o* /ɒ/, *u* /ʌ/.
@@ -55,7 +55,7 @@ Phonics cung cấp các mẫu để thử cách đọc. Bạn vẫn cần nghe m
 
 ## C. WHAT: Phonics là gì?
 
-**Phonics** (ngữ âm – chữ viết) là cách học **mối liên hệ giữa chữ viết và âm thanh**: chữ hoặc nhóm chữ nào thường tạo ra âm nào.
+**Phonics** là cách học mối liên hệ giữa **chữ viết và âm thanh**. Bạn nhìn một chữ hoặc nhóm chữ, thử đọc theo mẫu đã học, rồi nghe lại để kiểm tra. Chẳng hạn, *sh* trong *ship* tạo thành một âm /ʃ/.
 
 | Khái niệm | Ví dụ |
 |---|---|
@@ -66,7 +66,7 @@ Phonics cung cấp các mẫu để thử cách đọc. Bạn vẫn cần nghe m
 
 **Phonics giúp bạn:**
 
-- Đọc được từ mới với xác suất đúng cao (không phải 100%).
+- Thử cách đọc từ mới theo những mẫu đã học, rồi nghe mẫu để kiểm tra.
 - Đoán được cách viết khi nghe một từ.
 - Hiểu vì sao từ điển ghi phiên âm khác với mặt chữ.
 

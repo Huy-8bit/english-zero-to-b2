@@ -64,7 +64,7 @@
 >
 > ***Not knowing** what to do, she called her mother. **After hearing** the story, her mother was silent for a long time. **Having been kept** secret for sixty years, the letters were finally about to reveal the truth.*
 
-**Rubric (0–2 mỗi tiêu chí):** ≥ 3 V-ing · ≥ 2 V3 · ≥ 2 *Having V3* · ≥ 2 liên từ + phân từ · không dangling participle.
+**Tiêu chí tự đánh giá (0–2 điểm cho mỗi tiêu chí):** ≥ 3 V-ing · ≥ 2 V3 · ≥ 2 *Having V3* · ≥ 2 liên từ + phân từ · không dangling participle.
 
 **L5.2.** Mẫu: *To make spring rolls, first soak the rice noodles. Having drained them, mix them with minced pork, carrot and wood ear mushrooms. Seasoned with fish sauce and pepper, the filling should taste slightly salty. Before rolling, dip each rice paper in water. Fried in hot oil, the rolls become golden and crispy.*
 

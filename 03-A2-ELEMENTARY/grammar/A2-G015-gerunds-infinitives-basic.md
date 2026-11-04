@@ -19,7 +19,7 @@ Bạn muốn tham gia câu lạc bộ nấu ăn. Bạn nói: *I enjoy cooking. I
 
 ## C. WHAT
 
-**Gerund — danh động từ** là dạng V-ing dùng để gọi tên một hoạt động: *Reading is useful* — Việc đọc sách có ích. **To-infinitive — động từ nguyên mẫu có to** là *to + V*: *to read, to cook*. **Bare infinitive — nguyên mẫu không to** là *read, cook*, ví dụ sau *can*.
+Để nói về một hoạt động, bạn có thể gặp dạng **V-ing**, như *reading*, hoặc **to + động từ nguyên mẫu**, như *to read*. Khi V-ing gọi tên hoạt động, ta gọi đó là **danh động từ (gerund)**: *Reading is useful*. Bạn cũng cần nhận ra **nguyên mẫu không to (bare infinitive)**, như *read* sau *can*. Cách chọn phụ thuộc vào từ hoặc cấu trúc đi trước.
 
 V-ing không tự động có nghĩa “đang”. Trong *I enjoy reading*, *reading* là việc đọc, không khẳng định tôi đang đọc lúc nói. Trong *I am reading*, *am + reading* tạo thì hiện tại tiếp diễn. Phải nhìn cả cụm, không chỉ đuôi từ.
 

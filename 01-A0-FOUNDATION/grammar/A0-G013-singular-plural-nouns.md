@@ -30,7 +30,7 @@
 | **Prerequisites** | [A0-G012 — Articles](A0-G012-articles-basic.md) |
 | **Estimated Time** | 75 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Tạo số nhiều có quy tắc: *-s*, *-es*, *-ies*, *-ves*.
 2. Thuộc 8 cặp danh từ số nhiều bất quy tắc thông dụng trong bảng E6 (*man – men, child – children, person – people...*).
@@ -55,6 +55,8 @@ Bạn của bạn cười và sửa:
 ---
 
 ## C. WHAT: Số ít và số nhiều là gì?
+
+Khi nói về số lượng, bạn cần phân biệt **danh từ số ít (singular noun)** và **danh từ số nhiều (plural noun)**. *One book* là một quyển sách; *two books* là hai quyển. Trong các ví dụ cơ bản của bài, bạn sẽ gặp:
 
 - **Singular noun** (danh từ số ít): chỉ **một** người/vật: *a book, one child*.
 - **Plural noun** (danh từ số nhiều): chỉ **từ hai trở lên** (hoặc số lượng không xác định nhưng nhiều hơn một): *two books, many children, books*.

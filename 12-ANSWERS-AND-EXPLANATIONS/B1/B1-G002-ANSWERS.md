@@ -56,7 +56,7 @@
 
 > *At 9 a.m. last Monday, I was standing in the rain outside a locked office, and I wanted to cry. Everything had started badly. The night before, I had stayed up late to finish a presentation, so I had slept for only four hours. In the morning, I had grabbed my bag and run to the bus stop, but the bus had just left. When I finally reached the office, I realised I had brought the wrong key. Because I had forgotten to charge my phone, I couldn't call anyone. Luckily, a colleague arrived ten minutes later. By the time the meeting began, I had dried my hair and printed the slides. In the end, the presentation went well — but I learned an important lesson: always charge your phone!*
 
-**Rubric (0–2 mỗi tiêu chí):**
+**Tiêu chí tự đánh giá (0–2 điểm cho mỗi tiêu chí):**
 
 | Tiêu chí | 2 | 1 | 0 |
 |---|---|---|---|

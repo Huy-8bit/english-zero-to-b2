@@ -1,5 +1,7 @@
 # B2 Mock Test 2 — Đề luyện tập tổng hợp cấp B2 (lần 2)
 
+Dùng đề này sau khi đã chữa đề trước và dành thời gian luyện các điểm còn yếu. So sánh từng kỹ năng và cách làm, thay vì chỉ so tổng điểm. Đọc kỹ hướng dẫn vì nội dung mới có thể khiến một cách làm quen thuộc chưa còn phù hợp.
+
 Đề **tự biên soạn**, cùng cấu trúc với [B2 Mock Test 1](B2-MOCK-TEST-1.md) nhưng nội dung mới. Làm sau khi đã chữa lỗi Mock Test 1 và ôn 2–3 tuần. **Không phải đề CEFR/VSTEP chính thức và không quy đổi ra điểm thi chuẩn hóa.** [Đáp án, transcript và rubric](../12-ANSWERS-AND-EXPLANATIONS/EXAMS/B2-MOCK-TEST-2-ANSWERS.md) nằm riêng.
 
 ## Cách tổ chức và điểm

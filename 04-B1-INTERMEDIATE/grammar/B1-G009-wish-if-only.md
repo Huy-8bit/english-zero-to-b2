@@ -30,7 +30,7 @@
 | **Prerequisites** | [B1-G007 — Second Conditional](B1-G007-second-conditional.md), [B1-G008 — Third Conditional](B1-G008-third-conditional.md) |
 | **Estimated Time** | 90 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Ước về **hiện tại**: *wish + quá khứ đơn (were)*.
 2. Ước về **quá khứ** (hối tiếc): *wish + quá khứ hoàn thành*.
@@ -52,7 +52,7 @@ Một ngày thứ Hai mệt mỏi, bạn nói với đồng nghiệp:
 
 ## C. WHAT
 
-**Wish** (ước) và **If only** (giá mà, ước gì — mạnh hơn) diễn tả mong muốn rằng **thực tế khác đi**. Điều được ước thường **trái với thực tế** hoặc khó xảy ra.
+**Wish** và **if only** giúp bạn nói điều mình ước khác với thực tế hoặc mong muốn một tình huống thay đổi. *I wish I lived nearer* là “Ước gì tôi sống gần hơn”. *If only* thường thể hiện cảm xúc mạnh hơn, gần với “giá mà”. Dạng động từ phía sau tùy điều bạn đang ước ở hiện tại hay quá khứ.
 
 | Loại ước | Thực tế | Câu ước |
 |---|---|---|

@@ -1,5 +1,7 @@
 # L02 · Listening for Keywords — Nghe từ khóa
 
+Khi nghe, bạn không cần nhớ từng từ để theo được ý. Hãy tìm những từ giúp trả lời câu hỏi, nhưng vẫn nghe các từ phủ định và thông tin sửa lại. Ví dụ, một giờ hẹn có thể được nhắc đến rồi đổi sang giờ khác.
+
 | Mục | Nội dung |
 |---|---|
 | **Cấp độ** | A1 → B1 |
@@ -10,7 +12,7 @@
 
 **Từ khóa** (keywords) là những từ mang thông tin chính: thường là **danh từ, động từ chính, tính từ, số, tên riêng, từ phủ định**. Người nói cũng **nhấn trọng âm** vào các từ này ([PRON-05](../../08-PRONUNCIATION/PRON-05-sentence-stress.md)) — đó là tin tốt: từ khóa thường **dễ nghe hơn** các từ khác.
 
-*I'd like to **book** a **table** for **four** at **seven** on **Friday**.* → chỉ cần nghe các từ in đậm là hiểu ý.
+*I'd like to **book** a **table** for **four** at **seven** on **Friday**.* → các từ in đậm giúp nhận ra thông tin chính. Bạn vẫn cần nghe phần còn lại để biết có phủ định hoặc thay đổi thông tin không.
 
 ## 2. Chiến lược
 

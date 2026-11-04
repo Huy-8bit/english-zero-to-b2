@@ -19,7 +19,7 @@ Nhóm bạn dự định đi dã ngoại Chủ nhật nhưng chưa biết thời
 
 ## C. WHAT
 
-**First Conditional — câu điều kiện loại 1** thường diễn tả điều kiện tương lai người nói coi là có thể xảy ra và kết quả dự kiến. **If-clause — mệnh đề điều kiện** bắt đầu bằng if; **main clause — mệnh đề chính** nêu kết quả hoặc phản ứng.
+**Câu điều kiện loại 1 (First Conditional)** thường nói về một điều có thể xảy ra trong tương lai và kết quả dự kiến. *If it rains, we'll stay home* nghĩa là “Nếu trời mưa, chúng tôi sẽ ở nhà”. Phần bắt đầu bằng *if* nêu điều kiện; phần còn lại nêu kết quả hoặc cách phản ứng.
 
 Tên “loại 1” giúp học mẫu, không có nghĩa mọi câu if đều phải thuộc một công thức duy nhất. Ở cấp này, tập trung mẫu *if + hiện tại đơn, will + V*. Các biến thể được giải thích riêng bên dưới.
 

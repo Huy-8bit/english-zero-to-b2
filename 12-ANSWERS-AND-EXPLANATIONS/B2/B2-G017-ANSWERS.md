@@ -60,7 +60,7 @@
 >
 > *Communities therefore face two options, **namely** limiting visitor numbers or spreading tourism to less popular areas. **The former** protects existing sites, while **the latter** shares the economic benefits more widely. **On the whole**, tourism can be positive, provided that local people have a voice in how it develops.*
 
-**Rubric (0–2 mỗi tiêu chí):** ≥ 8 phương tiện, ≥ 5 chức năng · ≥ 2 quy chiếu · không lặp · đúng cấu trúc ngữ pháp sau từ nối · 160–200 từ.
+**Tiêu chí tự đánh giá (0–2 điểm cho mỗi tiêu chí):** ≥ 8 phương tiện, ≥ 5 chức năng · ≥ 2 quy chiếu · không lặp · đúng cấu trúc ngữ pháp sau từ nối · 160–200 từ.
 
 **L5.2.** Mẫu ý: *To begin with, electric cars produce no exhaust fumes. What's more, they're cheaper to run. Older drivers, in particular, like how quiet they are. However, charging stations are still rare outside big cities. In other words, long trips can be difficult. By and large, though, I think they're the future. Overall, the advantages outweigh the disadvantages.*
 

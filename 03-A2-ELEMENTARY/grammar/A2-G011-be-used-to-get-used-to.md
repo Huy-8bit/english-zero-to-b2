@@ -19,7 +19,7 @@ Lan chuyển từ làng quê đến thành phố. Ngày đầu, tiếng xe làm 
 
 ## C. WHAT
 
-**Be used to — quen với** diễn tả trạng thái: điều gì đó đã quen thuộc, không còn mới lạ hoặc khó thích nghi như trước. Nó không nhất thiết có nghĩa “thích”: *I'm used to the noise, but I don't like it* — Tôi quen tiếng ồn rồi, nhưng không thích nó.
+**Be used to** nghĩa là **“đã quen với”**. *I'm used to the noise* là “Tôi quen với tiếng ồn rồi”. Quen không nhất thiết là thích: bạn vẫn có thể nói *I'm used to it, but I don't like it*. Còn **get used to** nói về quá trình dần làm quen.
 
 **Get used to — dần quen với/trở nên quen với** diễn tả sự thay đổi. Quá trình ấy có thể đang xảy ra (*am getting used to*), đã xảy ra (*got used to*) hoặc sẽ xảy ra (*will get used to*).
 

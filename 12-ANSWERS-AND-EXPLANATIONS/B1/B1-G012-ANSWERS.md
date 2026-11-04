@@ -60,7 +60,7 @@
 >
 > *Our school has changed a lot this year. A new library was opened in September, and more than 2,000 books have been donated by parents. At the moment, the old sports hall is being rebuilt, and the work is expected to finish in March. Air conditioners have been installed in every classroom. Next semester, a new English club will be started, and extra classes will be offered to students who need support. Students are asked to keep the new facilities clean. All suggestions can be sent to the school office.*
 
-**Rubric (0–2 mỗi tiêu chí):** ≥ 6 câu bị động đúng · ≥ 4 thì khác nhau · dùng/bỏ *by* hợp lý · 100–120 từ, văn phong bản tin.
+**Tiêu chí tự đánh giá (0–2 điểm cho mỗi tiêu chí):** ≥ 6 câu bị động đúng · ≥ 4 thì khác nhau · dùng/bỏ *by* hợp lý · 100–120 từ, văn phong bản tin.
 
 **L5.2.** Mẫu — *Vietnamese drip coffee*: *First, the coffee cherries are picked by hand. Then they are dried in the sun for several weeks. After that, the beans are roasted, sometimes with a little butter. The roasted beans are ground into powder. Finally, the coffee is brewed slowly in a phin filter and is served with condensed milk and ice.*
 

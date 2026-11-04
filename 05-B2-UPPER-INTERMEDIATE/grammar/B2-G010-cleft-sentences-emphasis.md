@@ -30,7 +30,7 @@
 | **Prerequisites** | [B1-G013 — Relative Clauses](../../04-B1-INTERMEDIATE/grammar/B1-G013-defining-non-defining-relatives.md), [B1-G019 — Complex Sentences](../../04-B1-INTERMEDIATE/grammar/B1-G019-complex-sentences.md) |
 | **Estimated Time** | 75 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Dùng **It-cleft**: *It was **Lan** who broke the vase* — nhấn mạnh một thành phần.
 2. Dùng **Wh-cleft**: ***What** I need **is** a holiday.*
@@ -55,7 +55,7 @@ Câu gốc: *Tom broke the window yesterday.*
 
 ## C. WHAT
 
-**Câu chẻ** (cleft sentence) "chẻ" một câu đơn thành **hai phần** để **đưa thông tin quan trọng vào vị trí nổi bật**.
+**Câu chẻ (cleft sentence)** giúp bạn làm nổi bật một phần thông tin. So sánh *Lan called me* với *It was Lan who called me*: câu sau nhấn mạnh người gọi là Lan. Bạn dùng cách này khi muốn làm rõ hoặc sửa một thông tin người nghe đang hiểu khác.
 
 | Loại | Cấu trúc | Ví dụ |
 |---|---|---|
@@ -158,11 +158,11 @@ What + S + V + is/was + [thành phần nhấn mạnh]
 | 5 | ***What** annoys me **is that** he never says thank you.* | Điều làm tôi khó chịu là anh ta không bao giờ cảm ơn. | Wh-cleft + mệnh đề |
 | 6 | ***What** we should do **is** talk to the manager.* | Việc chúng ta nên làm là nói chuyện với quản lý. | Wh-cleft — hành động |
 | 7 | ***All** I want for my birthday **is** a quiet dinner.* | Tất cả những gì tôi muốn là một bữa tối yên tĩnh. | All-cleft |
-| 8 | ***The reason** I chose this university **is that** it has a strong engineering faculty.* | Lý do tôi chọn trường này là vì... | The reason ... is that |
+| 8 | ***The reason** I chose this university **is that** it has a strong engineering faculty.* | Tôi chọn trường đại học này vì trường có khoa kỹ thuật tốt. | The reason ... is that |
 | 9 | *"You don't care about me!" — "I **do** care about you."* | Anh có quan tâm đến em mà! | Emphatic *do* |
 | 10 | *I **did** send the email — check your spam folder.* | Tôi có gửi email mà. | Emphatic *did* |
 | 11 | ***It was** in this very room **that** the treaty was signed.* | Chính trong căn phòng này hiệp ước đã được ký. | It-cleft + *very* |
-| 12 | ***The person** I admire most **is** my mother, **who** raised three children alone.* | Người tôi ngưỡng mộ nhất là mẹ tôi... | The person ... is |
+| 12 | ***The person** I admire most **is** my mother, **who** raised three children alone.* | Người tôi ngưỡng mộ nhất là mẹ, người đã một mình nuôi ba con. | The person ... is |
 
 ---
 

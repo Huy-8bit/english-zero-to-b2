@@ -60,7 +60,7 @@
 >
 > *I am applying for this position because I want **to gain** international experience, **develop** my leadership skills and **contribute** to a growing company. I believe that working for your company would be more rewarding than **working** for a large corporation, where junior staff have fewer opportunities.*
 
-**Rubric (0–2 mỗi tiêu chí):** ≥ 3 danh sách song song · ≥ 2 cặp liên từ song song · so sánh song song · không lỗi song song · 120–150 từ.
+**Tiêu chí tự đánh giá (0–2 điểm cho mỗi tiêu chí):** ≥ 3 danh sách song song · ≥ 2 cặp liên từ song song · so sánh song song · không lỗi song song · 120–150 từ.
 
 **L5.2.** Mẫu: *We need cleaner air, cleaner water and cleaner cities. Protecting the environment is not a choice; it is a responsibility. It's not about what governments do; it's about what each of us does every day. The more we recycle, the less we waste. Let's act today, not tomorrow.*
 

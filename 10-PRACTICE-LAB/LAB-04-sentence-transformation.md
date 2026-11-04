@@ -1,5 +1,7 @@
 # LAB-04 · Sentence Transformation — Luyện biến đổi câu
 
+Bạn sẽ viết lại câu bằng một cấu trúc khác mà vẫn giữ nghĩa. Trước khi chốt đáp án, kiểm tra thời gian, phủ định, người được nói đến và mức độ chắc chắn. Một câu đúng ngữ pháp vẫn có thể chưa đúng nhiệm vụ nếu ý đã thay đổi.
+
 | Mục | Nội dung |
 |---|---|
 | **Cấp độ** | B1 → B2 |

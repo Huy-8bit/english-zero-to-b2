@@ -1,5 +1,7 @@
 # A2 Skills Practice — Ba unit tích hợp nghe, nói, đọc, viết
 
+Ở phần này, bạn sẽ kết hợp các kỹ năng: nghe để lấy thông tin, đọc để hiểu ý, rồi nói hoặc viết theo yêu cầu. Trước mỗi nhiệm vụ, xác định mình cần tìm hoặc truyền đạt điều gì. Sau khi chấm, chọn một lỗi cụ thể để sửa trong lượt làm lại.
+
 Ba unit dùng sau các khối trong [thứ tự A2](README.md): Unit 1 sau G001–G015 (học G015 trước G011); Unit 2 sau G016–G020; Unit 3 sau G021–G030. Mỗi unit có nghe, đọc, hai nhiệm vụ nói và một bài viết. Đây là luyện tích hợp trong phạm vi chương trình, không phải chứng nhận trình độ.
 
 Dành 60–75 phút cho mỗi unit. [Đáp án và rubric](../12-ANSWERS-AND-EXPLANATIONS/SKILLS/A2-SKILLS-ANSWERS.md) nằm riêng. [Transcript](../12-ANSWERS-AND-EXPLANATIONS/SKILLS/A2-LISTENING-TRANSCRIPTS.md) chỉ dùng tạo âm thanh hoặc đối chiếu sau nghe. Không có audio đính kèm; xem [cách dùng TTS](../09-FOUR-SKILLS/Listening/README.md).

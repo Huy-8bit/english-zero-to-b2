@@ -19,7 +19,7 @@ Bạn kể: “I saw a dog. The dog was wet.” Lần đầu người nghe chưa
 
 ## C. WHAT
 
-**Article — mạo từ** gồm a, an và the. **Zero article — không dùng mạo từ**, ký hiệu Ø trong bài tập, là lựa chọn có ý nghĩa chứ không phải bỏ quên từ. A/an thường giới thiệu một thành viên chưa xác định của nhóm danh từ đếm được số ít. The hướng người nghe đến đối tượng/nhóm xác định được trong ngữ cảnh. Ø thường đi với số nhiều hoặc danh từ không đếm được khi nói chung, và nhiều tên riêng/cụm cố định.
+**A, an, the** là mạo từ. Khi bài ghi **Ø (zero article)**, nghĩa là không dùng mạo từ ở vị trí đó. *A/an* thường giới thiệu một người hoặc vật chưa xác định, với danh từ đếm được số ít. *The* nói đến đối tượng người nghe xác định được. Khi nói chung, danh từ số nhiều và danh từ không đếm được thường không có mạo từ; nhiều tên riêng và cụm cố định cũng vậy.
 
 ## D. WHY
 

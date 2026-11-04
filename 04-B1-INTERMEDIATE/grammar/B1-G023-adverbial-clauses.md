@@ -30,7 +30,7 @@
 | **Prerequisites** | [B1-G019 — Complex Sentences](B1-G019-complex-sentences.md), [A2-G017 — First Conditional](../../03-A2-ELEMENTARY/grammar/A2-G017-first-conditional.md) |
 | **Estimated Time** | 90 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Dùng **mệnh đề thời gian** với *as soon as, until, by the time, once, while, after, before* — và **không dùng *will*** trong mệnh đề thời gian chỉ tương lai.
 2. Phân biệt **mục đích**: *to V, in order to, so as to, so that + can/could/will/would*.
@@ -52,7 +52,7 @@
 
 ## C. WHAT
 
-**Mệnh đề trạng ngữ** (adverbial clause) là mệnh đề phụ trả lời câu hỏi **khi nào? để làm gì? mặc dù gì?** cho mệnh đề chính.
+**Mệnh đề trạng ngữ (adverbial clause)** là phần câu bổ sung thông tin như khi nào, vì sao, với điều kiện gì hoặc để làm gì. Trong *I'll call you when I arrive*, *when I arrive* cho biết lúc nào tôi gọi. Bạn chọn từ nối và thì theo quan hệ ý nghĩa của hai phần.
 
 | Loại | Liên từ | Ví dụ |
 |---|---|---|
@@ -237,7 +237,7 @@ even if      →  ❓ giả định, chưa chắc xảy ra   "Even if it rains..
 
 ### Level 2 — Controlled Practice
 
-Chia động từ trong ngoặc.
+Điền dạng phù hợp của động từ trong ngoặc.
 
 **L2.1.** I'll wait here until you (finish) ___.
 **L2.2.** By the time she (arrive) ___ at the station, the train had left.

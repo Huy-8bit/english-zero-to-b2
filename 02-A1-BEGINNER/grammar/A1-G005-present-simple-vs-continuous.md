@@ -30,7 +30,7 @@
 | **Prerequisites** | [A1-G001](A1-G001-present-simple-affirmative.md)–[A1-G004](A1-G004-present-continuous.md) |
 | **Estimated Time** | 90 phút |
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
 1. Chọn đúng thì dựa trên ý nghĩa: **thói quen/lâu dài** vs **đang diễn ra/tạm thời**.
 2. Nhận diện dấu hiệu thời gian, nhưng **không phụ thuộc hoàn toàn** vào chúng.
@@ -55,6 +55,8 @@ Tiếng Việt dùng cùng động từ cơ bản, chỉ thêm "đang". Tiếng 
 ---
 
 ## C. WHAT: Hai cách nhìn về hiện tại
+
+Hãy so sánh *I work at a bank* với *I'm working from home today*. Câu đầu nói về công việc thường ngày; câu sau nói về tình hình hôm nay. Khi chọn giữa hiện tại đơn và hiện tại tiếp diễn, hãy nghĩ xem bạn muốn nói về thói quen hay việc đang diễn ra.
 
 | | Present Simple | Present Continuous |
 |---|---|---|
@@ -209,7 +211,7 @@ Một số động từ là **state verb** ở nghĩa này nhưng là **action v
 
 ### Level 1 — Recognition
 
-Chọn đáp án đúng.
+Chọn đáp án phù hợp với câu và ngữ cảnh.
 
 **L1.1.** My brother ___ in a bank, but this month he ___ in a café.  A. works / works  B. works / is working  C. is working / works
 **L1.2.** "What ___?" – "I'm an engineer."  A. are you doing  B. do you do  C. do you doing

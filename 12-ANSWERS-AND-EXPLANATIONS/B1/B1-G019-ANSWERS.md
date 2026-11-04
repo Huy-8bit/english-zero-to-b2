@@ -58,7 +58,7 @@
 
 > *Three years ago, I had to decide whether I should stay in my hometown or move to Ho Chi Minh City. My parents wanted me to stay, but I wanted more opportunities. Although I loved my family, I knew that I needed a change. When I finally told them about my plan, my mother cried, and my father didn't say anything. What worried me most was that they would feel lonely. However, I promised that I would call every day. After I moved, I found a job quickly because many companies needed accountants, so I was able to send money home. Now my parents understand why I left, and they visit me every summer.*
 
-**Rubric (0–2 mỗi tiêu chí):** ≥ 3 câu ghép đúng · ≥ 4 câu phức, ≥ 3 liên từ phụ thuộc · ≥ 2 mệnh đề danh từ · không fragment/run-on/comma splice · 120–150 từ.
+**Tiêu chí tự đánh giá (0–2 điểm cho mỗi tiêu chí):** ≥ 3 câu ghép đúng · ≥ 4 câu phức, ≥ 3 liên từ phụ thuộc · ≥ 2 mệnh đề danh từ · không fragment/run-on/comma splice · 120–150 từ.
 
 **L5.2.** Mẫu chuỗi:
 1. *I learn English.*

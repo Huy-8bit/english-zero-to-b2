@@ -67,7 +67,7 @@
 > *Yours faithfully,*
 > *Pham Thu Trang*
 
-**Rubric (0–2 mỗi tiêu chí):** ≥ 3 động từ + giả định · ≥ 2 tính từ + giả định · danh từ + giả định · phủ định và bị động giả định · văn phong trang trọng.
+**Tiêu chí tự đánh giá (0–2 điểm cho mỗi tiêu chí):** ≥ 3 động từ + giả định · ≥ 2 tính từ + giả định · danh từ + giả định · phủ định và bị động giả định · văn phong trang trọng.
 
 **L5.2.** Mẫu: *I'd recommend that you open a local bank account as soon as you arrive. It's essential that you keep copies of your passport and visa. I'd suggest that you not carry too much cash. It's also important that you be patient — everything feels strange at first.*
 

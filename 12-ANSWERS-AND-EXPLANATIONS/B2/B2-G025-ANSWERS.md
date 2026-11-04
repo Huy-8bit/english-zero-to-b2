@@ -60,7 +60,7 @@
 >
 > *What is **clear** is that communication technology has made remote work possible on a scale that was unimaginable twenty years ago. Overall, the evidence **seems to** indicate that a hybrid model **would probably** offer the best balance between flexibility and collaboration.*
 
-**Rubric (0–2 mỗi tiêu chí):** ≥ 6 phương tiện rào đón · ≥ 4 nhóm · booster có căn cứ · không khái quát tuyệt đối · văn phong học thuật mạch lạc.
+**Tiêu chí tự đánh giá (0–2 điểm cho mỗi tiêu chí):** ≥ 6 phương tiện rào đón · ≥ 4 nhóm · booster có căn cứ · không khái quát tuyệt đối · văn phong học thuật mạch lạc.
 
 **L5.2.** Mẫu: *It seems that people in Vietnam are getting married later than in the past. This may be because more young people, especially women, are focusing on their careers. In many cases, the high cost of housing also appears to play a role. It's likely that this trend will continue, although it probably varies between cities and rural areas.*
 

@@ -17,7 +17,7 @@ Tám chuyên đề luyện nói, từ câu đơn giản đến thảo luận và
 
 ## Nguyên tắc tự luyện nói
 
-1. **Ghi âm mọi lần luyện.** Nghe lại là cách duy nhất để biết mình thực sự nói thế nào.
+1. **Ghi âm những lượt cần theo dõi.** Nghe lại giúp bạn nhận ra cách mình thực sự nói. Bạn cũng có thể nhờ người khác phản hồi; chọn một điểm cụ thể để sửa trong lượt tiếp theo.
 2. **Tách luyện trôi chảy và luyện chính xác.** Lúc nói: không dừng sửa; sau khi nói: viết lại và sửa.
 3. **Nói mỗi ngày, dù chỉ 5 phút.** Tự nói (self-talk), mô tả ảnh, trả lời một câu hỏi.
 4. **Tìm bạn luyện** hoặc câu lạc bộ tiếng Anh; nếu dùng AI để luyện hội thoại, xem [AI Tutor Instructions](../../AI-TUTOR-INSTRUCTIONS.md).

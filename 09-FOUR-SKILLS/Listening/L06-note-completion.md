@@ -1,5 +1,7 @@
 # L06 · Note Completion — Hoàn thành ghi chú
 
+Bài này giúp bạn vừa nghe vừa điền ghi chú. Trước khi nghe, đoán chỗ trống cần tên, số, danh từ hay một thông tin khác. Sau khi nghe, kiểm tra chính tả, dạng số ít/số nhiều và giới hạn từ của nhiệm vụ.
+
 | Mục | Nội dung |
 |---|---|
 | **Cấp độ** | B1 → B2 |
