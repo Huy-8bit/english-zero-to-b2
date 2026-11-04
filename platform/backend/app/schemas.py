@@ -1,7 +1,7 @@
 """Request bodies (validated by Pydantic). Responses are plain JSON built in the routers."""
 from __future__ import annotations
 
-from typing import Any
+from typing import Any, Literal
 
 from pydantic import BaseModel, Field, field_validator, model_validator
 
@@ -9,8 +9,19 @@ MAX_TEXT = 10_000
 
 
 class ProgressIn(BaseModel):
-    current_step: int = Field(ge=0, le=2000)
+    current_step: int | None = Field(default=None, ge=0, le=2000)
     state: dict[str, Any] | None = None
+    status: Literal["not_started", "in_progress", "completed", "review"] | None = None
+    dry_run: bool = False
+
+    @model_validator(mode="after")
+    def progress_or_status(self):
+        if self.status is not None:
+            if self.current_step is not None or self.state is not None:
+                raise ValueError("Send status separately from lesson drafts")
+        elif self.current_step is None or self.dry_run:
+            raise ValueError("Send current_step, or status for a manual change/dry run")
+        return self
 
     @field_validator("state")
     @classmethod
@@ -18,6 +29,19 @@ class ProgressIn(BaseModel):
         if v is not None and len(str(v)) > 200_000:
             raise ValueError("state too large")
         return v
+
+
+class MarkUpToIn(BaseModel):
+    unit_id: str | None = Field(default=None, min_length=1, max_length=64)
+    level: Literal["A0", "A1", "A2", "B1", "B2"] | None = None
+    include_skills: bool = False  # skills and communication, in curriculum order
+    dry_run: bool = False
+
+    @model_validator(mode="after")
+    def one_target(self):
+        if (self.unit_id is None) == (self.level is None):
+            raise ValueError("Send exactly one of unit_id or level")
+        return self
 
 
 class QuizSubmitIn(BaseModel):

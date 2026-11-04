@@ -95,7 +95,8 @@ function LessonModes({ unitId }: { unitId: string }) {
 function LessonSession({ unitId, onJourney, onSprint }: { unitId: string; onJourney?: () => void; onSprint?: () => void }) {
   const nav = useNavigate();
   const qc = useQueryClient();
-  const { focusMode, setFocusMode } = useUI();
+  const { focusMode, setFocusMode, reader } = useUI();
+  const readerFocus = reader.enabled && reader.focus;
   const steps = useQuery({ queryKey: ["steps", unitId], queryFn: () => api.steps(unitId), staleTime: Infinity, gcTime: 0 });
   const lesson = useQuery({ queryKey: ["lesson", unitId], queryFn: () => api.lesson(unitId) });
   useAIStatus();
@@ -234,9 +235,9 @@ function LessonSession({ unitId, onJourney, onSprint }: { unitId: string; onJour
   return (
     <div className={cn("min-h-screen bg-bg transition-[padding] duration-200 motion-reduce:transition-none", tutorOpen && "md:pr-[22rem] xl:pr-[26rem]")}>
       <header className="sticky top-0 z-30 border-b border-border bg-bg/90 backdrop-blur">
-        <div className="mx-auto flex max-w-[90rem] items-center gap-2 px-3 py-2 sm:px-8">
+        <div className="reader-toolbar mx-auto flex max-w-[90rem] items-center gap-2 px-3 py-2 sm:px-8">
           <Button variant="ghost" size="icon" onClick={() => nav(lessonExitPath())} aria-label="Thoát bài học"><X size={18} /></Button>
-          <div className="min-w-0 flex-1">
+          <div className="reader-title min-w-0 flex-1">
             <div className="flex items-center gap-2">
               <h1 className="truncate text-sm font-semibold sm:text-base">{unit.id} · {unit.title}</h1>
               {unit.level && <Badge tone="primary">{unit.level}</Badge>}
@@ -250,8 +251,8 @@ function LessonSession({ unitId, onJourney, onSprint }: { unitId: string; onJour
               {isExam && ps.state.examStartedAt && !examSubmitted && <ExamClock since={ps.state.examStartedAt} />}
             </div>
           </div>
-          <div className="flex items-center">
-            {!focusMode && <Button variant="ghost" size="icon" onClick={() => setOutline(true)} aria-label="Danh sách slide" className={tutorOpen ? "2xl:hidden" : "lg:hidden"}><List size={18} /></Button>}
+          <div className="reader-actions flex items-center">
+            {!focusMode && <Button variant="ghost" size="icon" onClick={() => setOutline(true)} aria-label="Danh sách slide" className={readerFocus ? undefined : tutorOpen ? "2xl:hidden" : "lg:hidden"}><List size={18} /></Button>}
             {onSprint && <Button variant="ghost" size="sm" onClick={onSprint} aria-label="Sprint ≈8 phút" title="Sprint ≈8 phút: cốt lõi trên một màn hình + 6 câu kiểm tra"><Zap size={18} /><span className="hidden md:inline">Sprint</span></Button>}
             {onJourney && <Button variant="ghost" size="sm" onClick={onJourney} aria-label="Chế độ hành trình" title="Chế độ hành trình: từng bước, có kiểm tra xen kẽ"><Route size={18} /><span className="hidden md:inline">Hành trình</span></Button>}
             <ViToggle />
@@ -270,7 +271,7 @@ function LessonSession({ unitId, onJourney, onSprint }: { unitId: string; onJour
         )}
       </header>
 
-      <div className={cn("lesson-big mx-auto flex max-w-[90rem] gap-8 px-3 sm:px-8", focusMode && "max-w-5xl")}>
+      <div className={cn("reader-lesson-shell lesson-big mx-auto flex max-w-[90rem] gap-8 px-3 sm:px-8", focusMode && "max-w-5xl")}>
         {!focusMode && (
           <aside className={cn("sticky top-20 hidden h-[calc(100vh-10rem)] w-64 shrink-0 overflow-y-auto py-6", tutorOpen ? "2xl:block" : "lg:block")} aria-label="Các slide">
             <Outline steps={allSteps} current={ps.step} onPick={go} results={ps.results} />

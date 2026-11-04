@@ -6,6 +6,7 @@ import { Toaster } from "@/components/ui/toast";
 import { LoginGate } from "@/features/auth/LoginGate";
 import { CelebrateHost } from "@/components/Celebrate";
 import { BlockTimerHost } from "@/features/plan/BlockTimer";
+import { ReaderAppearance } from "@/features/reader/ReaderAppearance";
 
 const Dashboard = lazy(() => import("@/features/dashboard/DashboardPage"));
 const PathPage = lazy(() => import("@/features/learning-path/PathPage"));
@@ -58,6 +59,7 @@ function Loading() {
 export default function App() {
   return (
     <LoginGate>
+      <ReaderAppearance />
       <Suspense fallback={<Loading />}>
         <Routes>
           <Route path="/learn/:unitId" element={<LessonPlayer />} />

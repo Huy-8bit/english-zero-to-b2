@@ -56,6 +56,33 @@ def test_online_snapshot_includes_wal_and_media(storage, tmp_path):
     assert archive.stat().st_mode & 0o777 == 0o600
 
 
+def test_archive_restores_manual_progress_and_level(tmp_path):
+    from fastapi.testclient import TestClient
+    from app.main import create_app
+
+    database = tmp_path / 'source.db'
+    media = tmp_path / 'media'
+    source = create_app(f'sqlite:///{database}')
+    with TestClient(source) as client:
+        client.post('/api/progress/mark-up-to', json={'level': 'A1'})
+        original = client.get('/api/progress').json()
+        assert original and all(p['manual'] for p in original)
+        archive = tmp_path / 'manual.tar.gz'
+        manifest = db_archive.backup(database, media, archive)
+        assert manifest['database']['alembic_revision'] == '0009'
+        assert db_archive.verify(archive) == manifest
+    source.state.sessionmaker.kw['bind'].dispose()
+    restored = tmp_path / 'restored.db'
+    db_archive.restore(archive, restored, tmp_path / 'restored-media', replace=False,
+                       app_stopped=True, rollback_dir=tmp_path / 'rollback')
+    restored_app = create_app(f'sqlite:///{restored}')
+    with TestClient(restored_app) as client:
+        assert client.get('/api/progress').json() == original
+        assert client.get('/api/recommendations').json()['current_level'] == 'A2'
+        assert client.get('/api/dashboard').json()['xp']['total'] == 0
+    restored_app.state.sessionmaker.kw['bind'].dispose()
+
+
 def test_missing_database_does_not_create_empty_source(tmp_path):
     with pytest.raises(ValueError, match='not found'):
         db_archive.backup(tmp_path / 'missing.db', tmp_path / 'media', tmp_path / 'backup.tar.gz')

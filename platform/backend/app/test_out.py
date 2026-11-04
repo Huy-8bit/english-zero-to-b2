@@ -101,11 +101,12 @@ def finish(db: Session, user: User, store: ContentStore, unit_id: str, test_id: 
                                total_steps=len(b.steps), state={}, time_spent_sec=0, completions=0)
             db.add(p)
         score = round(100 * t.correct / t.total, 1)
-        first_completion = p.completed_at is None
+        first_completion = p.completed_at is None or p.manual
         p.status, p.score = "completed", score
+        p.manual = False
         p.best_score = max(p.best_score or 0, score)
         p.max_step = max(p.max_step or 0, len(b.steps) - 1)
-        p.completed_at = p.completed_at or utcnow()
+        p.completed_at = utcnow() if first_completion else p.completed_at
         p.completions = (p.completions or 0) + 1
         xp = P.award(db, user.id, f"lesson:{unit_id}", "lesson_complete", P.XP_RULES["lesson_complete"])
         if first_completion:

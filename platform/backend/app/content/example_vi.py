@@ -72,8 +72,13 @@ class _Batch(BaseModel):
 
 INSTRUCTIONS = """You translate the English example sentences of an English grammar course into Vietnamese for \
 Vietnamese learners. The lesson they come from is given.
-- Natural, short Vietnamese that keeps what the lesson teaches: tense and aspect (present perfect "đã ... rồi" / \
-"chưa", continuous "đang", future "sẽ", past "đã" when needed), modality, passive ("được/bị"), comparison, etc.
+- Natural, short Vietnamese that keeps what the lesson teaches: time, aspect, real/unreal conditions, modality, \
+passive, comparison, quantity and negation. Convey these through the whole sentence and context; do not mechanically \
+attach "đã", "đang", "sẽ" or "được/bị" to every verb. In particular avoid unnatural combinations such as "đã đang".
+- Render requests naturally for the speakers and situation. Please need not become a literal "làm ơn" at the end \
+of every sentence; a Vietnamese request with "giúp", "xin", "nhé" or "được không" may convey the same politeness.
+- Translate the complete example, including both halves of a dialogue or conditional. Do not replace missing meaning \
+with an ellipsis; keep an ellipsis only when it is an intentional placeholder in the English source.
 - The numbered lines are in lesson order and often belong together (a dialogue, a table, a pair of direct and \
 reported speech): use the neighbouring lines as context (e.g. "our report on the chair" is where the report lies).
 - Keep names of people and places. Do not add explanations or quotes around the translation.
@@ -156,7 +161,8 @@ Return a fix ONLY for a line that needs one:
 - the Vietnamese changes the meaning, above all the grammar the lesson teaches: contrast vs cause (despite / although \
 = "mặc dù", not "do / vì"), time and tense (finished / ongoing / future), real vs unreal conditionals, modality \
 (must / should / might), passive, reported speech, comparison, quantity, negation;
-- it is clearly unnatural or incomplete Vietnamese;
+- it is clearly unnatural or incomplete Vietnamese, mechanically copies tense particles, or repeats a literal \
+"làm ơn" where a normal Vietnamese request fits better; retain the original degree of politeness and meaning;
 - the [WRONG] mark is wrong: the English is grammatical (informal, British or a deliberate drill such as stressed words \
 only is not a mistake), or an ungrammatical English line is not marked.
 For a fix give the corrected vi (for a [WRONG] line: the meaning the writer intended) and wrong as it should be; why in \

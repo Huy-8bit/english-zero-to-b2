@@ -118,3 +118,135 @@ mark.em-hl { background: #fde68a; color: inherit; border-radius: 0.2em; }
   .lesson-big .prose-em table { font-size: 1.02rem; }
   .lesson-big .prose-em th, .lesson-big .prose-em td { padding: 0.7em 1em; }
 }
+
+/* Quiet, paper-like study pages. App/navigation fonts stay compact; reading type is adjustable. */
+html[data-reader] {
+  --bg: #eeeee7;
+  --surface: #fcfbf6;
+  --surface-2: #f0efe7;
+  --border: #d2d1c6;
+  --fg: #292c27;
+  --muted: #60635a;
+  --primary: #353d32;
+  --primary-fg: #fcfbf6;
+  --primary-soft: #e7eadd;
+  --success: #315f39;
+  --success-soft: #e8eddf;
+  --danger: #943f2b;
+  --danger-soft: #f4e7de;
+  --warning: #795b18;
+  --warning-soft: #f2ebd7;
+  --radius-card: 0.45rem;
+  color-scheme: light;
+}
+html[data-reader="warm"] {
+  --bg: #f0e8d8;
+  --surface: #fbf5e8;
+  --surface-2: #f1e9d8;
+  --border: #d6cbb6;
+  --fg: #332d25;
+  --muted: #655c4f;
+  --primary: #493f30;
+  --primary-fg: #fbf5e8;
+  --primary-soft: #eae2cf;
+}
+html[data-reader="night"] {
+  --bg: #1c211e;
+  --surface: #252b26;
+  --surface-2: #303831;
+  --border: #4c574d;
+  --fg: #e6e9df;
+  --muted: #b4bdb1;
+  --primary: #c8d4be;
+  --primary-fg: #20271e;
+  --primary-soft: #3a4636;
+  --success: #b0cda1;
+  --success-soft: #303f2b;
+  --danger: #ecc0ac;
+  --danger-soft: #4a342b;
+  --warning: #e0cf9b;
+  --warning-soft: #423c2b;
+  color-scheme: dark;
+}
+html[data-reader="black"] {
+  --bg: #090b0e;
+  --surface: #101317;
+  --surface-2: #181d22;
+  --border: #36404b;
+  --fg: #d6dce2;
+  --muted: #a2aeb9;
+  --primary: #b9c5d2;
+  --primary-fg: #111821;
+  --primary-soft: #242f3a;
+  --success: #a8c9a3;
+  --success-soft: #1d3021;
+  --danger: #e9b3a5;
+  --danger-soft: #35231f;
+  --warning: #dfc993;
+  --warning-soft: #322b1c;
+  color-scheme: dark;
+}
+html[data-reader] *, html[data-reader] *::before, html[data-reader] *::after {
+  animation: none !important;
+  transition: none !important;
+  scroll-behavior: auto !important;
+}
+html[data-reader] [class*="shadow"] { box-shadow: none !important; }
+html[data-reader] [class*="bg-gradient"] { background-image: none !important; }
+html[data-reader] header, html[data-reader] footer { backdrop-filter: none; background-color: var(--surface); }
+html[data-reader] #main { max-width: 62rem; }
+html[data-reader] .reader-page { max-width: 57rem; margin-inline: auto; padding-block: 2.5rem 5rem; }
+html[data-reader] .reader-page h1 { font-family: var(--reader-font); line-height: 1.35; letter-spacing: 0; text-wrap: balance; }
+html[data-reader] .prose-em,
+html[data-reader] .reader-article,
+html[data-reader] .reader-prose,
+html[data-reader] .reader-writing p:not(.text-xs),
+html[data-reader] .reader-writing textarea,
+html[data-reader] .reader-writing input:not([type="checkbox"]) {
+  font-family: var(--reader-font);
+  font-size: var(--reader-size) !important;
+  line-height: var(--reader-leading);
+  letter-spacing: 0;
+  text-align: left;
+  overflow-wrap: break-word;
+}
+html[data-reader] .prose-em { max-width: 72ch; }
+html[data-reader] .prose-em > * + * { margin-top: 1em; }
+html[data-reader] .prose-em li + li { margin-top: 0.5em; }
+html[data-reader] .prose-em table { font-size: 0.94em; line-height: 1.65; }
+html[data-reader] .prose-em :is(th, td) { padding: 0.7em 0.8em; }
+html[data-reader] .prose-em strong, html[data-reader] .night-card strong { font-weight: 700; background: none; }
+html[data-reader] .vi-tr { font-size: 0.92em; line-height: 1.65; }
+html[data-reader] .reader-article { border-radius: 0.4rem; padding: clamp(1.25rem, 4vw, 2.5rem); }
+html[data-reader] .reader-article h2, html[data-reader] .reader-writing :is(h2, h3) { font-family: var(--reader-font); line-height: 1.4; }
+html[data-reader] .reader-prose > p:not(.text-xs) { font-size: var(--reader-size); line-height: var(--reader-leading); }
+html[data-reader] .reader-prose [role="group"] button { font-family: var(--reader-font); font-size: var(--reader-size); line-height: 1.65; border-radius: 0.35rem; }
+html[data-reader] .reader-outline { grid-template-columns: minmax(0, 1fr); }
+html[data-reader] .reader-writing { max-width: 54rem; margin-inline: auto; }
+html[data-reader] .reader-writing textarea { padding: 1rem 1.15rem; border-radius: 0.35rem; }
+html[data-reader] .reader-writing .reader-pattern { border-left: 2px solid var(--border); padding-left: 1rem; }
+html[data-reader] .reader-motion,
+html[data-reader] .reader-motion [style*="opacity"],
+html[data-reader] .reader-page [style*="opacity"],
+html[data-reader] .night-card [style*="opacity"] { opacity: 1 !important; transform: none !important; }
+html[data-reader-focus="true"] [aria-label="Các slide"] { display: none; }
+html[data-reader] .reader-lesson-shell { max-width: 78rem; }
+html[data-reader-focus="true"] .reader-lesson-shell { max-width: 60rem; }
+@media (max-width: 639px) {
+  html[data-reader] .reader-page { padding-block: 1.5rem 4rem; }
+  html[data-reader] #main { padding-inline: 1rem; }
+  html[data-reader] .reader-prose { padding-inline: 1rem; }
+}
+html[data-reader] .reader-lesson-shell [style*="opacity"] { opacity: 1 !important; transform: none !important; }
+html[data-reader] .reader-prose { border-radius: 0.45rem; }
+html[data-reader] [data-item] [role="radiogroup"] button,
+html[data-reader] [data-item] :is(input:not([type="checkbox"]), textarea) {
+  font-family: var(--reader-font); font-size: var(--reader-size); line-height: 1.65;
+}
+html[data-reader] .reader-writing input:not([type="checkbox"]),
+html[data-reader] [data-item] input:not([type="checkbox"]) {
+  height: auto; min-height: 3.5rem; padding-block: 0.5rem; line-height: 1.5;
+}
+html[data-reader] .reader-toolbar, html[data-reader] .reader-actions { flex-wrap: wrap; row-gap: 0.5rem; }
+html[data-reader] .reader-actions { max-width: 100%; }
+html[data-reader] .reader-title { flex-basis: 12rem; }

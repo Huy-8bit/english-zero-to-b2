@@ -31,7 +31,7 @@ def test_legacy_upgrade_preserves_records_and_restarts(tmp_path, unversioned):
     init_db(engine)
     init_db(engine)  # repeated startup is idempotent
     with engine.connect() as conn:
-        assert conn.execute(text("SELECT version_num FROM alembic_version")).scalar() == "0008"
+        assert conn.execute(text("SELECT version_num FROM alembic_version")).scalar() == "0009"
         attempt = conn.execute(text("SELECT response,verdict,ai_correct,ai_score FROM attempts WHERE id=1")).one()
         assert tuple(attempt) == ("B", "correct", None, None)
         assert conn.execute(text("PRAGMA foreign_key_check")).all() == []
@@ -54,4 +54,26 @@ def test_legacy_upgrade_preserves_records_and_restarts(tmp_path, unversioned):
     with engine.connect() as conn:  # old SM-2 rows are never modified or deleted
         assert tuple(conn.execute(text("SELECT card_id, interval_days, repetitions FROM vocab_cards")).one()) == ("VOC-01:wake-up", 6, 2)
         assert conn.execute(text("SELECT count(*) FROM vocab_progress WHERE legacy_migrated=1")).scalar() == 1
+    engine.dispose()
+
+
+def test_upgrade_0008_defaults_existing_progress_to_non_manual(tmp_path):
+    engine = make_engine(f"sqlite:///{tmp_path / 'revision0008.db'}")
+    cfg = Config(str(BACKEND_DIR / "alembic.ini"))
+    cfg.set_main_option("script_location", str(BACKEND_DIR / "alembic"))
+    cfg.attributes["configure_logger"] = False
+    with engine.begin() as conn:
+        cfg.attributes["connection"] = conn
+        command.upgrade(cfg, "0008")
+        conn.execute(text("INSERT INTO users (id,name,created_at,daily_goal_minutes,weekly_goal_lessons) "
+                          "VALUES (1,'Existing learner',CURRENT_TIMESTAMP,20,5)"))
+        conn.execute(text("INSERT INTO lesson_progress (user_id,unit_id,status,current_step,max_step,total_steps,state,"
+                          "score,best_score,time_spent_sec,started_at,updated_at,completed_at,completions) VALUES "
+                          "(1,'A0-G001','completed',4,4,5,'{}',85,90,60,CURRENT_TIMESTAMP,CURRENT_TIMESTAMP,'2020-01-01',1)"))
+    init_db(engine)
+    init_db(engine)
+    with engine.connect() as conn:
+        assert tuple(conn.execute(text("SELECT manual,score,best_score,completed_at FROM lesson_progress")).one()) == (
+            0, 85, 90, "2020-01-01")
+        assert conn.execute(text("SELECT version_num FROM alembic_version")).scalar() == "0009"
     engine.dispose()

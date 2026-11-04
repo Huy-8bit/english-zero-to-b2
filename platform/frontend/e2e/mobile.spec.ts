@@ -20,7 +20,7 @@ test("mobile layout: menu, lesson player usable", async ({ page }) => {
 });
 
 test("mobile vocabulary: pages fit the screen and a flashcard can be rated", async ({ page }) => {
-  for (const url of ["/vocabulary", "/vocabulary/explore?level=A1", "/vocabulary/word/achieve", "/vocabulary/today", "/vocabulary/stats", "/vocabulary/notebook", "/journal", "/today", "/review", "/vocabulary/sprint", "/writing-daily", "/grammar-sprint", "/grammar-night"]) {
+  for (const url of ["/vocabulary", "/vocabulary/explore?level=A1", "/vocabulary/word/achieve", "/vocabulary/today", "/vocabulary/stats", "/vocabulary/notebook", "/journal", "/today", "/review", "/vocabulary/sprint", "/writing-daily", "/grammar-sprint", "/grammar-night", "/writing-studio?mode=exam"]) {
     await page.goto(url);
     await page.waitForLoadState("networkidle");
     const overflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
@@ -42,4 +42,24 @@ test("mobile assistant opens full screen and answers", async ({ page }) => {
   await expect(page.getByText("[AI giả lập]").first()).toBeVisible();
   expect(await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth)).toBeLessThanOrEqual(1);
   await page.getByRole("button", { name: "Đóng trợ lý", exact: true }).click();
+});
+
+test("mobile paper reader: large type fits memory input and lesson controls stay usable", async ({ page }) => {
+  await page.goto("/writing-studio?mode=exam");
+  await page.getByRole("button", { name: "Tùy chỉnh trang đọc", exact: true }).click();
+  const settings = page.getByRole("dialog", { name: "Trang đọc", exact: true });
+  await settings.getByRole("radio", { name: "23", exact: true }).check();
+  await settings.getByRole("radio", { name: "Rộng", exact: true }).check();
+  await settings.getByRole("button", { name: "Xong", exact: true }).click();
+  await page.getByRole("button", { name: "3. Học thuộc khung", exact: true }).click();
+  await page.getByRole("button", { name: "Bắt đầu học thuộc", exact: true }).click();
+  const input = page.getByLabel("Gõ câu dẫn từ trí nhớ", { exact: true });
+  await input.fill("It is often argued that");
+  await expect(input).toHaveCSS("font-size", "23px");
+  expect(await input.evaluate((e) => e.clientHeight >= e.scrollHeight)).toBe(true);
+  expect(await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth)).toBeLessThanOrEqual(1);
+  await page.goto("/learn/A0-G004?mode=journey");
+  await expect(page.getByText("Nhiệm vụ hôm nay", { exact: true })).toBeVisible();
+  await expect(page.getByRole("button", { name: "Tùy chỉnh trang đọc", exact: true })).toBeVisible();
+  expect(await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth)).toBeLessThanOrEqual(1);
 });

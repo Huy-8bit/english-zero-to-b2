@@ -26,7 +26,8 @@ export default function ProgressPage() {
   const totalAttempts = Object.values(s.attempts).reduce((a, b) => a + b, 0);
   return (
     <div className="space-y-6">
-      <PageHeader title="Tiến độ & phân tích" subtitle="Mọi số liệu được tính từ hoạt động học thật đã lưu." />
+      <PageHeader title="Tiến độ & phân tích" subtitle="Tiến độ gồm bài học trong app và bài bạn tự đánh dấu. XP, chuỗi ngày và thành tích tính từ hoạt động học thật."
+        actions={<Link to="/path" className="text-sm text-primary underline">Điều chỉnh tiến độ đã học</Link>} />
       <LearningAnalytics />
       <div className="grid gap-4 sm:grid-cols-3">
         <Card className="p-4"><p className="flex items-center gap-2 text-xs text-muted"><Sparkles size={15} />Tổng XP</p><p className="text-2xl font-bold">{s.xp_total}</p></Card>
@@ -81,7 +82,8 @@ export default function ProgressPage() {
                   <tr key={h.unit_id} className="border-t border-border">
                     <td className="py-2"><Link to={`/learn/${h.unit_id}`} className="text-primary">{h.unit_id}</Link> {h.title}</td>
                     <td>{KIND_LABELS[h.kind] ?? h.kind}</td>
-                    <td><Badge tone={h.status === "completed" ? "success" : h.status === "review" ? "danger" : "primary"}>{STATUS_LABELS[h.status]}</Badge></td>
+                    <td><Badge tone={h.status === "completed" ? "success" : h.status === "review" ? "danger" : "primary"}>{STATUS_LABELS[h.status]}</Badge>
+                      {h.manual && <Badge>đánh dấu thủ công</Badge>}</td>
                     <td>{h.best_score !== null ? `${Math.round(h.best_score)}%` : "—"}</td>
                     <td>{h.minutes} phút</td>
                     <td className="text-muted">{new Date(h.updated_at).toLocaleDateString("vi-VN")}</td>

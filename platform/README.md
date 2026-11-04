@@ -257,17 +257,17 @@ node ../frontend/scripts/example-sentences.ts /tmp/lessons.json /tmp/examples.js
 
 ## Ngữ pháp 1 đêm (`/grammar-night`)
 
-Lượt đọc tổng quan toàn bộ ngữ pháp trong một đêm. Chọn 4, 6, 8 hoặc 10 giờ, và chỉ đọc các bài chưa qua hoặc đọc cả 128 bài. Ví dụ 128 bài trong 8 giờ là ≈3½ phút mỗi bài, đã trừ 5 phút nghỉ sau mỗi 50 phút học. Mỗi bài là một vòng nhớ, xây trên các hiệu ứng ghi nhớ đã được nghiên cứu:
-1. **⏪ Nhớ lại bài cũ** (từ bài thứ 4): một câu từ bài đã đọc. Câu từng sai mà đến hạn được hỏi trước. Câu sai quay lại sau 2 bài, đúng thì hỏi lại lần nữa sau ~7 bài, đúng tiếp thì tính là “đã cứu lại”. Đây là nhớ lại giãn cách và xen kẽ.
-2. **🎯 Đoán** (pretest): một câu trắc nghiệm trước khi học. App chỉ báo đúng/sai, không lộ đáp án; câu này được ghim trên đầu bài để bạn vừa đọc vừa tìm đáp án.
-3. **📖 Học từng thẻ ngắn:** 💡 Hiểu (WHAT) → 📐 Công thức → 🧠 Mẹo nhớ (đọc to) → ⚠️ Bẫy. Ở thẻ Bẫy, câu sai hiện trước; bạn tự sửa trong đầu rồi mới lật câu đúng (có nút nghe). Chữ đậm được tô như bút dạ, dạng sai gạch đỏ. Enter / → đi tiếp, ← quay lại.
-4. **✍️ Nhớ lại không xem bài:** câu đoán lúc đầu và 2 câu mới. Bấm đáp án hoặc phím 1–4 là chấm ngay, có giải thích. Sai không bị chặn.
+Mặc định là **Bản gọn: 29 chủ điểm**, tóm lược phần ngữ pháp cốt lõi của **118 bài gốc** cho khung **3–4 giờ** (mặc định 3 giờ 30). Nội dung được soạn riêng trong `compactGrammar.ts`, có kiểm thử đối chiếu toàn bộ 128 ID bài nguồn: mỗi bài thuộc đúng một chủ điểm hoặc danh sách để sau.
 
-Đủ 50 phút thì app đề nghị “Ôn 5 câu rồi nghỉ”: trộn câu sai và các bài trong khối vừa học, sau đó đếm ngược 5 phút. Trang tổng có phần “Ôn 10 câu trước khi ngủ” và danh sách “Chưa nhớ” gồm các bài còn câu sai chưa nhớ lại được và các bài bị bỏ qua. Khi chọn từ 8 giờ trở lên, app nhắc ngủ sau khi học, vì giấc ngủ là lúc não củng cố trí nhớ.
+- Gộp khẳng định/phủ định/nghi vấn, các cách dùng và bài so sánh cùng chủ điểm. Ví dụ A2-G003…G007 và B1-G001 thành một mục hiện tại hoàn thành; phần so sánh quá khứ đơn nằm ngay trong mục đó.
+- Mỗi chủ điểm: **Hiểu cách dùng → Khung câu và ví dụ có nghĩa tiếng Việt → Điểm dễ nhầm → Trắc nghiệm để nhớ**. Có **6 câu/chủ điểm, tổng 174 câu** được soạn riêng trong `briefQuestions.ts`, phủ cách dùng, công thức, hiểu nghĩa và lỗi thường gặp. Chọn đáp án sẽ hiện giải thích tiếng Việt; chỉ nhận lựa chọn đầu tiên trong mỗi lượt. Có thể tạm dừng hoặc tiếp tục đọc, không bắt đoán trước bài.
+- Để sau 10 bài: A0-G001…G003 (chữ/âm), B1-G026 (bày tỏ quan điểm), B2-G025…G030 (rào đón, kết hợp từ, dấu hiệu diễn ngôn, văn phong, biến đổi câu, lập luận). Bài gốc vẫn còn trong lộ trình đầy đủ, dùng ở giai đoạn nói/viết.
+- Dùng tiến độ path (kể cả đánh dấu thủ công) và kết quả đọc cũ. Chủ điểm chỉ được bỏ qua nếu tất cả bài thành phần đã hoàn thành/đọc, hoặc người học đọc hết bản gọn đó. Ưu tiên chủ điểm chứa bài nguồn đầu tiên chưa học; không tự bỏ cả nhóm vì một bài trong đó đã qua.
+- Phiên cũ tự dùng bản gọn, giữ nguyên đáp án, hàng đợi ôn và kết quả cũ. Các nút **Còn 3 giờ / 3 giờ 30 / 4 giờ từ bây giờ** đặt lại đồng hồ, không xóa tiến độ đọc.
+- Trang tổng quan có **Ôn câu sai** và **Ôn trộn tối đa 12 câu**: ưu tiên câu sai, rồi xen câu của các chủ điểm đã đọc hoặc đã luyện. Câu sai ra khỏi hàng đợi khi được trả lời đúng ở lượt sau. Mỗi chủ điểm cũng có nút mở trực tiếp bộ 6 câu. Kết quả cho biết số đúng trong từng lượt và đáp án gần nhất, không đồng nhất với mức thành thạo lâu dài.
+- Bản gọn lưu `compactRead`, `briefAnswers` (lựa chọn, đúng/sai gần nhất, số lần, thời điểm) và `briefQuiz` (lượt đang làm, câu hiện tại, các lựa chọn đã chốt) trong đêm học trên trình duyệt. Tải lại giữ cả phản hồi hiện tại; tạm dừng/mở lại cùng lượt giữ vị trí. Kết thúc đêm học xóa dữ liệu đêm theo cơ chế cũ. **Không gửi câu trả lời, không tạo XP/streak/achievement, không tự hoàn thành bài nguồn**. Đây là lượt đọc hiểu, không phải chứng nhận thành thạo A0–B2. Đọc xong có nút chuyển sang nói và viết.
 
-Khi đêm học đang chạy, bài ngữ pháp mở ở chế độ đêm (`?mode=night`), có nút giao diện tối. Kết thúc đêm học thì trả về chế độ cũ. Trên đầu bài có đồng hồ so với nhịp cần, báo nhanh/chậm bao nhiêu bài và giờ dự kiến xong. Lượt đọc này không tính bài là “hoàn thành”; chốt từng bài bằng Sprint ngữ pháp. Kế hoạch và hàng đợi câu hỏi lại lưu trong trình duyệt (`nightPlan.ts`), còn câu trả lời ghi như bài tập thường.
-
-Bài học hiển thị rộng hơn trên màn hình lớn (tới 1440 px), chữ và bảng lớn hơn, hàng bảng xen màu.
+Có thể chọn **Từng bài (128 bài)** trước khi bắt đầu để dùng vòng học cũ: nhớ bài trước → đoán một câu → bốn thẻ → ba câu nhớ lại; câu sai được xếp lịch hỏi lại. Chế độ này ghi câu trả lời như bài tập thường. `plan=full` được giữ nguyên khi mở lại phiên. Cả hai lộ trình có thể chọn bài chưa học hoặc ôn lại tất cả, nghỉ 5 phút mỗi 50 phút, và trả lại chế độ bài học trước đó khi kết thúc đêm.
 
 ## Bài học nhanh hơn (2026-10-20)
 
@@ -330,6 +330,24 @@ Xem `focus-lock/README.md`.
 ## Bàn phím
 
 `→` / `←` chuyển slide (khi không gõ trong ô nhập) · `Enter` kiểm tra bài hoặc sang slide tiếp · `Esc` thoát chế độ tập trung / đóng hộp thoại · `⌘K` hoặc `/` tìm kiếm · Flashcards: `Space` lật, `1–4` chấm (Quên / Khó / Nhớ / Dễ) · Phiên học từ vựng: `1–4` chọn đáp án, `Enter` kiểm tra / tiếp tục, `Backspace` bỏ từ cuối khi sắp xếp câu.
+
+## Trang đọc kiểu máy đọc sách
+
+Các trang học, ngữ pháp 1 đêm/Sprint, Writing, Reading và tra cứu mặc định dùng nền Đen, chữ xám sáng, nội dung 19 px và giãn dòng 1.85. Nút **Tùy chỉnh trang đọc** (biểu tượng cuốn sách trên thanh đầu trang) có nền **Giấy / Ấm / Đêm / Đen**, chữ **17 / 19 / 21 / 23**, kiểu chữ sách hoặc chữ hiện đại, giãn dòng thoáng/rộng và tùy chọn ẩn thanh bên. Nền Đen dùng nền gần đen và chữ xám sáng, tối hơn nền Đêm. Menu điều hướng vẫn mở được trên máy tính và điện thoại.
+
+- Nội dung dài được giới hạn chiều ngang, tăng khoảng cách giữa đoạn và hàng bảng, giảm bóng/gradient; khung Writing hiển thị theo thứ tự một cột. Màu đúng/sai và nhãn vẫn giữ để phản hồi rõ ràng.
+- Khi bật trang đọc, hiệu ứng chuyển trang, nhấp nháy và pháo giấy được thay bằng cách hiển thị tĩnh; thông báo mốc học vẫn có chữ.
+- `em-reader-settings` lưu tùy chọn trong trình duyệt. Lần nâng cấp nền Đen sẽ chuyển lựa chọn cũ sang Đen một lần, giữ cỡ/kiểu chữ và nháp; sau đó lựa chọn màu mới của bạn vẫn được tôn trọng. Có thể tắt để về giao diện cũ; rời trang học sẽ trả về theme của ứng dụng, không đổi nháp hoặc tiến độ.
+
+## Ôn thi Writing theo khung (`/writing-studio?mode=exam`)
+
+Vào **Viết** hoặc **Kiểm tra** → **Ôn thi Writing theo khung**, hoặc chọn tab tương ứng trong Writing Studio. Phần này có nội dung sẵn, dùng được khi AI tắt.
+
+- **6 khung, 18 chủ đề**: thư/email thân mật, thư/email trang trọng, luận quan điểm, bàn hai quan điểm, lợi–hại và nguyên nhân–giải pháp. Mỗi khung có bố cục, mục tiêu từng đoạn, câu dẫn với chỗ trống và một bài mẫu hoàn chỉnh cho đề đầu tiên. Các bố cục là gợi ý tự luyện; người học cần đọc đúng yêu cầu từng đề.
+- **Viết theo khung**: mỗi đoạn có ô riêng và nút chèn khung khi ô còn trống. Người học thay `[nội dung gợi ý]` bằng ý của mình; chỗ trống chưa điền không được tính vào số từ. Có thể ẩn khung để tự viết, xem bài ghép và tự rà soát theo các yêu cầu của đề.
+- **Học thuộc khung**: 44 cụm câu dẫn, gợi ý tiếng Việt rồi tự gõ tiếng Anh. Chấp nhận khác biệt chữ hoa, dấu câu và khoảng trắng; cụm mẫu chưa được hiển thị trước khi thử nhớ. Xem gợi ý hoặc trả lời sai không được tính là nhớ không gợi ý trong lượt đó. Có thể ôn lại đúng những phần cần nhớ rồi quay về bài viết.
+- `em-writing-exam` lưu riêng các đoạn/checklist theo cặp khung–chủ đề, vị trí nhớ khung, câu trả lời và việc đã xem gợi ý. Chuyển đề/khung, tải lại hoặc đổi tab vẫn giữ tiến độ; không ghi đè nháp `em-writing-draft` của Writing Studio. Nội dung này lưu trong trình duyệt; lượt nhớ khung không tạo bản nộp AI hay XP chấm bài. Thời gian học vẫn được nhật ký Writing Studio ghi nhận theo cơ chế sẵn có.
+- Định dạng tham khảo: [ULIS–VNU VSTEP.3–5](https://vstep.vnu.edu.vn/test-format/) (thư/email tối thiểu 120 từ, luận tối thiểu 250 từ). Phân bổ luyện 20/40 phút là gợi ý; ví dụ, chủ đề và khung do ứng dụng biên soạn.
 
 ## OpenAI và các studio
 

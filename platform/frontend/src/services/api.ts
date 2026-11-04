@@ -35,7 +35,18 @@ async function request<T>(path: string, init?: RequestInit): Promise<T> {
 
 const json = (body: unknown) => JSON.stringify(body);
 
+export interface ManualTarget { unit_id?: string; level?: string }
+export interface ManualPreview {
+  dry_run: boolean;
+  count: number;
+  changes: { unit_id: string; title: string; level: string | null; kind: string; previous_status: string; status: string; manual: boolean }[];
+}
+
 export const api = {
+  markUpTo: ({ unit_id, level }: ManualTarget, include_skills = false, dry_run = false) =>
+    request<ManualPreview>("/api/progress/mark-up-to", { method: "POST", body: json({ unit_id, level, include_skills, dry_run }) }),
+  markLesson: (id: string, status: Unit["status"], dry_run = false) =>
+    request<ManualPreview>(`/api/progress/${encodeURIComponent(id)}`, { method: "PUT", body: json({ status, dry_run }) }),
   levels: () => request<{ id: string; name: string; units: number; grammar: number; completed: number; grammar_completed: number }[]>("/api/levels"),
   modules: () => request<{ id: string; name: string; units: number; completed: number }[]>("/api/modules"),
   lessons: (params: { kind?: string; level?: string } = {}) => {
@@ -81,7 +92,7 @@ export const api = {
   recommendations: () => request<Recommendations>("/api/recommendations"),
   stats: () => request<{
     attempts: Record<string, number>; modules: { kind: string; started: number; completed: number; minutes: number; total: number }[];
-    xp_by_reason: Record<string, number>; history: { unit_id: string; title: string; kind: string; status: string; score: number | null; best_score: number | null; minutes: number; completed_at: string | null; updated_at: string }[];
+    xp_by_reason: Record<string, number>; history: { unit_id: string; title: string; kind: string; status: string; manual?: boolean; score: number | null; best_score: number | null; minutes: number; completed_at: string | null; updated_at: string }[];
     achievements: Dashboard["achievements"]; streak: number; xp_total: number;
   }>("/api/stats"),
   mistakes: () => request<{ mistakes: { item_id: string; quiz_id: string; unit_id: string; unit_title: string; response: string; created_at: string; step_title: string; item: import("@/types/content").QuizItem }[] }>("/api/mistakes"),

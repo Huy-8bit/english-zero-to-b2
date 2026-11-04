@@ -10,9 +10,9 @@ from sqlalchemy.orm import Session
 
 from ..content.store import ContentStore
 from ..models import Attempt, LessonProgress, Note, QuizSubmission, User, WritingEntry, utcnow
-from ..schemas import HeartbeatIn, NoteIn, ProgressIn, QuizSubmitIn, SelfAssessIn, WritingIn
+from ..schemas import HeartbeatIn, MarkUpToIn, NoteIn, ProgressIn, QuizSubmitIn, SelfAssessIn, WritingIn
 from ..content.md import strip_md
-from ..services import adaptive
+from ..services import adaptive, manual_progress
 from ..services import progress as P
 from ..services.grading import grade
 from .deps import current_user, get_db, get_store
@@ -34,15 +34,35 @@ def _progress(db: Session, user: User, unit_id: str, total: int) -> LessonProgre
 
 @router.get("/progress")
 def all_progress(db: Session = Depends(get_db), user: User = Depends(current_user)):
-    return [{"unit_id": p.unit_id, "status": p.status, "current_step": p.current_step, "max_step": p.max_step,
+    return [{"unit_id": p.unit_id, "status": p.status, "manual": p.manual, "current_step": p.current_step, "max_step": p.max_step,
              "total_steps": p.total_steps, "score": p.score, "best_score": p.best_score, "time_spent_sec": p.time_spent_sec,
              "updated_at": p.updated_at.isoformat(), "completed_at": p.completed_at.isoformat() if p.completed_at else None}
             for p in db.scalars(select(LessonProgress).where(LessonProgress.user_id == user.id))]
 
 
+@router.post("/progress/mark-up-to")
+def mark_up_to(body: MarkUpToIn, dry_run: bool = False, db: Session = Depends(get_db),
+               store: ContentStore = Depends(get_store), user: User = Depends(current_user)):
+    try:
+        units = manual_progress.up_to(store, unit_id=body.unit_id, level=body.level, include_skills=body.include_skills)
+    except LookupError as exc:
+        raise HTTPException(404, str(exc)) from None
+    except ValueError as exc:
+        raise HTTPException(422, str(exc)) from None
+    return manual_progress.change(db, user.id, store, units, "completed", dry_run=body.dry_run or dry_run)
+
+
 @router.put("/progress/{unit_id}")
 def save_progress(unit_id: str, body: ProgressIn, db: Session = Depends(get_db), store: ContentStore = Depends(get_store),
-                  user: User = Depends(current_user)):
+                  user: User = Depends(current_user), dry_run: bool = False):
+    if body.status is not None:
+        unit = store.unit(unit_id)
+        if unit is None:
+            raise HTTPException(404, "Lesson not found")
+        result = manual_progress.change(db, user.id, store, [unit], body.status, dry_run=body.dry_run or dry_run)
+        return {**result, "status": body.status}
+    if dry_run:
+        raise HTTPException(422, "dry_run requires status")
     b = store.built(unit_id)
     if b is None:
         raise HTTPException(404, "Lesson not found")
@@ -194,8 +214,9 @@ def complete(unit_id: str, db: Session = Depends(get_db), store: ContentStore = 
     p.score = score
     p.best_score = score if p.best_score is None or (score is not None and score > p.best_score) else p.best_score
     p.status = "review" if score is not None and score < P.PASS_SCORE else "completed"
-    first = p.completed_at is None
-    p.completed_at = p.completed_at or utcnow()
+    first = p.completed_at is None or p.manual
+    p.manual = False  # This completion comes from actually finishing the lesson.
+    p.completed_at = utcnow() if first else p.completed_at
     p.completions += 1
     xp = P.award(db, user.id, f"lesson:{unit_id}", "lesson_complete", P.XP_RULES["lesson_complete"])
     if first:

@@ -14,6 +14,7 @@ import { SaveWordButton } from "@/features/vocab/Lookup";
 import { AIErrorBox, AILoading, AIUnavailable, SimulatedBanner, useAIStatus } from "@/components/ai/AIStatus";
 import { cn, safeStorage, wordCount } from "@/lib/utils";
 import { diffWords } from "./diff";
+import ExamWriting from "./ExamWriting";
 
 const store = safeStorage();
 const LEVELS = ["A1", "A2", "B1", "B2"];
@@ -30,7 +31,7 @@ export default function WritingStudioPage() {
   const nav = useNavigate();
   const opts = useQuery({ queryKey: ["writing-options"], queryFn: ai.writingOptions });
   const hist = useQuery({ queryKey: ["writing-history"], queryFn: ai.writingHistory });
-  const [sp] = useSearchParams();
+  const [sp, setSp] = useSearchParams();
   const [d, setD] = useState<Draft>(() => {
     const saved = store.get<Draft>("em-writing-draft", { prompt: null, text: "", taskType: "paragraph", level: "A1", mode: "minimal", clientId: newId(), parentId: null });
     const lv = sp.get("level");
@@ -42,13 +43,18 @@ export default function WritingStudioPage() {
   const [err, setErr] = useState<{ e: unknown; retry: () => void } | null>(null);
   const [topic, setTopic] = useState("");
   const [seconds, setSeconds] = useState(0);
-  const [tab, setTab] = useState<"write" | "history">("write");
+  const tab = sp.get("mode") === "exam" ? "exam" : sp.get("mode") === "history" ? "history" : "write";
+  const setTab = (next: "write" | "history" | "exam") => setSp((previous) => {
+    const params = new URLSearchParams(previous);
+    if (next === "write") params.delete("mode"); else params.set("mode", next);
+    return params;
+  }, { replace: true });
   useEffect(() => { store.set("em-writing-draft", d); }, [d]);
   useEffect(() => {
-    if (!d.text) return;
+    if (!d.text || tab !== "write") return;
     const t = setInterval(() => setSeconds((s) => s + 1), 1000);
     return () => clearInterval(t);
-  }, [d.text]);
+  }, [d.text, tab]);
   const words = wordCount(d.text);
   const target = d.prompt?.word_min && d.prompt.word_max ? [d.prompt.word_min, d.prompt.word_max] : null;
 
@@ -105,11 +111,11 @@ export default function WritingStudioPage() {
 
   return (
     <div>
-      <PageHeader title="Writing Studio" subtitle="Viết bài, nhận góp ý chi tiết từ AI: lỗi được đánh dấu ngay trong bài, bản sửa, bản viết lại và kế hoạch cải thiện."
-        actions={<div className="flex gap-2"><Button variant={tab === "write" ? "primary" : "outline"} onClick={() => setTab("write")}>Viết bài</Button><Button variant={tab === "history" ? "primary" : "outline"} onClick={() => setTab("history")}><History size={15} />Lịch sử</Button></div>} />
-      <SimulatedBanner />
-      {st.data && !st.data.enabled && <div className="mb-4"><AIUnavailable /></div>}
-      {tab === "history" ? <WritingHistory data={hist.data} onOpen={(s) => { setResult(s); setD((x) => ({ ...x, text: s.text, prompt: s.prompt as Prompt, mode: s.mode, taskType: s.task_type, level: s.level, parentId: s.id, clientId: newId() })); setTab("write"); }} /> : (
+      <PageHeader title={tab === "exam" ? "Ôn thi Writing" : "Writing Studio"} subtitle={tab === "exam" ? "Học bố cục và câu dẫn → viết vào khung với nhiều chủ đề → che mẫu để tự nhớ lại. Có sẵn nội dung để luyện ngay." : "Viết bài, nhận góp ý chi tiết từ AI: lỗi được đánh dấu ngay trong bài, bản sửa, bản viết lại và kế hoạch cải thiện."}
+        actions={<div className="flex flex-wrap gap-2"><Button variant={tab === "write" ? "primary" : "outline"} onClick={() => setTab("write")}>Viết bài</Button><Button variant={tab === "exam" ? "primary" : "outline"} onClick={() => setTab("exam")}>Ôn thi theo khung</Button><Button variant={tab === "history" ? "primary" : "outline"} onClick={() => setTab("history")}><History size={15} />Lịch sử</Button></div>} />
+      {tab !== "exam" && <SimulatedBanner />}
+      {tab !== "exam" && st.data && !st.data.enabled && <div className="mb-4"><AIUnavailable /></div>}
+      {tab === "history" ? <WritingHistory data={hist.data} onOpen={(s) => { setResult(s); setD((x) => ({ ...x, text: s.text, prompt: s.prompt as Prompt, mode: s.mode, taskType: s.task_type, level: s.level, parentId: s.id, clientId: newId() })); setTab("write"); }} /> : tab === "exam" ? <ExamWriting /> : (
         <div className="grid gap-5 xl:grid-cols-[19rem_1fr]">
           <Card>
             <CardHeader><CardTitle>Đề bài</CardTitle></CardHeader>

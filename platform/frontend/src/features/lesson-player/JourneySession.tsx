@@ -24,6 +24,7 @@ import { ConceptSlide, DialogueSlide, ExamplesSlide, FlashcardsSlide, FormulaSli
 import { usePlayerState } from "./usePlayerState";
 import { useHeartbeat } from "./useHeartbeat";
 import { buildJourney, isAuto, stars, type Card } from "./journey";
+import { ReaderControls } from "@/features/reader/ReaderControls";
 
 type QCard = Extract<Card, { item: QuizItem }> | { kind: "retry"; key: string; item: QuizItem; quizId: string; stepIndex: number; intro: string };
 const EMPTY: JourneyState = { pos: 0, done: [], wrong: [], retry: [], retryPass: 0, first: {}, xp: 0, startedAt: 0 };
@@ -209,9 +210,9 @@ export function JourneySession({ unitId, data, lesson, onClassic, onSprint }: { 
   return (
     <div className={cn("min-h-screen bg-bg", tutorOpen && "md:pr-[22rem] xl:pr-[26rem]")}>
       <header className="sticky top-0 z-30 border-b border-border bg-bg/90 backdrop-blur">
-        <div className="mx-auto flex max-w-4xl items-center gap-2 px-3 py-2 sm:px-6">
+        <div className="reader-toolbar mx-auto flex max-w-4xl items-center gap-2 px-3 py-2 sm:px-6">
           <Button variant="ghost" size="icon" onClick={() => nav(lessonExitPath())} aria-label="Thoát bài học"><X size={18} /></Button>
-          <div className="min-w-0 flex-1">
+          <div className="reader-title min-w-0 flex-1">
             <div className="flex items-center gap-2">
               <h1 className="truncate text-sm font-semibold sm:text-base">{data.unit.id} · {data.unit.title}</h1>
               <FocusBadge /><BlockTimerChip />
@@ -232,14 +233,15 @@ export function JourneySession({ unitId, data, lesson, onClassic, onSprint }: { 
           <Button variant={tutorOpen ? "secondary" : "ghost"} size="sm" onClick={() => setTutorOpen((o) => !o)} aria-label="Hỏi AI về bài này" aria-expanded={tutorOpen}><Bot size={18} /><span className="hidden md:inline">Hỏi AI</span></Button>
           {onSprint && <Button variant="ghost" size="sm" onClick={onSprint} aria-label="Sprint ≈8 phút" title="Sprint ≈8 phút: cốt lõi trên một màn hình + 6 câu kiểm tra"><Zap size={16} /><span className="hidden md:inline">Sprint</span></Button>}
           <ViToggle />
+          <ReaderControls />
           <Button variant="ghost" size="icon" onClick={onClassic} aria-label="Xem đầy đủ (cách học cũ)" title="Xem đầy đủ (cách học cũ)"><BookOpenText size={18} /></Button>
         </div>
       </header>
 
-      <main className="lesson-big mx-auto max-w-4xl px-3 pb-28 pt-6 sm:px-6 xl:max-w-5xl">
+      <main className="reader-page lesson-big mx-auto max-w-4xl px-3 pb-28 pt-6 sm:px-6 xl:max-w-5xl">
         {/* enter animation only: an exit animation (AnimatePresence mode="wait") could freeze the old screen when
             the learner moved on quickly, leaving an input that ignored typing */}
-          <motion.section key={card.key} initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.18 }} aria-live="polite">
+          <motion.section className="reader-motion" key={card.key} initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.18 }} aria-live="polite">
             {card.kind === "mission" && (testOut
               ? <TestOut unitId={unitId} data={data} nextId={lesson?.next_id ?? null} onStudy={() => setTestOut(false)} />
               : <Mission data={data} j={j} onTestOut={() => setTestOut(true)} onSprint={onSprint} />)}

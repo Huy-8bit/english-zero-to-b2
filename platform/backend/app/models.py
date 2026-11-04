@@ -43,6 +43,7 @@ class LessonProgress(Base):
     user_id: Mapped[int] = mapped_column(ForeignKey("users.id"), index=True)
     unit_id: Mapped[str] = mapped_column(String(64), index=True)
     status: Mapped[str] = mapped_column(String(16), default="in_progress")  # in_progress | completed | review
+    manual: Mapped[bool] = mapped_column(Boolean, default=False, server_default="0")
     current_step: Mapped[int] = mapped_column(Integer, default=0)
     max_step: Mapped[int] = mapped_column(Integer, default=0)
     total_steps: Mapped[int] = mapped_column(Integer, default=0)

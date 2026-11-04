@@ -16,6 +16,7 @@ import { Markdown } from "@/components/Markdown";
 import { ConceptSlide, FormulaSlide, MistakesSlide } from "./slides";
 import { TestOut, type TestOutResult } from "./TestOut";
 import { dailyTarget, getCombo, loadPlan, setCombo } from "./sprintPlan";
+import { ReaderControls } from "@/features/reader/ReaderControls";
 
 const TARGET_SECONDS = 8 * 60;
 
@@ -114,13 +115,14 @@ export function SprintLesson({ unitId, data, lesson, onFull }: { unitId: string;
             {s && day && <span className="tabular-nums text-muted" title="Bài ngữ pháp đã qua hôm nay / mục tiêu hôm nay">Hôm nay <b className="text-fg">{s.today}</b>/{day.target}</span>}
             {s && <span className="hidden tabular-nums text-muted md:inline">Tổng {s.done}/{s.total}</span>}
             <ViToggle />
+            <ReaderControls />
             {onFull && <Button size="sm" variant="ghost" onClick={onFull} title="Bài ngữ pháp sẽ mở ở chế độ học đầy đủ (Hành trình)"><BookOpenText size={15} />Học đầy đủ</Button>}
           </span>
         </div>
         {s && <Progress className="h-1 rounded-none" value={(100 * s.done) / s.total} label={`Đã qua ${s.done}/${s.total} bài ngữ pháp`} />}
       </header>
 
-      <main className="lesson-big mx-auto max-w-[90rem] px-4 pb-16 pt-6 sm:px-8">
+      <main className="reader-page lesson-big mx-auto max-w-[90rem] px-4 pb-16 pt-6 sm:px-8">
         <ol className="mb-5 flex flex-wrap gap-2 text-sm" aria-label="Các bước">
           {[["core", "1 · Nắm cốt lõi (≈3 phút)"], ["check", "2 · Kiểm tra 6 câu"], ["result", "3 · Qua bài"]].map(([k, t]) => (
             <li key={k} className={cn("rounded-full border px-3 py-1", phase === k ? "border-primary bg-primary-soft font-semibold text-primary" : "border-border text-muted")}>{t}</li>

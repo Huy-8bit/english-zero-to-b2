@@ -1,5 +1,8 @@
 import { AnimatePresence, motion } from "motion/react";
 import { create } from "zustand";
+import { useLocation } from "react-router-dom";
+import { useUI } from "@/stores/ui";
+import { isReadingRoute } from "@/features/reader/readerSettings";
 
 /** Short, quiet celebration (≈1.5 s) for real milestones: a finished focus block, the daily goal, a strong session. */
 export const useCelebrate = create<{ key: number; text: string | null; fire: (text: string) => void; clear: () => void }>((set) => ({
@@ -15,6 +18,9 @@ const EMOJI = ["🎉", "⭐", "✨", "💪", "🔥", "🌟"];
 
 export function CelebrateHost() {
   const { key, text } = useCelebrate();
+  const reader = useUI((s) => s.reader);
+  const { pathname } = useLocation();
+  if (reader.enabled && isReadingRoute(pathname)) return text ? <p role="status" className="pointer-events-none fixed bottom-24 left-1/2 z-[70] max-w-[90vw] -translate-x-1/2 rounded-lg border border-border bg-surface px-4 py-2 text-sm">{text}</p> : null;
   const reduce = typeof window !== "undefined" && window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
   return (
     <AnimatePresence>

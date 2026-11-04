@@ -18,6 +18,7 @@ export interface Unit {
   block_title: string | null;
   module: string;
   status: Status;
+  manual?: boolean;
   score: number | null;
   best_score: number | null;
   current_step: number;

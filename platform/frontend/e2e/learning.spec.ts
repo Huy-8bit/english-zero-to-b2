@@ -164,7 +164,8 @@ test("next lesson restores its own slide and drafts without overwriting either l
   await request.put(`/api/progress/${nextId}`, { data: { current_step: 2, state: targetState } });
   await page.goto(`/learn/${sourceId}`);
   await expect(page.locator("#slide-title")).toBeVisible();
-  await page.getByRole("complementary", { name: "Các slide" }).getByRole("button").last().click();
+  await page.getByRole("button", { name: "Danh sách slide", exact: true }).click();
+  await page.getByRole("dialog", { name: "Các slide trong bài", exact: true }).getByRole("button").last().click();
   await page.getByRole("button", { name: "Hoàn thành bài học", exact: true }).click();
   await page.getByRole("dialog").getByRole("button", { name: "Bài tiếp theo" }).click();
   await expect(page).toHaveURL(new RegExp(`/learn/${nextId}$`));

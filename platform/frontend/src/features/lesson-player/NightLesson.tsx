@@ -1,8 +1,8 @@
 import { useEffect, useLayoutEffect, useMemo, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { motion } from "motion/react";
-import { ArrowLeft, ArrowRight, BookOpenText, Check, Coffee, Moon, Sun, Timer, X } from "lucide-react";
+import { ArrowLeft, ArrowRight, BookOpenText, Check, Coffee, Moon, Timer, X } from "lucide-react";
 import { NoExampleVi, ViToggle } from "@/components/ExampleVi";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -12,16 +12,19 @@ import { InlineMd, Markdown } from "@/components/Markdown";
 import { SpeakButton } from "@/components/SpeakButton";
 import { cn } from "@/lib/utils";
 import { api } from "@/services/api";
-import { useUI } from "@/stores/ui";
+import { ReaderControls } from "@/features/reader/ReaderControls";
 import type { Mistake, QuizItem, Step, StepsPayload } from "@/types/content";
 import { ItemCard } from "@/features/quizzes/ItemCard";
 import { coreSteps, lessonOverview } from "./SprintLesson";
 import { singleIntro, withoutRepeatedInstruction } from "./journey";
 import { ConceptSlide, FormulaSlide } from "./slides";
 import {
-  BREAK_MIN, breakDue, clock, flashbackPick, hoursMin, loadNight, nextNight, nightPace, recallAnswer, recordNight, reviewPicks,
+  BREAK_MIN, breakDue, clock, coveredNight, flashbackPick, hoursMin, loadNight, nextNight, nightPace, recallAnswer, recordNight, reviewPicks,
   tookBreak, type NightSession, type RecallPick,
 } from "./nightPlan";
+import { useNightSession } from "./useNightSession";
+import { briefFor, NIGHT_LATER } from "./compactGrammar";
+import { CompactNightLesson } from "./CompactNightLesson";
 
 function useNow(ms: number) {
   const [now, setNow] = useState(Date.now());
@@ -298,11 +301,19 @@ type Phase = "flash" | "hook" | "learn" | "check" | "done" | "review";
 
 /** 'Ngữ pháp 1 đêm', one lesson as a memory loop: ⏪ recall an earlier question → 🎯 guess one → 📖 learn in short
  *  cards → ✍️ retrieve without looking (the guessed question again + 2 new). */
-export function NightLesson({ unitId, data, onFull }: { unitId: string; data: StepsPayload; onFull?: () => void }) {
+export function NightLesson(props: { unitId: string; data: StepsPayload; onFull?: () => void }) {
+  const brief = briefFor(props.unitId);
+  const session = loadNight();
+  if (session && session.plan !== "full" && NIGHT_LATER.includes(props.unitId)) return <Navigate to="/grammar-night" replace />;
+  return session?.plan !== "full" && brief
+    ? <CompactNightLesson brief={brief} onFull={props.onFull} />
+    : <FullNightLesson {...props} />;
+}
+
+function FullNightLesson({ unitId, data, onFull }: { unitId: string; data: StepsPayload; onFull?: () => void }) {
   const nav = useNavigate();
   const qc = useQueryClient();
-  const { theme, toggleTheme } = useUI();
-  const [session, setSession] = useState<NightSession | null>(loadNight);
+  const { session, setSession } = useNightSession();
   const [flash] = useState(() => { const s = loadNight(); return s ? flashbackPick(s, unitId) : null; });
   const [phase, setPhase] = useState<Phase>(flash ? "flash" : "hook");
   const [start] = useState(Date.now());
@@ -379,7 +390,7 @@ export function NightLesson({ unitId, data, onFull }: { unitId: string; data: St
   }
 
   const pos = session.units.findIndex((u) => u.id === unitId);
-  const covered = session.units.filter((u) => session.results[u.id]).length;
+  const covered = session.units.filter((u) => coveredNight(session, u.id)).length;
   const missed = items.filter((id) => got[id] === false).length;
   const flow = ([
     flash && ["flash", "⏪ Nhớ lại bài cũ"], hook && ["hook", "🎯 Đoán"], ["learn", "📖 Học"], items.length > 0 && ["check", "✍️ Nhớ lại"],
@@ -397,17 +408,16 @@ export function NightLesson({ unitId, data, onFull }: { unitId: string; data: St
           <span className="ml-auto flex flex-wrap items-center gap-3 text-sm">
             <LessonClock start={start} budget={budget} />
             <PaceBadge session={session} />
-            <span className="tabular-nums text-muted" title="Bài đã đọc đêm nay / tổng số bài">Đã đọc <b className="text-fg">{covered}</b>/{session.units.length}</span>
+            <span className="tabular-nums text-muted" title="Tiến độ lộ trình và bài đã đọc trong đêm">Đã học/đọc <b className="text-fg">{covered}</b>/{session.units.length}</span>
             <ViToggle />
-            <Button variant="ghost" size="icon" onClick={toggleTheme} aria-label={theme === "dark" ? "Giao diện sáng" : "Giao diện tối (dịu mắt ban đêm)"}>
-              {theme === "dark" ? <Sun size={16} /> : <Moon size={16} />}</Button>
+            <ReaderControls />
             {onFull && <Button size="sm" variant="ghost" onClick={onFull} title="Thoát chế độ đêm: bài ngữ pháp mở ở chế độ học đầy đủ"><BookOpenText size={15} />Học đầy đủ</Button>}
           </span>
         </div>
-        <Progress className="h-1 rounded-none" value={(100 * covered) / Math.max(1, session.units.length)} label={`Đã đọc ${covered}/${session.units.length} bài`} />
+        <Progress className="h-1 rounded-none" value={(100 * covered) / Math.max(1, session.units.length)} label={`Đã học/đọc ${covered}/${session.units.length} bài`} />
       </header>
 
-      <main className="lesson-big mx-auto max-w-[90rem] px-4 pb-16 pt-6 sm:px-8">
+      <main className="reader-page lesson-big mx-auto max-w-[90rem] px-4 pb-16 pt-6 sm:px-8">
         <div className="mx-auto mb-5 flex max-w-5xl flex-wrap items-end gap-x-6 gap-y-3">
           <div className="min-w-0">
             <p className="text-xs font-semibold uppercase tracking-wider text-primary">🌙 {pos >= 0 ? `Bài ${pos + 1}/${session.units.length} · ` : ""}{data.unit.level}</p>

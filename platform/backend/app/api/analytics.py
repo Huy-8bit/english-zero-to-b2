@@ -42,7 +42,7 @@ def stats(db: Session = Depends(get_db), store: ContentStore = Depends(get_store
         by_kind.setdefault(u.kind, {"kind": u.kind, "started": 0, "completed": 0, "minutes": 0, "total": 0})["total"] += 1
     xp_by_reason = dict(db.execute(select(XPEvent.reason, func.sum(XPEvent.amount)).where(XPEvent.user_id == user.id).group_by(XPEvent.reason)).all())
     history = [{"unit_id": p.unit_id, "title": store.units[p.unit_id].title if p.unit_id in store.units else p.unit_id,
-                "kind": store.units[p.unit_id].kind if p.unit_id in store.units else "", "status": p.status, "score": p.score,
+                "kind": store.units[p.unit_id].kind if p.unit_id in store.units else "", "status": p.status, "manual": p.manual, "score": p.score,
                 "best_score": p.best_score, "minutes": round(p.time_spent_sec / 60),
                 "completed_at": p.completed_at.isoformat() if p.completed_at else None, "updated_at": p.updated_at.isoformat()}
                for p in db.scalars(select(LessonProgress).where(LessonProgress.user_id == user.id).order_by(LessonProgress.updated_at.desc()))]

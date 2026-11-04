@@ -161,7 +161,8 @@ def heartbeat(db: Session, user: User, unit_id: str | None, module: str | None =
 def check_achievements(db: Session, user_id: int, store: ContentStore) -> list[str]:
     have = set(db.scalars(select(Achievement.key).where(Achievement.user_id == user_id)))
     earned = []
-    done = list(db.scalars(select(LessonProgress).where(LessonProgress.user_id == user_id, LessonProgress.completed_at.is_not(None))))
+    done = list(db.scalars(select(LessonProgress).where(LessonProgress.user_id == user_id,
+                                                     LessonProgress.completed_at.is_not(None), LessonProgress.manual.is_(False))))
     n = len(done)
     st = streak(db, user_id)
     from ..models import VocabReviewLog
@@ -297,7 +298,7 @@ def placement_level(db: Session, user_id: int, store: ContentStore) -> dict | No
     """Apply the three steps written in PLACEMENT-ANSWERS.md: total score band, first level part
     under 11/15, then take the lower of the two."""
     prog = db.scalar(select(LessonProgress).where(LessonProgress.user_id == user_id, LessonProgress.unit_id == "PLACEMENT-TEST"))
-    if not prog or not prog.completed_at:
+    if not prog or not prog.completed_at or prog.manual:
         return None
     attempts = latest_attempts(db, user_id, "PLACEMENT-TEST")
     correct_labels = {a.item_id.split(":", 1)[1] for a in attempts.values() if a.verdict == "correct"}
@@ -332,32 +333,32 @@ def status_of(p: LessonProgress | None) -> str:
     return p.status
 
 
+def effective_placement(db: Session, user_id: int, store: ContentStore) -> dict | None:
+    placement = placement_level(db, user_id, store)
+    from ..models import LearningProfile
+
+    prof = db.get(LearningProfile, user_id)
+    ai_place = (prof.preferences or {}).get("placement") if prof else None
+    if ai_place and ai_place.get("level") in LEVELS and (not placement or ai_place.get("date", "") > (prog_date(db, user_id) or "")):
+        placement = {"score": None, "level": ai_place["level"], "source": "adaptive"}
+    return placement
+
+
+def grammar_position(store: ContentStore, pm: dict, placement: dict | None):
+    start_level = placement["level"] if placement and placement.get("level") in LEVELS else "A0"
+    grammar = [u for u in store.unit_list if u.kind == "grammar" and LEVELS.index(u.level) >= LEVELS.index(start_level)]
+    next_lesson = next((u for u in grammar if status_of(pm.get(u.id)) != "completed"), None)
+    level = next_lesson.level if next_lesson else (grammar[-1].level if grammar else start_level)
+    return next_lesson, level
+
+
 def recommendations(db: Session, user: User, store: ContentStore) -> dict:
     pm = progress_map(db, user.id)
     units = store.unit_list
     in_progress = sorted((p for p in pm.values() if p.status == "in_progress"), key=lambda p: p.updated_at, reverse=True)
     review = [p for p in pm.values() if p.status == "review"]
-    placement = placement_level(db, user.id, store)
-    start_level = placement["level"] if placement and placement.get("level") else "A0"
-    from ..models import LearningProfile
-
-    prof = db.get(LearningProfile, user.id)
-    ai_place = (prof.preferences or {}).get("placement") if prof else None
-    if ai_place and ai_place.get("level") in LEVELS and (not placement or ai_place.get("date", "") > (prog_date(db, user.id) or "")):
-        placement = {"score": None, "level": ai_place["level"], "source": "adaptive"}
-        start_level = ai_place["level"]
-    start_idx = LEVELS.index(start_level)
-    next_lesson = None
-    for u in units:
-        if u.kind != "grammar" or LEVELS.index(u.level) < start_idx:
-            continue
-        if status_of(pm.get(u.id)) in ("completed",):
-            continue
-        if pm.get(u.id) and pm[u.id].status == "in_progress":
-            continue
-        next_lesson = u
-        break
-    level = next_lesson.level if next_lesson else start_level
+    placement = effective_placement(db, user.id, store)
+    next_lesson, level = grammar_position(store, pm, placement)
     due = vocab_due_count(db, user.id)
     skills = None
     for lv in LEVELS:
@@ -398,7 +399,7 @@ def dashboard(db: Session, user: User, store: ContentStore) -> dict:
         last7.append({"day": d.isoformat(), "minutes": round((r.seconds if r else 0) / 60, 1),
                       "items": r.items_answered if r else 0, "cards": r.cards_reviewed if r else 0})
     total_seconds = db.scalar(select(func.coalesce(func.sum(ActivityDay.seconds), 0)).where(ActivityDay.user_id == user.id)) or 0
-    week_completed = sum(1 for p in completed if p.completed_at and p.completed_at.date() >= week_start)
+    week_completed = sum(1 for p in completed if not p.manual and p.completed_at and p.completed_at.date() >= week_start)
     mastery = []
     for lv in LEVELS:
         g = [u for u in grammar if u.level == lv]

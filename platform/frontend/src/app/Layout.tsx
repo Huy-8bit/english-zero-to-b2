@@ -11,6 +11,8 @@ import { useModuleHeartbeat } from "@/features/journal/useModuleHeartbeat";
 import { rememberLessonExit } from "@/lib/lessonExit";
 import { FocusBadge } from "@/features/focus/FocusBadge";
 import { BlockTimerChip } from "@/features/plan/BlockTimer";
+import { ReaderControls } from "@/features/reader/ReaderControls";
+import { isReadingRoute } from "@/features/reader/readerSettings";
 
 export const NAV_GROUPS = [
   { title: "Học", items: [
@@ -103,7 +105,9 @@ function SearchBox() {
 }
 
 export function ThemeToggle() {
+  const { pathname } = useLocation();
   const { theme, toggleTheme } = useUI();
+  if (isReadingRoute(pathname)) return <ReaderControls />;
   return (
     <button onClick={toggleTheme} className="rounded-xl p-2 text-muted hover:bg-surface-2 hover:text-fg"
       aria-label={theme === "dark" ? "Chuyển sang giao diện sáng" : "Chuyển sang giao diện tối"}>
@@ -113,20 +117,21 @@ export function ThemeToggle() {
 }
 
 export function Layout() {
-  const { sidebarOpen, setSidebarOpen } = useUI();
+  const { sidebarOpen, setSidebarOpen, reader } = useUI();
   const loc = useLocation();
+  const quiet = reader.enabled && reader.focus && isReadingRoute(loc.pathname);
   useEffect(() => { setSidebarOpen(false); }, [loc.pathname, setSidebarOpen]);
   useEffect(() => { rememberLessonExit(loc.pathname + loc.search); }, [loc.pathname, loc.search]);
   useModuleHeartbeat(loc.pathname, loc.search);
   return (
     <div className="min-h-screen">
       <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:left-2 focus:top-2 focus:z-50 focus:rounded focus:bg-surface focus:p-2">Bỏ qua tới nội dung</a>
-      <aside className="fixed inset-y-0 left-0 hidden w-64 flex-col border-r border-border bg-surface px-3 py-4 lg:flex">
+      <aside className={cn("fixed inset-y-0 left-0 hidden w-64 flex-col border-r border-border bg-surface px-3 py-4", !quiet && "lg:flex")}>
         <Brand />
         <div className="mt-4 flex-1 overflow-y-auto"><SideNav /></div>
       </aside>
       {sidebarOpen && (
-        <div className="fixed inset-0 z-40 lg:hidden" role="dialog" aria-modal="true" aria-label="Menu">
+        <div className={cn("fixed inset-0 z-40", !quiet && "lg:hidden")} role="dialog" aria-modal="true" aria-label="Menu">
           <div className="absolute inset-0 bg-black/40" onClick={() => setSidebarOpen(false)} />
           <aside className="absolute inset-y-0 left-0 flex w-72 flex-col bg-surface px-3 py-4 shadow-xl">
             <div className="flex items-center justify-between"><Brand /><button aria-label="Đóng menu" className="rounded-lg p-2" onClick={() => setSidebarOpen(false)}><X size={18} /></button></div>
@@ -134,10 +139,10 @@ export function Layout() {
           </aside>
         </div>
       )}
-      <div className="lg:pl-64">
+      <div className={quiet ? "" : "lg:pl-64"}>
         <header className="sticky top-0 z-30 flex h-16 items-center gap-3 border-b border-border bg-bg/85 px-4 backdrop-blur sm:px-6">
-          <button className="rounded-xl p-2 lg:hidden" aria-label="Mở menu" onClick={() => setSidebarOpen(true)}><Menu size={20} /></button>
-          <SearchBox />
+          <button className={cn("rounded-xl p-2", !quiet && "lg:hidden")} aria-label="Mở menu" onClick={() => setSidebarOpen(true)}><Menu size={20} /></button>
+          {quiet ? <span className="text-sm font-medium text-muted">Trang đọc</span> : <SearchBox />}
           <div className="ml-auto flex items-center gap-1"><BlockTimerChip /><FocusBadge /><AssistantButton /><ThemeToggle /></div>
         </header>
         <main id="main" className="mx-auto max-w-6xl px-4 py-6 sm:px-6 sm:py-8">

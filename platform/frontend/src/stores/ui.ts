@@ -1,9 +1,24 @@
 import { create } from "zustand";
 import { safeStorage } from "@/lib/utils";
+import { readerSettings, READER_KEY, READER_DARK_DEFAULT_KEY, type ReaderSettings } from "@/features/reader/readerSettings";
 
 const storage = safeStorage();
 
+function initialReader(): ReaderSettings {
+  const saved = storage.get<Partial<ReaderSettings> | null>(READER_KEY, null);
+  if (!storage.get(READER_DARK_DEFAULT_KEY, false)) {
+    // Apply the requested dark default once, including browsers that saved the previous paper default.
+    const reader = readerSettings({ ...saved, enabled: true, tone: "black" });
+    storage.set(READER_KEY, reader);
+    storage.set(READER_DARK_DEFAULT_KEY, true);
+    return reader;
+  }
+  return readerSettings(saved);
+}
+
 interface UIState {
+  reader: ReaderSettings;
+  setReader: (patch: Partial<ReaderSettings>) => void;
   theme: "light" | "dark";
   focusMode: boolean;
   sidebarOpen: boolean;
@@ -22,6 +37,12 @@ const initialTheme = (): "light" | "dark" =>
   typeof document !== "undefined" && document.documentElement.classList.contains("dark") ? "dark" : "light";
 
 export const useUI = create<UIState>((set, get) => ({
+  reader: initialReader(),
+  setReader: (patch) => {
+    const reader = readerSettings({ ...get().reader, ...patch });
+    storage.set(READER_KEY, reader);
+    set({ reader });
+  },
   theme: initialTheme(),
   focusMode: storage.get("em-focus", false),
   sidebarOpen: false,

@@ -17,7 +17,7 @@ router = APIRouter(prefix="/api", tags=["content"])
 
 def unit_row(u, p) -> dict:
     d = u.public()
-    d.update(status=status_of(p), score=p.score if p else None, best_score=p.best_score if p else None,
+    d.update(status=status_of(p), manual=p.manual if p else False, score=p.score if p else None, best_score=p.best_score if p else None,
              current_step=p.current_step if p else 0, total_steps=p.total_steps if p else None)
     return d
 
@@ -96,7 +96,7 @@ def lesson_steps(unit_id: str, db: Session = Depends(get_db), store: ContentStor
         "cards": cards,
         "results": results,
         "progress": None if p is None else {"current_step": p.current_step, "max_step": p.max_step, "state": p.state or {},
-                                            "status": p.status, "score": p.score},
+                                            "status": p.status, "score": p.score, "manual": p.manual},
         "content_version": store.version,
         "example_vi": example_vi.for_unit(unit_id),  # Vietnamese under the italic English examples
     }

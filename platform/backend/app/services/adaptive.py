@@ -14,7 +14,6 @@ from datetime import date, datetime, timedelta
 from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
-from ..content.catalog import LEVELS
 from ..content.store import ContentStore
 from ..models import ExerciseSet, LessonProgress, MistakeRecord, TopicMastery, User, VocabCard, utcnow
 
@@ -262,10 +261,6 @@ def daily_plan(db: Session, user: User, store: ContentStore, ai_enabled: bool) -
 
 
 def current_level(db: Session, user_id: int, store: ContentStore) -> str:
-    done = {p.unit_id for p in db.scalars(select(LessonProgress).where(LessonProgress.user_id == user_id, LessonProgress.completed_at.is_not(None)))}
-    level = "A0"
-    for lv in LEVELS:
-        g = [u.id for u in store.unit_list if u.kind == "grammar" and u.level == lv]
-        if g and sum(1 for x in g if x in done) >= len(g) * 0.5:
-            level = lv
-    return level
+    from .progress import effective_placement, grammar_position, progress_map
+
+    return grammar_position(store, progress_map(db, user_id), effective_placement(db, user_id, store))[1]

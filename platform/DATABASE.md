@@ -32,7 +32,15 @@ docker compose down
 docker compose up -d --wait
 ```
 
+## Tự đặt mốc tiến độ
+
+Trong **Lộ trình học**, bấm **Tôi đã học tới đây** dưới level hoặc cạnh bài, xem số bài trong hộp thoại rồi xác nhận. Mặc định chỉ đánh dấu grammar; có thể chọn thêm skills/communication trước mốc đó. Checkbox cạnh từng bài cho phép hoàn thành hoặc bỏ hoàn thành. Bài đã hoàn thành giữ nguyên điểm, thời gian và nguồn hoàn thành cũ. Bài đánh dấu tay có badge riêng, được tính vào level nhưng không tạo XP, streak, nhật ký học hay achievement.
+
+API: `POST /api/progress/mark-up-to` nhận đúng một trong `unit_id` / `level`, cùng `include_skills` (mặc định `false`) và `dry_run` (mặc định `false`). `level: "A1"` nghĩa là hết A0 và A1, level tiếp theo là A2. `PUT /api/progress/{unit_id}` nhận `status` (`completed`, `not_started`, `in_progress`, `review`) để sửa từng bài; gửi riêng với dữ liệu lưu slide. Cả hai hỗ trợ `dry_run: true` trong JSON hoặc `?dry_run=true`, trả `count` và `changes` trước khi ghi. Bỏ hoàn thành xóa mốc `completed_at`, giữ điểm và bản nháp để học tiếp.
+
 ## Backup và kiểm tra
+
+Tiến độ đánh dấu thủ công (`lesson_progress.manual`, migration `0009` sau `0008`) nằm trong snapshot DB đầy đủ và được restore cùng điểm, trạng thái và thời gian hoàn thành. Không cần định dạng archive mới.
 
 ```bash
 # Docker: snapshot đầy đủ khi API tạm dừng; tự bật lại nếu ban đầu đang chạy.
