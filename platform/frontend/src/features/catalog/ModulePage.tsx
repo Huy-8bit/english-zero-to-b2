@@ -7,6 +7,7 @@ import type { Unit, UnitKind } from "@/types/content";
 import { Badge } from "@/components/ui/badge";
 import { EmptyState, ErrorBox, PageHeader, Skeleton } from "@/components/ui/misc";
 import { cn, STATUS_LABELS } from "@/lib/utils";
+import { RescueLink } from "@/features/b2-rescue/RescueLink";
 
 const INFO: Record<string, { title: string; subtitle: string; note?: string; extraKinds?: UnitKind[] }> = {
   grammar: { title: "Ngữ pháp", subtitle: "128 bài từ A0 đến B2. Mỗi bài: khái niệm → công thức → ví dụ → lỗi thường gặp → bài tập có chấm → tổng kết." },
@@ -30,6 +31,7 @@ export default function ModulePage({ kind }: { kind: UnitKind }) {
   return (
     <div>
       <PageHeader title={info.title} subtitle={info.subtitle} />
+      {(kind === "writing" || kind === "speaking" || kind === "exam") && <RescueLink />}
       {info.note && <p className="mb-5 rounded-xl border border-border bg-surface px-4 py-3 text-sm text-muted">{info.note}</p>}
       {(kind === "writing" || kind === "speaking" || kind === "exam") && <Link to={`/model-library?skill=${kind === "speaking" ? "speaking" : "writing"}`} className="mb-5 block rounded-xl border border-primary/30 bg-primary-soft/30 px-4 py-3 text-sm font-medium text-primary">Thư viện {kind === "speaking" ? "bài mẫu Speaking" : "bài mẫu Writing"} → đề cụ thể, nguồn minh họa và bài trả lời bám yêu cầu</Link>}
       {(kind === "writing" || kind === "exam") && <Link to="/writing-studio?mode=exam" className="mb-5 block rounded-xl border border-primary/30 bg-primary-soft/30 px-4 py-3 text-sm font-medium text-primary">Ôn thi Writing theo khung → gõ thuộc Task 1 & Task 2, học cụm từ rồi viết bài</Link>}

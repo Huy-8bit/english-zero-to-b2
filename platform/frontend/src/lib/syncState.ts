@@ -11,6 +11,7 @@ const META = "em-sync-meta"; // key → when this browser last changed it (ms)
 const EXACT = new Set([
   "em-grammar-night", "em-vstep-rush", "em-grammar-sprint", "em-sprint-combo", "em-example-vi",
   "em-writing-draft", "em-writing-exam", "em-model-library", "em-placement", "em-block-timer",
+  "em-b2-four-hour",
 ]);
 const PREFIXES = ["em-lesson-", "em-ex-"]; // lesson drafts and mode, AI exercise answers
 const LOCAL_ONLY = new Set(["em-lesson-exit", "em-lesson-save-order-test"]);
@@ -58,6 +59,12 @@ function newestBy(a: unknown, b: unknown, field: string): Obj {
 export function mergeProgress(key: string, older: unknown, newer: unknown): unknown {
   if (!isObj(older) || !isObj(newer)) return newer;
   if (key === "em-model-library") return { ...newer, items: newestBy(older.items, newer.items, "at") };
+  if (key === "em-b2-four-hour") return {
+    ...newer, items: newestBy(older.items, newer.items, "at"), drafts: newestBy(older.drafts, newer.drafts, "at"),
+    transfers: newestBy(older.transfers, newer.transfers, "at"),
+    // Keep the newer session/clock as one unit. Recall spacing uses this counter across all sessions.
+    turn: Math.max(Number(older.turn ?? 0), Number(newer.turn ?? 0)),
+  };
   if (key === "em-grammar-night") {
     return {
       ...newer,
@@ -74,7 +81,7 @@ export function mergeProgress(key: string, older: unknown, newer: unknown): unkn
   }
   return newer;
 }
-const MERGED = new Set(["em-grammar-night", "em-vstep-rush", "em-model-library"]);
+const MERGED = new Set(["em-grammar-night", "em-vstep-rush", "em-model-library", "em-b2-four-hour"]);
 
 /** Called by safeStorage after every write/remove. */
 export function localChanged(key: string) {

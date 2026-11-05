@@ -15,6 +15,7 @@ import { PronunciationFeedback } from "@/features/pronunciation/PronunciationFee
 import { PronunciationPractice } from "@/features/pronunciation/PronunciationPractice";
 import { speak } from "@/lib/tts";
 import type { PronunciationResult } from "@/services/ai";
+import { RescueLink } from "@/features/b2-rescue/RescueLink";
 
 const LEVELS = ["A0", "A1", "A2", "B1", "B2"];
 
@@ -64,6 +65,7 @@ export default function SpeakingStudioPage() {
           <Button variant={tab === "realtime" ? "primary" : "outline"} onClick={() => setTab("realtime")}><Radio size={15} />Thời gian thực</Button>
           <Button variant={tab === "history" ? "primary" : "outline"} onClick={() => setTab("history")}><History size={15} />Lịch sử</Button></div>} />
       <SimulatedBanner />
+      <RescueLink />
       {st.data && !st.data.enabled && <div className="mb-4"><AIUnavailable /></div>}
       <p className="mb-4 rounded-xl bg-surface-2 px-3 py-2 text-xs text-muted"><b>Phát âm</b> được chấm từng từ: máy chép lại đúng những gì nghe được rồi so với câu mẫu (chế độ Đọc to và tab Phát âm); từ chưa rõ có IPA từ điển, cách sửa và nút đọc lại. Nội dung câu trả lời (ngữ pháp, từ vựng, độ liên quan) được AI nhận xét từ bản chép lời. Không chấm giọng địa phương hay ngữ điệu. Giọng AI là giọng máy tạo.
         {opts.data && !opts.data.store_user_audio && " Bản ghi âm của bạn chỉ phát lại trong trình duyệt, không lưu trên máy chủ."}</p>

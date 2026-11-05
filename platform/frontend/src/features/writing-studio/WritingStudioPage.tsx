@@ -15,6 +15,7 @@ import { AIErrorBox, AILoading, AIUnavailable, SimulatedBanner, useAIStatus } fr
 import { cn, safeStorage, wordCount } from "@/lib/utils";
 import { diffWords } from "./diff";
 import ExamWriting from "./ExamWriting";
+import { RescueLink } from "@/features/b2-rescue/RescueLink";
 
 const store = safeStorage();
 const LEVELS = ["A1", "A2", "B1", "B2"];
@@ -114,6 +115,7 @@ export default function WritingStudioPage() {
       <PageHeader title={tab === "exam" ? "Ôn thi Writing" : "Writing Studio"} subtitle={tab === "exam" ? "Gõ lặp lại để thuộc khung Task 1 & Task 2 → học cụm từ → áp dụng vào bài viết. Mỗi lần một câu, tự lưu để học tiếp." : "Viết bài, nhận góp ý chi tiết từ AI: lỗi được đánh dấu ngay trong bài, bản sửa, bản viết lại và kế hoạch cải thiện."}
         actions={<div className="flex flex-wrap gap-2"><Button variant="outline" onClick={() => nav("/model-library?skill=writing")}>Đọc bài mẫu Writing</Button><Button variant={tab === "write" ? "primary" : "outline"} onClick={() => setTab("write")}>Viết bài</Button><Button variant={tab === "exam" ? "primary" : "outline"} onClick={() => setTab("exam")}>Ôn thi theo khung</Button><Button variant={tab === "history" ? "primary" : "outline"} onClick={() => setTab("history")}><History size={15} />Lịch sử</Button></div>} />
       {tab !== "exam" && <SimulatedBanner />}
+      <RescueLink />
       {tab !== "exam" && st.data && !st.data.enabled && <div className="mb-4"><AIUnavailable /></div>}
       {tab === "history" ? <WritingHistory data={hist.data} onOpen={(s) => { setResult(s); setD((x) => ({ ...x, text: s.text, prompt: s.prompt as Prompt, mode: s.mode, taskType: s.task_type, level: s.level, parentId: s.id, clientId: newId() })); setTab("write"); }} /> : tab === "exam" ? <ExamWriting /> : (
         <div className="grid gap-5 xl:grid-cols-[19rem_1fr]">

@@ -12,6 +12,7 @@ import { ErrorBox, PageHeader, Skeleton } from "@/components/ui/misc";
 import { toast } from "@/components/ui/toast";
 import { LEVEL_OPTIONS, MODE_INFO, vocab, type Overview, type SessionKind, type SessionParams, type Topic } from "@/services/vocab";
 import { WordRow } from "./components";
+import { RescueLink } from "@/features/b2-rescue/RescueLink";
 
 export function useStart() {
   const nav = useNavigate();
@@ -51,6 +52,7 @@ export default function VocabHome() {
     <div>
       <PageHeader title="Từ vựng" subtitle={<>{o.stats.total_available.toLocaleString("vi-VN")} từ & cụm từ A1–B2 · lịch ôn {o.stats.algorithm}</>} />
       <SubNav />
+      <RescueLink />
       <div className="grid gap-4 lg:grid-cols-3">
         <Card className="border-primary/40 lg:col-span-2">
           <CardContent className="space-y-4 pt-5">

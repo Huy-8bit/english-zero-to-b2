@@ -13,6 +13,7 @@ const Dashboard = lazy(() => import("@/features/dashboard/DashboardPage"));
 const PathPage = lazy(() => import("@/features/learning-path/PathPage"));
 const ModulePage = lazy(() => import("@/features/catalog/ModulePage"));
 const VocabularyPage = lazy(() => import("@/features/vocabulary/VocabularyPage"));
+const B2RescuePage = lazy(() => import("@/features/b2-rescue/B2RescuePage"));
 const VocabHome = lazy(() => import("@/features/vocab/VocabHome"));
 const VocabToday = lazy(() => import("@/features/vocab/TodayPage"));
 const VocabSprint = lazy(() => import("@/features/vocab/SprintPage"));
@@ -77,6 +78,7 @@ export default function App() {
             <Route path="grammar-sprint" element={<GrammarSprint />} />
             <Route path="grammar-night" element={<GrammarNight />} />
             <Route path="vstep-rush" element={<VstepRush />} />
+            <Route path="b2-four-hour" element={<B2RescuePage />} />
             <Route path="irregular-verbs" element={<IrregularVerbs />} />
             <Route path="grammar" element={<ModulePage kind="grammar" />} />
             <Route path="vocabulary" element={<VocabHome />} />
