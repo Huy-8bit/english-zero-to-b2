@@ -8,7 +8,7 @@ test("dark reader: comfortable type, saved settings, draft intact and normal the
   await page.addInitScript(() => localStorage.setItem("em-theme", "light"));
   await page.goto("/writing-studio?mode=exam");
   await expect(page.locator("html")).toHaveAttribute("data-reader", "black");
-  await page.getByRole("button", { name: "2. Viết theo khung", exact: true }).click();
+  await page.getByRole("button", { name: "3. Viết áp dụng", exact: true }).click();
   const text = page.getByLabel("1. Mở bài", { exact: true });
   await text.fill("My draft remains safe when I change the reading appearance.");
   await page.getByRole("button", { name: "Tùy chỉnh trang đọc", exact: true }).click();

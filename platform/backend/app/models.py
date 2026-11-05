@@ -1,9 +1,11 @@
 """Learning data. One row per (user, thing) where duplicates would corrupt progress."""
 from __future__ import annotations
 
+from typing import Any
+
 from datetime import date, datetime, timezone
 
-from sqlalchemy import JSON, Boolean, Date, DateTime, Float, ForeignKey, Integer, String, Text, UniqueConstraint
+from sqlalchemy import JSON, BigInteger, Boolean, Date, DateTime, Float, ForeignKey, Integer, String, Text, UniqueConstraint
 from sqlalchemy.orm import Mapped, mapped_column
 
 from .database import Base
@@ -736,3 +738,15 @@ class FocusSession(Base):
     end_reason: Mapped[str | None] = mapped_column(String(120), nullable=True)
     started_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow, index=True)
     ended_at: Mapped[datetime | None] = mapped_column(DateTime, nullable=True)
+
+
+class ClientState(Base):
+    """Learning state the web app keeps per key (one-night reading, VSTEP rush, sprint plan, drafts…), stored here so it
+    survives another browser, cleared browser data and database restores. `ts`: when the browser changed it (ms);
+    the newest change wins. A null value records a deletion."""
+    __tablename__ = "client_state"
+    user_id: Mapped[int] = mapped_column(ForeignKey("users.id"), primary_key=True)
+    key: Mapped[str] = mapped_column(String(120), primary_key=True)
+    value: Mapped[Any] = mapped_column(JSON, nullable=True)
+    ts: Mapped[int] = mapped_column(BigInteger)
+    updated_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow, onupdate=utcnow)

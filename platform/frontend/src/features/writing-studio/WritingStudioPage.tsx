@@ -111,8 +111,8 @@ export default function WritingStudioPage() {
 
   return (
     <div>
-      <PageHeader title={tab === "exam" ? "Ôn thi Writing" : "Writing Studio"} subtitle={tab === "exam" ? "Học bố cục và câu dẫn → viết vào khung với nhiều chủ đề → che mẫu để tự nhớ lại. Có sẵn nội dung để luyện ngay." : "Viết bài, nhận góp ý chi tiết từ AI: lỗi được đánh dấu ngay trong bài, bản sửa, bản viết lại và kế hoạch cải thiện."}
-        actions={<div className="flex flex-wrap gap-2"><Button variant={tab === "write" ? "primary" : "outline"} onClick={() => setTab("write")}>Viết bài</Button><Button variant={tab === "exam" ? "primary" : "outline"} onClick={() => setTab("exam")}>Ôn thi theo khung</Button><Button variant={tab === "history" ? "primary" : "outline"} onClick={() => setTab("history")}><History size={15} />Lịch sử</Button></div>} />
+      <PageHeader title={tab === "exam" ? "Ôn thi Writing" : "Writing Studio"} subtitle={tab === "exam" ? "Gõ lặp lại để thuộc khung Task 1 & Task 2 → học cụm từ → áp dụng vào bài viết. Mỗi lần một câu, tự lưu để học tiếp." : "Viết bài, nhận góp ý chi tiết từ AI: lỗi được đánh dấu ngay trong bài, bản sửa, bản viết lại và kế hoạch cải thiện."}
+        actions={<div className="flex flex-wrap gap-2"><Button variant="outline" onClick={() => nav("/model-library?skill=writing")}>Đọc 1.000 bài mẫu</Button><Button variant={tab === "write" ? "primary" : "outline"} onClick={() => setTab("write")}>Viết bài</Button><Button variant={tab === "exam" ? "primary" : "outline"} onClick={() => setTab("exam")}>Ôn thi theo khung</Button><Button variant={tab === "history" ? "primary" : "outline"} onClick={() => setTab("history")}><History size={15} />Lịch sử</Button></div>} />
       {tab !== "exam" && <SimulatedBanner />}
       {tab !== "exam" && st.data && !st.data.enabled && <div className="mb-4"><AIUnavailable /></div>}
       {tab === "history" ? <WritingHistory data={hist.data} onOpen={(s) => { setResult(s); setD((x) => ({ ...x, text: s.text, prompt: s.prompt as Prompt, mode: s.mode, taskType: s.task_type, level: s.level, parentId: s.id, clientId: newId() })); setTab("write"); }} /> : tab === "exam" ? <ExamWriting /> : (

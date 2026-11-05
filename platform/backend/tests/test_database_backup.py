@@ -69,7 +69,7 @@ def test_archive_restores_manual_progress_and_level(tmp_path):
         assert original and all(p['manual'] for p in original)
         archive = tmp_path / 'manual.tar.gz'
         manifest = db_archive.backup(database, media, archive)
-        assert manifest['database']['alembic_revision'] == '0009'
+        assert manifest['database']['alembic_revision'] == '0010'
         assert db_archive.verify(archive) == manifest
     source.state.sessionmaker.kw['bind'].dispose()
     restored = tmp_path / 'restored.db'

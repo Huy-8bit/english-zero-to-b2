@@ -9,7 +9,8 @@ import { ErrorBox, PageHeader, Skeleton } from "@/components/ui/misc";
 import { Ring } from "@/features/plan/TodayPlanPage";
 import {
   BREAK_EVERY_MIN, BREAK_MIN, clock, coveredNight, endNight, hhmm, hoursMin, loadNight, needsReview, nextNight, nightPace, reviewPicks, startNight,
-  studyMinutes, syncNight, nightUnits, replanNight, briefMisses, briefReview, startBriefQuiz, type NightPathUnit, type NightSession, type RecallPick,
+  studyMinutes, syncNight, nightUnits, replanNight, briefMisses, briefReview, startBriefQuiz, markBriefs, briefsUpTo,
+  type NightPathUnit, type NightSession, type RecallPick,
 } from "./nightPlan";
 import { RecallRun } from "./NightLesson";
 import { useNightSession } from "./useNightSession";
@@ -37,18 +38,23 @@ function Setup({ units: pathUnits, onStart }: { units: NightPathUnit[]; onStart:
   const [hours, setHours] = useState(3.5);
   const [all, setAll] = useState(false);
   const [plan, setPlan] = useState<"compact" | "full">("compact");
+  const [already, setAlready] = useState(0); // topics studied before (another browser, cleared data)
   const route = nightUnits(pathUnits, plan);
+  const briefs = route.filter((u) => u.sources);
+  const studied = new Set(plan === "compact" ? briefs.slice(0, already).map((u) => u.id) : []);
   const completed = new Set(pathUnits.filter((u) => u.status === "completed").map((u) => u.id));
-  const remaining = route.filter((u) => !(u.sources ?? [u.id]).every((id) => completed.has(id)));
+  const remaining = route.filter((u) => !(u.sources ?? [u.id]).every((id) => completed.has(id)) && !studied.has(u.id));
   const units = all ? route : remaining;
   const per = units.length ? (studyMinutes(hours) * 60) / units.length : 0;
   const breaks = Math.floor((hours * 60) / (BREAK_EVERY_MIN + BREAK_MIN));
   const nav = useNavigate();
   const start = () => {
     startNight(pathUnits, hours, Date.now(), all ? "all" : "remaining", plan);
-    const n = syncNight(pathUnits)!;
+    let n = syncNight(pathUnits)!;
+    if (studied.size) n = markBriefs([...studied], true)!;
     onStart(n);
-    nav(`/learn/${nextNight(n)!.id}?mode=night`);
+    const first = nextNight(n);
+    nav(first ? `/learn/${first.id}?mode=night` : "/grammar-night");
   };
   return (
     <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
@@ -69,6 +75,16 @@ function Setup({ units: pathUnits, onStart }: { units: NightPathUnit[]; onStart:
             <Button size="sm" variant={!all ? "primary" : "outline"} onClick={() => setAll(false)}>Bài chưa hoàn thành ({remaining.length})</Button>
             <Button size="sm" variant={all ? "primary" : "outline"} onClick={() => setAll(true)}>Ôn lại tất cả {route.length} {plan === "compact" ? "chủ điểm" : "bài"}</Button>
           </div>
+          {plan === "compact" && (
+            <label className="flex flex-wrap items-center gap-2 text-sm">
+              <span className="w-24 text-muted">Đã học trước:</span>
+              <select aria-label="Đã học trước đến chủ điểm" value={already} onChange={(e) => setAlready(Number(e.target.value))}
+                className="h-9 min-w-0 max-w-full flex-1 rounded-xl border border-border bg-surface px-2">
+                <option value={0}>Chưa — học từ chủ điểm đầu tiên</option>
+                {briefs.map((u, i) => <option key={u.id} value={i + 1}>Đã học chủ điểm 1–{i + 1} (đến: {u.title})</option>)}
+              </select>
+            </label>
+          )}
           <p className="text-sm text-muted">Tiếp tục theo lộ trình học, bao gồm tiến độ bạn đã đánh dấu thủ công. {plan === "compact" && "Chỉ bỏ qua một chủ điểm khi mọi bài gốc trong đó đã học; chủ điểm học dở được giữ lại."}</p>
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
             <Stat label={plan === "compact" ? "Chủ điểm cần đọc" : "Bài cần đọc"} value={String(units.length)} />
@@ -80,10 +96,26 @@ function Setup({ units: pathUnits, onStart }: { units: NightPathUnit[]; onStart:
           <Loop compact={plan === "compact"} />
           {hours >= 8 && <p className="flex gap-2 rounded-xl bg-surface-2 px-3 py-2 text-sm"><BedDouble size={18} className="shrink-0 text-primary" />
             <span>Não cất bài vào trí nhớ dài hạn <b>trong lúc ngủ</b>; thức trắng làm quên nhanh hơn. Nếu được, chia 2 tối × 4 giờ, hoặc học xong thì ngủ một giấc dài — đừng học tiếp ngay việc khác.</span></p>}
-          <Button size="lg" onClick={start} disabled={!units.length}><Play size={18} />Bắt đầu đêm học</Button>
+          <Button size="lg" onClick={start} disabled={!units.length && !studied.size}><Play size={18} />{units.length ? "Bắt đầu đêm học" : "Lưu: đã học hết"}</Button>
         </CardContent>
       </Card>
       <HowTo />
+    </div>
+  );
+}
+
+/** Topics studied before (another browser, cleared browser data): mark 1…n as read in one go. */
+function MarkStudied({ session, onChange }: { session: NightSession; onChange: () => void }) {
+  const briefs = session.units.filter((u) => u.sources);
+  const [n, setN] = useState(() => Math.max(1, briefs.filter((u) => coveredNight(session, u.id)).length));
+  return (
+    <div className="mb-3 flex flex-wrap items-center gap-2 rounded-2xl bg-surface-2 p-3 text-sm">
+      <span>Đã học ở trình duyệt khác hoặc dữ liệu trình duyệt bị xoá? Đánh dấu đã học:</span>
+      <select aria-label="Đánh dấu đã học đến chủ điểm" value={n} onChange={(e) => setN(Number(e.target.value))}
+        className="h-9 min-w-0 max-w-full flex-1 rounded-xl border border-border bg-surface px-2">
+        {briefs.map((u, i) => <option key={u.id} value={i + 1}>Chủ điểm 1–{i + 1} (đến: {u.title})</option>)}
+      </select>
+      <Button size="sm" onClick={() => { markBriefs(briefsUpTo(session, n), true); onChange(); }}>Đánh dấu 1–{n}</Button>
     </div>
   );
 }
@@ -125,7 +157,8 @@ function Night({ session, onChange, onEnd }: { session: NightSession; onChange: 
   const waiting = (session.recall ?? []).length;
   useEffect(() => {
     const k = (e: KeyboardEvent) => {
-      if (e.key !== "Enter" || !next || bedtime || practice || e.target instanceof HTMLInputElement || e.target instanceof HTMLButtonElement) return;
+      if (e.key !== "Enter" || !next || bedtime || practice || e.target instanceof HTMLInputElement || e.target instanceof HTMLButtonElement
+        || e.target instanceof HTMLSelectElement) return;
       e.preventDefault();
       nav(`/learn/${next.id}?mode=night`);
     };
@@ -200,9 +233,13 @@ function Night({ session, onChange, onEnd }: { session: NightSession; onChange: 
         </Card>
       </div>
       {compact && <Card className="mt-4"><CardHeader><CardTitle>Lộ trình gọn — chọn chủ điểm cần xem</CardTitle></CardHeader><CardContent>
+        <MarkStudied session={session} onChange={onChange} />
         <ol className="grid gap-2 sm:grid-cols-2">{session.units.map((u, i) => <li key={u.id}><Link to={`/learn/${u.id}?mode=night`} className="flex items-start gap-2 rounded-xl border border-border p-3 text-sm hover:bg-surface-2">
           <span className="text-muted">{i + 1}.</span><span className="flex-1">{u.title}<span className="mt-1 block text-xs text-muted">{u.level} · gộp {u.sources?.length ?? 1} bài</span></span>{coveredNight(session, u.id) && <CircleCheck size={16} className="shrink-0 text-success" />}
-        </Link>{questionsForBrief(u.id).length > 0 && <Button size="sm" variant="ghost" className="mt-1" onClick={() => { startBriefQuiz(u.id, questionsForBrief(u.id).map((q) => q.id)); nav(`/learn/${u.id}?mode=night`); }}>Luyện 6 câu · {questionsForBrief(u.id).filter((q) => session.briefAnswers?.[q.id]?.correct).length}/6 đúng</Button>}</li>)}</ol>
+        </Link>{(session.compactRead?.includes(u.id) || !coveredNight(session, u.id)) && (
+          <Button size="sm" variant="ghost" className="mt-1" onClick={() => { markBriefs([u.id], !session.compactRead?.includes(u.id)); onChange(); }}>
+            {session.compactRead?.includes(u.id) ? "Bỏ dấu đã học" : "Đánh dấu đã học"}</Button>
+        )}{questionsForBrief(u.id).length > 0 && <Button size="sm" variant="ghost" className="mt-1" onClick={() => { startBriefQuiz(u.id, questionsForBrief(u.id).map((q) => q.id)); nav(`/learn/${u.id}?mode=night`); }}>Luyện 6 câu · {questionsForBrief(u.id).filter((q) => session.briefAnswers?.[q.id]?.correct).length}/6 đúng</Button>}</li>)}</ol>
         <p className="mt-4 text-sm text-muted">Để sau: bảng chữ cái/âm, bày tỏ quan điểm, văn phong, kết hợp từ, dấu hiệu diễn ngôn, rào đón, biến đổi câu và lập luận. Các bài gốc vẫn mở được trong lộ trình đầy đủ.</p>
       </CardContent></Card>}
       {!compact && p.read >= 3 && (

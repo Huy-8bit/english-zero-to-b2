@@ -1,3 +1,43 @@
+# Writing & Speaking reference library — 2026-11-05
+
+Request: 5 topic groups × 10 full reference answers for every Writing form and Speaking part, then redeploy.
+
+- Added 1,150 complete samples: 500 Task 1 letters, 500 Task 2 essays, 50 for each of Speaking Parts 1–3. Each of the 23 forms/parts has five topic groups with ten distinct scenarios. The 50 authored scenario notes are adapted using task-specific scaffolds; shared language intentionally supports memorisation.
+- New `/model-library` route with entry links from both studios and skill pages. Browse task/form/topic, search Vietnamese without accents or English, read one sample, navigate within ten, hide Vietnamese notes, listen to paragraphs, study phrases and return to practice. Explicitly distinguishes teaching taxonomy and original practice material from official exam papers or scored answers.
+- Read/bookmark state persists in `em-model-library`, mirrored to the existing client-state API and merged per sample timestamp. No backend/schema change. Existing typing-frame progress is preserved.
+- Source and deterministic checks: `platform/scripts/reference_library/`; generated index + 115 static buckets in `frontend/public/model-library-data/`, loaded on demand. Automated checks cover counts, full-answer uniqueness, word lengths, Speaking structure, vocabulary metadata, deep-link resolution, progress merging, failed downloads and output reproducibility.
+- Validation: TypeScript, lint, production build; 19 targeted unit tests (library, sync, existing long frames and memorisation); 4 desktop/mobile browser tests including accessibility and server restoration. Desktop and mobile screenshots inspected.
+- Deployed with `docker compose build frontend` and `docker compose up -d --no-deps frontend`. Verified live routes, entry/library asset (`ModelLibraryPage-DFE6oh7R.js`), index and every one of the 115 buckets byte-for-byte against source. Backend remained healthy with 224 curriculum units.
+
+# Writing: longer reusable scaffolds for limited vocabulary — 2026-11-04
+
+Request: supply more ready-made wording and make frames usable across different topics.
+
+- Expanded all 20 practice decks with approximately 100–125 fixed words for Task 1 and 160–180 for Task 2. The longer scaffolds include explanation, examples, affected groups and longer-term effects with topic-specific slots. Each form has two authored applications (40 in total), all meeting its task's minimum word count; these demonstrate reuse, not certified exam scores.
+- Added highlighted slots, Vietnamese editing labels and suggested fills, topic switching, custom-fill persistence, assembled text and word/empty-slot counts. Hidden recall accepts omitted or relabelled bracket slots while still checking every fixed word before and after them.
+- Long frames are the default. Original short-cue runs remain in `training.decks`; new runs use `training.extendedDecks`, examples use `training.applications`. Switching versions preserves both; previously unlocked vocabulary stays available.
+- Validation: content tests for every placeholder, both applications and minimum lengths; grading tests for omission, ordering and missing fixed language; browser checks for legacy progress, example editing/reload, independent completion and mobile accessibility. Existing Writing flows also retained.
+
+# Writing: memorise frames by typing before vocabulary — 2026-11-04
+
+Request: memorise the frames and fixed phrases for both Writing tasks through repeated typing, then learn vocabulary.
+
+- Added 20 authored practice decks (10 letter purposes, 10 essay forms/variants) with Vietnamese cues, slot grammar, prompt recognition and contextual examples. The taxonomy is a practice aid, not an exhaustive official list of exam tasks.
+- New default course: copy → first-letter scaffolding → two hidden-recall rounds → reproduce the whole ordered scaffold. Failed/hinted cards return after other cards; a hinted whole scaffold never passes. Completion unlocks 60 contextual vocabulary chunks in 10 packs. Review intervals: 1/3/7/14 days, no same-day schedule inflation.
+- State is nested in the existing synced `em-writing-exam` key. Refresh, frame switches and checked feedback resume; existing essay drafts and prior recall data are preserved. Existing six worked-example frames/18 topics remain available for reference and application.
+- Main files: `writingMemoryContent.ts`, `writingMemoryState.ts`, `WritingMemory.tsx`, `ExamWriting.tsx` under `frontend/src/features/writing-studio/`.
+- Validation: targeted state/content unit tests, existing frame tests, TypeScript, lint, production build, browser coverage for old-draft migration, all learning stages, retries, vocabulary unlocking, reload, desktop/mobile layout and accessibility. No live AI needed.
+
+# Learning state in the database — 2026-11-04
+
+Request: keep learning state in a database, and mark all grammar done in one-night mode.
+
+| Feature | Status | Files | Evidence |
+|---|---|---|---|
+| Browser learning state mirrored in `client_state` (one-night reading, VSTEP rush, sprint, lesson mode and drafts, AI exercise answers, writing drafts/exam, placement, block timer, example translations toggle). Hydrated before pages mount: the newest change wins per key; night and VSTEP progress are merged. Writes are pushed (debounced, retried, flushed on tab hide). Offline falls back to the browser copy. | COMPLETE_AND_TESTED | `backend/app/api/state.py`, `models.py` (`ClientState`), `alembic/versions/0010_client_state.py`; `frontend/src/lib/syncState.ts`, `lib/utils.ts` (`safeStorage`), `features/auth/StateSync.tsx` | `test_learning_state_is_kept_per_key_and_the_newest_change_wins`, migration/backup tests at 0010; vitest `syncState.test.ts`; full E2E 87/87 (specs whose tests assumed a fresh browser means an empty account now reset the DB per test) |
+| One-night: mark topics studied elsewhere (1…n at setup or on the overview, per-topic toggle); the pace baseline moves so earlier study is not "ahead of plan" | COMPLETE_AND_TESTED | `nightPlan.ts` (`withBriefsMarked`), `NightPage.tsx` | vitest `compactGrammar.test.ts`; E2E "topics studied in another browser" |
+| The learner's night marked 29/29 done in the live database (through the app) | DONE | — | `client_state` holds `em-grammar-night` with 29 topics read; the overview shows "29/29 · Xong toàn bộ" |
+
 # VSTEP B2 rush and irregular verbs — 2026-11-02
 
 Request: add irregular verbs, and an urgent review of the vocabulary B2 VSTEP Speaking and Writing need, in 2 days / 10 hours.

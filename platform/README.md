@@ -44,6 +44,25 @@ scripts/restore-db.sh backups/docker-YYYYMMDDTHHMMSSffffffZ.tar.gz --replace
 
 Restore Docker kiểm tra archive trước, dừng API nếu đang chạy, tạo bản `before-restore-*.tar.gz`, khôi phục DB/media và bật lại API nếu trước đó đang chạy. `--replace` cho phép thay thế dữ liệu đích; không có cờ này thì từ chối ghi đè. Nếu restore lỗi, API được giữ dừng để kiểm tra. **Không dùng `docker compose down -v` hoặc xóa volume nếu cần giữ dữ liệu.** Xem [hướng dẫn database, chuyển server và khôi phục](DATABASE.md).
 
+## Thư viện bài mẫu Writing & Speaking
+
+Mở `/model-library` hoặc nút **Đọc bài mẫu** trong Writing/Speaking Studio và trang kỹ năng.
+
+- **1.150 bài hoàn chỉnh**: Task 1 có 10 mục đích thư × 5 chủ đề × 10 bài = 500; Task 2 có 10 dạng/biến thể × 5 × 10 = 500; Speaking có 3 phần × 5 × 10 = 150.
+- Năm nhóm: giáo dục; công nghệ; thiên nhiên/môi trường; công việc/xã hội; đời sống/sức khỏe/du lịch. Mỗi nhóm có 10 tình huống được biên soạn với lợi ích, cơ chế, ví dụ, khó khăn, nguyên nhân, cách xử lý và cụm từ. Các dạng dùng lại tình huống và khung câu để hỗ trợ ghi nhớ, không phải 1.150 chủ đề độc lập.
+- Mỗi bài có đề, dàn ý tiếng Việt, câu trả lời đầy đủ, ghi chú từng đoạn, 3 cụm từ theo chủ đề và câu nối dùng lại. Bài Speaking đúng cấu trúc phần: 6 hỏi–đáp/2 chủ đề nhỏ; chọn 1 trong 3 phương án và so sánh; bài nói 3 nhánh và 3 hỏi–đáp mở rộng. Nội dung tự luyện, không phải đề thi thật hoặc bài được chứng nhận điểm.
+- Bộ lọc dạng/chủ đề, tìm tiêu đề tiếng Việt không dấu hoặc tiếng Anh trong 10 bài, lọc bài đã lưu/chưa đọc, liên kết trực tiếp, bài trước/tiếp, ẩn ghi chú, nghe từng đoạn/cụm từ và tùy chỉnh trang đọc. Đọc nội dung không cần gọi AI; nghe dùng hệ thống TTS hiện có.
+- Tiến độ ở `em-model-library`, đồng bộ qua `/api/state`; khi tải lại, hợp nhất theo thời điểm thay đổi từng bài, bao gồm thao tác bỏ đánh dấu. Không thay đổi database schema hoặc dữ liệu luyện khung cũ.
+- Nguồn biên soạn: `scripts/reference_library/scenarios.py` và `build_library.py`. Đầu ra tĩnh: `frontend/public/model-library-data/` (index + 115 bộ, mỗi bộ 10 bài), tải nội dung theo chủ đề khi mở bài, không nhúng cả thư viện vào JavaScript.
+
+```bash
+python3 scripts/reference_library/build_library.py          # xuất lại nội dung sau khi sửa nguồn
+python3 scripts/reference_library/build_library.py --check  # số lượng, cấu trúc, độ dài, trùng bài, đồng bộ đầu ra
+cd frontend
+npm test -- src/features/model-library/library.test.ts
+npx playwright test model-library.spec.ts model-library.mobile.spec.ts --project=desktop --project=mobile
+```
+
 ## Chạy trực tiếp trên máy (phát triển)
 
 Yêu cầu: Python 3.11+ (khuyến nghị có `uv`), Node.js 20+, và `ffprobe` (cài FFmpeg) để xác minh thời lượng file ghi âm trước khi gửi OpenAI. Docker đã bao gồm FFmpeg.
@@ -241,6 +260,17 @@ Nội dung giáo trình giữ nguyên. Nút 📖 (hoặc `?mode=classic`) mở l
 
 Đồng hồ ≈8 phút mỗi bài, chuỗi bài qua liên tiếp 🔥, số bài hôm nay / mục tiêu, tiến độ theo cấp. Sprint giúp đi qua và tìm chỗ hổng nhanh; nhớ lâu vẫn cần ôn theo lịch và học kỹ những bài chưa qua.
 
+## Trạng thái học tập lưu trong database
+
+Những gì app trước đây chỉ giữ trong trình duyệt giờ được lưu vào bảng `client_state` (migration `0010`, API `GET/PUT /api/state`). Gồm: tiến độ Ngữ pháp 1 đêm, Cấp tốc VSTEP, kế hoạch và combo Sprint, chế độ học, bài làm dở trong bài học, bài tập AI, bản nháp và bài thi Viết, phiên kiểm tra xếp lớp, đồng hồ khối học, bật/tắt dịch ví dụ.
+
+Nhờ vậy dữ liệu nằm trong backup và không mất khi đổi trình duyệt hay xóa dữ liệu trình duyệt. Tùy chỉnh riêng của từng máy (giao diện sáng/tối, tốc độ đọc, chế độ tập trung, cài đặt trang đọc) vẫn chỉ ở trình duyệt.
+
+Cách đồng bộ (`frontend/src/lib/syncState.ts`):
+- **Khi mở app:** tải bản trên server trước khi hiện trang. Với mỗi khóa, bản thay đổi gần nhất được dùng. Riêng tiến độ 1 đêm và VSTEP thì gộp cả hai bản (hợp các chủ điểm đã đọc, giữ câu trả lời mới nhất).
+- **Khi có thay đổi:** gửi lên server sau khoảng 0,8 giây, thử lại khi mất mạng, và gửi nốt khi đóng tab.
+- **Khi không kết nối được server:** app vẫn chạy bằng bản trong trình duyệt.
+
 ## Cấp tốc VSTEP B2 (`/vstep-rush`) và Động từ bất quy tắc (`/irregular-verbs`)
 
 Ôn gấp cho bài Nói và Viết B2 trong 2 ngày / 10 giờ, chia thành 10 khối khoảng 1 giờ:
@@ -358,8 +388,13 @@ Vào **Viết** hoặc **Kiểm tra** → **Ôn thi Writing theo khung**, hoặc
 
 - **6 khung, 18 chủ đề**: thư/email thân mật, thư/email trang trọng, luận quan điểm, bàn hai quan điểm, lợi–hại và nguyên nhân–giải pháp. Mỗi khung có bố cục, mục tiêu từng đoạn, câu dẫn với chỗ trống và một bài mẫu hoàn chỉnh cho đề đầu tiên. Các bố cục là gợi ý tự luyện; người học cần đọc đúng yêu cầu từng đề.
 - **Viết theo khung**: mỗi đoạn có ô riêng và nút chèn khung khi ô còn trống. Người học thay `[nội dung gợi ý]` bằng ý của mình; chỗ trống chưa điền không được tính vào số từ. Có thể ẩn khung để tự viết, xem bài ghép và tự rà soát theo các yêu cầu của đề.
-- **Học thuộc khung**: 44 cụm câu dẫn, gợi ý tiếng Việt rồi tự gõ tiếng Anh. Chấp nhận khác biệt chữ hoa, dấu câu và khoảng trắng; cụm mẫu chưa được hiển thị trước khi thử nhớ. Xem gợi ý hoặc trả lời sai không được tính là nhớ không gợi ý trong lượt đó. Có thể ôn lại đúng những phần cần nhớ rồi quay về bài viết.
-- `em-writing-exam` lưu riêng các đoạn/checklist theo cặp khung–chủ đề, vị trí nhớ khung, câu trả lời và việc đã xem gợi ý. Chuyển đề/khung, tải lại hoặc đổi tab vẫn giữ tiến độ; không ghi đè nháp `em-writing-draft` của Writing Studio. Nội dung này lưu trong trình duyệt; lượt nhớ khung không tạo bản nộp AI hay XP chấm bài. Thời gian học vẫn được nhật ký Writing Studio ghi nhận theo cơ chế sẵn có.
+- **Gõ thuộc khung** (mặc định): 20 bộ luyện, gồm 10 mục đích thư Task 1 (trả lời thông tin, khuyên, mời, nhận lời, từ chối, cảm ơn, xin lỗi, hỏi/yêu cầu, phàn nàn, ứng tuyển) và 10 dạng/biến thể Task 2 (đồng ý, phản đối, đồng ý một phần, bàn hai phía, lợi–hại, outweigh, nguyên nhân–giải pháp, vấn đề–giải pháp, nguyên nhân–hệ quả, hai câu hỏi). Đây là phân loại tự luyện, không phải danh mục đề thi chính thức hay bảo đảm bao phủ mọi đề kết hợp.
+- **Khung dài — nhiều câu có sẵn** là mặc định: mở rộng cả 20 dạng, dùng khoảng 100–125 từ cố định ở Task 1 và 160–180 ở Task 2. Có câu giải thích, đối tượng bị tác động, ví dụ, tác động lâu dài và kết bài; phần `[ngoặc vuông]` đánh dấu ý cần đổi theo đề. Có thể chuyển về **Câu dẫn ngắn — bản cũ**; hai phiên bản giữ tiến độ riêng (`decks` và `extendedDecks`), không chấm lại câu cũ bằng đáp án mới.
+- **Cùng một khung, đổi sang 2 chủ đề**: 40 bài minh họa đã điền sẵn (ít nhất 120/250 từ tương ứng hai task), tô rõ phần đổi, cho sửa từng ý với nhãn tiếng Việt và gợi ý. Có bản văn để chọn/sao chép, đếm từ và cảnh báo chỗ bỏ trống. Ý sửa lưu tại `training.applications`; đổi chủ đề nạp lại mẫu của chủ đề đó. Khung được thiết kế theo yêu cầu từng dạng đề; không phải mọi câu đều hợp mọi chủ đề và bài minh họa chưa được chấm như bài thi.
+- Khi gõ bản dài, chỉ phần cố định được kiểm tra; có thể bỏ qua nhãn trong ngoặc hoặc gõ cả nhãn. Ở lượt che chữ, nhãn chỗ trống vẫn hiện; bài áp dụng và đáp án đầy đủ được ẩn trong lượt tự nhớ. Học hết bản ngắn trước đây vẫn giữ quyền truy cập từ vựng.
+- **Vòng gõ**: nhìn mẫu → gợi ý chữ đầu → tự nhớ lượt 1 → tự nhớ lượt 2. Mỗi lượt đi qua toàn bộ câu trước khi hỏi lại. Câu sai hoặc đã xem mẫu được thêm lại cuối hàng đợi; chữ hoa, khoảng trắng và dấu câu thông thường được bỏ qua. Cuối bộ phải tự gõ tất cả câu dẫn đúng thứ tự, không nhìn mẫu. Phần nội dung thay theo đề được giải thích bằng tiếng Việt và có câu áp dụng; lượt kiểm tra khung chỉ yêu cầu phần cố định, chưa phải bài viết đủ số từ.
+- **Từ vựng sau khung**: hoàn thành cả 20 khung mở 60 cụm từ trong 10 nhóm (thư, dịch vụ, ứng tuyển, giáo dục, công nghệ, môi trường, công việc, sức khỏe, giao thông, cộng đồng). Mỗi cụm có nghĩa và câu áp dụng, luyện bằng cùng vòng gõ. Khung đã hoàn thành được hẹn ôn sau 1, 3, 7 rồi 14 ngày; ôn nhiều lần trước hạn không đẩy ngày hẹn ra xa.
+- `em-writing-exam.training` lưu tiến độ từng khung/nhóm từ, hàng đợi, câu đang gõ, gợi ý, phản hồi và lịch ôn. Dùng cơ chế `safeStorage`/đồng bộ `client_state` có sẵn. Khi nâng cấp, chuyển vào luồng mới nhưng giữ nháp từng chủ đề và dữ liệu ôn cũ; không ghi đè `em-writing-draft`. Lượt luyện khung không gọi AI hay tạo XP chấm bài.
 - Định dạng tham khảo: [ULIS–VNU VSTEP.3–5](https://vstep.vnu.edu.vn/test-format/) (thư/email tối thiểu 120 từ, luận tối thiểu 250 từ). Phân bổ luyện 20/40 phút là gợi ý; ví dụ, chủ đề và khung do ứng dụng biên soạn.
 
 ## OpenAI và các studio

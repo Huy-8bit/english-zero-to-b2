@@ -4,6 +4,7 @@ import { Layout } from "./Layout";
 import { Skeleton } from "@/components/ui/misc";
 import { Toaster } from "@/components/ui/toast";
 import { LoginGate } from "@/features/auth/LoginGate";
+import { StateSync } from "@/features/auth/StateSync";
 import { CelebrateHost } from "@/components/Celebrate";
 import { BlockTimerHost } from "@/features/plan/BlockTimer";
 import { ReaderAppearance } from "@/features/reader/ReaderAppearance";
@@ -37,6 +38,7 @@ const PracticeStudio = lazy(() => import("@/features/ai-practice/PracticeStudioP
 const ExerciseSetPage = lazy(() => import("@/features/ai-practice/ExerciseSetPage"));
 const WritingStudio = lazy(() => import("@/features/writing-studio/WritingStudioPage"));
 const DailyWriting = lazy(() => import("@/features/writing-studio/DailyWritingPage"));
+const ModelLibrary = lazy(() => import("@/features/model-library/ModelLibraryPage"));
 const SpeakingStudio = lazy(() => import("@/features/speaking-studio/SpeakingStudioPage"));
 const ListeningStudio = lazy(() => import("@/features/listening-studio/ListeningStudioPage").then((m) => ({ default: m.ListeningStudioPage })));
 const ListeningSet = lazy(() => import("@/features/listening-studio/ListeningStudioPage").then((m) => ({ default: m.ListeningSetPage })));
@@ -63,6 +65,7 @@ export default function App() {
   return (
     <LoginGate>
       <ReaderAppearance />
+      <StateSync>
       <Suspense fallback={<Loading />}>
         <Routes>
           <Route path="/learn/:unitId" element={<LessonPlayer />} />
@@ -104,6 +107,7 @@ export default function App() {
             <Route path="ai-practice/:setId" element={<ExerciseSetPage />} />
             <Route path="writing-studio" element={<WritingStudio />} />
             <Route path="writing-daily" element={<DailyWriting />} />
+            <Route path="model-library" element={<ModelLibrary />} />
             <Route path="speaking-studio" element={<SpeakingStudio />} />
             <Route path="listening-studio" element={<ListeningStudio />} />
             <Route path="listening-studio/:setId" element={<ListeningSet />} />
@@ -119,6 +123,7 @@ export default function App() {
       <BlockTimerHost />
       <CelebrateHost />
       <Toaster />
+      </StateSync>
     </LoginGate>
   );
 }

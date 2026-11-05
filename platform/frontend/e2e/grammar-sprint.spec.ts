@@ -1,7 +1,8 @@
 import { expect, test } from "@playwright/test";
 import { resetTestDatabase } from "./database";
 
-test.beforeAll(resetTestDatabase);
+// each test starts from an empty account: learning state (lesson mode, sprint plan) is kept on the server now
+test.beforeEach(resetTestDatabase);
 
 test("grammar sprint: plan in days, core on one screen, 6-question check, next lesson with Enter", async ({ page }) => {
   await page.goto("/grammar-sprint");

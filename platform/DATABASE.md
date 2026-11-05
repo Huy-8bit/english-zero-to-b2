@@ -59,7 +59,7 @@ scripts/backup-db.sh --stop --backup-dir /srv/english-backups
 python3 scripts/database.py verify backups/docker-YYYYMMDDTHHMMSSffffffZ.tar.gz
 ```
 
-Archive `.tar.gz` gồm `english.db`, `media/`, `manifest.json`. Không chứa `.env`, API key hoặc giáo trình; cần giữ cấu hình và source code riêng khi chuyển server. Backup dữ liệu người học có quyền file `600`; thư mục mặc định mới tạo có quyền `700` và bị loại khỏi Git. `PYTHON_BIN` chọn Python riêng nếu cần, mặc định dùng `backend/.venv/bin/python` hoặc `python3` (3.11+).
+Archive `.tar.gz` gồm `english.db`, `media/`, `manifest.json`. Không chứa `.env`, API key hoặc giáo trình; cần giữ cấu hình và source code riêng khi chuyển server. Backup dữ liệu người học có quyền file `600`; thư mục mặc định mới tạo có quyền `700`. Checkout hiện tại có các backup đã được theo dõi trong Git; quyền file không ngăn người khác tải backup nếu đưa lên repository công khai. `PYTHON_BIN` chọn Python riêng nếu cần, mặc định dùng `backend/.venv/bin/python` hoặc `python3` (3.11+).
 
 Backup online đảm bảo snapshot SQLite nhất quán. Media được copy sau DB; nếu AI đang tạo/xóa file thì hai phần có thể khác thời điểm. Dùng `--stop` cho bản chuyển server/cập nhật quan trọng. Với local, dừng `scripts/dev.sh` trước khi cần snapshot media nhất quán. Không copy riêng `english.db` khi app đang chạy vì các giao dịch mới có thể còn trong `english.db-wal`.
 
@@ -109,4 +109,10 @@ docker compose up -d --wait
 
 Nếu volume đích đã tồn tại, thêm `--replace` có chủ đích. Script sẽ sao lưu dữ liệu đang có trước khi thay. Không cần bật app tạo dữ liệu trắng trước restore. Local và Docker dùng chung định dạng archive; không có bước import làm mất ID hoặc lịch sử.
 
-Các bản nháp AI chỉ lưu trong localStorage của trình duyệt chưa nằm trong database: backup DB không chuyển được phần nháp đó sang trình duyệt khác. Kết quả đã nộp, tiến độ server và lịch sử đã lưu trong DB vẫn được backup.
+Chỉ dữ liệu đã lưu vào máy chủ trước thời điểm backup mới được chuyển sang máy khác. Các khóa trạng thái học được đồng bộ theo phần bên dưới; dữ liệu chỉ nằm trong trình duyệt hoặc thay đổi chưa kịp đồng bộ không có trong snapshot. Kết quả đã nộp, tiến độ và lịch sử trong DB đều được backup.
+
+## Trạng thái học tập của web app (`client_state`)
+
+Từ migration `0010`, tiến độ trước đây chỉ nằm trong trình duyệt được lưu vào bảng `client_state`. Gồm Ngữ pháp 1 đêm, Cấp tốc VSTEP, Sprint, bài làm dở, bản nháp Viết và trạng thái đã đọc/lưu của thư viện bài mẫu (`em-model-library`). Thư viện hợp nhất tiến độ theo thời điểm cập nhật từng bài khi tải từ máy chủ, bao gồm cả thao tác bỏ đánh dấu. Mỗi dòng ứng với một khóa (user_id, key) và lưu value JSON cùng ts (thời điểm trình duyệt thay đổi, ms); thay đổi mới nhất được giữ.
+
+Bảng này nằm trong backup như mọi bảng khác. Sau khi restore, tải lại trang để trình duyệt nhận đúng bản trong database.

@@ -129,7 +129,8 @@ test("concise night: follows A2 progress, merges comparisons, optional check, pe
   const before = await (await request.get("/api/progress")).json();
   const stats = await (await request.get("/api/stats")).json();
   const writes: string[] = [];
-  page.on("request", (r) => { if (r.url().includes("/api/") && r.method() !== "GET") writes.push(r.method() + " " + r.url()); });
+  // /api/state mirrors browser state (lib/syncState): not an XP or path write
+  page.on("request", (r) => { if (r.url().includes("/api/") && !r.url().includes("/api/state") && r.method() !== "GET") writes.push(r.method() + " " + r.url()); });
   await page.goto("/grammar-night");
   await expect(page.getByRole("button", { name: "3 giờ 30", exact: true })).toHaveAttribute("class", /bg-primary/);
   await page.getByRole("button", { name: "Bắt đầu đêm học" }).click();
@@ -205,7 +206,8 @@ test("brief MCQs: six checks, immediate explanation, refresh, retry misses and r
   const before = await (await request.get("/api/progress")).json();
   const stats = await (await request.get("/api/stats")).json();
   const writes: string[] = [];
-  page.on("request", (r) => { if (r.url().includes("/api/") && r.method() !== "GET") writes.push(r.method() + " " + r.url()); });
+  // /api/state mirrors browser state (lib/syncState): not an XP or path write
+  page.on("request", (r) => { if (r.url().includes("/api/") && !r.url().includes("/api/state") && r.method() !== "GET") writes.push(r.method() + " " + r.url()); });
   await page.goto("/grammar-night");
   await page.getByRole("button", { name: "Bắt đầu đêm học" }).click();
   await page.getByRole("button", { name: "4. Trắc nghiệm (6)", exact: true }).click();
@@ -284,4 +286,19 @@ test("mixed brief review uses studied topics, keeps feedback after refresh and l
   const after = await page.evaluate(() => JSON.parse(localStorage.getItem("em-grammar-night")!));
   expect(after.compactRead).toEqual(topics);
   expect(after.results).toEqual(saved.results);
+});
+
+test("topics studied in another browser: mark 1–23 when starting, the overview shows 23/29 and one can be unmarked", async ({ page }) => {
+  await page.goto("/grammar-night");
+  await page.getByLabel("Đã học trước đến chủ điểm").selectOption("23");
+  await page.getByRole("button", { name: "Bắt đầu đêm học" }).click();
+  await expect(page).toHaveURL(/\/learn\/.+\?mode=night/);
+  await page.goto("/grammar-night");
+  await expect(page.getByText(/^23\/29/)).toBeVisible();
+  await expect(page.getByText("Đúng nhịp", { exact: false }).first()).toBeVisible(); // earlier study is not "ahead of plan"
+  await page.getByRole("button", { name: "Bỏ dấu đã học" }).first().click();
+  await expect(page.getByText(/^22\/29/)).toBeVisible();
+  await page.getByLabel("Đánh dấu đã học đến chủ điểm").selectOption("23");
+  await page.getByRole("button", { name: "Đánh dấu 1–23" }).click();
+  await expect(page.getByText(/^23\/29/)).toBeVisible();
 });

@@ -15,4 +15,4 @@ export function readerSettings(value: Partial<ReaderSettings> | null): ReaderSet
     focus: typeof value?.focus === "boolean" ? value.focus : true,
   };
 }
-export const isReadingRoute = (path: string) => /^\/(?:learn(?:\/|$)|grammar(?:-night|-sprint)?(?:\/|$)|writing(?:-studio|-daily)?(?:\/|$)|reading(?:-studio)?(?:\/|$)|reference(?:\/|$)|library(?:\/|$))/.test(path);
+export const isReadingRoute = (path: string) => /^\/(?:learn(?:\/|$)|grammar(?:-night|-sprint)?(?:\/|$)|writing(?:-studio|-daily)?(?:\/|$)|reading(?:-studio)?(?:\/|$)|reference(?:\/|$)|model-library(?:\/|$)|library(?:\/|$))/.test(path);

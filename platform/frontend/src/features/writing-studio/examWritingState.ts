@@ -1,9 +1,11 @@
+import type { WritingMemoryState } from "./writingMemoryState";
 import { normalizeRecall, type WritingFrame } from "./examFrames";
 
 export interface ExamDraft { parts: Record<string, string>; checks: Record<string, boolean> }
 export interface RecallAnswer { text: string; checked: boolean; correct: boolean; hinted: boolean }
 export interface FrameRecall { ids: string[]; index: number; answers: Record<string, RecallAnswer> }
 export interface ExamWritingState {
+  training?: WritingMemoryState;
   frameId: string; topics: Record<string, string>; step: "frame" | "write" | "memory";
   drafts: Record<string, ExamDraft>; recall: Record<string, FrameRecall>; hideFrame: boolean;
 }

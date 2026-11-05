@@ -341,3 +341,16 @@ def test_lesson_steps_carry_the_vietnamese_of_their_examples(client):
     assert vi["The milk is in the fridge."] == {"vi": "Sữa ở trong tủ lạnh."}
     assert vi["at the table, at my bag, at the chair"]["wrong"] is True  # an intentional mistake, marked as such
     assert "Sit next to me." in vi
+
+
+def test_learning_state_is_kept_per_key_and_the_newest_change_wins(client):
+    night = {"compactRead": ["A0-G004"], "start": 1}
+    r = client.put("/api/state", json={"items": {"em-grammar-night": {"value": night, "ts": 100}}}).json()
+    assert r["items"]["em-grammar-night"] == {"value": night, "ts": 100}
+    # an older copy (another browser that was offline) does not overwrite the newer one
+    r = client.put("/api/state", json={"items": {"em-grammar-night": {"value": {"compactRead": []}, "ts": 50}}}).json()
+    assert r["items"]["em-grammar-night"]["value"] == night
+    client.put("/api/state", json={"items": {"em-vstep-rush": {"value": None, "ts": 120}}})  # a deletion is kept too
+    assert client.get("/api/state").json()["items"] == {"em-grammar-night": {"value": night, "ts": 100},
+                                                         "em-vstep-rush": {"value": None, "ts": 120}}
+    assert client.put("/api/state", json={"items": {"bad key": {"value": 1, "ts": 1}}}).status_code == 422

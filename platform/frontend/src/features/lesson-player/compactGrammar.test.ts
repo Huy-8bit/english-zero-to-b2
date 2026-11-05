@@ -3,7 +3,7 @@ import { readdirSync } from "node:fs";
 import { resolve } from "node:path";
 import { beforeEach, describe, expect, it } from "vitest";
 import { COMPACT_GRAMMAR, NIGHT_LATER, briefFor } from "./compactGrammar";
-import { coveredNight, loadNight, nextNight, nightPace, recordBrief, recordNight, replanNight, startNight, withPathProgress } from "./nightPlan";
+import { briefsUpTo, coveredNight, loadNight, markBriefs, nextNight, nightPace, recordBrief, recordNight, replanNight, startNight, withPathProgress } from "./nightPlan";
 
 const root = resolve(process.cwd(), "../..");
 const sourceIds = readdirSync(root).filter((d) => /^0[1-5]-/.test(d)).sort()
@@ -85,5 +85,19 @@ describe("concise one-night curriculum", () => {
     const all = withPathProgress(startNight(path, 3.5, T, "all"), path.map((u) => ({ ...u, status: "completed" })));
     expect(nightPace(all, T).covered).toBe(0);
     expect(nextNight(all)?.id).toBe("A0-G004");
+  });
+
+  it("marks topics studied elsewhere (1…n) without counting them as tonight's reading", () => {
+    const s = synced();
+    localStorage.setItem("em-grammar-night", JSON.stringify(s));
+    const marked = markBriefs(briefsUpTo(s, 23), true)!;
+    const p = nightPace(withPathProgress(marked, path), T + 60_000);
+    expect(p.covered).toBe(23);
+    expect(p.total).toBe(29);
+    expect(Math.abs(p.ahead)).toBe(0); // studied before tonight: not "23 topics ahead"
+    // continues with one of the 6 topics left (the earliest unfinished source lesson in the path goes first)
+    expect(COMPACT_GRAMMAR.slice(23).map((b) => b.id)).toContain(nextNight(withPathProgress(marked, path))?.id);
+    const unmarked = markBriefs([COMPACT_GRAMMAR[22].id], false)!;
+    expect(nightPace(withPathProgress(unmarked, path), T + 60_000).covered).toBe(22);
   });
 });

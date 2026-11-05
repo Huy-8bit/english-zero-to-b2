@@ -31,7 +31,7 @@ def test_legacy_upgrade_preserves_records_and_restarts(tmp_path, unversioned):
     init_db(engine)
     init_db(engine)  # repeated startup is idempotent
     with engine.connect() as conn:
-        assert conn.execute(text("SELECT version_num FROM alembic_version")).scalar() == "0009"
+        assert conn.execute(text("SELECT version_num FROM alembic_version")).scalar() == "0010"
         attempt = conn.execute(text("SELECT response,verdict,ai_correct,ai_score FROM attempts WHERE id=1")).one()
         assert tuple(attempt) == ("B", "correct", None, None)
         assert conn.execute(text("PRAGMA foreign_key_check")).all() == []
@@ -75,5 +75,5 @@ def test_upgrade_0008_defaults_existing_progress_to_non_manual(tmp_path):
     with engine.connect() as conn:
         assert tuple(conn.execute(text("SELECT manual,score,best_score,completed_at FROM lesson_progress")).one()) == (
             0, 85, 90, "2020-01-01")
-        assert conn.execute(text("SELECT version_num FROM alembic_version")).scalar() == "0009"
+        assert conn.execute(text("SELECT version_num FROM alembic_version")).scalar() == "0010"
     engine.dispose()

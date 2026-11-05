@@ -1,23 +1,24 @@
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { BookOpen, Brain, PenLine } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Progress } from "@/components/ui/progress";
-import { Input, Textarea } from "@/components/ui/misc";
+import { Textarea } from "@/components/ui/misc";
 import { safeStorage, wordCount } from "@/lib/utils";
-import { assembleWriting, FRAME_FORMAT_SOURCE, frameById, frameDraftKey, unfilledSlots, WRITING_FRAMES, type WritingFrame } from "./examFrames";
-import {
-  checkRecall, EMPTY_DRAFT, EMPTY_EXAM, freshRecall, nextRecall, revealRecall, updateRecallText,
-  type ExamDraft, type ExamWritingState, type FrameRecall,
-} from "./examWritingState";
+import { assembleWriting, FRAME_FORMAT_SOURCE, frameById, frameDraftKey, unfilledSlots, WRITING_FRAMES } from "./examFrames";
+import { EMPTY_DRAFT, EMPTY_EXAM, type ExamDraft, type ExamWritingState } from "./examWritingState";
+import WritingMemory from "./WritingMemory";
+import { EMPTY_MEMORY } from "./writingMemoryState";
 
 const storage = safeStorage();
 const KEY = "em-writing-exam";
-const STEPS = [{ key: "frame", title: "1. Xem khung", icon: BookOpen }, { key: "write", title: "2. Viết theo khung", icon: PenLine }, { key: "memory", title: "3. Học thuộc khung", icon: Brain }] as const;
+const STEPS = [{ key: "memory", title: "1. Gõ thuộc khung", icon: Brain }, { key: "frame", title: "Tra cứu khung", icon: BookOpen }, { key: "write", title: "3. Viết áp dụng", icon: PenLine }] as const;
 
 export default function ExamWriting() {
-  const [state, setState] = useState(() => storage.get<ExamWritingState>(KEY, EMPTY_EXAM));
+  const [state, setState] = useState(() => {
+    const saved = storage.get<ExamWritingState>(KEY, EMPTY_EXAM);
+    return { ...saved, step: saved.training ? saved.step : "memory" as const, training: saved.training ?? EMPTY_MEMORY };
+  });
   useEffect(() => { storage.set(KEY, state); }, [state]);
   const frame = frameById(state.frameId);
   const topic = frame.topics.find((t) => t.id === state.topics[frame.id]) ?? frame.topics[0];
@@ -28,10 +29,9 @@ export default function ExamWriting() {
   const words = wordCount(text.replace(/\[[^\]]+\]/g, ""));
   const checks = [...topic.requirements, "Đã có phần mở, thân và kết; các ý nối với nhau rõ ràng.", "Đã soát thì, chủ–vị, mạo từ, số nhiều và dấu câu."];
   const setDraft = (fn: (d: ExamDraft) => ExamDraft) => setState((s) => ({ ...s, drafts: { ...s.drafts, [key]: fn(s.drafts[key] ?? EMPTY_DRAFT) } }));
-  const setRun = (fn: (r: FrameRecall) => FrameRecall) => setState((s) => ({ ...s, recall: { ...s.recall, [frame.id]: fn(s.recall[frame.id] ?? freshRecall(frame)) } }));
   return <div className="reader-writing space-y-5" data-testid="writing-exam">
     <Card><CardContent className="space-y-4 pt-5">
-      <div className="grid gap-3 sm:grid-cols-2">
+      {state.step !== "memory" && <><div className="grid gap-3 sm:grid-cols-2">
         <label className="text-sm font-medium">Khung bài<select aria-label="Khung bài" className="mt-1 h-11 w-full rounded-xl border border-border bg-surface px-3" value={frame.id} onChange={(e) => setState((s) => ({ ...s, frameId: e.target.value }))}>
           {WRITING_FRAMES.map((f) => <option key={f.id} value={f.id}>Task {f.task} · {f.title}</option>)}
         </select></label>
@@ -40,9 +40,9 @@ export default function ExamWriting() {
         </select></label>
       </div>
       <div className="flex flex-wrap gap-2"><Badge tone="primary">VSTEP-style · Task {frame.task}</Badge><Badge>Tối thiểu {frame.wordMin} từ</Badge><Badge>Gợi ý luyện {frame.minutes} phút</Badge></div>
-      <p className="text-sm text-muted">{frame.guidance}</p>
+      <p className="text-sm text-muted">{frame.guidance}</p></>}
       <div className="flex flex-wrap gap-2" role="group" aria-label="Các bước ôn thi Writing">{STEPS.map(({ key, title, icon: Icon }) => <Button key={key} variant={state.step === key ? "primary" : "outline"} aria-pressed={state.step === key} onClick={() => setState((s) => ({ ...s, step: key }))}><Icon size={16} />{title}</Button>)}</div>
-      <p className="text-xs text-muted">Nháp được lưu riêng theo khung và chủ đề trong trình duyệt. Đổi chủ đề rồi quay lại để viết tiếp.</p>
+      <p className="text-xs text-muted">Tự lưu lượt gõ và bài nháp. Đổi dạng hoặc tải lại trang để tiếp tục từ chỗ đang học.</p>
     </CardContent></Card>
 
     {state.step === "frame" && <>
@@ -79,43 +79,7 @@ export default function ExamWriting() {
       </CardContent></Card>
     </>}
 
-    {state.step === "memory" && <FrameMemory frame={frame} run={state.recall[frame.id]} onRun={setRun} onWrite={() => setState((s) => ({ ...s, step: "write" }))} />}
+    {state.step === "memory" && <WritingMemory saved={state.training} onSave={(training) => setState((s) => ({ ...s, training }))} onApply={(frameId) => setState((s) => ({ ...s, frameId, step: "write" }))} />}
     <p className="text-xs text-muted">Khung do ứng dụng biên soạn để tự luyện. Tham khảo <a href={FRAME_FORMAT_SOURCE} target="_blank" rel="noreferrer" className="text-primary underline">định dạng VSTEP.3–5 từ ULIS–VNU</a>; các khoảng luyện 20/40 phút ở trên là gợi ý phân bổ thời gian.</p>
   </div>;
-}
-
-function FrameMemory({ frame, run, onRun, onWrite }: { frame: WritingFrame; run?: FrameRecall; onRun: (fn: (r: FrameRecall) => FrameRecall) => void; onWrite: () => void }) {
-  const cue = run && frame.cues.find((c) => c.id === run.ids[run.index]);
-  const input = useRef<HTMLInputElement>(null);
-  useLayoutEffect(() => { input.current?.focus(); }, [cue?.id, frame.id]);
-  const answer = cue && run?.answers[cue.id];
-  const start = () => onRun(() => freshRecall(frame));
-  if (!run) return <Card><CardHeader><CardTitle>Học thuộc khung: {frame.title}</CardTitle></CardHeader><CardContent className="space-y-3">
-    <p>Nhìn gợi ý tiếng Việt, tự gõ lại câu dẫn tiếng Anh trước khi xem mẫu. Khung này có {frame.cues.length} cụm cần nhớ.</p>
-    <p className="text-sm text-muted">Thứ tự bố cục: {frame.sections.map((s) => s.title).join(" → ")}. Thuộc câu dẫn rồi tập thay ý bằng nhiều chủ đề.</p>
-    <Button onClick={start}><Brain size={16} />Bắt đầu học thuộc</Button>
-  </CardContent></Card>;
-  if (!cue) {
-    const unaided = run.ids.filter((id) => run.answers[id]?.correct && !run.answers[id]?.hinted).length;
-    const retry = run.ids.filter((id) => !run.answers[id]?.correct || run.answers[id]?.hinted);
-    return <Card data-testid="frame-memory-result"><CardHeader><CardTitle>Nhớ không gợi ý {unaided}/{run.ids.length} cụm trong lượt này</CardTitle></CardHeader><CardContent className="space-y-3">
-      <p className="text-sm text-muted">Thử nhớ lại sau một đề viết nữa. Cụm đã xem mẫu hoặc trả lời sai cần được luyện lại mà không nhìn.</p>
-      <div className="flex flex-wrap gap-2">{retry.length > 0 && <Button onClick={() => onRun(() => freshRecall(frame, retry))}>Ôn {retry.length} cụm cần nhớ lại</Button>}<Button variant="outline" onClick={start}>Luyện lại toàn khung</Button><Button onClick={onWrite}>Áp dụng vào bài viết</Button></div>
-    </CardContent></Card>;
-  }
-  return <Card data-testid="frame-memory"><CardHeader><CardTitle>Nhớ lại câu dẫn — {frame.title}</CardTitle></CardHeader><CardContent className="space-y-4">
-    <div className="flex flex-wrap gap-2"><Badge tone="primary">Cụm {run.index + 1}/{run.ids.length}</Badge><Badge>{frame.sections.find((s) => s.id === cue.section)?.title}</Badge></div>
-    <Progress value={100 * run.index / run.ids.length} label={`Đã ôn ${run.index}/${run.ids.length} cụm`} />
-    <p className="font-semibold">{cue.hint}</p>
-    <form className="space-y-3" onSubmit={(e) => { e.preventDefault(); if (answer?.checked) onRun(nextRecall); else onRun((r) => checkRecall(frame, r)); }}>
-      <label className="block text-sm">Gõ câu dẫn từ trí nhớ<Input ref={input} className="mt-1" value={answer?.text ?? ""} readOnly={answer?.checked} onChange={(e) => onRun((r) => updateRecallText(r, e.target.value))} autoComplete="off" autoCapitalize="off" spellCheck={false} /></label>
-      {(answer?.hinted || answer?.checked) && <div className="rounded-xl bg-surface-2 p-3" role="status">
-        {answer.checked && <p className="font-semibold">{answer.correct ? answer.hinted ? "Đúng khi đã xem gợi ý" : "Nhớ đúng không cần gợi ý" : "Chưa khớp cụm mẫu"}</p>}
-        <p className="mt-1 font-medium text-primary">{cue.answer}</p><p className="mt-1 text-xs text-muted">Khi viết bài thật, bạn có thể dùng cách diễn đạt phù hợp khác; lượt này luyện nhớ cụm mẫu.</p>
-      </div>}
-      <div className="flex flex-wrap gap-2">{!answer?.checked && <Button variant="outline" onClick={() => onRun(revealRecall)}>Xem cụm mẫu</Button>}
-        <Button type="submit" disabled={!answer?.checked && !answer?.text.trim()}>{answer?.checked ? run.index + 1 < run.ids.length ? "Cụm tiếp" : "Xem kết quả" : "Kiểm tra trí nhớ"}</Button></div>
-    </form>
-    <p className="text-xs text-muted">Có thể bỏ qua khác biệt chữ hoa và dấu câu. Xem mẫu trước không được tính là tự nhớ trong lượt này. Câu đang làm được lưu khi tải lại.</p>
-  </CardContent></Card>;
 }

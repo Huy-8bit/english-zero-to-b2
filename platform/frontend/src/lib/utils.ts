@@ -1,5 +1,6 @@
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
+import { localChanged } from "./syncState";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -62,6 +63,7 @@ export function safeStorage() {
       } catch {
         /* storage full or blocked: data is still saved on the server */
       }
+      localChanged(key); // learning state is mirrored in the database
     },
     remove(key: string) {
       try {
@@ -69,6 +71,7 @@ export function safeStorage() {
       } catch {
         /* ignore */
       }
+      localChanged(key);
     },
   };
 }

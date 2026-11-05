@@ -91,6 +91,18 @@ export const coveredNight = (s: NightSession, id: string) => {
 
 export const recordBrief = (id: string) => updateNight((s) => ({ ...s, compactRead: [...new Set([...(s.compactRead ?? []), id])] }));
 
+/** Topics the learner already studied elsewhere (another browser, cleared data): marked read, or unmarked. They move
+ *  the pace baseline, so earlier study does not count as tonight's reading and the plan covers what is left. */
+export function withBriefsMarked(s: NightSession, ids: string[], read: boolean): NightSession {
+  const compactRead = read ? [...new Set([...(s.compactRead ?? []), ...ids])] : (s.compactRead ?? []).filter((x) => !ids.includes(x));
+  const next = { ...s, compactRead };
+  const moved = nightPace(next).read - nightPace(s).read;
+  return { ...next, paceReadBaseline: Math.max(0, (s.paceReadBaseline ?? 0) + moved) };
+}
+export const markBriefs = (ids: string[], read: boolean) => updateNight((s) => withBriefsMarked(s, ids, read));
+/** The first `n` topics of the compact route. */
+export const briefsUpTo = (s: NightSession, n: number) => s.units.filter((u) => u.sources).slice(0, n).map((u) => u.id);
+
 /** Resume the same run on refresh/reopen; a new selection starts a new run without deleting history. */
 export const startBriefQuiz = (key: string, ids: string[], restart = false) => updateNight((s) => {
   const valid = [...new Set(ids)].filter((id) => BRIEF_QUESTION_MAP[id]);

@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import { SaveWordButton } from "@/features/vocab/Lookup";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
@@ -18,6 +19,7 @@ import type { PronunciationResult } from "@/services/ai";
 const LEVELS = ["A0", "A1", "A2", "B1", "B2"];
 
 export default function SpeakingStudioPage() {
+  const nav = useNavigate();
   const st = useAIStatus();
   const opts = useQuery({ queryKey: ["speaking-options"], queryFn: ai.speakingOptions });
   const hist = useQuery({ queryKey: ["speaking-history"], queryFn: ai.speakingSessions });
@@ -56,7 +58,7 @@ export default function SpeakingStudioPage() {
   return (
     <div>
       <PageHeader title="Speaking Studio" subtitle="Luyện nói với AI: ghi âm câu trả lời, xem bản chép lời, nhận góp ý ngữ pháp – từ vựng và trả lời câu hỏi tiếp theo."
-        actions={<div className="flex flex-wrap gap-2">
+        actions={<div className="flex flex-wrap gap-2"><Button variant="outline" onClick={() => nav("/model-library?skill=speaking")}>Đọc 150 bài mẫu</Button>
           <Button variant={tab === "practice" ? "primary" : "outline"} onClick={() => setTab("practice")}><Mic size={15} />Luyện nói</Button>
           <Button variant={tab === "pronunciation" ? "primary" : "outline"} onClick={() => setTab("pronunciation")}><AudioLines size={15} />Phát âm</Button>
           <Button variant={tab === "realtime" ? "primary" : "outline"} onClick={() => setTab("realtime")}><Radio size={15} />Thời gian thực</Button>

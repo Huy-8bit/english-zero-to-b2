@@ -15,11 +15,12 @@ test("exam writing: frame, model, topic-specific drafts survive refresh without 
   await page.getByRole("link", { name: /Ôn thi Writing theo khung/ }).click();
   await expect(page).toHaveURL(/\/writing-studio\?mode=exam$/);
   await expect(page.getByRole("heading", { name: "Ôn thi Writing", exact: true })).toBeVisible();
+  await page.getByRole("button", { name: "Tra cứu khung", exact: true }).click();
   await page.getByLabel("Khung bài", { exact: true }).selectOption("opinion");
   await expect(page.getByText("Bố cục cần nhớ", { exact: true })).toBeVisible();
   await page.getByText("Xem bài mẫu và vai trò từng đoạn", { exact: true }).click();
   await expect(page.getByText(WRITING_FRAMES.find((f) => f.id === "opinion")!.sections[0].example, { exact: true })).toBeVisible();
-  await page.getByRole("button", { name: "2. Viết theo khung", exact: true }).click();
+  await page.getByRole("button", { name: "3. Viết áp dụng", exact: true }).click();
   await page.getByRole("button", { name: "Dùng khung đoạn 1", exact: true }).click();
   await expect(page.getByRole("status").filter({ hasText: /chỗ trong ngoặc vuông/ })).toBeVisible();
   const intro = page.getByLabel("1. Mở bài", { exact: true });
@@ -44,69 +45,22 @@ test("exam writing: frame, model, topic-specific drafts survive refresh without 
   await expect(intro).toHaveValue("I believe that online learning should support classroom lessons.");
 });
 
-test("memorise a frame: hidden cue, unaided vs hinted recall, reload, retry and apply without losing the essay", async ({ page }) => {
-  const frame = WRITING_FRAMES.find((f) => f.id === "opinion")!;
-  await page.goto("/writing-studio?mode=exam");
-  await page.getByRole("button", { name: "2. Viết theo khung", exact: true }).click();
-  await page.getByLabel("1. Mở bài", { exact: true }).fill("My draft is saved while I learn the frame.");
-  await page.getByRole("button", { name: "3. Học thuộc khung", exact: true }).click();
-  await page.getByRole("button", { name: "Bắt đầu học thuộc", exact: true }).click();
-  const memory = page.getByTestId("frame-memory");
-  const input = memory.getByLabel("Gõ câu dẫn từ trí nhớ", { exact: true });
-  await expect(memory.getByText(frame.cues[0].answer, { exact: true })).toHaveCount(0);
-  await input.fill(frame.cues[0].answer.toUpperCase() + ".");
-  await input.press("Enter");
-  await expect(memory.getByText("Nhớ đúng không cần gợi ý", { exact: true })).toBeVisible();
-  await input.press("Enter");
-  await expect(memory.getByText("Cụm 2/8", { exact: true })).toBeVisible();
-  await memory.getByRole("button", { name: "Xem cụm mẫu", exact: true }).click();
-  await input.fill(frame.cues[1].answer);
-  await input.press("Enter");
-  await expect(memory.getByText("Đúng khi đã xem gợi ý", { exact: true })).toBeVisible();
-  await page.reload();
-  await expect(memory.getByText("Cụm 2/8", { exact: true })).toBeVisible();
-  await expect(memory.getByText("Đúng khi đã xem gợi ý", { exact: true })).toBeVisible();
-  await input.press("Enter");
-  await input.fill("Something I have not memorised");
-  await input.press("Enter");
-  await expect(memory.getByText("Chưa khớp cụm mẫu", { exact: true })).toBeVisible();
-  await input.press("Enter");
-  for (const cue of frame.cues.slice(3)) {
-    await expect(memory.getByText(cue.hint, { exact: true })).toBeVisible();
-    await input.fill(cue.answer);
-    await input.press("Enter");
-    await expect(memory.getByText("Nhớ đúng không cần gợi ý", { exact: true })).toBeVisible();
-    await input.press("Enter");
-  }
-  const result = page.getByTestId("frame-memory-result");
-  await expect(result.getByText("Nhớ không gợi ý 6/8 cụm trong lượt này", { exact: true })).toBeVisible();
-  await result.getByRole("button", { name: "Ôn 2 cụm cần nhớ lại", exact: true }).click();
-  for (const cue of frame.cues.slice(1, 3)) {
-    await expect(memory.getByText(cue.hint, { exact: true })).toBeVisible();
-    await input.fill(cue.answer);
-    await input.press("Enter");
-    await input.press("Enter");
-  }
-  await expect(result.getByText("Nhớ không gợi ý 2/2 cụm trong lượt này", { exact: true })).toBeVisible();
-  await result.getByRole("button", { name: "Áp dụng vào bài viết", exact: true }).click();
-  await expect(page.getByLabel("1. Mở bài", { exact: true })).toHaveValue("My draft is saved while I learn the frame.");
-});
-
 test("exam frames work without AI and are accessible in view, writing and memory modes", async ({ page }) => {
   await page.emulateMedia({ reducedMotion: "reduce" });
   await page.route("**/api/ai/status", (r) => r.fulfill({ json: { enabled: false, configured: false, simulated: false } }));
   const writes: string[] = [];
   page.on("request", (r) => { if (r.url().includes("/api/") && r.method() !== "GET") writes.push(r.method() + " " + r.url()); });
   await page.goto("/writing-studio?mode=exam");
+  await page.getByRole("button", { name: "Tra cứu khung", exact: true }).click();
   await page.getByLabel("Khung bài", { exact: true }).selectOption("formal-email");
   await expect(page.getByText("Bố cục cần nhớ", { exact: true })).toBeVisible();
-  for (const name of ["1. Xem khung", "2. Viết theo khung", "3. Học thuộc khung"]) {
+  for (const name of ["Tra cứu khung", "3. Viết áp dụng", "1. Gõ thuộc khung"]) {
     await page.getByRole("button", { name, exact: true }).click();
     const result = await new AxeBuilder({ page }).include('[data-testid="writing-exam"]').withTags(["wcag2a", "wcag2aa"]).analyze();
     expect(result.violations.filter((v) => ["serious", "critical"].includes(v.impact ?? ""))).toEqual([]);
   }
-  await page.getByRole("button", { name: "Bắt đầu học thuộc", exact: true }).click();
-  await expect(page.getByTestId("frame-memory")).toBeVisible();
+  await page.getByRole("button", { name: "Bắt đầu gõ từng câu", exact: true }).click();
+  await expect(page.getByTestId("typing-practice")).toBeVisible();
   await page.screenshot({ path: test.info().outputPath("writing-frame-memory.png"), fullPage: true });
-  expect(writes.filter((r) => !r.endsWith("/api/activity/heartbeat"))).toEqual([]);
+  expect(writes.filter((r) => !r.endsWith("/api/activity/heartbeat") && !r.endsWith("/api/state"))).toEqual([]);
 });

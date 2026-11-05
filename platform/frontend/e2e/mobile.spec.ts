@@ -1,6 +1,9 @@
 import { expect, test } from "@playwright/test";
+import { resetTestDatabase } from "./database";
 
 // These tests cover the classic slide view; the journey view has its own spec (journey.spec.ts).
+// learning state (lesson mode, writing exam) is kept on the server: start each test from an empty account
+test.beforeEach(resetTestDatabase);
 test.beforeEach(async ({ page }) => {
   await page.addInitScript(() => localStorage.setItem("em-lesson-mode", JSON.stringify("classic")));
 });
@@ -51,9 +54,9 @@ test("mobile paper reader: large type fits memory input and lesson controls stay
   await settings.getByRole("radio", { name: "23", exact: true }).check();
   await settings.getByRole("radio", { name: "Rộng", exact: true }).check();
   await settings.getByRole("button", { name: "Xong", exact: true }).click();
-  await page.getByRole("button", { name: "3. Học thuộc khung", exact: true }).click();
-  await page.getByRole("button", { name: "Bắt đầu học thuộc", exact: true }).click();
-  const input = page.getByLabel("Gõ câu dẫn từ trí nhớ", { exact: true });
+  await page.getByRole("button", { name: "1. Gõ thuộc khung", exact: true }).click();
+  await page.getByRole("button", { name: "Bắt đầu gõ từng câu", exact: true }).click();
+  const input = page.getByLabel("Gõ câu tiếng Anh", { exact: true });
   await input.fill("It is often argued that");
   await expect(input).toHaveCSS("font-size", "23px");
   expect(await input.evaluate((e) => e.clientHeight >= e.scrollHeight)).toBe(true);
