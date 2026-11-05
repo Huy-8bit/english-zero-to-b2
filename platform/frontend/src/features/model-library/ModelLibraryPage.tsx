@@ -2,6 +2,8 @@ import { useEffect, useRef, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { ArrowLeft, ArrowRight, Bookmark, BookOpen, Check, PenLine, Mic, Square } from "lucide-react";
+import { BudgetFrameGuide } from "@/features/writing-studio/BudgetFrameGuide";
+import { sampleFrameId } from "@/features/writing-studio/budgetWritingFrames";
 import { FrameLiteral, FrameSkeleton, FrameText } from "@/components/FrameText";
 import { Button } from "@/components/ui/button";
 import { EmptyState, ErrorBox, Input, PageHeader, Skeleton } from "@/components/ui/misc";
@@ -206,7 +208,7 @@ function SampleReader({ summary, index, progress, bucket, onOpen, onBack, onTogg
         {sample.provenance && sample.sections.length > 0 && <details className="mt-4"><summary className="cursor-pointer text-sm font-semibold">{sample.group === "speaking-part1" ? "Xem câu hỏi trước khi đọc câu trả lời" : "Câu hỏi mở rộng trong đề"}</summary>{sample.sections.map((section) => <div className="mt-3" key={section.label}><h3 className="text-sm font-medium">{section.label}</h3><ol lang="en" className="mt-2 list-decimal space-y-2 pl-5 text-sm">{section.questions.map((q) => <li key={q.question}>{q.question}</li>)}</ol></div>)}</details>}
         {notes && <div className="mt-5 border-t border-border pt-4"><h3 className="text-sm font-semibold">Đọc đề trước khi học bài mẫu</h3><ul className="mt-2 list-disc space-y-1 pl-5 text-sm">{sample.requirementsVi.map((requirement) => <li key={requirement}>{requirement}</li>)}</ul>{sample.selectedOption !== null && <p className="mt-3 text-sm">Bài mẫu chọn phương án {sample.selectedOption + 1}; lý do cần bám điều kiện của đề.</p>}</div>}
       </section>
-      {notes && sample.register && <LetterFrameGuide sample={sample} />}
+      {notes && (sample.provenance && group.skill === "writing" ? <BudgetFrameGuide frameId={sampleFrameId(sample.group, sample.type)} /> : sample.register ? <LetterFrameGuide sample={sample} /> : null)}
       <section aria-labelledby="sample-answer" className="rounded-2xl border border-border bg-surface p-5 sm:p-8">
         <div className="mb-6 flex flex-wrap items-center justify-between gap-3"><h2 id="sample-answer" className="text-xl font-semibold">Bài mẫu hoàn chỉnh</h2><span className="text-sm text-muted">{sample.mainWordCount || sample.wordCount} từ{sample.group === "speaking-part3" ? " + hỏi đáp mở rộng" : ""}</span></div>
         <Answer sample={sample} notes={notes} frames={frames} />

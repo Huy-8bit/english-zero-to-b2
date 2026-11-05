@@ -70,7 +70,7 @@ test("copy, fade, hidden recall, delayed mistakes and whole frame persist withou
 
 test("last frame unlocks vocabulary; hints do not complete whole recall; vocabulary resumes", async ({ page }) => {
   const deck = MEMORY_DECKS.at(-1)!;
-  const training: WritingMemoryState = { ...EMPTY_MEMORY, format: "short", deckId: deck.id, decks: Object.fromEntries(MEMORY_DECKS.slice(0, -1).map((d) => [d.id, { passedAt: Date.now(), reviews: 1 }])) };
+  const training: WritingMemoryState = { ...EMPTY_MEMORY, frameRevision: "word-budget-v1", format: "short", deckId: deck.id, decks: Object.fromEntries(MEMORY_DECKS.slice(0, -1).map((d) => [d.id, { passedAt: Date.now(), reviews: 1 }])) };
   training.decks[deck.id] = { reviews: 0, run: { ...startMemory(deck.lines), phase: "whole" } };
   await page.addInitScript((saved) => {
     if (!localStorage.getItem("em-writing-exam")) localStorage.setItem("em-writing-exam", JSON.stringify(saved));
@@ -126,7 +126,7 @@ test("extended frames keep short-course progress and let learners reuse/edit the
   }, { ...EMPTY_EXAM, step: "memory", training: { ...EMPTY_MEMORY, decks: { reply: { run: oldRun, reviews: 0 } } } });
   await page.goto("/writing-studio?mode=exam");
   const format = page.getByLabel("Phiên bản khung", { exact: true });
-  await expect(format).toHaveValue("extended");
+  await expect(format).toHaveValue("budget");
   await expect(page.getByRole("button", { name: "Bắt đầu gõ từng câu", exact: true })).toBeVisible();
   await format.selectOption("short");
   await expect(page.getByLabel("Gõ câu tiếng Anh", { exact: true })).toHaveValue("My unfinished old phrase");
@@ -161,7 +161,7 @@ test("extended whole-frame recall ignores slots, keeps credit separate, and exam
   const deck = extendWritingDecks(MEMORY_DECKS).find((d) => d.id === "opinion-agree")!;
   await page.addInitScript((saved) => {
     if (!localStorage.getItem("em-writing-exam")) localStorage.setItem("em-writing-exam", JSON.stringify(saved));
-  }, { ...EMPTY_EXAM, step: "memory", training: { ...EMPTY_MEMORY, deckId: deck.id, extendedDecks: { [deck.id]: { reviews: 0, run: { ...startMemory(deck.lines), phase: "whole" } } } } });
+  }, { ...EMPTY_EXAM, step: "memory", training: { ...EMPTY_MEMORY, frameRevision: "word-budget-v1", format: "extended", deckId: deck.id, extendedDecks: { [deck.id]: { reviews: 0, run: { ...startMemory(deck.lines), phase: "whole" } } } } });
   await page.goto("/writing-studio?mode=exam");
   await expect(page.getByTestId("typing-model")).toHaveCount(0);
   const input = page.getByLabel("Gõ toàn bộ khung", { exact: true });

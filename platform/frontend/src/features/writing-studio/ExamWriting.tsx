@@ -1,3 +1,6 @@
+import { useSearchParams } from "react-router-dom";
+import { BUDGET_DECKS, FRAME_REVISION } from "./budgetWritingFrames";
+import { BudgetFrameGuide } from "./BudgetFrameGuide";
 import { useEffect, useState } from "react";
 import { BookOpen, Brain, PenLine } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -15,10 +18,19 @@ const KEY = "em-writing-exam";
 const STEPS = [{ key: "memory", title: "1. Gõ thuộc khung", icon: Brain }, { key: "frame", title: "Tra cứu khung", icon: BookOpen }, { key: "write", title: "3. Viết áp dụng", icon: PenLine }] as const;
 
 export default function ExamWriting() {
+  const [params, setParams] = useSearchParams();
+  const requestedFrame = params.get("memoryFrame");
   const [state, setState] = useState(() => {
     const saved = storage.get<ExamWritingState>(KEY, EMPTY_EXAM);
     return { ...saved, step: saved.training ? saved.step : "memory" as const, training: saved.training ?? EMPTY_MEMORY };
   });
+  useEffect(() => {
+    if (!requestedFrame || !BUDGET_DECKS.some((d) => d.id === requestedFrame)) return;
+    setState((s) => ({ ...s, step: "memory", training: { ...s.training, format: "budget", frameRevision: FRAME_REVISION, deckId: requestedFrame, view: "frames" } }));
+    const next = new URLSearchParams(params);
+    next.delete("memoryFrame");
+    setParams(next, { replace: true });
+  }, [requestedFrame, params, setParams]);
   useEffect(() => { storage.set(KEY, state); }, [state]);
   const frame = frameById(state.frameId);
   const topic = frame.topics.find((t) => t.id === state.topics[frame.id]) ?? frame.topics[0];
@@ -46,7 +58,8 @@ export default function ExamWriting() {
     </CardContent></Card>
 
     {state.step === "frame" && <>
-      <Card><CardHeader><CardTitle>Bố cục cần nhớ</CardTitle></CardHeader><CardContent>
+      <BudgetFrameGuide frameId={{ "informal-email": "reply", "formal-email": "request", opinion: "opinion-agree", }[frame.id] ?? frame.id} />
+      <Card><CardHeader><CardTitle>Bố cục rút gọn để tra cứu</CardTitle></CardHeader><CardContent>
         <ol className="reader-outline grid gap-3 md:grid-cols-2">{frame.sections.map((s, i) => <li key={s.id} className="rounded-2xl border border-border p-4"><h3 className="font-semibold">{i + 1}. {s.title}</h3><p className="mt-1 text-sm text-muted">{s.goal}</p><p className="reader-pattern mt-3 whitespace-pre-wrap rounded-xl bg-primary-soft/40 p-3 text-sm leading-relaxed">{s.pattern}</p></li>)}</ol>
         <p className="mt-3 text-sm text-muted">Học bố cục và câu dẫn; phần trong [ngoặc vuông] phải thay bằng ý trả lời đúng đề. Đây là bố cục gợi ý để luyện, có thể điều chỉnh khi cần.</p>
       </CardContent></Card>

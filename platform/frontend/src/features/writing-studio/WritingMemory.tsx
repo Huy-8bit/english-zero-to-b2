@@ -5,14 +5,14 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Textarea } from "@/components/ui/misc";
 import { Progress } from "@/components/ui/progress";
-import { extendWritingDecks, fixedFrameText, frameSlots, fillFrame } from "./extendedWritingFrames";
+import { extendWritingDecks, fixedFrameText, countFixedFrameWords, frameSlots, fillFrame } from "./extendedWritingFrames";
 import { FrameApplications, FrameTemplate } from "./FrameApplications";
-import { wordCount } from "@/lib/utils";
+import { BUDGET_DECKS, FRAME_REVISION } from "./budgetWritingFrames";
 import { diffWords } from "./diff";
 import { MEMORY_DECKS, WRITING_VOCAB, type MemoryLine } from "./writingMemoryContent";
 import {
   advanceMemory, checkMemory, EMPTY_MEMORY, fadedText, hintMemory, memoryTarget, recordMemory, startMemory, STAGE_NAMES, typeMemory,
-  type MemoryProgress, type MemoryRun, type WritingMemoryState,
+  writingMemoryFormat, type MemoryProgress, type MemoryRun, type WritingMemoryState,
 } from "./writingMemoryState";
 
 const EXTENDED_DECKS = extendWritingDecks(MEMORY_DECKS);
@@ -20,58 +20,62 @@ const EXTENDED_DECKS = extendWritingDecks(MEMORY_DECKS);
 export default function WritingMemory({ saved, onSave, onApply }: {
   saved?: WritingMemoryState; onSave: (state: WritingMemoryState) => void; onApply: (frameId: string) => void;
 }) {
-  const state = saved ?? EMPTY_MEMORY;
-  const [task, setTask] = useState<1 | 2>(() => MEMORY_DECKS.find((d) => d.id === state.deckId)?.task ?? 1);
+  const previous = saved ?? EMPTY_MEMORY;
+  const state = { ...previous, format: writingMemoryFormat(previous), frameRevision: FRAME_REVISION };
+  const requestedTask = BUDGET_DECKS.find((d) => d.id === state.deckId)?.task ?? 1;
+  const budget = state.format === "budget";
   const extended = state.format !== "short";
-  const available = extended ? EXTENDED_DECKS : MEMORY_DECKS;
-  const deck = available.find((d) => d.id === state.deckId) ?? available[0];
-  const rich = extended ? EXTENDED_DECKS.find((d) => d.id === deck.id) : undefined;
-  const deckProgress = extended ? state.extendedDecks ?? {} : state.decks;
+  const available = budget ? BUDGET_DECKS : extended ? EXTENDED_DECKS : MEMORY_DECKS;
+  const deck = available.find((d) => d.id === state.deckId) ?? available.find((d) => d.task === requestedTask) ?? available[0];
+  const task = deck.task;
+  const rich = extended ? (budget ? BUDGET_DECKS : EXTENDED_DECKS).find((d) => d.id === deck.id) : undefined;
+  const deckProgress = budget ? state.budgetDecks ?? {} : extended ? state.extendedDecks ?? {} : state.decks;
+  const applicationBucket = budget ? "budgetApplications" : "applications";
   const oldLearned = MEMORY_DECKS.filter((d) => state.decks[d.id]?.passedAt).length;
-  const applicationState = state.applications?.[deck.id];
+  const applicationState = state[applicationBucket]?.[deck.id];
   const exampleValues = applicationState?.values ?? rich?.applications[0].values;
   const pack = WRITING_VOCAB.find((p) => p.id === state.packId) ?? WRITING_VOCAB[0];
   const learned = available.filter((d) => deckProgress[d.id]?.passedAt).length;
-  const vocabOpen = learned === MEMORY_DECKS.length || oldLearned === MEMORY_DECKS.length || MEMORY_DECKS.every((d) => state.extendedDecks?.[d.id]?.passedAt);
+  const vocabOpen = learned === available.length || BUDGET_DECKS.every((d) => state.budgetDecks?.[d.id]?.passedAt) || oldLearned === MEMORY_DECKS.length || MEMORY_DECKS.every((d) => state.extendedDecks?.[d.id]?.passedAt);
   const isVocab = state.view === "vocabulary" && vocabOpen;
   const items = isVocab ? pack.items : deck.lines;
   const id = isVocab ? pack.id : deck.id;
-  const bucket = isVocab ? "packs" : extended ? "extendedDecks" : "decks";
+  const bucket = isVocab ? "packs" : budget ? "budgetDecks" : extended ? "extendedDecks" : "decks";
   const progress = state[bucket]?.[id];
   const active = !!progress?.run && progress.run.phase !== "done";
   const now = Date.now();
-  const due = MEMORY_DECKS.filter((d) => (deckProgress[d.id]?.dueAt ?? Infinity) <= now);
-  const next = MEMORY_DECKS.find((d) => !deckProgress[d.id]?.passedAt && d.id !== deck.id);
+  const due = available.filter((d) => (deckProgress[d.id]?.dueAt ?? Infinity) <= now);
+  const next = available.find((d) => !deckProgress[d.id]?.passedAt && d.id !== deck.id);
   const saveRun = (run: MemoryRun) => onSave({ ...state, [bucket]: { ...state[bucket], [id]: recordMemory(progress, run) } });
-  const choose = (deckId: string) => { const d = MEMORY_DECKS.find((d) => d.id === deckId)!; setTask(d.task); onSave({ ...state, deckId, view: "frames" }); };
+  const choose = (deckId: string) => { onSave({ ...state, deckId, view: "frames" }); };
   return <div className="space-y-5" data-testid="writing-memory-course">
     <Card className="overflow-hidden border-primary/30">
       <CardContent className="space-y-4 pt-5">
-        <div className="flex flex-wrap items-start justify-between gap-3"><div><p className="text-xs font-bold uppercase tracking-wider text-primary">Gõ để nhớ · Task 1 & Task 2</p><h2 className="mt-2 text-xl font-bold">Thuộc khung trước. Thêm từ vựng sau.</h2>{!active && <p className="mt-2 max-w-2xl text-sm text-muted">Mỗi lần chỉ một câu. Nhìn và gõ → che bớt chữ → tự nhớ hai lượt → ghép cả khung. Học vài câu rồi nghỉ, quay lại đúng chỗ đang gõ.</p>}</div><Badge tone="primary">{learned}/{MEMORY_DECKS.length} khung đã tự gõ được</Badge></div>
-        {!isVocab && <label className="block text-sm">Phiên bản khung<select aria-label="Phiên bản khung" className="mt-1 h-11 w-full rounded-xl border border-border bg-surface px-3 sm:max-w-sm" value={extended ? "extended" : "short"} onChange={(e) => onSave({ ...state, format: e.target.value as "extended" | "short" })}><option value="extended">Khung dài · nhiều câu có sẵn</option><option value="short">Câu dẫn ngắn · bản cũ</option></select></label>}
-        {extended && !isVocab && !active && <p className="text-xs text-muted">Bản dài có sẵn câu giải thích, nối ý và kết đoạn; mỗi khung có hai chủ đề mẫu để bạn chọn ý. Tiến độ bản ngắn vẫn được giữ riêng.</p>}
-        <Progress value={100 * learned / MEMORY_DECKS.length} label="Tiến độ học thuộc các khung Writing" />
+        <div className="flex flex-wrap items-start justify-between gap-3"><div><p className="text-xs font-bold uppercase tracking-wider text-primary">Gõ để nhớ · Task 1 & Task 2</p><h2 className="mt-2 text-xl font-bold">Thuộc khung trước. Thêm từ vựng sau.</h2>{!active && <p className="mt-2 max-w-2xl text-sm text-muted">Mỗi lần chỉ một câu. Nhìn và gõ → che bớt chữ → tự nhớ hai lượt → ghép cả khung. Học vài câu rồi nghỉ, quay lại đúng chỗ đang gõ.</p>}</div><Badge tone="primary">{learned}/{available.length} khung đã tự gõ được</Badge></div>
+        {!isVocab && <label className="block text-sm">Phiên bản khung<select aria-label="Phiên bản khung" className="mt-1 h-11 w-full rounded-xl border border-border bg-surface px-3 sm:max-w-sm" value={state.format} onChange={(e) => onSave({ ...state, format: e.target.value as "budget" | "extended" | "short" })}><option value="budget">Khung mới · Task 1: 70–80 / Task 2: 150–170 từ</option><option value="extended">Khung dài cũ · giữ tiến độ</option><option value="short">Câu dẫn ngắn · bản cũ</option></select></label>}
+        {budget && !isVocab && !active && <p className="text-xs text-muted">Khung mới có sẵn câu mở, triển khai và kết; chỉ điền ý theo đề. Số từ cố định không tính tên, nội dung trong ngoặc hoặc dấu câu đứng riêng. Tiến độ các phiên bản được giữ riêng.</p>}
+        <Progress value={100 * learned / available.length} label="Tiến độ học thuộc các khung Writing" />
         {!active && <div className="flex flex-wrap gap-2"><Button variant={!isVocab ? "primary" : "outline"} onClick={() => onSave({ ...state, view: "frames" })}><Keyboard size={16} />1. Thuộc toàn bộ khung</Button><Button variant={isVocab ? "primary" : "outline"} disabled={!vocabOpen} onClick={() => onSave({ ...state, view: "vocabulary" })}><BookOpen size={16} />2. Học cụm từ ({WRITING_VOCAB.reduce((n, p) => n + p.items.length, 0)})</Button></div>}
         {active && isVocab && <Button size="sm" variant="outline" onClick={() => onSave({ ...state, view: "frames" })}>Quay lại các khung</Button>}
-        {!vocabOpen && !active && <p className="text-xs text-muted">Cụm từ mở sau khi bạn tự gõ được cả {MEMORY_DECKS.length} khung, đúng thứ tự học bạn đã chọn. Có thể xem bài mẫu và viết thử ở các tab phía trên bất cứ lúc nào.</p>}
+        {!vocabOpen && !active && <p className="text-xs text-muted">Cụm từ mở sau khi bạn tự gõ được cả {available.length} khung, đúng thứ tự học bạn đã chọn. Có thể xem bài mẫu và viết thử ở các tab phía trên bất cứ lúc nào.</p>}
         {due.length > 0 && !active && <div className="flex flex-wrap items-center gap-3 rounded-xl bg-primary-soft p-3 text-sm"><span>{due.length} khung đến lịch nhắc lại.</span><Button size="sm" variant="outline" onClick={() => choose(due[0].id)}>Mở khung cần ôn</Button></div>}
       </CardContent>
     </Card>
     <div className="grid items-start gap-5 lg:grid-cols-[17rem_minmax(0,1fr)]">
       <Card><CardContent className="space-y-3 pt-5">
         {isVocab ? <><h3 className="font-semibold">Cụm từ để đưa vào bài</h3><p className="text-xs text-muted">Nhớ theo cụm và xem cả câu áp dụng.</p><label className="block text-sm">Nhóm từ vựng<select aria-label="Nhóm từ vựng" className="mt-2 h-11 w-full rounded-xl border border-border bg-surface px-2" value={pack.id} onChange={(e) => onSave({ ...state, packId: e.target.value })}>{WRITING_VOCAB.map((p) => <option key={p.id} value={p.id}>Task {p.task} · {p.title}{state.packs[p.id]?.passedAt ? " ✓" : ""}</option>)}</select></label></> : <>
-          <div className="grid grid-cols-2 gap-2">{([1, 2] as const).map((t) => <Button key={t} variant={task === t ? "primary" : "outline"} aria-pressed={task === t} onClick={() => { setTask(t); if (deck.task !== t) choose(MEMORY_DECKS.find((d) => d.task === t)!.id); }}>Task {t}</Button>)}</div>
-          <p className="text-xs text-muted">{task === 1 ? "Thư / email · 10 mục đích thường gặp" : "Bài luận · 10 dạng và biến thể"}</p>
-          <label className="block text-sm lg:hidden">Dạng đang học<select aria-label="Dạng đang học" className="mt-1 h-11 w-full rounded-xl border border-border bg-surface px-2" value={deck.id} onChange={(e) => choose(e.target.value)}>{MEMORY_DECKS.filter((d) => d.task === task).map((d) => <option key={d.id} value={d.id}>{d.title}{deckProgress[d.id]?.passedAt ? " ✓" : ""}</option>)}</select></label>
-          <nav aria-label="Các dạng Writing" className="hidden space-y-1 lg:block">{MEMORY_DECKS.filter((d) => d.task === task).map((d, i) => <button key={d.id} onClick={() => choose(d.id)} aria-current={deck.id === d.id ? "step" : undefined} className={`flex w-full items-start gap-2 rounded-xl px-3 py-2.5 text-left text-sm ${deck.id === d.id ? "bg-primary-soft font-semibold text-primary" : "hover:bg-surface-2"}`}><span className="mt-0.5 shrink-0">{deckProgress[d.id]?.passedAt ? <Check size={15} aria-label="Đã tự gõ được" /> : `${i + 1}.`}</span><span>{d.title}</span></button>)}</nav>
+          <div className="grid grid-cols-2 gap-2">{([1, 2] as const).map((t) => <Button key={t} variant={task === t ? "primary" : "outline"} aria-pressed={task === t} onClick={() => { if (deck.task !== t) choose(available.find((d) => d.task === t)!.id); }}>Task {t}</Button>)}</div>
+          <p className="text-xs text-muted">{task === 1 ? budget ? "Thư / email · 10 khung trang trọng + 8 khung thân mật" : "Thư / email · 10 mục đích thường gặp" : "Bài luận · 10 dạng và biến thể"}</p>
+          <label className="block text-sm lg:hidden">Dạng đang học<select aria-label="Dạng đang học" className="mt-1 h-11 w-full rounded-xl border border-border bg-surface px-2" value={deck.id} onChange={(e) => choose(e.target.value)}>{available.filter((d) => d.task === task).map((d) => <option key={d.id} value={d.id}>{d.title}{deckProgress[d.id]?.passedAt ? " ✓" : ""}</option>)}</select></label>
+          <nav aria-label="Các dạng Writing" className="hidden space-y-1 lg:block">{available.filter((d) => d.task === task).map((d, i) => <button key={d.id} onClick={() => choose(d.id)} aria-current={deck.id === d.id ? "step" : undefined} className={`flex w-full items-start gap-2 rounded-xl px-3 py-2.5 text-left text-sm ${deck.id === d.id ? "bg-primary-soft font-semibold text-primary" : "hover:bg-surface-2"}`}><span className="mt-0.5 shrink-0">{deckProgress[d.id]?.passedAt ? <Check size={15} aria-label="Đã tự gõ được" /> : `${i + 1}.`}</span><span>{d.title}</span></button>)}</nav>
           <p className={`text-xs text-muted ${active ? "hidden" : ""}`}>Đây là cách chia để tự luyện. Đề thật có thể kết hợp nhiều yêu cầu; hãy đọc từng ý của đề.</p>
         </>}
       </CardContent></Card>
       <div className="min-w-0 space-y-4">
         <div><Badge tone="primary">Task {isVocab ? pack.task : deck.task}</Badge><h2 className="mt-2 text-xl font-bold">{isVocab ? pack.title : deck.title}</h2>{!isVocab && <><p className={`mt-2 rounded-xl bg-surface-2 p-3 font-medium ${active ? "text-xs" : "text-sm"}`}>{deck.map}</p><details className="mt-2" open={active ? undefined : true}><summary className="cursor-pointer text-xs text-muted">Nhận dạng đề và cách dùng khung</summary><p className="mt-2 text-sm">{deck.signal}</p><p className="mt-2 text-sm text-muted">{deck.note}</p></details></>}</div>
-        {rich && !isVocab && !active && <div className="rounded-xl bg-primary-soft p-3 text-sm"><b>{wordCount(fixedFrameText(memoryTarget(items)))} từ cố định</b> có sẵn trong khung. Phần trong [ngoặc vuông] là ý cần đổi theo đề; có ví dụ điền sẵn phía dưới.</div>}
+        {rich && !isVocab && !active && <div data-testid="frame-budget" className="rounded-xl bg-primary-soft p-3 text-sm"><b>{countFixedFrameWords(memoryTarget(items))} từ cố định</b> có sẵn trong khung. {budget && `Còn ít nhất ${(deck.task === 1 ? 120 : 250) - countFixedFrameWords(memoryTarget(items))} từ ý riêng để đạt mốc của bài hoàn chỉnh. `}Phần trong [ngoặc vuông] là ý cần đổi theo đề; có ví dụ điền sẵn phía dưới.</div>}
         <MemoryPractice key={`${bucket}:${id}`} items={items} progress={progress} whole={!isVocab} onRun={saveRun} exampleValues={isVocab ? undefined : exampleValues} />
-        {rich && !isVocab && !active && <FrameApplications key={deck.id} deck={rich} saved={applicationState} onSave={(value) => onSave({ ...state, applications: { ...state.applications, [deck.id]: value } })} />}
+        {rich && !isVocab && !active && <FrameApplications key={`${state.format}:${deck.id}`} deck={rich} saved={applicationState} onSave={(value) => onSave({ ...state, [applicationBucket]: { ...state[applicationBucket], [deck.id]: value } })} />}
         {progress?.run?.phase === "done" && <div className="flex flex-wrap gap-2">
           {!isVocab && next && <Button onClick={() => choose(next.id)}>Học khung tiếp theo <ArrowRight size={16} /></Button>}
           {!isVocab && !next && <Button onClick={() => onSave({ ...state, view: "vocabulary" })}>Bắt đầu học cụm từ <ArrowRight size={16} /></Button>}

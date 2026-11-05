@@ -1,3 +1,15 @@
+# Writing frames with explicit fixed-word budgets — 2026-11-05
+
+Request: Task 1 frames should supply 70–80 words and Task 2 frames 150–170 words, reducing the amount of English the learner has to invent.
+
+- New default `budget` course: 18 letter frames (10 formal, 8 informal) with 72–79 fixed English words each, plus 10 essay frames with 156–169 fixed words each. Counts exclude placeholder labels and standalone punctuation. The UI shows both the fixed count and the remaining original-content words needed for the task minimum.
+- Each frame has two complete, editable applications (56 total), with fixed language underlined and variable content highlighted. Filled letters/essays meet 120/250-word minimums. Two-question essays now answer two independent questions rather than assuming the second asks for a positive/negative evaluation.
+- Shared `BudgetFrameGuide` shows the same wording in researched model readers and Writing reference view, with a link that selects the exact course frame. Researched answers retain their individually authored wording; the longer frame is explicitly for writing a new response, not a claim that every published model uses identical wording.
+- New runs and application edits use `training.budgetDecks` / `training.budgetApplications` and `budget-*` line IDs. Existing short/extended attempts, edits, drafts and unlocked vocabulary are preserved. New revision defaults to the budget course once; explicit later choices of older versions persist. No backend/schema changes.
+- Validation: 25 targeted unit tests; 17 relevant browser scenarios pass (one ambiguous test selector corrected and new-course tests rerun), including all 28 displayed counts, migration, saved edits/server state, whole-frame recall, exact-frame links, old-course regression, library source/progress behaviour and mobile accessibility. Mobile underlines/slot layout inspected. TypeScript, lint and production build passed.
+
+- Frontend rebuilt and redeployed at localhost:8080; served entry, shared frame guide, Writing Studio and model-reader bundles match the tested production build byte-for-byte. Backend health remains OK with 224 units.
+
 # Researched VSTEP prompts and individually authored model answers — 2026-11-05
 
 Request: research specific task prompts and correct model answers that did not reflect realistic tasks.

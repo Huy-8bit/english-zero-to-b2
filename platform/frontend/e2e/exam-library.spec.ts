@@ -26,8 +26,8 @@ test("new default: sources, register filters, requirement coverage, unchanged un
   expect(await body.locator('p[lang="en"]').allTextContents()).toEqual(before);
   await page.getByTestId("requirement-coverage").locator("summary").click();
   await expect(page.getByTestId("requirement-coverage").getByRole("listitem")).toHaveCount(6);
-  await page.getByTestId("letter-frame-guide").locator("summary").click();
-  await expect(page.getByTestId("letter-frame-guide")).toContainText("không mặc định đề chỉ có ba ý");
+  await page.getByTestId("budget-frame-guide").locator("summary").click();
+  await expect(page.getByTestId("budget-frame-guide")).toContainText("không mặc định đề chỉ có ba ý");
   await expect(page.getByRole("button", { name: /So sánh: bản/ })).toHaveCount(0);
   await page.getByRole("button", { name: "Lưu bài", exact: true }).click();
   await page.getByRole("button", { name: "Đánh dấu đã đọc", exact: true }).click();

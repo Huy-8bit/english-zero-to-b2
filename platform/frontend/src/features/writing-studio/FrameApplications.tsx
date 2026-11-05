@@ -2,10 +2,12 @@ import { FrameLiteral } from "@/components/FrameText";
 import { useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Textarea } from "@/components/ui/misc";
-import { wordCount } from "@/lib/utils";
-import { fillFrame, fixedFrameText, frameSlots, type ExtendedDeck } from "./extendedWritingFrames";
+import { fillFrame, countFixedFrameWords, frameSlots, type ExtendedDeck } from "./extendedWritingFrames";
 
 const SLOT_LABELS: Record<string, string> = {
+  "supporting detail": "Chi tiết theo đề — thêm thông tin hoặc câu giải thích cụ thể", "working hours": "Thời gian có thể đi làm", context: "Phạm vi vấn đề — danh từ hoặc mệnh đề danh từ",
+  "alternative action": "Phương án phù hợp hơn — động từ nguyên mẫu", "answer one": "Trả lời câu hỏi thứ nhất — chủ ngữ + động từ", "answer two": "Trả lời câu hỏi thứ hai — chủ ngữ + động từ",
+  "example two sentence": "Ví dụ thứ hai — một câu hoàn chỉnh", "summary answer one": "Tóm tắt câu trả lời thứ nhất", "summary answer two": "Tóm tắt câu trả lời thứ hai",
   "affected group": "Nhóm bị tác động — danh từ chỉ người", "group situation": "Hoàn cảnh của nhóm — phần nối sau who", "long-term effect": "Tác dụng lâu dài — động từ nguyên mẫu",
   name: "Tên người nhận", "your name": "Tên của bạn", "title and surname": "Danh xưng và họ người nhận", "full name": "Họ tên của bạn",
   topic: "Chủ đề / danh từ hoặc cụm V-ing", "point one": "Ý thứ nhất — viết một mệnh đề", "second point": "Điều tiếp theo được hỏi",
@@ -44,7 +46,7 @@ export function FrameApplications({ deck, saved, onSave }: {
   const skeleton = deck.lines.map((line) => line.en).join("\n\n");
   const text = fillFrame(skeleton, values);
   const slots = frameSlots(skeleton);
-  const count = wordCount(fixedFrameText(text));
+  const count = countFixedFrameWords(text);
   const minimum = deck.task === 1 ? 120 : 250;
   const unfilled = slots.filter((slot) => !values[slot]?.trim()).length;
   return <details className="rounded-xl border border-primary/30 bg-surface p-4" data-testid="frame-applications">
@@ -53,7 +55,7 @@ export function FrameApplications({ deck, saved, onSave }: {
       <p className="text-sm text-muted">Phần gạch chân là khung cần thuộc. Phần được tô nền là ý thay theo đề. Chọn một chủ đề để xem sẵn cách điền; sau đó sửa vài ý cho phù hợp với bài của bạn.</p>
       <label className="block text-sm font-medium">Chủ đề minh họa<select aria-label="Chủ đề minh họa" className="mt-1 h-11 w-full rounded-xl border border-border bg-surface px-3" value={topic} onChange={(e) => { const next = Number(e.target.value); onSave({ topic: next, values: { ...deck.applications[next].values } }); }}>{deck.applications.map((app, i) => <option key={app.title} value={i}>{app.title}</option>)}</select></label>
       <p className="text-xs text-muted">Đổi chủ đề sẽ nạp lại các ý mẫu cho khung này. Bài viết trong Writing Studio và lượt gõ thuộc không bị thay đổi.</p>
-      <div className="flex flex-wrap gap-2"><Badge tone="primary">{wordCount(fixedFrameText(skeleton))} từ cố định</Badge><Badge>{count} từ sau khi điền</Badge></div>
+      <div className="flex flex-wrap gap-2"><Badge tone="primary">{countFixedFrameWords(skeleton)} từ cố định</Badge><Badge>{count} từ sau khi điền</Badge></div>
       {unfilled > 0 && <p role="status" className="text-sm text-warning">Còn {unfilled} ý chưa điền. Các chỗ này vẫn được giữ trong ngoặc.</p>}
       <div className="space-y-4" data-testid="filled-frame">{deck.lines.map((line) => <div key={line.id}><p className="text-xs text-muted">{line.part} · {line.vi}</p><p className="mt-1 whitespace-pre-wrap break-words leading-relaxed"><FrameTemplate text={line.en} values={values} /></p></div>)}</div>
       <label className="flex items-center gap-2 text-sm"><input type="checkbox" checked={showSlots} onChange={(e) => setShowSlots(e.target.checked)} />Đổi ý của tôi — có gợi ý sẵn</label>

@@ -10,7 +10,10 @@ export interface MemoryRun {
 }
 export interface MemoryProgress { run?: MemoryRun; passedAt?: number; dueAt?: number; reviews: number }
 export interface WritingMemoryState {
-  format?: "extended" | "short"; extendedDecks?: Record<string, MemoryProgress>;
+  frameRevision?: string;
+  format?: "budget" | "extended" | "short";
+  budgetDecks?: Record<string, MemoryProgress>;
+  budgetApplications?: Record<string, { topic: number; values: Record<string, string> }>; extendedDecks?: Record<string, MemoryProgress>;
   applications?: Record<string, { topic: number; values: Record<string, string> }>;
   deckId: string; view: "frames" | "vocabulary"; packId: string;
   decks: Record<string, MemoryProgress>; packs: Record<string, MemoryProgress>;
@@ -59,3 +62,6 @@ export function recordMemory(progress: MemoryProgress | undefined, run: MemoryRu
   const reviews = (progress?.reviews ?? 0) + Number(dueReview);
   return { run, passedAt: now, reviews, dueAt: dueReview ? now + DAY * [1, 3, 7, 14][Math.min(reviews - 1, 3)] : progress?.dueAt };
 }
+
+/** Old attempts stay in their old buckets; a new default never regrades them. */
+export const writingMemoryFormat = (state: WritingMemoryState) => state.frameRevision === "word-budget-v1" ? state.format ?? "budget" : "budget";

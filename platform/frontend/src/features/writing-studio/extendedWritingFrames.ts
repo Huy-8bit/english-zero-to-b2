@@ -4,6 +4,8 @@ export interface FrameApplication { title: string; values: Record<string, string
 export interface ExtendedDeck extends MemoryDeck { applications: FrameApplication[] }
 export const fillFrame = (template: string, values: Record<string, string>) => template.replace(/\[([^\]]+)\]/g, (match, key: string) => values[key]?.trim() ? values[key] : match);
 export const fixedFrameText = (text: string) => text.replace(/\[[^\]]*\]/g, " ").replace(/\s+/g, " ").trim();
+/** Counts English words, not placeholder labels or punctuation left beside a blank. */
+export const countFixedFrameWords = (text: string) => (text.replace(/\[[^\]]*\]/g, " ").match(/[A-Za-z0-9]+(?:['’-][A-Za-z0-9]+)*/g) ?? []).length;
 export const frameSlots = (text: string) => [...new Set([...text.matchAll(/\[([^\]]+)\]/g)].map((m) => m[1]))];
 type Row = [part: string, vi: string, en: string];
 const row = (part: string, vi: string, en: string): Row => [part, vi, en];

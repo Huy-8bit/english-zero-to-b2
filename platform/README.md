@@ -44,6 +44,19 @@ scripts/restore-db.sh backups/docker-YYYYMMDDTHHMMSSffffffZ.tar.gz --replace
 
 Restore Docker kiểm tra archive trước, dừng API nếu đang chạy, tạo bản `before-restore-*.tar.gz`, khôi phục DB/media và bật lại API nếu trước đó đang chạy. `--replace` cho phép thay thế dữ liệu đích; không có cờ này thì từ chối ghi đè. Nếu restore lỗi, API được giữ dừng để kiểm tra. **Không dùng `docker compose down -v` hoặc xóa volume nếu cần giữ dữ liệu.** Xem [hướng dẫn database, chuyển server và khôi phục](DATABASE.md).
 
+## Khung Writing học thuộc theo số từ
+
+Trong Writing Studio → **Gõ thuộc khung**, bản mặc định mới có 28 khung:
+
+- Task 1: 18 khung (10 trang trọng, 8 thân mật), mỗi khung **72–79 từ cố định**, trong khoảng yêu cầu 70–80.
+- Task 2: 10 dạng/biến thể, mỗi khung **156–169 từ cố định**, trong khoảng yêu cầu 150–170. Dạng hai câu hỏi có hai câu trả lời độc lập, không mặc định câu thứ hai hỏi tích cực/tiêu cực.
+- Không tính nhãn trong ngoặc hoặc dấu câu đứng riêng vào số từ. UI hiển thị số từ có sẵn và số từ ý riêng còn cần để đạt mốc của task.
+- Mỗi khung có hai bài điền sẵn (56 bài), gạch chân phần cố định, tô nền ý thay thế, gợi ý tiếng Việt và sửa/lưu từng ý. Các bài điền sẵn đáp ứng tối thiểu 120/250 từ; không thay thế việc đọc yêu cầu đề.
+- Thư viện bài mẫu và tab tra cứu có cùng khung đầy đủ, kèm liên kết mở đúng khung trong khóa gõ. Đề/bài tham khảo nghiên cứu được giữ riêng, có thể diễn đạt khác khung luyện thuộc.
+- Bản mới dùng `training.budgetDecks` và `training.budgetApplications`; các lượt đang gõ ở `decks`, `extendedDecks`, bài áp dụng cũ và trạng thái từ vựng đã mở vẫn giữ nguyên. Có thể chọn lại hai bản cũ. `frameRevision: word-budget-v1` ghi nhận lựa chọn phiên bản mới; không chấm lại lượt cũ theo câu mới.
+
+Nguồn: `frontend/src/features/writing-studio/budgetWritingFrames.ts`. Kiểm tra số từ/56 bài điền mẫu trong `budgetWritingFrames.test.ts`, và giao diện/tiến độ/liên kết ở `e2e/budget-frames.spec.ts`.
+
 ## Thư viện bài mẫu Writing & Speaking
 
 Mở `/model-library` hoặc nút **Đọc bài mẫu** trong Writing/Speaking Studio và trang kỹ năng.
