@@ -1,4 +1,5 @@
-import { PACKS, PHRASES, PHRASE_BY_ID } from "./content";
+import { PACKS, PHRASES } from "./content";
+import { LEARNING_BY_ID, LEARNING_PHRASES, type DomainId } from "./topicVocabulary";
 
 export const STORAGE_KEY = "em-b2-four-hour";
 export type Block = { id: string; title: string; minutes: number; kind: "intro" | "learn" | "break" | "transfer" | "writing" | "speaking" | "review" | "finish"; pack?: string };
@@ -22,6 +23,9 @@ export interface Draft { text: string; checks: Record<string, boolean>; at: numb
 export interface RescueState {
   version: 1; block: string; seconds: Record<string, number>; items: Record<string, Recall>; turn: number;
   runs: Record<string, Run>; drafts: Record<string, Draft>; transfers: Record<string, { text: string; correct: boolean; hinted: boolean; at: number }>;
+  activeTab?: "course" | "toolkit" | "domains" | "results";
+  transferMode?: "topics" | "domains";
+  domainView?: { id: DomainId; scope: "priority" | "all"; practice: boolean };
 }
 export const emptyState = (): RescueState => ({ version: 1, block: "start", seconds: {}, items: {}, turn: 0, runs: {}, drafts: {}, transfers: {} });
 export function restoreState(raw: Partial<RescueState> | null): RescueState {
@@ -31,7 +35,7 @@ export function restoreState(raw: Partial<RescueState> | null): RescueState {
 export const normalize = (text: string) => text.toLowerCase().replace(/[’']/g, "").replace(/\bim\b/g, "i am").replace(/\binquire\b/g, "enquire").replace(/[^a-z0-9]+/g, " ").trim();
 export const matches = (text: string, answer: string) => normalize(text) === normalize(answer);
 export function makeRun(ids: string[], review = false): Run {
-  const valid = [...new Set(ids)].filter((id) => PHRASE_BY_ID[id]);
+  const valid = [...new Set(ids)].filter((id) => LEARNING_BY_ID[id]);
   const queue: Prompt[] = [
     ...(review ? [] : valid.map((id) => ({ id, mode: "copy" as const }))),
     ...valid.map((id) => ({ id, mode: "recall" as const })),
@@ -49,7 +53,7 @@ export function reviewIds(state: RescueState) {
 export function markAnswer(state: RescueState, key: string, now = Date.now()): RescueState {
   const run = state.runs[key], prompt = run?.queue[0];
   if (!prompt || run.feedback) return state;
-  const phrase = PHRASE_BY_ID[prompt.id];
+  const phrase = LEARNING_BY_ID[prompt.id];
   if (!phrase) return state;
   const turn = state.turn + 1;
   const item = state.items[phrase.id] ?? { copies: 0, clean: 0, misses: 0, lastTurn: -100, at: now };
@@ -85,5 +89,5 @@ export function stats(state: RescueState) {
 }
 export function phraseHits(text: string) {
   const normalized = ` ${normalize(text)} `;
-  return PHRASES.filter((p) => normalized.includes(` ${normalize(p.en)} `));
+  return LEARNING_PHRASES.filter((p) => normalized.includes(` ${normalize(p.en)} `));
 }

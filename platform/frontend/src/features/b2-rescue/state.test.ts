@@ -4,8 +4,38 @@ import { TOPICS, WRITING_TASKS } from "./topics";
 import { addSeconds, emptyState, makeRun, markAnswer, matches, nextPrompt, PLAN, phraseHits, restoreState, reviewIds, stats, TOTAL_SECONDS, usedSeconds, type RescueState } from "./state";
 import { isSynced, mergeProgress } from "@/lib/syncState";
 import { wordCount } from "@/lib/utils";
+import { DOMAIN_PACKS, DOMAIN_PHRASES, LEARNING_BY_ID, LEARNING_PHRASES } from "./topicVocabulary";
 
 describe("four-hour vocabulary content and schedule", () => {
+  it("adds six complete domain packs with six priority items each and no duplicate vocabulary", () => {
+    expect(DOMAIN_PHRASES).toHaveLength(72);
+    expect(new Set([...LEARNING_PHRASES.map((p) => p.en), ...TOPICS.flatMap((t) => t.words.map(([en]) => en))]).size).toBe(180);
+    expect(new Set(LEARNING_PHRASES.map((p) => p.id)).size).toBe(132);
+    for (const pack of DOMAIN_PACKS) {
+      const items = DOMAIN_PHRASES.filter((p) => p.domain === pack.id);
+      expect(items).toHaveLength(12);
+      expect(items.filter((p) => p.priority)).toHaveLength(6);
+      for (const item of items) {
+        for (const field of [item.vi, item.pattern, item.trap]) expect(field.trim()).not.toBe("");
+        expect(item.writing.toLowerCase()).toContain(item.en.toLowerCase());
+        expect(item.speaking.toLowerCase()).toContain(item.en.toLowerCase());
+      }
+    }
+  });
+  it("teaches domain items with the same recall rules, preserving old progress and core totals", () => {
+    const ids = DOMAIN_PHRASES.filter((p) => p.domain === "economy" && p.priority).map((p) => p.id);
+    let s: RescueState = { ...emptyState(), items: { "benefits-1": { copies: 1, clean: 2, misses: 0, lastTurn: 1, at: 1 } },
+      drafts: { old: { text: "Keep my old draft", checks: {}, at: 1 } }, runs: { old: { ...makeRun(["benefits-1"]), text: "save ti" }, domain: makeRun(ids) } };
+    while (s.runs.domain.queue.length) {
+      s.runs.domain.text = LEARNING_BY_ID[s.runs.domain.queue[0].id].en;
+      s = nextPrompt(markAnswer(s, "domain"), "domain");
+    }
+    expect(ids.every((id) => s.items[id].clean === 2)).toBe(true);
+    expect(stats(s).recalled).toBe(1);
+    expect(s.runs.old.text).toBe("save ti");
+    expect(restoreState(s).drafts.old.text).toBe("Keep my old draft");
+    expect(phraseHits("High inflation can put pressure on families.").map((p) => p.en)).toEqual(["put pressure on", "inflation"]);
+  });
   it("budgets exactly four hours including breaks, with six manageable ten-phrase packs", () => {
     expect(TOTAL_SECONDS).toBe(4 * 60 * 60);
     expect(PLAN.filter((b) => b.kind === "break").reduce((sum, b) => sum + b.minutes, 0)).toBe(10);

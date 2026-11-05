@@ -2,13 +2,13 @@ import { useState, type ReactNode } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { SpeakButton } from "@/components/SpeakButton";
-import { PHRASES } from "./content";
+import { LEARNING_PHRASES } from "./topicVocabulary";
 import { TOPICS } from "./topics";
 import { matches, type RescueState } from "./state";
 
 /** Highlight exact known chunks without treating matches as a language-quality score. */
 export function HighlightChunks({ text }: { text: string }) {
-  const escaped = PHRASES.map((p) => p.en).sort((a, b) => b.length - a.length).map((s) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"));
+  const escaped = LEARNING_PHRASES.map((p) => p.en).sort((a, b) => b.length - a.length).map((s) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"));
   const re = new RegExp(`\\b(${escaped.join("|")})\\b`, "gi");
   const output: ReactNode[] = [];
   let start = 0;
@@ -38,7 +38,7 @@ export function TopicLab({ state, update, initialTopic = "education" }: { state:
         {(checked || saved.correct || saved.hinted) && <p role="status" className="text-sm">{saved.correct ? "Đúng — đã tự điền được trong ngữ cảnh này." : `Cụm gợi ý: ${topic.answer}. Tự viết thêm một câu với chủ đề khác.`}</p>}
       </form>
     </Card>
-    <Card className="space-y-4 p-5"><h3 className="font-bold">Xem cách cụm hoạt động trong câu</h3><p className="text-sm text-muted">Đoạn minh họa từ vựng tự soạn, chưa phải toàn bộ bài thi. Cụm gạch chân thuộc bộ 60 cụm.</p>
+    <Card className="space-y-4 p-5"><h3 className="font-bold">Xem cách cụm hoạt động trong câu</h3><p className="text-sm text-muted">Đoạn minh họa từ vựng tự soạn, chưa phải toàn bộ bài thi. Cụm gạch chân thuộc bộ cụm lõi hoặc bộ từ theo lĩnh vực.</p>
       <details><summary className="cursor-pointer py-2 font-medium">Writing · đề cụ thể & đoạn minh họa</summary><p className="my-3 text-sm text-muted" lang="en">{topic.prompt}</p><div className="leading-8"><HighlightChunks text={topic.writing} /></div><SpeakButton text={topic.writing} /></details>
       <details><summary className="cursor-pointer py-2 font-medium">Speaking · câu trả lời tự nhiên</summary><div className="leading-8"><HighlightChunks text={topic.speaking} /></div><SpeakButton text={topic.speaking} /></details>
       <label className="block text-sm font-medium">Câu của tôi với chủ đề này<textarea value={state.drafts[`topic-${id}`]?.text ?? ""} onChange={(e) => update((s) => ({ ...s, drafts: { ...s.drafts, [`topic-${id}`]: { text: e.target.value, checks: {}, at: Date.now() } } }))} placeholder="Viết 2–3 câu: ý chính → lý do → ví dụ của bạn." className="mt-2 min-h-32 w-full rounded-xl border border-border bg-surface p-3 text-base" /></label>

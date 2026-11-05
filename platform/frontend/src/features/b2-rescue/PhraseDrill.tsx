@@ -2,7 +2,8 @@ import { useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { SpeakButton } from "@/components/SpeakButton";
-import { PHRASE_BY_ID, type Phrase } from "./content";
+import type { Phrase } from "./content";
+import { LEARNING_BY_ID } from "./topicVocabulary";
 import { markAnswer, nextPrompt, type RescueState, type Run } from "./state";
 
 export function PhraseDetails({ phrase: p }: { phrase: Phrase }) {
@@ -16,16 +17,16 @@ export function PhraseDetails({ phrase: p }: { phrase: Phrase }) {
   </div>;
 }
 
-export function PhraseDrill({ state, runKey, update, nextBlock, restart }: {
-  state: RescueState; runKey: string; update: (fn: (s: RescueState) => RescueState) => void; nextBlock: () => void; restart: () => void;
+export function PhraseDrill({ state, runKey, update, nextBlock, restart, nextLabel = "Sang chặng tiếp theo" }: {
+  state: RescueState; runKey: string; update: (fn: (s: RescueState) => RescueState) => void; nextBlock: () => void; restart: () => void; nextLabel?: string;
 }) {
   const run = state.runs[runKey];
   const prompt = run?.queue[0];
-  const phrase = prompt ? PHRASE_BY_ID[prompt.id] : undefined;
+  const phrase = prompt ? LEARNING_BY_ID[prompt.id] : undefined;
   const input = useRef<HTMLInputElement>(null);
   useEffect(() => { if (prompt) input.current?.focus(); }, [prompt?.id, prompt?.mode, run?.answered]);
   const change = (patch: Partial<Run>) => update((s) => ({ ...s, runs: { ...s.runs, [runKey]: { ...s.runs[runKey], ...patch } } }));
-  if (!run || !phrase) return <Card className="space-y-4 p-6" data-testid="drill-finished"><h2 className="text-xl font-bold">Đã đi hết lượt luyện này</h2><p>Chuyển sang phần tiếp theo. Các cụm đã bỏ qua vẫn nằm trong danh sách cần ôn.</p><div className="flex flex-wrap gap-2"><Button onClick={nextBlock}>Sang chặng tiếp theo</Button><Button variant="outline" onClick={restart}>Luyện nhớ lại lượt mới</Button></div></Card>;
+  if (!run || !phrase) return <Card className="space-y-4 p-6" data-testid="drill-finished"><h2 className="text-xl font-bold">Đã đi hết lượt luyện này</h2><p>Chuyển sang phần tiếp theo. Các cụm đã bỏ qua vẫn nằm trong danh sách cần ôn.</p><div className="flex flex-wrap gap-2"><Button onClick={nextBlock}>{nextLabel}</Button><Button variant="outline" onClick={restart}>Luyện nhớ lại lượt mới</Button></div></Card>;
   const visible = prompt.mode === "copy" || run.hinted || !!run.feedback;
   return <Card className="space-y-5 p-5 sm:p-7" data-testid="phrase-drill">
     <div className="flex flex-wrap justify-between gap-2 text-sm"><b>{prompt.mode === "copy" ? "① Hiểu → nghe → nhìn và gõ" : "② Che đáp án → tự nhớ"}</b><span className="text-muted">Còn {run.queue.length} lượt · đã làm {run.answered}</span></div>

@@ -128,7 +128,7 @@ test("narrow screens, keyboard labels and recording denial remain usable", async
   await page.getByRole("button", { name: "Ghi âm để nghe lại" }).click();
   await expect(page.getByRole("alert")).toContainText("Chưa dùng được micro");
   await page.getByLabel("Đã trả lời đúng câu được hỏi").check();
-  await page.getByRole("button", { name: "Tra cứu 108 cụm" }).click();
+  await page.getByRole("button", { name: "Cụm lõi & 12 chủ đề" }).click();
   await page.getByLabel("Tìm cụm hoặc nghĩa Việt").fill("không có cụm này");
   await expect(page.getByText(/Không tìm thấy cụm phù hợp/)).toBeVisible();
   expect(await page.evaluate(() => document.documentElement.scrollWidth - innerWidth)).toBeLessThanOrEqual(1);
