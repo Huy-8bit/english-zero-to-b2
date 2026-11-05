@@ -8,6 +8,7 @@ export interface Group { id: string; skill: Skill; label: string; description: s
 export interface SampleSummary {
   id: string; group: string; type: string; topic: string; number: number;
   title: string; focus: string; wordCount: number; bucket: string; register: LetterRegister | null;
+  sourceKind?: "published-sample" | "original-practice";
 }
 export interface LibraryIndex {
   version: string; total: number; groups: Group[]; topics: { id: string; label: string }[];
@@ -20,6 +21,9 @@ export interface Sample extends Omit<SampleSummary, "bucket"> {
   options: string[]; selectedOption: number | null;
   phrases: { en: string; vi: string; inAnswer: boolean }[];
   framePhrases: { en: string; vi: string }[];
+  provenance?: { kind: "published-sample" | "original-practice"; label: string; url: string; page: number | null; checkedOn: string; noteVi: string };
+  coverage?: { requirementVi: string; evidence: string }[];
+  suggestedIdeas?: string[];
 }
 export interface LibraryProgress { items: Record<string, { read: boolean; saved: boolean; at: number }> }
 export const PROGRESS_KEY = "em-model-library";
@@ -34,7 +38,7 @@ export function updateProgress(progress: LibraryProgress, id: string, field: "re
   return { items: { ...progress.items, [id]: { ...old, [field]: !old[field], at } } };
 }
 export const normalise = (text: string) => text.toLocaleLowerCase("vi").normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/đ/g, "d");
-export function matchesSearch(sample: SampleSummary, query: string): boolean {
+export function matchesSearch(sample: Pick<SampleSummary, "title" | "focus" | "number">, query: string): boolean {
   const text = normalise(`${sample.title} ${sample.focus} ${sample.number}`);
   return normalise(query).trim().split(/\s+/).every((word) => text.includes(word));
 }
@@ -60,8 +64,8 @@ async function json<T>(path: string, signal?: AbortSignal): Promise<T> {
   try { return await response.json() as T; }
   catch { throw new Error("Dữ liệu bài mẫu chưa sẵn sàng. Hãy tải lại trang."); }
 }
-export async function fetchIndex(signal?: AbortSignal): Promise<LibraryIndex> {
-  const data = await json<LibraryIndex>("/model-library-data/index.json", signal);
+export async function fetchIndex(signal?: AbortSignal, collection: "frames" | "exam" = "frames"): Promise<LibraryIndex> {
+  const data = await json<LibraryIndex>(`/model-library-data/${collection === "exam" ? "exam/" : ""}index.json`, signal);
   if (!Array.isArray(data.samples) || !data.groups?.length || !data.types?.length || !data.topics?.length || data.samples.length !== data.total) throw new Error("Danh mục bài mẫu chưa đầy đủ. Hãy tải lại trang.");
   return data;
 }

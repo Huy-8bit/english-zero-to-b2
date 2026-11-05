@@ -9,6 +9,7 @@ test("Writing: all forms have ten samples, reading and bookmarks persist on serv
   page.on("request", (request) => { if (/model-library-data\/writing/.test(request.url())) downloads.push(request.url()); });
   await page.goto("/writing-studio?mode=exam");
   await page.getByRole("button", { name: "Đọc bài mẫu Writing" }).click();
+  await page.getByRole("link", { name: "Bộ cũ · luyện thay ý theo khung" }).click();
   await expect(page.getByRole("heading", { name: "Thư viện bài mẫu", exact: true })).toBeVisible();
   const list = page.getByRole("list", { name: "Danh sách bài mẫu" });
   await expect(list.getByRole("button")).toHaveCount(10);
@@ -51,7 +52,9 @@ test("Writing: all forms have ten samples, reading and bookmarks persist on serv
 
 test("Speaking has complete part-specific answers, deep links and previous/next navigation", async ({ page }) => {
   await page.goto("/speaking-studio");
-  await page.getByRole("button", { name: "Đọc 150 bài mẫu" }).click();
+  await page.getByRole("button", { name: "Đọc bài mẫu Speaking" }).click();
+  await page.getByRole("link", { name: "Bộ cũ · luyện thay ý theo khung" }).click();
+  await page.getByRole("button", { name: /^Speaking ·/ }).click();
   await page.getByRole("list", { name: "Danh sách bài mẫu" }).getByRole("button").first().click();
   await expect(page.getByTestId("sample-answer-body").getByRole("heading", { level: 4 })).toHaveCount(6);
   await expect(page.getByRole("button", { name: "Bài trước", exact: true }).first()).toBeDisabled();
@@ -64,7 +67,7 @@ test("Speaking has complete part-specific answers, deep links and previous/next 
   await expect(page.getByText("Bài mẫu chọn phương án 3; lý do cần bám điều kiện của đề.")).toBeVisible();
   await page.goBack();
   await expect(page.getByText("Bài mẫu chọn phương án 2; lý do cần bám điều kiện của đề.")).toBeVisible();
-  await page.goto("/model-library?sample=speaking-part3-development-environment-10");
+  await page.goto("/model-library?collection=frames&sample=speaking-part3-development-environment-10");
   await expect(page.getByRole("heading", { name: "Câu hỏi mở rộng", exact: true })).toBeVisible();
   await expect(page.getByTestId("sample-answer-body").getByRole("heading", { level: 4 })).toHaveCount(3);
   await expect(page.getByRole("button", { name: "Bài tiếp", exact: true }).first()).toBeDisabled();
@@ -76,7 +79,7 @@ test("Speaking has complete part-specific answers, deep links and previous/next 
 test("failed downloads are retryable, invalid sample links recover and filters show a useful empty state", async ({ page }) => {
   let fail = true;
   await page.route("**/model-library-data/index.json", async (route) => fail ? route.fulfill({ status: 503, body: "unavailable" }) : route.continue());
-  await page.goto("/model-library?sample=missing");
+  await page.goto("/model-library?collection=frames&sample=missing");
   await expect(page.getByRole("alert")).toContainText("Chưa tải được bài mẫu");
   fail = false;
   await page.getByRole("button", { name: "Thử lại", exact: true }).click();
@@ -95,7 +98,7 @@ test("failed downloads are retryable, invalid sample links recover and filters s
 
 
 test("letter register hierarchy, reusable underlines, scaffold and paired examples preserve English and saved links", async ({ page }) => {
-  await page.goto("/model-library?group=writing-task1&register=formal&type=formal-reply&topic=technology");
+  await page.goto("/model-library?collection=frames&group=writing-task1&register=formal&type=formal-reply&topic=technology");
   await expect(page.getByRole("button", { name: /^Trang trọng/ })).toHaveAttribute("aria-pressed", "true");
   await expect(page.getByLabel("1. Dạng bài").locator("option")).toHaveCount(10);
   await page.getByRole("list", { name: "Danh sách bài mẫu" }).getByRole("button").first().click();
@@ -132,7 +135,7 @@ test("letter register hierarchy, reusable underlines, scaffold and paired exampl
     await expect(form).toHaveValue(option);
     await expect(page.getByRole("list", { name: "Danh sách bài mẫu" }).getByRole("button")).toHaveCount(10);
   }
-  await page.goto("/model-library?sample=writing-task1-application-work-03");
+  await page.goto("/model-library?collection=frames&sample=writing-task1-application-work-03");
   await expect(page.getByRole("heading", { name: "Bài mẫu hoàn chỉnh" })).toBeVisible();
   await expect(body).toContainText("apply for the position of");
   await expect(body).toContainText("interview");

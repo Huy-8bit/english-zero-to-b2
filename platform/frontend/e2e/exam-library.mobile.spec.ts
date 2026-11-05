@@ -1,0 +1,28 @@
+import { expect, test } from "@playwright/test";
+import AxeBuilder from "@axe-core/playwright";
+import { resetTestDatabase } from "./database";
+test.beforeEach(resetTestDatabase);
+test("new library fits mobile at large text size, including source, branches and coverage", async ({ page }) => {
+  await page.goto("/model-library?skill=speaking&group=speaking-part3");
+  await expect(page.getByRole("list", { name: "Danh sách bài mẫu" }).getByRole("button")).toHaveCount(10);
+  expect(await page.evaluate(() => document.documentElement.scrollWidth - innerWidth)).toBeLessThanOrEqual(1);
+  await page.getByRole("list", { name: "Danh sách bài mẫu" }).getByRole("button").nth(1).click();
+  await expect(page.getByRole("link", { name: /Đại học Ngoại ngữ, Đại học Đà Nẵng/ })).toHaveAttribute("href", /#page=16$/);
+  await page.getByRole("button", { name: "Tùy chỉnh trang đọc", exact: true }).click();
+  const dialog = page.getByRole("dialog", { name: "Trang đọc", exact: true });
+  await dialog.getByRole("radio", { name: "23", exact: true }).check();
+  await dialog.getByRole("button", { name: "Xong", exact: true }).click();
+  await page.getByTestId("requirement-coverage").locator("summary").click();
+  await expect(page.getByTestId("sample-answer-body").locator('p[lang="en"]').first()).toHaveCSS("font-size", "23px");
+  expect(await page.evaluate(() => document.documentElement.scrollWidth - innerWidth)).toBeLessThanOrEqual(1);
+  const a11y = await new AxeBuilder({ page }).include('[data-testid="model-library"]').withTags(["wcag2a", "wcag2aa"]).analyze();
+  expect(a11y.violations.filter((v) => ["serious", "critical"].includes(v.impact ?? ""))).toEqual([]);
+  await expect(page.getByRole("heading", { level: 1 })).toHaveCount(1);
+  await expect(page.getByTestId("sample-answer-body")).toHaveCount(1);
+  await page.getByRole("heading", { name: "Ba nhánh gợi ý của đề" }).scrollIntoViewIfNeeded();
+  await page.screenshot({ path: test.info().outputPath("researched-mobile-prompt.png") });
+  await page.getByTestId("sample-answer-body").locator('p[lang="en"]').first().scrollIntoViewIfNeeded();
+  await page.screenshot({ path: test.info().outputPath("researched-mobile-answer.png") });
+  await page.getByRole("button", { name: "Bài tiếp", exact: true }).first().click();
+  await expect(page).toHaveURL(/exam-speaking-part3-public-parks/);
+});

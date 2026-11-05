@@ -324,7 +324,7 @@ def main():
         else:
             path.parent.mkdir(parents=True,exist_ok=True)
             path.write_text(rendered)
-    actual={str(p.relative_to(OUT)) for p in OUT.rglob('*.json')}
+    actual={str(p.relative_to(OUT)) for p in OUT.rglob('*.json') if 'exam' not in p.relative_to(OUT).parts}
     assert actual==set(outputs), f'Unexpected or missing generated files: {actual ^ set(outputs)}'
     print(f"{'Verified' if args.check else 'Built'} 1,550 full samples in {len(outputs)} JSON files.")
 

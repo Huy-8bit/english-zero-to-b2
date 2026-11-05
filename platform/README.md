@@ -48,21 +48,21 @@ Restore Docker kiểm tra archive trước, dừng API nếu đang chạy, tạo
 
 Mở `/model-library` hoặc nút **Đọc bài mẫu** trong Writing/Speaking Studio và trang kỹ năng.
 
-- **1.550 bài hoàn chỉnh**: Task 1 có 10 mục đích thư trang trọng + 8 mục đích thư thân mật, mỗi dạng 5 chủ đề × 10 bài = 900; Task 2 có 10 dạng/biến thể × 5 × 10 = 500; Speaking có 3 phần × 5 × 10 = 150.
-- Năm nhóm: giáo dục; công nghệ; thiên nhiên/môi trường; công việc/xã hội; đời sống/sức khỏe/du lịch. Mỗi nhóm có 10 tình huống được biên soạn với lợi ích, cơ chế, ví dụ, khó khăn, nguyên nhân, cách xử lý và cụm từ. Các dạng dùng lại tình huống và khung câu để hỗ trợ ghi nhớ, không phải 1.550 chủ đề độc lập.
-- **Học khung trong bài mẫu:** phần có thể dùng lại được gạch chân mặc định, bật/tắt mà không thay nội dung. Thư dùng dữ liệu phân đoạn từ chỗ trống của khung, nên tên, ngày, địa điểm, ví dụ và thông tin cá nhân không bị gạch chân nhầm. Task 2/Speaking dùng danh sách câu dẫn được chọn theo chức năng, không gạch chân luận điểm theo chủ đề. Các bài minh họa trong màn hình luyện khung cũng gạch chân phần cố định.
-- **Giọng thư → mục đích → chủ đề:** trang trọng (trả lời thông tin, lời khuyên, mời, nhận lời, từ chối, cảm ơn, xin lỗi, hỏi/yêu cầu, phàn nàn, xin việc); thân mật có 8 mục đích đầu phù hợp, gồm hỏi thông tin. Có khung chung mỗi giọng, khung đầy đủ giống nhau trên 50 bài mỗi dạng, cách chào/ký tên và nút so sánh bản còn lại cùng tình huống. Xin việc là ứng tuyển vị trí có trả lương, gồm kinh nghiệm, kỹ năng, động lực, lịch làm và phỏng vấn. Giữ nguyên ID các bài cũ để bảo toàn liên kết/tiến độ.
-- Mỗi bài có đề, dàn ý tiếng Việt, câu trả lời đầy đủ, ghi chú từng đoạn, 3 cụm từ theo chủ đề và câu nối dùng lại. Bài Speaking đúng cấu trúc phần: 6 hỏi–đáp/2 chủ đề nhỏ; chọn 1 trong 3 phương án và so sánh; bài nói 3 nhánh và 3 hỏi–đáp mở rộng. Nội dung tự luyện, không phải đề thi thật hoặc bài được chứng nhận điểm.
-- Bộ lọc dạng/chủ đề, tìm tiêu đề tiếng Việt không dấu hoặc tiếng Anh trong 10 bài, lọc bài đã lưu/chưa đọc, liên kết trực tiếp, bài trước/tiếp, ẩn ghi chú, nghe từng đoạn/cụm từ và tùy chỉnh trang đọc. Đọc nội dung không cần gọi AI; nghe dùng hệ thống TTS hiện có.
-- Tiến độ ở `em-model-library`, đồng bộ qua `/api/state`; khi tải lại, hợp nhất theo thời điểm thay đổi từng bài, bao gồm thao tác bỏ đánh dấu. Không thay đổi database schema hoặc dữ liệu luyện khung cũ.
-- Nguồn biên soạn: `scripts/reference_library/scenarios.py`, `letter_frames.py`, `frame_annotations.py` và `build_library.py`. Đầu ra tĩnh: `frontend/public/model-library-data/` (index + 155 bộ, mỗi bộ 10 bài), tải nội dung theo chủ đề khi mở bài, không nhúng cả thư viện vào JavaScript.
+- Bộ mặc định mới có **50 bài viết riêng theo từng đề**: 10 bài cho mỗi Writing task / Speaking part. Mỗi nhóm gồm 2 đề phỏng theo đề minh họa của trường và 8 đề luyện tự biên soạn. [Nhật ký nghiên cứu, nguồn và phạm vi](scripts/reference_library/RESEARCH.md).
+- Reader có nguồn/trang PDF, yêu cầu tiếng Việt, ba nhánh Speaking Part 3, câu hỏi trước khi xem trả lời, đối chiếu yêu cầu với nội dung bài và 3 cụm từ chủ đề. Đề luyện tự biên soạn được phân biệt với đề minh họa; mọi bài trả lời đều do ứng dụng viết, chưa có điểm chấm chính thức.
+- Phần gạch chân là ngôn ngữ mở câu/nối ý có thể dùng lại khi phù hợp. Lý do, ví dụ và kết luận được viết theo từng đề, không dùng một bài hoàn chỉnh cho mọi chủ đề. Khung thư định hướng không mặc định đề chỉ có ba yêu cầu.
+- Bộ lọc task/phần, nguồn đề, giọng thư, tìm kiếm không dấu, đã lưu/chưa đọc; điều hướng bài trước/tiếp, ẩn gợi ý, nghe từng đoạn và tùy chỉnh trang đọc. Không cần gọi AI để đọc thư viện.
+- Bộ cũ **1.550 biến thể từ 50 tình huống** giữ ở `/model-library?collection=frames` để luyện thay ý theo khung, có nhãn giới hạn rõ. Bộ mới chưa thay thế toàn bộ quy mô 5 chủ đề × 10 bài của từng dạng trong bộ cũ. Liên kết cũ tự mở đúng bộ, giữ nội dung và tiến độ.
+- Tiến độ dùng `em-model-library`, đồng bộ qua `/api/state`. Bài mới có ID `exam-*`, không nhận nhầm trạng thái đọc của bài cũ. Không đổi schema hoặc database học tập.
+- Nguồn bộ mới: `scripts/reference_library/exam_*.py`, biên dịch bằng `build_exam_library.py` thành `frontend/public/model-library-data/exam/` (index + 5 bộ × 10 bài). Bộ cũ: `scenarios.py`, `letter_frames.py`, `frame_annotations.py`, `build_library.py`. Nội dung tải theo task/phần khi mở bài, không nhúng toàn bộ vào JavaScript.
 
 ```bash
-python3 scripts/reference_library/build_library.py          # xuất lại nội dung sau khi sửa nguồn
-python3 scripts/reference_library/build_library.py --check  # số lượng, cấu trúc, độ dài, trùng bài, đồng bộ đầu ra
+python3 scripts/reference_library/build_exam_library.py          # xuất bộ mới
+python3 scripts/reference_library/build_exam_library.py --check  # kiểm tra đồng bộ + chất lượng cấu trúc
+python3 scripts/reference_library/build_library.py --check       # kiểm tra bộ cũ vẫn nguyên vẹn
 cd frontend
-npm test -- src/features/model-library/library.test.ts
-npx playwright test model-library.spec.ts model-library.mobile.spec.ts --project=desktop --project=mobile
+npm test -- src/features/model-library
+npx playwright test exam-library.spec.ts exam-library.mobile.spec.ts model-library.spec.ts model-library.mobile.spec.ts --project=desktop --project=mobile
 ```
 
 ## Chạy trực tiếp trên máy (phát triển)

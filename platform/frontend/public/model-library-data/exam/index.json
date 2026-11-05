@@ -1,0 +1,823 @@
+{
+  "version": "2026-11-05-researched-v1",
+  "total": 50,
+  "groups": [
+    {
+      "id": "writing-task1",
+      "skill": "writing",
+      "label": "Writing Task 1 · Thư / email",
+      "minimum": 120,
+      "description": "10 đề riêng: trả lời thông tin, xin việc, phàn nàn, yêu cầu thông tin, xin lỗi, từ chối, cảm ơn và lời mời. Hai giọng trang trọng / thân mật.",
+      "count": 10
+    },
+    {
+      "id": "writing-task2",
+      "skill": "writing",
+      "label": "Writing Task 2 · Bài luận",
+      "minimum": 250,
+      "description": "10 bài luận có lập luận riêng. Đọc động từ yêu cầu của từng đề trước khi chọn cách triển khai.",
+      "count": 10
+    },
+    {
+      "id": "speaking-part1",
+      "skill": "speaking",
+      "label": "Speaking Part 1 · Giao tiếp xã hội",
+      "description": "10 bộ hỏi đáp; mỗi bộ có hai chủ đề quen thuộc và sáu câu hỏi. Thay thông tin cá nhân bằng trải nghiệm thật của bạn.",
+      "count": 10
+    },
+    {
+      "id": "speaking-part2",
+      "skill": "speaking",
+      "label": "Speaking Part 2 · Thảo luận giải pháp",
+      "description": "10 tình huống, mỗi tình huống có ba phương án riêng. Chọn một, nêu lý do và so sánh với hai phương án còn lại.",
+      "count": 10
+    },
+    {
+      "id": "speaking-part3",
+      "skill": "speaking",
+      "label": "Speaking Part 3 · Phát triển chủ đề",
+      "description": "10 chủ đề với ba nhánh gợi ý cụ thể, bài nói triển khai từng nhánh và ba câu hỏi mở rộng.",
+      "count": 10
+    }
+  ],
+  "topics": [
+    {
+      "id": "situations",
+      "label": "Các đề và tình huống riêng"
+    }
+  ],
+  "types": [
+    {
+      "id": "reply",
+      "group": "writing-task1",
+      "label": "Trả lời thông tin cho bạn",
+      "register": "informal"
+    },
+    {
+      "id": "complaint",
+      "group": "writing-task1",
+      "label": "Phàn nàn / yêu cầu xử lý",
+      "register": "formal"
+    },
+    {
+      "id": "application",
+      "group": "writing-task1",
+      "label": "Xin việc",
+      "register": "formal"
+    },
+    {
+      "id": "request",
+      "group": "writing-task1",
+      "label": "Yêu cầu thông tin",
+      "register": "formal"
+    },
+    {
+      "id": "formal-reply",
+      "group": "writing-task1",
+      "label": "Trả lời khách hàng",
+      "register": "formal"
+    },
+    {
+      "id": "apology",
+      "group": "writing-task1",
+      "label": "Xin lỗi bạn",
+      "register": "informal"
+    },
+    {
+      "id": "decline",
+      "group": "writing-task1",
+      "label": "Từ chối lời mời",
+      "register": "informal"
+    },
+    {
+      "id": "thanks",
+      "group": "writing-task1",
+      "label": "Cảm ơn",
+      "register": "informal"
+    },
+    {
+      "id": "formal-invitation",
+      "group": "writing-task1",
+      "label": "Mời trang trọng",
+      "register": "formal"
+    },
+    {
+      "id": "advantages",
+      "group": "writing-task2",
+      "label": "Ưu điểm và nhược điểm"
+    },
+    {
+      "id": "effects",
+      "group": "writing-task2",
+      "label": "Tác động tích cực và tiêu cực"
+    },
+    {
+      "id": "opinion-partial",
+      "group": "writing-task2",
+      "label": "Quan điểm có giới hạn"
+    },
+    {
+      "id": "discussion",
+      "group": "writing-task2",
+      "label": "Bàn hai quan điểm và ý kiến riêng"
+    },
+    {
+      "id": "cause-solution",
+      "group": "writing-task2",
+      "label": "Nguyên nhân và giải pháp"
+    },
+    {
+      "id": "cause-effect",
+      "group": "writing-task2",
+      "label": "Nguyên nhân và hệ quả"
+    },
+    {
+      "id": "problem-solution",
+      "group": "writing-task2",
+      "label": "Vấn đề và giải pháp"
+    },
+    {
+      "id": "outweigh",
+      "group": "writing-task2",
+      "label": "So sánh sức nặng lợi và hại"
+    },
+    {
+      "id": "opinion-disagree",
+      "group": "writing-task2",
+      "label": "Phản đối một nhận định"
+    },
+    {
+      "id": "two-questions",
+      "group": "writing-task2",
+      "label": "Hai câu hỏi kết hợp"
+    },
+    {
+      "id": "social",
+      "group": "speaking-part1",
+      "label": "Hỏi đáp hai chủ đề"
+    },
+    {
+      "id": "choice",
+      "group": "speaking-part2",
+      "label": "Chọn và so sánh giải pháp"
+    },
+    {
+      "id": "development",
+      "group": "speaking-part3",
+      "label": "Phát triển chủ đề"
+    }
+  ],
+  "samples": [
+    {
+      "id": "exam-writing-task1-visiting-parents",
+      "group": "writing-task1",
+      "type": "reply",
+      "topic": "situations",
+      "number": 1,
+      "title": "Tư vấn chuyến thăm của bố mẹ người bạn",
+      "focus": "Accommodation, sightseeing and vegetarian food",
+      "wordCount": 157,
+      "register": "informal",
+      "bucket": "exam/writing-task1.json",
+      "sourceKind": "published-sample"
+    },
+    {
+      "id": "exam-writing-task1-introduce-houseguest",
+      "group": "writing-task1",
+      "type": "reply",
+      "topic": "situations",
+      "number": 2,
+      "title": "Giới thiệu người bạn sẽ ở nhờ",
+      "focus": "Personality, interests and current studies",
+      "wordCount": 157,
+      "register": "informal",
+      "bucket": "exam/writing-task1.json",
+      "sourceKind": "published-sample"
+    },
+    {
+      "id": "exam-writing-task1-damaged-desk",
+      "group": "writing-task1",
+      "type": "complaint",
+      "topic": "situations",
+      "number": 3,
+      "title": "Phàn nàn bàn học bị hỏng khi giao",
+      "focus": "Damaged furniture and a replacement request",
+      "wordCount": 150,
+      "register": "formal",
+      "bucket": "exam/writing-task1.json",
+      "sourceKind": "original-practice"
+    },
+    {
+      "id": "exam-writing-task1-weekend-receptionist",
+      "group": "writing-task1",
+      "type": "application",
+      "topic": "situations",
+      "number": 4,
+      "title": "Ứng tuyển lễ tân cuối tuần",
+      "focus": "Relevant experience and interview availability",
+      "wordCount": 159,
+      "register": "formal",
+      "bucket": "exam/writing-task1.json",
+      "sourceKind": "original-practice"
+    },
+    {
+      "id": "exam-writing-task1-evening-course",
+      "group": "writing-task1",
+      "type": "request",
+      "topic": "situations",
+      "number": 5,
+      "title": "Hỏi thông tin khóa học buổi tối",
+      "focus": "Timetable, fees and a placement test",
+      "wordCount": 155,
+      "register": "formal",
+      "bucket": "exam/writing-task1.json",
+      "sourceKind": "original-practice"
+    },
+    {
+      "id": "exam-writing-task1-refund-reply",
+      "group": "writing-task1",
+      "type": "formal-reply",
+      "topic": "situations",
+      "number": 6,
+      "title": "Trả lời khách về tiền đặt phòng",
+      "focus": "Cancellation policy and a practical response",
+      "wordCount": 153,
+      "register": "formal",
+      "bucket": "exam/writing-task1.json",
+      "sourceKind": "original-practice"
+    },
+    {
+      "id": "exam-writing-task1-broken-camera",
+      "group": "writing-task1",
+      "type": "apology",
+      "topic": "situations",
+      "number": 7,
+      "title": "Xin lỗi vì làm hỏng máy ảnh mượn",
+      "focus": "Taking responsibility and arranging a repair",
+      "wordCount": 151,
+      "register": "informal",
+      "bucket": "exam/writing-task1.json",
+      "sourceKind": "original-practice"
+    },
+    {
+      "id": "exam-writing-task1-birthday-decline",
+      "group": "writing-task1",
+      "type": "decline",
+      "topic": "situations",
+      "number": 8,
+      "title": "Từ chối sinh nhật và hẹn dịp khác",
+      "focus": "A warm refusal with a concrete alternative",
+      "wordCount": 151,
+      "register": "informal",
+      "bucket": "exam/writing-task1.json",
+      "sourceKind": "original-practice"
+    },
+    {
+      "id": "exam-writing-task1-host-thanks",
+      "group": "writing-task1",
+      "type": "thanks",
+      "topic": "situations",
+      "number": 9,
+      "title": "Cảm ơn gia đình đã đón tiếp",
+      "focus": "A specific memory and a return invitation",
+      "wordCount": 150,
+      "register": "informal",
+      "bucket": "exam/writing-task1.json",
+      "sourceKind": "original-practice"
+    },
+    {
+      "id": "exam-writing-task1-office-invitation",
+      "group": "writing-task1",
+      "type": "formal-invitation",
+      "topic": "situations",
+      "number": 10,
+      "title": "Mời chuyên gia nói chuyện hướng nghiệp",
+      "focus": "A formal invitation with practical arrangements",
+      "wordCount": 152,
+      "register": "formal",
+      "bucket": "exam/writing-task1.json",
+      "sourceKind": "original-practice"
+    },
+    {
+      "id": "exam-writing-task2-coeducation",
+      "group": "writing-task2",
+      "type": "advantages",
+      "topic": "situations",
+      "number": 1,
+      "title": "Học chung nam nữ: ưu và nhược điểm",
+      "focus": "Strengths and weaknesses of mixed-gender education",
+      "wordCount": 273,
+      "register": null,
+      "bucket": "exam/writing-task2.json",
+      "sourceKind": "published-sample"
+    },
+    {
+      "id": "exam-writing-task2-tourism-communities",
+      "group": "writing-task2",
+      "type": "effects",
+      "topic": "situations",
+      "number": 2,
+      "title": "Du lịch tác động đến cộng đồng địa phương",
+      "focus": "Positive and negative effects on residents",
+      "wordCount": 278,
+      "register": null,
+      "bucket": "exam/writing-task2.json",
+      "sourceKind": "published-sample"
+    },
+    {
+      "id": "exam-writing-task2-school-phones",
+      "group": "writing-task2",
+      "type": "opinion-partial",
+      "topic": "situations",
+      "number": 3,
+      "title": "Có nên cấm hoàn toàn điện thoại ở trường?",
+      "focus": "A qualified position on school phone rules",
+      "wordCount": 285,
+      "register": null,
+      "bucket": "exam/writing-task2.json",
+      "sourceKind": "original-practice"
+    },
+    {
+      "id": "exam-writing-task2-online-campus",
+      "group": "writing-task2",
+      "type": "discussion",
+      "topic": "situations",
+      "number": 4,
+      "title": "Học đại học trực tuyến hay tại trường?",
+      "focus": "Access versus face-to-face learning",
+      "wordCount": 283,
+      "register": null,
+      "bucket": "exam/writing-task2.json",
+      "sourceKind": "original-practice"
+    },
+    {
+      "id": "exam-writing-task2-traffic-causes",
+      "group": "writing-task2",
+      "type": "cause-solution",
+      "topic": "situations",
+      "number": 5,
+      "title": "Ùn tắc giờ cao điểm: nguyên nhân và giải pháp",
+      "focus": "Private vehicles and unreliable public transport",
+      "wordCount": 279,
+      "register": null,
+      "bucket": "exam/writing-task2.json",
+      "sourceKind": "original-practice"
+    },
+    {
+      "id": "exam-writing-task2-rural-migration",
+      "group": "writing-task2",
+      "type": "cause-effect",
+      "topic": "situations",
+      "number": 6,
+      "title": "Người trẻ rời quê lên thành phố",
+      "focus": "Reasons for migration and effects on rural communities",
+      "wordCount": 293,
+      "register": null,
+      "bucket": "exam/writing-task2.json",
+      "sourceKind": "original-practice"
+    },
+    {
+      "id": "exam-writing-task2-plastic-deliveries",
+      "group": "writing-task2",
+      "type": "problem-solution",
+      "topic": "situations",
+      "number": 7,
+      "title": "Rác bao bì từ đồ ăn giao tận nhà",
+      "focus": "Problems caused by packaging and matching solutions",
+      "wordCount": 282,
+      "register": null,
+      "bucket": "exam/writing-task2.json",
+      "sourceKind": "original-practice"
+    },
+    {
+      "id": "exam-writing-task2-gap-year",
+      "group": "writing-task2",
+      "type": "outweigh",
+      "topic": "situations",
+      "number": 8,
+      "title": "Nghỉ một năm trước đại học: lợi có lớn hơn hại?",
+      "focus": "Weighing experience against cost and lost study habits",
+      "wordCount": 287,
+      "register": null,
+      "bucket": "exam/writing-task2.json",
+      "sourceKind": "original-practice"
+    },
+    {
+      "id": "exam-writing-task2-public-libraries",
+      "group": "writing-task2",
+      "type": "opinion-disagree",
+      "topic": "situations",
+      "number": 9,
+      "title": "Internet có khiến thư viện công cộng hết cần thiết?",
+      "focus": "Public access, study space and help with information",
+      "wordCount": 289,
+      "register": null,
+      "bucket": "exam/writing-task2.json",
+      "sourceKind": "original-practice"
+    },
+    {
+      "id": "exam-writing-task2-exercise-time",
+      "group": "writing-task2",
+      "type": "two-questions",
+      "topic": "situations",
+      "number": 10,
+      "title": "Vì sao ít vận động và làm sao thay đổi?",
+      "focus": "Barriers for working adults and realistic daily habits",
+      "wordCount": 292,
+      "register": null,
+      "bucket": "exam/writing-task2.json",
+      "sourceKind": "original-practice"
+    },
+    {
+      "id": "exam-speaking-part1-photos-food",
+      "group": "speaking-part1",
+      "type": "social",
+      "topic": "situations",
+      "number": 1,
+      "title": "Chụp ảnh và đồ ăn",
+      "focus": "Photographs / Food",
+      "wordCount": 167,
+      "register": null,
+      "bucket": "exam/speaking-part1.json",
+      "sourceKind": "published-sample"
+    },
+    {
+      "id": "exam-speaking-part1-leisure-neighbourhood",
+      "group": "speaking-part1",
+      "type": "social",
+      "topic": "situations",
+      "number": 2,
+      "title": "Thời gian rảnh và khu phố",
+      "focus": "Leisure / Neighbourhood",
+      "wordCount": 164,
+      "register": null,
+      "bucket": "exam/speaking-part1.json",
+      "sourceKind": "published-sample"
+    },
+    {
+      "id": "exam-speaking-part1-work-mornings",
+      "group": "speaking-part1",
+      "type": "social",
+      "topic": "situations",
+      "number": 3,
+      "title": "Công việc và buổi sáng",
+      "focus": "Work / Morning routines",
+      "wordCount": 162,
+      "register": null,
+      "bucket": "exam/speaking-part1.json",
+      "sourceKind": "original-practice"
+    },
+    {
+      "id": "exam-speaking-part1-study-music",
+      "group": "speaking-part1",
+      "type": "social",
+      "topic": "situations",
+      "number": 4,
+      "title": "Học tập và âm nhạc",
+      "focus": "Study / Music",
+      "wordCount": 164,
+      "register": null,
+      "bucket": "exam/speaking-part1.json",
+      "sourceKind": "original-practice"
+    },
+    {
+      "id": "exam-speaking-part1-transport-weather",
+      "group": "speaking-part1",
+      "type": "social",
+      "topic": "situations",
+      "number": 5,
+      "title": "Đi lại và thời tiết",
+      "focus": "Transport / Weather",
+      "wordCount": 158,
+      "register": null,
+      "bucket": "exam/speaking-part1.json",
+      "sourceKind": "original-practice"
+    },
+    {
+      "id": "exam-speaking-part1-family-festivals",
+      "group": "speaking-part1",
+      "type": "social",
+      "topic": "situations",
+      "number": 6,
+      "title": "Gia đình và ngày lễ",
+      "focus": "Family / Festivals",
+      "wordCount": 164,
+      "register": null,
+      "bucket": "exam/speaking-part1.json",
+      "sourceKind": "original-practice"
+    },
+    {
+      "id": "exam-speaking-part1-shopping-clothes",
+      "group": "speaking-part1",
+      "type": "social",
+      "topic": "situations",
+      "number": 7,
+      "title": "Mua sắm và quần áo",
+      "focus": "Shopping / Clothes",
+      "wordCount": 165,
+      "register": null,
+      "bucket": "exam/speaking-part1.json",
+      "sourceKind": "original-practice"
+    },
+    {
+      "id": "exam-speaking-part1-technology-friends",
+      "group": "speaking-part1",
+      "type": "social",
+      "topic": "situations",
+      "number": 8,
+      "title": "Công nghệ và bạn bè",
+      "focus": "Technology / Friends",
+      "wordCount": 163,
+      "register": null,
+      "bucket": "exam/speaking-part1.json",
+      "sourceKind": "original-practice"
+    },
+    {
+      "id": "exam-speaking-part1-home-sport",
+      "group": "speaking-part1",
+      "type": "social",
+      "topic": "situations",
+      "number": 9,
+      "title": "Nhà ở và thể thao",
+      "focus": "Home / Sport",
+      "wordCount": 152,
+      "register": null,
+      "bucket": "exam/speaking-part1.json",
+      "sourceKind": "original-practice"
+    },
+    {
+      "id": "exam-speaking-part1-holidays-language",
+      "group": "speaking-part1",
+      "type": "social",
+      "topic": "situations",
+      "number": 10,
+      "title": "Kỳ nghỉ và học ngoại ngữ",
+      "focus": "Holidays / Language learning",
+      "wordCount": 156,
+      "register": null,
+      "bucket": "exam/speaking-part1.json",
+      "sourceKind": "original-practice"
+    },
+    {
+      "id": "exam-speaking-part2-farewell-gift",
+      "group": "speaking-part2",
+      "type": "choice",
+      "topic": "situations",
+      "number": 1,
+      "title": "Chọn quà cho bạn đi Mỹ một năm",
+      "focus": "A farewell present for a year abroad",
+      "wordCount": 195,
+      "register": null,
+      "bucket": "exam/speaking-part2.json",
+      "sourceKind": "published-sample"
+    },
+    {
+      "id": "exam-speaking-part2-danang-hanoi",
+      "group": "speaking-part2",
+      "type": "choice",
+      "topic": "situations",
+      "number": 2,
+      "title": "Đi từ Đà Nẵng ra Hà Nội bằng gì?",
+      "focus": "Choosing transport for a group journey",
+      "wordCount": 203,
+      "register": null,
+      "bucket": "exam/speaking-part2.json",
+      "sourceKind": "published-sample"
+    },
+    {
+      "id": "exam-speaking-part2-birthday-venue",
+      "group": "speaking-part2",
+      "type": "choice",
+      "topic": "situations",
+      "number": 3,
+      "title": "Chọn nơi tổ chức sinh nhật nhỏ",
+      "focus": "A rainy evening and a limited budget",
+      "wordCount": 189,
+      "register": null,
+      "bucket": "exam/speaking-part2.json",
+      "sourceKind": "original-practice"
+    },
+    {
+      "id": "exam-speaking-part2-exam-study-place",
+      "group": "speaking-part2",
+      "type": "choice",
+      "topic": "situations",
+      "number": 4,
+      "title": "Chọn nơi ôn thi khi nhà đang ồn",
+      "focus": "Quiet revision with easy access to notes",
+      "wordCount": 193,
+      "register": null,
+      "bucket": "exam/speaking-part2.json",
+      "sourceKind": "original-practice"
+    },
+    {
+      "id": "exam-speaking-part2-learn-cooking",
+      "group": "speaking-part2",
+      "type": "choice",
+      "topic": "situations",
+      "number": 5,
+      "title": "Chọn cách học nấu ăn cơ bản",
+      "focus": "A beginner who needs help with technique",
+      "wordCount": 196,
+      "register": null,
+      "bucket": "exam/speaking-part2.json",
+      "sourceKind": "original-practice"
+    },
+    {
+      "id": "exam-speaking-part2-company-outing",
+      "group": "speaking-part2",
+      "type": "choice",
+      "topic": "situations",
+      "number": 6,
+      "title": "Chọn hoạt động cho nhóm đồng nghiệp",
+      "focus": "An inclusive outing for mixed fitness levels",
+      "wordCount": 188,
+      "register": null,
+      "bucket": "exam/speaking-part2.json",
+      "sourceKind": "original-practice"
+    },
+    {
+      "id": "exam-speaking-part2-small-bedroom",
+      "group": "speaking-part2",
+      "type": "choice",
+      "topic": "situations",
+      "number": 7,
+      "title": "Chọn đồ cải thiện phòng ngủ nhỏ",
+      "focus": "Organising study materials in limited space",
+      "wordCount": 195,
+      "register": null,
+      "bucket": "exam/speaking-part2.json",
+      "sourceKind": "original-practice"
+    },
+    {
+      "id": "exam-speaking-part2-welcome-student",
+      "group": "speaking-part2",
+      "type": "choice",
+      "topic": "situations",
+      "number": 8,
+      "title": "Chọn cách giúp sinh viên mới hòa nhập",
+      "focus": "A newcomer who feels nervous in large groups",
+      "wordCount": 192,
+      "register": null,
+      "bucket": "exam/speaking-part2.json",
+      "sourceKind": "original-practice"
+    },
+    {
+      "id": "exam-speaking-part2-weekend-job",
+      "group": "speaking-part2",
+      "type": "choice",
+      "topic": "situations",
+      "number": 9,
+      "title": "Chọn việc làm thêm khi có lịch học cố định",
+      "focus": "Earning money while protecting study time",
+      "wordCount": 195,
+      "register": null,
+      "bucket": "exam/speaking-part2.json",
+      "sourceKind": "original-practice"
+    },
+    {
+      "id": "exam-speaking-part2-reduce-waste",
+      "group": "speaking-part2",
+      "type": "choice",
+      "topic": "situations",
+      "number": 10,
+      "title": "Chọn bước giảm rác ở câu lạc bộ",
+      "focus": "A modest budget and waste from weekly meetings",
+      "wordCount": 207,
+      "register": null,
+      "bucket": "exam/speaking-part2.json",
+      "sourceKind": "original-practice"
+    },
+    {
+      "id": "exam-speaking-part3-travel-benefits",
+      "group": "speaking-part3",
+      "type": "development",
+      "topic": "situations",
+      "number": 1,
+      "title": "Lợi ích của việc đi du lịch",
+      "focus": "Refreshment, the economy and knowledge",
+      "wordCount": 338,
+      "register": null,
+      "bucket": "exam/speaking-part3.json",
+      "sourceKind": "published-sample"
+    },
+    {
+      "id": "exam-speaking-part3-teen-reading",
+      "group": "speaking-part3",
+      "type": "development",
+      "topic": "situations",
+      "number": 2,
+      "title": "Khuyến khích thanh thiếu niên đọc sách",
+      "focus": "Knowledge, relaxation and memory",
+      "wordCount": 360,
+      "register": null,
+      "bucket": "exam/speaking-part3.json",
+      "sourceKind": "published-sample"
+    },
+    {
+      "id": "exam-speaking-part3-public-parks",
+      "group": "speaking-part3",
+      "type": "development",
+      "topic": "situations",
+      "number": 3,
+      "title": "Công viên công cộng cần được gìn giữ",
+      "focus": "Exercise, social contact and green space",
+      "wordCount": 334,
+      "register": null,
+      "bucket": "exam/speaking-part3.json",
+      "sourceKind": "original-practice"
+    },
+    {
+      "id": "exam-speaking-part3-learning-language",
+      "group": "speaking-part3",
+      "type": "development",
+      "topic": "situations",
+      "number": 4,
+      "title": "Học ngoại ngữ mở ra cơ hội",
+      "focus": "Communication, work and cultural understanding",
+      "wordCount": 341,
+      "register": null,
+      "bucket": "exam/speaking-part3.json",
+      "sourceKind": "original-practice"
+    },
+    {
+      "id": "exam-speaking-part3-volunteering",
+      "group": "speaking-part3",
+      "type": "development",
+      "topic": "situations",
+      "number": 5,
+      "title": "Sinh viên nên tham gia tình nguyện",
+      "focus": "Practical skills, community help and connections",
+      "wordCount": 339,
+      "register": null,
+      "bucket": "exam/speaking-part3.json",
+      "sourceKind": "original-practice"
+    },
+    {
+      "id": "exam-speaking-part3-family-meals",
+      "group": "speaking-part3",
+      "type": "development",
+      "topic": "situations",
+      "number": 6,
+      "title": "Bữa ăn chung có ý nghĩa với gia đình",
+      "focus": "Conversation, routines and shared responsibilities",
+      "wordCount": 337,
+      "register": null,
+      "bucket": "exam/speaking-part3.json",
+      "sourceKind": "original-practice"
+    },
+    {
+      "id": "exam-speaking-part3-public-transport",
+      "group": "speaking-part3",
+      "type": "development",
+      "topic": "situations",
+      "number": 7,
+      "title": "Giao thông công cộng tốt hơn giúp thành phố",
+      "focus": "Road space, access and travel costs",
+      "wordCount": 347,
+      "register": null,
+      "bucket": "exam/speaking-part3.json",
+      "sourceKind": "original-practice"
+    },
+    {
+      "id": "exam-speaking-part3-practical-school",
+      "group": "speaking-part3",
+      "type": "development",
+      "topic": "situations",
+      "number": 8,
+      "title": "Trường học nên dạy kỹ năng sống thực tế",
+      "focus": "Money, household tasks and everyday decisions",
+      "wordCount": 349,
+      "register": null,
+      "bucket": "exam/speaking-part3.json",
+      "sourceKind": "original-practice"
+    },
+    {
+      "id": "exam-speaking-part3-flexible-work",
+      "group": "speaking-part3",
+      "type": "development",
+      "topic": "situations",
+      "number": 9,
+      "title": "Lịch làm việc linh hoạt có ích thế nào?",
+      "focus": "Personal schedules, commuting and concentration",
+      "wordCount": 364,
+      "register": null,
+      "bucket": "exam/speaking-part3.json",
+      "sourceKind": "original-practice"
+    },
+    {
+      "id": "exam-speaking-part3-local-shopping",
+      "group": "speaking-part3",
+      "type": "development",
+      "topic": "situations",
+      "number": 10,
+      "title": "Mua hàng tại địa phương có lợi gì?",
+      "focus": "Local jobs, personal service and neighbourhood life",
+      "wordCount": 359,
+      "register": null,
+      "bucket": "exam/speaking-part3.json",
+      "sourceKind": "original-practice"
+    }
+  ],
+  "sourceUrl": "https://vstep.vnu.edu.vn/test-format/"
+}

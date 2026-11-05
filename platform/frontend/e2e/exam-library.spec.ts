@@ -1,0 +1,98 @@
+import { expect, test } from "@playwright/test";
+import AxeBuilder from "@axe-core/playwright";
+import { resetTestDatabase } from "./database";
+test.beforeEach(resetTestDatabase);
+
+test("new default: sources, register filters, requirement coverage, unchanged underlined text and saved progress", async ({ page }) => {
+  await page.goto("/writing-studio?mode=exam");
+  await page.getByRole("button", { name: "Đọc bài mẫu Writing" }).click();
+  await expect(page.getByText("50 bài viết riêng theo từng đề", { exact: false })).toBeVisible();
+  const list = page.getByRole("list", { name: "Danh sách bài mẫu" });
+  await expect(list.getByRole("button")).toHaveCount(10);
+  await page.getByRole("combobox", { name: "Giọng thư", exact: true }).selectOption("formal");
+  await expect(list.getByRole("button")).toHaveCount(5);
+  await page.getByRole("combobox", { name: "Giọng thư", exact: true }).selectOption("all");
+  await page.getByRole("combobox", { name: "Nguồn đề", exact: true }).selectOption("published-sample");
+  await expect(list.getByRole("button")).toHaveCount(2);
+  await list.getByRole("button").first().click();
+  await expect(page.getByRole("region", { name: "Nguồn đề và bài trả lời" })).toContainText("không phải đáp án của trường");
+  await expect(page.getByRole("link", { name: /Đại học Đồng Tháp/ })).toHaveAttribute("href", /27.pdf#page=18$/);
+  const body = page.getByTestId("sample-answer-body");
+  await expect(body).toContainText("hotel arranges day trips");
+  const before = await body.locator('p[lang="en"]').allTextContents();
+  await expect(body.locator('[data-frame="fixed"]').first()).toHaveCSS("text-decoration-line", "underline");
+  await page.getByLabel("Gạch chân khung cần thuộc").uncheck();
+  await expect(body.locator('[data-frame="fixed"]')).toHaveCount(0);
+  expect(await body.locator('p[lang="en"]').allTextContents()).toEqual(before);
+  await page.getByTestId("requirement-coverage").locator("summary").click();
+  await expect(page.getByTestId("requirement-coverage").getByRole("listitem")).toHaveCount(6);
+  await page.getByTestId("letter-frame-guide").locator("summary").click();
+  await expect(page.getByTestId("letter-frame-guide")).toContainText("không mặc định đề chỉ có ba ý");
+  await expect(page.getByRole("button", { name: /So sánh: bản/ })).toHaveCount(0);
+  await page.getByRole("button", { name: "Lưu bài", exact: true }).click();
+  await page.getByRole("button", { name: "Đánh dấu đã đọc", exact: true }).click();
+  await expect.poll(async () => {
+    const data = await (await page.request.get("/api/state")).json();
+    return data.items["em-model-library"]?.value?.items?.["exam-writing-task1-visiting-parents"]?.read;
+  }).toBe(true);
+  await page.evaluate(() => { localStorage.removeItem("em-model-library"); localStorage.removeItem("em-sync-meta"); });
+  await page.reload();
+  await expect(page.getByRole("button", { name: "Đã lưu bài", exact: true })).toHaveAttribute("aria-pressed", "true");
+  await expect(page.getByRole("button", { name: "Đã đọc bài", exact: true })).toHaveAttribute("aria-pressed", "true");
+  const a11y = await new AxeBuilder({ page }).include('[data-testid="model-library"]').withTags(["wcag2a", "wcag2aa"]).analyze();
+  expect(a11y.violations.filter((v) => ["serious", "critical"].includes(v.impact ?? ""))).toEqual([]);
+  await page.screenshot({ path: test.info().outputPath("researched-letter-desktop.png"), fullPage: true });
+  await page.getByRole("button", { name: "Danh sách 10 bài", exact: true }).click();
+  await page.getByLabel("Tiến độ trong nhóm").selectOption("saved");
+  await expect(list.getByRole("button")).toHaveCount(1);
+});
+
+test("Speaking preserves actual options and branches and exposes questions before model answers", async ({ page }) => {
+  await page.goto("/speaking-studio");
+  await page.getByRole("button", { name: "Đọc bài mẫu Speaking" }).click();
+  await page.getByRole("list", { name: "Danh sách bài mẫu" }).getByRole("button").first().click();
+  await page.getByText("Xem câu hỏi trước khi đọc câu trả lời", { exact: true }).click();
+  await expect(page.getByRole("region", { name: "Đề bài", exact: true }).getByRole("listitem")).toHaveCount(9); // 6 questions + 3 reading notes
+  await expect(page.getByTestId("sample-answer-body").getByRole("heading", { level: 4 })).toHaveCount(6);
+  await page.goto("/model-library?sample=exam-speaking-part2-farewell-gift");
+  const prompt = page.getByRole("region", { name: "Đề bài", exact: true });
+  await expect(prompt).toContainText("A camera");
+  await expect(prompt).toContainText("An English dictionary");
+  await expect(prompt).toContainText("A scarf");
+  await expect(page.getByTestId("sample-answer-body")).toContainText("I would assume");
+  await page.getByRole("button", { name: "Bài tiếp", exact: true }).first().click();
+  await expect(page).toHaveURL(/exam-speaking-part2-danang-hanoi/);
+  await expect(prompt).toContainText("A coach");
+  await page.goto("/model-library?sample=exam-speaking-part3-teen-reading");
+  await expect(prompt).toContainText("Exercising memory");
+  await expect(prompt).not.toContainText("One possible difficulty");
+  await expect(page.getByTestId("sample-answer-body").getByRole("heading", { level: 4 })).toHaveCount(3);
+  await page.getByText("Câu hỏi mở rộng trong đề", { exact: true }).click();
+  await expect(prompt).toContainText("How can parents encourage children");
+  await page.screenshot({ path: test.info().outputPath("researched-speaking-desktop.png"), fullPage: true });
+});
+
+test("new collection failures are retryable and legacy saved deep links return to the archive", async ({ page }) => {
+  let fail = true;
+  await page.route("**/model-library-data/exam/index.json", (route) => fail ? route.fulfill({ status: 503, body: "unavailable" }) : route.continue());
+  await page.goto("/model-library?sample=missing");
+  await expect(page.getByRole("alert")).toContainText("Chưa tải được bài mẫu");
+  fail = false;
+  await page.getByRole("button", { name: "Thử lại", exact: true }).click();
+  await expect(page.getByRole("alert")).toContainText("Không tìm thấy bài trong liên kết");
+  let failBucket = true;
+  await page.route("**/model-library-data/exam/writing-task1.json*", (route) => failBucket ? route.fulfill({ status: 503, body: "unavailable" }) : route.continue());
+  await page.getByRole("list", { name: "Danh sách bài mẫu" }).getByRole("button").first().click();
+  await expect(page.getByRole("alert")).toContainText("Chưa tải được bài mẫu");
+  failBucket = false;
+  await page.getByRole("button", { name: "Thử lại", exact: true }).click();
+  await expect(page.getByRole("heading", { name: "Bài mẫu hoàn chỉnh" })).toBeVisible();
+  await page.goto("/model-library?sample=writing-task1-reply-education-01");
+  await expect(page.getByRole("note")).toContainText("Bộ khung cũ");
+  await expect(page.getByTestId("sample-answer-body")).toContainText("Hi Alex");
+  await page.getByRole("button", { name: "Danh sách 10 bài", exact: true }).click();
+  await expect(page).toHaveURL(/collection=frames/);
+  await expect(page.getByLabel("1. Dạng bài")).toHaveValue("reply");
+  await page.getByRole("link", { name: "Đề cụ thể & bài mẫu mới" }).click();
+  await expect(page.getByText("50 bài viết riêng theo từng đề", { exact: false })).toBeVisible();
+});

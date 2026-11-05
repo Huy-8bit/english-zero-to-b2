@@ -1,3 +1,15 @@
+# Researched VSTEP prompts and individually authored model answers — 2026-11-05
+
+Request: research specific task prompts and correct model answers that did not reflect realistic tasks.
+
+- Read the Writing/Speaking pages in two university-published sample PDFs (Đồng Tháp PDF pages 17–18; ĐH Ngoại ngữ–ĐH Đà Nẵng pages 15–16), including visual checks of Speaking diagrams, and checked the ULIS format. [Research record and source links](platform/scripts/reference_library/RESEARCH.md).
+- New default collection: 50 individually authored answers, ten per Writing task / Speaking part. Each group has two source-adapted published sample tasks and eight original practice tasks. Explicit provenance distinguishes sample papers from original practice; no claim these are administered exam papers or officially scored answers. Task 1 answers are 150–159 words; Task 2 answers are 273–293 words.
+- Each brief has its own requirements, arguments and examples. Hotel letter explicitly answers hotel-organised trips, price, included breakfast and restaurant vegetarian meals; hosting letter covers character/interests/current studies. Speaking Part 2 has ten distinct option sets and labels assumptions beyond the prompt. Part 3 follows specific suggested branches and has separate follow-up answers.
+- Reader adds source/page links, questions before answers, suggested branches and requirement-to-answer evidence. Functional phrases remain underlined without treating topic claims as universal frames. Letter guide no longer assumes exactly three requirements.
+- The old 1,550 scaffold variants remain in an explicitly labelled archive, with original IDs/progress and old deep links preserved. New `exam-*` IDs cannot inherit old reading credit. The new collection does not yet reproduce the old five-topic × ten-sample scale for every form; this release corrects the core collection, not all 1,550 old variants.
+- Validation: both content compilers/checkers pass; 11 library unit tests pass; 14 relevant desktop/mobile browser scenarios pass (one selector-only test correction rerun), including old typing-course regression, source/coverage rendering, failed-download recovery, archive links, underlining, server progress restoration and accessibility. Large-text mobile viewport screenshots and desktop reader inspected; TypeScript, lint and production build pass.
+- Frontend rebuilt/redeployed at localhost:8080. All six new JSON assets match source byte-for-byte, archive index is unchanged, and the deployed reader bundle contains the new collection UI. Backend remains healthy with 224 units. No learner database or schema changes.
+
 # Reusable underlined frames and letter register hierarchy — 2026-11-05
 
 Request: underline memorisation frames in model answers; separate formal/informal letters and expand the missing formal purposes.

@@ -4,7 +4,7 @@ import { resetTestDatabase } from "./database";
 
 test.beforeEach(resetTestDatabase);
 test("mobile model library: topic filters, reader and next article fit the screen", async ({ page }) => {
-  await page.goto("/model-library?skill=writing&group=writing-task1&type=invitation&topic=environment");
+  await page.goto("/model-library?collection=frames&skill=writing&group=writing-task1&type=invitation&topic=environment");
   const list = page.getByRole("list", { name: "Danh sách bài mẫu" });
   await expect(list.getByRole("button")).toHaveCount(10);
   expect(await page.evaluate(() => document.documentElement.scrollWidth - innerWidth)).toBeLessThanOrEqual(1);
