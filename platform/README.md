@@ -48,12 +48,14 @@ Restore Docker kiểm tra archive trước, dừng API nếu đang chạy, tạo
 
 Mở `/model-library` hoặc nút **Đọc bài mẫu** trong Writing/Speaking Studio và trang kỹ năng.
 
-- **1.150 bài hoàn chỉnh**: Task 1 có 10 mục đích thư × 5 chủ đề × 10 bài = 500; Task 2 có 10 dạng/biến thể × 5 × 10 = 500; Speaking có 3 phần × 5 × 10 = 150.
-- Năm nhóm: giáo dục; công nghệ; thiên nhiên/môi trường; công việc/xã hội; đời sống/sức khỏe/du lịch. Mỗi nhóm có 10 tình huống được biên soạn với lợi ích, cơ chế, ví dụ, khó khăn, nguyên nhân, cách xử lý và cụm từ. Các dạng dùng lại tình huống và khung câu để hỗ trợ ghi nhớ, không phải 1.150 chủ đề độc lập.
+- **1.550 bài hoàn chỉnh**: Task 1 có 10 mục đích thư trang trọng + 8 mục đích thư thân mật, mỗi dạng 5 chủ đề × 10 bài = 900; Task 2 có 10 dạng/biến thể × 5 × 10 = 500; Speaking có 3 phần × 5 × 10 = 150.
+- Năm nhóm: giáo dục; công nghệ; thiên nhiên/môi trường; công việc/xã hội; đời sống/sức khỏe/du lịch. Mỗi nhóm có 10 tình huống được biên soạn với lợi ích, cơ chế, ví dụ, khó khăn, nguyên nhân, cách xử lý và cụm từ. Các dạng dùng lại tình huống và khung câu để hỗ trợ ghi nhớ, không phải 1.550 chủ đề độc lập.
+- **Học khung trong bài mẫu:** phần có thể dùng lại được gạch chân mặc định, bật/tắt mà không thay nội dung. Thư dùng dữ liệu phân đoạn từ chỗ trống của khung, nên tên, ngày, địa điểm, ví dụ và thông tin cá nhân không bị gạch chân nhầm. Task 2/Speaking dùng danh sách câu dẫn được chọn theo chức năng, không gạch chân luận điểm theo chủ đề. Các bài minh họa trong màn hình luyện khung cũng gạch chân phần cố định.
+- **Giọng thư → mục đích → chủ đề:** trang trọng (trả lời thông tin, lời khuyên, mời, nhận lời, từ chối, cảm ơn, xin lỗi, hỏi/yêu cầu, phàn nàn, xin việc); thân mật có 8 mục đích đầu phù hợp, gồm hỏi thông tin. Có khung chung mỗi giọng, khung đầy đủ giống nhau trên 50 bài mỗi dạng, cách chào/ký tên và nút so sánh bản còn lại cùng tình huống. Xin việc là ứng tuyển vị trí có trả lương, gồm kinh nghiệm, kỹ năng, động lực, lịch làm và phỏng vấn. Giữ nguyên ID các bài cũ để bảo toàn liên kết/tiến độ.
 - Mỗi bài có đề, dàn ý tiếng Việt, câu trả lời đầy đủ, ghi chú từng đoạn, 3 cụm từ theo chủ đề và câu nối dùng lại. Bài Speaking đúng cấu trúc phần: 6 hỏi–đáp/2 chủ đề nhỏ; chọn 1 trong 3 phương án và so sánh; bài nói 3 nhánh và 3 hỏi–đáp mở rộng. Nội dung tự luyện, không phải đề thi thật hoặc bài được chứng nhận điểm.
 - Bộ lọc dạng/chủ đề, tìm tiêu đề tiếng Việt không dấu hoặc tiếng Anh trong 10 bài, lọc bài đã lưu/chưa đọc, liên kết trực tiếp, bài trước/tiếp, ẩn ghi chú, nghe từng đoạn/cụm từ và tùy chỉnh trang đọc. Đọc nội dung không cần gọi AI; nghe dùng hệ thống TTS hiện có.
 - Tiến độ ở `em-model-library`, đồng bộ qua `/api/state`; khi tải lại, hợp nhất theo thời điểm thay đổi từng bài, bao gồm thao tác bỏ đánh dấu. Không thay đổi database schema hoặc dữ liệu luyện khung cũ.
-- Nguồn biên soạn: `scripts/reference_library/scenarios.py` và `build_library.py`. Đầu ra tĩnh: `frontend/public/model-library-data/` (index + 115 bộ, mỗi bộ 10 bài), tải nội dung theo chủ đề khi mở bài, không nhúng cả thư viện vào JavaScript.
+- Nguồn biên soạn: `scripts/reference_library/scenarios.py`, `letter_frames.py`, `frame_annotations.py` và `build_library.py`. Đầu ra tĩnh: `frontend/public/model-library-data/` (index + 155 bộ, mỗi bộ 10 bài), tải nội dung theo chủ đề khi mở bài, không nhúng cả thư viện vào JavaScript.
 
 ```bash
 python3 scripts/reference_library/build_library.py          # xuất lại nội dung sau khi sửa nguồn

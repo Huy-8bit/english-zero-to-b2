@@ -8,7 +8,7 @@ test("Writing: all forms have ten samples, reading and bookmarks persist on serv
   const downloads: string[] = [];
   page.on("request", (request) => { if (/model-library-data\/writing/.test(request.url())) downloads.push(request.url()); });
   await page.goto("/writing-studio?mode=exam");
-  await page.getByRole("button", { name: "Đọc 1.000 bài mẫu" }).click();
+  await page.getByRole("button", { name: "Đọc bài mẫu Writing" }).click();
   await expect(page.getByRole("heading", { name: "Thư viện bài mẫu", exact: true })).toBeVisible();
   const list = page.getByRole("list", { name: "Danh sách bài mẫu" });
   await expect(list.getByRole("button")).toHaveCount(10);
@@ -91,4 +91,50 @@ test("failed downloads are retryable, invalid sample links recover and filters s
   failBucket = false;
   await page.getByRole("button", { name: "Thử lại", exact: true }).click();
   await expect(page.getByRole("heading", { name: "Bài mẫu hoàn chỉnh" })).toBeVisible();
+});
+
+
+test("letter register hierarchy, reusable underlines, scaffold and paired examples preserve English and saved links", async ({ page }) => {
+  await page.goto("/model-library?group=writing-task1&register=formal&type=formal-reply&topic=technology");
+  await expect(page.getByRole("button", { name: /^Trang trọng/ })).toHaveAttribute("aria-pressed", "true");
+  await expect(page.getByLabel("1. Dạng bài").locator("option")).toHaveCount(10);
+  await page.getByRole("list", { name: "Danh sách bài mẫu" }).getByRole("button").first().click();
+  const body = page.getByTestId("sample-answer-body");
+  await expect(body).toContainText("Dear Ms Brown,");
+  const fixed = body.locator('[data-frame="fixed"]');
+  expect(await fixed.count()).toBeGreaterThan(10);
+  expect((await fixed.allTextContents()).join(" ")).not.toMatch(/Ms Brown|Minh Nguyen|digital learning workshop/);
+  await expect(fixed.first()).toHaveCSS("text-decoration-line", "underline");
+  const textBefore = await body.locator('p[lang="en"]').allTextContents();
+  await page.getByLabel("Gạch chân khung cần thuộc").uncheck();
+  await expect(fixed).toHaveCount(0);
+  expect(await body.locator('p[lang="en"]').allTextContents()).toEqual(textBefore);
+  await page.getByLabel("Gạch chân khung cần thuộc").check();
+  await page.getByTestId("letter-frame-guide").locator("summary").click();
+  await expect(page.getByRole("heading", { name: "Khung đầy đủ của mục đích đang học" })).toBeVisible();
+  await expect(page.getByTestId("letter-frame-guide")).toContainText("Yours faithfully");
+  await expect(page.getByTestId("letter-frame-guide").locator("[data-frame-slot]").first()).toBeVisible();
+  const a11y = await new AxeBuilder({ page }).include('[data-testid="model-library"]').withTags(["wcag2a", "wcag2aa"]).analyze();
+  expect(a11y.violations.filter((v) => ["serious", "critical"].includes(v.impact ?? ""))).toEqual([]);
+  await page.screenshot({ path: test.info().outputPath("formal-letter-frames.png"), fullPage: true });
+  await page.getByRole("button", { name: "So sánh: bản thân mật cùng tình huống" }).click();
+  await expect(body).toContainText("Hi Alex,");
+  await expect(page).toHaveURL(/sample=writing-task1-reply-technology-01/);
+  await page.reload();
+  await expect(body).toContainText("Best wishes,");
+  await page.getByRole("button", { name: "Danh sách 10 bài", exact: true }).click();
+  await expect(page.getByRole("button", { name: /^Thân mật/ })).toHaveAttribute("aria-pressed", "true");
+  const form = page.getByLabel("1. Dạng bài");
+  const options = await form.locator("option").evaluateAll((elements) => elements.map((element) => (element as HTMLOptionElement).value));
+  expect(options).toHaveLength(8);
+  for (const option of options) {
+    await form.selectOption(option);
+    await expect(form).toHaveValue(option);
+    await expect(page.getByRole("list", { name: "Danh sách bài mẫu" }).getByRole("button")).toHaveCount(10);
+  }
+  await page.goto("/model-library?sample=writing-task1-application-work-03");
+  await expect(page.getByRole("heading", { name: "Bài mẫu hoàn chỉnh" })).toBeVisible();
+  await expect(body).toContainText("apply for the position of");
+  await expect(body).toContainText("interview");
+  await expect(page.getByRole("button", { name: /So sánh: bản thân mật/ })).toHaveCount(0);
 });

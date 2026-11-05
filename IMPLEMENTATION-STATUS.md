@@ -1,3 +1,13 @@
+# Reusable underlined frames and letter register hierarchy — 2026-11-05
+
+Request: underline memorisation frames in model answers; separate formal/informal letters and expand the missing formal purposes.
+
+- Task 1 now has 10 formal purposes and 8 informal purposes, each 5 topics × 10 models: 900 letters, 1,550 total library samples. Existing IDs retain their register and saved links; additional register variants have new IDs. Applications now address a paid part-time job with skills, availability and an interview request.
+- Letter source uses explicit template slots to separate fixed English from names, dates, examples and other details. Every purpose/register has one identical scaffold across its 50 models. Essay and Speaking annotations use curated reusable phrases, excluding topic-specific claims/examples. All annotations preserve the original plain text and speech input.
+- UI adds register selection before purpose, paired examples for the same scenario, common formal/informal scaffolds and full purpose-specific scaffolds. Underlining is on by default and can be hidden independently of Vietnamese notes. The existing 40 editable writing-frame applications also underline fixed text. Existing typing-course progress and vocabulary unlocking are unchanged.
+- Validation: all 1,550 generated samples checked; 16 targeted content/state tests and 10 browser tests passed, including both registers, every purpose, exact English preservation, plain-text mode, paired links/reload, existing typing progression and mobile/accessibility checks. TypeScript, lint and production build passed; desktop/mobile screenshots inspected.
+- Frontend redeployed; live index and all 155 topic buckets match source byte-for-byte. Verified the register/underline reader bundle `ModelLibraryPage-BUJKM5o3.js`; backend remains healthy with 224 curriculum units.
+
 # Writing & Speaking reference library — 2026-11-05
 
 Request: 5 topic groups × 10 full reference answers for every Writing form and Speaking part, then redeploy.

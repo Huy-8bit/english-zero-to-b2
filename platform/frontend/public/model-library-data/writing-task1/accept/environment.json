@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-05-v1",
+  "version": "2026-11-05-v2-frames",
   "samples": [
     {
       "id": "writing-task1-accept-environment-01",
@@ -9,40 +9,146 @@
       "number": 1,
       "title": "Phân loại rác",
       "focus": "sorting household waste",
-      "prompt": "Your friend has invited you to a neighbourhood recycling workshop. Accept the invitation, explain your travel plans, and ask about preparation while offering help.",
+      "prompt": "Your friend Alex has invited you to a neighbourhood recycling workshop. Accept the invitation, confirm the arrangements and ask about preparation while offering help.",
       "requirementsVi": [
-        "Nhận lời rõ ràng.",
-        "Nêu cách đến và giờ hẹn.",
-        "Hỏi cần chuẩn bị gì, đề nghị giúp."
+        "Nhận lời bằng câu thân mật dễ nhớ.",
+        "Xác nhận lịch và cách báo thay đổi.",
+        "Hỏi cần chuẩn bị gì và đề nghị giúp."
       ],
       "summaryVi": "Phân loại cần thùng và hướng dẫn rõ, đồng thời hệ thống thu gom phải thực hiện đúng.",
       "paragraphs": [
         {
-          "label": "Nhận lời",
-          "text": "Hi Alex,\n\nThank you for inviting me to a neighbourhood recycling workshop. I would love to come. I have been interested in sorting household waste for some time, so I am glad we will have a chance to explore it together.",
-          "noteVi": "Cảm ơn và trả lời trực tiếp lời mời."
+          "label": "Mở thư và nhận lời",
+          "text": "Hi Alex,\n\nThanks for inviting me to a neighbourhood recycling workshop. I would love to come. I have been interested in sorting household waste for a while, so I am glad we will have a chance to explore it together.",
+          "noteVi": "Nhận lời bằng câu thân mật dễ nhớ.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nThanks for inviting me to ",
+              "kind": "frame"
+            },
+            {
+              "text": "a neighbourhood recycling workshop",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". I would love to come. I have been interested in ",
+              "kind": "frame"
+            },
+            {
+              "text": "sorting household waste",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": " for a while, so I am glad we will have a chance to explore it together.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nThanks for inviting me to [sự kiện / hoạt động]. I would love to come. I have been interested in [chủ đề] for a while, so I am glad we will have a chance to explore it together."
         },
         {
-          "label": "Đi lại",
-          "text": "I can meet you at the community centre on Saturday at nine in the morning. I am planning to take the bus and arrive ten minutes early. If the time or meeting point changes, please send me a message before I leave home.",
-          "noteVi": "Lịch hẹn và phương án cập nhật."
+          "label": "Lịch hẹn",
+          "text": "I can meet you at the community centre on Saturday at nine in the morning. I will plan my journey so that I arrive a little early. If the time or meeting point changes, please send me a message before I leave home.",
+          "noteVi": "Xác nhận lịch và cách báo thay đổi.",
+          "parts": [
+            {
+              "text": "I can meet you at ",
+              "kind": "frame"
+            },
+            {
+              "text": "the community centre",
+              "kind": "detail",
+              "labelVi": "địa điểm"
+            },
+            {
+              "text": " on ",
+              "kind": "frame"
+            },
+            {
+              "text": "Saturday at nine in the morning",
+              "kind": "detail",
+              "labelVi": "ngày và giờ"
+            },
+            {
+              "text": ". I will plan my journey so that I arrive a little early. If the time or meeting point changes, please send me a message before I leave home.",
+              "kind": "frame"
+            }
+          ],
+          "template": "I can meet you at [địa điểm] on [ngày và giờ]. I will plan my journey so that I arrive a little early. If the time or meeting point changes, please send me a message before I leave home."
         },
         {
-          "label": "Chuẩn bị và hỗ trợ",
-          "text": "I understand that we will practise sorting common household items. I can bring a few clean empty containers, but could you let me know if anything else is needed? One useful point is that more recyclable material can be collected separately. For example, a family can keep a small box for clean bottles instead of putting them in the same bag as dinner leftovers. I would also be happy to help arrange the seats or hand out materials before the session begins.",
-          "noteVi": "Hỏi rõ chuẩn bị, nối với nội dung sự kiện."
+          "label": "Chuẩn bị",
+          "text": "I understand that we will practise sorting common household items. I can bring a few clean empty containers, but could you let me know if anything else is needed? I think it will be useful because more recyclable material can be collected separately. I would also be happy to help with the preparations.",
+          "noteVi": "Hỏi cần chuẩn bị gì và đề nghị giúp.",
+          "parts": [
+            {
+              "text": "I understand that we will ",
+              "kind": "frame"
+            },
+            {
+              "text": "practise sorting common household items",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". I can bring ",
+              "kind": "frame"
+            },
+            {
+              "text": "a few clean empty containers",
+              "kind": "detail",
+              "labelVi": "đồ cần mang"
+            },
+            {
+              "text": ", but could you let me know if anything else is needed? I think it will be useful because ",
+              "kind": "frame"
+            },
+            {
+              "text": "more recyclable material can be collected separately",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I would also be happy to help with the preparations.",
+              "kind": "frame"
+            }
+          ],
+          "template": "I understand that we will [hoạt động — động từ nguyên mẫu]. I can bring [đồ cần mang], but could you let me know if anything else is needed? I think it will be useful because [lợi ích — chủ ngữ + động từ]. I would also be happy to help with the preparations."
         },
         {
           "label": "Kết thư",
-          "text": "Thanks again for thinking of me. It will be lovely to spend time together and learn something practical. Let me know whether you would like me to arrive earlier to help.\n\nBest wishes,\nMinh",
-          "noteVi": "Thể hiện thiện chí và chốt."
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 200,
-      "mainWordCount": 200,
+      "register": "informal",
+      "wordCount": 170,
+      "mainWordCount": 170,
       "phrases": [
         {
           "en": "sort household waste",
@@ -60,12 +166,7 @@
           "inAnswer": true
         }
       ],
-      "framePhrases": [
-        {
-          "en": "For example",
-          "vi": "Ví dụ…"
-        }
-      ]
+      "framePhrases": []
     },
     {
       "id": "writing-task1-accept-environment-02",
@@ -75,40 +176,146 @@
       "number": 2,
       "title": "Bình nước dùng lại",
       "focus": "reusable water bottles",
-      "prompt": "Your friend has invited you to a refill bottle campaign event. Accept the invitation, explain your travel plans, and ask about preparation while offering help.",
+      "prompt": "Your friend Alex has invited you to a refill bottle campaign event. Accept the invitation, confirm the arrangements and ask about preparation while offering help.",
       "requirementsVi": [
-        "Nhận lời rõ ràng.",
-        "Nêu cách đến và giờ hẹn.",
-        "Hỏi cần chuẩn bị gì, đề nghị giúp."
+        "Nhận lời bằng câu thân mật dễ nhớ.",
+        "Xác nhận lịch và cách báo thay đổi.",
+        "Hỏi cần chuẩn bị gì và đề nghị giúp."
       ],
       "summaryVi": "Bình dùng lại giảm chai dùng một lần khi có chỗ lấy nước thuận tiện và được giữ sạch.",
       "paragraphs": [
         {
-          "label": "Nhận lời",
-          "text": "Hi Alex,\n\nThank you for inviting me to a refill bottle campaign event. I would love to come. I have been interested in reusable water bottles for some time, so I am glad we will have a chance to explore it together.",
-          "noteVi": "Cảm ơn và trả lời trực tiếp lời mời."
+          "label": "Mở thư và nhận lời",
+          "text": "Hi Alex,\n\nThanks for inviting me to a refill bottle campaign event. I would love to come. I have been interested in reusable water bottles for a while, so I am glad we will have a chance to explore it together.",
+          "noteVi": "Nhận lời bằng câu thân mật dễ nhớ.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nThanks for inviting me to ",
+              "kind": "frame"
+            },
+            {
+              "text": "a refill bottle campaign event",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". I would love to come. I have been interested in ",
+              "kind": "frame"
+            },
+            {
+              "text": "reusable water bottles",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": " for a while, so I am glad we will have a chance to explore it together.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nThanks for inviting me to [sự kiện / hoạt động]. I would love to come. I have been interested in [chủ đề] for a while, so I am glad we will have a chance to explore it together."
         },
         {
-          "label": "Đi lại",
-          "text": "I can meet you at the local library meeting room on Sunday at two in the afternoon. I am planning to take the bus and arrive ten minutes early. If the time or meeting point changes, please send me a message before I leave home.",
-          "noteVi": "Lịch hẹn và phương án cập nhật."
+          "label": "Lịch hẹn",
+          "text": "I can meet you at the local library meeting room on Sunday at two in the afternoon. I will plan my journey so that I arrive a little early. If the time or meeting point changes, please send me a message before I leave home.",
+          "noteVi": "Xác nhận lịch và cách báo thay đổi.",
+          "parts": [
+            {
+              "text": "I can meet you at ",
+              "kind": "frame"
+            },
+            {
+              "text": "the local library meeting room",
+              "kind": "detail",
+              "labelVi": "địa điểm"
+            },
+            {
+              "text": " on ",
+              "kind": "frame"
+            },
+            {
+              "text": "Sunday at two in the afternoon",
+              "kind": "detail",
+              "labelVi": "ngày và giờ"
+            },
+            {
+              "text": ". I will plan my journey so that I arrive a little early. If the time or meeting point changes, please send me a message before I leave home.",
+              "kind": "frame"
+            }
+          ],
+          "template": "I can meet you at [địa điểm] on [ngày và giờ]. I will plan my journey so that I arrive a little early. If the time or meeting point changes, please send me a message before I leave home."
         },
         {
-          "label": "Chuẩn bị và hỗ trợ",
-          "text": "I understand that we will compare reusable bottles and plan convenient refill points. I can bring a reusable water bottle, but could you let me know if anything else is needed? One useful point is that people can avoid buying a new plastic bottle each time they need water. For example, a student can refill a bottle at school before an afternoon sports lesson. I would also be happy to help arrange the seats or hand out materials before the session begins.",
-          "noteVi": "Hỏi rõ chuẩn bị, nối với nội dung sự kiện."
+          "label": "Chuẩn bị",
+          "text": "I understand that we will compare reusable bottles and plan convenient refill points. I can bring a reusable water bottle, but could you let me know if anything else is needed? I think it will be useful because people can avoid buying a new plastic bottle each time they need water. I would also be happy to help with the preparations.",
+          "noteVi": "Hỏi cần chuẩn bị gì và đề nghị giúp.",
+          "parts": [
+            {
+              "text": "I understand that we will ",
+              "kind": "frame"
+            },
+            {
+              "text": "compare reusable bottles and plan convenient refill points",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". I can bring ",
+              "kind": "frame"
+            },
+            {
+              "text": "a reusable water bottle",
+              "kind": "detail",
+              "labelVi": "đồ cần mang"
+            },
+            {
+              "text": ", but could you let me know if anything else is needed? I think it will be useful because ",
+              "kind": "frame"
+            },
+            {
+              "text": "people can avoid buying a new plastic bottle each time they need water",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I would also be happy to help with the preparations.",
+              "kind": "frame"
+            }
+          ],
+          "template": "I understand that we will [hoạt động — động từ nguyên mẫu]. I can bring [đồ cần mang], but could you let me know if anything else is needed? I think it will be useful because [lợi ích — chủ ngữ + động từ]. I would also be happy to help with the preparations."
         },
         {
           "label": "Kết thư",
-          "text": "Thanks again for thinking of me. It will be lovely to spend time together and learn something practical. Let me know whether you would like me to arrive earlier to help.\n\nBest wishes,\nMinh",
-          "noteVi": "Thể hiện thiện chí và chốt."
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 203,
-      "mainWordCount": 203,
+      "register": "informal",
+      "wordCount": 181,
+      "mainWordCount": 181,
       "phrases": [
         {
           "en": "a refill point",
@@ -126,12 +333,7 @@
           "inAnswer": false
         }
       ],
-      "framePhrases": [
-        {
-          "en": "For example",
-          "vi": "Ví dụ…"
-        }
-      ]
+      "framePhrases": []
     },
     {
       "id": "writing-task1-accept-environment-03",
@@ -141,40 +343,146 @@
       "number": 3,
       "title": "Vườn cộng đồng",
       "focus": "community gardens",
-      "prompt": "Your friend has invited you to a community gardening morning. Accept the invitation, explain your travel plans, and ask about preparation while offering help.",
+      "prompt": "Your friend Alex has invited you to a community gardening morning. Accept the invitation, confirm the arrangements and ask about preparation while offering help.",
       "requirementsVi": [
-        "Nhận lời rõ ràng.",
-        "Nêu cách đến và giờ hẹn.",
-        "Hỏi cần chuẩn bị gì, đề nghị giúp."
+        "Nhận lời bằng câu thân mật dễ nhớ.",
+        "Xác nhận lịch và cách báo thay đổi.",
+        "Hỏi cần chuẩn bị gì và đề nghị giúp."
       ],
       "summaryVi": "Vườn chung tạo cơ hội kết nối; cần phân công chăm cây lâu dài thay vì chỉ tổ chức ngày khai trương.",
       "paragraphs": [
         {
-          "label": "Nhận lời",
-          "text": "Hi Alex,\n\nThank you for inviting me to a community gardening morning. I would love to come. I have been interested in community gardens for some time, so I am glad we will have a chance to explore it together.",
-          "noteVi": "Cảm ơn và trả lời trực tiếp lời mời."
+          "label": "Mở thư và nhận lời",
+          "text": "Hi Alex,\n\nThanks for inviting me to a community gardening morning. I would love to come. I have been interested in community gardens for a while, so I am glad we will have a chance to explore it together.",
+          "noteVi": "Nhận lời bằng câu thân mật dễ nhớ.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nThanks for inviting me to ",
+              "kind": "frame"
+            },
+            {
+              "text": "a community gardening morning",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". I would love to come. I have been interested in ",
+              "kind": "frame"
+            },
+            {
+              "text": "community gardens",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": " for a while, so I am glad we will have a chance to explore it together.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nThanks for inviting me to [sự kiện / hoạt động]. I would love to come. I have been interested in [chủ đề] for a while, so I am glad we will have a chance to explore it together."
         },
         {
-          "label": "Đi lại",
-          "text": "I can meet you at the community garden on Saturday at nine in the morning. I am planning to take the bus and arrive ten minutes early. If the time or meeting point changes, please send me a message before I leave home.",
-          "noteVi": "Lịch hẹn và phương án cập nhật."
+          "label": "Lịch hẹn",
+          "text": "I can meet you at the community garden on Saturday at nine in the morning. I will plan my journey so that I arrive a little early. If the time or meeting point changes, please send me a message before I leave home.",
+          "noteVi": "Xác nhận lịch và cách báo thay đổi.",
+          "parts": [
+            {
+              "text": "I can meet you at ",
+              "kind": "frame"
+            },
+            {
+              "text": "the community garden",
+              "kind": "detail",
+              "labelVi": "địa điểm"
+            },
+            {
+              "text": " on ",
+              "kind": "frame"
+            },
+            {
+              "text": "Saturday at nine in the morning",
+              "kind": "detail",
+              "labelVi": "ngày và giờ"
+            },
+            {
+              "text": ". I will plan my journey so that I arrive a little early. If the time or meeting point changes, please send me a message before I leave home.",
+              "kind": "frame"
+            }
+          ],
+          "template": "I can meet you at [địa điểm] on [ngày và giờ]. I will plan my journey so that I arrive a little early. If the time or meeting point changes, please send me a message before I leave home."
         },
         {
-          "label": "Chuẩn bị và hỗ trợ",
-          "text": "I understand that we will plant herbs and organise a watering rota. I can bring gardening gloves, but could you let me know if anything else is needed? One useful point is that neighbours can work together and learn practical skills. For example, an experienced gardener can show a family how to grow herbs in a small raised bed. I would also be happy to help arrange the seats or hand out materials before the session begins.",
-          "noteVi": "Hỏi rõ chuẩn bị, nối với nội dung sự kiện."
+          "label": "Chuẩn bị",
+          "text": "I understand that we will plant herbs and organise a watering rota. I can bring gardening gloves, but could you let me know if anything else is needed? I think it will be useful because neighbours can work together and learn practical skills. I would also be happy to help with the preparations.",
+          "noteVi": "Hỏi cần chuẩn bị gì và đề nghị giúp.",
+          "parts": [
+            {
+              "text": "I understand that we will ",
+              "kind": "frame"
+            },
+            {
+              "text": "plant herbs and organise a watering rota",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". I can bring ",
+              "kind": "frame"
+            },
+            {
+              "text": "gardening gloves",
+              "kind": "detail",
+              "labelVi": "đồ cần mang"
+            },
+            {
+              "text": ", but could you let me know if anything else is needed? I think it will be useful because ",
+              "kind": "frame"
+            },
+            {
+              "text": "neighbours can work together and learn practical skills",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I would also be happy to help with the preparations.",
+              "kind": "frame"
+            }
+          ],
+          "template": "I understand that we will [hoạt động — động từ nguyên mẫu]. I can bring [đồ cần mang], but could you let me know if anything else is needed? I think it will be useful because [lợi ích — chủ ngữ + động từ]. I would also be happy to help with the preparations."
         },
         {
           "label": "Kết thư",
-          "text": "Thanks again for thinking of me. It will be lovely to spend time together and learn something practical. Let me know whether you would like me to arrive earlier to help.\n\nBest wishes,\nMinh",
-          "noteVi": "Thể hiện thiện chí và chốt."
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 194,
-      "mainWordCount": 194,
+      "register": "informal",
+      "wordCount": 169,
+      "mainWordCount": 169,
       "phrases": [
         {
           "en": "a community garden",
@@ -192,12 +500,7 @@
           "inAnswer": false
         }
       ],
-      "framePhrases": [
-        {
-          "en": "For example",
-          "vi": "Ví dụ…"
-        }
-      ]
+      "framePhrases": []
     },
     {
       "id": "writing-task1-accept-environment-04",
@@ -207,40 +510,146 @@
       "number": 4,
       "title": "Công viên trong thành phố",
       "focus": "urban parks",
-      "prompt": "Your friend has invited you to a local park planning meeting. Accept the invitation, explain your travel plans, and ask about preparation while offering help.",
+      "prompt": "Your friend Alex has invited you to a local park planning meeting. Accept the invitation, confirm the arrangements and ask about preparation while offering help.",
       "requirementsVi": [
-        "Nhận lời rõ ràng.",
-        "Nêu cách đến và giờ hẹn.",
-        "Hỏi cần chuẩn bị gì, đề nghị giúp."
+        "Nhận lời bằng câu thân mật dễ nhớ.",
+        "Xác nhận lịch và cách báo thay đổi.",
+        "Hỏi cần chuẩn bị gì và đề nghị giúp."
       ],
       "summaryVi": "Công viên công cộng cần dễ tiếp cận và được bảo trì để người dân thực sự dùng được.",
       "paragraphs": [
         {
-          "label": "Nhận lời",
-          "text": "Hi Alex,\n\nThank you for inviting me to a local park planning meeting. I would love to come. I have been interested in urban parks for some time, so I am glad we will have a chance to explore it together.",
-          "noteVi": "Cảm ơn và trả lời trực tiếp lời mời."
+          "label": "Mở thư và nhận lời",
+          "text": "Hi Alex,\n\nThanks for inviting me to a local park planning meeting. I would love to come. I have been interested in urban parks for a while, so I am glad we will have a chance to explore it together.",
+          "noteVi": "Nhận lời bằng câu thân mật dễ nhớ.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nThanks for inviting me to ",
+              "kind": "frame"
+            },
+            {
+              "text": "a local park planning meeting",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". I would love to come. I have been interested in ",
+              "kind": "frame"
+            },
+            {
+              "text": "urban parks",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": " for a while, so I am glad we will have a chance to explore it together.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nThanks for inviting me to [sự kiện / hoạt động]. I would love to come. I have been interested in [chủ đề] for a while, so I am glad we will have a chance to explore it together."
         },
         {
-          "label": "Đi lại",
-          "text": "I can meet you at the park entrance on Saturday at ten in the morning. I am planning to take the bus and arrive ten minutes early. If the time or meeting point changes, please send me a message before I leave home.",
-          "noteVi": "Lịch hẹn và phương án cập nhật."
+          "label": "Lịch hẹn",
+          "text": "I can meet you at the park entrance on Saturday at ten in the morning. I will plan my journey so that I arrive a little early. If the time or meeting point changes, please send me a message before I leave home.",
+          "noteVi": "Xác nhận lịch và cách báo thay đổi.",
+          "parts": [
+            {
+              "text": "I can meet you at ",
+              "kind": "frame"
+            },
+            {
+              "text": "the park entrance",
+              "kind": "detail",
+              "labelVi": "địa điểm"
+            },
+            {
+              "text": " on ",
+              "kind": "frame"
+            },
+            {
+              "text": "Saturday at ten in the morning",
+              "kind": "detail",
+              "labelVi": "ngày và giờ"
+            },
+            {
+              "text": ". I will plan my journey so that I arrive a little early. If the time or meeting point changes, please send me a message before I leave home.",
+              "kind": "frame"
+            }
+          ],
+          "template": "I can meet you at [địa điểm] on [ngày và giờ]. I will plan my journey so that I arrive a little early. If the time or meeting point changes, please send me a message before I leave home."
         },
         {
-          "label": "Chuẩn bị và hỗ trợ",
-          "text": "I understand that we will walk through the park and suggest useful improvements. I can bring comfortable walking shoes, but could you let me know if anything else is needed? One useful point is that residents have places to walk, rest and meet other people. For example, an older resident can take a short walk and meet neighbours on a bench close to home. I would also be happy to help arrange the seats or hand out materials before the session begins.",
-          "noteVi": "Hỏi rõ chuẩn bị, nối với nội dung sự kiện."
+          "label": "Chuẩn bị",
+          "text": "I understand that we will walk through the park and suggest useful improvements. I can bring comfortable walking shoes, but could you let me know if anything else is needed? I think it will be useful because residents have places to walk, rest and meet other people. I would also be happy to help with the preparations.",
+          "noteVi": "Hỏi cần chuẩn bị gì và đề nghị giúp.",
+          "parts": [
+            {
+              "text": "I understand that we will ",
+              "kind": "frame"
+            },
+            {
+              "text": "walk through the park and suggest useful improvements",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". I can bring ",
+              "kind": "frame"
+            },
+            {
+              "text": "comfortable walking shoes",
+              "kind": "detail",
+              "labelVi": "đồ cần mang"
+            },
+            {
+              "text": ", but could you let me know if anything else is needed? I think it will be useful because ",
+              "kind": "frame"
+            },
+            {
+              "text": "residents have places to walk, rest and meet other people",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I would also be happy to help with the preparations.",
+              "kind": "frame"
+            }
+          ],
+          "template": "I understand that we will [hoạt động — động từ nguyên mẫu]. I can bring [đồ cần mang], but could you let me know if anything else is needed? I think it will be useful because [lợi ích — chủ ngữ + động từ]. I would also be happy to help with the preparations."
         },
         {
           "label": "Kết thư",
-          "text": "Thanks again for thinking of me. It will be lovely to spend time together and learn something practical. Let me know whether you would like me to arrive earlier to help.\n\nBest wishes,\nMinh",
-          "noteVi": "Thể hiện thiện chí và chốt."
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 200,
-      "mainWordCount": 200,
+      "register": "informal",
+      "wordCount": 174,
+      "mainWordCount": 174,
       "phrases": [
         {
           "en": "public green spaces",
@@ -258,12 +667,7 @@
           "inAnswer": false
         }
       ],
-      "framePhrases": [
-        {
-          "en": "For example",
-          "vi": "Ví dụ…"
-        }
-      ]
+      "framePhrases": []
     },
     {
       "id": "writing-task1-accept-environment-05",
@@ -273,40 +677,146 @@
       "number": 5,
       "title": "Đi xe đạp",
       "focus": "cycling for short journeys",
-      "prompt": "Your friend has invited you to a safe cycling information day. Accept the invitation, explain your travel plans, and ask about preparation while offering help.",
+      "prompt": "Your friend Alex has invited you to a safe cycling information day. Accept the invitation, confirm the arrangements and ask about preparation while offering help.",
       "requirementsVi": [
-        "Nhận lời rõ ràng.",
-        "Nêu cách đến và giờ hẹn.",
-        "Hỏi cần chuẩn bị gì, đề nghị giúp."
+        "Nhận lời bằng câu thân mật dễ nhớ.",
+        "Xác nhận lịch và cách báo thay đổi.",
+        "Hỏi cần chuẩn bị gì và đề nghị giúp."
       ],
       "summaryVi": "Xe đạp phù hợp quãng ngắn khi đường đi liền mạch và các giao lộ được xử lý an toàn.",
       "paragraphs": [
         {
-          "label": "Nhận lời",
-          "text": "Hi Alex,\n\nThank you for inviting me to a safe cycling information day. I would love to come. I have been interested in cycling for short journeys for some time, so I am glad we will have a chance to explore it together.",
-          "noteVi": "Cảm ơn và trả lời trực tiếp lời mời."
+          "label": "Mở thư và nhận lời",
+          "text": "Hi Alex,\n\nThanks for inviting me to a safe cycling information day. I would love to come. I have been interested in cycling for short journeys for a while, so I am glad we will have a chance to explore it together.",
+          "noteVi": "Nhận lời bằng câu thân mật dễ nhớ.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nThanks for inviting me to ",
+              "kind": "frame"
+            },
+            {
+              "text": "a safe cycling information day",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". I would love to come. I have been interested in ",
+              "kind": "frame"
+            },
+            {
+              "text": "cycling for short journeys",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": " for a while, so I am glad we will have a chance to explore it together.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nThanks for inviting me to [sự kiện / hoạt động]. I would love to come. I have been interested in [chủ đề] for a while, so I am glad we will have a chance to explore it together."
         },
         {
-          "label": "Đi lại",
-          "text": "I can meet you at the community centre courtyard on Sunday at three in the afternoon. I am planning to take the bus and arrive ten minutes early. If the time or meeting point changes, please send me a message before I leave home.",
-          "noteVi": "Lịch hẹn và phương án cập nhật."
+          "label": "Lịch hẹn",
+          "text": "I can meet you at the community centre courtyard on Sunday at three in the afternoon. I will plan my journey so that I arrive a little early. If the time or meeting point changes, please send me a message before I leave home.",
+          "noteVi": "Xác nhận lịch và cách báo thay đổi.",
+          "parts": [
+            {
+              "text": "I can meet you at ",
+              "kind": "frame"
+            },
+            {
+              "text": "the community centre courtyard",
+              "kind": "detail",
+              "labelVi": "địa điểm"
+            },
+            {
+              "text": " on ",
+              "kind": "frame"
+            },
+            {
+              "text": "Sunday at three in the afternoon",
+              "kind": "detail",
+              "labelVi": "ngày và giờ"
+            },
+            {
+              "text": ". I will plan my journey so that I arrive a little early. If the time or meeting point changes, please send me a message before I leave home.",
+              "kind": "frame"
+            }
+          ],
+          "template": "I can meet you at [địa điểm] on [ngày và giờ]. I will plan my journey so that I arrive a little early. If the time or meeting point changes, please send me a message before I leave home."
         },
         {
-          "label": "Chuẩn bị và hỗ trợ",
-          "text": "I understand that we will plan short cycle routes and identify difficult junctions. I can bring a bicycle helmet, but could you let me know if anything else is needed? One useful point is that people have another way to travel without using a car. For example, a student can cycle from home to a nearby college if the route avoids fast traffic. I would also be happy to help arrange the seats or hand out materials before the session begins.",
-          "noteVi": "Hỏi rõ chuẩn bị, nối với nội dung sự kiện."
+          "label": "Chuẩn bị",
+          "text": "I understand that we will plan short cycle routes and identify difficult junctions. I can bring a bicycle helmet, but could you let me know if anything else is needed? I think it will be useful because people have another way to travel without using a car. I would also be happy to help with the preparations.",
+          "noteVi": "Hỏi cần chuẩn bị gì và đề nghị giúp.",
+          "parts": [
+            {
+              "text": "I understand that we will ",
+              "kind": "frame"
+            },
+            {
+              "text": "plan short cycle routes and identify difficult junctions",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". I can bring ",
+              "kind": "frame"
+            },
+            {
+              "text": "a bicycle helmet",
+              "kind": "detail",
+              "labelVi": "đồ cần mang"
+            },
+            {
+              "text": ", but could you let me know if anything else is needed? I think it will be useful because ",
+              "kind": "frame"
+            },
+            {
+              "text": "people have another way to travel without using a car",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I would also be happy to help with the preparations.",
+              "kind": "frame"
+            }
+          ],
+          "template": "I understand that we will [hoạt động — động từ nguyên mẫu]. I can bring [đồ cần mang], but could you let me know if anything else is needed? I think it will be useful because [lợi ích — chủ ngữ + động từ]. I would also be happy to help with the preparations."
         },
         {
           "label": "Kết thư",
-          "text": "Thanks again for thinking of me. It will be lovely to spend time together and learn something practical. Let me know whether you would like me to arrive earlier to help.\n\nBest wishes,\nMinh",
-          "noteVi": "Thể hiện thiện chí và chốt."
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 202,
-      "mainWordCount": 202,
+      "register": "informal",
+      "wordCount": 177,
+      "mainWordCount": 177,
       "phrases": [
         {
           "en": "short everyday journeys",
@@ -324,12 +834,7 @@
           "inAnswer": false
         }
       ],
-      "framePhrases": [
-        {
-          "en": "For example",
-          "vi": "Ví dụ…"
-        }
-      ]
+      "framePhrases": []
     },
     {
       "id": "writing-task1-accept-environment-06",
@@ -339,40 +844,146 @@
       "number": 6,
       "title": "Tiết kiệm điện ở nhà",
       "focus": "saving electricity at home",
-      "prompt": "Your friend has invited you to a household energy workshop. Accept the invitation, explain your travel plans, and ask about preparation while offering help.",
+      "prompt": "Your friend Alex has invited you to a household energy workshop. Accept the invitation, confirm the arrangements and ask about preparation while offering help.",
       "requirementsVi": [
-        "Nhận lời rõ ràng.",
-        "Nêu cách đến và giờ hẹn.",
-        "Hỏi cần chuẩn bị gì, đề nghị giúp."
+        "Nhận lời bằng câu thân mật dễ nhớ.",
+        "Xác nhận lịch và cách báo thay đổi.",
+        "Hỏi cần chuẩn bị gì và đề nghị giúp."
       ],
       "summaryVi": "Tiết kiệm điện nên bắt đầu từ việc dễ làm và phù hợp nhà thuê, thu nhập, thiết bị sẵn có.",
       "paragraphs": [
         {
-          "label": "Nhận lời",
-          "text": "Hi Alex,\n\nThank you for inviting me to a household energy workshop. I would love to come. I have been interested in saving electricity at home for some time, so I am glad we will have a chance to explore it together.",
-          "noteVi": "Cảm ơn và trả lời trực tiếp lời mời."
+          "label": "Mở thư và nhận lời",
+          "text": "Hi Alex,\n\nThanks for inviting me to a household energy workshop. I would love to come. I have been interested in saving electricity at home for a while, so I am glad we will have a chance to explore it together.",
+          "noteVi": "Nhận lời bằng câu thân mật dễ nhớ.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nThanks for inviting me to ",
+              "kind": "frame"
+            },
+            {
+              "text": "a household energy workshop",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". I would love to come. I have been interested in ",
+              "kind": "frame"
+            },
+            {
+              "text": "saving electricity at home",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": " for a while, so I am glad we will have a chance to explore it together.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nThanks for inviting me to [sự kiện / hoạt động]. I would love to come. I have been interested in [chủ đề] for a while, so I am glad we will have a chance to explore it together."
         },
         {
-          "label": "Đi lại",
-          "text": "I can meet you at the community centre on Wednesday at six in the evening. I am planning to take the bus and arrive ten minutes early. If the time or meeting point changes, please send me a message before I leave home.",
-          "noteVi": "Lịch hẹn và phương án cập nhật."
+          "label": "Lịch hẹn",
+          "text": "I can meet you at the community centre on Wednesday at six in the evening. I will plan my journey so that I arrive a little early. If the time or meeting point changes, please send me a message before I leave home.",
+          "noteVi": "Xác nhận lịch và cách báo thay đổi.",
+          "parts": [
+            {
+              "text": "I can meet you at ",
+              "kind": "frame"
+            },
+            {
+              "text": "the community centre",
+              "kind": "detail",
+              "labelVi": "địa điểm"
+            },
+            {
+              "text": " on ",
+              "kind": "frame"
+            },
+            {
+              "text": "Wednesday at six in the evening",
+              "kind": "detail",
+              "labelVi": "ngày và giờ"
+            },
+            {
+              "text": ". I will plan my journey so that I arrive a little early. If the time or meeting point changes, please send me a message before I leave home.",
+              "kind": "frame"
+            }
+          ],
+          "template": "I can meet you at [địa điểm] on [ngày và giờ]. I will plan my journey so that I arrive a little early. If the time or meeting point changes, please send me a message before I leave home."
         },
         {
-          "label": "Chuẩn bị và hỗ trợ",
-          "text": "I understand that we will review everyday habits and create a low-cost energy checklist. I can bring a recent electricity bill, but could you let me know if anything else is needed? One useful point is that families can avoid paying for energy they do not need. For example, a family can switch off lights in empty rooms and use a timer for an appliance that is often forgotten. I would also be happy to help arrange the seats or hand out materials before the session begins.",
-          "noteVi": "Hỏi rõ chuẩn bị, nối với nội dung sự kiện."
+          "label": "Chuẩn bị",
+          "text": "I understand that we will review everyday habits and create a low-cost energy checklist. I can bring a recent electricity bill, but could you let me know if anything else is needed? I think it will be useful because families can avoid paying for energy they do not need. I would also be happy to help with the preparations.",
+          "noteVi": "Hỏi cần chuẩn bị gì và đề nghị giúp.",
+          "parts": [
+            {
+              "text": "I understand that we will ",
+              "kind": "frame"
+            },
+            {
+              "text": "review everyday habits and create a low-cost energy checklist",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". I can bring ",
+              "kind": "frame"
+            },
+            {
+              "text": "a recent electricity bill",
+              "kind": "detail",
+              "labelVi": "đồ cần mang"
+            },
+            {
+              "text": ", but could you let me know if anything else is needed? I think it will be useful because ",
+              "kind": "frame"
+            },
+            {
+              "text": "families can avoid paying for energy they do not need",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I would also be happy to help with the preparations.",
+              "kind": "frame"
+            }
+          ],
+          "template": "I understand that we will [hoạt động — động từ nguyên mẫu]. I can bring [đồ cần mang], but could you let me know if anything else is needed? I think it will be useful because [lợi ích — chủ ngữ + động từ]. I would also be happy to help with the preparations."
         },
         {
           "label": "Kết thư",
-          "text": "Thanks again for thinking of me. It will be lovely to spend time together and learn something practical. Let me know whether you would like me to arrive earlier to help.\n\nBest wishes,\nMinh",
-          "noteVi": "Thể hiện thiện chí và chốt."
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 206,
-      "mainWordCount": 206,
+      "register": "informal",
+      "wordCount": 177,
+      "mainWordCount": 177,
       "phrases": [
         {
           "en": "unnecessary energy use",
@@ -390,12 +1001,7 @@
           "inAnswer": true
         }
       ],
-      "framePhrases": [
-        {
-          "en": "For example",
-          "vi": "Ví dụ…"
-        }
-      ]
+      "framePhrases": []
     },
     {
       "id": "writing-task1-accept-environment-07",
@@ -405,40 +1011,146 @@
       "number": 7,
       "title": "Bảo vệ động vật hoang dã",
       "focus": "responsible wildlife tourism",
-      "prompt": "Your friend has invited you to a responsible wildlife travel talk. Accept the invitation, explain your travel plans, and ask about preparation while offering help.",
+      "prompt": "Your friend Alex has invited you to a responsible wildlife travel talk. Accept the invitation, confirm the arrangements and ask about preparation while offering help.",
       "requirementsVi": [
-        "Nhận lời rõ ràng.",
-        "Nêu cách đến và giờ hẹn.",
-        "Hỏi cần chuẩn bị gì, đề nghị giúp."
+        "Nhận lời bằng câu thân mật dễ nhớ.",
+        "Xác nhận lịch và cách báo thay đổi.",
+        "Hỏi cần chuẩn bị gì và đề nghị giúp."
       ],
       "summaryVi": "Tham quan thiên nhiên cần quan sát có khoảng cách; nên hỏi cách chăm sóc động vật thay vì chỉ xem quảng cáo.",
       "paragraphs": [
         {
-          "label": "Nhận lời",
-          "text": "Hi Alex,\n\nThank you for inviting me to a responsible wildlife travel talk. I would love to come. I have been interested in responsible wildlife tourism for some time, so I am glad we will have a chance to explore it together.",
-          "noteVi": "Cảm ơn và trả lời trực tiếp lời mời."
+          "label": "Mở thư và nhận lời",
+          "text": "Hi Alex,\n\nThanks for inviting me to a responsible wildlife travel talk. I would love to come. I have been interested in responsible wildlife tourism for a while, so I am glad we will have a chance to explore it together.",
+          "noteVi": "Nhận lời bằng câu thân mật dễ nhớ.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nThanks for inviting me to ",
+              "kind": "frame"
+            },
+            {
+              "text": "a responsible wildlife travel talk",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". I would love to come. I have been interested in ",
+              "kind": "frame"
+            },
+            {
+              "text": "responsible wildlife tourism",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": " for a while, so I am glad we will have a chance to explore it together.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nThanks for inviting me to [sự kiện / hoạt động]. I would love to come. I have been interested in [chủ đề] for a while, so I am glad we will have a chance to explore it together."
         },
         {
-          "label": "Đi lại",
-          "text": "I can meet you at the local library on Saturday at two in the afternoon. I am planning to take the bus and arrive ten minutes early. If the time or meeting point changes, please send me a message before I leave home.",
-          "noteVi": "Lịch hẹn và phương án cập nhật."
+          "label": "Lịch hẹn",
+          "text": "I can meet you at the local library on Saturday at two in the afternoon. I will plan my journey so that I arrive a little early. If the time or meeting point changes, please send me a message before I leave home.",
+          "noteVi": "Xác nhận lịch và cách báo thay đổi.",
+          "parts": [
+            {
+              "text": "I can meet you at ",
+              "kind": "frame"
+            },
+            {
+              "text": "the local library",
+              "kind": "detail",
+              "labelVi": "địa điểm"
+            },
+            {
+              "text": " on ",
+              "kind": "frame"
+            },
+            {
+              "text": "Saturday at two in the afternoon",
+              "kind": "detail",
+              "labelVi": "ngày và giờ"
+            },
+            {
+              "text": ". I will plan my journey so that I arrive a little early. If the time or meeting point changes, please send me a message before I leave home.",
+              "kind": "frame"
+            }
+          ],
+          "template": "I can meet you at [địa điểm] on [ngày và giờ]. I will plan my journey so that I arrive a little early. If the time or meeting point changes, please send me a message before I leave home."
         },
         {
-          "label": "Chuẩn bị và hỗ trợ",
-          "text": "I understand that we will compare nature tours and discuss respectful observation. I can bring a notebook for travel questions, but could you let me know if anything else is needed? One useful point is that visitors can enjoy nature without treating animals as objects for entertainment. For example, a guided birdwatching group can use binoculars instead of approaching a nesting area. I would also be happy to help arrange the seats or hand out materials before the session begins.",
-          "noteVi": "Hỏi rõ chuẩn bị, nối với nội dung sự kiện."
+          "label": "Chuẩn bị",
+          "text": "I understand that we will compare nature tours and discuss respectful observation. I can bring a notebook for travel questions, but could you let me know if anything else is needed? I think it will be useful because visitors can enjoy nature without treating animals as objects for entertainment. I would also be happy to help with the preparations.",
+          "noteVi": "Hỏi cần chuẩn bị gì và đề nghị giúp.",
+          "parts": [
+            {
+              "text": "I understand that we will ",
+              "kind": "frame"
+            },
+            {
+              "text": "compare nature tours and discuss respectful observation",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". I can bring ",
+              "kind": "frame"
+            },
+            {
+              "text": "a notebook for travel questions",
+              "kind": "detail",
+              "labelVi": "đồ cần mang"
+            },
+            {
+              "text": ", but could you let me know if anything else is needed? I think it will be useful because ",
+              "kind": "frame"
+            },
+            {
+              "text": "visitors can enjoy nature without treating animals as objects for entertainment",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I would also be happy to help with the preparations.",
+              "kind": "frame"
+            }
+          ],
+          "template": "I understand that we will [hoạt động — động từ nguyên mẫu]. I can bring [đồ cần mang], but could you let me know if anything else is needed? I think it will be useful because [lợi ích — chủ ngữ + động từ]. I would also be happy to help with the preparations."
         },
         {
           "label": "Kết thư",
-          "text": "Thanks again for thinking of me. It will be lovely to spend time together and learn something practical. Let me know whether you would like me to arrive earlier to help.\n\nBest wishes,\nMinh",
-          "noteVi": "Thể hiện thiện chí và chốt."
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 199,
-      "mainWordCount": 199,
+      "register": "informal",
+      "wordCount": 177,
+      "mainWordCount": 177,
       "phrases": [
         {
           "en": "observe from a distance",
@@ -456,12 +1168,7 @@
           "inAnswer": false
         }
       ],
-      "framePhrases": [
-        {
-          "en": "For example",
-          "vi": "Ví dụ…"
-        }
-      ]
+      "framePhrases": []
     },
     {
       "id": "writing-task1-accept-environment-08",
@@ -471,40 +1178,146 @@
       "number": 8,
       "title": "Giảm lãng phí thực phẩm",
       "focus": "food waste at home",
-      "prompt": "Your friend has invited you to a meal planning workshop. Accept the invitation, explain your travel plans, and ask about preparation while offering help.",
+      "prompt": "Your friend Alex has invited you to a meal planning workshop. Accept the invitation, confirm the arrangements and ask about preparation while offering help.",
       "requirementsVi": [
-        "Nhận lời rõ ràng.",
-        "Nêu cách đến và giờ hẹn.",
-        "Hỏi cần chuẩn bị gì, đề nghị giúp."
+        "Nhận lời bằng câu thân mật dễ nhớ.",
+        "Xác nhận lịch và cách báo thay đổi.",
+        "Hỏi cần chuẩn bị gì và đề nghị giúp."
       ],
       "summaryVi": "Lên thực đơn giúp bớt mua thừa; kế hoạch cần linh hoạt để dùng được đồ còn lại khi lịch thay đổi.",
       "paragraphs": [
         {
-          "label": "Nhận lời",
-          "text": "Hi Alex,\n\nThank you for inviting me to a meal planning workshop. I would love to come. I have been interested in food waste at home for some time, so I am glad we will have a chance to explore it together.",
-          "noteVi": "Cảm ơn và trả lời trực tiếp lời mời."
+          "label": "Mở thư và nhận lời",
+          "text": "Hi Alex,\n\nThanks for inviting me to a meal planning workshop. I would love to come. I have been interested in food waste at home for a while, so I am glad we will have a chance to explore it together.",
+          "noteVi": "Nhận lời bằng câu thân mật dễ nhớ.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nThanks for inviting me to ",
+              "kind": "frame"
+            },
+            {
+              "text": "a meal planning workshop",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". I would love to come. I have been interested in ",
+              "kind": "frame"
+            },
+            {
+              "text": "food waste at home",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": " for a while, so I am glad we will have a chance to explore it together.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nThanks for inviting me to [sự kiện / hoạt động]. I would love to come. I have been interested in [chủ đề] for a while, so I am glad we will have a chance to explore it together."
         },
         {
-          "label": "Đi lại",
-          "text": "I can meet you at the school meeting room on Sunday at ten in the morning. I am planning to take the bus and arrive ten minutes early. If the time or meeting point changes, please send me a message before I leave home.",
-          "noteVi": "Lịch hẹn và phương án cập nhật."
+          "label": "Lịch hẹn",
+          "text": "I can meet you at the school meeting room on Sunday at ten in the morning. I will plan my journey so that I arrive a little early. If the time or meeting point changes, please send me a message before I leave home.",
+          "noteVi": "Xác nhận lịch và cách báo thay đổi.",
+          "parts": [
+            {
+              "text": "I can meet you at ",
+              "kind": "frame"
+            },
+            {
+              "text": "the school meeting room",
+              "kind": "detail",
+              "labelVi": "địa điểm"
+            },
+            {
+              "text": " on ",
+              "kind": "frame"
+            },
+            {
+              "text": "Sunday at ten in the morning",
+              "kind": "detail",
+              "labelVi": "ngày và giờ"
+            },
+            {
+              "text": ". I will plan my journey so that I arrive a little early. If the time or meeting point changes, please send me a message before I leave home.",
+              "kind": "frame"
+            }
+          ],
+          "template": "I can meet you at [địa điểm] on [ngày và giờ]. I will plan my journey so that I arrive a little early. If the time or meeting point changes, please send me a message before I leave home."
         },
         {
-          "label": "Chuẩn bị và hỗ trợ",
-          "text": "I understand that we will make a flexible menu and a practical shopping list. I can bring a list of food already at home, but could you let me know if anything else is needed? One useful point is that households can use more of the food they buy. For example, a family can use the same vegetables in a soup and a rice dish instead of buying separate ingredients for every meal. I would also be happy to help arrange the seats or hand out materials before the session begins.",
-          "noteVi": "Hỏi rõ chuẩn bị, nối với nội dung sự kiện."
+          "label": "Chuẩn bị",
+          "text": "I understand that we will make a flexible menu and a practical shopping list. I can bring a list of food already at home, but could you let me know if anything else is needed? I think it will be useful because households can use more of the food they buy. I would also be happy to help with the preparations.",
+          "noteVi": "Hỏi cần chuẩn bị gì và đề nghị giúp.",
+          "parts": [
+            {
+              "text": "I understand that we will ",
+              "kind": "frame"
+            },
+            {
+              "text": "make a flexible menu and a practical shopping list",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". I can bring ",
+              "kind": "frame"
+            },
+            {
+              "text": "a list of food already at home",
+              "kind": "detail",
+              "labelVi": "đồ cần mang"
+            },
+            {
+              "text": ", but could you let me know if anything else is needed? I think it will be useful because ",
+              "kind": "frame"
+            },
+            {
+              "text": "households can use more of the food they buy",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I would also be happy to help with the preparations.",
+              "kind": "frame"
+            }
+          ],
+          "template": "I understand that we will [hoạt động — động từ nguyên mẫu]. I can bring [đồ cần mang], but could you let me know if anything else is needed? I think it will be useful because [lợi ích — chủ ngữ + động từ]. I would also be happy to help with the preparations."
         },
         {
           "label": "Kết thư",
-          "text": "Thanks again for thinking of me. It will be lovely to spend time together and learn something practical. Let me know whether you would like me to arrive earlier to help.\n\nBest wishes,\nMinh",
-          "noteVi": "Thể hiện thiện chí và chốt."
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 211,
-      "mainWordCount": 211,
+      "register": "informal",
+      "wordCount": 180,
+      "mainWordCount": 180,
       "phrases": [
         {
           "en": "plan meals",
@@ -522,12 +1335,7 @@
           "inAnswer": true
         }
       ],
-      "framePhrases": [
-        {
-          "en": "For example",
-          "vi": "Ví dụ…"
-        }
-      ]
+      "framePhrases": []
     },
     {
       "id": "writing-task1-accept-environment-09",
@@ -537,40 +1345,146 @@
       "number": 9,
       "title": "Dọn rác bãi biển",
       "focus": "community beach clean-ups",
-      "prompt": "Your friend has invited you to a community beach clean-up. Accept the invitation, explain your travel plans, and ask about preparation while offering help.",
+      "prompt": "Your friend Alex has invited you to a community beach clean-up. Accept the invitation, confirm the arrangements and ask about preparation while offering help.",
       "requirementsVi": [
-        "Nhận lời rõ ràng.",
-        "Nêu cách đến và giờ hẹn.",
-        "Hỏi cần chuẩn bị gì, đề nghị giúp."
+        "Nhận lời bằng câu thân mật dễ nhớ.",
+        "Xác nhận lịch và cách báo thay đổi.",
+        "Hỏi cần chuẩn bị gì và đề nghị giúp."
       ],
       "summaryVi": "Dọn rác giúp cải thiện trước mắt; cần dùng kết quả để ngăn rác mới xuất hiện.",
       "paragraphs": [
         {
-          "label": "Nhận lời",
-          "text": "Hi Alex,\n\nThank you for inviting me to a community beach clean-up. I would love to come. I have been interested in community beach clean-ups for some time, so I am glad we will have a chance to explore it together.",
-          "noteVi": "Cảm ơn và trả lời trực tiếp lời mời."
+          "label": "Mở thư và nhận lời",
+          "text": "Hi Alex,\n\nThanks for inviting me to a community beach clean-up. I would love to come. I have been interested in community beach clean-ups for a while, so I am glad we will have a chance to explore it together.",
+          "noteVi": "Nhận lời bằng câu thân mật dễ nhớ.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nThanks for inviting me to ",
+              "kind": "frame"
+            },
+            {
+              "text": "a community beach clean-up",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". I would love to come. I have been interested in ",
+              "kind": "frame"
+            },
+            {
+              "text": "community beach clean-ups",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": " for a while, so I am glad we will have a chance to explore it together.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nThanks for inviting me to [sự kiện / hoạt động]. I would love to come. I have been interested in [chủ đề] for a while, so I am glad we will have a chance to explore it together."
         },
         {
-          "label": "Đi lại",
-          "text": "I can meet you at the beach entrance on Thursday at six in the evening. I am planning to take the bus and arrive ten minutes early. If the time or meeting point changes, please send me a message before I leave home.",
-          "noteVi": "Lịch hẹn và phương án cập nhật."
+          "label": "Lịch hẹn",
+          "text": "I can meet you at the beach entrance on Thursday at six in the evening. I will plan my journey so that I arrive a little early. If the time or meeting point changes, please send me a message before I leave home.",
+          "noteVi": "Xác nhận lịch và cách báo thay đổi.",
+          "parts": [
+            {
+              "text": "I can meet you at ",
+              "kind": "frame"
+            },
+            {
+              "text": "the beach entrance",
+              "kind": "detail",
+              "labelVi": "địa điểm"
+            },
+            {
+              "text": " on ",
+              "kind": "frame"
+            },
+            {
+              "text": "Thursday at six in the evening",
+              "kind": "detail",
+              "labelVi": "ngày và giờ"
+            },
+            {
+              "text": ". I will plan my journey so that I arrive a little early. If the time or meeting point changes, please send me a message before I leave home.",
+              "kind": "frame"
+            }
+          ],
+          "template": "I can meet you at [địa điểm] on [ngày và giờ]. I will plan my journey so that I arrive a little early. If the time or meeting point changes, please send me a message before I leave home."
         },
         {
-          "label": "Chuẩn bị và hỗ trợ",
-          "text": "I understand that we will collect litter in assigned areas and record the most common items. I can bring reusable gloves and a hat, but could you let me know if anything else is needed? One useful point is that volunteers can improve a public place and understand the scale of the problem. For example, a family can help record the kinds of packaging found on one section of beach. I would also be happy to help arrange the seats or hand out materials before the session begins.",
-          "noteVi": "Hỏi rõ chuẩn bị, nối với nội dung sự kiện."
+          "label": "Chuẩn bị",
+          "text": "I understand that we will collect litter in assigned areas and record the most common items. I can bring reusable gloves and a hat, but could you let me know if anything else is needed? I think it will be useful because volunteers can improve a public place and understand the scale of the problem. I would also be happy to help with the preparations.",
+          "noteVi": "Hỏi cần chuẩn bị gì và đề nghị giúp.",
+          "parts": [
+            {
+              "text": "I understand that we will ",
+              "kind": "frame"
+            },
+            {
+              "text": "collect litter in assigned areas and record the most common items",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". I can bring ",
+              "kind": "frame"
+            },
+            {
+              "text": "reusable gloves and a hat",
+              "kind": "detail",
+              "labelVi": "đồ cần mang"
+            },
+            {
+              "text": ", but could you let me know if anything else is needed? I think it will be useful because ",
+              "kind": "frame"
+            },
+            {
+              "text": "volunteers can improve a public place and understand the scale of the problem",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I would also be happy to help with the preparations.",
+              "kind": "frame"
+            }
+          ],
+          "template": "I understand that we will [hoạt động — động từ nguyên mẫu]. I can bring [đồ cần mang], but could you let me know if anything else is needed? I think it will be useful because [lợi ích — chủ ngữ + động từ]. I would also be happy to help with the preparations."
         },
         {
           "label": "Kết thư",
-          "text": "Thanks again for thinking of me. It will be lovely to spend time together and learn something practical. Let me know whether you would like me to arrive earlier to help.\n\nBest wishes,\nMinh",
-          "noteVi": "Thể hiện thiện chí và chốt."
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 206,
-      "mainWordCount": 206,
+      "register": "informal",
+      "wordCount": 182,
+      "mainWordCount": 182,
       "phrases": [
         {
           "en": "a beach clean-up",
@@ -588,12 +1502,7 @@
           "inAnswer": false
         }
       ],
-      "framePhrases": [
-        {
-          "en": "For example",
-          "vi": "Ví dụ…"
-        }
-      ]
+      "framePhrases": []
     },
     {
       "id": "writing-task1-accept-environment-10",
@@ -603,40 +1512,146 @@
       "number": 10,
       "title": "Tiết kiệm nước",
       "focus": "saving water in daily life",
-      "prompt": "Your friend has invited you to a community water-saving session. Accept the invitation, explain your travel plans, and ask about preparation while offering help.",
+      "prompt": "Your friend Alex has invited you to a community water-saving session. Accept the invitation, confirm the arrangements and ask about preparation while offering help.",
       "requirementsVi": [
-        "Nhận lời rõ ràng.",
-        "Nêu cách đến và giờ hẹn.",
-        "Hỏi cần chuẩn bị gì, đề nghị giúp."
+        "Nhận lời bằng câu thân mật dễ nhớ.",
+        "Xác nhận lịch và cách báo thay đổi.",
+        "Hỏi cần chuẩn bị gì và đề nghị giúp."
       ],
       "summaryVi": "Thói quen tiết kiệm nước cần đi cùng cách báo và sửa rò rỉ rõ trách nhiệm.",
       "paragraphs": [
         {
-          "label": "Nhận lời",
-          "text": "Hi Alex,\n\nThank you for inviting me to a community water-saving session. I would love to come. I have been interested in saving water in daily life for some time, so I am glad we will have a chance to explore it together.",
-          "noteVi": "Cảm ơn và trả lời trực tiếp lời mời."
+          "label": "Mở thư và nhận lời",
+          "text": "Hi Alex,\n\nThanks for inviting me to a community water-saving session. I would love to come. I have been interested in saving water in daily life for a while, so I am glad we will have a chance to explore it together.",
+          "noteVi": "Nhận lời bằng câu thân mật dễ nhớ.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nThanks for inviting me to ",
+              "kind": "frame"
+            },
+            {
+              "text": "a community water-saving session",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". I would love to come. I have been interested in ",
+              "kind": "frame"
+            },
+            {
+              "text": "saving water in daily life",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": " for a while, so I am glad we will have a chance to explore it together.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nThanks for inviting me to [sự kiện / hoạt động]. I would love to come. I have been interested in [chủ đề] for a while, so I am glad we will have a chance to explore it together."
         },
         {
-          "label": "Đi lại",
-          "text": "I can meet you at the college activity room on Saturday at three in the afternoon. I am planning to take the bus and arrive ten minutes early. If the time or meeting point changes, please send me a message before I leave home.",
-          "noteVi": "Lịch hẹn và phương án cập nhật."
+          "label": "Lịch hẹn",
+          "text": "I can meet you at the college activity room on Saturday at three in the afternoon. I will plan my journey so that I arrive a little early. If the time or meeting point changes, please send me a message before I leave home.",
+          "noteVi": "Xác nhận lịch và cách báo thay đổi.",
+          "parts": [
+            {
+              "text": "I can meet you at ",
+              "kind": "frame"
+            },
+            {
+              "text": "the college activity room",
+              "kind": "detail",
+              "labelVi": "địa điểm"
+            },
+            {
+              "text": " on ",
+              "kind": "frame"
+            },
+            {
+              "text": "Saturday at three in the afternoon",
+              "kind": "detail",
+              "labelVi": "ngày và giờ"
+            },
+            {
+              "text": ". I will plan my journey so that I arrive a little early. If the time or meeting point changes, please send me a message before I leave home.",
+              "kind": "frame"
+            }
+          ],
+          "template": "I can meet you at [địa điểm] on [ngày và giờ]. I will plan my journey so that I arrive a little early. If the time or meeting point changes, please send me a message before I leave home."
         },
         {
-          "label": "Chuẩn bị và hỗ trợ",
-          "text": "I understand that we will identify common sources of waste and practise reporting leaks. I can bring a note of any water problems at home, but could you let me know if anything else is needed? One useful point is that people can avoid wasting treated water. For example, a household can repair a dripping tap and use a bowl when washing a small amount of produce. I would also be happy to help arrange the seats or hand out materials before the session begins.",
-          "noteVi": "Hỏi rõ chuẩn bị, nối với nội dung sự kiện."
+          "label": "Chuẩn bị",
+          "text": "I understand that we will identify common sources of waste and practise reporting leaks. I can bring a note of any water problems at home, but could you let me know if anything else is needed? I think it will be useful because people can avoid wasting treated water. I would also be happy to help with the preparations.",
+          "noteVi": "Hỏi cần chuẩn bị gì và đề nghị giúp.",
+          "parts": [
+            {
+              "text": "I understand that we will ",
+              "kind": "frame"
+            },
+            {
+              "text": "identify common sources of waste and practise reporting leaks",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". I can bring ",
+              "kind": "frame"
+            },
+            {
+              "text": "a note of any water problems at home",
+              "kind": "detail",
+              "labelVi": "đồ cần mang"
+            },
+            {
+              "text": ", but could you let me know if anything else is needed? I think it will be useful because ",
+              "kind": "frame"
+            },
+            {
+              "text": "people can avoid wasting treated water",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I would also be happy to help with the preparations.",
+              "kind": "frame"
+            }
+          ],
+          "template": "I understand that we will [hoạt động — động từ nguyên mẫu]. I can bring [đồ cần mang], but could you let me know if anything else is needed? I think it will be useful because [lợi ích — chủ ngữ + động từ]. I would also be happy to help with the preparations."
         },
         {
           "label": "Kết thư",
-          "text": "Thanks again for thinking of me. It will be lovely to spend time together and learn something practical. Let me know whether you would like me to arrive earlier to help.\n\nBest wishes,\nMinh",
-          "noteVi": "Thể hiện thiện chí và chốt."
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 206,
-      "mainWordCount": 206,
+      "register": "informal",
+      "wordCount": 179,
+      "mainWordCount": 179,
       "phrases": [
         {
           "en": "repair a leak",
@@ -654,12 +1669,7 @@
           "inAnswer": false
         }
       ],
-      "framePhrases": [
-        {
-          "en": "For example",
-          "vi": "Ví dụ…"
-        }
-      ]
+      "framePhrases": []
     }
   ]
 }

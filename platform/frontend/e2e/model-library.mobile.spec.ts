@@ -17,6 +17,10 @@ test("mobile model library: topic filters, reader and next article fit the scree
   await dialog.getByRole("button", { name: "Xong", exact: true }).click();
   await expect(page.getByTestId("sample-answer-body").locator('p[lang="en"]').first()).toHaveCSS("font-size", "23px");
   expect(await page.evaluate(() => document.documentElement.scrollWidth - innerWidth)).toBeLessThanOrEqual(1);
+  await page.getByTestId("letter-frame-guide").locator("summary").click();
+  await expect(page.getByTestId("letter-frame-guide").locator("[data-frame-slot]").first()).toBeVisible();
+  expect(await page.evaluate(() => document.documentElement.scrollWidth - innerWidth)).toBeLessThanOrEqual(1);
+  await expect(page.getByTestId("sample-answer-body").locator('[data-frame="fixed"]').first()).toHaveCSS("text-decoration-line", "underline");
   const a11y = await new AxeBuilder({ page }).include('[data-testid="model-library"]').withTags(["wcag2a", "wcag2aa"]).analyze();
   expect(a11y.violations.filter((v) => ["serious", "critical"].includes(v.impact ?? ""))).toEqual([]);
   await page.screenshot({ path: test.info().outputPath("model-library-mobile-reader.png"), fullPage: true });

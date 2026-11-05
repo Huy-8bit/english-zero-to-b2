@@ -1,19 +1,22 @@
+import type { FramePart } from "@/components/FrameText";
 import { safeStorage } from "@/lib/utils";
 
+export type LetterRegister = "formal" | "informal";
+export const REGISTER_LABELS = { formal: "Trang trọng", informal: "Thân mật" };
 export type Skill = "writing" | "speaking";
 export interface Group { id: string; skill: Skill; label: string; description: string; minimum?: number; count: number }
 export interface SampleSummary {
   id: string; group: string; type: string; topic: string; number: number;
-  title: string; focus: string; wordCount: number; bucket: string;
+  title: string; focus: string; wordCount: number; bucket: string; register: LetterRegister | null;
 }
 export interface LibraryIndex {
   version: string; total: number; groups: Group[]; topics: { id: string; label: string }[];
-  types: { id: string; label: string; group: string }[]; samples: SampleSummary[]; sourceUrl: string;
+  types: { id: string; label: string; group: string; register?: LetterRegister; purpose?: string }[]; samples: SampleSummary[]; sourceUrl: string;
 }
 export interface Sample extends Omit<SampleSummary, "bucket"> {
   prompt: string; requirementsVi: string[]; summaryVi: string; mainWordCount: number;
-  paragraphs: { label: string; text: string; noteVi: string }[];
-  sections: { label: string; questions: { question: string; answer: string; noteVi: string }[] }[];
+  paragraphs: { label: string; text: string; noteVi: string; parts: FramePart[]; template?: string }[];
+  sections: { label: string; questions: { question: string; answer: string; noteVi: string; parts: FramePart[] }[] }[];
   options: string[]; selectedOption: number | null;
   phrases: { en: string; vi: string; inAnswer: boolean }[];
   framePhrases: { en: string; vi: string }[];
@@ -40,10 +43,16 @@ export function selection(index: LibraryIndex, params: URLSearchParams) {
   const skill: Skill = sample ? index.groups.find((g) => g.id === sample.group)!.skill : params.get("skill") === "speaking" ? "speaking" : "writing";
   const groups = index.groups.filter((g) => g.skill === skill);
   const group = groups.find((g) => g.id === (sample?.group ?? params.get("group"))) ?? groups[0];
-  const types = index.types.filter((t) => t.group === group.id);
+  const groupTypes = index.types.filter((t) => t.group === group.id);
+  const requestedType = groupTypes.find((t) => t.id === (sample?.type ?? params.get("type")));
+  const requestedRegister = params.get("register");
+  const register: LetterRegister | undefined = group.id === "writing-task1"
+    ? sample?.register ?? (requestedRegister === "formal" || requestedRegister === "informal" ? requestedRegister : requestedType?.register ?? "formal")
+    : undefined;
+  const types = groupTypes.filter((t) => !register || t.register === register);
   const type = types.find((t) => t.id === (sample?.type ?? params.get("type"))) ?? types[0];
   const topic = index.topics.find((t) => t.id === (sample?.topic ?? params.get("topic"))) ?? index.topics[0];
-  return { skill, groups, group, types, type, topic, sample };
+  return { skill, groups, group, types, type, topic, sample, register };
 }
 async function json<T>(path: string, signal?: AbortSignal): Promise<T> {
   const response = await fetch(path, { signal });

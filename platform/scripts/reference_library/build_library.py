@@ -10,22 +10,18 @@ import json
 from pathlib import Path
 import re
 from scenarios import TOPICS, scenarios
+from letter_frames import LETTER_TYPES, REGISTER_LABELS, letter_model
+from frame_annotations import add_annotations
 
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / "frontend" / "public" / "model-library-data"
-VERSION = "2026-11-05-v1"
+VERSION = "2026-11-05-v2-frames"
 GROUPS = [
-    {"id": "writing-task1", "skill": "writing", "label": "Writing Task 1 · Thư / email", "description": "10 mục đích thư thường gặp để tự luyện; đây không phải danh mục dạng đề chính thức.", "minimum": 120},
+    {"id": "writing-task1", "skill": "writing", "label": "Writing Task 1 · Thư / email", "description": "Hai giọng thư: trang trọng (10 mục đích) và thân mật (8 mục đích). Chọn quan hệ với người nhận trước, rồi chọn mục đích thư.", "minimum": 120},
     {"id": "writing-task2", "skill": "writing", "label": "Writing Task 2 · Bài luận", "description": "10 dạng và biến thể: quan điểm, hai phía, lợi–hại, nguyên nhân, giải pháp và câu hỏi kết hợp.", "minimum": 250},
     {"id": "speaking-part1", "skill": "speaking", "label": "Speaking Part 1 · Giao tiếp xã hội", "description": "Mỗi bài gồm 6 câu hỏi và câu trả lời mẫu, chia thành hai chủ đề nhỏ."},
     {"id": "speaking-part2", "skill": "speaking", "label": "Speaking Part 2 · Thảo luận giải pháp", "description": "Một tình huống, ba lựa chọn; chọn một và giải thích vì sao không chọn hai phương án còn lại."},
     {"id": "speaking-part3", "skill": "speaking", "label": "Speaking Part 3 · Phát triển chủ đề", "description": "Bài nói có ba ý gợi dẫn, ví dụ và ba câu hỏi mở rộng kèm trả lời."},
-]
-LETTER_TYPES = [
-    ("reply", "Trả lời / cung cấp thông tin"), ("advice", "Đưa lời khuyên"),
-    ("invitation", "Mời tham gia"), ("accept", "Nhận lời mời"), ("decline", "Từ chối lời mời"),
-    ("thanks", "Cảm ơn"), ("apology", "Xin lỗi và khắc phục"),
-    ("request", "Hỏi thông tin / yêu cầu"), ("complaint", "Phàn nàn"), ("application", "Ứng tuyển / đăng ký"),
 ]
 ESSAY_TYPES = [
     ("opinion-agree", "Quan điểm — đồng ý"), ("opinion-disagree", "Quan điểm — phản đối"),
@@ -58,82 +54,7 @@ def letter(s, kind):
         'daily-life-03': 'the local sports centre', 'education-02': 'the school library',
         'education-08': 'the school hall'
     }.get(s['id'], place)
-    detail = f"We will {activity}. The aim is to connect the topic with everyday life rather than only listen to a long talk."
-    value = f"One useful point is that {s['benefit']}. For example, {s['example']}."
-    closing = "Please let me know what you think when you have a moment. I would be happy to answer any other questions.\n\nBest wishes,\nMinh"
-    request_close = "Thank you for taking the time to read my letter. Please let me know if you need any further information. I look forward to your reply.\n\nYours sincerely,\nMinh Nguyen"
-    content = {
-      "reply": (
-        f"Your friend Alex wants to know about {event}. Write an email describing the activity, explaining the arrangements, and offering practical advice.",
-        ["Giới thiệu hoạt động và lợi ích.", "Nêu giờ, nơi và thứ cần mang.", "Cho lời khuyên cụ thể và đề nghị hỗ trợ."],
-        [para("Mở thư", f"Hi Alex,\n\nThanks for your email. You asked about {event}, so I am happy to share the details. I thought of you when I saw the programme because you enjoy learning useful things with other people.", "Cảm ơn, nhắc đúng câu hỏi của bạn."),
-         para("Hoạt động", f"{detail} {value}", s["summary_vi"]),
-         para("Sắp xếp và gợi ý", f"The session is at {place} on {when}. Please bring {s['item']} and arrive about ten minutes early. If you want to prepare, think of one question about {f}. We can compare our notes afterwards and decide which ideas would be useful in our own lives.", "Trả lời đủ thời gian, địa điểm, chuẩn bị."), para("Kết thư", closing, "Mời hỏi thêm và ký tên thân mật.")]),
-      "advice": (
-        f"Your friend is interested in {f} but does not know where to begin. Write an email giving practical advice, explaining a possible difficulty, and offering help.",
-        ["Cho bước bắt đầu cụ thể.", "Giải thích một khó khăn và cách xử lý.", "Đề nghị hỗ trợ thực tế."],
-        [para("Mở thư", f"Hi Alex,\n\nThanks for telling me about your interest in {f}. I understand why you are unsure where to start. You do not need a perfect plan immediately, but a few practical steps could make things easier.", "Đồng cảm, xác định mục đích khuyên."),
-         para("Lời khuyên đầu", f"First, I suggest joining {event} at {place} on {when}. There, we can {activity}. {value}", "Gợi ý hoạt động có ngày, nơi và lý do."),
-         para("Khó khăn và cách xử lý", f"One thing to remember is that {s['risk']}. This can happen because {s['cause']}. A useful response would be to {s['action']}. For instance, {s['implementation']}. Try the idea on a small scale before deciding whether to continue.", "Nêu giới hạn để lời khuyên không tuyệt đối."),
-         para("Đề nghị và kết", "If you like, I can come with you and help you write down the most useful points. Afterwards, we could make a simple plan together.\n\n" + closing, "Hỗ trợ cụ thể, không chỉ nói good luck.")]),
-      "invitation": (
-        f"Invite your friend to {event}. Explain what will happen, why your friend might enjoy it, and what they should prepare.",
-        ["Mời rõ sự kiện.", "Nêu hoạt động, lý do, giờ và nơi.", "Dặn chuẩn bị và xin xác nhận."],
-        [para("Lời mời", f"Hi Alex,\n\nI hope you are well. I am writing to invite you to {event} at {place} on {when}. It has been a while since we did something together, and I think this would be a useful and enjoyable way to meet.", "Nêu lời mời cùng thông tin chính."),
-         para("Lý do tham gia", f"{detail} {value} There will also be time to ask questions and exchange ideas with the other people taking part.", s["summary_vi"]),
-         para("Chuẩn bị", f"Please bring {s['item']}. We could meet outside the entrance ten minutes before the session starts. You do not need to be an expert; the organiser has said that beginners are welcome. Please tell me at least two days before the session whether you can come so that I can reserve two places.", "Chuẩn bị, điểm hẹn và hạn phản hồi."),
-         para("Kết thư", "I really hope you can join me. I am looking forward to hearing what you think.\n\nBest wishes,\nMinh", "Kết thân mật và mong gặp.")]),
-      "accept": (
-        f"Your friend has invited you to {event}. Accept the invitation, explain your travel plans, and ask about preparation while offering help.",
-        ["Nhận lời rõ ràng.", "Nêu cách đến và giờ hẹn.", "Hỏi cần chuẩn bị gì, đề nghị giúp."],
-        [para("Nhận lời", f"Hi Alex,\n\nThank you for inviting me to {event}. I would love to come. I have been interested in {f} for some time, so I am glad we will have a chance to explore it together.", "Cảm ơn và trả lời trực tiếp lời mời."),
-         para("Đi lại", f"I can meet you at {place} on {when}. I am planning to take the bus and arrive ten minutes early. If the time or meeting point changes, please send me a message before I leave home.", "Lịch hẹn và phương án cập nhật."),
-         para("Chuẩn bị và hỗ trợ", f"I understand that we will {activity}. I can bring {s['item']}, but could you let me know if anything else is needed? {value} I would also be happy to help arrange the seats or hand out materials before the session begins.", "Hỏi rõ chuẩn bị, nối với nội dung sự kiện."),
-         para("Kết thư", "Thanks again for thinking of me. It will be lovely to spend time together and learn something practical. Let me know whether you would like me to arrive earlier to help.\n\nBest wishes,\nMinh", "Thể hiện thiện chí và chốt.")]),
-      "decline": (
-        f"Your friend invited you to {event}, but you cannot attend. Write to apologise, explain your reason, and suggest another way to meet or learn about the topic.",
-        ["Cảm ơn và từ chối lịch sự.", "Nêu lý do cụ thể.", "Đề nghị dịp khác hoặc cách tìm hiểu thay thế."],
-        [para("Từ chối", f"Hi Alex,\n\nThank you very much for inviting me to {event}. It sounds interesting, especially because {s['benefit']}. Unfortunately, I will not be able to join you on {when}.", "Lời cảm ơn rồi báo không tham gia được."),
-         para("Lý do", f"I have to {excuse}. This was arranged earlier, and I cannot change it now. I realise that you may already have made plans, so I wanted to tell you as soon as possible rather than leave you waiting for an answer.", "Lý do cụ thể và tôn trọng sắp xếp của bạn."),
-         para("Phương án khác", f"Could we meet at a cafe the following weekend instead? You could tell me what you learned when you tried to {activity}. I would be particularly interested in the idea that {s['benefit']}. If there are notes or a short recording from the session, I would be happy to read or watch them first.", "Đề nghị thời điểm khác và giữ kết nối với chủ đề."),
-         para("Kết thư", "I am sorry to miss this opportunity, but I hope you have a great time. Please let me know whether the new plan suits you.\n\nBest wishes,\nMinh", "Xin lỗi, chúc vui và xin phản hồi.")]),
-      "thanks": (
-        f"A friend helped you prepare for {event}. Thank your friend, explain how the help made a difference, and suggest a way to show your appreciation.",
-        ["Cảm ơn việc giúp cụ thể.", "Nêu tác dụng và điều học được.", "Đề nghị đáp lại."],
-        [para("Cảm ơn", f"Hi Alex,\n\nI am writing to thank you for helping me prepare for {event}. It was kind of you to give up part of your weekend, and I really appreciate the time you spent checking the plan with me.", "Nêu hành động được giúp và sự trân trọng."),
-         para("Tác dụng", f"Your suggestions helped us {activity} without rushing through the instructions. You also reminded me to prepare {s['item']}. That small detail made the session easier to organise, and I felt much more confident when the other participants arrived.", "Dùng chi tiết để lời cảm ơn cụ thể."),
-         para("Điều học được", f"The discussion was useful because {s['benefit']}. One example that stayed with me was this: {s['example']}. I would not have had as much time to listen and learn if I had still been struggling with the preparations on my own.", s["summary_vi"]),
-         para("Đáp lại", "I would like to take you out for lunch next weekend as a small way of saying thank you. Please tell me which day would suit you. Thanks again for being so supportive.\n\nBest wishes,\nMinh", "Lời đề nghị đáp lại có hành động cụ thể.")]),
-      "apology": (
-        f"You let a friend down while preparing for {event}. Apologise, explain what happened, and offer a specific way to put things right.",
-        ["Xin lỗi trực tiếp về việc đã làm.", "Giải thích và nhận trách nhiệm.", "Đề xuất cách bù lại và tránh lặp lại."],
-        [para("Xin lỗi", f"Hi Alex,\n\nI am very sorry for {MISTAKES[i]} while we were preparing for {event}. I know you were counting on me, and I understand that my mistake made your day more difficult.", "Nêu chính xác lỗi, không xin lỗi chung chung."),
-         para("Giải thích", f"The reason was that {REASONS[i]}. However, I should still have contacted you earlier. I realise that you had to change the arrangements without much notice, and I do not want you to think that I took your help for granted.", "Giải thích không thay cho nhận trách nhiệm."),
-         para("Khắc phục", f"To make up for this, I can come to {place} early before the next session and help prepare everything. I will bring {s['item']} and check the plan with you in advance. I would also like to help participants {activity}, so that you do not have to manage the activity alone.", "Việc sửa sai phù hợp cùng hoạt động."),
-         para("Cam kết và kết", "Next time, I will confirm the details in writing and let you know immediately if there is a problem. Please tell me if my suggestion would help. Once again, I am sorry for letting you down.\n\nBest wishes,\nMinh", "Cam kết cụ thể và hỏi cách sửa có phù hợp không.")]),
-      "request": (
-        f"Write to Ms Brown at a local centre to ask about {event}. Explain your interest, ask about arrangements and costs, and ask how to register.",
-        ["Nêu mục đích và nhu cầu.", "Hỏi giờ, điều kiện, chi phí.", "Hỏi cách đăng ký."],
-        [para("Mục đích", f"Dear Ms Brown,\n\nI am writing to ask for further information about {event}. I saw the notice at {place} and would like to know whether the session would be suitable for someone with limited experience.", "Chào người biết tên và nêu mục đích."),
-         para("Nhu cầu", f"I am interested in {f} because {s['benefit']}. For example, {s['example']}. I would like a practical introduction rather than a session that requires specialist knowledge.", "Giải thích hoàn cảnh để người nhận tư vấn đúng."),
-         para("Câu hỏi", f"Could you please confirm whether the session is on {when} and how long it lasts? I would also like to know the fee and whether materials are included. The notice mentions that participants will {activity}; should I bring {s['item']} or any other equipment?", "Câu hỏi gián tiếp về sắp xếp và chuẩn bị."),
-         para("Đăng ký và kết", "Finally, could you explain how to register and whether there is a deadline? If places are limited, please let me know when I should apply.\n\n" + request_close, "Hỏi bước tiếp, cảm ơn và kết thư trang trọng.")]),
-      "complaint": (
-        f"You paid to attend {event}, but the activity did not match the notice. Write to Mr Green, the centre manager, describing two problems, their effects, and the solution you want.",
-        ["Nêu dịch vụ và hai vấn đề.", "Giải thích ảnh hưởng cụ thể.", "Yêu cầu cách giải quyết hợp lý."],
-        [para("Mục đích", f"Dear Mr Green,\n\nI am writing to complain about {event}, which I attended at {place} last week. I had expected a practical session about {f}, but several parts of the advertised programme were not provided.", "Nêu dịch vụ, thời điểm và sự không hài lòng."),
-         para("Vấn đề đầu", f"The notice stated that we would {activity}. However, most of the session was a general presentation, and there was almost no time for practice. This was disappointing because I had joined specifically to understand how {s['mechanism']}.", "So sánh điều quảng cáo và trải nghiệm thực tế."),
-         para("Vấn đề tiếp", f"In addition, the session began forty minutes late without any explanation. I had brought {s['item']} and arranged my day around the advertised starting time, so the delay caused unnecessary inconvenience. Several questions also remained unanswered when the centre closed.", "Chi tiết có thể xử lý, không công kích người nhận."),
-         para("Yêu cầu và kết", "I would like you to offer a replacement practical session at no additional cost, or a partial refund if this is not possible. Please explain how you intend to resolve the matter.\n\n" + request_close, "Yêu cầu tương xứng và chờ phản hồi.")]),
-      "application": (
-        f"A local centre needs volunteers to help with {event}. Write to Ms Brown to apply, explain your relevant skills and motivation, and state when you are available.",
-        ["Nêu vị trí ứng tuyển.", "Giải thích động lực và kỹ năng liên quan.", "Cho biết thời gian và đề nghị trao đổi."],
-        [para("Ứng tuyển", f"Dear Ms Brown,\n\nI am writing to apply for the volunteer helper role at {event}. I saw your notice at {place} and would welcome the opportunity to support a useful local activity.", "Nêu vị trí và nguồn thông tin."),
-         para("Động lực", f"I am interested in {f} because {s['benefit']}. I would enjoy helping participants {activity}. I also understand that {s['risk']}, so clear instructions and patient support are important.", s["summary_vi"]),
-         para("Kinh nghiệm", f"I have helped organise small activities at my college, including welcoming participants and preparing materials. This taught me to explain simple instructions, keep a list of tasks and ask for help when necessary. I can check that participants have {s['item']} and help them find the right place before the session begins.", "Kinh nghiệm mẫu phù hợp vai trò, không tự nhận chuyên gia."),
-         para("Thời gian và kết", f"I am available on {when}, and I can arrive earlier to help with preparation. I would be happy to attend a short interview or training session if required.\n\n" + request_close, "Nêu lịch phù hợp và sẵn sàng trao đổi.")]),
-    }
-    return content[kind]
+    return letter_model(s, kind, when, place, excuse, MISTAKES[i], REASONS[i])
 
 
 def essay(s, kind):
@@ -314,7 +235,7 @@ def full_answer(sample):
 
 
 def build():
-    types = [{"id": k, "label": v, "group": "writing-task1"} for k,v in LETTER_TYPES]
+    types = [t | {"group": "writing-task1"} for t in LETTER_TYPES]
     types += [{"id": k, "label": v, "group": "writing-task2"} for k,v in ESSAY_TYPES]
     types += [{"id": "social", "label": "Hỏi đáp hai chủ đề", "group": "speaking-part1"},
               {"id": "choice", "label": "Chọn & so sánh giải pháp", "group": "speaking-part2"},
@@ -332,7 +253,8 @@ def build():
             sample = dict(id=f"{group}-{kind}-{s['id']}", group=group, type=kind, topic=topic,
                           number=s['number'], title=s['title'], focus=s['focus'], prompt=prompt,
                           requirementsVi=requirements, summaryVi=s['summary_vi'], paragraphs=paragraphs,
-                          sections=sections, options=options, selectedOption=choice)
+                          sections=sections, options=options, selectedOption=choice, register=t.get("register"))
+            add_annotations(sample,s)
             answer = full_answer(sample)
             sample['wordCount'] = words(answer)
             sample['mainWordCount'] = words(' '.join(p['text'] for p in paragraphs))
@@ -347,23 +269,31 @@ def build():
             ] if en.lower() in answer.lower()]
             bucket = f"{group}/{kind}/{topic}.json"
             buckets.setdefault(bucket, []).append(sample)
-            summaries.append({k:sample[k] for k in ['id','group','type','topic','number','title','focus','wordCount'] } | {'bucket':bucket})
+            summaries.append({k:sample[k] for k in ['id','group','type','topic','number','title','focus','wordCount','register'] } | {'bucket':bucket})
             samples.append(sample)
     counts = Counter(s['group'] for s in samples)
     index = dict(version=VERSION, total=len(samples), groups=[g | {'count':counts[g['id']]} for g in GROUPS],
                  topics=[{'id': k, 'label':v} for k,v in TOPICS], types=types, samples=summaries,
+                 registers=[{'id':k,'label':v} for k,v in REGISTER_LABELS.items()],
                  sourceUrl='https://vstep.vnu.edu.vn/test-format/')
     validate(samples,buckets)
     return {'index.json':index, **{key:{'version':VERSION,'samples':value} for key,value in buckets.items()}}
 
 
 def validate(samples,buckets):
-    assert len(samples)==1150 and len(buckets)==115
+    assert len(samples)==1550 and len(buckets)==155
+    assert Counter(s["register"] for s in samples if s["group"]=="writing-task1")=={"formal":500,"informal":400}
     assert all(len(items)==10 for items in buckets.values())
     assert len({s['id'] for s in samples})==len(samples)
     assert len({hashlib.sha256(full_answer(s).encode()).hexdigest() for s in samples})==len(samples), 'Duplicate answer'
     for s in samples:
         answer = full_answer(s)
+        for unit in s['paragraphs'] + [q for section in s['sections'] for q in section['questions']]:
+            assert ''.join(p['text'] for p in unit['parts']) == unit.get('text',unit.get('answer')), s['id']
+        assert any(p['kind']=='frame' for unit in s['paragraphs'] + [q for section in s['sections'] for q in section['questions']] for p in unit['parts']), s['id']
+        if s['group']=='writing-task1':
+            assert all(p.get('template') for p in s['paragraphs'])
+            assert ('Dear Ms Brown,' in answer and 'Yours sincerely,' in answer) if s['register']=='formal' else ('Hi Alex,' in answer and 'Best wishes,' in answer)
         assert not re.search(r'\[[^\]]+\]|undefined|TODO|\{[^}]+\}',answer), s['id']
         assert s['prompt'] and s['requirementsVi'] and s['phrases'],s['id']
         minimum = {'writing-task1':120, 'writing-task2':250}.get(s['group'],0)
@@ -396,6 +326,6 @@ def main():
             path.write_text(rendered)
     actual={str(p.relative_to(OUT)) for p in OUT.rglob('*.json')}
     assert actual==set(outputs), f'Unexpected or missing generated files: {actual ^ set(outputs)}'
-    print(f"{'Verified' if args.check else 'Built'} 1,150 full samples in {len(outputs)} JSON files.")
+    print(f"{'Verified' if args.check else 'Built'} 1,550 full samples in {len(outputs)} JSON files.")
 
 if __name__=='__main__': main()

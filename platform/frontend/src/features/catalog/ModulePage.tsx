@@ -31,7 +31,7 @@ export default function ModulePage({ kind }: { kind: UnitKind }) {
     <div>
       <PageHeader title={info.title} subtitle={info.subtitle} />
       {info.note && <p className="mb-5 rounded-xl border border-border bg-surface px-4 py-3 text-sm text-muted">{info.note}</p>}
-      {(kind === "writing" || kind === "speaking" || kind === "exam") && <Link to={`/model-library?skill=${kind === "speaking" ? "speaking" : "writing"}`} className="mb-5 block rounded-xl border border-primary/30 bg-primary-soft/30 px-4 py-3 text-sm font-medium text-primary">Thư viện {kind === "speaking" ? "150 bài Speaking" : "1.000 bài Writing"} → mỗi dạng có 5 chủ đề × 10 bài, kèm dàn ý và cụm từ</Link>}
+      {(kind === "writing" || kind === "speaking" || kind === "exam") && <Link to={`/model-library?skill=${kind === "speaking" ? "speaking" : "writing"}`} className="mb-5 block rounded-xl border border-primary/30 bg-primary-soft/30 px-4 py-3 text-sm font-medium text-primary">Thư viện {kind === "speaking" ? "150 bài Speaking" : "bài mẫu Writing"} → mỗi dạng có 5 chủ đề × 10 bài, kèm dàn ý và cụm từ</Link>}
       {(kind === "writing" || kind === "exam") && <Link to="/writing-studio?mode=exam" className="mb-5 block rounded-xl border border-primary/30 bg-primary-soft/30 px-4 py-3 text-sm font-medium text-primary">Ôn thi Writing theo khung → gõ thuộc Task 1 & Task 2, học cụm từ rồi viết bài</Link>}
       {levels.length > 1 && (
         <div className="mb-5 flex flex-wrap gap-2" role="group" aria-label="Lọc theo cấp độ">

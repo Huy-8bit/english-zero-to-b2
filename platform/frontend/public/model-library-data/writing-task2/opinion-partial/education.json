@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-05-v1",
+  "version": "2026-11-05-v2-frames",
   "samples": [
     {
       "id": "writing-task2-opinion-partial-education-01",
@@ -20,32 +20,160 @@
         {
           "label": "Mở bài",
           "text": "The suggestion that universities should offer online classes alongside classroom lessons has clear attractions. I agree with it to some extent, but I do not think it should be applied in exactly the same way in every situation. The potential benefits need to be considered alongside the needs of the people involved.",
-          "noteVi": "Đồng ý một phần, nói rõ giới hạn ngay đầu."
+          "noteVi": "Đồng ý một phần, nói rõ giới hạn ngay đầu.",
+          "parts": [
+            {
+              "text": "The suggestion that",
+              "kind": "frame",
+              "labelVi": "Giới thiệu ý kiến + mệnh đề"
+            },
+            {
+              "text": " universities should offer online classes alongside classroom lessons has clear attractions. ",
+              "kind": "detail"
+            },
+            {
+              "text": "I agree with it to some extent,",
+              "kind": "frame",
+              "labelVi": "Đồng ý một phần"
+            },
+            {
+              "text": " but I do not think it should be applied in exactly the same way in every situation. The potential benefits need to be considered alongside the needs of the people involved.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Phần đồng ý",
           "text": "One important point in favour of the proposal is that students can fit learning around work and family responsibilities. This is possible because recorded lessons can be watched again at a convenient time. For example, a student who works in a restaurant can review a morning lecture after the evening shift. The value of this example is that the benefit is connected with a real everyday need. It is easier for people to see the purpose of an approach when they can relate it to their own situation.",
-          "noteVi": "Học online giúp linh hoạt giờ học; cần thảo luận và hỗ trợ để tránh học một mình."
+          "noteVi": "Học online giúp linh hoạt giờ học; cần thảo luận và hỗ trợ để tránh học một mình.",
+          "parts": [
+            {
+              "text": "One important point in favour of the proposal is that",
+              "kind": "frame",
+              "labelVi": "Lợi ích / lý do ủng hộ + mệnh đề"
+            },
+            {
+              "text": " students can fit learning around work and family responsibilities. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This is possible because",
+              "kind": "frame",
+              "labelVi": "Giải thích cơ chế + mệnh đề"
+            },
+            {
+              "text": " recorded lessons can be watched again at a convenient time. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a student who works in a restaurant can review a morning lecture after the evening shift. The value of this example is that the benefit is connected with a real everyday need. It is easier for people to see the purpose of an approach when they can relate it to their own situation.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Giới hạn",
           "text": "A difficulty that should not be ignored is that some learners may feel isolated. This matters because a screen does not always make it easy to ask a quick question or form friendships. For instance, a first-year student may stop working on a difficult task instead of asking a classmate for help. The result may be frustration or a decision to stop taking part. This is not simply a question of people refusing to make an effort; practical conditions can prevent a reasonable idea from working as intended.",
-          "noteVi": "Dùng ví dụ để giải thích trường hợp cần điều chỉnh."
+          "noteVi": "Dùng ví dụ để giải thích trường hợp cần điều chỉnh.",
+          "parts": [
+            {
+              "text": "A difficulty that should not be ignored is that",
+              "kind": "frame",
+              "labelVi": "Nêu một khó khăn + mệnh đề"
+            },
+            {
+              "text": " some learners may feel isolated. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This matters because",
+              "kind": "frame",
+              "labelVi": "Giải thích vì sao điều đó quan trọng"
+            },
+            {
+              "text": " a screen does not always make it easy to ask a quick question or form friendships. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For instance,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a first-year student may stop working on a difficult task instead of asking a classmate for help. The result may be frustration or a decision to stop taking part. This is not simply a question of people refusing to make an effort; practical conditions can prevent a reasonable idea from working as intended.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Điều kiện",
           "text": "My own view is that the potential benefit is worth pursuing, but the conditions matter. In particular, it would be sensible to schedule small weekly discussion groups. People should be able to understand what is expected and raise difficulties before those difficulties become a reason to give up. A flexible plan is therefore more convincing than a promise that the same method will work equally well for everyone.",
-          "noteVi": "Nêu điều kiện cụ thể để áp dụng."
+          "noteVi": "Nêu điều kiện cụ thể để áp dụng.",
+          "parts": [
+            {
+              "text": "My own view is that",
+              "kind": "frame",
+              "labelVi": "Nêu ý kiến riêng + mệnh đề"
+            },
+            {
+              "text": " the potential benefit is worth pursuing, but the conditions matter. ",
+              "kind": "detail"
+            },
+            {
+              "text": "In particular,",
+              "kind": "frame",
+              "labelVi": "Làm rõ một điểm cụ thể"
+            },
+            {
+              "text": " ",
+              "kind": "detail"
+            },
+            {
+              "text": "it would be sensible to",
+              "kind": "frame",
+              "labelVi": "Đề xuất hợp lý + động từ nguyên mẫu"
+            },
+            {
+              "text": " schedule small weekly discussion groups. People should be able to understand what is expected and raise difficulties before those difficulties become a reason to give up. A flexible plan is therefore more convincing than a promise that the same method will work equally well for everyone.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, I support the aim behind this proposal because students can fit learning around work and family responsibilities. However, support should depend on whether practical barriers are addressed. A flexible approach that responds to actual needs is preferable to applying the idea everywhere without further thought.",
-          "noteVi": "Kết luận nhất quán với đồng ý có điều kiện."
+          "noteVi": "Kết luận nhất quán với đồng ý có điều kiện.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " I support the aim behind this proposal because students can fit learning around work and family responsibilities. ",
+              "kind": "detail"
+            },
+            {
+              "text": "However,",
+              "kind": "frame",
+              "labelVi": "Nêu ý đối lập hoặc giới hạn"
+            },
+            {
+              "text": " support should depend on whether practical barriers are addressed. A flexible approach that responds to actual needs is preferable to applying the idea everywhere without further thought.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 343,
       "mainWordCount": 343,
       "phrases": [
@@ -95,32 +223,160 @@
         {
           "label": "Mở bài",
           "text": "The suggestion that schools should spend more money on improving their libraries has clear attractions. I agree with it to some extent, but I do not think it should be applied in exactly the same way in every situation. The potential benefits need to be considered alongside the needs of the people involved.",
-          "noteVi": "Đồng ý một phần, nói rõ giới hạn ngay đầu."
+          "noteVi": "Đồng ý một phần, nói rõ giới hạn ngay đầu.",
+          "parts": [
+            {
+              "text": "The suggestion that",
+              "kind": "frame",
+              "labelVi": "Giới thiệu ý kiến + mệnh đề"
+            },
+            {
+              "text": " schools should spend more money on improving their libraries has clear attractions. ",
+              "kind": "detail"
+            },
+            {
+              "text": "I agree with it to some extent,",
+              "kind": "frame",
+              "labelVi": "Đồng ý một phần"
+            },
+            {
+              "text": " but I do not think it should be applied in exactly the same way in every situation. The potential benefits need to be considered alongside the needs of the people involved.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Phần đồng ý",
           "text": "One important point in favour of the proposal is that students have a quiet place to study without buying every book. This is possible because shared resources help learners whose homes are noisy or crowded. For example, two students can use a library reference book to prepare a science presentation after school. The value of this example is that the benefit is connected with a real everyday need. It is easier for people to see the purpose of an approach when they can relate it to their own situation.",
-          "noteVi": "Thư viện giảm chi phí và tạo chỗ học yên tĩnh; cần sách phù hợp và hướng dẫn tìm sách."
+          "noteVi": "Thư viện giảm chi phí và tạo chỗ học yên tĩnh; cần sách phù hợp và hướng dẫn tìm sách.",
+          "parts": [
+            {
+              "text": "One important point in favour of the proposal is that",
+              "kind": "frame",
+              "labelVi": "Lợi ích / lý do ủng hộ + mệnh đề"
+            },
+            {
+              "text": " students have a quiet place to study without buying every book. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This is possible because",
+              "kind": "frame",
+              "labelVi": "Giải thích cơ chế + mệnh đề"
+            },
+            {
+              "text": " shared resources help learners whose homes are noisy or crowded. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " two students can use a library reference book to prepare a science presentation after school. The value of this example is that the benefit is connected with a real everyday need. It is easier for people to see the purpose of an approach when they can relate it to their own situation.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Giới hạn",
           "text": "A difficulty that should not be ignored is that new books may remain unused. This matters because students need help finding material that matches their level and interests. For instance, a younger reader may give up when the only books on display are too difficult. The result may be frustration or a decision to stop taking part. This is not simply a question of people refusing to make an effort; practical conditions can prevent a reasonable idea from working as intended.",
-          "noteVi": "Dùng ví dụ để giải thích trường hợp cần điều chỉnh."
+          "noteVi": "Dùng ví dụ để giải thích trường hợp cần điều chỉnh.",
+          "parts": [
+            {
+              "text": "A difficulty that should not be ignored is that",
+              "kind": "frame",
+              "labelVi": "Nêu một khó khăn + mệnh đề"
+            },
+            {
+              "text": " new books may remain unused. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This matters because",
+              "kind": "frame",
+              "labelVi": "Giải thích vì sao điều đó quan trọng"
+            },
+            {
+              "text": " students need help finding material that matches their level and interests. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For instance,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a younger reader may give up when the only books on display are too difficult. The result may be frustration or a decision to stop taking part. This is not simply a question of people refusing to make an effort; practical conditions can prevent a reasonable idea from working as intended.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Điều kiện",
           "text": "My own view is that the potential benefit is worth pursuing, but the conditions matter. In particular, it would be sensible to ask students for suggestions and organise short library tours. People should be able to understand what is expected and raise difficulties before those difficulties become a reason to give up. A flexible plan is therefore more convincing than a promise that the same method will work equally well for everyone.",
-          "noteVi": "Nêu điều kiện cụ thể để áp dụng."
+          "noteVi": "Nêu điều kiện cụ thể để áp dụng.",
+          "parts": [
+            {
+              "text": "My own view is that",
+              "kind": "frame",
+              "labelVi": "Nêu ý kiến riêng + mệnh đề"
+            },
+            {
+              "text": " the potential benefit is worth pursuing, but the conditions matter. ",
+              "kind": "detail"
+            },
+            {
+              "text": "In particular,",
+              "kind": "frame",
+              "labelVi": "Làm rõ một điểm cụ thể"
+            },
+            {
+              "text": " ",
+              "kind": "detail"
+            },
+            {
+              "text": "it would be sensible to",
+              "kind": "frame",
+              "labelVi": "Đề xuất hợp lý + động từ nguyên mẫu"
+            },
+            {
+              "text": " ask students for suggestions and organise short library tours. People should be able to understand what is expected and raise difficulties before those difficulties become a reason to give up. A flexible plan is therefore more convincing than a promise that the same method will work equally well for everyone.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, I support the aim behind this proposal because students have a quiet place to study without buying every book. However, support should depend on whether practical barriers are addressed. A flexible approach that responds to actual needs is preferable to applying the idea everywhere without further thought.",
-          "noteVi": "Kết luận nhất quán với đồng ý có điều kiện."
+          "noteVi": "Kết luận nhất quán với đồng ý có điều kiện.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " I support the aim behind this proposal because students have a quiet place to study without buying every book. ",
+              "kind": "detail"
+            },
+            {
+              "text": "However,",
+              "kind": "frame",
+              "labelVi": "Nêu ý đối lập hoặc giới hạn"
+            },
+            {
+              "text": " support should depend on whether practical barriers are addressed. A flexible approach that responds to actual needs is preferable to applying the idea everywhere without further thought.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 344,
       "mainWordCount": 344,
       "phrases": [
@@ -170,32 +426,160 @@
         {
           "label": "Mở bài",
           "text": "The suggestion that schools should give children a small amount of useful homework has clear attractions. I agree with it to some extent, but I do not think it should be applied in exactly the same way in every situation. The potential benefits need to be considered alongside the needs of the people involved.",
-          "noteVi": "Đồng ý một phần, nói rõ giới hạn ngay đầu."
+          "noteVi": "Đồng ý một phần, nói rõ giới hạn ngay đầu.",
+          "parts": [
+            {
+              "text": "The suggestion that",
+              "kind": "frame",
+              "labelVi": "Giới thiệu ý kiến + mệnh đề"
+            },
+            {
+              "text": " schools should give children a small amount of useful homework has clear attractions. ",
+              "kind": "detail"
+            },
+            {
+              "text": "I agree with it to some extent,",
+              "kind": "frame",
+              "labelVi": "Đồng ý một phần"
+            },
+            {
+              "text": " but I do not think it should be applied in exactly the same way in every situation. The potential benefits need to be considered alongside the needs of the people involved.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Phần đồng ý",
           "text": "One important point in favour of the proposal is that children can practise a skill after learning it in class. This is possible because short tasks can show which steps a child still does not understand. For example, five carefully chosen maths questions can reveal whether a pupil knows how to use a new method. The value of this example is that the benefit is connected with a real everyday need. It is easier for people to see the purpose of an approach when they can relate it to their own situation.",
-          "noteVi": "Bài tập ngắn giúp luyện đúng kỹ năng; bài quá nhiều tạo bất lợi cho trẻ thiếu chỗ học hoặc hỗ trợ."
+          "noteVi": "Bài tập ngắn giúp luyện đúng kỹ năng; bài quá nhiều tạo bất lợi cho trẻ thiếu chỗ học hoặc hỗ trợ.",
+          "parts": [
+            {
+              "text": "One important point in favour of the proposal is that",
+              "kind": "frame",
+              "labelVi": "Lợi ích / lý do ủng hộ + mệnh đề"
+            },
+            {
+              "text": " children can practise a skill after learning it in class. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This is possible because",
+              "kind": "frame",
+              "labelVi": "Giải thích cơ chế + mệnh đề"
+            },
+            {
+              "text": " short tasks can show which steps a child still does not understand. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " five carefully chosen maths questions can reveal whether a pupil knows how to use a new method. The value of this example is that the benefit is connected with a real everyday need. It is easier for people to see the purpose of an approach when they can relate it to their own situation.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Giới hạn",
           "text": "A difficulty that should not be ignored is that too much homework can take time away from rest and family life. This matters because children have different home conditions and may not receive the same support. For instance, a pupil sharing one room with younger siblings may find a long evening assignment difficult to finish. The result may be frustration or a decision to stop taking part. This is not simply a question of people refusing to make an effort; practical conditions can prevent a reasonable idea from working as intended.",
-          "noteVi": "Dùng ví dụ để giải thích trường hợp cần điều chỉnh."
+          "noteVi": "Dùng ví dụ để giải thích trường hợp cần điều chỉnh.",
+          "parts": [
+            {
+              "text": "A difficulty that should not be ignored is that",
+              "kind": "frame",
+              "labelVi": "Nêu một khó khăn + mệnh đề"
+            },
+            {
+              "text": " too much homework can take time away from rest and family life. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This matters because",
+              "kind": "frame",
+              "labelVi": "Giải thích vì sao điều đó quan trọng"
+            },
+            {
+              "text": " children have different home conditions and may not receive the same support. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For instance,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a pupil sharing one room with younger siblings may find a long evening assignment difficult to finish. The result may be frustration or a decision to stop taking part. This is not simply a question of people refusing to make an effort; practical conditions can prevent a reasonable idea from working as intended.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Điều kiện",
           "text": "My own view is that the potential benefit is worth pursuing, but the conditions matter. In particular, it would be sensible to coordinate homework and give short tasks with clear purposes. People should be able to understand what is expected and raise difficulties before those difficulties become a reason to give up. A flexible plan is therefore more convincing than a promise that the same method will work equally well for everyone.",
-          "noteVi": "Nêu điều kiện cụ thể để áp dụng."
+          "noteVi": "Nêu điều kiện cụ thể để áp dụng.",
+          "parts": [
+            {
+              "text": "My own view is that",
+              "kind": "frame",
+              "labelVi": "Nêu ý kiến riêng + mệnh đề"
+            },
+            {
+              "text": " the potential benefit is worth pursuing, but the conditions matter. ",
+              "kind": "detail"
+            },
+            {
+              "text": "In particular,",
+              "kind": "frame",
+              "labelVi": "Làm rõ một điểm cụ thể"
+            },
+            {
+              "text": " ",
+              "kind": "detail"
+            },
+            {
+              "text": "it would be sensible to",
+              "kind": "frame",
+              "labelVi": "Đề xuất hợp lý + động từ nguyên mẫu"
+            },
+            {
+              "text": " coordinate homework and give short tasks with clear purposes. People should be able to understand what is expected and raise difficulties before those difficulties become a reason to give up. A flexible plan is therefore more convincing than a promise that the same method will work equally well for everyone.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, I support the aim behind this proposal because children can practise a skill after learning it in class. However, support should depend on whether practical barriers are addressed. A flexible approach that responds to actual needs is preferable to applying the idea everywhere without further thought.",
-          "noteVi": "Kết luận nhất quán với đồng ý có điều kiện."
+          "noteVi": "Kết luận nhất quán với đồng ý có điều kiện.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " I support the aim behind this proposal because children can practise a skill after learning it in class. ",
+              "kind": "detail"
+            },
+            {
+              "text": "However,",
+              "kind": "frame",
+              "labelVi": "Nêu ý đối lập hoặc giới hạn"
+            },
+            {
+              "text": " support should depend on whether practical barriers are addressed. A flexible approach that responds to actual needs is preferable to applying the idea everywhere without further thought.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 357,
       "mainWordCount": 357,
       "phrases": [
@@ -245,32 +629,160 @@
         {
           "label": "Mở bài",
           "text": "The suggestion that language learners should practise regularly with a study partner has clear attractions. I agree with it to some extent, but I do not think it should be applied in exactly the same way in every situation. The potential benefits need to be considered alongside the needs of the people involved.",
-          "noteVi": "Đồng ý một phần, nói rõ giới hạn ngay đầu."
+          "noteVi": "Đồng ý một phần, nói rõ giới hạn ngay đầu.",
+          "parts": [
+            {
+              "text": "The suggestion that",
+              "kind": "frame",
+              "labelVi": "Giới thiệu ý kiến + mệnh đề"
+            },
+            {
+              "text": " language learners should practise regularly with a study partner has clear attractions. ",
+              "kind": "detail"
+            },
+            {
+              "text": "I agree with it to some extent,",
+              "kind": "frame",
+              "labelVi": "Đồng ý một phần"
+            },
+            {
+              "text": " but I do not think it should be applied in exactly the same way in every situation. The potential benefits need to be considered alongside the needs of the people involved.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Phần đồng ý",
           "text": "One important point in favour of the proposal is that learners have more opportunities to speak. This is possible because a regular partner gives them a reason to prepare and use new expressions. For example, two friends can exchange short voice messages about their day and discuss one useful phrase each evening. The value of this example is that the benefit is connected with a real everyday need. It is easier for people to see the purpose of an approach when they can relate it to their own situation.",
-          "noteVi": "Có bạn học giúp nói đều hơn; cần đối chiếu mẫu đúng để không lặp lại lỗi của nhau."
+          "noteVi": "Có bạn học giúp nói đều hơn; cần đối chiếu mẫu đúng để không lặp lại lỗi của nhau.",
+          "parts": [
+            {
+              "text": "One important point in favour of the proposal is that",
+              "kind": "frame",
+              "labelVi": "Lợi ích / lý do ủng hộ + mệnh đề"
+            },
+            {
+              "text": " learners have more opportunities to speak. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This is possible because",
+              "kind": "frame",
+              "labelVi": "Giải thích cơ chế + mệnh đề"
+            },
+            {
+              "text": " a regular partner gives them a reason to prepare and use new expressions. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " two friends can exchange short voice messages about their day and discuss one useful phrase each evening. The value of this example is that the benefit is connected with a real everyday need. It is easier for people to see the purpose of an approach when they can relate it to their own situation.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Giới hạn",
           "text": "A difficulty that should not be ignored is that partners may repeat the same mistakes. This matters because neither learner may know whether an expression is natural or accurate. For instance, two beginners might use the wrong past-tense form repeatedly because neither notices it. The result may be frustration or a decision to stop taking part. This is not simply a question of people refusing to make an effort; practical conditions can prevent a reasonable idea from working as intended.",
-          "noteVi": "Dùng ví dụ để giải thích trường hợp cần điều chỉnh."
+          "noteVi": "Dùng ví dụ để giải thích trường hợp cần điều chỉnh.",
+          "parts": [
+            {
+              "text": "A difficulty that should not be ignored is that",
+              "kind": "frame",
+              "labelVi": "Nêu một khó khăn + mệnh đề"
+            },
+            {
+              "text": " partners may repeat the same mistakes. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This matters because",
+              "kind": "frame",
+              "labelVi": "Giải thích vì sao điều đó quan trọng"
+            },
+            {
+              "text": " neither learner may know whether an expression is natural or accurate. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For instance,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " two beginners might use the wrong past-tense form repeatedly because neither notices it. The result may be frustration or a decision to stop taking part. This is not simply a question of people refusing to make an effort; practical conditions can prevent a reasonable idea from working as intended.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Điều kiện",
           "text": "My own view is that the potential benefit is worth pursuing, but the conditions matter. In particular, it would be sensible to combine partner practice with checked materials and occasional teacher support. People should be able to understand what is expected and raise difficulties before those difficulties become a reason to give up. A flexible plan is therefore more convincing than a promise that the same method will work equally well for everyone.",
-          "noteVi": "Nêu điều kiện cụ thể để áp dụng."
+          "noteVi": "Nêu điều kiện cụ thể để áp dụng.",
+          "parts": [
+            {
+              "text": "My own view is that",
+              "kind": "frame",
+              "labelVi": "Nêu ý kiến riêng + mệnh đề"
+            },
+            {
+              "text": " the potential benefit is worth pursuing, but the conditions matter. ",
+              "kind": "detail"
+            },
+            {
+              "text": "In particular,",
+              "kind": "frame",
+              "labelVi": "Làm rõ một điểm cụ thể"
+            },
+            {
+              "text": " ",
+              "kind": "detail"
+            },
+            {
+              "text": "it would be sensible to",
+              "kind": "frame",
+              "labelVi": "Đề xuất hợp lý + động từ nguyên mẫu"
+            },
+            {
+              "text": " combine partner practice with checked materials and occasional teacher support. People should be able to understand what is expected and raise difficulties before those difficulties become a reason to give up. A flexible plan is therefore more convincing than a promise that the same method will work equally well for everyone.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, I support the aim behind this proposal because learners have more opportunities to speak. However, support should depend on whether practical barriers are addressed. A flexible approach that responds to actual needs is preferable to applying the idea everywhere without further thought.",
-          "noteVi": "Kết luận nhất quán với đồng ý có điều kiện."
+          "noteVi": "Kết luận nhất quán với đồng ý có điều kiện.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " I support the aim behind this proposal because learners have more opportunities to speak. ",
+              "kind": "detail"
+            },
+            {
+              "text": "However,",
+              "kind": "frame",
+              "labelVi": "Nêu ý đối lập hoặc giới hạn"
+            },
+            {
+              "text": " support should depend on whether practical barriers are addressed. A flexible approach that responds to actual needs is preferable to applying the idea everywhere without further thought.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 339,
       "mainWordCount": 339,
       "phrases": [
@@ -320,32 +832,160 @@
         {
           "label": "Mở bài",
           "text": "The suggestion that schools should teach practical life skills alongside academic subjects has clear attractions. I agree with it to some extent, but I do not think it should be applied in exactly the same way in every situation. The potential benefits need to be considered alongside the needs of the people involved.",
-          "noteVi": "Đồng ý một phần, nói rõ giới hạn ngay đầu."
+          "noteVi": "Đồng ý một phần, nói rõ giới hạn ngay đầu.",
+          "parts": [
+            {
+              "text": "The suggestion that",
+              "kind": "frame",
+              "labelVi": "Giới thiệu ý kiến + mệnh đề"
+            },
+            {
+              "text": " schools should teach practical life skills alongside academic subjects has clear attractions. ",
+              "kind": "detail"
+            },
+            {
+              "text": "I agree with it to some extent,",
+              "kind": "frame",
+              "labelVi": "Đồng ý một phần"
+            },
+            {
+              "text": " but I do not think it should be applied in exactly the same way in every situation. The potential benefits need to be considered alongside the needs of the people involved.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Phần đồng ý",
           "text": "One important point in favour of the proposal is that students can use what they learn in everyday situations. This is possible because tasks such as planning a budget connect classroom knowledge with real decisions. For example, a class can compare food prices and plan an affordable lunch while practising basic maths. The value of this example is that the benefit is connected with a real everyday need. It is easier for people to see the purpose of an approach when they can relate it to their own situation.",
-          "noteVi": "Kỹ năng sống giúp dùng kiến thức vào thực tế; nên lồng ghép vào môn có sẵn để tránh quá tải."
+          "noteVi": "Kỹ năng sống giúp dùng kiến thức vào thực tế; nên lồng ghép vào môn có sẵn để tránh quá tải.",
+          "parts": [
+            {
+              "text": "One important point in favour of the proposal is that",
+              "kind": "frame",
+              "labelVi": "Lợi ích / lý do ủng hộ + mệnh đề"
+            },
+            {
+              "text": " students can use what they learn in everyday situations. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This is possible because",
+              "kind": "frame",
+              "labelVi": "Giải thích cơ chế + mệnh đề"
+            },
+            {
+              "text": " tasks such as planning a budget connect classroom knowledge with real decisions. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a class can compare food prices and plan an affordable lunch while practising basic maths. The value of this example is that the benefit is connected with a real everyday need. It is easier for people to see the purpose of an approach when they can relate it to their own situation.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Giới hạn",
           "text": "A difficulty that should not be ignored is that an already busy timetable can become overloaded. This matters because adding a separate subject may reduce time for other important learning. For instance, students preparing for exams may struggle if a long extra course is added without removing anything else. The result may be frustration or a decision to stop taking part. This is not simply a question of people refusing to make an effort; practical conditions can prevent a reasonable idea from working as intended.",
-          "noteVi": "Dùng ví dụ để giải thích trường hợp cần điều chỉnh."
+          "noteVi": "Dùng ví dụ để giải thích trường hợp cần điều chỉnh.",
+          "parts": [
+            {
+              "text": "A difficulty that should not be ignored is that",
+              "kind": "frame",
+              "labelVi": "Nêu một khó khăn + mệnh đề"
+            },
+            {
+              "text": " an already busy timetable can become overloaded. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This matters because",
+              "kind": "frame",
+              "labelVi": "Giải thích vì sao điều đó quan trọng"
+            },
+            {
+              "text": " adding a separate subject may reduce time for other important learning. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For instance,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " students preparing for exams may struggle if a long extra course is added without removing anything else. The result may be frustration or a decision to stop taking part. This is not simply a question of people refusing to make an effort; practical conditions can prevent a reasonable idea from working as intended.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Điều kiện",
           "text": "My own view is that the potential benefit is worth pursuing, but the conditions matter. In particular, it would be sensible to include practical activities within suitable subjects. People should be able to understand what is expected and raise difficulties before those difficulties become a reason to give up. A flexible plan is therefore more convincing than a promise that the same method will work equally well for everyone.",
-          "noteVi": "Nêu điều kiện cụ thể để áp dụng."
+          "noteVi": "Nêu điều kiện cụ thể để áp dụng.",
+          "parts": [
+            {
+              "text": "My own view is that",
+              "kind": "frame",
+              "labelVi": "Nêu ý kiến riêng + mệnh đề"
+            },
+            {
+              "text": " the potential benefit is worth pursuing, but the conditions matter. ",
+              "kind": "detail"
+            },
+            {
+              "text": "In particular,",
+              "kind": "frame",
+              "labelVi": "Làm rõ một điểm cụ thể"
+            },
+            {
+              "text": " ",
+              "kind": "detail"
+            },
+            {
+              "text": "it would be sensible to",
+              "kind": "frame",
+              "labelVi": "Đề xuất hợp lý + động từ nguyên mẫu"
+            },
+            {
+              "text": " include practical activities within suitable subjects. People should be able to understand what is expected and raise difficulties before those difficulties become a reason to give up. A flexible plan is therefore more convincing than a promise that the same method will work equally well for everyone.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, I support the aim behind this proposal because students can use what they learn in everyday situations. However, support should depend on whether practical barriers are addressed. A flexible approach that responds to actual needs is preferable to applying the idea everywhere without further thought.",
-          "noteVi": "Kết luận nhất quán với đồng ý có điều kiện."
+          "noteVi": "Kết luận nhất quán với đồng ý có điều kiện.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " I support the aim behind this proposal because students can use what they learn in everyday situations. ",
+              "kind": "detail"
+            },
+            {
+              "text": "However,",
+              "kind": "frame",
+              "labelVi": "Nêu ý đối lập hoặc giới hạn"
+            },
+            {
+              "text": " support should depend on whether practical barriers are addressed. A flexible approach that responds to actual needs is preferable to applying the idea everywhere without further thought.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 343,
       "mainWordCount": 343,
       "phrases": [
@@ -395,32 +1035,160 @@
         {
           "label": "Mở bài",
           "text": "The suggestion that schools should use group projects as part of assessment has clear attractions. I agree with it to some extent, but I do not think it should be applied in exactly the same way in every situation. The potential benefits need to be considered alongside the needs of the people involved.",
-          "noteVi": "Đồng ý một phần, nói rõ giới hạn ngay đầu."
+          "noteVi": "Đồng ý một phần, nói rõ giới hạn ngay đầu.",
+          "parts": [
+            {
+              "text": "The suggestion that",
+              "kind": "frame",
+              "labelVi": "Giới thiệu ý kiến + mệnh đề"
+            },
+            {
+              "text": " schools should use group projects as part of assessment has clear attractions. ",
+              "kind": "detail"
+            },
+            {
+              "text": "I agree with it to some extent,",
+              "kind": "frame",
+              "labelVi": "Đồng ý một phần"
+            },
+            {
+              "text": " but I do not think it should be applied in exactly the same way in every situation. The potential benefits need to be considered alongside the needs of the people involved.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Phần đồng ý",
           "text": "One important point in favour of the proposal is that students learn to explain ideas and share responsibility. This is possible because a joint task requires them to organise work and listen to other views. For example, a group preparing a history exhibition can divide research, writing and display design among its members. The value of this example is that the benefit is connected with a real everyday need. It is easier for people to see the purpose of an approach when they can relate it to their own situation.",
-          "noteVi": "Làm nhóm rèn giao tiếp và trách nhiệm; cần xem cả đóng góp cá nhân khi chấm."
+          "noteVi": "Làm nhóm rèn giao tiếp và trách nhiệm; cần xem cả đóng góp cá nhân khi chấm.",
+          "parts": [
+            {
+              "text": "One important point in favour of the proposal is that",
+              "kind": "frame",
+              "labelVi": "Lợi ích / lý do ủng hộ + mệnh đề"
+            },
+            {
+              "text": " students learn to explain ideas and share responsibility. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This is possible because",
+              "kind": "frame",
+              "labelVi": "Giải thích cơ chế + mệnh đề"
+            },
+            {
+              "text": " a joint task requires them to organise work and listen to other views. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a group preparing a history exhibition can divide research, writing and display design among its members. The value of this example is that the benefit is connected with a real everyday need. It is easier for people to see the purpose of an approach when they can relate it to their own situation.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Giới hạn",
           "text": "A difficulty that should not be ignored is that the workload may not be shared fairly. This matters because one confident student may complete most tasks while quieter members take little part. For instance, a pupil may receive the same group mark despite missing meetings and contributing no research. The result may be frustration or a decision to stop taking part. This is not simply a question of people refusing to make an effort; practical conditions can prevent a reasonable idea from working as intended.",
-          "noteVi": "Dùng ví dụ để giải thích trường hợp cần điều chỉnh."
+          "noteVi": "Dùng ví dụ để giải thích trường hợp cần điều chỉnh.",
+          "parts": [
+            {
+              "text": "A difficulty that should not be ignored is that",
+              "kind": "frame",
+              "labelVi": "Nêu một khó khăn + mệnh đề"
+            },
+            {
+              "text": " the workload may not be shared fairly. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This matters because",
+              "kind": "frame",
+              "labelVi": "Giải thích vì sao điều đó quan trọng"
+            },
+            {
+              "text": " one confident student may complete most tasks while quieter members take little part. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For instance,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a pupil may receive the same group mark despite missing meetings and contributing no research. The result may be frustration or a decision to stop taking part. This is not simply a question of people refusing to make an effort; practical conditions can prevent a reasonable idea from working as intended.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Điều kiện",
           "text": "My own view is that the potential benefit is worth pursuing, but the conditions matter. In particular, it would be sensible to combine a group result with individual reflection and progress checks. People should be able to understand what is expected and raise difficulties before those difficulties become a reason to give up. A flexible plan is therefore more convincing than a promise that the same method will work equally well for everyone.",
-          "noteVi": "Nêu điều kiện cụ thể để áp dụng."
+          "noteVi": "Nêu điều kiện cụ thể để áp dụng.",
+          "parts": [
+            {
+              "text": "My own view is that",
+              "kind": "frame",
+              "labelVi": "Nêu ý kiến riêng + mệnh đề"
+            },
+            {
+              "text": " the potential benefit is worth pursuing, but the conditions matter. ",
+              "kind": "detail"
+            },
+            {
+              "text": "In particular,",
+              "kind": "frame",
+              "labelVi": "Làm rõ một điểm cụ thể"
+            },
+            {
+              "text": " ",
+              "kind": "detail"
+            },
+            {
+              "text": "it would be sensible to",
+              "kind": "frame",
+              "labelVi": "Đề xuất hợp lý + động từ nguyên mẫu"
+            },
+            {
+              "text": " combine a group result with individual reflection and progress checks. People should be able to understand what is expected and raise difficulties before those difficulties become a reason to give up. A flexible plan is therefore more convincing than a promise that the same method will work equally well for everyone.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, I support the aim behind this proposal because students learn to explain ideas and share responsibility. However, support should depend on whether practical barriers are addressed. A flexible approach that responds to actual needs is preferable to applying the idea everywhere without further thought.",
-          "noteVi": "Kết luận nhất quán với đồng ý có điều kiện."
+          "noteVi": "Kết luận nhất quán với đồng ý có điều kiện.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " I support the aim behind this proposal because students learn to explain ideas and share responsibility. ",
+              "kind": "detail"
+            },
+            {
+              "text": "However,",
+              "kind": "frame",
+              "labelVi": "Nêu ý đối lập hoặc giới hạn"
+            },
+            {
+              "text": " support should depend on whether practical barriers are addressed. A flexible approach that responds to actual needs is preferable to applying the idea everywhere without further thought.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 347,
       "mainWordCount": 347,
       "phrases": [
@@ -470,32 +1238,160 @@
         {
           "label": "Mở bài",
           "text": "The suggestion that schools should give students regular short breaks during long lessons has clear attractions. I agree with it to some extent, but I do not think it should be applied in exactly the same way in every situation. The potential benefits need to be considered alongside the needs of the people involved.",
-          "noteVi": "Đồng ý một phần, nói rõ giới hạn ngay đầu."
+          "noteVi": "Đồng ý một phần, nói rõ giới hạn ngay đầu.",
+          "parts": [
+            {
+              "text": "The suggestion that",
+              "kind": "frame",
+              "labelVi": "Giới thiệu ý kiến + mệnh đề"
+            },
+            {
+              "text": " schools should give students regular short breaks during long lessons has clear attractions. ",
+              "kind": "detail"
+            },
+            {
+              "text": "I agree with it to some extent,",
+              "kind": "frame",
+              "labelVi": "Đồng ý một phần"
+            },
+            {
+              "text": " but I do not think it should be applied in exactly the same way in every situation. The potential benefits need to be considered alongside the needs of the people involved.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Phần đồng ý",
           "text": "One important point in favour of the proposal is that students can return to work with better attention. This is possible because standing up or changing activity can interrupt a long period of sitting. For example, after a demanding writing task, pupils can stretch for a few minutes before reviewing their work. The value of this example is that the benefit is connected with a real everyday need. It is easier for people to see the purpose of an approach when they can relate it to their own situation.",
-          "noteVi": "Nghỉ ngắn giúp đổi nhịp học; cần quy trình rõ để không phá vỡ tiết học."
+          "noteVi": "Nghỉ ngắn giúp đổi nhịp học; cần quy trình rõ để không phá vỡ tiết học.",
+          "parts": [
+            {
+              "text": "One important point in favour of the proposal is that",
+              "kind": "frame",
+              "labelVi": "Lợi ích / lý do ủng hộ + mệnh đề"
+            },
+            {
+              "text": " students can return to work with better attention. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This is possible because",
+              "kind": "frame",
+              "labelVi": "Giải thích cơ chế + mệnh đề"
+            },
+            {
+              "text": " standing up or changing activity can interrupt a long period of sitting. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " after a demanding writing task, pupils can stretch for a few minutes before reviewing their work. The value of this example is that the benefit is connected with a real everyday need. It is easier for people to see the purpose of an approach when they can relate it to their own situation.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Giới hạn",
           "text": "A difficulty that should not be ignored is that poorly organised breaks can interrupt the lesson. This matters because students may find it hard to settle again if the activity has no clear ending. For instance, a noisy game in the middle of a lesson may take longer to stop than the break itself. The result may be frustration or a decision to stop taking part. This is not simply a question of people refusing to make an effort; practical conditions can prevent a reasonable idea from working as intended.",
-          "noteVi": "Dùng ví dụ để giải thích trường hợp cần điều chỉnh."
+          "noteVi": "Dùng ví dụ để giải thích trường hợp cần điều chỉnh.",
+          "parts": [
+            {
+              "text": "A difficulty that should not be ignored is that",
+              "kind": "frame",
+              "labelVi": "Nêu một khó khăn + mệnh đề"
+            },
+            {
+              "text": " poorly organised breaks can interrupt the lesson. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This matters because",
+              "kind": "frame",
+              "labelVi": "Giải thích vì sao điều đó quan trọng"
+            },
+            {
+              "text": " students may find it hard to settle again if the activity has no clear ending. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For instance,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a noisy game in the middle of a lesson may take longer to stop than the break itself. The result may be frustration or a decision to stop taking part. This is not simply a question of people refusing to make an effort; practical conditions can prevent a reasonable idea from working as intended.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Điều kiện",
           "text": "My own view is that the potential benefit is worth pursuing, but the conditions matter. In particular, it would be sensible to use brief predictable activities and a clear signal to return. People should be able to understand what is expected and raise difficulties before those difficulties become a reason to give up. A flexible plan is therefore more convincing than a promise that the same method will work equally well for everyone.",
-          "noteVi": "Nêu điều kiện cụ thể để áp dụng."
+          "noteVi": "Nêu điều kiện cụ thể để áp dụng.",
+          "parts": [
+            {
+              "text": "My own view is that",
+              "kind": "frame",
+              "labelVi": "Nêu ý kiến riêng + mệnh đề"
+            },
+            {
+              "text": " the potential benefit is worth pursuing, but the conditions matter. ",
+              "kind": "detail"
+            },
+            {
+              "text": "In particular,",
+              "kind": "frame",
+              "labelVi": "Làm rõ một điểm cụ thể"
+            },
+            {
+              "text": " ",
+              "kind": "detail"
+            },
+            {
+              "text": "it would be sensible to",
+              "kind": "frame",
+              "labelVi": "Đề xuất hợp lý + động từ nguyên mẫu"
+            },
+            {
+              "text": " use brief predictable activities and a clear signal to return. People should be able to understand what is expected and raise difficulties before those difficulties become a reason to give up. A flexible plan is therefore more convincing than a promise that the same method will work equally well for everyone.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, I support the aim behind this proposal because students can return to work with better attention. However, support should depend on whether practical barriers are addressed. A flexible approach that responds to actual needs is preferable to applying the idea everywhere without further thought.",
-          "noteVi": "Kết luận nhất quán với đồng ý có điều kiện."
+          "noteVi": "Kết luận nhất quán với đồng ý có điều kiện.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " I support the aim behind this proposal because students can return to work with better attention. ",
+              "kind": "detail"
+            },
+            {
+              "text": "However,",
+              "kind": "frame",
+              "labelVi": "Nêu ý đối lập hoặc giới hạn"
+            },
+            {
+              "text": " support should depend on whether practical barriers are addressed. A flexible approach that responds to actual needs is preferable to applying the idea everywhere without further thought.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 352,
       "mainWordCount": 352,
       "phrases": [
@@ -545,32 +1441,160 @@
         {
           "label": "Mở bài",
           "text": "The suggestion that schools should require students to wear a simple affordable uniform has clear attractions. I agree with it to some extent, but I do not think it should be applied in exactly the same way in every situation. The potential benefits need to be considered alongside the needs of the people involved.",
-          "noteVi": "Đồng ý một phần, nói rõ giới hạn ngay đầu."
+          "noteVi": "Đồng ý một phần, nói rõ giới hạn ngay đầu.",
+          "parts": [
+            {
+              "text": "The suggestion that",
+              "kind": "frame",
+              "labelVi": "Giới thiệu ý kiến + mệnh đề"
+            },
+            {
+              "text": " schools should require students to wear a simple affordable uniform has clear attractions. ",
+              "kind": "detail"
+            },
+            {
+              "text": "I agree with it to some extent,",
+              "kind": "frame",
+              "labelVi": "Đồng ý một phần"
+            },
+            {
+              "text": " but I do not think it should be applied in exactly the same way in every situation. The potential benefits need to be considered alongside the needs of the people involved.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Phần đồng ý",
           "text": "One important point in favour of the proposal is that families can make daily clothing decisions more easily. This is possible because a shared dress rule can reduce pressure to buy fashionable outfits for school. For example, a student can wear the same school shirt each week without worrying about keeping up with new trends. The value of this example is that the benefit is connected with a real everyday need. It is easier for people to see the purpose of an approach when they can relate it to their own situation.",
-          "noteVi": "Đồng phục đơn giản giảm áp lực ăn mặc; mẫu quá riêng và đắt có thể làm tăng gánh nặng."
+          "noteVi": "Đồng phục đơn giản giảm áp lực ăn mặc; mẫu quá riêng và đắt có thể làm tăng gánh nặng.",
+          "parts": [
+            {
+              "text": "One important point in favour of the proposal is that",
+              "kind": "frame",
+              "labelVi": "Lợi ích / lý do ủng hộ + mệnh đề"
+            },
+            {
+              "text": " families can make daily clothing decisions more easily. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This is possible because",
+              "kind": "frame",
+              "labelVi": "Giải thích cơ chế + mệnh đề"
+            },
+            {
+              "text": " a shared dress rule can reduce pressure to buy fashionable outfits for school. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a student can wear the same school shirt each week without worrying about keeping up with new trends. The value of this example is that the benefit is connected with a real everyday need. It is easier for people to see the purpose of an approach when they can relate it to their own situation.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Giới hạn",
           "text": "A difficulty that should not be ignored is that uniform costs can still be difficult for some families. This matters because special designs sold by only one supplier may be expensive. For instance, parents with three children may struggle to replace several branded jackets at the start of term. The result may be frustration or a decision to stop taking part. This is not simply a question of people refusing to make an effort; practical conditions can prevent a reasonable idea from working as intended.",
-          "noteVi": "Dùng ví dụ để giải thích trường hợp cần điều chỉnh."
+          "noteVi": "Dùng ví dụ để giải thích trường hợp cần điều chỉnh.",
+          "parts": [
+            {
+              "text": "A difficulty that should not be ignored is that",
+              "kind": "frame",
+              "labelVi": "Nêu một khó khăn + mệnh đề"
+            },
+            {
+              "text": " uniform costs can still be difficult for some families. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This matters because",
+              "kind": "frame",
+              "labelVi": "Giải thích vì sao điều đó quan trọng"
+            },
+            {
+              "text": " special designs sold by only one supplier may be expensive. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For instance,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " parents with three children may struggle to replace several branded jackets at the start of term. The result may be frustration or a decision to stop taking part. This is not simply a question of people refusing to make an effort; practical conditions can prevent a reasonable idea from working as intended.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Điều kiện",
           "text": "My own view is that the potential benefit is worth pursuing, but the conditions matter. In particular, it would be sensible to allow inexpensive basic items and offer second-hand exchanges. People should be able to understand what is expected and raise difficulties before those difficulties become a reason to give up. A flexible plan is therefore more convincing than a promise that the same method will work equally well for everyone.",
-          "noteVi": "Nêu điều kiện cụ thể để áp dụng."
+          "noteVi": "Nêu điều kiện cụ thể để áp dụng.",
+          "parts": [
+            {
+              "text": "My own view is that",
+              "kind": "frame",
+              "labelVi": "Nêu ý kiến riêng + mệnh đề"
+            },
+            {
+              "text": " the potential benefit is worth pursuing, but the conditions matter. ",
+              "kind": "detail"
+            },
+            {
+              "text": "In particular,",
+              "kind": "frame",
+              "labelVi": "Làm rõ một điểm cụ thể"
+            },
+            {
+              "text": " ",
+              "kind": "detail"
+            },
+            {
+              "text": "it would be sensible to",
+              "kind": "frame",
+              "labelVi": "Đề xuất hợp lý + động từ nguyên mẫu"
+            },
+            {
+              "text": " allow inexpensive basic items and offer second-hand exchanges. People should be able to understand what is expected and raise difficulties before those difficulties become a reason to give up. A flexible plan is therefore more convincing than a promise that the same method will work equally well for everyone.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, I support the aim behind this proposal because families can make daily clothing decisions more easily. However, support should depend on whether practical barriers are addressed. A flexible approach that responds to actual needs is preferable to applying the idea everywhere without further thought.",
-          "noteVi": "Kết luận nhất quán với đồng ý có điều kiện."
+          "noteVi": "Kết luận nhất quán với đồng ý có điều kiện.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " I support the aim behind this proposal because families can make daily clothing decisions more easily. ",
+              "kind": "detail"
+            },
+            {
+              "text": "However,",
+              "kind": "frame",
+              "labelVi": "Nêu ý đối lập hoặc giới hạn"
+            },
+            {
+              "text": " support should depend on whether practical barriers are addressed. A flexible approach that responds to actual needs is preferable to applying the idea everywhere without further thought.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 348,
       "mainWordCount": 348,
       "phrases": [
@@ -620,32 +1644,160 @@
         {
           "label": "Mở bài",
           "text": "The suggestion that young people should be given more information about vocational courses has clear attractions. I agree with it to some extent, but I do not think it should be applied in exactly the same way in every situation. The potential benefits need to be considered alongside the needs of the people involved.",
-          "noteVi": "Đồng ý một phần, nói rõ giới hạn ngay đầu."
+          "noteVi": "Đồng ý một phần, nói rõ giới hạn ngay đầu.",
+          "parts": [
+            {
+              "text": "The suggestion that",
+              "kind": "frame",
+              "labelVi": "Giới thiệu ý kiến + mệnh đề"
+            },
+            {
+              "text": " young people should be given more information about vocational courses has clear attractions. ",
+              "kind": "detail"
+            },
+            {
+              "text": "I agree with it to some extent,",
+              "kind": "frame",
+              "labelVi": "Đồng ý một phần"
+            },
+            {
+              "text": " but I do not think it should be applied in exactly the same way in every situation. The potential benefits need to be considered alongside the needs of the people involved.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Phần đồng ý",
           "text": "One important point in favour of the proposal is that students can discover routes that match practical interests. This is possible because not every useful career begins with the same academic programme. For example, a teenager who enjoys repairing machines may benefit from visiting a technical training centre. The value of this example is that the benefit is connected with a real everyday need. It is easier for people to see the purpose of an approach when they can relate it to their own situation.",
-          "noteVi": "Tư vấn học nghề mở thêm lựa chọn; cần hiểu nội dung học và điều kiện làm việc trước khi chọn."
+          "noteVi": "Tư vấn học nghề mở thêm lựa chọn; cần hiểu nội dung học và điều kiện làm việc trước khi chọn.",
+          "parts": [
+            {
+              "text": "One important point in favour of the proposal is that",
+              "kind": "frame",
+              "labelVi": "Lợi ích / lý do ủng hộ + mệnh đề"
+            },
+            {
+              "text": " students can discover routes that match practical interests. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This is possible because",
+              "kind": "frame",
+              "labelVi": "Giải thích cơ chế + mệnh đề"
+            },
+            {
+              "text": " not every useful career begins with the same academic programme. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a teenager who enjoys repairing machines may benefit from visiting a technical training centre. The value of this example is that the benefit is connected with a real everyday need. It is easier for people to see the purpose of an approach when they can relate it to their own situation.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Giới hạn",
           "text": "A difficulty that should not be ignored is that students might choose too early with limited information. This matters because a course title alone does not explain future working conditions or entry requirements. For instance, a young person may enrol in a hospitality course without realising that some jobs involve evening shifts. The result may be frustration or a decision to stop taking part. This is not simply a question of people refusing to make an effort; practical conditions can prevent a reasonable idea from working as intended.",
-          "noteVi": "Dùng ví dụ để giải thích trường hợp cần điều chỉnh."
+          "noteVi": "Dùng ví dụ để giải thích trường hợp cần điều chỉnh.",
+          "parts": [
+            {
+              "text": "A difficulty that should not be ignored is that",
+              "kind": "frame",
+              "labelVi": "Nêu một khó khăn + mệnh đề"
+            },
+            {
+              "text": " students might choose too early with limited information. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This matters because",
+              "kind": "frame",
+              "labelVi": "Giải thích vì sao điều đó quan trọng"
+            },
+            {
+              "text": " a course title alone does not explain future working conditions or entry requirements. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For instance,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a young person may enrol in a hospitality course without realising that some jobs involve evening shifts. The result may be frustration or a decision to stop taking part. This is not simply a question of people refusing to make an effort; practical conditions can prevent a reasonable idea from working as intended.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Điều kiện",
           "text": "My own view is that the potential benefit is worth pursuing, but the conditions matter. In particular, it would be sensible to provide course visits and balanced guidance about work and further study. People should be able to understand what is expected and raise difficulties before those difficulties become a reason to give up. A flexible plan is therefore more convincing than a promise that the same method will work equally well for everyone.",
-          "noteVi": "Nêu điều kiện cụ thể để áp dụng."
+          "noteVi": "Nêu điều kiện cụ thể để áp dụng.",
+          "parts": [
+            {
+              "text": "My own view is that",
+              "kind": "frame",
+              "labelVi": "Nêu ý kiến riêng + mệnh đề"
+            },
+            {
+              "text": " the potential benefit is worth pursuing, but the conditions matter. ",
+              "kind": "detail"
+            },
+            {
+              "text": "In particular,",
+              "kind": "frame",
+              "labelVi": "Làm rõ một điểm cụ thể"
+            },
+            {
+              "text": " ",
+              "kind": "detail"
+            },
+            {
+              "text": "it would be sensible to",
+              "kind": "frame",
+              "labelVi": "Đề xuất hợp lý + động từ nguyên mẫu"
+            },
+            {
+              "text": " provide course visits and balanced guidance about work and further study. People should be able to understand what is expected and raise difficulties before those difficulties become a reason to give up. A flexible plan is therefore more convincing than a promise that the same method will work equally well for everyone.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, I support the aim behind this proposal because students can discover routes that match practical interests. However, support should depend on whether practical barriers are addressed. A flexible approach that responds to actual needs is preferable to applying the idea everywhere without further thought.",
-          "noteVi": "Kết luận nhất quán với đồng ý có điều kiện."
+          "noteVi": "Kết luận nhất quán với đồng ý có điều kiện.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " I support the aim behind this proposal because students can discover routes that match practical interests. ",
+              "kind": "detail"
+            },
+            {
+              "text": "However,",
+              "kind": "frame",
+              "labelVi": "Nêu ý đối lập hoặc giới hạn"
+            },
+            {
+              "text": " support should depend on whether practical barriers are addressed. A flexible approach that responds to actual needs is preferable to applying the idea everywhere without further thought.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 347,
       "mainWordCount": 347,
       "phrases": [
@@ -695,32 +1847,160 @@
         {
           "label": "Mở bài",
           "text": "The suggestion that communities should provide more affordable classes for adults has clear attractions. I agree with it to some extent, but I do not think it should be applied in exactly the same way in every situation. The potential benefits need to be considered alongside the needs of the people involved.",
-          "noteVi": "Đồng ý một phần, nói rõ giới hạn ngay đầu."
+          "noteVi": "Đồng ý một phần, nói rõ giới hạn ngay đầu.",
+          "parts": [
+            {
+              "text": "The suggestion that",
+              "kind": "frame",
+              "labelVi": "Giới thiệu ý kiến + mệnh đề"
+            },
+            {
+              "text": " communities should provide more affordable classes for adults has clear attractions. ",
+              "kind": "detail"
+            },
+            {
+              "text": "I agree with it to some extent,",
+              "kind": "frame",
+              "labelVi": "Đồng ý một phần"
+            },
+            {
+              "text": " but I do not think it should be applied in exactly the same way in every situation. The potential benefits need to be considered alongside the needs of the people involved.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Phần đồng ý",
           "text": "One important point in favour of the proposal is that adults can update skills without returning to full-time study. This is possible because short local courses can fit around work and caring responsibilities. For example, a shop assistant can attend an evening computer class to learn how to manage simple spreadsheets. The value of this example is that the benefit is connected with a real everyday need. It is easier for people to see the purpose of an approach when they can relate it to their own situation.",
-          "noteVi": "Lớp học cho người lớn cần vừa túi tiền và phù hợp giờ làm, đi lại, chăm con."
+          "noteVi": "Lớp học cho người lớn cần vừa túi tiền và phù hợp giờ làm, đi lại, chăm con.",
+          "parts": [
+            {
+              "text": "One important point in favour of the proposal is that",
+              "kind": "frame",
+              "labelVi": "Lợi ích / lý do ủng hộ + mệnh đề"
+            },
+            {
+              "text": " adults can update skills without returning to full-time study. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This is possible because",
+              "kind": "frame",
+              "labelVi": "Giải thích cơ chế + mệnh đề"
+            },
+            {
+              "text": " short local courses can fit around work and caring responsibilities. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a shop assistant can attend an evening computer class to learn how to manage simple spreadsheets. The value of this example is that the benefit is connected with a real everyday need. It is easier for people to see the purpose of an approach when they can relate it to their own situation.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Giới hạn",
           "text": "A difficulty that should not be ignored is that people with the greatest need may still be unable to attend. This matters because transport, childcare and changing work hours can create barriers. For instance, a parent may miss an evening class because there is no one available to look after a child. The result may be frustration or a decision to stop taking part. This is not simply a question of people refusing to make an effort; practical conditions can prevent a reasonable idea from working as intended.",
-          "noteVi": "Dùng ví dụ để giải thích trường hợp cần điều chỉnh."
+          "noteVi": "Dùng ví dụ để giải thích trường hợp cần điều chỉnh.",
+          "parts": [
+            {
+              "text": "A difficulty that should not be ignored is that",
+              "kind": "frame",
+              "labelVi": "Nêu một khó khăn + mệnh đề"
+            },
+            {
+              "text": " people with the greatest need may still be unable to attend. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This matters because",
+              "kind": "frame",
+              "labelVi": "Giải thích vì sao điều đó quan trọng"
+            },
+            {
+              "text": " transport, childcare and changing work hours can create barriers. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For instance,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a parent may miss an evening class because there is no one available to look after a child. The result may be frustration or a decision to stop taking part. This is not simply a question of people refusing to make an effort; practical conditions can prevent a reasonable idea from working as intended.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Điều kiện",
           "text": "My own view is that the potential benefit is worth pursuing, but the conditions matter. In particular, it would be sensible to offer flexible schedules and simple support for attendance. People should be able to understand what is expected and raise difficulties before those difficulties become a reason to give up. A flexible plan is therefore more convincing than a promise that the same method will work equally well for everyone.",
-          "noteVi": "Nêu điều kiện cụ thể để áp dụng."
+          "noteVi": "Nêu điều kiện cụ thể để áp dụng.",
+          "parts": [
+            {
+              "text": "My own view is that",
+              "kind": "frame",
+              "labelVi": "Nêu ý kiến riêng + mệnh đề"
+            },
+            {
+              "text": " the potential benefit is worth pursuing, but the conditions matter. ",
+              "kind": "detail"
+            },
+            {
+              "text": "In particular,",
+              "kind": "frame",
+              "labelVi": "Làm rõ một điểm cụ thể"
+            },
+            {
+              "text": " ",
+              "kind": "detail"
+            },
+            {
+              "text": "it would be sensible to",
+              "kind": "frame",
+              "labelVi": "Đề xuất hợp lý + động từ nguyên mẫu"
+            },
+            {
+              "text": " offer flexible schedules and simple support for attendance. People should be able to understand what is expected and raise difficulties before those difficulties become a reason to give up. A flexible plan is therefore more convincing than a promise that the same method will work equally well for everyone.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, I support the aim behind this proposal because adults can update skills without returning to full-time study. However, support should depend on whether practical barriers are addressed. A flexible approach that responds to actual needs is preferable to applying the idea everywhere without further thought.",
-          "noteVi": "Kết luận nhất quán với đồng ý có điều kiện."
+          "noteVi": "Kết luận nhất quán với đồng ý có điều kiện.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " I support the aim behind this proposal because adults can update skills without returning to full-time study. ",
+              "kind": "detail"
+            },
+            {
+              "text": "However,",
+              "kind": "frame",
+              "labelVi": "Nêu ý đối lập hoặc giới hạn"
+            },
+            {
+              "text": " support should depend on whether practical barriers are addressed. A flexible approach that responds to actual needs is preferable to applying the idea everywhere without further thought.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 346,
       "mainWordCount": 346,
       "phrases": [

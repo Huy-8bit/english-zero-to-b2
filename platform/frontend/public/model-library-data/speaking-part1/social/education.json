@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-05-v1",
+  "version": "2026-11-05-v2-frames",
   "samples": [
     {
       "id": "speaking-part1-social-education-01",
@@ -24,17 +24,68 @@
             {
               "question": "Are you interested in online university classes?",
               "answer": "Yes, I am, mainly because students can fit learning around work and family responsibilities. I would like to understand how this works in everyday life, rather than just read a definition.",
-              "noteVi": "Trả lời trực tiếp → thêm một lý do."
+              "noteVi": "Trả lời trực tiếp → thêm một lý do.",
+              "parts": [
+                {
+                  "text": "Yes, I am, mainly because",
+                  "kind": "frame",
+                  "labelVi": "Trả lời trực tiếp và giải thích"
+                },
+                {
+                  "text": " students can fit learning around work and family responsibilities. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "I would like to",
+                  "kind": "frame",
+                  "labelVi": "Nêu mong muốn + động từ nguyên mẫu"
+                },
+                {
+                  "text": " understand how this works in everyday life, rather than just read a definition.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "How could you learn more about online university classes?",
               "answer": "I could join an online study workshop. There, I would have a chance to try a short recorded lesson and discuss it in a small group. Trying something with other people usually helps me remember it.",
-              "noteVi": "Nêu một cách tìm hiểu và hoạt động cụ thể."
+              "noteVi": "Nêu một cách tìm hiểu và hoạt động cụ thể.",
+              "parts": [
+                {
+                  "text": "I could join",
+                  "kind": "frame",
+                  "labelVi": "Nêu hoạt động có thể tham gia"
+                },
+                {
+                  "text": " an online study workshop. There, I would have a chance to try a short recorded lesson and discuss it in a small group. Trying something with other people usually helps me remember it.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "Is there anything difficult about online university classes?",
               "answer": "One possible difficulty is that some learners may feel isolated. For example, a first-year student may stop working on a difficult task instead of asking a classmate for help. I think it is better to recognise that problem early.",
-              "noteVi": "Một khó khăn → một ví dụ, không liệt kê quá nhiều."
+              "noteVi": "Một khó khăn → một ví dụ, không liệt kê quá nhiều.",
+              "parts": [
+                {
+                  "text": "One possible difficulty is that",
+                  "kind": "frame",
+                  "labelVi": "Nêu khó khăn + mệnh đề"
+                },
+                {
+                  "text": " some learners may feel isolated. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "For example,",
+                  "kind": "frame",
+                  "labelVi": "Đưa ví dụ + mệnh đề"
+                },
+                {
+                  "text": " a first-year student may stop working on a difficult task instead of asking a classmate for help. I think it is better to recognise that problem early.",
+                  "kind": "detail"
+                }
+              ]
             }
           ]
         },
@@ -44,23 +95,70 @@
             {
               "question": "What would you like to do with a friend this weekend?",
               "answer": "I would like to try a short recorded lesson and discuss it in a small group. We could bring headphones and compare what we learn. It would give us something useful to talk about afterwards.",
-              "noteVi": "Nêu kế hoạch, đồ cần mang và lợi ích."
+              "noteVi": "Nêu kế hoạch, đồ cần mang và lợi ích.",
+              "parts": [
+                {
+                  "text": "I would like to",
+                  "kind": "frame",
+                  "labelVi": "Nêu mong muốn + động từ nguyên mẫu"
+                },
+                {
+                  "text": " try a short recorded lesson and discuss it in a small group. We could bring headphones and compare what we learn. It would give us something useful to talk about afterwards.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "Do you prefer learning something alone or with friends?",
               "answer": "For a new topic, I prefer being with one or two friends. For instance, if we were learning about online university classes, we could ask each other questions. However, I like reviewing my notes alone afterwards.",
-              "noteVi": "Chọn một phía, thêm tình huống và một ngoại lệ."
+              "noteVi": "Chọn một phía, thêm tình huống và một ngoại lệ.",
+              "parts": [
+                {
+                  "text": "For a new topic, I prefer",
+                  "kind": "frame",
+                  "labelVi": "Nêu cách học ưa thích + danh từ / V-ing"
+                },
+                {
+                  "text": " being with one or two friends. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "For instance,",
+                  "kind": "frame",
+                  "labelVi": "Đưa ví dụ + mệnh đề"
+                },
+                {
+                  "text": " if we were learning about online university classes, we could ask each other questions. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "However,",
+                  "kind": "frame",
+                  "labelVi": "Nêu ý đối lập hoặc giới hạn"
+                },
+                {
+                  "text": " I like reviewing my notes alone afterwards.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "How do you decide whether an activity is worth your time?",
               "answer": "I ask whether I can use what I learn. In this case, it would be helpful to know how to schedule small weekly discussion groups. I also check the time and cost before making a plan.",
-              "noteVi": "Một tiêu chí → áp dụng vào tình huống → chi tiết thêm."
+              "noteVi": "Một tiêu chí → áp dụng vào tình huống → chi tiết thêm.",
+              "parts": [
+                {
+                  "text": "I ask whether I can use what I learn. In this case, it would be helpful to know how to schedule small weekly discussion groups. I also check the time and cost before making a plan.",
+                  "kind": "detail"
+                }
+              ]
             }
           ]
         }
       ],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 213,
       "mainWordCount": 0,
       "phrases": [
@@ -118,17 +216,68 @@
             {
               "question": "Are you interested in school libraries?",
               "answer": "Yes, I am, mainly because students have a quiet place to study without buying every book. I would like to understand how this works in everyday life, rather than just read a definition.",
-              "noteVi": "Trả lời trực tiếp → thêm một lý do."
+              "noteVi": "Trả lời trực tiếp → thêm một lý do.",
+              "parts": [
+                {
+                  "text": "Yes, I am, mainly because",
+                  "kind": "frame",
+                  "labelVi": "Trả lời trực tiếp và giải thích"
+                },
+                {
+                  "text": " students have a quiet place to study without buying every book. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "I would like to",
+                  "kind": "frame",
+                  "labelVi": "Nêu mong muốn + động từ nguyên mẫu"
+                },
+                {
+                  "text": " understand how this works in everyday life, rather than just read a definition.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "How could you learn more about school libraries?",
               "answer": "I could join a school library open day. There, I would have a chance to explore the shelves and practise finding useful books. Trying something with other people usually helps me remember it.",
-              "noteVi": "Nêu một cách tìm hiểu và hoạt động cụ thể."
+              "noteVi": "Nêu một cách tìm hiểu và hoạt động cụ thể.",
+              "parts": [
+                {
+                  "text": "I could join",
+                  "kind": "frame",
+                  "labelVi": "Nêu hoạt động có thể tham gia"
+                },
+                {
+                  "text": " a school library open day. There, I would have a chance to explore the shelves and practise finding useful books. Trying something with other people usually helps me remember it.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "Is there anything difficult about school libraries?",
               "answer": "One possible difficulty is that new books may remain unused. For example, a younger reader may give up when the only books on display are too difficult. I think it is better to recognise that problem early.",
-              "noteVi": "Một khó khăn → một ví dụ, không liệt kê quá nhiều."
+              "noteVi": "Một khó khăn → một ví dụ, không liệt kê quá nhiều.",
+              "parts": [
+                {
+                  "text": "One possible difficulty is that",
+                  "kind": "frame",
+                  "labelVi": "Nêu khó khăn + mệnh đề"
+                },
+                {
+                  "text": " new books may remain unused. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "For example,",
+                  "kind": "frame",
+                  "labelVi": "Đưa ví dụ + mệnh đề"
+                },
+                {
+                  "text": " a younger reader may give up when the only books on display are too difficult. I think it is better to recognise that problem early.",
+                  "kind": "detail"
+                }
+              ]
             }
           ]
         },
@@ -138,23 +287,70 @@
             {
               "question": "What would you like to do with a friend this weekend?",
               "answer": "I would like to explore the shelves and practise finding useful books. We could bring a notebook and compare what we learn. It would give us something useful to talk about afterwards.",
-              "noteVi": "Nêu kế hoạch, đồ cần mang và lợi ích."
+              "noteVi": "Nêu kế hoạch, đồ cần mang và lợi ích.",
+              "parts": [
+                {
+                  "text": "I would like to",
+                  "kind": "frame",
+                  "labelVi": "Nêu mong muốn + động từ nguyên mẫu"
+                },
+                {
+                  "text": " explore the shelves and practise finding useful books. We could bring a notebook and compare what we learn. It would give us something useful to talk about afterwards.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "Do you prefer learning something alone or with friends?",
               "answer": "For a new topic, I prefer being with one or two friends. For instance, if we were learning about school libraries, we could ask each other questions. However, I like reviewing my notes alone afterwards.",
-              "noteVi": "Chọn một phía, thêm tình huống và một ngoại lệ."
+              "noteVi": "Chọn một phía, thêm tình huống và một ngoại lệ.",
+              "parts": [
+                {
+                  "text": "For a new topic, I prefer",
+                  "kind": "frame",
+                  "labelVi": "Nêu cách học ưa thích + danh từ / V-ing"
+                },
+                {
+                  "text": " being with one or two friends. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "For instance,",
+                  "kind": "frame",
+                  "labelVi": "Đưa ví dụ + mệnh đề"
+                },
+                {
+                  "text": " if we were learning about school libraries, we could ask each other questions. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "However,",
+                  "kind": "frame",
+                  "labelVi": "Nêu ý đối lập hoặc giới hạn"
+                },
+                {
+                  "text": " I like reviewing my notes alone afterwards.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "How do you decide whether an activity is worth your time?",
               "answer": "I ask whether I can use what I learn. In this case, it would be helpful to know how to ask students for suggestions and organise short library tours. I also check the time and cost before making a plan.",
-              "noteVi": "Một tiêu chí → áp dụng vào tình huống → chi tiết thêm."
+              "noteVi": "Một tiêu chí → áp dụng vào tình huống → chi tiết thêm.",
+              "parts": [
+                {
+                  "text": "I ask whether I can use what I learn. In this case, it would be helpful to know how to ask students for suggestions and organise short library tours. I also check the time and cost before making a plan.",
+                  "kind": "detail"
+                }
+              ]
             }
           ]
         }
       ],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 210,
       "mainWordCount": 0,
       "phrases": [
@@ -212,17 +408,68 @@
             {
               "question": "Are you interested in homework for schoolchildren?",
               "answer": "Yes, I am, mainly because children can practise a skill after learning it in class. I would like to understand how this works in everyday life, rather than just read a definition.",
-              "noteVi": "Trả lời trực tiếp → thêm một lý do."
+              "noteVi": "Trả lời trực tiếp → thêm một lý do.",
+              "parts": [
+                {
+                  "text": "Yes, I am, mainly because",
+                  "kind": "frame",
+                  "labelVi": "Trả lời trực tiếp và giải thích"
+                },
+                {
+                  "text": " children can practise a skill after learning it in class. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "I would like to",
+                  "kind": "frame",
+                  "labelVi": "Nêu mong muốn + động từ nguyên mẫu"
+                },
+                {
+                  "text": " understand how this works in everyday life, rather than just read a definition.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "How could you learn more about homework for schoolchildren?",
               "answer": "I could join a homework planning session. There, I would have a chance to design a simple weekly study plan and discuss useful practice tasks. Trying something with other people usually helps me remember it.",
-              "noteVi": "Nêu một cách tìm hiểu và hoạt động cụ thể."
+              "noteVi": "Nêu một cách tìm hiểu và hoạt động cụ thể.",
+              "parts": [
+                {
+                  "text": "I could join",
+                  "kind": "frame",
+                  "labelVi": "Nêu hoạt động có thể tham gia"
+                },
+                {
+                  "text": " a homework planning session. There, I would have a chance to design a simple weekly study plan and discuss useful practice tasks. Trying something with other people usually helps me remember it.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "Is there anything difficult about homework for schoolchildren?",
               "answer": "One possible difficulty is that too much homework can take time away from rest and family life. For example, a pupil sharing one room with younger siblings may find a long evening assignment difficult to finish. I think it is better to recognise that problem early.",
-              "noteVi": "Một khó khăn → một ví dụ, không liệt kê quá nhiều."
+              "noteVi": "Một khó khăn → một ví dụ, không liệt kê quá nhiều.",
+              "parts": [
+                {
+                  "text": "One possible difficulty is that",
+                  "kind": "frame",
+                  "labelVi": "Nêu khó khăn + mệnh đề"
+                },
+                {
+                  "text": " too much homework can take time away from rest and family life. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "For example,",
+                  "kind": "frame",
+                  "labelVi": "Đưa ví dụ + mệnh đề"
+                },
+                {
+                  "text": " a pupil sharing one room with younger siblings may find a long evening assignment difficult to finish. I think it is better to recognise that problem early.",
+                  "kind": "detail"
+                }
+              ]
             }
           ]
         },
@@ -232,23 +479,70 @@
             {
               "question": "What would you like to do with a friend this weekend?",
               "answer": "I would like to design a simple weekly study plan and discuss useful practice tasks. We could bring a school timetable and compare what we learn. It would give us something useful to talk about afterwards.",
-              "noteVi": "Nêu kế hoạch, đồ cần mang và lợi ích."
+              "noteVi": "Nêu kế hoạch, đồ cần mang và lợi ích.",
+              "parts": [
+                {
+                  "text": "I would like to",
+                  "kind": "frame",
+                  "labelVi": "Nêu mong muốn + động từ nguyên mẫu"
+                },
+                {
+                  "text": " design a simple weekly study plan and discuss useful practice tasks. We could bring a school timetable and compare what we learn. It would give us something useful to talk about afterwards.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "Do you prefer learning something alone or with friends?",
               "answer": "For a new topic, I prefer being with one or two friends. For instance, if we were learning about homework for schoolchildren, we could ask each other questions. However, I like reviewing my notes alone afterwards.",
-              "noteVi": "Chọn một phía, thêm tình huống và một ngoại lệ."
+              "noteVi": "Chọn một phía, thêm tình huống và một ngoại lệ.",
+              "parts": [
+                {
+                  "text": "For a new topic, I prefer",
+                  "kind": "frame",
+                  "labelVi": "Nêu cách học ưa thích + danh từ / V-ing"
+                },
+                {
+                  "text": " being with one or two friends. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "For instance,",
+                  "kind": "frame",
+                  "labelVi": "Đưa ví dụ + mệnh đề"
+                },
+                {
+                  "text": " if we were learning about homework for schoolchildren, we could ask each other questions. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "However,",
+                  "kind": "frame",
+                  "labelVi": "Nêu ý đối lập hoặc giới hạn"
+                },
+                {
+                  "text": " I like reviewing my notes alone afterwards.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "How do you decide whether an activity is worth your time?",
               "answer": "I ask whether I can use what I learn. In this case, it would be helpful to know how to coordinate homework and give short tasks with clear purposes. I also check the time and cost before making a plan.",
-              "noteVi": "Một tiêu chí → áp dụng vào tình huống → chi tiết thêm."
+              "noteVi": "Một tiêu chí → áp dụng vào tình huống → chi tiết thêm.",
+              "parts": [
+                {
+                  "text": "I ask whether I can use what I learn. In this case, it would be helpful to know how to coordinate homework and give short tasks with clear purposes. I also check the time and cost before making a plan.",
+                  "kind": "detail"
+                }
+              ]
             }
           ]
         }
       ],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 225,
       "mainWordCount": 0,
       "phrases": [
@@ -306,17 +600,68 @@
             {
               "question": "Are you interested in studying English with a partner?",
               "answer": "Yes, I am, mainly because learners have more opportunities to speak. I would like to understand how this works in everyday life, rather than just read a definition.",
-              "noteVi": "Trả lời trực tiếp → thêm một lý do."
+              "noteVi": "Trả lời trực tiếp → thêm một lý do.",
+              "parts": [
+                {
+                  "text": "Yes, I am, mainly because",
+                  "kind": "frame",
+                  "labelVi": "Trả lời trực tiếp và giải thích"
+                },
+                {
+                  "text": " learners have more opportunities to speak. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "I would like to",
+                  "kind": "frame",
+                  "labelVi": "Nêu mong muốn + động từ nguyên mẫu"
+                },
+                {
+                  "text": " understand how this works in everyday life, rather than just read a definition.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "How could you learn more about studying English with a partner?",
               "answer": "I could join an English conversation club meeting. There, I would have a chance to practise everyday dialogues with a partner. Trying something with other people usually helps me remember it.",
-              "noteVi": "Nêu một cách tìm hiểu và hoạt động cụ thể."
+              "noteVi": "Nêu một cách tìm hiểu và hoạt động cụ thể.",
+              "parts": [
+                {
+                  "text": "I could join",
+                  "kind": "frame",
+                  "labelVi": "Nêu hoạt động có thể tham gia"
+                },
+                {
+                  "text": " an English conversation club meeting. There, I would have a chance to practise everyday dialogues with a partner. Trying something with other people usually helps me remember it.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "Is there anything difficult about studying English with a partner?",
               "answer": "One possible difficulty is that partners may repeat the same mistakes. For example, two beginners might use the wrong past-tense form repeatedly because neither notices it. I think it is better to recognise that problem early.",
-              "noteVi": "Một khó khăn → một ví dụ, không liệt kê quá nhiều."
+              "noteVi": "Một khó khăn → một ví dụ, không liệt kê quá nhiều.",
+              "parts": [
+                {
+                  "text": "One possible difficulty is that",
+                  "kind": "frame",
+                  "labelVi": "Nêu khó khăn + mệnh đề"
+                },
+                {
+                  "text": " partners may repeat the same mistakes. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "For example,",
+                  "kind": "frame",
+                  "labelVi": "Đưa ví dụ + mệnh đề"
+                },
+                {
+                  "text": " two beginners might use the wrong past-tense form repeatedly because neither notices it. I think it is better to recognise that problem early.",
+                  "kind": "detail"
+                }
+              ]
             }
           ]
         },
@@ -326,23 +671,70 @@
             {
               "question": "What would you like to do with a friend this weekend?",
               "answer": "I would like to practise everyday dialogues with a partner. We could bring a notebook for useful phrases and compare what we learn. It would give us something useful to talk about afterwards.",
-              "noteVi": "Nêu kế hoạch, đồ cần mang và lợi ích."
+              "noteVi": "Nêu kế hoạch, đồ cần mang và lợi ích.",
+              "parts": [
+                {
+                  "text": "I would like to",
+                  "kind": "frame",
+                  "labelVi": "Nêu mong muốn + động từ nguyên mẫu"
+                },
+                {
+                  "text": " practise everyday dialogues with a partner. We could bring a notebook for useful phrases and compare what we learn. It would give us something useful to talk about afterwards.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "Do you prefer learning something alone or with friends?",
               "answer": "For a new topic, I prefer being with one or two friends. For instance, if we were learning about studying English with a partner, we could ask each other questions. However, I like reviewing my notes alone afterwards.",
-              "noteVi": "Chọn một phía, thêm tình huống và một ngoại lệ."
+              "noteVi": "Chọn một phía, thêm tình huống và một ngoại lệ.",
+              "parts": [
+                {
+                  "text": "For a new topic, I prefer",
+                  "kind": "frame",
+                  "labelVi": "Nêu cách học ưa thích + danh từ / V-ing"
+                },
+                {
+                  "text": " being with one or two friends. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "For instance,",
+                  "kind": "frame",
+                  "labelVi": "Đưa ví dụ + mệnh đề"
+                },
+                {
+                  "text": " if we were learning about studying English with a partner, we could ask each other questions. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "However,",
+                  "kind": "frame",
+                  "labelVi": "Nêu ý đối lập hoặc giới hạn"
+                },
+                {
+                  "text": " I like reviewing my notes alone afterwards.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "How do you decide whether an activity is worth your time?",
               "answer": "I ask whether I can use what I learn. In this case, it would be helpful to know how to combine partner practice with checked materials and occasional teacher support. I also check the time and cost before making a plan.",
-              "noteVi": "Một tiêu chí → áp dụng vào tình huống → chi tiết thêm."
+              "noteVi": "Một tiêu chí → áp dụng vào tình huống → chi tiết thêm.",
+              "parts": [
+                {
+                  "text": "I ask whether I can use what I learn. In this case, it would be helpful to know how to combine partner practice with checked materials and occasional teacher support. I also check the time and cost before making a plan.",
+                  "kind": "detail"
+                }
+              ]
             }
           ]
         }
       ],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 207,
       "mainWordCount": 0,
       "phrases": [
@@ -400,17 +792,68 @@
             {
               "question": "Are you interested in practical life skills at school?",
               "answer": "Yes, I am, mainly because students can use what they learn in everyday situations. I would like to understand how this works in everyday life, rather than just read a definition.",
-              "noteVi": "Trả lời trực tiếp → thêm một lý do."
+              "noteVi": "Trả lời trực tiếp → thêm một lý do.",
+              "parts": [
+                {
+                  "text": "Yes, I am, mainly because",
+                  "kind": "frame",
+                  "labelVi": "Trả lời trực tiếp và giải thích"
+                },
+                {
+                  "text": " students can use what they learn in everyday situations. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "I would like to",
+                  "kind": "frame",
+                  "labelVi": "Nêu mong muốn + động từ nguyên mẫu"
+                },
+                {
+                  "text": " understand how this works in everyday life, rather than just read a definition.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "How could you learn more about practical life skills at school?",
               "answer": "I could join a life skills workshop. There, I would have a chance to plan a simple budget and practise making everyday decisions. Trying something with other people usually helps me remember it.",
-              "noteVi": "Nêu một cách tìm hiểu và hoạt động cụ thể."
+              "noteVi": "Nêu một cách tìm hiểu và hoạt động cụ thể.",
+              "parts": [
+                {
+                  "text": "I could join",
+                  "kind": "frame",
+                  "labelVi": "Nêu hoạt động có thể tham gia"
+                },
+                {
+                  "text": " a life skills workshop. There, I would have a chance to plan a simple budget and practise making everyday decisions. Trying something with other people usually helps me remember it.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "Is there anything difficult about practical life skills at school?",
               "answer": "One possible difficulty is that an already busy timetable can become overloaded. For example, students preparing for exams may struggle if a long extra course is added without removing anything else. I think it is better to recognise that problem early.",
-              "noteVi": "Một khó khăn → một ví dụ, không liệt kê quá nhiều."
+              "noteVi": "Một khó khăn → một ví dụ, không liệt kê quá nhiều.",
+              "parts": [
+                {
+                  "text": "One possible difficulty is that",
+                  "kind": "frame",
+                  "labelVi": "Nêu khó khăn + mệnh đề"
+                },
+                {
+                  "text": " an already busy timetable can become overloaded. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "For example,",
+                  "kind": "frame",
+                  "labelVi": "Đưa ví dụ + mệnh đề"
+                },
+                {
+                  "text": " students preparing for exams may struggle if a long extra course is added without removing anything else. I think it is better to recognise that problem early.",
+                  "kind": "detail"
+                }
+              ]
             }
           ]
         },
@@ -420,23 +863,70 @@
             {
               "question": "What would you like to do with a friend this weekend?",
               "answer": "I would like to plan a simple budget and practise making everyday decisions. We could bring a calculator and compare what we learn. It would give us something useful to talk about afterwards.",
-              "noteVi": "Nêu kế hoạch, đồ cần mang và lợi ích."
+              "noteVi": "Nêu kế hoạch, đồ cần mang và lợi ích.",
+              "parts": [
+                {
+                  "text": "I would like to",
+                  "kind": "frame",
+                  "labelVi": "Nêu mong muốn + động từ nguyên mẫu"
+                },
+                {
+                  "text": " plan a simple budget and practise making everyday decisions. We could bring a calculator and compare what we learn. It would give us something useful to talk about afterwards.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "Do you prefer learning something alone or with friends?",
               "answer": "For a new topic, I prefer being with one or two friends. For instance, if we were learning about practical life skills at school, we could ask each other questions. However, I like reviewing my notes alone afterwards.",
-              "noteVi": "Chọn một phía, thêm tình huống và một ngoại lệ."
+              "noteVi": "Chọn một phía, thêm tình huống và một ngoại lệ.",
+              "parts": [
+                {
+                  "text": "For a new topic, I prefer",
+                  "kind": "frame",
+                  "labelVi": "Nêu cách học ưa thích + danh từ / V-ing"
+                },
+                {
+                  "text": " being with one or two friends. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "For instance,",
+                  "kind": "frame",
+                  "labelVi": "Đưa ví dụ + mệnh đề"
+                },
+                {
+                  "text": " if we were learning about practical life skills at school, we could ask each other questions. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "However,",
+                  "kind": "frame",
+                  "labelVi": "Nêu ý đối lập hoặc giới hạn"
+                },
+                {
+                  "text": " I like reviewing my notes alone afterwards.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "How do you decide whether an activity is worth your time?",
               "answer": "I ask whether I can use what I learn. In this case, it would be helpful to know how to include practical activities within suitable subjects. I also check the time and cost before making a plan.",
-              "noteVi": "Một tiêu chí → áp dụng vào tình huống → chi tiết thêm."
+              "noteVi": "Một tiêu chí → áp dụng vào tình huống → chi tiết thêm.",
+              "parts": [
+                {
+                  "text": "I ask whether I can use what I learn. In this case, it would be helpful to know how to include practical activities within suitable subjects. I also check the time and cost before making a plan.",
+                  "kind": "detail"
+                }
+              ]
             }
           ]
         }
       ],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 213,
       "mainWordCount": 0,
       "phrases": [
@@ -494,17 +984,68 @@
             {
               "question": "Are you interested in group projects at school?",
               "answer": "Yes, I am, mainly because students learn to explain ideas and share responsibility. I would like to understand how this works in everyday life, rather than just read a definition.",
-              "noteVi": "Trả lời trực tiếp → thêm một lý do."
+              "noteVi": "Trả lời trực tiếp → thêm một lý do.",
+              "parts": [
+                {
+                  "text": "Yes, I am, mainly because",
+                  "kind": "frame",
+                  "labelVi": "Trả lời trực tiếp và giải thích"
+                },
+                {
+                  "text": " students learn to explain ideas and share responsibility. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "I would like to",
+                  "kind": "frame",
+                  "labelVi": "Nêu mong muốn + động từ nguyên mẫu"
+                },
+                {
+                  "text": " understand how this works in everyday life, rather than just read a definition.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "How could you learn more about group projects at school?",
               "answer": "I could join a student project workshop. There, I would have a chance to plan a small exhibition and divide tasks fairly. Trying something with other people usually helps me remember it.",
-              "noteVi": "Nêu một cách tìm hiểu và hoạt động cụ thể."
+              "noteVi": "Nêu một cách tìm hiểu và hoạt động cụ thể.",
+              "parts": [
+                {
+                  "text": "I could join",
+                  "kind": "frame",
+                  "labelVi": "Nêu hoạt động có thể tham gia"
+                },
+                {
+                  "text": " a student project workshop. There, I would have a chance to plan a small exhibition and divide tasks fairly. Trying something with other people usually helps me remember it.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "Is there anything difficult about group projects at school?",
               "answer": "One possible difficulty is that the workload may not be shared fairly. For example, a pupil may receive the same group mark despite missing meetings and contributing no research. I think it is better to recognise that problem early.",
-              "noteVi": "Một khó khăn → một ví dụ, không liệt kê quá nhiều."
+              "noteVi": "Một khó khăn → một ví dụ, không liệt kê quá nhiều.",
+              "parts": [
+                {
+                  "text": "One possible difficulty is that",
+                  "kind": "frame",
+                  "labelVi": "Nêu khó khăn + mệnh đề"
+                },
+                {
+                  "text": " the workload may not be shared fairly. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "For example,",
+                  "kind": "frame",
+                  "labelVi": "Đưa ví dụ + mệnh đề"
+                },
+                {
+                  "text": " a pupil may receive the same group mark despite missing meetings and contributing no research. I think it is better to recognise that problem early.",
+                  "kind": "detail"
+                }
+              ]
             }
           ]
         },
@@ -514,23 +1055,70 @@
             {
               "question": "What would you like to do with a friend this weekend?",
               "answer": "I would like to plan a small exhibition and divide tasks fairly. We could bring a folder for project notes and compare what we learn. It would give us something useful to talk about afterwards.",
-              "noteVi": "Nêu kế hoạch, đồ cần mang và lợi ích."
+              "noteVi": "Nêu kế hoạch, đồ cần mang và lợi ích.",
+              "parts": [
+                {
+                  "text": "I would like to",
+                  "kind": "frame",
+                  "labelVi": "Nêu mong muốn + động từ nguyên mẫu"
+                },
+                {
+                  "text": " plan a small exhibition and divide tasks fairly. We could bring a folder for project notes and compare what we learn. It would give us something useful to talk about afterwards.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "Do you prefer learning something alone or with friends?",
               "answer": "For a new topic, I prefer being with one or two friends. For instance, if we were learning about group projects at school, we could ask each other questions. However, I like reviewing my notes alone afterwards.",
-              "noteVi": "Chọn một phía, thêm tình huống và một ngoại lệ."
+              "noteVi": "Chọn một phía, thêm tình huống và một ngoại lệ.",
+              "parts": [
+                {
+                  "text": "For a new topic, I prefer",
+                  "kind": "frame",
+                  "labelVi": "Nêu cách học ưa thích + danh từ / V-ing"
+                },
+                {
+                  "text": " being with one or two friends. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "For instance,",
+                  "kind": "frame",
+                  "labelVi": "Đưa ví dụ + mệnh đề"
+                },
+                {
+                  "text": " if we were learning about group projects at school, we could ask each other questions. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "However,",
+                  "kind": "frame",
+                  "labelVi": "Nêu ý đối lập hoặc giới hạn"
+                },
+                {
+                  "text": " I like reviewing my notes alone afterwards.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "How do you decide whether an activity is worth your time?",
               "answer": "I ask whether I can use what I learn. In this case, it would be helpful to know how to combine a group result with individual reflection and progress checks. I also check the time and cost before making a plan.",
-              "noteVi": "Một tiêu chí → áp dụng vào tình huống → chi tiết thêm."
+              "noteVi": "Một tiêu chí → áp dụng vào tình huống → chi tiết thêm.",
+              "parts": [
+                {
+                  "text": "I ask whether I can use what I learn. In this case, it would be helpful to know how to combine a group result with individual reflection and progress checks. I also check the time and cost before making a plan.",
+                  "kind": "detail"
+                }
+              ]
             }
           ]
         }
       ],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 214,
       "mainWordCount": 0,
       "phrases": [
@@ -588,17 +1176,68 @@
             {
               "question": "Are you interested in short breaks during study?",
               "answer": "Yes, I am, mainly because students can return to work with better attention. I would like to understand how this works in everyday life, rather than just read a definition.",
-              "noteVi": "Trả lời trực tiếp → thêm một lý do."
+              "noteVi": "Trả lời trực tiếp → thêm một lý do.",
+              "parts": [
+                {
+                  "text": "Yes, I am, mainly because",
+                  "kind": "frame",
+                  "labelVi": "Trả lời trực tiếp và giải thích"
+                },
+                {
+                  "text": " students can return to work with better attention. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "I would like to",
+                  "kind": "frame",
+                  "labelVi": "Nêu mong muốn + động từ nguyên mẫu"
+                },
+                {
+                  "text": " understand how this works in everyday life, rather than just read a definition.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "How could you learn more about short breaks during study?",
               "answer": "I could join a healthy study habits session. There, I would have a chance to test a study routine with short planned breaks. Trying something with other people usually helps me remember it.",
-              "noteVi": "Nêu một cách tìm hiểu và hoạt động cụ thể."
+              "noteVi": "Nêu một cách tìm hiểu và hoạt động cụ thể.",
+              "parts": [
+                {
+                  "text": "I could join",
+                  "kind": "frame",
+                  "labelVi": "Nêu hoạt động có thể tham gia"
+                },
+                {
+                  "text": " a healthy study habits session. There, I would have a chance to test a study routine with short planned breaks. Trying something with other people usually helps me remember it.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "Is there anything difficult about short breaks during study?",
               "answer": "One possible difficulty is that poorly organised breaks can interrupt the lesson. For example, a noisy game in the middle of a lesson may take longer to stop than the break itself. I think it is better to recognise that problem early.",
-              "noteVi": "Một khó khăn → một ví dụ, không liệt kê quá nhiều."
+              "noteVi": "Một khó khăn → một ví dụ, không liệt kê quá nhiều.",
+              "parts": [
+                {
+                  "text": "One possible difficulty is that",
+                  "kind": "frame",
+                  "labelVi": "Nêu khó khăn + mệnh đề"
+                },
+                {
+                  "text": " poorly organised breaks can interrupt the lesson. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "For example,",
+                  "kind": "frame",
+                  "labelVi": "Đưa ví dụ + mệnh đề"
+                },
+                {
+                  "text": " a noisy game in the middle of a lesson may take longer to stop than the break itself. I think it is better to recognise that problem early.",
+                  "kind": "detail"
+                }
+              ]
             }
           ]
         },
@@ -608,23 +1247,70 @@
             {
               "question": "What would you like to do with a friend this weekend?",
               "answer": "I would like to test a study routine with short planned breaks. We could bring a timer and compare what we learn. It would give us something useful to talk about afterwards.",
-              "noteVi": "Nêu kế hoạch, đồ cần mang và lợi ích."
+              "noteVi": "Nêu kế hoạch, đồ cần mang và lợi ích.",
+              "parts": [
+                {
+                  "text": "I would like to",
+                  "kind": "frame",
+                  "labelVi": "Nêu mong muốn + động từ nguyên mẫu"
+                },
+                {
+                  "text": " test a study routine with short planned breaks. We could bring a timer and compare what we learn. It would give us something useful to talk about afterwards.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "Do you prefer learning something alone or with friends?",
               "answer": "For a new topic, I prefer being with one or two friends. For instance, if we were learning about short breaks during study, we could ask each other questions. However, I like reviewing my notes alone afterwards.",
-              "noteVi": "Chọn một phía, thêm tình huống và một ngoại lệ."
+              "noteVi": "Chọn một phía, thêm tình huống và một ngoại lệ.",
+              "parts": [
+                {
+                  "text": "For a new topic, I prefer",
+                  "kind": "frame",
+                  "labelVi": "Nêu cách học ưa thích + danh từ / V-ing"
+                },
+                {
+                  "text": " being with one or two friends. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "For instance,",
+                  "kind": "frame",
+                  "labelVi": "Đưa ví dụ + mệnh đề"
+                },
+                {
+                  "text": " if we were learning about short breaks during study, we could ask each other questions. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "However,",
+                  "kind": "frame",
+                  "labelVi": "Nêu ý đối lập hoặc giới hạn"
+                },
+                {
+                  "text": " I like reviewing my notes alone afterwards.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "How do you decide whether an activity is worth your time?",
               "answer": "I ask whether I can use what I learn. In this case, it would be helpful to know how to use brief predictable activities and a clear signal to return. I also check the time and cost before making a plan.",
-              "noteVi": "Một tiêu chí → áp dụng vào tình huống → chi tiết thêm."
+              "noteVi": "Một tiêu chí → áp dụng vào tình huống → chi tiết thêm.",
+              "parts": [
+                {
+                  "text": "I ask whether I can use what I learn. In this case, it would be helpful to know how to use brief predictable activities and a clear signal to return. I also check the time and cost before making a plan.",
+                  "kind": "detail"
+                }
+              ]
             }
           ]
         }
       ],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 215,
       "mainWordCount": 0,
       "phrases": [
@@ -682,17 +1368,68 @@
             {
               "question": "Are you interested in school uniforms?",
               "answer": "Yes, I am, mainly because families can make daily clothing decisions more easily. I would like to understand how this works in everyday life, rather than just read a definition.",
-              "noteVi": "Trả lời trực tiếp → thêm một lý do."
+              "noteVi": "Trả lời trực tiếp → thêm một lý do.",
+              "parts": [
+                {
+                  "text": "Yes, I am, mainly because",
+                  "kind": "frame",
+                  "labelVi": "Trả lời trực tiếp và giải thích"
+                },
+                {
+                  "text": " families can make daily clothing decisions more easily. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "I would like to",
+                  "kind": "frame",
+                  "labelVi": "Nêu mong muốn + động từ nguyên mẫu"
+                },
+                {
+                  "text": " understand how this works in everyday life, rather than just read a definition.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "How could you learn more about school uniforms?",
               "answer": "I could join a school uniform exchange event. There, I would have a chance to sort donated clothes and discuss affordable uniform choices. Trying something with other people usually helps me remember it.",
-              "noteVi": "Nêu một cách tìm hiểu và hoạt động cụ thể."
+              "noteVi": "Nêu một cách tìm hiểu và hoạt động cụ thể.",
+              "parts": [
+                {
+                  "text": "I could join",
+                  "kind": "frame",
+                  "labelVi": "Nêu hoạt động có thể tham gia"
+                },
+                {
+                  "text": " a school uniform exchange event. There, I would have a chance to sort donated clothes and discuss affordable uniform choices. Trying something with other people usually helps me remember it.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "Is there anything difficult about school uniforms?",
               "answer": "One possible difficulty is that uniform costs can still be difficult for some families. For example, parents with three children may struggle to replace several branded jackets at the start of term. I think it is better to recognise that problem early.",
-              "noteVi": "Một khó khăn → một ví dụ, không liệt kê quá nhiều."
+              "noteVi": "Một khó khăn → một ví dụ, không liệt kê quá nhiều.",
+              "parts": [
+                {
+                  "text": "One possible difficulty is that",
+                  "kind": "frame",
+                  "labelVi": "Nêu khó khăn + mệnh đề"
+                },
+                {
+                  "text": " uniform costs can still be difficult for some families. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "For example,",
+                  "kind": "frame",
+                  "labelVi": "Đưa ví dụ + mệnh đề"
+                },
+                {
+                  "text": " parents with three children may struggle to replace several branded jackets at the start of term. I think it is better to recognise that problem early.",
+                  "kind": "detail"
+                }
+              ]
             }
           ]
         },
@@ -702,23 +1439,70 @@
             {
               "question": "What would you like to do with a friend this weekend?",
               "answer": "I would like to sort donated clothes and discuss affordable uniform choices. We could bring clean clothes suitable for donation and compare what we learn. It would give us something useful to talk about afterwards.",
-              "noteVi": "Nêu kế hoạch, đồ cần mang và lợi ích."
+              "noteVi": "Nêu kế hoạch, đồ cần mang và lợi ích.",
+              "parts": [
+                {
+                  "text": "I would like to",
+                  "kind": "frame",
+                  "labelVi": "Nêu mong muốn + động từ nguyên mẫu"
+                },
+                {
+                  "text": " sort donated clothes and discuss affordable uniform choices. We could bring clean clothes suitable for donation and compare what we learn. It would give us something useful to talk about afterwards.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "Do you prefer learning something alone or with friends?",
               "answer": "For a new topic, I prefer being with one or two friends. For instance, if we were learning about school uniforms, we could ask each other questions. However, I like reviewing my notes alone afterwards.",
-              "noteVi": "Chọn một phía, thêm tình huống và một ngoại lệ."
+              "noteVi": "Chọn một phía, thêm tình huống và một ngoại lệ.",
+              "parts": [
+                {
+                  "text": "For a new topic, I prefer",
+                  "kind": "frame",
+                  "labelVi": "Nêu cách học ưa thích + danh từ / V-ing"
+                },
+                {
+                  "text": " being with one or two friends. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "For instance,",
+                  "kind": "frame",
+                  "labelVi": "Đưa ví dụ + mệnh đề"
+                },
+                {
+                  "text": " if we were learning about school uniforms, we could ask each other questions. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "However,",
+                  "kind": "frame",
+                  "labelVi": "Nêu ý đối lập hoặc giới hạn"
+                },
+                {
+                  "text": " I like reviewing my notes alone afterwards.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "How do you decide whether an activity is worth your time?",
               "answer": "I ask whether I can use what I learn. In this case, it would be helpful to know how to allow inexpensive basic items and offer second-hand exchanges. I also check the time and cost before making a plan.",
-              "noteVi": "Một tiêu chí → áp dụng vào tình huống → chi tiết thêm."
+              "noteVi": "Một tiêu chí → áp dụng vào tình huống → chi tiết thêm.",
+              "parts": [
+                {
+                  "text": "I ask whether I can use what I learn. In this case, it would be helpful to know how to allow inexpensive basic items and offer second-hand exchanges. I also check the time and cost before making a plan.",
+                  "kind": "detail"
+                }
+              ]
             }
           ]
         }
       ],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 214,
       "mainWordCount": 0,
       "phrases": [
@@ -776,17 +1560,68 @@
             {
               "question": "Are you interested in vocational education?",
               "answer": "Yes, I am, mainly because students can discover routes that match practical interests. I would like to understand how this works in everyday life, rather than just read a definition.",
-              "noteVi": "Trả lời trực tiếp → thêm một lý do."
+              "noteVi": "Trả lời trực tiếp → thêm một lý do.",
+              "parts": [
+                {
+                  "text": "Yes, I am, mainly because",
+                  "kind": "frame",
+                  "labelVi": "Trả lời trực tiếp và giải thích"
+                },
+                {
+                  "text": " students can discover routes that match practical interests. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "I would like to",
+                  "kind": "frame",
+                  "labelVi": "Nêu mong muốn + động từ nguyên mẫu"
+                },
+                {
+                  "text": " understand how this works in everyday life, rather than just read a definition.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "How could you learn more about vocational education?",
               "answer": "I could join a career and training information day. There, I would have a chance to meet course advisers and compare practical training routes. Trying something with other people usually helps me remember it.",
-              "noteVi": "Nêu một cách tìm hiểu và hoạt động cụ thể."
+              "noteVi": "Nêu một cách tìm hiểu và hoạt động cụ thể.",
+              "parts": [
+                {
+                  "text": "I could join",
+                  "kind": "frame",
+                  "labelVi": "Nêu hoạt động có thể tham gia"
+                },
+                {
+                  "text": " a career and training information day. There, I would have a chance to meet course advisers and compare practical training routes. Trying something with other people usually helps me remember it.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "Is there anything difficult about vocational education?",
               "answer": "One possible difficulty is that students might choose too early with limited information. For example, a young person may enrol in a hospitality course without realising that some jobs involve evening shifts. I think it is better to recognise that problem early.",
-              "noteVi": "Một khó khăn → một ví dụ, không liệt kê quá nhiều."
+              "noteVi": "Một khó khăn → một ví dụ, không liệt kê quá nhiều.",
+              "parts": [
+                {
+                  "text": "One possible difficulty is that",
+                  "kind": "frame",
+                  "labelVi": "Nêu khó khăn + mệnh đề"
+                },
+                {
+                  "text": " students might choose too early with limited information. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "For example,",
+                  "kind": "frame",
+                  "labelVi": "Đưa ví dụ + mệnh đề"
+                },
+                {
+                  "text": " a young person may enrol in a hospitality course without realising that some jobs involve evening shifts. I think it is better to recognise that problem early.",
+                  "kind": "detail"
+                }
+              ]
             }
           ]
         },
@@ -796,23 +1631,70 @@
             {
               "question": "What would you like to do with a friend this weekend?",
               "answer": "I would like to meet course advisers and compare practical training routes. We could bring a list of career questions and compare what we learn. It would give us something useful to talk about afterwards.",
-              "noteVi": "Nêu kế hoạch, đồ cần mang và lợi ích."
+              "noteVi": "Nêu kế hoạch, đồ cần mang và lợi ích.",
+              "parts": [
+                {
+                  "text": "I would like to",
+                  "kind": "frame",
+                  "labelVi": "Nêu mong muốn + động từ nguyên mẫu"
+                },
+                {
+                  "text": " meet course advisers and compare practical training routes. We could bring a list of career questions and compare what we learn. It would give us something useful to talk about afterwards.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "Do you prefer learning something alone or with friends?",
               "answer": "For a new topic, I prefer being with one or two friends. For instance, if we were learning about vocational education, we could ask each other questions. However, I like reviewing my notes alone afterwards.",
-              "noteVi": "Chọn một phía, thêm tình huống và một ngoại lệ."
+              "noteVi": "Chọn một phía, thêm tình huống và một ngoại lệ.",
+              "parts": [
+                {
+                  "text": "For a new topic, I prefer",
+                  "kind": "frame",
+                  "labelVi": "Nêu cách học ưa thích + danh từ / V-ing"
+                },
+                {
+                  "text": " being with one or two friends. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "For instance,",
+                  "kind": "frame",
+                  "labelVi": "Đưa ví dụ + mệnh đề"
+                },
+                {
+                  "text": " if we were learning about vocational education, we could ask each other questions. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "However,",
+                  "kind": "frame",
+                  "labelVi": "Nêu ý đối lập hoặc giới hạn"
+                },
+                {
+                  "text": " I like reviewing my notes alone afterwards.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "How do you decide whether an activity is worth your time?",
               "answer": "I ask whether I can use what I learn. In this case, it would be helpful to know how to provide course visits and balanced guidance about work and further study. I also check the time and cost before making a plan.",
-              "noteVi": "Một tiêu chí → áp dụng vào tình huống → chi tiết thêm."
+              "noteVi": "Một tiêu chí → áp dụng vào tình huống → chi tiết thêm.",
+              "parts": [
+                {
+                  "text": "I ask whether I can use what I learn. In this case, it would be helpful to know how to provide course visits and balanced guidance about work and further study. I also check the time and cost before making a plan.",
+                  "kind": "detail"
+                }
+              ]
             }
           ]
         }
       ],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 218,
       "mainWordCount": 0,
       "phrases": [
@@ -870,17 +1752,68 @@
             {
               "question": "Are you interested in learning new skills as an adult?",
               "answer": "Yes, I am, mainly because adults can update skills without returning to full-time study. I would like to understand how this works in everyday life, rather than just read a definition.",
-              "noteVi": "Trả lời trực tiếp → thêm một lý do."
+              "noteVi": "Trả lời trực tiếp → thêm một lý do.",
+              "parts": [
+                {
+                  "text": "Yes, I am, mainly because",
+                  "kind": "frame",
+                  "labelVi": "Trả lời trực tiếp và giải thích"
+                },
+                {
+                  "text": " adults can update skills without returning to full-time study. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "I would like to",
+                  "kind": "frame",
+                  "labelVi": "Nêu mong muốn + động từ nguyên mẫu"
+                },
+                {
+                  "text": " understand how this works in everyday life, rather than just read a definition.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "How could you learn more about learning new skills as an adult?",
               "answer": "I could join an adult learning open evening. There, I would have a chance to try short classes and discuss flexible learning options. Trying something with other people usually helps me remember it.",
-              "noteVi": "Nêu một cách tìm hiểu và hoạt động cụ thể."
+              "noteVi": "Nêu một cách tìm hiểu và hoạt động cụ thể.",
+              "parts": [
+                {
+                  "text": "I could join",
+                  "kind": "frame",
+                  "labelVi": "Nêu hoạt động có thể tham gia"
+                },
+                {
+                  "text": " an adult learning open evening. There, I would have a chance to try short classes and discuss flexible learning options. Trying something with other people usually helps me remember it.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "Is there anything difficult about learning new skills as an adult?",
               "answer": "One possible difficulty is that people with the greatest need may still be unable to attend. For example, a parent may miss an evening class because there is no one available to look after a child. I think it is better to recognise that problem early.",
-              "noteVi": "Một khó khăn → một ví dụ, không liệt kê quá nhiều."
+              "noteVi": "Một khó khăn → một ví dụ, không liệt kê quá nhiều.",
+              "parts": [
+                {
+                  "text": "One possible difficulty is that",
+                  "kind": "frame",
+                  "labelVi": "Nêu khó khăn + mệnh đề"
+                },
+                {
+                  "text": " people with the greatest need may still be unable to attend. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "For example,",
+                  "kind": "frame",
+                  "labelVi": "Đưa ví dụ + mệnh đề"
+                },
+                {
+                  "text": " a parent may miss an evening class because there is no one available to look after a child. I think it is better to recognise that problem early.",
+                  "kind": "detail"
+                }
+              ]
             }
           ]
         },
@@ -890,23 +1823,70 @@
             {
               "question": "What would you like to do with a friend this weekend?",
               "answer": "I would like to try short classes and discuss flexible learning options. We could bring a weekly schedule and compare what we learn. It would give us something useful to talk about afterwards.",
-              "noteVi": "Nêu kế hoạch, đồ cần mang và lợi ích."
+              "noteVi": "Nêu kế hoạch, đồ cần mang và lợi ích.",
+              "parts": [
+                {
+                  "text": "I would like to",
+                  "kind": "frame",
+                  "labelVi": "Nêu mong muốn + động từ nguyên mẫu"
+                },
+                {
+                  "text": " try short classes and discuss flexible learning options. We could bring a weekly schedule and compare what we learn. It would give us something useful to talk about afterwards.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "Do you prefer learning something alone or with friends?",
               "answer": "For a new topic, I prefer being with one or two friends. For instance, if we were learning about learning new skills as an adult, we could ask each other questions. However, I like reviewing my notes alone afterwards.",
-              "noteVi": "Chọn một phía, thêm tình huống và một ngoại lệ."
+              "noteVi": "Chọn một phía, thêm tình huống và một ngoại lệ.",
+              "parts": [
+                {
+                  "text": "For a new topic, I prefer",
+                  "kind": "frame",
+                  "labelVi": "Nêu cách học ưa thích + danh từ / V-ing"
+                },
+                {
+                  "text": " being with one or two friends. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "For instance,",
+                  "kind": "frame",
+                  "labelVi": "Đưa ví dụ + mệnh đề"
+                },
+                {
+                  "text": " if we were learning about learning new skills as an adult, we could ask each other questions. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "However,",
+                  "kind": "frame",
+                  "labelVi": "Nêu ý đối lập hoặc giới hạn"
+                },
+                {
+                  "text": " I like reviewing my notes alone afterwards.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "How do you decide whether an activity is worth your time?",
               "answer": "I ask whether I can use what I learn. In this case, it would be helpful to know how to offer flexible schedules and simple support for attendance. I also check the time and cost before making a plan.",
-              "noteVi": "Một tiêu chí → áp dụng vào tình huống → chi tiết thêm."
+              "noteVi": "Một tiêu chí → áp dụng vào tình huống → chi tiết thêm.",
+              "parts": [
+                {
+                  "text": "I ask whether I can use what I learn. In this case, it would be helpful to know how to offer flexible schedules and simple support for attendance. I also check the time and cost before making a plan.",
+                  "kind": "detail"
+                }
+              ]
             }
           ]
         }
       ],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 221,
       "mainWordCount": 0,
       "phrases": [

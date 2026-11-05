@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-05-v1",
+  "version": "2026-11-05-v2-frames",
   "samples": [
     {
       "id": "speaking-part2-choice-daily-life-01",
@@ -20,22 +20,79 @@
         {
           "label": "Chọn phương án",
           "text": "In this situation, I would choose to attend a neighbourhood walking event. I think this option fits my needs best. The important thing is to choose a method I can actually use, rather than simply the one that sounds most impressive.",
-          "noteVi": "Nêu lựa chọn ngay và bám điều kiện của đề."
+          "noteVi": "Nêu lựa chọn ngay và bám điều kiện của đề.",
+          "parts": [
+            {
+              "text": "In this situation, I would choose to",
+              "kind": "frame",
+              "labelVi": "Chọn phương án + động từ nguyên mẫu"
+            },
+            {
+              "text": " attend a neighbourhood walking event. ",
+              "kind": "detail"
+            },
+            {
+              "text": "I think this option fits my needs best.",
+              "kind": "frame",
+              "labelVi": "Chốt lựa chọn phù hợp nhất với điều kiện đề"
+            },
+            {
+              "text": " The important thing is to choose a method I can actually use, rather than simply the one that sounds most impressive.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Giải thích lựa chọn",
           "text": "The main reason is that we could explore a short local route and note useful improvements. We could ask the organiser about anything unclear instead of having to guess. My friend and I could also compare our ideas during the activity, which would make it easier to stay involved. Learning about this topic is worthwhile because people can include gentle movement in ordinary routines.",
-          "noteVi": "Đi bộ dễ thành thói quen khi đường tới nơi cần đến thuận tiện và không bị cản trở."
+          "noteVi": "Đi bộ dễ thành thói quen khi đường tới nơi cần đến thuận tiện và không bị cản trở.",
+          "parts": [
+            {
+              "text": "The main reason is that",
+              "kind": "frame",
+              "labelVi": "Nêu lý do chính + mệnh đề"
+            },
+            {
+              "text": " we could explore a short local route and note useful improvements. We could ask the organiser about anything unclear instead of having to guess. My friend and I could also compare our ideas during the activity, which would make it easier to stay involved. Learning about this topic is worthwhile because people can include gentle movement in ordinary routines.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "So sánh hai phương án còn lại",
           "text": "I would not choose the guide this time. It could be useful for later revision, but it would not give us immediate feedback when we have questions. Short videos would be convenient too, but watching them separately would not meet our wish to practise together with someone who can help.",
-          "noteVi": "Không nói hai cách kia vô ích; chỉ ra vì sao ít phù hợp trong tình huống này."
+          "noteVi": "Không nói hai cách kia vô ích; chỉ ra vì sao ít phù hợp trong tình huống này.",
+          "parts": [
+            {
+              "text": "I would not choose",
+              "kind": "frame",
+              "labelVi": "Nêu phương án không chọn + cụm danh từ"
+            },
+            {
+              "text": " the guide this time. It could be useful for later revision, but it would not give us immediate feedback when we have questions. Short videos would be convenient too, but watching them separately would not meet our wish to practise together with someone who can help.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Giới hạn và kết luận",
           "text": "Of course, I would still check that the information is suitable for a beginner. One point I would want to understand is that some routes are difficult to use. After learning the basics, I could try one small idea and see whether it helps. For these reasons, my first choice would be the most practical starting point.",
-          "noteVi": "Thừa nhận giới hạn, quay về lựa chọn đã nêu."
+          "noteVi": "Thừa nhận giới hạn, quay về lựa chọn đã nêu.",
+          "parts": [
+            {
+              "text": "Of course, I would still check that the information is suitable for a beginner. One point I would want to understand is that some routes are difficult to use. After learning the basics, I could try one small idea and see whether it helps. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For these reasons,",
+              "kind": "frame",
+              "labelVi": "Kết luận từ các lý do đã nêu"
+            },
+            {
+              "text": " my first choice would be the most practical starting point.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
@@ -45,6 +102,7 @@
         "Watch short videos about walking as a daily habit"
       ],
       "selectedOption": 0,
+      "register": null,
       "wordCount": 212,
       "mainWordCount": 212,
       "phrases": [
@@ -90,22 +148,88 @@
         {
           "label": "Chọn phương án",
           "text": "In this situation, I would choose to read a beginner's guide to cooking simple meals at home. I think this option fits my needs best. The important thing is to choose a method I can actually use, rather than simply the one that sounds most impressive.",
-          "noteVi": "Nêu lựa chọn ngay và bám điều kiện của đề."
+          "noteVi": "Nêu lựa chọn ngay và bám điều kiện của đề.",
+          "parts": [
+            {
+              "text": "In this situation, I would choose to",
+              "kind": "frame",
+              "labelVi": "Chọn phương án + động từ nguyên mẫu"
+            },
+            {
+              "text": " read a beginner's guide to cooking simple meals at home. ",
+              "kind": "detail"
+            },
+            {
+              "text": "I think this option fits my needs best.",
+              "kind": "frame",
+              "labelVi": "Chốt lựa chọn phù hợp nhất với điều kiện đề"
+            },
+            {
+              "text": " The important thing is to choose a method I can actually use, rather than simply the one that sounds most impressive.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Giải thích lựa chọn",
           "text": "The main reason is that I can download or print the guide before leaving home and read it without a connection. I can stop whenever I need to make a note. In particular, I would look for a simple explanation of why a small set of reliable recipes can make home cooking less time-consuming. Learning about this topic is worthwhile because people have more control over their meals and spending.",
-          "noteVi": "Biết vài món đơn giản giúp tự chủ ăn uống; công thức nên phù hợp bếp và thời gian thực tế."
+          "noteVi": "Biết vài món đơn giản giúp tự chủ ăn uống; công thức nên phù hợp bếp và thời gian thực tế.",
+          "parts": [
+            {
+              "text": "The main reason is that",
+              "kind": "frame",
+              "labelVi": "Nêu lý do chính + mệnh đề"
+            },
+            {
+              "text": " I can download or print the guide before leaving home and read it without a connection. I can stop whenever I need to make a note. ",
+              "kind": "detail"
+            },
+            {
+              "text": "In particular,",
+              "kind": "frame",
+              "labelVi": "Làm rõ một điểm cụ thể"
+            },
+            {
+              "text": " I would look for a simple explanation of why a small set of reliable recipes can make home cooking less time-consuming. Learning about this topic is worthwhile because people have more control over their meals and spending.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "So sánh hai phương án còn lại",
           "text": "I would not choose the event because its fixed time would not fit my journey. It might be useful another weekend, but it does not meet my present need. Videos would be less suitable too: streaming could stop when the connection fails, and sound would be inconvenient in a quiet carriage.",
-          "noteVi": "Không nói hai cách kia vô ích; chỉ ra vì sao ít phù hợp trong tình huống này."
+          "noteVi": "Không nói hai cách kia vô ích; chỉ ra vì sao ít phù hợp trong tình huống này.",
+          "parts": [
+            {
+              "text": "I would not choose",
+              "kind": "frame",
+              "labelVi": "Nêu phương án không chọn + cụm danh từ"
+            },
+            {
+              "text": " the event because its fixed time would not fit my journey. It might be useful another weekend, but it does not meet my present need. Videos would be less suitable too: streaming could stop when the connection fails, and sound would be inconvenient in a quiet carriage.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Giới hạn và kết luận",
           "text": "Of course, I would still check that the information is suitable for a beginner. One point I would want to understand is that cooking may feel difficult in shared or poorly equipped housing. After learning the basics, I could try one small idea and see whether it helps. For these reasons, my first choice would be the most practical starting point.",
-          "noteVi": "Thừa nhận giới hạn, quay về lựa chọn đã nêu."
+          "noteVi": "Thừa nhận giới hạn, quay về lựa chọn đã nêu.",
+          "parts": [
+            {
+              "text": "Of course, I would still check that the information is suitable for a beginner. One point I would want to understand is that cooking may feel difficult in shared or poorly equipped housing. After learning the basics, I could try one small idea and see whether it helps. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For these reasons,",
+              "kind": "frame",
+              "labelVi": "Kết luận từ các lý do đã nêu"
+            },
+            {
+              "text": " my first choice would be the most practical starting point.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
@@ -115,6 +239,7 @@
         "Watch short videos about cooking simple meals at home"
       ],
       "selectedOption": 1,
+      "register": null,
       "wordCount": 228,
       "mainWordCount": 228,
       "phrases": [
@@ -160,22 +285,88 @@
         {
           "label": "Chọn phương án",
           "text": "In this situation, I would choose to watch short videos about team sports in the community. I think this option fits my needs best. The important thing is to choose a method I can actually use, rather than simply the one that sounds most impressive.",
-          "noteVi": "Nêu lựa chọn ngay và bám điều kiện của đề."
+          "noteVi": "Nêu lựa chọn ngay và bám điều kiện của đề.",
+          "parts": [
+            {
+              "text": "In this situation, I would choose to",
+              "kind": "frame",
+              "labelVi": "Chọn phương án + động từ nguyên mẫu"
+            },
+            {
+              "text": " watch short videos about team sports in the community. ",
+              "kind": "detail"
+            },
+            {
+              "text": "I think this option fits my needs best.",
+              "kind": "frame",
+              "labelVi": "Chốt lựa chọn phù hợp nhất với điều kiện đề"
+            },
+            {
+              "text": " The important thing is to choose a method I can actually use, rather than simply the one that sounds most impressive.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Giải thích lựa chọn",
           "text": "The main reason is that I can pause a short video and continue during the next break. Pictures and spoken explanations could help me understand the topic. For example, a clear demonstration could show how to offer welcoming beginner sessions with clear expectations, with each step explained as it happens. Learning about this topic is worthwhile because residents can exercise while meeting other people.",
-          "noteVi": "Thể thao nhóm tạo kết nối; buổi dành cho người mới cần thân thiện và cho mọi người tham gia."
+          "noteVi": "Thể thao nhóm tạo kết nối; buổi dành cho người mới cần thân thiện và cho mọi người tham gia.",
+          "parts": [
+            {
+              "text": "The main reason is that",
+              "kind": "frame",
+              "labelVi": "Nêu lý do chính + mệnh đề"
+            },
+            {
+              "text": " I can pause a short video and continue during the next break. Pictures and spoken explanations could help me understand the topic. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a clear demonstration could show how to offer welcoming beginner sessions with clear expectations, with each step explained as it happens. Learning about this topic is worthwhile because residents can exercise while meeting other people.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "So sánh hai phương án còn lại",
           "text": "I would not choose the event because I cannot set aside a long period at a fixed time. A written guide would be useful for checking details, but it does not match my preference for spoken explanations and pictures as well as a short video does.",
-          "noteVi": "Không nói hai cách kia vô ích; chỉ ra vì sao ít phù hợp trong tình huống này."
+          "noteVi": "Không nói hai cách kia vô ích; chỉ ra vì sao ít phù hợp trong tình huống này.",
+          "parts": [
+            {
+              "text": "I would not choose",
+              "kind": "frame",
+              "labelVi": "Nêu phương án không chọn + cụm danh từ"
+            },
+            {
+              "text": " the event because I cannot set aside a long period at a fixed time. A written guide would be useful for checking details, but it does not match my preference for spoken explanations and pictures as well as a short video does.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Giới hạn và kết luận",
           "text": "Of course, I would still check that the information is suitable for a beginner. One point I would want to understand is that beginners may feel excluded by competitive groups. After learning the basics, I could try one small idea and see whether it helps. For these reasons, my first choice would be the most practical starting point.",
-          "noteVi": "Thừa nhận giới hạn, quay về lựa chọn đã nêu."
+          "noteVi": "Thừa nhận giới hạn, quay về lựa chọn đã nêu.",
+          "parts": [
+            {
+              "text": "Of course, I would still check that the information is suitable for a beginner. One point I would want to understand is that beginners may feel excluded by competitive groups. After learning the basics, I could try one small idea and see whether it helps. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For these reasons,",
+              "kind": "frame",
+              "labelVi": "Kết luận từ các lý do đã nêu"
+            },
+            {
+              "text": " my first choice would be the most practical starting point.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
@@ -185,6 +376,7 @@
         "Watch short videos about team sports in the community"
       ],
       "selectedOption": 2,
+      "register": null,
       "wordCount": 213,
       "mainWordCount": 213,
       "phrases": [
@@ -234,22 +426,79 @@
         {
           "label": "Chọn phương án",
           "text": "In this situation, I would choose to attend an evening routine discussion. I think this option fits my needs best. The important thing is to choose a method I can actually use, rather than simply the one that sounds most impressive.",
-          "noteVi": "Nêu lựa chọn ngay và bám điều kiện của đề."
+          "noteVi": "Nêu lựa chọn ngay và bám điều kiện của đề.",
+          "parts": [
+            {
+              "text": "In this situation, I would choose to",
+              "kind": "frame",
+              "labelVi": "Chọn phương án + động từ nguyên mẫu"
+            },
+            {
+              "text": " attend an evening routine discussion. ",
+              "kind": "detail"
+            },
+            {
+              "text": "I think this option fits my needs best.",
+              "kind": "frame",
+              "labelVi": "Chốt lựa chọn phù hợp nhất với điều kiện đề"
+            },
+            {
+              "text": " The important thing is to choose a method I can actually use, rather than simply the one that sounds most impressive.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Giải thích lựa chọn",
           "text": "The main reason is that we could plan a realistic routine that protects time for rest. We could ask the organiser about anything unclear instead of having to guess. My friend and I could also compare our ideas during the activity, which would make it easier to stay involved. Learning about this topic is worthwhile because people can protect time intended for rest.",
-          "noteVi": "Giảm lướt điện thoại giúp giữ giờ nghỉ; vẫn có thể giữ các liên lạc thực sự cần thiết."
+          "noteVi": "Giảm lướt điện thoại giúp giữ giờ nghỉ; vẫn có thể giữ các liên lạc thực sự cần thiết.",
+          "parts": [
+            {
+              "text": "The main reason is that",
+              "kind": "frame",
+              "labelVi": "Nêu lý do chính + mệnh đề"
+            },
+            {
+              "text": " we could plan a realistic routine that protects time for rest. We could ask the organiser about anything unclear instead of having to guess. My friend and I could also compare our ideas during the activity, which would make it easier to stay involved. Learning about this topic is worthwhile because people can protect time intended for rest.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "So sánh hai phương án còn lại",
           "text": "I would not choose the guide this time. It could be useful for later revision, but it would not give us immediate feedback when we have questions. Short videos would be convenient too, but watching them separately would not meet our wish to practise together with someone who can help.",
-          "noteVi": "Không nói hai cách kia vô ích; chỉ ra vì sao ít phù hợp trong tình huống này."
+          "noteVi": "Không nói hai cách kia vô ích; chỉ ra vì sao ít phù hợp trong tình huống này.",
+          "parts": [
+            {
+              "text": "I would not choose",
+              "kind": "frame",
+              "labelVi": "Nêu phương án không chọn + cụm danh từ"
+            },
+            {
+              "text": " the guide this time. It could be useful for later revision, but it would not give us immediate feedback when we have questions. Short videos would be convenient too, but watching them separately would not meet our wish to practise together with someone who can help.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Giới hạn và kết luận",
           "text": "Of course, I would still check that the information is suitable for a beginner. One point I would want to understand is that one strict rule may not suit everyone's responsibilities. After learning the basics, I could try one small idea and see whether it helps. For these reasons, my first choice would be the most practical starting point.",
-          "noteVi": "Thừa nhận giới hạn, quay về lựa chọn đã nêu."
+          "noteVi": "Thừa nhận giới hạn, quay về lựa chọn đã nêu.",
+          "parts": [
+            {
+              "text": "Of course, I would still check that the information is suitable for a beginner. One point I would want to understand is that one strict rule may not suit everyone's responsibilities. After learning the basics, I could try one small idea and see whether it helps. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For these reasons,",
+              "kind": "frame",
+              "labelVi": "Kết luận từ các lý do đã nêu"
+            },
+            {
+              "text": " my first choice would be the most practical starting point.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
@@ -259,6 +508,7 @@
         "Watch short videos about phone use before bedtime"
       ],
       "selectedOption": 0,
+      "register": null,
       "wordCount": 213,
       "mainWordCount": 213,
       "phrases": [
@@ -304,22 +554,88 @@
         {
           "label": "Chọn phương án",
           "text": "In this situation, I would choose to read a beginner's guide to short local trips. I think this option fits my needs best. The important thing is to choose a method I can actually use, rather than simply the one that sounds most impressive.",
-          "noteVi": "Nêu lựa chọn ngay và bám điều kiện của đề."
+          "noteVi": "Nêu lựa chọn ngay và bám điều kiện của đề.",
+          "parts": [
+            {
+              "text": "In this situation, I would choose to",
+              "kind": "frame",
+              "labelVi": "Chọn phương án + động từ nguyên mẫu"
+            },
+            {
+              "text": " read a beginner's guide to short local trips. ",
+              "kind": "detail"
+            },
+            {
+              "text": "I think this option fits my needs best.",
+              "kind": "frame",
+              "labelVi": "Chốt lựa chọn phù hợp nhất với điều kiện đề"
+            },
+            {
+              "text": " The important thing is to choose a method I can actually use, rather than simply the one that sounds most impressive.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Giải thích lựa chọn",
           "text": "The main reason is that I can download or print the guide before leaving home and read it without a connection. I can stop whenever I need to make a note. In particular, I would look for a simple explanation of why a nearby destination leaves more time for rest and activities at the place itself. Learning about this topic is worthwhile because travellers can spend less of a short break on transport.",
-          "noteVi": "Đi gần tận dụng thời gian nghỉ; nên tìm giờ ít đông và điểm đến đa dạng hơn."
+          "noteVi": "Đi gần tận dụng thời gian nghỉ; nên tìm giờ ít đông và điểm đến đa dạng hơn.",
+          "parts": [
+            {
+              "text": "The main reason is that",
+              "kind": "frame",
+              "labelVi": "Nêu lý do chính + mệnh đề"
+            },
+            {
+              "text": " I can download or print the guide before leaving home and read it without a connection. I can stop whenever I need to make a note. ",
+              "kind": "detail"
+            },
+            {
+              "text": "In particular,",
+              "kind": "frame",
+              "labelVi": "Làm rõ một điểm cụ thể"
+            },
+            {
+              "text": " I would look for a simple explanation of why a nearby destination leaves more time for rest and activities at the place itself. Learning about this topic is worthwhile because travellers can spend less of a short break on transport.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "So sánh hai phương án còn lại",
           "text": "I would not choose the event because its fixed time would not fit my journey. It might be useful another weekend, but it does not meet my present need. Videos would be less suitable too: streaming could stop when the connection fails, and sound would be inconvenient in a quiet carriage.",
-          "noteVi": "Không nói hai cách kia vô ích; chỉ ra vì sao ít phù hợp trong tình huống này."
+          "noteVi": "Không nói hai cách kia vô ích; chỉ ra vì sao ít phù hợp trong tình huống này.",
+          "parts": [
+            {
+              "text": "I would not choose",
+              "kind": "frame",
+              "labelVi": "Nêu phương án không chọn + cụm danh từ"
+            },
+            {
+              "text": " the event because its fixed time would not fit my journey. It might be useful another weekend, but it does not meet my present need. Videos would be less suitable too: streaming could stop when the connection fails, and sound would be inconvenient in a quiet carriage.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Giới hạn và kết luận",
           "text": "Of course, I would still check that the information is suitable for a beginner. One point I would want to understand is that popular local places may become crowded at the same time. After learning the basics, I could try one small idea and see whether it helps. For these reasons, my first choice would be the most practical starting point.",
-          "noteVi": "Thừa nhận giới hạn, quay về lựa chọn đã nêu."
+          "noteVi": "Thừa nhận giới hạn, quay về lựa chọn đã nêu.",
+          "parts": [
+            {
+              "text": "Of course, I would still check that the information is suitable for a beginner. One point I would want to understand is that popular local places may become crowded at the same time. After learning the basics, I could try one small idea and see whether it helps. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For these reasons,",
+              "kind": "frame",
+              "labelVi": "Kết luận từ các lý do đã nêu"
+            },
+            {
+              "text": " my first choice would be the most practical starting point.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
@@ -329,6 +645,7 @@
         "Watch short videos about short local trips"
       ],
       "selectedOption": 1,
+      "register": null,
       "wordCount": 229,
       "mainWordCount": 229,
       "phrases": [
@@ -374,22 +691,88 @@
         {
           "label": "Chọn phương án",
           "text": "In this situation, I would choose to watch short videos about planning family holidays. I think this option fits my needs best. The important thing is to choose a method I can actually use, rather than simply the one that sounds most impressive.",
-          "noteVi": "Nêu lựa chọn ngay và bám điều kiện của đề."
+          "noteVi": "Nêu lựa chọn ngay và bám điều kiện của đề.",
+          "parts": [
+            {
+              "text": "In this situation, I would choose to",
+              "kind": "frame",
+              "labelVi": "Chọn phương án + động từ nguyên mẫu"
+            },
+            {
+              "text": " watch short videos about planning family holidays. ",
+              "kind": "detail"
+            },
+            {
+              "text": "I think this option fits my needs best.",
+              "kind": "frame",
+              "labelVi": "Chốt lựa chọn phù hợp nhất với điều kiện đề"
+            },
+            {
+              "text": " The important thing is to choose a method I can actually use, rather than simply the one that sounds most impressive.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Giải thích lựa chọn",
           "text": "The main reason is that I can pause a short video and continue during the next break. Pictures and spoken explanations could help me understand the topic. For example, a clear demonstration could show how to choose a small number of priorities and leave room for breaks, with each step explained as it happens. Learning about this topic is worthwhile because the plan can reflect more than one person's interests.",
-          "noteVi": "Cùng bàn giúp tôn trọng nhu cầu từng người; lịch đi cần có ưu tiên và giờ nghỉ."
+          "noteVi": "Cùng bàn giúp tôn trọng nhu cầu từng người; lịch đi cần có ưu tiên và giờ nghỉ.",
+          "parts": [
+            {
+              "text": "The main reason is that",
+              "kind": "frame",
+              "labelVi": "Nêu lý do chính + mệnh đề"
+            },
+            {
+              "text": " I can pause a short video and continue during the next break. Pictures and spoken explanations could help me understand the topic. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a clear demonstration could show how to choose a small number of priorities and leave room for breaks, with each step explained as it happens. Learning about this topic is worthwhile because the plan can reflect more than one person's interests.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "So sánh hai phương án còn lại",
           "text": "I would not choose the event because I cannot set aside a long period at a fixed time. A written guide would be useful for checking details, but it does not match my preference for spoken explanations and pictures as well as a short video does.",
-          "noteVi": "Không nói hai cách kia vô ích; chỉ ra vì sao ít phù hợp trong tình huống này."
+          "noteVi": "Không nói hai cách kia vô ích; chỉ ra vì sao ít phù hợp trong tình huống này.",
+          "parts": [
+            {
+              "text": "I would not choose",
+              "kind": "frame",
+              "labelVi": "Nêu phương án không chọn + cụm danh từ"
+            },
+            {
+              "text": " the event because I cannot set aside a long period at a fixed time. A written guide would be useful for checking details, but it does not match my preference for spoken explanations and pictures as well as a short video does.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Giới hạn và kết luận",
           "text": "Of course, I would still check that the information is suitable for a beginner. One point I would want to understand is that trying to satisfy everyone can make the schedule too busy. After learning the basics, I could try one small idea and see whether it helps. For these reasons, my first choice would be the most practical starting point.",
-          "noteVi": "Thừa nhận giới hạn, quay về lựa chọn đã nêu."
+          "noteVi": "Thừa nhận giới hạn, quay về lựa chọn đã nêu.",
+          "parts": [
+            {
+              "text": "Of course, I would still check that the information is suitable for a beginner. One point I would want to understand is that trying to satisfy everyone can make the schedule too busy. After learning the basics, I could try one small idea and see whether it helps. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For these reasons,",
+              "kind": "frame",
+              "labelVi": "Kết luận từ các lý do đã nêu"
+            },
+            {
+              "text": " my first choice would be the most practical starting point.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
@@ -399,6 +782,7 @@
         "Watch short videos about planning family holidays"
       ],
       "selectedOption": 2,
+      "register": null,
       "wordCount": 220,
       "mainWordCount": 220,
       "phrases": [
@@ -448,22 +832,79 @@
         {
           "label": "Chọn phương án",
           "text": "In this situation, I would choose to attend a neighbours' coffee morning. I think this option fits my needs best. The important thing is to choose a method I can actually use, rather than simply the one that sounds most impressive.",
-          "noteVi": "Nêu lựa chọn ngay và bám điều kiện của đề."
+          "noteVi": "Nêu lựa chọn ngay và bám điều kiện của đề.",
+          "parts": [
+            {
+              "text": "In this situation, I would choose to",
+              "kind": "frame",
+              "labelVi": "Chọn phương án + động từ nguyên mẫu"
+            },
+            {
+              "text": " attend a neighbours' coffee morning. ",
+              "kind": "detail"
+            },
+            {
+              "text": "I think this option fits my needs best.",
+              "kind": "frame",
+              "labelVi": "Chốt lựa chọn phù hợp nhất với điều kiện đề"
+            },
+            {
+              "text": " The important thing is to choose a method I can actually use, rather than simply the one that sounds most impressive.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Giải thích lựa chọn",
           "text": "The main reason is that we could meet local residents and exchange practical information. We could ask the organiser about anything unclear instead of having to guess. My friend and I could also compare our ideas during the activity, which would make it easier to stay involved. Learning about this topic is worthwhile because people can build a small local support network.",
-          "noteVi": "Gặp hàng xóm tạo hỗ trợ gần gũi; hoạt động nên tự nguyện và tôn trọng lịch, sự riêng tư."
+          "noteVi": "Gặp hàng xóm tạo hỗ trợ gần gũi; hoạt động nên tự nguyện và tôn trọng lịch, sự riêng tư.",
+          "parts": [
+            {
+              "text": "The main reason is that",
+              "kind": "frame",
+              "labelVi": "Nêu lý do chính + mệnh đề"
+            },
+            {
+              "text": " we could meet local residents and exchange practical information. We could ask the organiser about anything unclear instead of having to guess. My friend and I could also compare our ideas during the activity, which would make it easier to stay involved. Learning about this topic is worthwhile because people can build a small local support network.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "So sánh hai phương án còn lại",
           "text": "I would not choose the guide this time. It could be useful for later revision, but it would not give us immediate feedback when we have questions. Short videos would be convenient too, but watching them separately would not meet our wish to practise together with someone who can help.",
-          "noteVi": "Không nói hai cách kia vô ích; chỉ ra vì sao ít phù hợp trong tình huống này."
+          "noteVi": "Không nói hai cách kia vô ích; chỉ ra vì sao ít phù hợp trong tình huống này.",
+          "parts": [
+            {
+              "text": "I would not choose",
+              "kind": "frame",
+              "labelVi": "Nêu phương án không chọn + cụm danh từ"
+            },
+            {
+              "text": " the guide this time. It could be useful for later revision, but it would not give us immediate feedback when we have questions. Short videos would be convenient too, but watching them separately would not meet our wish to practise together with someone who can help.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Giới hạn và kết luận",
           "text": "Of course, I would still check that the information is suitable for a beginner. One point I would want to understand is that some people may feel pressured to join activities. After learning the basics, I could try one small idea and see whether it helps. For these reasons, my first choice would be the most practical starting point.",
-          "noteVi": "Thừa nhận giới hạn, quay về lựa chọn đã nêu."
+          "noteVi": "Thừa nhận giới hạn, quay về lựa chọn đã nêu.",
+          "parts": [
+            {
+              "text": "Of course, I would still check that the information is suitable for a beginner. One point I would want to understand is that some people may feel pressured to join activities. After learning the basics, I could try one small idea and see whether it helps. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For these reasons,",
+              "kind": "frame",
+              "labelVi": "Kết luận từ các lý do đã nêu"
+            },
+            {
+              "text": " my first choice would be the most practical starting point.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
@@ -473,6 +914,7 @@
         "Watch short videos about getting to know neighbours"
       ],
       "selectedOption": 0,
+      "register": null,
       "wordCount": 212,
       "mainWordCount": 212,
       "phrases": [
@@ -518,22 +960,88 @@
         {
           "label": "Chọn phương án",
           "text": "In this situation, I would choose to read a beginner's guide to reading for pleasure. I think this option fits my needs best. The important thing is to choose a method I can actually use, rather than simply the one that sounds most impressive.",
-          "noteVi": "Nêu lựa chọn ngay và bám điều kiện của đề."
+          "noteVi": "Nêu lựa chọn ngay và bám điều kiện của đề.",
+          "parts": [
+            {
+              "text": "In this situation, I would choose to",
+              "kind": "frame",
+              "labelVi": "Chọn phương án + động từ nguyên mẫu"
+            },
+            {
+              "text": " read a beginner's guide to reading for pleasure. ",
+              "kind": "detail"
+            },
+            {
+              "text": "I think this option fits my needs best.",
+              "kind": "frame",
+              "labelVi": "Chốt lựa chọn phù hợp nhất với điều kiện đề"
+            },
+            {
+              "text": " The important thing is to choose a method I can actually use, rather than simply the one that sounds most impressive.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Giải thích lựa chọn",
           "text": "The main reason is that I can download or print the guide before leaving home and read it without a connection. I can stop whenever I need to make a note. In particular, I would look for a simple explanation of why a shared recommendation can help someone find a book they would not choose alone. Learning about this topic is worthwhile because people can discover ideas and enjoy quiet time away from daily pressure.",
-          "noteVi": "Đọc giải trí cần lựa chọn phù hợp và tham gia linh hoạt để không biến thành áp lực hoàn thành chỉ tiêu."
+          "noteVi": "Đọc giải trí cần lựa chọn phù hợp và tham gia linh hoạt để không biến thành áp lực hoàn thành chỉ tiêu.",
+          "parts": [
+            {
+              "text": "The main reason is that",
+              "kind": "frame",
+              "labelVi": "Nêu lý do chính + mệnh đề"
+            },
+            {
+              "text": " I can download or print the guide before leaving home and read it without a connection. I can stop whenever I need to make a note. ",
+              "kind": "detail"
+            },
+            {
+              "text": "In particular,",
+              "kind": "frame",
+              "labelVi": "Làm rõ một điểm cụ thể"
+            },
+            {
+              "text": " I would look for a simple explanation of why a shared recommendation can help someone find a book they would not choose alone. Learning about this topic is worthwhile because people can discover ideas and enjoy quiet time away from daily pressure.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "So sánh hai phương án còn lại",
           "text": "I would not choose the event because its fixed time would not fit my journey. It might be useful another weekend, but it does not meet my present need. Videos would be less suitable too: streaming could stop when the connection fails, and sound would be inconvenient in a quiet carriage.",
-          "noteVi": "Không nói hai cách kia vô ích; chỉ ra vì sao ít phù hợp trong tình huống này."
+          "noteVi": "Không nói hai cách kia vô ích; chỉ ra vì sao ít phù hợp trong tình huống này.",
+          "parts": [
+            {
+              "text": "I would not choose",
+              "kind": "frame",
+              "labelVi": "Nêu phương án không chọn + cụm danh từ"
+            },
+            {
+              "text": " the event because its fixed time would not fit my journey. It might be useful another weekend, but it does not meet my present need. Videos would be less suitable too: streaming could stop when the connection fails, and sound would be inconvenient in a quiet carriage.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Giới hạn và kết luận",
           "text": "Of course, I would still check that the information is suitable for a beginner. One point I would want to understand is that a formal reading target may remove the enjoyment. After learning the basics, I could try one small idea and see whether it helps. For these reasons, my first choice would be the most practical starting point.",
-          "noteVi": "Thừa nhận giới hạn, quay về lựa chọn đã nêu."
+          "noteVi": "Thừa nhận giới hạn, quay về lựa chọn đã nêu.",
+          "parts": [
+            {
+              "text": "Of course, I would still check that the information is suitable for a beginner. One point I would want to understand is that a formal reading target may remove the enjoyment. After learning the basics, I could try one small idea and see whether it helps. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For these reasons,",
+              "kind": "frame",
+              "labelVi": "Kết luận từ các lý do đã nêu"
+            },
+            {
+              "text": " my first choice would be the most practical starting point.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
@@ -543,6 +1051,7 @@
         "Watch short videos about reading for pleasure"
       ],
       "selectedOption": 1,
+      "register": null,
       "wordCount": 229,
       "mainWordCount": 229,
       "phrases": [
@@ -588,22 +1097,88 @@
         {
           "label": "Chọn phương án",
           "text": "In this situation, I would choose to watch short videos about planning everyday spending. I think this option fits my needs best. The important thing is to choose a method I can actually use, rather than simply the one that sounds most impressive.",
-          "noteVi": "Nêu lựa chọn ngay và bám điều kiện của đề."
+          "noteVi": "Nêu lựa chọn ngay và bám điều kiện của đề.",
+          "parts": [
+            {
+              "text": "In this situation, I would choose to",
+              "kind": "frame",
+              "labelVi": "Chọn phương án + động từ nguyên mẫu"
+            },
+            {
+              "text": " watch short videos about planning everyday spending. ",
+              "kind": "detail"
+            },
+            {
+              "text": "I think this option fits my needs best.",
+              "kind": "frame",
+              "labelVi": "Chốt lựa chọn phù hợp nhất với điều kiện đề"
+            },
+            {
+              "text": " The important thing is to choose a method I can actually use, rather than simply the one that sounds most impressive.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Giải thích lựa chọn",
           "text": "The main reason is that I can pause a short video and continue during the next break. Pictures and spoken explanations could help me understand the topic. For example, a clear demonstration could show how to use a flexible plan and review it regularly, with each step explained as it happens. Learning about this topic is worthwhile because people can see whether their income covers essential needs.",
-          "noteVi": "Theo dõi chi tiêu giúp thấy nhu cầu thiết yếu; kế hoạch phải có khoảng linh hoạt cho việc phát sinh."
+          "noteVi": "Theo dõi chi tiêu giúp thấy nhu cầu thiết yếu; kế hoạch phải có khoảng linh hoạt cho việc phát sinh.",
+          "parts": [
+            {
+              "text": "The main reason is that",
+              "kind": "frame",
+              "labelVi": "Nêu lý do chính + mệnh đề"
+            },
+            {
+              "text": " I can pause a short video and continue during the next break. Pictures and spoken explanations could help me understand the topic. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a clear demonstration could show how to use a flexible plan and review it regularly, with each step explained as it happens. Learning about this topic is worthwhile because people can see whether their income covers essential needs.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "So sánh hai phương án còn lại",
           "text": "I would not choose the event because I cannot set aside a long period at a fixed time. A written guide would be useful for checking details, but it does not match my preference for spoken explanations and pictures as well as a short video does.",
-          "noteVi": "Không nói hai cách kia vô ích; chỉ ra vì sao ít phù hợp trong tình huống này."
+          "noteVi": "Không nói hai cách kia vô ích; chỉ ra vì sao ít phù hợp trong tình huống này.",
+          "parts": [
+            {
+              "text": "I would not choose",
+              "kind": "frame",
+              "labelVi": "Nêu phương án không chọn + cụm danh từ"
+            },
+            {
+              "text": " the event because I cannot set aside a long period at a fixed time. A written guide would be useful for checking details, but it does not match my preference for spoken explanations and pictures as well as a short video does.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Giới hạn và kết luận",
           "text": "Of course, I would still check that the information is suitable for a beginner. One point I would want to understand is that a strict plan can fail when unexpected costs appear. After learning the basics, I could try one small idea and see whether it helps. For these reasons, my first choice would be the most practical starting point.",
-          "noteVi": "Thừa nhận giới hạn, quay về lựa chọn đã nêu."
+          "noteVi": "Thừa nhận giới hạn, quay về lựa chọn đã nêu.",
+          "parts": [
+            {
+              "text": "Of course, I would still check that the information is suitable for a beginner. One point I would want to understand is that a strict plan can fail when unexpected costs appear. After learning the basics, I could try one small idea and see whether it helps. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For these reasons,",
+              "kind": "frame",
+              "labelVi": "Kết luận từ các lý do đã nêu"
+            },
+            {
+              "text": " my first choice would be the most practical starting point.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
@@ -613,6 +1188,7 @@
         "Watch short videos about planning everyday spending"
       ],
       "selectedOption": 2,
+      "register": null,
       "wordCount": 216,
       "mainWordCount": 216,
       "phrases": [
@@ -662,22 +1238,79 @@
         {
           "label": "Chọn phương án",
           "text": "In this situation, I would choose to attend a beginner hobbies open day. I think this option fits my needs best. The important thing is to choose a method I can actually use, rather than simply the one that sounds most impressive.",
-          "noteVi": "Nêu lựa chọn ngay và bám điều kiện của đề."
+          "noteVi": "Nêu lựa chọn ngay và bám điều kiện của đề.",
+          "parts": [
+            {
+              "text": "In this situation, I would choose to",
+              "kind": "frame",
+              "labelVi": "Chọn phương án + động từ nguyên mẫu"
+            },
+            {
+              "text": " attend a beginner hobbies open day. ",
+              "kind": "detail"
+            },
+            {
+              "text": "I think this option fits my needs best.",
+              "kind": "frame",
+              "labelVi": "Chốt lựa chọn phù hợp nhất với điều kiện đề"
+            },
+            {
+              "text": " The important thing is to choose a method I can actually use, rather than simply the one that sounds most impressive.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Giải thích lựa chọn",
           "text": "The main reason is that we could try simple creative activities and choose a manageable first goal. We could ask the organiser about anything unclear instead of having to guess. My friend and I could also compare our ideas during the activity, which would make it easier to stay involved. Learning about this topic is worthwhile because a hobby can provide a break from work and routine responsibilities.",
-          "noteVi": "Sở thích giúp đổi nhịp sống; nên bắt đầu nhỏ, vừa túi tiền và không so mình với người đã giỏi."
+          "noteVi": "Sở thích giúp đổi nhịp sống; nên bắt đầu nhỏ, vừa túi tiền và không so mình với người đã giỏi.",
+          "parts": [
+            {
+              "text": "The main reason is that",
+              "kind": "frame",
+              "labelVi": "Nêu lý do chính + mệnh đề"
+            },
+            {
+              "text": " we could try simple creative activities and choose a manageable first goal. We could ask the organiser about anything unclear instead of having to guess. My friend and I could also compare our ideas during the activity, which would make it easier to stay involved. Learning about this topic is worthwhile because a hobby can provide a break from work and routine responsibilities.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "So sánh hai phương án còn lại",
           "text": "I would not choose the guide this time. It could be useful for later revision, but it would not give us immediate feedback when we have questions. Short videos would be convenient too, but watching them separately would not meet our wish to practise together with someone who can help.",
-          "noteVi": "Không nói hai cách kia vô ích; chỉ ra vì sao ít phù hợp trong tình huống này."
+          "noteVi": "Không nói hai cách kia vô ích; chỉ ra vì sao ít phù hợp trong tình huống này.",
+          "parts": [
+            {
+              "text": "I would not choose",
+              "kind": "frame",
+              "labelVi": "Nêu phương án không chọn + cụm danh từ"
+            },
+            {
+              "text": " the guide this time. It could be useful for later revision, but it would not give us immediate feedback when we have questions. Short videos would be convenient too, but watching them separately would not meet our wish to practise together with someone who can help.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Giới hạn và kết luận",
           "text": "Of course, I would still check that the information is suitable for a beginner. One point I would want to understand is that an ambitious hobby plan can become another source of pressure. After learning the basics, I could try one small idea and see whether it helps. For these reasons, my first choice would be the most practical starting point.",
-          "noteVi": "Thừa nhận giới hạn, quay về lựa chọn đã nêu."
+          "noteVi": "Thừa nhận giới hạn, quay về lựa chọn đã nêu.",
+          "parts": [
+            {
+              "text": "Of course, I would still check that the information is suitable for a beginner. One point I would want to understand is that an ambitious hobby plan can become another source of pressure. After learning the basics, I could try one small idea and see whether it helps. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For these reasons,",
+              "kind": "frame",
+              "labelVi": "Kết luận từ các lý do đã nêu"
+            },
+            {
+              "text": " my first choice would be the most practical starting point.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
@@ -687,6 +1320,7 @@
         "Watch short videos about making time for hobbies"
       ],
       "selectedOption": 0,
+      "register": null,
       "wordCount": 221,
       "mainWordCount": 221,
       "phrases": [

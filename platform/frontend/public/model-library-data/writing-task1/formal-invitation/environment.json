@@ -1,0 +1,1895 @@
+{
+  "version": "2026-11-05-v2-frames",
+  "samples": [
+    {
+      "id": "writing-task1-formal-invitation-environment-01",
+      "group": "writing-task1",
+      "type": "formal-invitation",
+      "topic": "environment",
+      "number": 1,
+      "title": "Phân loại rác",
+      "focus": "sorting household waste",
+      "prompt": "As an event organiser, invite Ms Brown to a neighbourhood recycling workshop. Explain the arrangements and benefits, give preparation advice and ask for confirmation.",
+      "requirementsVi": [
+        "Mời với giọng lịch sự, nêu sự kiện.",
+        "Thời gian, nơi và chương trình là phần thay theo đề.",
+        "Lý do nên đến, chuẩn bị và xin xác nhận."
+      ],
+      "summaryVi": "Phân loại cần thùng và hướng dẫn rõ, đồng thời hệ thống thu gom phải thực hiện đúng.",
+      "paragraphs": [
+        {
+          "label": "Mở thư và mục đích",
+          "text": "Dear Ms Brown,\n\nI am writing to invite you to a neighbourhood recycling workshop. We would be pleased to welcome you and believe that your participation would be valuable. The event will focus on sorting household waste.",
+          "noteVi": "Mời với giọng lịch sự, nêu sự kiện.",
+          "parts": [
+            {
+              "text": "Dear ",
+              "kind": "frame"
+            },
+            {
+              "text": "Ms Brown",
+              "kind": "detail",
+              "labelVi": "danh xưng và họ người nhận"
+            },
+            {
+              "text": ",\n\nI am writing to invite you to ",
+              "kind": "frame"
+            },
+            {
+              "text": "a neighbourhood recycling workshop",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". We would be pleased to welcome you and believe that your participation would be valuable. The event will focus on ",
+              "kind": "frame"
+            },
+            {
+              "text": "sorting household waste",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": ".",
+              "kind": "frame"
+            }
+          ],
+          "template": "Dear [danh xưng và họ người nhận],\n\nI am writing to invite you to [sự kiện / hoạt động]. We would be pleased to welcome you and believe that your participation would be valuable. The event will focus on [chủ đề]."
+        },
+        {
+          "label": "Sắp xếp",
+          "text": "The event will take place at the community centre on Saturday at nine in the morning. During the session, participants will practise sorting common household items. There will also be time for questions and discussion, so everyone can share ideas and seek clarification.",
+          "noteVi": "Thời gian, nơi và chương trình là phần thay theo đề.",
+          "parts": [
+            {
+              "text": "The event will take place at ",
+              "kind": "frame"
+            },
+            {
+              "text": "the community centre",
+              "kind": "detail",
+              "labelVi": "địa điểm"
+            },
+            {
+              "text": " on ",
+              "kind": "frame"
+            },
+            {
+              "text": "Saturday at nine in the morning",
+              "kind": "detail",
+              "labelVi": "ngày và giờ"
+            },
+            {
+              "text": ". During the session, participants will ",
+              "kind": "frame"
+            },
+            {
+              "text": "practise sorting common household items",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". There will also be time for questions and discussion, so everyone can share ideas and seek clarification.",
+              "kind": "frame"
+            }
+          ],
+          "template": "The event will take place at [địa điểm] on [ngày và giờ]. During the session, participants will [hoạt động — động từ nguyên mẫu]. There will also be time for questions and discussion, so everyone can share ideas and seek clarification."
+        },
+        {
+          "label": "Lợi ích và xác nhận",
+          "text": "One potential benefit is that more recyclable material can be collected separately. For example, a family can keep a small box for clean bottles instead of putting them in the same bag as dinner leftovers. Please bring a few clean empty containers. I would be grateful if you could confirm whether you are able to attend. Please also let us know if you require any further details.",
+          "noteVi": "Lý do nên đến, chuẩn bị và xin xác nhận.",
+          "parts": [
+            {
+              "text": "One potential benefit is that ",
+              "kind": "frame"
+            },
+            {
+              "text": "more recyclable material can be collected separately",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". For example, ",
+              "kind": "frame"
+            },
+            {
+              "text": "a family can keep a small box for clean bottles instead of putting them in the same bag as dinner leftovers",
+              "kind": "detail",
+              "labelVi": "ví dụ — chủ ngữ + động từ"
+            },
+            {
+              "text": ". Please bring ",
+              "kind": "frame"
+            },
+            {
+              "text": "a few clean empty containers",
+              "kind": "detail",
+              "labelVi": "đồ cần mang"
+            },
+            {
+              "text": ". I would be grateful if you could confirm whether you are able to attend. Please also let us know if you require any further details.",
+              "kind": "frame"
+            }
+          ],
+          "template": "One potential benefit is that [lợi ích — chủ ngữ + động từ]. For example, [ví dụ — chủ ngữ + động từ]. Please bring [đồ cần mang]. I would be grateful if you could confirm whether you are able to attend. Please also let us know if you require any further details."
+        },
+        {
+          "label": "Kết thư",
+          "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\nMinh Nguyen",
+          "noteVi": "Biết tên người nhận: Dear Ms/Mr + họ → Yours sincerely. Chưa biết tên: Dear Sir or Madam → Yours faithfully.",
+          "parts": [
+            {
+              "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh Nguyen",
+              "kind": "detail",
+              "labelVi": "họ tên của bạn"
+            }
+          ],
+          "template": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n[họ tên của bạn]"
+        }
+      ],
+      "sections": [],
+      "options": [],
+      "selectedOption": null,
+      "register": "formal",
+      "wordCount": 175,
+      "mainWordCount": 175,
+      "phrases": [
+        {
+          "en": "sort household waste",
+          "vi": "phân loại rác gia đình",
+          "inAnswer": false
+        },
+        {
+          "en": "collection schedule",
+          "vi": "lịch thu gom",
+          "inAnswer": false
+        },
+        {
+          "en": "recyclable material",
+          "vi": "vật liệu có thể tái chế",
+          "inAnswer": true
+        }
+      ],
+      "framePhrases": [
+        {
+          "en": "I am writing to",
+          "vi": "Tôi viết để…"
+        },
+        {
+          "en": "For example",
+          "vi": "Ví dụ…"
+        },
+        {
+          "en": "Please let me know",
+          "vi": "Hãy cho tôi biết…"
+        }
+      ]
+    },
+    {
+      "id": "writing-task1-formal-invitation-environment-02",
+      "group": "writing-task1",
+      "type": "formal-invitation",
+      "topic": "environment",
+      "number": 2,
+      "title": "Bình nước dùng lại",
+      "focus": "reusable water bottles",
+      "prompt": "As an event organiser, invite Ms Brown to a refill bottle campaign event. Explain the arrangements and benefits, give preparation advice and ask for confirmation.",
+      "requirementsVi": [
+        "Mời với giọng lịch sự, nêu sự kiện.",
+        "Thời gian, nơi và chương trình là phần thay theo đề.",
+        "Lý do nên đến, chuẩn bị và xin xác nhận."
+      ],
+      "summaryVi": "Bình dùng lại giảm chai dùng một lần khi có chỗ lấy nước thuận tiện và được giữ sạch.",
+      "paragraphs": [
+        {
+          "label": "Mở thư và mục đích",
+          "text": "Dear Ms Brown,\n\nI am writing to invite you to a refill bottle campaign event. We would be pleased to welcome you and believe that your participation would be valuable. The event will focus on reusable water bottles.",
+          "noteVi": "Mời với giọng lịch sự, nêu sự kiện.",
+          "parts": [
+            {
+              "text": "Dear ",
+              "kind": "frame"
+            },
+            {
+              "text": "Ms Brown",
+              "kind": "detail",
+              "labelVi": "danh xưng và họ người nhận"
+            },
+            {
+              "text": ",\n\nI am writing to invite you to ",
+              "kind": "frame"
+            },
+            {
+              "text": "a refill bottle campaign event",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". We would be pleased to welcome you and believe that your participation would be valuable. The event will focus on ",
+              "kind": "frame"
+            },
+            {
+              "text": "reusable water bottles",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": ".",
+              "kind": "frame"
+            }
+          ],
+          "template": "Dear [danh xưng và họ người nhận],\n\nI am writing to invite you to [sự kiện / hoạt động]. We would be pleased to welcome you and believe that your participation would be valuable. The event will focus on [chủ đề]."
+        },
+        {
+          "label": "Sắp xếp",
+          "text": "The event will take place at the local library meeting room on Sunday at two in the afternoon. During the session, participants will compare reusable bottles and plan convenient refill points. There will also be time for questions and discussion, so everyone can share ideas and seek clarification.",
+          "noteVi": "Thời gian, nơi và chương trình là phần thay theo đề.",
+          "parts": [
+            {
+              "text": "The event will take place at ",
+              "kind": "frame"
+            },
+            {
+              "text": "the local library meeting room",
+              "kind": "detail",
+              "labelVi": "địa điểm"
+            },
+            {
+              "text": " on ",
+              "kind": "frame"
+            },
+            {
+              "text": "Sunday at two in the afternoon",
+              "kind": "detail",
+              "labelVi": "ngày và giờ"
+            },
+            {
+              "text": ". During the session, participants will ",
+              "kind": "frame"
+            },
+            {
+              "text": "compare reusable bottles and plan convenient refill points",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". There will also be time for questions and discussion, so everyone can share ideas and seek clarification.",
+              "kind": "frame"
+            }
+          ],
+          "template": "The event will take place at [địa điểm] on [ngày và giờ]. During the session, participants will [hoạt động — động từ nguyên mẫu]. There will also be time for questions and discussion, so everyone can share ideas and seek clarification."
+        },
+        {
+          "label": "Lợi ích và xác nhận",
+          "text": "One potential benefit is that people can avoid buying a new plastic bottle each time they need water. For example, a student can refill a bottle at school before an afternoon sports lesson. Please bring a reusable water bottle. I would be grateful if you could confirm whether you are able to attend. Please also let us know if you require any further details.",
+          "noteVi": "Lý do nên đến, chuẩn bị và xin xác nhận.",
+          "parts": [
+            {
+              "text": "One potential benefit is that ",
+              "kind": "frame"
+            },
+            {
+              "text": "people can avoid buying a new plastic bottle each time they need water",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". For example, ",
+              "kind": "frame"
+            },
+            {
+              "text": "a student can refill a bottle at school before an afternoon sports lesson",
+              "kind": "detail",
+              "labelVi": "ví dụ — chủ ngữ + động từ"
+            },
+            {
+              "text": ". Please bring ",
+              "kind": "frame"
+            },
+            {
+              "text": "a reusable water bottle",
+              "kind": "detail",
+              "labelVi": "đồ cần mang"
+            },
+            {
+              "text": ". I would be grateful if you could confirm whether you are able to attend. Please also let us know if you require any further details.",
+              "kind": "frame"
+            }
+          ],
+          "template": "One potential benefit is that [lợi ích — chủ ngữ + động từ]. For example, [ví dụ — chủ ngữ + động từ]. Please bring [đồ cần mang]. I would be grateful if you could confirm whether you are able to attend. Please also let us know if you require any further details."
+        },
+        {
+          "label": "Kết thư",
+          "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\nMinh Nguyen",
+          "noteVi": "Biết tên người nhận: Dear Ms/Mr + họ → Yours sincerely. Chưa biết tên: Dear Sir or Madam → Yours faithfully.",
+          "parts": [
+            {
+              "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh Nguyen",
+              "kind": "detail",
+              "labelVi": "họ tên của bạn"
+            }
+          ],
+          "template": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n[họ tên của bạn]"
+        }
+      ],
+      "sections": [],
+      "options": [],
+      "selectedOption": null,
+      "register": "formal",
+      "wordCount": 178,
+      "mainWordCount": 178,
+      "phrases": [
+        {
+          "en": "a refill point",
+          "vi": "điểm lấy thêm nước",
+          "inAnswer": false
+        },
+        {
+          "en": "single-use bottles",
+          "vi": "chai dùng một lần",
+          "inAnswer": false
+        },
+        {
+          "en": "a practical facility",
+          "vi": "tiện ích thiết thực",
+          "inAnswer": false
+        }
+      ],
+      "framePhrases": [
+        {
+          "en": "I am writing to",
+          "vi": "Tôi viết để…"
+        },
+        {
+          "en": "For example",
+          "vi": "Ví dụ…"
+        },
+        {
+          "en": "Please let me know",
+          "vi": "Hãy cho tôi biết…"
+        }
+      ]
+    },
+    {
+      "id": "writing-task1-formal-invitation-environment-03",
+      "group": "writing-task1",
+      "type": "formal-invitation",
+      "topic": "environment",
+      "number": 3,
+      "title": "Vườn cộng đồng",
+      "focus": "community gardens",
+      "prompt": "As an event organiser, invite Ms Brown to a community gardening morning. Explain the arrangements and benefits, give preparation advice and ask for confirmation.",
+      "requirementsVi": [
+        "Mời với giọng lịch sự, nêu sự kiện.",
+        "Thời gian, nơi và chương trình là phần thay theo đề.",
+        "Lý do nên đến, chuẩn bị và xin xác nhận."
+      ],
+      "summaryVi": "Vườn chung tạo cơ hội kết nối; cần phân công chăm cây lâu dài thay vì chỉ tổ chức ngày khai trương.",
+      "paragraphs": [
+        {
+          "label": "Mở thư và mục đích",
+          "text": "Dear Ms Brown,\n\nI am writing to invite you to a community gardening morning. We would be pleased to welcome you and believe that your participation would be valuable. The event will focus on community gardens.",
+          "noteVi": "Mời với giọng lịch sự, nêu sự kiện.",
+          "parts": [
+            {
+              "text": "Dear ",
+              "kind": "frame"
+            },
+            {
+              "text": "Ms Brown",
+              "kind": "detail",
+              "labelVi": "danh xưng và họ người nhận"
+            },
+            {
+              "text": ",\n\nI am writing to invite you to ",
+              "kind": "frame"
+            },
+            {
+              "text": "a community gardening morning",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". We would be pleased to welcome you and believe that your participation would be valuable. The event will focus on ",
+              "kind": "frame"
+            },
+            {
+              "text": "community gardens",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": ".",
+              "kind": "frame"
+            }
+          ],
+          "template": "Dear [danh xưng và họ người nhận],\n\nI am writing to invite you to [sự kiện / hoạt động]. We would be pleased to welcome you and believe that your participation would be valuable. The event will focus on [chủ đề]."
+        },
+        {
+          "label": "Sắp xếp",
+          "text": "The event will take place at the community garden on Saturday at nine in the morning. During the session, participants will plant herbs and organise a watering rota. There will also be time for questions and discussion, so everyone can share ideas and seek clarification.",
+          "noteVi": "Thời gian, nơi và chương trình là phần thay theo đề.",
+          "parts": [
+            {
+              "text": "The event will take place at ",
+              "kind": "frame"
+            },
+            {
+              "text": "the community garden",
+              "kind": "detail",
+              "labelVi": "địa điểm"
+            },
+            {
+              "text": " on ",
+              "kind": "frame"
+            },
+            {
+              "text": "Saturday at nine in the morning",
+              "kind": "detail",
+              "labelVi": "ngày và giờ"
+            },
+            {
+              "text": ". During the session, participants will ",
+              "kind": "frame"
+            },
+            {
+              "text": "plant herbs and organise a watering rota",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". There will also be time for questions and discussion, so everyone can share ideas and seek clarification.",
+              "kind": "frame"
+            }
+          ],
+          "template": "The event will take place at [địa điểm] on [ngày và giờ]. During the session, participants will [hoạt động — động từ nguyên mẫu]. There will also be time for questions and discussion, so everyone can share ideas and seek clarification."
+        },
+        {
+          "label": "Lợi ích và xác nhận",
+          "text": "One potential benefit is that neighbours can work together and learn practical skills. For example, an experienced gardener can show a family how to grow herbs in a small raised bed. Please bring gardening gloves. I would be grateful if you could confirm whether you are able to attend. Please also let us know if you require any further details.",
+          "noteVi": "Lý do nên đến, chuẩn bị và xin xác nhận.",
+          "parts": [
+            {
+              "text": "One potential benefit is that ",
+              "kind": "frame"
+            },
+            {
+              "text": "neighbours can work together and learn practical skills",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". For example, ",
+              "kind": "frame"
+            },
+            {
+              "text": "an experienced gardener can show a family how to grow herbs in a small raised bed",
+              "kind": "detail",
+              "labelVi": "ví dụ — chủ ngữ + động từ"
+            },
+            {
+              "text": ". Please bring ",
+              "kind": "frame"
+            },
+            {
+              "text": "gardening gloves",
+              "kind": "detail",
+              "labelVi": "đồ cần mang"
+            },
+            {
+              "text": ". I would be grateful if you could confirm whether you are able to attend. Please also let us know if you require any further details.",
+              "kind": "frame"
+            }
+          ],
+          "template": "One potential benefit is that [lợi ích — chủ ngữ + động từ]. For example, [ví dụ — chủ ngữ + động từ]. Please bring [đồ cần mang]. I would be grateful if you could confirm whether you are able to attend. Please also let us know if you require any further details."
+        },
+        {
+          "label": "Kết thư",
+          "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\nMinh Nguyen",
+          "noteVi": "Biết tên người nhận: Dear Ms/Mr + họ → Yours sincerely. Chưa biết tên: Dear Sir or Madam → Yours faithfully.",
+          "parts": [
+            {
+              "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh Nguyen",
+              "kind": "detail",
+              "labelVi": "họ tên của bạn"
+            }
+          ],
+          "template": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n[họ tên của bạn]"
+        }
+      ],
+      "sections": [],
+      "options": [],
+      "selectedOption": null,
+      "register": "formal",
+      "wordCount": 169,
+      "mainWordCount": 169,
+      "phrases": [
+        {
+          "en": "a community garden",
+          "vi": "vườn cộng đồng",
+          "inAnswer": true
+        },
+        {
+          "en": "a watering rota",
+          "vi": "lịch luân phiên tưới cây",
+          "inAnswer": true
+        },
+        {
+          "en": "share practical skills",
+          "vi": "chia sẻ kỹ năng thực tế",
+          "inAnswer": false
+        }
+      ],
+      "framePhrases": [
+        {
+          "en": "I am writing to",
+          "vi": "Tôi viết để…"
+        },
+        {
+          "en": "For example",
+          "vi": "Ví dụ…"
+        },
+        {
+          "en": "Please let me know",
+          "vi": "Hãy cho tôi biết…"
+        }
+      ]
+    },
+    {
+      "id": "writing-task1-formal-invitation-environment-04",
+      "group": "writing-task1",
+      "type": "formal-invitation",
+      "topic": "environment",
+      "number": 4,
+      "title": "Công viên trong thành phố",
+      "focus": "urban parks",
+      "prompt": "As an event organiser, invite Ms Brown to a local park planning meeting. Explain the arrangements and benefits, give preparation advice and ask for confirmation.",
+      "requirementsVi": [
+        "Mời với giọng lịch sự, nêu sự kiện.",
+        "Thời gian, nơi và chương trình là phần thay theo đề.",
+        "Lý do nên đến, chuẩn bị và xin xác nhận."
+      ],
+      "summaryVi": "Công viên công cộng cần dễ tiếp cận và được bảo trì để người dân thực sự dùng được.",
+      "paragraphs": [
+        {
+          "label": "Mở thư và mục đích",
+          "text": "Dear Ms Brown,\n\nI am writing to invite you to a local park planning meeting. We would be pleased to welcome you and believe that your participation would be valuable. The event will focus on urban parks.",
+          "noteVi": "Mời với giọng lịch sự, nêu sự kiện.",
+          "parts": [
+            {
+              "text": "Dear ",
+              "kind": "frame"
+            },
+            {
+              "text": "Ms Brown",
+              "kind": "detail",
+              "labelVi": "danh xưng và họ người nhận"
+            },
+            {
+              "text": ",\n\nI am writing to invite you to ",
+              "kind": "frame"
+            },
+            {
+              "text": "a local park planning meeting",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". We would be pleased to welcome you and believe that your participation would be valuable. The event will focus on ",
+              "kind": "frame"
+            },
+            {
+              "text": "urban parks",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": ".",
+              "kind": "frame"
+            }
+          ],
+          "template": "Dear [danh xưng và họ người nhận],\n\nI am writing to invite you to [sự kiện / hoạt động]. We would be pleased to welcome you and believe that your participation would be valuable. The event will focus on [chủ đề]."
+        },
+        {
+          "label": "Sắp xếp",
+          "text": "The event will take place at the park entrance on Saturday at ten in the morning. During the session, participants will walk through the park and suggest useful improvements. There will also be time for questions and discussion, so everyone can share ideas and seek clarification.",
+          "noteVi": "Thời gian, nơi và chương trình là phần thay theo đề.",
+          "parts": [
+            {
+              "text": "The event will take place at ",
+              "kind": "frame"
+            },
+            {
+              "text": "the park entrance",
+              "kind": "detail",
+              "labelVi": "địa điểm"
+            },
+            {
+              "text": " on ",
+              "kind": "frame"
+            },
+            {
+              "text": "Saturday at ten in the morning",
+              "kind": "detail",
+              "labelVi": "ngày và giờ"
+            },
+            {
+              "text": ". During the session, participants will ",
+              "kind": "frame"
+            },
+            {
+              "text": "walk through the park and suggest useful improvements",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". There will also be time for questions and discussion, so everyone can share ideas and seek clarification.",
+              "kind": "frame"
+            }
+          ],
+          "template": "The event will take place at [địa điểm] on [ngày và giờ]. During the session, participants will [hoạt động — động từ nguyên mẫu]. There will also be time for questions and discussion, so everyone can share ideas and seek clarification."
+        },
+        {
+          "label": "Lợi ích và xác nhận",
+          "text": "One potential benefit is that residents have places to walk, rest and meet other people. For example, an older resident can take a short walk and meet neighbours on a bench close to home. Please bring comfortable walking shoes. I would be grateful if you could confirm whether you are able to attend. Please also let us know if you require any further details.",
+          "noteVi": "Lý do nên đến, chuẩn bị và xin xác nhận.",
+          "parts": [
+            {
+              "text": "One potential benefit is that ",
+              "kind": "frame"
+            },
+            {
+              "text": "residents have places to walk, rest and meet other people",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". For example, ",
+              "kind": "frame"
+            },
+            {
+              "text": "an older resident can take a short walk and meet neighbours on a bench close to home",
+              "kind": "detail",
+              "labelVi": "ví dụ — chủ ngữ + động từ"
+            },
+            {
+              "text": ". Please bring ",
+              "kind": "frame"
+            },
+            {
+              "text": "comfortable walking shoes",
+              "kind": "detail",
+              "labelVi": "đồ cần mang"
+            },
+            {
+              "text": ". I would be grateful if you could confirm whether you are able to attend. Please also let us know if you require any further details.",
+              "kind": "frame"
+            }
+          ],
+          "template": "One potential benefit is that [lợi ích — chủ ngữ + động từ]. For example, [ví dụ — chủ ngữ + động từ]. Please bring [đồ cần mang]. I would be grateful if you could confirm whether you are able to attend. Please also let us know if you require any further details."
+        },
+        {
+          "label": "Kết thư",
+          "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\nMinh Nguyen",
+          "noteVi": "Biết tên người nhận: Dear Ms/Mr + họ → Yours sincerely. Chưa biết tên: Dear Sir or Madam → Yours faithfully.",
+          "parts": [
+            {
+              "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh Nguyen",
+              "kind": "detail",
+              "labelVi": "họ tên của bạn"
+            }
+          ],
+          "template": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n[họ tên của bạn]"
+        }
+      ],
+      "sections": [],
+      "options": [],
+      "selectedOption": null,
+      "register": "formal",
+      "wordCount": 175,
+      "mainWordCount": 175,
+      "phrases": [
+        {
+          "en": "public green spaces",
+          "vi": "không gian xanh công cộng",
+          "inAnswer": false
+        },
+        {
+          "en": "regular maintenance",
+          "vi": "bảo trì thường xuyên",
+          "inAnswer": false
+        },
+        {
+          "en": "report a problem",
+          "vi": "báo sự cố",
+          "inAnswer": false
+        }
+      ],
+      "framePhrases": [
+        {
+          "en": "I am writing to",
+          "vi": "Tôi viết để…"
+        },
+        {
+          "en": "For example",
+          "vi": "Ví dụ…"
+        },
+        {
+          "en": "Please let me know",
+          "vi": "Hãy cho tôi biết…"
+        }
+      ]
+    },
+    {
+      "id": "writing-task1-formal-invitation-environment-05",
+      "group": "writing-task1",
+      "type": "formal-invitation",
+      "topic": "environment",
+      "number": 5,
+      "title": "Đi xe đạp",
+      "focus": "cycling for short journeys",
+      "prompt": "As an event organiser, invite Ms Brown to a safe cycling information day. Explain the arrangements and benefits, give preparation advice and ask for confirmation.",
+      "requirementsVi": [
+        "Mời với giọng lịch sự, nêu sự kiện.",
+        "Thời gian, nơi và chương trình là phần thay theo đề.",
+        "Lý do nên đến, chuẩn bị và xin xác nhận."
+      ],
+      "summaryVi": "Xe đạp phù hợp quãng ngắn khi đường đi liền mạch và các giao lộ được xử lý an toàn.",
+      "paragraphs": [
+        {
+          "label": "Mở thư và mục đích",
+          "text": "Dear Ms Brown,\n\nI am writing to invite you to a safe cycling information day. We would be pleased to welcome you and believe that your participation would be valuable. The event will focus on cycling for short journeys.",
+          "noteVi": "Mời với giọng lịch sự, nêu sự kiện.",
+          "parts": [
+            {
+              "text": "Dear ",
+              "kind": "frame"
+            },
+            {
+              "text": "Ms Brown",
+              "kind": "detail",
+              "labelVi": "danh xưng và họ người nhận"
+            },
+            {
+              "text": ",\n\nI am writing to invite you to ",
+              "kind": "frame"
+            },
+            {
+              "text": "a safe cycling information day",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". We would be pleased to welcome you and believe that your participation would be valuable. The event will focus on ",
+              "kind": "frame"
+            },
+            {
+              "text": "cycling for short journeys",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": ".",
+              "kind": "frame"
+            }
+          ],
+          "template": "Dear [danh xưng và họ người nhận],\n\nI am writing to invite you to [sự kiện / hoạt động]. We would be pleased to welcome you and believe that your participation would be valuable. The event will focus on [chủ đề]."
+        },
+        {
+          "label": "Sắp xếp",
+          "text": "The event will take place at the community centre courtyard on Sunday at three in the afternoon. During the session, participants will plan short cycle routes and identify difficult junctions. There will also be time for questions and discussion, so everyone can share ideas and seek clarification.",
+          "noteVi": "Thời gian, nơi và chương trình là phần thay theo đề.",
+          "parts": [
+            {
+              "text": "The event will take place at ",
+              "kind": "frame"
+            },
+            {
+              "text": "the community centre courtyard",
+              "kind": "detail",
+              "labelVi": "địa điểm"
+            },
+            {
+              "text": " on ",
+              "kind": "frame"
+            },
+            {
+              "text": "Sunday at three in the afternoon",
+              "kind": "detail",
+              "labelVi": "ngày và giờ"
+            },
+            {
+              "text": ". During the session, participants will ",
+              "kind": "frame"
+            },
+            {
+              "text": "plan short cycle routes and identify difficult junctions",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". There will also be time for questions and discussion, so everyone can share ideas and seek clarification.",
+              "kind": "frame"
+            }
+          ],
+          "template": "The event will take place at [địa điểm] on [ngày và giờ]. During the session, participants will [hoạt động — động từ nguyên mẫu]. There will also be time for questions and discussion, so everyone can share ideas and seek clarification."
+        },
+        {
+          "label": "Lợi ích và xác nhận",
+          "text": "One potential benefit is that people have another way to travel without using a car. For example, a student can cycle from home to a nearby college if the route avoids fast traffic. Please bring a bicycle helmet. I would be grateful if you could confirm whether you are able to attend. Please also let us know if you require any further details.",
+          "noteVi": "Lý do nên đến, chuẩn bị và xin xác nhận.",
+          "parts": [
+            {
+              "text": "One potential benefit is that ",
+              "kind": "frame"
+            },
+            {
+              "text": "people have another way to travel without using a car",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". For example, ",
+              "kind": "frame"
+            },
+            {
+              "text": "a student can cycle from home to a nearby college if the route avoids fast traffic",
+              "kind": "detail",
+              "labelVi": "ví dụ — chủ ngữ + động từ"
+            },
+            {
+              "text": ". Please bring ",
+              "kind": "frame"
+            },
+            {
+              "text": "a bicycle helmet",
+              "kind": "detail",
+              "labelVi": "đồ cần mang"
+            },
+            {
+              "text": ". I would be grateful if you could confirm whether you are able to attend. Please also let us know if you require any further details.",
+              "kind": "frame"
+            }
+          ],
+          "template": "One potential benefit is that [lợi ích — chủ ngữ + động từ]. For example, [ví dụ — chủ ngữ + động từ]. Please bring [đồ cần mang]. I would be grateful if you could confirm whether you are able to attend. Please also let us know if you require any further details."
+        },
+        {
+          "label": "Kết thư",
+          "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\nMinh Nguyen",
+          "noteVi": "Biết tên người nhận: Dear Ms/Mr + họ → Yours sincerely. Chưa biết tên: Dear Sir or Madam → Yours faithfully.",
+          "parts": [
+            {
+              "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh Nguyen",
+              "kind": "detail",
+              "labelVi": "họ tên của bạn"
+            }
+          ],
+          "template": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n[họ tên của bạn]"
+        }
+      ],
+      "sections": [],
+      "options": [],
+      "selectedOption": null,
+      "register": "formal",
+      "wordCount": 177,
+      "mainWordCount": 177,
+      "phrases": [
+        {
+          "en": "short everyday journeys",
+          "vi": "chuyến đi ngắn hằng ngày",
+          "inAnswer": false
+        },
+        {
+          "en": "connected routes",
+          "vi": "tuyến đường nối liền",
+          "inAnswer": false
+        },
+        {
+          "en": "a busy junction",
+          "vi": "giao lộ đông xe",
+          "inAnswer": false
+        }
+      ],
+      "framePhrases": [
+        {
+          "en": "I am writing to",
+          "vi": "Tôi viết để…"
+        },
+        {
+          "en": "For example",
+          "vi": "Ví dụ…"
+        },
+        {
+          "en": "Please let me know",
+          "vi": "Hãy cho tôi biết…"
+        }
+      ]
+    },
+    {
+      "id": "writing-task1-formal-invitation-environment-06",
+      "group": "writing-task1",
+      "type": "formal-invitation",
+      "topic": "environment",
+      "number": 6,
+      "title": "Tiết kiệm điện ở nhà",
+      "focus": "saving electricity at home",
+      "prompt": "As an event organiser, invite Ms Brown to a household energy workshop. Explain the arrangements and benefits, give preparation advice and ask for confirmation.",
+      "requirementsVi": [
+        "Mời với giọng lịch sự, nêu sự kiện.",
+        "Thời gian, nơi và chương trình là phần thay theo đề.",
+        "Lý do nên đến, chuẩn bị và xin xác nhận."
+      ],
+      "summaryVi": "Tiết kiệm điện nên bắt đầu từ việc dễ làm và phù hợp nhà thuê, thu nhập, thiết bị sẵn có.",
+      "paragraphs": [
+        {
+          "label": "Mở thư và mục đích",
+          "text": "Dear Ms Brown,\n\nI am writing to invite you to a household energy workshop. We would be pleased to welcome you and believe that your participation would be valuable. The event will focus on saving electricity at home.",
+          "noteVi": "Mời với giọng lịch sự, nêu sự kiện.",
+          "parts": [
+            {
+              "text": "Dear ",
+              "kind": "frame"
+            },
+            {
+              "text": "Ms Brown",
+              "kind": "detail",
+              "labelVi": "danh xưng và họ người nhận"
+            },
+            {
+              "text": ",\n\nI am writing to invite you to ",
+              "kind": "frame"
+            },
+            {
+              "text": "a household energy workshop",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". We would be pleased to welcome you and believe that your participation would be valuable. The event will focus on ",
+              "kind": "frame"
+            },
+            {
+              "text": "saving electricity at home",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": ".",
+              "kind": "frame"
+            }
+          ],
+          "template": "Dear [danh xưng và họ người nhận],\n\nI am writing to invite you to [sự kiện / hoạt động]. We would be pleased to welcome you and believe that your participation would be valuable. The event will focus on [chủ đề]."
+        },
+        {
+          "label": "Sắp xếp",
+          "text": "The event will take place at the community centre on Wednesday at six in the evening. During the session, participants will review everyday habits and create a low-cost energy checklist. There will also be time for questions and discussion, so everyone can share ideas and seek clarification.",
+          "noteVi": "Thời gian, nơi và chương trình là phần thay theo đề.",
+          "parts": [
+            {
+              "text": "The event will take place at ",
+              "kind": "frame"
+            },
+            {
+              "text": "the community centre",
+              "kind": "detail",
+              "labelVi": "địa điểm"
+            },
+            {
+              "text": " on ",
+              "kind": "frame"
+            },
+            {
+              "text": "Wednesday at six in the evening",
+              "kind": "detail",
+              "labelVi": "ngày và giờ"
+            },
+            {
+              "text": ". During the session, participants will ",
+              "kind": "frame"
+            },
+            {
+              "text": "review everyday habits and create a low-cost energy checklist",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". There will also be time for questions and discussion, so everyone can share ideas and seek clarification.",
+              "kind": "frame"
+            }
+          ],
+          "template": "The event will take place at [địa điểm] on [ngày và giờ]. During the session, participants will [hoạt động — động từ nguyên mẫu]. There will also be time for questions and discussion, so everyone can share ideas and seek clarification."
+        },
+        {
+          "label": "Lợi ích và xác nhận",
+          "text": "One potential benefit is that families can avoid paying for energy they do not need. For example, a family can switch off lights in empty rooms and use a timer for an appliance that is often forgotten. Please bring a recent electricity bill. I would be grateful if you could confirm whether you are able to attend. Please also let us know if you require any further details.",
+          "noteVi": "Lý do nên đến, chuẩn bị và xin xác nhận.",
+          "parts": [
+            {
+              "text": "One potential benefit is that ",
+              "kind": "frame"
+            },
+            {
+              "text": "families can avoid paying for energy they do not need",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". For example, ",
+              "kind": "frame"
+            },
+            {
+              "text": "a family can switch off lights in empty rooms and use a timer for an appliance that is often forgotten",
+              "kind": "detail",
+              "labelVi": "ví dụ — chủ ngữ + động từ"
+            },
+            {
+              "text": ". Please bring ",
+              "kind": "frame"
+            },
+            {
+              "text": "a recent electricity bill",
+              "kind": "detail",
+              "labelVi": "đồ cần mang"
+            },
+            {
+              "text": ". I would be grateful if you could confirm whether you are able to attend. Please also let us know if you require any further details.",
+              "kind": "frame"
+            }
+          ],
+          "template": "One potential benefit is that [lợi ích — chủ ngữ + động từ]. For example, [ví dụ — chủ ngữ + động từ]. Please bring [đồ cần mang]. I would be grateful if you could confirm whether you are able to attend. Please also let us know if you require any further details."
+        },
+        {
+          "label": "Kết thư",
+          "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\nMinh Nguyen",
+          "noteVi": "Biết tên người nhận: Dear Ms/Mr + họ → Yours sincerely. Chưa biết tên: Dear Sir or Madam → Yours faithfully.",
+          "parts": [
+            {
+              "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh Nguyen",
+              "kind": "detail",
+              "labelVi": "họ tên của bạn"
+            }
+          ],
+          "template": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n[họ tên của bạn]"
+        }
+      ],
+      "sections": [],
+      "options": [],
+      "selectedOption": null,
+      "register": "formal",
+      "wordCount": 181,
+      "mainWordCount": 181,
+      "phrases": [
+        {
+          "en": "unnecessary energy use",
+          "vi": "dùng năng lượng không cần thiết",
+          "inAnswer": false
+        },
+        {
+          "en": "low-cost changes",
+          "vi": "thay đổi ít tốn kém",
+          "inAnswer": false
+        },
+        {
+          "en": "everyday habits",
+          "vi": "thói quen hằng ngày",
+          "inAnswer": true
+        }
+      ],
+      "framePhrases": [
+        {
+          "en": "I am writing to",
+          "vi": "Tôi viết để…"
+        },
+        {
+          "en": "For example",
+          "vi": "Ví dụ…"
+        },
+        {
+          "en": "Please let me know",
+          "vi": "Hãy cho tôi biết…"
+        }
+      ]
+    },
+    {
+      "id": "writing-task1-formal-invitation-environment-07",
+      "group": "writing-task1",
+      "type": "formal-invitation",
+      "topic": "environment",
+      "number": 7,
+      "title": "Bảo vệ động vật hoang dã",
+      "focus": "responsible wildlife tourism",
+      "prompt": "As an event organiser, invite Ms Brown to a responsible wildlife travel talk. Explain the arrangements and benefits, give preparation advice and ask for confirmation.",
+      "requirementsVi": [
+        "Mời với giọng lịch sự, nêu sự kiện.",
+        "Thời gian, nơi và chương trình là phần thay theo đề.",
+        "Lý do nên đến, chuẩn bị và xin xác nhận."
+      ],
+      "summaryVi": "Tham quan thiên nhiên cần quan sát có khoảng cách; nên hỏi cách chăm sóc động vật thay vì chỉ xem quảng cáo.",
+      "paragraphs": [
+        {
+          "label": "Mở thư và mục đích",
+          "text": "Dear Ms Brown,\n\nI am writing to invite you to a responsible wildlife travel talk. We would be pleased to welcome you and believe that your participation would be valuable. The event will focus on responsible wildlife tourism.",
+          "noteVi": "Mời với giọng lịch sự, nêu sự kiện.",
+          "parts": [
+            {
+              "text": "Dear ",
+              "kind": "frame"
+            },
+            {
+              "text": "Ms Brown",
+              "kind": "detail",
+              "labelVi": "danh xưng và họ người nhận"
+            },
+            {
+              "text": ",\n\nI am writing to invite you to ",
+              "kind": "frame"
+            },
+            {
+              "text": "a responsible wildlife travel talk",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". We would be pleased to welcome you and believe that your participation would be valuable. The event will focus on ",
+              "kind": "frame"
+            },
+            {
+              "text": "responsible wildlife tourism",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": ".",
+              "kind": "frame"
+            }
+          ],
+          "template": "Dear [danh xưng và họ người nhận],\n\nI am writing to invite you to [sự kiện / hoạt động]. We would be pleased to welcome you and believe that your participation would be valuable. The event will focus on [chủ đề]."
+        },
+        {
+          "label": "Sắp xếp",
+          "text": "The event will take place at the local library on Saturday at two in the afternoon. During the session, participants will compare nature tours and discuss respectful observation. There will also be time for questions and discussion, so everyone can share ideas and seek clarification.",
+          "noteVi": "Thời gian, nơi và chương trình là phần thay theo đề.",
+          "parts": [
+            {
+              "text": "The event will take place at ",
+              "kind": "frame"
+            },
+            {
+              "text": "the local library",
+              "kind": "detail",
+              "labelVi": "địa điểm"
+            },
+            {
+              "text": " on ",
+              "kind": "frame"
+            },
+            {
+              "text": "Saturday at two in the afternoon",
+              "kind": "detail",
+              "labelVi": "ngày và giờ"
+            },
+            {
+              "text": ". During the session, participants will ",
+              "kind": "frame"
+            },
+            {
+              "text": "compare nature tours and discuss respectful observation",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". There will also be time for questions and discussion, so everyone can share ideas and seek clarification.",
+              "kind": "frame"
+            }
+          ],
+          "template": "The event will take place at [địa điểm] on [ngày và giờ]. During the session, participants will [hoạt động — động từ nguyên mẫu]. There will also be time for questions and discussion, so everyone can share ideas and seek clarification."
+        },
+        {
+          "label": "Lợi ích và xác nhận",
+          "text": "One potential benefit is that visitors can enjoy nature without treating animals as objects for entertainment. For example, a guided birdwatching group can use binoculars instead of approaching a nesting area. Please bring a notebook for travel questions. I would be grateful if you could confirm whether you are able to attend. Please also let us know if you require any further details.",
+          "noteVi": "Lý do nên đến, chuẩn bị và xin xác nhận.",
+          "parts": [
+            {
+              "text": "One potential benefit is that ",
+              "kind": "frame"
+            },
+            {
+              "text": "visitors can enjoy nature without treating animals as objects for entertainment",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". For example, ",
+              "kind": "frame"
+            },
+            {
+              "text": "a guided birdwatching group can use binoculars instead of approaching a nesting area",
+              "kind": "detail",
+              "labelVi": "ví dụ — chủ ngữ + động từ"
+            },
+            {
+              "text": ". Please bring ",
+              "kind": "frame"
+            },
+            {
+              "text": "a notebook for travel questions",
+              "kind": "detail",
+              "labelVi": "đồ cần mang"
+            },
+            {
+              "text": ". I would be grateful if you could confirm whether you are able to attend. Please also let us know if you require any further details.",
+              "kind": "frame"
+            }
+          ],
+          "template": "One potential benefit is that [lợi ích — chủ ngữ + động từ]. For example, [ví dụ — chủ ngữ + động từ]. Please bring [đồ cần mang]. I would be grateful if you could confirm whether you are able to attend. Please also let us know if you require any further details."
+        },
+        {
+          "label": "Kết thư",
+          "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\nMinh Nguyen",
+          "noteVi": "Biết tên người nhận: Dear Ms/Mr + họ → Yours sincerely. Chưa biết tên: Dear Sir or Madam → Yours faithfully.",
+          "parts": [
+            {
+              "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh Nguyen",
+              "kind": "detail",
+              "labelVi": "họ tên của bạn"
+            }
+          ],
+          "template": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n[họ tên của bạn]"
+        }
+      ],
+      "sections": [],
+      "options": [],
+      "selectedOption": null,
+      "register": "formal",
+      "wordCount": 174,
+      "mainWordCount": 174,
+      "phrases": [
+        {
+          "en": "observe from a distance",
+          "vi": "quan sát từ xa",
+          "inAnswer": false
+        },
+        {
+          "en": "wildlife tourism",
+          "vi": "du lịch động vật hoang dã",
+          "inAnswer": true
+        },
+        {
+          "en": "visitor behaviour",
+          "vi": "hành vi du khách",
+          "inAnswer": false
+        }
+      ],
+      "framePhrases": [
+        {
+          "en": "I am writing to",
+          "vi": "Tôi viết để…"
+        },
+        {
+          "en": "For example",
+          "vi": "Ví dụ…"
+        },
+        {
+          "en": "Please let me know",
+          "vi": "Hãy cho tôi biết…"
+        }
+      ]
+    },
+    {
+      "id": "writing-task1-formal-invitation-environment-08",
+      "group": "writing-task1",
+      "type": "formal-invitation",
+      "topic": "environment",
+      "number": 8,
+      "title": "Giảm lãng phí thực phẩm",
+      "focus": "food waste at home",
+      "prompt": "As an event organiser, invite Ms Brown to a meal planning workshop. Explain the arrangements and benefits, give preparation advice and ask for confirmation.",
+      "requirementsVi": [
+        "Mời với giọng lịch sự, nêu sự kiện.",
+        "Thời gian, nơi và chương trình là phần thay theo đề.",
+        "Lý do nên đến, chuẩn bị và xin xác nhận."
+      ],
+      "summaryVi": "Lên thực đơn giúp bớt mua thừa; kế hoạch cần linh hoạt để dùng được đồ còn lại khi lịch thay đổi.",
+      "paragraphs": [
+        {
+          "label": "Mở thư và mục đích",
+          "text": "Dear Ms Brown,\n\nI am writing to invite you to a meal planning workshop. We would be pleased to welcome you and believe that your participation would be valuable. The event will focus on food waste at home.",
+          "noteVi": "Mời với giọng lịch sự, nêu sự kiện.",
+          "parts": [
+            {
+              "text": "Dear ",
+              "kind": "frame"
+            },
+            {
+              "text": "Ms Brown",
+              "kind": "detail",
+              "labelVi": "danh xưng và họ người nhận"
+            },
+            {
+              "text": ",\n\nI am writing to invite you to ",
+              "kind": "frame"
+            },
+            {
+              "text": "a meal planning workshop",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". We would be pleased to welcome you and believe that your participation would be valuable. The event will focus on ",
+              "kind": "frame"
+            },
+            {
+              "text": "food waste at home",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": ".",
+              "kind": "frame"
+            }
+          ],
+          "template": "Dear [danh xưng và họ người nhận],\n\nI am writing to invite you to [sự kiện / hoạt động]. We would be pleased to welcome you and believe that your participation would be valuable. The event will focus on [chủ đề]."
+        },
+        {
+          "label": "Sắp xếp",
+          "text": "The event will take place at the school meeting room on Sunday at ten in the morning. During the session, participants will make a flexible menu and a practical shopping list. There will also be time for questions and discussion, so everyone can share ideas and seek clarification.",
+          "noteVi": "Thời gian, nơi và chương trình là phần thay theo đề.",
+          "parts": [
+            {
+              "text": "The event will take place at ",
+              "kind": "frame"
+            },
+            {
+              "text": "the school meeting room",
+              "kind": "detail",
+              "labelVi": "địa điểm"
+            },
+            {
+              "text": " on ",
+              "kind": "frame"
+            },
+            {
+              "text": "Sunday at ten in the morning",
+              "kind": "detail",
+              "labelVi": "ngày và giờ"
+            },
+            {
+              "text": ". During the session, participants will ",
+              "kind": "frame"
+            },
+            {
+              "text": "make a flexible menu and a practical shopping list",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". There will also be time for questions and discussion, so everyone can share ideas and seek clarification.",
+              "kind": "frame"
+            }
+          ],
+          "template": "The event will take place at [địa điểm] on [ngày và giờ]. During the session, participants will [hoạt động — động từ nguyên mẫu]. There will also be time for questions and discussion, so everyone can share ideas and seek clarification."
+        },
+        {
+          "label": "Lợi ích và xác nhận",
+          "text": "One potential benefit is that households can use more of the food they buy. For example, a family can use the same vegetables in a soup and a rice dish instead of buying separate ingredients for every meal. Please bring a list of food already at home. I would be grateful if you could confirm whether you are able to attend. Please also let us know if you require any further details.",
+          "noteVi": "Lý do nên đến, chuẩn bị và xin xác nhận.",
+          "parts": [
+            {
+              "text": "One potential benefit is that ",
+              "kind": "frame"
+            },
+            {
+              "text": "households can use more of the food they buy",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". For example, ",
+              "kind": "frame"
+            },
+            {
+              "text": "a family can use the same vegetables in a soup and a rice dish instead of buying separate ingredients for every meal",
+              "kind": "detail",
+              "labelVi": "ví dụ — chủ ngữ + động từ"
+            },
+            {
+              "text": ". Please bring ",
+              "kind": "frame"
+            },
+            {
+              "text": "a list of food already at home",
+              "kind": "detail",
+              "labelVi": "đồ cần mang"
+            },
+            {
+              "text": ". I would be grateful if you could confirm whether you are able to attend. Please also let us know if you require any further details.",
+              "kind": "frame"
+            }
+          ],
+          "template": "One potential benefit is that [lợi ích — chủ ngữ + động từ]. For example, [ví dụ — chủ ngữ + động từ]. Please bring [đồ cần mang]. I would be grateful if you could confirm whether you are able to attend. Please also let us know if you require any further details."
+        },
+        {
+          "label": "Kết thư",
+          "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\nMinh Nguyen",
+          "noteVi": "Biết tên người nhận: Dear Ms/Mr + họ → Yours sincerely. Chưa biết tên: Dear Sir or Madam → Yours faithfully.",
+          "parts": [
+            {
+              "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh Nguyen",
+              "kind": "detail",
+              "labelVi": "họ tên của bạn"
+            }
+          ],
+          "template": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n[họ tên của bạn]"
+        }
+      ],
+      "sections": [],
+      "options": [],
+      "selectedOption": null,
+      "register": "formal",
+      "wordCount": 186,
+      "mainWordCount": 186,
+      "phrases": [
+        {
+          "en": "plan meals",
+          "vi": "lên kế hoạch bữa ăn",
+          "inAnswer": false
+        },
+        {
+          "en": "use leftovers",
+          "vi": "dùng thức ăn còn lại",
+          "inAnswer": false
+        },
+        {
+          "en": "a flexible menu",
+          "vi": "thực đơn linh hoạt",
+          "inAnswer": true
+        }
+      ],
+      "framePhrases": [
+        {
+          "en": "I am writing to",
+          "vi": "Tôi viết để…"
+        },
+        {
+          "en": "For example",
+          "vi": "Ví dụ…"
+        },
+        {
+          "en": "Please let me know",
+          "vi": "Hãy cho tôi biết…"
+        }
+      ]
+    },
+    {
+      "id": "writing-task1-formal-invitation-environment-09",
+      "group": "writing-task1",
+      "type": "formal-invitation",
+      "topic": "environment",
+      "number": 9,
+      "title": "Dọn rác bãi biển",
+      "focus": "community beach clean-ups",
+      "prompt": "As an event organiser, invite Ms Brown to a community beach clean-up. Explain the arrangements and benefits, give preparation advice and ask for confirmation.",
+      "requirementsVi": [
+        "Mời với giọng lịch sự, nêu sự kiện.",
+        "Thời gian, nơi và chương trình là phần thay theo đề.",
+        "Lý do nên đến, chuẩn bị và xin xác nhận."
+      ],
+      "summaryVi": "Dọn rác giúp cải thiện trước mắt; cần dùng kết quả để ngăn rác mới xuất hiện.",
+      "paragraphs": [
+        {
+          "label": "Mở thư và mục đích",
+          "text": "Dear Ms Brown,\n\nI am writing to invite you to a community beach clean-up. We would be pleased to welcome you and believe that your participation would be valuable. The event will focus on community beach clean-ups.",
+          "noteVi": "Mời với giọng lịch sự, nêu sự kiện.",
+          "parts": [
+            {
+              "text": "Dear ",
+              "kind": "frame"
+            },
+            {
+              "text": "Ms Brown",
+              "kind": "detail",
+              "labelVi": "danh xưng và họ người nhận"
+            },
+            {
+              "text": ",\n\nI am writing to invite you to ",
+              "kind": "frame"
+            },
+            {
+              "text": "a community beach clean-up",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". We would be pleased to welcome you and believe that your participation would be valuable. The event will focus on ",
+              "kind": "frame"
+            },
+            {
+              "text": "community beach clean-ups",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": ".",
+              "kind": "frame"
+            }
+          ],
+          "template": "Dear [danh xưng và họ người nhận],\n\nI am writing to invite you to [sự kiện / hoạt động]. We would be pleased to welcome you and believe that your participation would be valuable. The event will focus on [chủ đề]."
+        },
+        {
+          "label": "Sắp xếp",
+          "text": "The event will take place at the beach entrance on Thursday at six in the evening. During the session, participants will collect litter in assigned areas and record the most common items. There will also be time for questions and discussion, so everyone can share ideas and seek clarification.",
+          "noteVi": "Thời gian, nơi và chương trình là phần thay theo đề.",
+          "parts": [
+            {
+              "text": "The event will take place at ",
+              "kind": "frame"
+            },
+            {
+              "text": "the beach entrance",
+              "kind": "detail",
+              "labelVi": "địa điểm"
+            },
+            {
+              "text": " on ",
+              "kind": "frame"
+            },
+            {
+              "text": "Thursday at six in the evening",
+              "kind": "detail",
+              "labelVi": "ngày và giờ"
+            },
+            {
+              "text": ". During the session, participants will ",
+              "kind": "frame"
+            },
+            {
+              "text": "collect litter in assigned areas and record the most common items",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". There will also be time for questions and discussion, so everyone can share ideas and seek clarification.",
+              "kind": "frame"
+            }
+          ],
+          "template": "The event will take place at [địa điểm] on [ngày và giờ]. During the session, participants will [hoạt động — động từ nguyên mẫu]. There will also be time for questions and discussion, so everyone can share ideas and seek clarification."
+        },
+        {
+          "label": "Lợi ích và xác nhận",
+          "text": "One potential benefit is that volunteers can improve a public place and understand the scale of the problem. For example, a family can help record the kinds of packaging found on one section of beach. Please bring reusable gloves and a hat. I would be grateful if you could confirm whether you are able to attend. Please also let us know if you require any further details.",
+          "noteVi": "Lý do nên đến, chuẩn bị và xin xác nhận.",
+          "parts": [
+            {
+              "text": "One potential benefit is that ",
+              "kind": "frame"
+            },
+            {
+              "text": "volunteers can improve a public place and understand the scale of the problem",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". For example, ",
+              "kind": "frame"
+            },
+            {
+              "text": "a family can help record the kinds of packaging found on one section of beach",
+              "kind": "detail",
+              "labelVi": "ví dụ — chủ ngữ + động từ"
+            },
+            {
+              "text": ". Please bring ",
+              "kind": "frame"
+            },
+            {
+              "text": "reusable gloves and a hat",
+              "kind": "detail",
+              "labelVi": "đồ cần mang"
+            },
+            {
+              "text": ". I would be grateful if you could confirm whether you are able to attend. Please also let us know if you require any further details.",
+              "kind": "frame"
+            }
+          ],
+          "template": "One potential benefit is that [lợi ích — chủ ngữ + động từ]. For example, [ví dụ — chủ ngữ + động từ]. Please bring [đồ cần mang]. I would be grateful if you could confirm whether you are able to attend. Please also let us know if you require any further details."
+        },
+        {
+          "label": "Kết thư",
+          "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\nMinh Nguyen",
+          "noteVi": "Biết tên người nhận: Dear Ms/Mr + họ → Yours sincerely. Chưa biết tên: Dear Sir or Madam → Yours faithfully.",
+          "parts": [
+            {
+              "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh Nguyen",
+              "kind": "detail",
+              "labelVi": "họ tên của bạn"
+            }
+          ],
+          "template": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n[họ tên của bạn]"
+        }
+      ],
+      "sections": [],
+      "options": [],
+      "selectedOption": null,
+      "register": "formal",
+      "wordCount": 181,
+      "mainWordCount": 181,
+      "phrases": [
+        {
+          "en": "a beach clean-up",
+          "vi": "buổi dọn rác bãi biển",
+          "inAnswer": false
+        },
+        {
+          "en": "prevent litter",
+          "vi": "ngăn xả rác",
+          "inAnswer": false
+        },
+        {
+          "en": "waste facilities",
+          "vi": "cơ sở thu gom rác",
+          "inAnswer": false
+        }
+      ],
+      "framePhrases": [
+        {
+          "en": "I am writing to",
+          "vi": "Tôi viết để…"
+        },
+        {
+          "en": "For example",
+          "vi": "Ví dụ…"
+        },
+        {
+          "en": "Please let me know",
+          "vi": "Hãy cho tôi biết…"
+        }
+      ]
+    },
+    {
+      "id": "writing-task1-formal-invitation-environment-10",
+      "group": "writing-task1",
+      "type": "formal-invitation",
+      "topic": "environment",
+      "number": 10,
+      "title": "Tiết kiệm nước",
+      "focus": "saving water in daily life",
+      "prompt": "As an event organiser, invite Ms Brown to a community water-saving session. Explain the arrangements and benefits, give preparation advice and ask for confirmation.",
+      "requirementsVi": [
+        "Mời với giọng lịch sự, nêu sự kiện.",
+        "Thời gian, nơi và chương trình là phần thay theo đề.",
+        "Lý do nên đến, chuẩn bị và xin xác nhận."
+      ],
+      "summaryVi": "Thói quen tiết kiệm nước cần đi cùng cách báo và sửa rò rỉ rõ trách nhiệm.",
+      "paragraphs": [
+        {
+          "label": "Mở thư và mục đích",
+          "text": "Dear Ms Brown,\n\nI am writing to invite you to a community water-saving session. We would be pleased to welcome you and believe that your participation would be valuable. The event will focus on saving water in daily life.",
+          "noteVi": "Mời với giọng lịch sự, nêu sự kiện.",
+          "parts": [
+            {
+              "text": "Dear ",
+              "kind": "frame"
+            },
+            {
+              "text": "Ms Brown",
+              "kind": "detail",
+              "labelVi": "danh xưng và họ người nhận"
+            },
+            {
+              "text": ",\n\nI am writing to invite you to ",
+              "kind": "frame"
+            },
+            {
+              "text": "a community water-saving session",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". We would be pleased to welcome you and believe that your participation would be valuable. The event will focus on ",
+              "kind": "frame"
+            },
+            {
+              "text": "saving water in daily life",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": ".",
+              "kind": "frame"
+            }
+          ],
+          "template": "Dear [danh xưng và họ người nhận],\n\nI am writing to invite you to [sự kiện / hoạt động]. We would be pleased to welcome you and believe that your participation would be valuable. The event will focus on [chủ đề]."
+        },
+        {
+          "label": "Sắp xếp",
+          "text": "The event will take place at the college activity room on Saturday at three in the afternoon. During the session, participants will identify common sources of waste and practise reporting leaks. There will also be time for questions and discussion, so everyone can share ideas and seek clarification.",
+          "noteVi": "Thời gian, nơi và chương trình là phần thay theo đề.",
+          "parts": [
+            {
+              "text": "The event will take place at ",
+              "kind": "frame"
+            },
+            {
+              "text": "the college activity room",
+              "kind": "detail",
+              "labelVi": "địa điểm"
+            },
+            {
+              "text": " on ",
+              "kind": "frame"
+            },
+            {
+              "text": "Saturday at three in the afternoon",
+              "kind": "detail",
+              "labelVi": "ngày và giờ"
+            },
+            {
+              "text": ". During the session, participants will ",
+              "kind": "frame"
+            },
+            {
+              "text": "identify common sources of waste and practise reporting leaks",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". There will also be time for questions and discussion, so everyone can share ideas and seek clarification.",
+              "kind": "frame"
+            }
+          ],
+          "template": "The event will take place at [địa điểm] on [ngày và giờ]. During the session, participants will [hoạt động — động từ nguyên mẫu]. There will also be time for questions and discussion, so everyone can share ideas and seek clarification."
+        },
+        {
+          "label": "Lợi ích và xác nhận",
+          "text": "One potential benefit is that people can avoid wasting treated water. For example, a household can repair a dripping tap and use a bowl when washing a small amount of produce. Please bring a note of any water problems at home. I would be grateful if you could confirm whether you are able to attend. Please also let us know if you require any further details.",
+          "noteVi": "Lý do nên đến, chuẩn bị và xin xác nhận.",
+          "parts": [
+            {
+              "text": "One potential benefit is that ",
+              "kind": "frame"
+            },
+            {
+              "text": "people can avoid wasting treated water",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". For example, ",
+              "kind": "frame"
+            },
+            {
+              "text": "a household can repair a dripping tap and use a bowl when washing a small amount of produce",
+              "kind": "detail",
+              "labelVi": "ví dụ — chủ ngữ + động từ"
+            },
+            {
+              "text": ". Please bring ",
+              "kind": "frame"
+            },
+            {
+              "text": "a note of any water problems at home",
+              "kind": "detail",
+              "labelVi": "đồ cần mang"
+            },
+            {
+              "text": ". I would be grateful if you could confirm whether you are able to attend. Please also let us know if you require any further details.",
+              "kind": "frame"
+            }
+          ],
+          "template": "One potential benefit is that [lợi ích — chủ ngữ + động từ]. For example, [ví dụ — chủ ngữ + động từ]. Please bring [đồ cần mang]. I would be grateful if you could confirm whether you are able to attend. Please also let us know if you require any further details."
+        },
+        {
+          "label": "Kết thư",
+          "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\nMinh Nguyen",
+          "noteVi": "Biết tên người nhận: Dear Ms/Mr + họ → Yours sincerely. Chưa biết tên: Dear Sir or Madam → Yours faithfully.",
+          "parts": [
+            {
+              "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh Nguyen",
+              "kind": "detail",
+              "labelVi": "họ tên của bạn"
+            }
+          ],
+          "template": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n[họ tên của bạn]"
+        }
+      ],
+      "sections": [],
+      "options": [],
+      "selectedOption": null,
+      "register": "formal",
+      "wordCount": 181,
+      "mainWordCount": 181,
+      "phrases": [
+        {
+          "en": "repair a leak",
+          "vi": "sửa rò rỉ",
+          "inAnswer": false
+        },
+        {
+          "en": "essential uses",
+          "vi": "nhu cầu sử dụng thiết yếu",
+          "inAnswer": false
+        },
+        {
+          "en": "a repair log",
+          "vi": "sổ theo dõi sửa chữa",
+          "inAnswer": false
+        }
+      ],
+      "framePhrases": [
+        {
+          "en": "I am writing to",
+          "vi": "Tôi viết để…"
+        },
+        {
+          "en": "For example",
+          "vi": "Ví dụ…"
+        },
+        {
+          "en": "Please let me know",
+          "vi": "Hãy cho tôi biết…"
+        }
+      ]
+    }
+  ]
+}

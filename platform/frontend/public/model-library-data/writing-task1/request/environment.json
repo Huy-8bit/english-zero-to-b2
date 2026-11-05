@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-05-v1",
+  "version": "2026-11-05-v2-frames",
   "samples": [
     {
       "id": "writing-task1-request-environment-01",
@@ -9,40 +9,155 @@
       "number": 1,
       "title": "Phân loại rác",
       "focus": "sorting household waste",
-      "prompt": "Write to Ms Brown at a local centre to ask about a neighbourhood recycling workshop. Explain your interest, ask about arrangements and costs, and ask how to register.",
+      "prompt": "Ask Ms Brown at a local centre for information about a neighbourhood recycling workshop. Explain your needs, ask about the time and cost, and find out whether it suits beginners.",
       "requirementsVi": [
-        "Nêu mục đích và nhu cầu.",
-        "Hỏi giờ, điều kiện, chi phí.",
-        "Hỏi cách đăng ký."
+        "Giải thích mình cần thông tin gì.",
+        "Nêu hoàn cảnh để người nhận trả lời đúng nhu cầu.",
+        "Sau confirm / know dùng trật tự chủ ngữ + động từ."
       ],
       "summaryVi": "Phân loại cần thùng và hướng dẫn rõ, đồng thời hệ thống thu gom phải thực hiện đúng.",
       "paragraphs": [
         {
-          "label": "Mục đích",
-          "text": "Dear Ms Brown,\n\nI am writing to ask for further information about a neighbourhood recycling workshop. I saw the notice at the community centre and would like to know whether the session would be suitable for someone with limited experience.",
-          "noteVi": "Chào người biết tên và nêu mục đích."
+          "label": "Mở thư và mục đích",
+          "text": "Dear Ms Brown,\n\nI am writing to request further information about a neighbourhood recycling workshop. I am interested in sorting household waste and would appreciate your advice before making a decision. I would like to explain my situation and ask a few questions.",
+          "noteVi": "Giải thích mình cần thông tin gì.",
+          "parts": [
+            {
+              "text": "Dear ",
+              "kind": "frame"
+            },
+            {
+              "text": "Ms Brown",
+              "kind": "detail",
+              "labelVi": "danh xưng và họ người nhận"
+            },
+            {
+              "text": ",\n\nI am writing to request further information about ",
+              "kind": "frame"
+            },
+            {
+              "text": "a neighbourhood recycling workshop",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". I am interested in ",
+              "kind": "frame"
+            },
+            {
+              "text": "sorting household waste",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": " and would appreciate your advice before making a decision. I would like to explain my situation and ask a few questions.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Dear [danh xưng và họ người nhận],\n\nI am writing to request further information about [sự kiện / hoạt động]. I am interested in [chủ đề] and would appreciate your advice before making a decision. I would like to explain my situation and ask a few questions."
         },
         {
           "label": "Nhu cầu",
-          "text": "I am interested in sorting household waste because more recyclable material can be collected separately. For example, a family can keep a small box for clean bottles instead of putting them in the same bag as dinner leftovers. I would like a practical introduction rather than a session that requires specialist knowledge.",
-          "noteVi": "Giải thích hoàn cảnh để người nhận tư vấn đúng."
+          "text": "My main concern is that I have limited experience and would prefer a practical introduction. I understand that participants will practise sorting common household items. This interests me because more recyclable material can be collected separately. For example, a family can keep a small box for clean bottles instead of putting them in the same bag as dinner leftovers.",
+          "noteVi": "Nêu hoàn cảnh để người nhận trả lời đúng nhu cầu.",
+          "parts": [
+            {
+              "text": "My main concern is that ",
+              "kind": "frame"
+            },
+            {
+              "text": "I have limited experience and would prefer a practical introduction",
+              "kind": "detail",
+              "labelVi": "nhu cầu — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I understand that participants will ",
+              "kind": "frame"
+            },
+            {
+              "text": "practise sorting common household items",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". This interests me because ",
+              "kind": "frame"
+            },
+            {
+              "text": "more recyclable material can be collected separately",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". For example, ",
+              "kind": "frame"
+            },
+            {
+              "text": "a family can keep a small box for clean bottles instead of putting them in the same bag as dinner leftovers",
+              "kind": "detail",
+              "labelVi": "ví dụ — chủ ngữ + động từ"
+            },
+            {
+              "text": ".",
+              "kind": "frame"
+            }
+          ],
+          "template": "My main concern is that [nhu cầu — chủ ngữ + động từ]. I understand that participants will [hoạt động — động từ nguyên mẫu]. This interests me because [lợi ích — chủ ngữ + động từ]. For example, [ví dụ — chủ ngữ + động từ]."
         },
         {
-          "label": "Câu hỏi",
-          "text": "Could you please confirm whether the session is on Saturday at nine in the morning and how long it lasts? I would also like to know the fee and whether materials are included. The notice mentions that participants will practise sorting common household items; should I bring a few clean empty containers or any other equipment?",
-          "noteVi": "Câu hỏi gián tiếp về sắp xếp và chuẩn bị."
+          "label": "Câu hỏi gián tiếp",
+          "text": "Could you please confirm whether the session is on Saturday at nine in the morning? I would also like to know how much it costs and whether beginners are welcome. In addition, please let me know how to register and whether there is a deadline. This information would help me make suitable arrangements.",
+          "noteVi": "Sau confirm / know dùng trật tự chủ ngữ + động từ.",
+          "parts": [
+            {
+              "text": "Could you please confirm ",
+              "kind": "frame"
+            },
+            {
+              "text": "whether the session is on Saturday at nine in the morning",
+              "kind": "detail",
+              "labelVi": "whether / wh + chủ ngữ + động từ"
+            },
+            {
+              "text": "? I would also like to know ",
+              "kind": "frame"
+            },
+            {
+              "text": "how much it costs and whether beginners are welcome",
+              "kind": "detail",
+              "labelVi": "câu hỏi gián tiếp thứ hai"
+            },
+            {
+              "text": ". In addition, please let me know how to register and whether there is a deadline. This information would help me make suitable arrangements.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Could you please confirm [whether / wh + chủ ngữ + động từ]? I would also like to know [câu hỏi gián tiếp thứ hai]. In addition, please let me know how to register and whether there is a deadline. This information would help me make suitable arrangements."
         },
         {
-          "label": "Đăng ký và kết",
-          "text": "Finally, could you explain how to register and whether there is a deadline? If places are limited, please let me know when I should apply.\n\nThank you for taking the time to read my letter. Please let me know if you need any further information. I look forward to your reply.\n\nYours sincerely,\nMinh Nguyen",
-          "noteVi": "Hỏi bước tiếp, cảm ơn và kết thư trang trọng."
+          "label": "Kết thư",
+          "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\nMinh Nguyen",
+          "noteVi": "Biết tên người nhận: Dear Ms/Mr + họ → Yours sincerely. Chưa biết tên: Dear Sir or Madam → Yours faithfully.",
+          "parts": [
+            {
+              "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh Nguyen",
+              "kind": "detail",
+              "labelVi": "họ tên của bạn"
+            }
+          ],
+          "template": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n[họ tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 203,
-      "mainWordCount": 203,
+      "register": "formal",
+      "wordCount": 183,
+      "mainWordCount": 183,
       "phrases": [
         {
           "en": "sort household waste",
@@ -72,6 +187,10 @@
         {
           "en": "Please let me know",
           "vi": "Hãy cho tôi biết…"
+        },
+        {
+          "en": "I would like to",
+          "vi": "Tôi muốn…"
         }
       ]
     },
@@ -83,40 +202,155 @@
       "number": 2,
       "title": "Bình nước dùng lại",
       "focus": "reusable water bottles",
-      "prompt": "Write to Ms Brown at a local centre to ask about a refill bottle campaign event. Explain your interest, ask about arrangements and costs, and ask how to register.",
+      "prompt": "Ask Ms Brown at a local centre for information about a refill bottle campaign event. Explain your needs, ask about the time and cost, and find out whether it suits beginners.",
       "requirementsVi": [
-        "Nêu mục đích và nhu cầu.",
-        "Hỏi giờ, điều kiện, chi phí.",
-        "Hỏi cách đăng ký."
+        "Giải thích mình cần thông tin gì.",
+        "Nêu hoàn cảnh để người nhận trả lời đúng nhu cầu.",
+        "Sau confirm / know dùng trật tự chủ ngữ + động từ."
       ],
       "summaryVi": "Bình dùng lại giảm chai dùng một lần khi có chỗ lấy nước thuận tiện và được giữ sạch.",
       "paragraphs": [
         {
-          "label": "Mục đích",
-          "text": "Dear Ms Brown,\n\nI am writing to ask for further information about a refill bottle campaign event. I saw the notice at the local library meeting room and would like to know whether the session would be suitable for someone with limited experience.",
-          "noteVi": "Chào người biết tên và nêu mục đích."
+          "label": "Mở thư và mục đích",
+          "text": "Dear Ms Brown,\n\nI am writing to request further information about a refill bottle campaign event. I am interested in reusable water bottles and would appreciate your advice before making a decision. I would like to explain my situation and ask a few questions.",
+          "noteVi": "Giải thích mình cần thông tin gì.",
+          "parts": [
+            {
+              "text": "Dear ",
+              "kind": "frame"
+            },
+            {
+              "text": "Ms Brown",
+              "kind": "detail",
+              "labelVi": "danh xưng và họ người nhận"
+            },
+            {
+              "text": ",\n\nI am writing to request further information about ",
+              "kind": "frame"
+            },
+            {
+              "text": "a refill bottle campaign event",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". I am interested in ",
+              "kind": "frame"
+            },
+            {
+              "text": "reusable water bottles",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": " and would appreciate your advice before making a decision. I would like to explain my situation and ask a few questions.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Dear [danh xưng và họ người nhận],\n\nI am writing to request further information about [sự kiện / hoạt động]. I am interested in [chủ đề] and would appreciate your advice before making a decision. I would like to explain my situation and ask a few questions."
         },
         {
           "label": "Nhu cầu",
-          "text": "I am interested in reusable water bottles because people can avoid buying a new plastic bottle each time they need water. For example, a student can refill a bottle at school before an afternoon sports lesson. I would like a practical introduction rather than a session that requires specialist knowledge.",
-          "noteVi": "Giải thích hoàn cảnh để người nhận tư vấn đúng."
+          "text": "My main concern is that I have limited experience and would prefer a practical introduction. I understand that participants will compare reusable bottles and plan convenient refill points. This interests me because people can avoid buying a new plastic bottle each time they need water. For example, a student can refill a bottle at school before an afternoon sports lesson.",
+          "noteVi": "Nêu hoàn cảnh để người nhận trả lời đúng nhu cầu.",
+          "parts": [
+            {
+              "text": "My main concern is that ",
+              "kind": "frame"
+            },
+            {
+              "text": "I have limited experience and would prefer a practical introduction",
+              "kind": "detail",
+              "labelVi": "nhu cầu — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I understand that participants will ",
+              "kind": "frame"
+            },
+            {
+              "text": "compare reusable bottles and plan convenient refill points",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". This interests me because ",
+              "kind": "frame"
+            },
+            {
+              "text": "people can avoid buying a new plastic bottle each time they need water",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". For example, ",
+              "kind": "frame"
+            },
+            {
+              "text": "a student can refill a bottle at school before an afternoon sports lesson",
+              "kind": "detail",
+              "labelVi": "ví dụ — chủ ngữ + động từ"
+            },
+            {
+              "text": ".",
+              "kind": "frame"
+            }
+          ],
+          "template": "My main concern is that [nhu cầu — chủ ngữ + động từ]. I understand that participants will [hoạt động — động từ nguyên mẫu]. This interests me because [lợi ích — chủ ngữ + động từ]. For example, [ví dụ — chủ ngữ + động từ]."
         },
         {
-          "label": "Câu hỏi",
-          "text": "Could you please confirm whether the session is on Sunday at two in the afternoon and how long it lasts? I would also like to know the fee and whether materials are included. The notice mentions that participants will compare reusable bottles and plan convenient refill points; should I bring a reusable water bottle or any other equipment?",
-          "noteVi": "Câu hỏi gián tiếp về sắp xếp và chuẩn bị."
+          "label": "Câu hỏi gián tiếp",
+          "text": "Could you please confirm whether the session is on Sunday at two in the afternoon? I would also like to know how much it costs and whether beginners are welcome. In addition, please let me know how to register and whether there is a deadline. This information would help me make suitable arrangements.",
+          "noteVi": "Sau confirm / know dùng trật tự chủ ngữ + động từ.",
+          "parts": [
+            {
+              "text": "Could you please confirm ",
+              "kind": "frame"
+            },
+            {
+              "text": "whether the session is on Sunday at two in the afternoon",
+              "kind": "detail",
+              "labelVi": "whether / wh + chủ ngữ + động từ"
+            },
+            {
+              "text": "? I would also like to know ",
+              "kind": "frame"
+            },
+            {
+              "text": "how much it costs and whether beginners are welcome",
+              "kind": "detail",
+              "labelVi": "câu hỏi gián tiếp thứ hai"
+            },
+            {
+              "text": ". In addition, please let me know how to register and whether there is a deadline. This information would help me make suitable arrangements.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Could you please confirm [whether / wh + chủ ngữ + động từ]? I would also like to know [câu hỏi gián tiếp thứ hai]. In addition, please let me know how to register and whether there is a deadline. This information would help me make suitable arrangements."
         },
         {
-          "label": "Đăng ký và kết",
-          "text": "Finally, could you explain how to register and whether there is a deadline? If places are limited, please let me know when I should apply.\n\nThank you for taking the time to read my letter. Please let me know if you need any further information. I look forward to your reply.\n\nYours sincerely,\nMinh Nguyen",
-          "noteVi": "Hỏi bước tiếp, cảm ơn và kết thư trang trọng."
+          "label": "Kết thư",
+          "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\nMinh Nguyen",
+          "noteVi": "Biết tên người nhận: Dear Ms/Mr + họ → Yours sincerely. Chưa biết tên: Dear Sir or Madam → Yours faithfully.",
+          "parts": [
+            {
+              "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh Nguyen",
+              "kind": "detail",
+              "labelVi": "họ tên của bạn"
+            }
+          ],
+          "template": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n[họ tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 206,
-      "mainWordCount": 206,
+      "register": "formal",
+      "wordCount": 185,
+      "mainWordCount": 185,
       "phrases": [
         {
           "en": "a refill point",
@@ -146,6 +380,10 @@
         {
           "en": "Please let me know",
           "vi": "Hãy cho tôi biết…"
+        },
+        {
+          "en": "I would like to",
+          "vi": "Tôi muốn…"
         }
       ]
     },
@@ -157,40 +395,155 @@
       "number": 3,
       "title": "Vườn cộng đồng",
       "focus": "community gardens",
-      "prompt": "Write to Ms Brown at a local centre to ask about a community gardening morning. Explain your interest, ask about arrangements and costs, and ask how to register.",
+      "prompt": "Ask Ms Brown at a local centre for information about a community gardening morning. Explain your needs, ask about the time and cost, and find out whether it suits beginners.",
       "requirementsVi": [
-        "Nêu mục đích và nhu cầu.",
-        "Hỏi giờ, điều kiện, chi phí.",
-        "Hỏi cách đăng ký."
+        "Giải thích mình cần thông tin gì.",
+        "Nêu hoàn cảnh để người nhận trả lời đúng nhu cầu.",
+        "Sau confirm / know dùng trật tự chủ ngữ + động từ."
       ],
       "summaryVi": "Vườn chung tạo cơ hội kết nối; cần phân công chăm cây lâu dài thay vì chỉ tổ chức ngày khai trương.",
       "paragraphs": [
         {
-          "label": "Mục đích",
-          "text": "Dear Ms Brown,\n\nI am writing to ask for further information about a community gardening morning. I saw the notice at the community garden and would like to know whether the session would be suitable for someone with limited experience.",
-          "noteVi": "Chào người biết tên và nêu mục đích."
+          "label": "Mở thư và mục đích",
+          "text": "Dear Ms Brown,\n\nI am writing to request further information about a community gardening morning. I am interested in community gardens and would appreciate your advice before making a decision. I would like to explain my situation and ask a few questions.",
+          "noteVi": "Giải thích mình cần thông tin gì.",
+          "parts": [
+            {
+              "text": "Dear ",
+              "kind": "frame"
+            },
+            {
+              "text": "Ms Brown",
+              "kind": "detail",
+              "labelVi": "danh xưng và họ người nhận"
+            },
+            {
+              "text": ",\n\nI am writing to request further information about ",
+              "kind": "frame"
+            },
+            {
+              "text": "a community gardening morning",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". I am interested in ",
+              "kind": "frame"
+            },
+            {
+              "text": "community gardens",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": " and would appreciate your advice before making a decision. I would like to explain my situation and ask a few questions.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Dear [danh xưng và họ người nhận],\n\nI am writing to request further information about [sự kiện / hoạt động]. I am interested in [chủ đề] and would appreciate your advice before making a decision. I would like to explain my situation and ask a few questions."
         },
         {
           "label": "Nhu cầu",
-          "text": "I am interested in community gardens because neighbours can work together and learn practical skills. For example, an experienced gardener can show a family how to grow herbs in a small raised bed. I would like a practical introduction rather than a session that requires specialist knowledge.",
-          "noteVi": "Giải thích hoàn cảnh để người nhận tư vấn đúng."
+          "text": "My main concern is that I have limited experience and would prefer a practical introduction. I understand that participants will plant herbs and organise a watering rota. This interests me because neighbours can work together and learn practical skills. For example, an experienced gardener can show a family how to grow herbs in a small raised bed.",
+          "noteVi": "Nêu hoàn cảnh để người nhận trả lời đúng nhu cầu.",
+          "parts": [
+            {
+              "text": "My main concern is that ",
+              "kind": "frame"
+            },
+            {
+              "text": "I have limited experience and would prefer a practical introduction",
+              "kind": "detail",
+              "labelVi": "nhu cầu — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I understand that participants will ",
+              "kind": "frame"
+            },
+            {
+              "text": "plant herbs and organise a watering rota",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". This interests me because ",
+              "kind": "frame"
+            },
+            {
+              "text": "neighbours can work together and learn practical skills",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". For example, ",
+              "kind": "frame"
+            },
+            {
+              "text": "an experienced gardener can show a family how to grow herbs in a small raised bed",
+              "kind": "detail",
+              "labelVi": "ví dụ — chủ ngữ + động từ"
+            },
+            {
+              "text": ".",
+              "kind": "frame"
+            }
+          ],
+          "template": "My main concern is that [nhu cầu — chủ ngữ + động từ]. I understand that participants will [hoạt động — động từ nguyên mẫu]. This interests me because [lợi ích — chủ ngữ + động từ]. For example, [ví dụ — chủ ngữ + động từ]."
         },
         {
-          "label": "Câu hỏi",
-          "text": "Could you please confirm whether the session is on Saturday at nine in the morning and how long it lasts? I would also like to know the fee and whether materials are included. The notice mentions that participants will plant herbs and organise a watering rota; should I bring gardening gloves or any other equipment?",
-          "noteVi": "Câu hỏi gián tiếp về sắp xếp và chuẩn bị."
+          "label": "Câu hỏi gián tiếp",
+          "text": "Could you please confirm whether the session is on Saturday at nine in the morning? I would also like to know how much it costs and whether beginners are welcome. In addition, please let me know how to register and whether there is a deadline. This information would help me make suitable arrangements.",
+          "noteVi": "Sau confirm / know dùng trật tự chủ ngữ + động từ.",
+          "parts": [
+            {
+              "text": "Could you please confirm ",
+              "kind": "frame"
+            },
+            {
+              "text": "whether the session is on Saturday at nine in the morning",
+              "kind": "detail",
+              "labelVi": "whether / wh + chủ ngữ + động từ"
+            },
+            {
+              "text": "? I would also like to know ",
+              "kind": "frame"
+            },
+            {
+              "text": "how much it costs and whether beginners are welcome",
+              "kind": "detail",
+              "labelVi": "câu hỏi gián tiếp thứ hai"
+            },
+            {
+              "text": ". In addition, please let me know how to register and whether there is a deadline. This information would help me make suitable arrangements.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Could you please confirm [whether / wh + chủ ngữ + động từ]? I would also like to know [câu hỏi gián tiếp thứ hai]. In addition, please let me know how to register and whether there is a deadline. This information would help me make suitable arrangements."
         },
         {
-          "label": "Đăng ký và kết",
-          "text": "Finally, could you explain how to register and whether there is a deadline? If places are limited, please let me know when I should apply.\n\nThank you for taking the time to read my letter. Please let me know if you need any further information. I look forward to your reply.\n\nYours sincerely,\nMinh Nguyen",
-          "noteVi": "Hỏi bước tiếp, cảm ơn và kết thư trang trọng."
+          "label": "Kết thư",
+          "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\nMinh Nguyen",
+          "noteVi": "Biết tên người nhận: Dear Ms/Mr + họ → Yours sincerely. Chưa biết tên: Dear Sir or Madam → Yours faithfully.",
+          "parts": [
+            {
+              "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh Nguyen",
+              "kind": "detail",
+              "labelVi": "họ tên của bạn"
+            }
+          ],
+          "template": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n[họ tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 197,
-      "mainWordCount": 197,
+      "register": "formal",
+      "wordCount": 180,
+      "mainWordCount": 180,
       "phrases": [
         {
           "en": "a community garden",
@@ -220,6 +573,10 @@
         {
           "en": "Please let me know",
           "vi": "Hãy cho tôi biết…"
+        },
+        {
+          "en": "I would like to",
+          "vi": "Tôi muốn…"
         }
       ]
     },
@@ -231,40 +588,155 @@
       "number": 4,
       "title": "Công viên trong thành phố",
       "focus": "urban parks",
-      "prompt": "Write to Ms Brown at a local centre to ask about a local park planning meeting. Explain your interest, ask about arrangements and costs, and ask how to register.",
+      "prompt": "Ask Ms Brown at a local centre for information about a local park planning meeting. Explain your needs, ask about the time and cost, and find out whether it suits beginners.",
       "requirementsVi": [
-        "Nêu mục đích và nhu cầu.",
-        "Hỏi giờ, điều kiện, chi phí.",
-        "Hỏi cách đăng ký."
+        "Giải thích mình cần thông tin gì.",
+        "Nêu hoàn cảnh để người nhận trả lời đúng nhu cầu.",
+        "Sau confirm / know dùng trật tự chủ ngữ + động từ."
       ],
       "summaryVi": "Công viên công cộng cần dễ tiếp cận và được bảo trì để người dân thực sự dùng được.",
       "paragraphs": [
         {
-          "label": "Mục đích",
-          "text": "Dear Ms Brown,\n\nI am writing to ask for further information about a local park planning meeting. I saw the notice at the park entrance and would like to know whether the session would be suitable for someone with limited experience.",
-          "noteVi": "Chào người biết tên và nêu mục đích."
+          "label": "Mở thư và mục đích",
+          "text": "Dear Ms Brown,\n\nI am writing to request further information about a local park planning meeting. I am interested in urban parks and would appreciate your advice before making a decision. I would like to explain my situation and ask a few questions.",
+          "noteVi": "Giải thích mình cần thông tin gì.",
+          "parts": [
+            {
+              "text": "Dear ",
+              "kind": "frame"
+            },
+            {
+              "text": "Ms Brown",
+              "kind": "detail",
+              "labelVi": "danh xưng và họ người nhận"
+            },
+            {
+              "text": ",\n\nI am writing to request further information about ",
+              "kind": "frame"
+            },
+            {
+              "text": "a local park planning meeting",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". I am interested in ",
+              "kind": "frame"
+            },
+            {
+              "text": "urban parks",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": " and would appreciate your advice before making a decision. I would like to explain my situation and ask a few questions.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Dear [danh xưng và họ người nhận],\n\nI am writing to request further information about [sự kiện / hoạt động]. I am interested in [chủ đề] and would appreciate your advice before making a decision. I would like to explain my situation and ask a few questions."
         },
         {
           "label": "Nhu cầu",
-          "text": "I am interested in urban parks because residents have places to walk, rest and meet other people. For example, an older resident can take a short walk and meet neighbours on a bench close to home. I would like a practical introduction rather than a session that requires specialist knowledge.",
-          "noteVi": "Giải thích hoàn cảnh để người nhận tư vấn đúng."
+          "text": "My main concern is that I have limited experience and would prefer a practical introduction. I understand that participants will walk through the park and suggest useful improvements. This interests me because residents have places to walk, rest and meet other people. For example, an older resident can take a short walk and meet neighbours on a bench close to home.",
+          "noteVi": "Nêu hoàn cảnh để người nhận trả lời đúng nhu cầu.",
+          "parts": [
+            {
+              "text": "My main concern is that ",
+              "kind": "frame"
+            },
+            {
+              "text": "I have limited experience and would prefer a practical introduction",
+              "kind": "detail",
+              "labelVi": "nhu cầu — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I understand that participants will ",
+              "kind": "frame"
+            },
+            {
+              "text": "walk through the park and suggest useful improvements",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". This interests me because ",
+              "kind": "frame"
+            },
+            {
+              "text": "residents have places to walk, rest and meet other people",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". For example, ",
+              "kind": "frame"
+            },
+            {
+              "text": "an older resident can take a short walk and meet neighbours on a bench close to home",
+              "kind": "detail",
+              "labelVi": "ví dụ — chủ ngữ + động từ"
+            },
+            {
+              "text": ".",
+              "kind": "frame"
+            }
+          ],
+          "template": "My main concern is that [nhu cầu — chủ ngữ + động từ]. I understand that participants will [hoạt động — động từ nguyên mẫu]. This interests me because [lợi ích — chủ ngữ + động từ]. For example, [ví dụ — chủ ngữ + động từ]."
         },
         {
-          "label": "Câu hỏi",
-          "text": "Could you please confirm whether the session is on Saturday at ten in the morning and how long it lasts? I would also like to know the fee and whether materials are included. The notice mentions that participants will walk through the park and suggest useful improvements; should I bring comfortable walking shoes or any other equipment?",
-          "noteVi": "Câu hỏi gián tiếp về sắp xếp và chuẩn bị."
+          "label": "Câu hỏi gián tiếp",
+          "text": "Could you please confirm whether the session is on Saturday at ten in the morning? I would also like to know how much it costs and whether beginners are welcome. In addition, please let me know how to register and whether there is a deadline. This information would help me make suitable arrangements.",
+          "noteVi": "Sau confirm / know dùng trật tự chủ ngữ + động từ.",
+          "parts": [
+            {
+              "text": "Could you please confirm ",
+              "kind": "frame"
+            },
+            {
+              "text": "whether the session is on Saturday at ten in the morning",
+              "kind": "detail",
+              "labelVi": "whether / wh + chủ ngữ + động từ"
+            },
+            {
+              "text": "? I would also like to know ",
+              "kind": "frame"
+            },
+            {
+              "text": "how much it costs and whether beginners are welcome",
+              "kind": "detail",
+              "labelVi": "câu hỏi gián tiếp thứ hai"
+            },
+            {
+              "text": ". In addition, please let me know how to register and whether there is a deadline. This information would help me make suitable arrangements.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Could you please confirm [whether / wh + chủ ngữ + động từ]? I would also like to know [câu hỏi gián tiếp thứ hai]. In addition, please let me know how to register and whether there is a deadline. This information would help me make suitable arrangements."
         },
         {
-          "label": "Đăng ký và kết",
-          "text": "Finally, could you explain how to register and whether there is a deadline? If places are limited, please let me know when I should apply.\n\nThank you for taking the time to read my letter. Please let me know if you need any further information. I look forward to your reply.\n\nYours sincerely,\nMinh Nguyen",
-          "noteVi": "Hỏi bước tiếp, cảm ơn và kết thư trang trọng."
+          "label": "Kết thư",
+          "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\nMinh Nguyen",
+          "noteVi": "Biết tên người nhận: Dear Ms/Mr + họ → Yours sincerely. Chưa biết tên: Dear Sir or Madam → Yours faithfully.",
+          "parts": [
+            {
+              "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh Nguyen",
+              "kind": "detail",
+              "labelVi": "họ tên của bạn"
+            }
+          ],
+          "template": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n[họ tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 203,
-      "mainWordCount": 203,
+      "register": "formal",
+      "wordCount": 185,
+      "mainWordCount": 185,
       "phrases": [
         {
           "en": "public green spaces",
@@ -294,6 +766,10 @@
         {
           "en": "Please let me know",
           "vi": "Hãy cho tôi biết…"
+        },
+        {
+          "en": "I would like to",
+          "vi": "Tôi muốn…"
         }
       ]
     },
@@ -305,40 +781,155 @@
       "number": 5,
       "title": "Đi xe đạp",
       "focus": "cycling for short journeys",
-      "prompt": "Write to Ms Brown at a local centre to ask about a safe cycling information day. Explain your interest, ask about arrangements and costs, and ask how to register.",
+      "prompt": "Ask Ms Brown at a local centre for information about a safe cycling information day. Explain your needs, ask about the time and cost, and find out whether it suits beginners.",
       "requirementsVi": [
-        "Nêu mục đích và nhu cầu.",
-        "Hỏi giờ, điều kiện, chi phí.",
-        "Hỏi cách đăng ký."
+        "Giải thích mình cần thông tin gì.",
+        "Nêu hoàn cảnh để người nhận trả lời đúng nhu cầu.",
+        "Sau confirm / know dùng trật tự chủ ngữ + động từ."
       ],
       "summaryVi": "Xe đạp phù hợp quãng ngắn khi đường đi liền mạch và các giao lộ được xử lý an toàn.",
       "paragraphs": [
         {
-          "label": "Mục đích",
-          "text": "Dear Ms Brown,\n\nI am writing to ask for further information about a safe cycling information day. I saw the notice at the community centre courtyard and would like to know whether the session would be suitable for someone with limited experience.",
-          "noteVi": "Chào người biết tên và nêu mục đích."
+          "label": "Mở thư và mục đích",
+          "text": "Dear Ms Brown,\n\nI am writing to request further information about a safe cycling information day. I am interested in cycling for short journeys and would appreciate your advice before making a decision. I would like to explain my situation and ask a few questions.",
+          "noteVi": "Giải thích mình cần thông tin gì.",
+          "parts": [
+            {
+              "text": "Dear ",
+              "kind": "frame"
+            },
+            {
+              "text": "Ms Brown",
+              "kind": "detail",
+              "labelVi": "danh xưng và họ người nhận"
+            },
+            {
+              "text": ",\n\nI am writing to request further information about ",
+              "kind": "frame"
+            },
+            {
+              "text": "a safe cycling information day",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". I am interested in ",
+              "kind": "frame"
+            },
+            {
+              "text": "cycling for short journeys",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": " and would appreciate your advice before making a decision. I would like to explain my situation and ask a few questions.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Dear [danh xưng và họ người nhận],\n\nI am writing to request further information about [sự kiện / hoạt động]. I am interested in [chủ đề] and would appreciate your advice before making a decision. I would like to explain my situation and ask a few questions."
         },
         {
           "label": "Nhu cầu",
-          "text": "I am interested in cycling for short journeys because people have another way to travel without using a car. For example, a student can cycle from home to a nearby college if the route avoids fast traffic. I would like a practical introduction rather than a session that requires specialist knowledge.",
-          "noteVi": "Giải thích hoàn cảnh để người nhận tư vấn đúng."
+          "text": "My main concern is that I have limited experience and would prefer a practical introduction. I understand that participants will plan short cycle routes and identify difficult junctions. This interests me because people have another way to travel without using a car. For example, a student can cycle from home to a nearby college if the route avoids fast traffic.",
+          "noteVi": "Nêu hoàn cảnh để người nhận trả lời đúng nhu cầu.",
+          "parts": [
+            {
+              "text": "My main concern is that ",
+              "kind": "frame"
+            },
+            {
+              "text": "I have limited experience and would prefer a practical introduction",
+              "kind": "detail",
+              "labelVi": "nhu cầu — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I understand that participants will ",
+              "kind": "frame"
+            },
+            {
+              "text": "plan short cycle routes and identify difficult junctions",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". This interests me because ",
+              "kind": "frame"
+            },
+            {
+              "text": "people have another way to travel without using a car",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". For example, ",
+              "kind": "frame"
+            },
+            {
+              "text": "a student can cycle from home to a nearby college if the route avoids fast traffic",
+              "kind": "detail",
+              "labelVi": "ví dụ — chủ ngữ + động từ"
+            },
+            {
+              "text": ".",
+              "kind": "frame"
+            }
+          ],
+          "template": "My main concern is that [nhu cầu — chủ ngữ + động từ]. I understand that participants will [hoạt động — động từ nguyên mẫu]. This interests me because [lợi ích — chủ ngữ + động từ]. For example, [ví dụ — chủ ngữ + động từ]."
         },
         {
-          "label": "Câu hỏi",
-          "text": "Could you please confirm whether the session is on Sunday at three in the afternoon and how long it lasts? I would also like to know the fee and whether materials are included. The notice mentions that participants will plan short cycle routes and identify difficult junctions; should I bring a bicycle helmet or any other equipment?",
-          "noteVi": "Câu hỏi gián tiếp về sắp xếp và chuẩn bị."
+          "label": "Câu hỏi gián tiếp",
+          "text": "Could you please confirm whether the session is on Sunday at three in the afternoon? I would also like to know how much it costs and whether beginners are welcome. In addition, please let me know how to register and whether there is a deadline. This information would help me make suitable arrangements.",
+          "noteVi": "Sau confirm / know dùng trật tự chủ ngữ + động từ.",
+          "parts": [
+            {
+              "text": "Could you please confirm ",
+              "kind": "frame"
+            },
+            {
+              "text": "whether the session is on Sunday at three in the afternoon",
+              "kind": "detail",
+              "labelVi": "whether / wh + chủ ngữ + động từ"
+            },
+            {
+              "text": "? I would also like to know ",
+              "kind": "frame"
+            },
+            {
+              "text": "how much it costs and whether beginners are welcome",
+              "kind": "detail",
+              "labelVi": "câu hỏi gián tiếp thứ hai"
+            },
+            {
+              "text": ". In addition, please let me know how to register and whether there is a deadline. This information would help me make suitable arrangements.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Could you please confirm [whether / wh + chủ ngữ + động từ]? I would also like to know [câu hỏi gián tiếp thứ hai]. In addition, please let me know how to register and whether there is a deadline. This information would help me make suitable arrangements."
         },
         {
-          "label": "Đăng ký và kết",
-          "text": "Finally, could you explain how to register and whether there is a deadline? If places are limited, please let me know when I should apply.\n\nThank you for taking the time to read my letter. Please let me know if you need any further information. I look forward to your reply.\n\nYours sincerely,\nMinh Nguyen",
-          "noteVi": "Hỏi bước tiếp, cảm ơn và kết thư trang trọng."
+          "label": "Kết thư",
+          "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\nMinh Nguyen",
+          "noteVi": "Biết tên người nhận: Dear Ms/Mr + họ → Yours sincerely. Chưa biết tên: Dear Sir or Madam → Yours faithfully.",
+          "parts": [
+            {
+              "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh Nguyen",
+              "kind": "detail",
+              "labelVi": "họ tên của bạn"
+            }
+          ],
+          "template": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n[họ tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 205,
-      "mainWordCount": 205,
+      "register": "formal",
+      "wordCount": 186,
+      "mainWordCount": 186,
       "phrases": [
         {
           "en": "short everyday journeys",
@@ -368,6 +959,10 @@
         {
           "en": "Please let me know",
           "vi": "Hãy cho tôi biết…"
+        },
+        {
+          "en": "I would like to",
+          "vi": "Tôi muốn…"
         }
       ]
     },
@@ -379,40 +974,155 @@
       "number": 6,
       "title": "Tiết kiệm điện ở nhà",
       "focus": "saving electricity at home",
-      "prompt": "Write to Ms Brown at a local centre to ask about a household energy workshop. Explain your interest, ask about arrangements and costs, and ask how to register.",
+      "prompt": "Ask Ms Brown at a local centre for information about a household energy workshop. Explain your needs, ask about the time and cost, and find out whether it suits beginners.",
       "requirementsVi": [
-        "Nêu mục đích và nhu cầu.",
-        "Hỏi giờ, điều kiện, chi phí.",
-        "Hỏi cách đăng ký."
+        "Giải thích mình cần thông tin gì.",
+        "Nêu hoàn cảnh để người nhận trả lời đúng nhu cầu.",
+        "Sau confirm / know dùng trật tự chủ ngữ + động từ."
       ],
       "summaryVi": "Tiết kiệm điện nên bắt đầu từ việc dễ làm và phù hợp nhà thuê, thu nhập, thiết bị sẵn có.",
       "paragraphs": [
         {
-          "label": "Mục đích",
-          "text": "Dear Ms Brown,\n\nI am writing to ask for further information about a household energy workshop. I saw the notice at the community centre and would like to know whether the session would be suitable for someone with limited experience.",
-          "noteVi": "Chào người biết tên và nêu mục đích."
+          "label": "Mở thư và mục đích",
+          "text": "Dear Ms Brown,\n\nI am writing to request further information about a household energy workshop. I am interested in saving electricity at home and would appreciate your advice before making a decision. I would like to explain my situation and ask a few questions.",
+          "noteVi": "Giải thích mình cần thông tin gì.",
+          "parts": [
+            {
+              "text": "Dear ",
+              "kind": "frame"
+            },
+            {
+              "text": "Ms Brown",
+              "kind": "detail",
+              "labelVi": "danh xưng và họ người nhận"
+            },
+            {
+              "text": ",\n\nI am writing to request further information about ",
+              "kind": "frame"
+            },
+            {
+              "text": "a household energy workshop",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". I am interested in ",
+              "kind": "frame"
+            },
+            {
+              "text": "saving electricity at home",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": " and would appreciate your advice before making a decision. I would like to explain my situation and ask a few questions.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Dear [danh xưng và họ người nhận],\n\nI am writing to request further information about [sự kiện / hoạt động]. I am interested in [chủ đề] and would appreciate your advice before making a decision. I would like to explain my situation and ask a few questions."
         },
         {
           "label": "Nhu cầu",
-          "text": "I am interested in saving electricity at home because families can avoid paying for energy they do not need. For example, a family can switch off lights in empty rooms and use a timer for an appliance that is often forgotten. I would like a practical introduction rather than a session that requires specialist knowledge.",
-          "noteVi": "Giải thích hoàn cảnh để người nhận tư vấn đúng."
+          "text": "My main concern is that I have limited experience and would prefer a practical introduction. I understand that participants will review everyday habits and create a low-cost energy checklist. This interests me because families can avoid paying for energy they do not need. For example, a family can switch off lights in empty rooms and use a timer for an appliance that is often forgotten.",
+          "noteVi": "Nêu hoàn cảnh để người nhận trả lời đúng nhu cầu.",
+          "parts": [
+            {
+              "text": "My main concern is that ",
+              "kind": "frame"
+            },
+            {
+              "text": "I have limited experience and would prefer a practical introduction",
+              "kind": "detail",
+              "labelVi": "nhu cầu — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I understand that participants will ",
+              "kind": "frame"
+            },
+            {
+              "text": "review everyday habits and create a low-cost energy checklist",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". This interests me because ",
+              "kind": "frame"
+            },
+            {
+              "text": "families can avoid paying for energy they do not need",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". For example, ",
+              "kind": "frame"
+            },
+            {
+              "text": "a family can switch off lights in empty rooms and use a timer for an appliance that is often forgotten",
+              "kind": "detail",
+              "labelVi": "ví dụ — chủ ngữ + động từ"
+            },
+            {
+              "text": ".",
+              "kind": "frame"
+            }
+          ],
+          "template": "My main concern is that [nhu cầu — chủ ngữ + động từ]. I understand that participants will [hoạt động — động từ nguyên mẫu]. This interests me because [lợi ích — chủ ngữ + động từ]. For example, [ví dụ — chủ ngữ + động từ]."
         },
         {
-          "label": "Câu hỏi",
-          "text": "Could you please confirm whether the session is on Wednesday at six in the evening and how long it lasts? I would also like to know the fee and whether materials are included. The notice mentions that participants will review everyday habits and create a low-cost energy checklist; should I bring a recent electricity bill or any other equipment?",
-          "noteVi": "Câu hỏi gián tiếp về sắp xếp và chuẩn bị."
+          "label": "Câu hỏi gián tiếp",
+          "text": "Could you please confirm whether the session is on Wednesday at six in the evening? I would also like to know how much it costs and whether beginners are welcome. In addition, please let me know how to register and whether there is a deadline. This information would help me make suitable arrangements.",
+          "noteVi": "Sau confirm / know dùng trật tự chủ ngữ + động từ.",
+          "parts": [
+            {
+              "text": "Could you please confirm ",
+              "kind": "frame"
+            },
+            {
+              "text": "whether the session is on Wednesday at six in the evening",
+              "kind": "detail",
+              "labelVi": "whether / wh + chủ ngữ + động từ"
+            },
+            {
+              "text": "? I would also like to know ",
+              "kind": "frame"
+            },
+            {
+              "text": "how much it costs and whether beginners are welcome",
+              "kind": "detail",
+              "labelVi": "câu hỏi gián tiếp thứ hai"
+            },
+            {
+              "text": ". In addition, please let me know how to register and whether there is a deadline. This information would help me make suitable arrangements.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Could you please confirm [whether / wh + chủ ngữ + động từ]? I would also like to know [câu hỏi gián tiếp thứ hai]. In addition, please let me know how to register and whether there is a deadline. This information would help me make suitable arrangements."
         },
         {
-          "label": "Đăng ký và kết",
-          "text": "Finally, could you explain how to register and whether there is a deadline? If places are limited, please let me know when I should apply.\n\nThank you for taking the time to read my letter. Please let me know if you need any further information. I look forward to your reply.\n\nYours sincerely,\nMinh Nguyen",
-          "noteVi": "Hỏi bước tiếp, cảm ơn và kết thư trang trọng."
+          "label": "Kết thư",
+          "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\nMinh Nguyen",
+          "noteVi": "Biết tên người nhận: Dear Ms/Mr + họ → Yours sincerely. Chưa biết tên: Dear Sir or Madam → Yours faithfully.",
+          "parts": [
+            {
+              "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh Nguyen",
+              "kind": "detail",
+              "labelVi": "họ tên của bạn"
+            }
+          ],
+          "template": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n[họ tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 209,
-      "mainWordCount": 209,
+      "register": "formal",
+      "wordCount": 190,
+      "mainWordCount": 190,
       "phrases": [
         {
           "en": "unnecessary energy use",
@@ -442,6 +1152,10 @@
         {
           "en": "Please let me know",
           "vi": "Hãy cho tôi biết…"
+        },
+        {
+          "en": "I would like to",
+          "vi": "Tôi muốn…"
         }
       ]
     },
@@ -453,40 +1167,155 @@
       "number": 7,
       "title": "Bảo vệ động vật hoang dã",
       "focus": "responsible wildlife tourism",
-      "prompt": "Write to Ms Brown at a local centre to ask about a responsible wildlife travel talk. Explain your interest, ask about arrangements and costs, and ask how to register.",
+      "prompt": "Ask Ms Brown at a local centre for information about a responsible wildlife travel talk. Explain your needs, ask about the time and cost, and find out whether it suits beginners.",
       "requirementsVi": [
-        "Nêu mục đích và nhu cầu.",
-        "Hỏi giờ, điều kiện, chi phí.",
-        "Hỏi cách đăng ký."
+        "Giải thích mình cần thông tin gì.",
+        "Nêu hoàn cảnh để người nhận trả lời đúng nhu cầu.",
+        "Sau confirm / know dùng trật tự chủ ngữ + động từ."
       ],
       "summaryVi": "Tham quan thiên nhiên cần quan sát có khoảng cách; nên hỏi cách chăm sóc động vật thay vì chỉ xem quảng cáo.",
       "paragraphs": [
         {
-          "label": "Mục đích",
-          "text": "Dear Ms Brown,\n\nI am writing to ask for further information about a responsible wildlife travel talk. I saw the notice at the local library and would like to know whether the session would be suitable for someone with limited experience.",
-          "noteVi": "Chào người biết tên và nêu mục đích."
+          "label": "Mở thư và mục đích",
+          "text": "Dear Ms Brown,\n\nI am writing to request further information about a responsible wildlife travel talk. I am interested in responsible wildlife tourism and would appreciate your advice before making a decision. I would like to explain my situation and ask a few questions.",
+          "noteVi": "Giải thích mình cần thông tin gì.",
+          "parts": [
+            {
+              "text": "Dear ",
+              "kind": "frame"
+            },
+            {
+              "text": "Ms Brown",
+              "kind": "detail",
+              "labelVi": "danh xưng và họ người nhận"
+            },
+            {
+              "text": ",\n\nI am writing to request further information about ",
+              "kind": "frame"
+            },
+            {
+              "text": "a responsible wildlife travel talk",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". I am interested in ",
+              "kind": "frame"
+            },
+            {
+              "text": "responsible wildlife tourism",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": " and would appreciate your advice before making a decision. I would like to explain my situation and ask a few questions.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Dear [danh xưng và họ người nhận],\n\nI am writing to request further information about [sự kiện / hoạt động]. I am interested in [chủ đề] and would appreciate your advice before making a decision. I would like to explain my situation and ask a few questions."
         },
         {
           "label": "Nhu cầu",
-          "text": "I am interested in responsible wildlife tourism because visitors can enjoy nature without treating animals as objects for entertainment. For example, a guided birdwatching group can use binoculars instead of approaching a nesting area. I would like a practical introduction rather than a session that requires specialist knowledge.",
-          "noteVi": "Giải thích hoàn cảnh để người nhận tư vấn đúng."
+          "text": "My main concern is that I have limited experience and would prefer a practical introduction. I understand that participants will compare nature tours and discuss respectful observation. This interests me because visitors can enjoy nature without treating animals as objects for entertainment. For example, a guided birdwatching group can use binoculars instead of approaching a nesting area.",
+          "noteVi": "Nêu hoàn cảnh để người nhận trả lời đúng nhu cầu.",
+          "parts": [
+            {
+              "text": "My main concern is that ",
+              "kind": "frame"
+            },
+            {
+              "text": "I have limited experience and would prefer a practical introduction",
+              "kind": "detail",
+              "labelVi": "nhu cầu — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I understand that participants will ",
+              "kind": "frame"
+            },
+            {
+              "text": "compare nature tours and discuss respectful observation",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". This interests me because ",
+              "kind": "frame"
+            },
+            {
+              "text": "visitors can enjoy nature without treating animals as objects for entertainment",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". For example, ",
+              "kind": "frame"
+            },
+            {
+              "text": "a guided birdwatching group can use binoculars instead of approaching a nesting area",
+              "kind": "detail",
+              "labelVi": "ví dụ — chủ ngữ + động từ"
+            },
+            {
+              "text": ".",
+              "kind": "frame"
+            }
+          ],
+          "template": "My main concern is that [nhu cầu — chủ ngữ + động từ]. I understand that participants will [hoạt động — động từ nguyên mẫu]. This interests me because [lợi ích — chủ ngữ + động từ]. For example, [ví dụ — chủ ngữ + động từ]."
         },
         {
-          "label": "Câu hỏi",
-          "text": "Could you please confirm whether the session is on Saturday at two in the afternoon and how long it lasts? I would also like to know the fee and whether materials are included. The notice mentions that participants will compare nature tours and discuss respectful observation; should I bring a notebook for travel questions or any other equipment?",
-          "noteVi": "Câu hỏi gián tiếp về sắp xếp và chuẩn bị."
+          "label": "Câu hỏi gián tiếp",
+          "text": "Could you please confirm whether the session is on Saturday at two in the afternoon? I would also like to know how much it costs and whether beginners are welcome. In addition, please let me know how to register and whether there is a deadline. This information would help me make suitable arrangements.",
+          "noteVi": "Sau confirm / know dùng trật tự chủ ngữ + động từ.",
+          "parts": [
+            {
+              "text": "Could you please confirm ",
+              "kind": "frame"
+            },
+            {
+              "text": "whether the session is on Saturday at two in the afternoon",
+              "kind": "detail",
+              "labelVi": "whether / wh + chủ ngữ + động từ"
+            },
+            {
+              "text": "? I would also like to know ",
+              "kind": "frame"
+            },
+            {
+              "text": "how much it costs and whether beginners are welcome",
+              "kind": "detail",
+              "labelVi": "câu hỏi gián tiếp thứ hai"
+            },
+            {
+              "text": ". In addition, please let me know how to register and whether there is a deadline. This information would help me make suitable arrangements.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Could you please confirm [whether / wh + chủ ngữ + động từ]? I would also like to know [câu hỏi gián tiếp thứ hai]. In addition, please let me know how to register and whether there is a deadline. This information would help me make suitable arrangements."
         },
         {
-          "label": "Đăng ký và kết",
-          "text": "Finally, could you explain how to register and whether there is a deadline? If places are limited, please let me know when I should apply.\n\nThank you for taking the time to read my letter. Please let me know if you need any further information. I look forward to your reply.\n\nYours sincerely,\nMinh Nguyen",
-          "noteVi": "Hỏi bước tiếp, cảm ơn và kết thư trang trọng."
+          "label": "Kết thư",
+          "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\nMinh Nguyen",
+          "noteVi": "Biết tên người nhận: Dear Ms/Mr + họ → Yours sincerely. Chưa biết tên: Dear Sir or Madam → Yours faithfully.",
+          "parts": [
+            {
+              "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh Nguyen",
+              "kind": "detail",
+              "labelVi": "họ tên của bạn"
+            }
+          ],
+          "template": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n[họ tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 202,
-      "mainWordCount": 202,
+      "register": "formal",
+      "wordCount": 182,
+      "mainWordCount": 182,
       "phrases": [
         {
           "en": "observe from a distance",
@@ -516,6 +1345,10 @@
         {
           "en": "Please let me know",
           "vi": "Hãy cho tôi biết…"
+        },
+        {
+          "en": "I would like to",
+          "vi": "Tôi muốn…"
         }
       ]
     },
@@ -527,40 +1360,155 @@
       "number": 8,
       "title": "Giảm lãng phí thực phẩm",
       "focus": "food waste at home",
-      "prompt": "Write to Ms Brown at a local centre to ask about a meal planning workshop. Explain your interest, ask about arrangements and costs, and ask how to register.",
+      "prompt": "Ask Ms Brown at a local centre for information about a meal planning workshop. Explain your needs, ask about the time and cost, and find out whether it suits beginners.",
       "requirementsVi": [
-        "Nêu mục đích và nhu cầu.",
-        "Hỏi giờ, điều kiện, chi phí.",
-        "Hỏi cách đăng ký."
+        "Giải thích mình cần thông tin gì.",
+        "Nêu hoàn cảnh để người nhận trả lời đúng nhu cầu.",
+        "Sau confirm / know dùng trật tự chủ ngữ + động từ."
       ],
       "summaryVi": "Lên thực đơn giúp bớt mua thừa; kế hoạch cần linh hoạt để dùng được đồ còn lại khi lịch thay đổi.",
       "paragraphs": [
         {
-          "label": "Mục đích",
-          "text": "Dear Ms Brown,\n\nI am writing to ask for further information about a meal planning workshop. I saw the notice at the school meeting room and would like to know whether the session would be suitable for someone with limited experience.",
-          "noteVi": "Chào người biết tên và nêu mục đích."
+          "label": "Mở thư và mục đích",
+          "text": "Dear Ms Brown,\n\nI am writing to request further information about a meal planning workshop. I am interested in food waste at home and would appreciate your advice before making a decision. I would like to explain my situation and ask a few questions.",
+          "noteVi": "Giải thích mình cần thông tin gì.",
+          "parts": [
+            {
+              "text": "Dear ",
+              "kind": "frame"
+            },
+            {
+              "text": "Ms Brown",
+              "kind": "detail",
+              "labelVi": "danh xưng và họ người nhận"
+            },
+            {
+              "text": ",\n\nI am writing to request further information about ",
+              "kind": "frame"
+            },
+            {
+              "text": "a meal planning workshop",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". I am interested in ",
+              "kind": "frame"
+            },
+            {
+              "text": "food waste at home",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": " and would appreciate your advice before making a decision. I would like to explain my situation and ask a few questions.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Dear [danh xưng và họ người nhận],\n\nI am writing to request further information about [sự kiện / hoạt động]. I am interested in [chủ đề] and would appreciate your advice before making a decision. I would like to explain my situation and ask a few questions."
         },
         {
           "label": "Nhu cầu",
-          "text": "I am interested in food waste at home because households can use more of the food they buy. For example, a family can use the same vegetables in a soup and a rice dish instead of buying separate ingredients for every meal. I would like a practical introduction rather than a session that requires specialist knowledge.",
-          "noteVi": "Giải thích hoàn cảnh để người nhận tư vấn đúng."
+          "text": "My main concern is that I have limited experience and would prefer a practical introduction. I understand that participants will make a flexible menu and a practical shopping list. This interests me because households can use more of the food they buy. For example, a family can use the same vegetables in a soup and a rice dish instead of buying separate ingredients for every meal.",
+          "noteVi": "Nêu hoàn cảnh để người nhận trả lời đúng nhu cầu.",
+          "parts": [
+            {
+              "text": "My main concern is that ",
+              "kind": "frame"
+            },
+            {
+              "text": "I have limited experience and would prefer a practical introduction",
+              "kind": "detail",
+              "labelVi": "nhu cầu — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I understand that participants will ",
+              "kind": "frame"
+            },
+            {
+              "text": "make a flexible menu and a practical shopping list",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". This interests me because ",
+              "kind": "frame"
+            },
+            {
+              "text": "households can use more of the food they buy",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". For example, ",
+              "kind": "frame"
+            },
+            {
+              "text": "a family can use the same vegetables in a soup and a rice dish instead of buying separate ingredients for every meal",
+              "kind": "detail",
+              "labelVi": "ví dụ — chủ ngữ + động từ"
+            },
+            {
+              "text": ".",
+              "kind": "frame"
+            }
+          ],
+          "template": "My main concern is that [nhu cầu — chủ ngữ + động từ]. I understand that participants will [hoạt động — động từ nguyên mẫu]. This interests me because [lợi ích — chủ ngữ + động từ]. For example, [ví dụ — chủ ngữ + động từ]."
         },
         {
-          "label": "Câu hỏi",
-          "text": "Could you please confirm whether the session is on Sunday at ten in the morning and how long it lasts? I would also like to know the fee and whether materials are included. The notice mentions that participants will make a flexible menu and a practical shopping list; should I bring a list of food already at home or any other equipment?",
-          "noteVi": "Câu hỏi gián tiếp về sắp xếp và chuẩn bị."
+          "label": "Câu hỏi gián tiếp",
+          "text": "Could you please confirm whether the session is on Sunday at ten in the morning? I would also like to know how much it costs and whether beginners are welcome. In addition, please let me know how to register and whether there is a deadline. This information would help me make suitable arrangements.",
+          "noteVi": "Sau confirm / know dùng trật tự chủ ngữ + động từ.",
+          "parts": [
+            {
+              "text": "Could you please confirm ",
+              "kind": "frame"
+            },
+            {
+              "text": "whether the session is on Sunday at ten in the morning",
+              "kind": "detail",
+              "labelVi": "whether / wh + chủ ngữ + động từ"
+            },
+            {
+              "text": "? I would also like to know ",
+              "kind": "frame"
+            },
+            {
+              "text": "how much it costs and whether beginners are welcome",
+              "kind": "detail",
+              "labelVi": "câu hỏi gián tiếp thứ hai"
+            },
+            {
+              "text": ". In addition, please let me know how to register and whether there is a deadline. This information would help me make suitable arrangements.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Could you please confirm [whether / wh + chủ ngữ + động từ]? I would also like to know [câu hỏi gián tiếp thứ hai]. In addition, please let me know how to register and whether there is a deadline. This information would help me make suitable arrangements."
         },
         {
-          "label": "Đăng ký và kết",
-          "text": "Finally, could you explain how to register and whether there is a deadline? If places are limited, please let me know when I should apply.\n\nThank you for taking the time to read my letter. Please let me know if you need any further information. I look forward to your reply.\n\nYours sincerely,\nMinh Nguyen",
-          "noteVi": "Hỏi bước tiếp, cảm ơn và kết thư trang trọng."
+          "label": "Kết thư",
+          "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\nMinh Nguyen",
+          "noteVi": "Biết tên người nhận: Dear Ms/Mr + họ → Yours sincerely. Chưa biết tên: Dear Sir or Madam → Yours faithfully.",
+          "parts": [
+            {
+              "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh Nguyen",
+              "kind": "detail",
+              "labelVi": "họ tên của bạn"
+            }
+          ],
+          "template": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n[họ tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 214,
-      "mainWordCount": 214,
+      "register": "formal",
+      "wordCount": 191,
+      "mainWordCount": 191,
       "phrases": [
         {
           "en": "plan meals",
@@ -590,6 +1538,10 @@
         {
           "en": "Please let me know",
           "vi": "Hãy cho tôi biết…"
+        },
+        {
+          "en": "I would like to",
+          "vi": "Tôi muốn…"
         }
       ]
     },
@@ -601,40 +1553,155 @@
       "number": 9,
       "title": "Dọn rác bãi biển",
       "focus": "community beach clean-ups",
-      "prompt": "Write to Ms Brown at a local centre to ask about a community beach clean-up. Explain your interest, ask about arrangements and costs, and ask how to register.",
+      "prompt": "Ask Ms Brown at a local centre for information about a community beach clean-up. Explain your needs, ask about the time and cost, and find out whether it suits beginners.",
       "requirementsVi": [
-        "Nêu mục đích và nhu cầu.",
-        "Hỏi giờ, điều kiện, chi phí.",
-        "Hỏi cách đăng ký."
+        "Giải thích mình cần thông tin gì.",
+        "Nêu hoàn cảnh để người nhận trả lời đúng nhu cầu.",
+        "Sau confirm / know dùng trật tự chủ ngữ + động từ."
       ],
       "summaryVi": "Dọn rác giúp cải thiện trước mắt; cần dùng kết quả để ngăn rác mới xuất hiện.",
       "paragraphs": [
         {
-          "label": "Mục đích",
-          "text": "Dear Ms Brown,\n\nI am writing to ask for further information about a community beach clean-up. I saw the notice at the beach entrance and would like to know whether the session would be suitable for someone with limited experience.",
-          "noteVi": "Chào người biết tên và nêu mục đích."
+          "label": "Mở thư và mục đích",
+          "text": "Dear Ms Brown,\n\nI am writing to request further information about a community beach clean-up. I am interested in community beach clean-ups and would appreciate your advice before making a decision. I would like to explain my situation and ask a few questions.",
+          "noteVi": "Giải thích mình cần thông tin gì.",
+          "parts": [
+            {
+              "text": "Dear ",
+              "kind": "frame"
+            },
+            {
+              "text": "Ms Brown",
+              "kind": "detail",
+              "labelVi": "danh xưng và họ người nhận"
+            },
+            {
+              "text": ",\n\nI am writing to request further information about ",
+              "kind": "frame"
+            },
+            {
+              "text": "a community beach clean-up",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". I am interested in ",
+              "kind": "frame"
+            },
+            {
+              "text": "community beach clean-ups",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": " and would appreciate your advice before making a decision. I would like to explain my situation and ask a few questions.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Dear [danh xưng và họ người nhận],\n\nI am writing to request further information about [sự kiện / hoạt động]. I am interested in [chủ đề] and would appreciate your advice before making a decision. I would like to explain my situation and ask a few questions."
         },
         {
           "label": "Nhu cầu",
-          "text": "I am interested in community beach clean-ups because volunteers can improve a public place and understand the scale of the problem. For example, a family can help record the kinds of packaging found on one section of beach. I would like a practical introduction rather than a session that requires specialist knowledge.",
-          "noteVi": "Giải thích hoàn cảnh để người nhận tư vấn đúng."
+          "text": "My main concern is that I have limited experience and would prefer a practical introduction. I understand that participants will collect litter in assigned areas and record the most common items. This interests me because volunteers can improve a public place and understand the scale of the problem. For example, a family can help record the kinds of packaging found on one section of beach.",
+          "noteVi": "Nêu hoàn cảnh để người nhận trả lời đúng nhu cầu.",
+          "parts": [
+            {
+              "text": "My main concern is that ",
+              "kind": "frame"
+            },
+            {
+              "text": "I have limited experience and would prefer a practical introduction",
+              "kind": "detail",
+              "labelVi": "nhu cầu — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I understand that participants will ",
+              "kind": "frame"
+            },
+            {
+              "text": "collect litter in assigned areas and record the most common items",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". This interests me because ",
+              "kind": "frame"
+            },
+            {
+              "text": "volunteers can improve a public place and understand the scale of the problem",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". For example, ",
+              "kind": "frame"
+            },
+            {
+              "text": "a family can help record the kinds of packaging found on one section of beach",
+              "kind": "detail",
+              "labelVi": "ví dụ — chủ ngữ + động từ"
+            },
+            {
+              "text": ".",
+              "kind": "frame"
+            }
+          ],
+          "template": "My main concern is that [nhu cầu — chủ ngữ + động từ]. I understand that participants will [hoạt động — động từ nguyên mẫu]. This interests me because [lợi ích — chủ ngữ + động từ]. For example, [ví dụ — chủ ngữ + động từ]."
         },
         {
-          "label": "Câu hỏi",
-          "text": "Could you please confirm whether the session is on Thursday at six in the evening and how long it lasts? I would also like to know the fee and whether materials are included. The notice mentions that participants will collect litter in assigned areas and record the most common items; should I bring reusable gloves and a hat or any other equipment?",
-          "noteVi": "Câu hỏi gián tiếp về sắp xếp và chuẩn bị."
+          "label": "Câu hỏi gián tiếp",
+          "text": "Could you please confirm whether the session is on Thursday at six in the evening? I would also like to know how much it costs and whether beginners are welcome. In addition, please let me know how to register and whether there is a deadline. This information would help me make suitable arrangements.",
+          "noteVi": "Sau confirm / know dùng trật tự chủ ngữ + động từ.",
+          "parts": [
+            {
+              "text": "Could you please confirm ",
+              "kind": "frame"
+            },
+            {
+              "text": "whether the session is on Thursday at six in the evening",
+              "kind": "detail",
+              "labelVi": "whether / wh + chủ ngữ + động từ"
+            },
+            {
+              "text": "? I would also like to know ",
+              "kind": "frame"
+            },
+            {
+              "text": "how much it costs and whether beginners are welcome",
+              "kind": "detail",
+              "labelVi": "câu hỏi gián tiếp thứ hai"
+            },
+            {
+              "text": ". In addition, please let me know how to register and whether there is a deadline. This information would help me make suitable arrangements.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Could you please confirm [whether / wh + chủ ngữ + động từ]? I would also like to know [câu hỏi gián tiếp thứ hai]. In addition, please let me know how to register and whether there is a deadline. This information would help me make suitable arrangements."
         },
         {
-          "label": "Đăng ký và kết",
-          "text": "Finally, could you explain how to register and whether there is a deadline? If places are limited, please let me know when I should apply.\n\nThank you for taking the time to read my letter. Please let me know if you need any further information. I look forward to your reply.\n\nYours sincerely,\nMinh Nguyen",
-          "noteVi": "Hỏi bước tiếp, cảm ơn và kết thư trang trọng."
+          "label": "Kết thư",
+          "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\nMinh Nguyen",
+          "noteVi": "Biết tên người nhận: Dear Ms/Mr + họ → Yours sincerely. Chưa biết tên: Dear Sir or Madam → Yours faithfully.",
+          "parts": [
+            {
+              "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh Nguyen",
+              "kind": "detail",
+              "labelVi": "họ tên của bạn"
+            }
+          ],
+          "template": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n[họ tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 209,
-      "mainWordCount": 209,
+      "register": "formal",
+      "wordCount": 189,
+      "mainWordCount": 189,
       "phrases": [
         {
           "en": "a beach clean-up",
@@ -664,6 +1731,10 @@
         {
           "en": "Please let me know",
           "vi": "Hãy cho tôi biết…"
+        },
+        {
+          "en": "I would like to",
+          "vi": "Tôi muốn…"
         }
       ]
     },
@@ -675,40 +1746,155 @@
       "number": 10,
       "title": "Tiết kiệm nước",
       "focus": "saving water in daily life",
-      "prompt": "Write to Ms Brown at a local centre to ask about a community water-saving session. Explain your interest, ask about arrangements and costs, and ask how to register.",
+      "prompt": "Ask Ms Brown at a local centre for information about a community water-saving session. Explain your needs, ask about the time and cost, and find out whether it suits beginners.",
       "requirementsVi": [
-        "Nêu mục đích và nhu cầu.",
-        "Hỏi giờ, điều kiện, chi phí.",
-        "Hỏi cách đăng ký."
+        "Giải thích mình cần thông tin gì.",
+        "Nêu hoàn cảnh để người nhận trả lời đúng nhu cầu.",
+        "Sau confirm / know dùng trật tự chủ ngữ + động từ."
       ],
       "summaryVi": "Thói quen tiết kiệm nước cần đi cùng cách báo và sửa rò rỉ rõ trách nhiệm.",
       "paragraphs": [
         {
-          "label": "Mục đích",
-          "text": "Dear Ms Brown,\n\nI am writing to ask for further information about a community water-saving session. I saw the notice at the college activity room and would like to know whether the session would be suitable for someone with limited experience.",
-          "noteVi": "Chào người biết tên và nêu mục đích."
+          "label": "Mở thư và mục đích",
+          "text": "Dear Ms Brown,\n\nI am writing to request further information about a community water-saving session. I am interested in saving water in daily life and would appreciate your advice before making a decision. I would like to explain my situation and ask a few questions.",
+          "noteVi": "Giải thích mình cần thông tin gì.",
+          "parts": [
+            {
+              "text": "Dear ",
+              "kind": "frame"
+            },
+            {
+              "text": "Ms Brown",
+              "kind": "detail",
+              "labelVi": "danh xưng và họ người nhận"
+            },
+            {
+              "text": ",\n\nI am writing to request further information about ",
+              "kind": "frame"
+            },
+            {
+              "text": "a community water-saving session",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". I am interested in ",
+              "kind": "frame"
+            },
+            {
+              "text": "saving water in daily life",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": " and would appreciate your advice before making a decision. I would like to explain my situation and ask a few questions.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Dear [danh xưng và họ người nhận],\n\nI am writing to request further information about [sự kiện / hoạt động]. I am interested in [chủ đề] and would appreciate your advice before making a decision. I would like to explain my situation and ask a few questions."
         },
         {
           "label": "Nhu cầu",
-          "text": "I am interested in saving water in daily life because people can avoid wasting treated water. For example, a household can repair a dripping tap and use a bowl when washing a small amount of produce. I would like a practical introduction rather than a session that requires specialist knowledge.",
-          "noteVi": "Giải thích hoàn cảnh để người nhận tư vấn đúng."
+          "text": "My main concern is that I have limited experience and would prefer a practical introduction. I understand that participants will identify common sources of waste and practise reporting leaks. This interests me because people can avoid wasting treated water. For example, a household can repair a dripping tap and use a bowl when washing a small amount of produce.",
+          "noteVi": "Nêu hoàn cảnh để người nhận trả lời đúng nhu cầu.",
+          "parts": [
+            {
+              "text": "My main concern is that ",
+              "kind": "frame"
+            },
+            {
+              "text": "I have limited experience and would prefer a practical introduction",
+              "kind": "detail",
+              "labelVi": "nhu cầu — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I understand that participants will ",
+              "kind": "frame"
+            },
+            {
+              "text": "identify common sources of waste and practise reporting leaks",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". This interests me because ",
+              "kind": "frame"
+            },
+            {
+              "text": "people can avoid wasting treated water",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". For example, ",
+              "kind": "frame"
+            },
+            {
+              "text": "a household can repair a dripping tap and use a bowl when washing a small amount of produce",
+              "kind": "detail",
+              "labelVi": "ví dụ — chủ ngữ + động từ"
+            },
+            {
+              "text": ".",
+              "kind": "frame"
+            }
+          ],
+          "template": "My main concern is that [nhu cầu — chủ ngữ + động từ]. I understand that participants will [hoạt động — động từ nguyên mẫu]. This interests me because [lợi ích — chủ ngữ + động từ]. For example, [ví dụ — chủ ngữ + động từ]."
         },
         {
-          "label": "Câu hỏi",
-          "text": "Could you please confirm whether the session is on Saturday at three in the afternoon and how long it lasts? I would also like to know the fee and whether materials are included. The notice mentions that participants will identify common sources of waste and practise reporting leaks; should I bring a note of any water problems at home or any other equipment?",
-          "noteVi": "Câu hỏi gián tiếp về sắp xếp và chuẩn bị."
+          "label": "Câu hỏi gián tiếp",
+          "text": "Could you please confirm whether the session is on Saturday at three in the afternoon? I would also like to know how much it costs and whether beginners are welcome. In addition, please let me know how to register and whether there is a deadline. This information would help me make suitable arrangements.",
+          "noteVi": "Sau confirm / know dùng trật tự chủ ngữ + động từ.",
+          "parts": [
+            {
+              "text": "Could you please confirm ",
+              "kind": "frame"
+            },
+            {
+              "text": "whether the session is on Saturday at three in the afternoon",
+              "kind": "detail",
+              "labelVi": "whether / wh + chủ ngữ + động từ"
+            },
+            {
+              "text": "? I would also like to know ",
+              "kind": "frame"
+            },
+            {
+              "text": "how much it costs and whether beginners are welcome",
+              "kind": "detail",
+              "labelVi": "câu hỏi gián tiếp thứ hai"
+            },
+            {
+              "text": ". In addition, please let me know how to register and whether there is a deadline. This information would help me make suitable arrangements.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Could you please confirm [whether / wh + chủ ngữ + động từ]? I would also like to know [câu hỏi gián tiếp thứ hai]. In addition, please let me know how to register and whether there is a deadline. This information would help me make suitable arrangements."
         },
         {
-          "label": "Đăng ký và kết",
-          "text": "Finally, could you explain how to register and whether there is a deadline? If places are limited, please let me know when I should apply.\n\nThank you for taking the time to read my letter. Please let me know if you need any further information. I look forward to your reply.\n\nYours sincerely,\nMinh Nguyen",
-          "noteVi": "Hỏi bước tiếp, cảm ơn và kết thư trang trọng."
+          "label": "Kết thư",
+          "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\nMinh Nguyen",
+          "noteVi": "Biết tên người nhận: Dear Ms/Mr + họ → Yours sincerely. Chưa biết tên: Dear Sir or Madam → Yours faithfully.",
+          "parts": [
+            {
+              "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh Nguyen",
+              "kind": "detail",
+              "labelVi": "họ tên của bạn"
+            }
+          ],
+          "template": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n[họ tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 209,
-      "mainWordCount": 209,
+      "register": "formal",
+      "wordCount": 185,
+      "mainWordCount": 185,
       "phrases": [
         {
           "en": "repair a leak",
@@ -738,6 +1924,10 @@
         {
           "en": "Please let me know",
           "vi": "Hãy cho tôi biết…"
+        },
+        {
+          "en": "I would like to",
+          "vi": "Tôi muốn…"
         }
       ]
     }

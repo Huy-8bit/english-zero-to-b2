@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-05-v1",
+  "version": "2026-11-05-v2-frames",
   "samples": [
     {
       "id": "speaking-part3-development-work-01",
@@ -20,27 +20,127 @@
         {
           "label": "Mở bài",
           "text": "I would like to talk about flexible working hours. In my opinion, this topic is worth considering because it can affect ordinary decisions and experiences. I will look at a practical benefit, a possible difficulty and a way to make the approach work better.",
-          "noteVi": "Giới thiệu chủ đề và ba nhánh sẽ triển khai."
+          "noteVi": "Giới thiệu chủ đề và ba nhánh sẽ triển khai.",
+          "parts": [
+            {
+              "text": "I would like to talk about",
+              "kind": "frame",
+              "labelVi": "Giới thiệu chủ đề + cụm danh từ"
+            },
+            {
+              "text": " flexible working hours. ",
+              "kind": "detail"
+            },
+            {
+              "text": "In my opinion,",
+              "kind": "frame",
+              "labelVi": "Nêu quan điểm cá nhân"
+            },
+            {
+              "text": " this topic is worth considering because it can affect ordinary decisions and experiences. I will look at a practical benefit, a possible difficulty and a way to make the approach work better.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Ý 1 — lợi ích thực tế",
           "text": "First, employees can organise work around practical personal needs. This is possible because different starting times can reduce clashes between work and family responsibilities. For example, a parent can start earlier on two days so that they can collect a child from school. That example shows how an idea can be useful in a real situation. People are more likely to value an approach when they can see what it changes in their own lives.",
-          "noteVi": "Giờ linh hoạt giúp cân bằng trách nhiệm; cần khoảng giờ chung và biết ai đang có mặt."
+          "noteVi": "Giờ linh hoạt giúp cân bằng trách nhiệm; cần khoảng giờ chung và biết ai đang có mặt.",
+          "parts": [
+            {
+              "text": "First,",
+              "kind": "frame",
+              "labelVi": "Mở ý thứ nhất"
+            },
+            {
+              "text": " employees can organise work around practical personal needs. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This is possible because",
+              "kind": "frame",
+              "labelVi": "Giải thích cơ chế + mệnh đề"
+            },
+            {
+              "text": " different starting times can reduce clashes between work and family responsibilities. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a parent can start earlier on two days so that they can collect a child from school. That example shows how an idea can be useful in a real situation. People are more likely to value an approach when they can see what it changes in their own lives.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Ý 2 — khó khăn",
           "text": "However, team members may not be available at the same time. One reason is that a task that needs several people can be delayed if their schedules do not overlap. For instance, a customer question may remain unanswered because the person with the information has already finished work. I do not think this means we should reject the whole idea. It means that we need to understand the needs of the people involved before expecting the same result for everyone.",
-          "noteVi": "Một trở ngại → lý do → ví dụ; tránh khẳng định tuyệt đối."
+          "noteVi": "Một trở ngại → lý do → ví dụ; tránh khẳng định tuyệt đối.",
+          "parts": [
+            {
+              "text": "However,",
+              "kind": "frame",
+              "labelVi": "Nêu ý đối lập hoặc giới hạn"
+            },
+            {
+              "text": " team members may not be available at the same time. One reason is that a task that needs several people can be delayed if their schedules do not overlap. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For instance,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a customer question may remain unanswered because the person with the information has already finished work. I do not think this means we should reject the whole idea. It means that we need to understand the needs of the people involved before expecting the same result for everyone.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Ý 3 — cách cải thiện",
           "text": "A useful step would be to set core hours and make availability clear to the team. To be more specific, a department could agree that everyone is reachable between ten and three while allowing choice outside that period. I would start with a small trial and ask the people involved what helped and what remained difficult. Their feedback could then guide the next step, so that effort goes towards a real need.",
-          "noteVi": "Giải pháp cụ thể → cách thực hiện → phản hồi."
+          "noteVi": "Giải pháp cụ thể → cách thực hiện → phản hồi.",
+          "parts": [
+            {
+              "text": "A useful step would be to",
+              "kind": "frame",
+              "labelVi": "Đề xuất một bước + động từ nguyên mẫu"
+            },
+            {
+              "text": " set core hours and make availability clear to the team. ",
+              "kind": "detail"
+            },
+            {
+              "text": "To be more specific,",
+              "kind": "frame",
+              "labelVi": "Giải thích cụ thể hơn"
+            },
+            {
+              "text": " a department could agree that everyone is reachable between ten and three while allowing choice outside that period. I would start with a small trial and ask the people involved what helped and what remained difficult. Their feedback could then guide the next step, so that effort goes towards a real need.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "To sum up, I think the potential benefit is valuable, but practical planning matters. We should keep the useful parts, recognise the difficulties and make changes when necessary. That would be more helpful than assuming that one approach suits everybody.",
-          "noteVi": "Chốt quan điểm, không thêm luận điểm mới."
+          "noteVi": "Chốt quan điểm, không thêm luận điểm mới.",
+          "parts": [
+            {
+              "text": "To sum up,",
+              "kind": "frame",
+              "labelVi": "Tóm tắt bài nói"
+            },
+            {
+              "text": " I think the potential benefit is valuable, but practical planning matters. We should keep the useful parts, recognise the difficulties and make changes when necessary. That would be more helpful than assuming that one approach suits everybody.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [
@@ -50,23 +150,88 @@
             {
               "question": "Should everyone follow the same approach to flexible working hours?",
               "answer": "No, I do not think so. People have different needs and resources. For example, a customer question may remain unanswered because the person with the information has already finished work. A flexible approach would give that person a better chance to benefit.",
-              "noteVi": "Quan điểm → khác biệt nhu cầu → ví dụ."
+              "noteVi": "Quan điểm → khác biệt nhu cầu → ví dụ.",
+              "parts": [
+                {
+                  "text": "No, I do not think so.",
+                  "kind": "frame",
+                  "labelVi": "Trả lời câu hỏi Yes/No rồi giải thích"
+                },
+                {
+                  "text": " People have different needs and resources. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "For example,",
+                  "kind": "frame",
+                  "labelVi": "Đưa ví dụ + mệnh đề"
+                },
+                {
+                  "text": " a customer question may remain unanswered because the person with the information has already finished work. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "A flexible approach would",
+                  "kind": "frame",
+                  "labelVi": "Đề xuất cách linh hoạt + động từ nguyên mẫu"
+                },
+                {
+                  "text": " give that person a better chance to benefit.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "Who should help address the difficulty you mentioned?",
               "answer": "The people organising the activity should listen to those taking part. They could set core hours and make availability clear to the team. Participants should also explain what is difficult instead of assuming that organisers already know.",
-              "noteVi": "Nêu vai trò của cả người tổ chức và người tham gia."
+              "noteVi": "Nêu vai trò của cả người tổ chức và người tham gia.",
+              "parts": [
+                {
+                  "text": "The people organising the activity should listen to those taking part. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "They could",
+                  "kind": "frame",
+                  "labelVi": "Nêu hành động của đối tượng vừa nhắc"
+                },
+                {
+                  "text": " set core hours and make availability clear to the team. Participants should also explain what is difficult instead of assuming that organisers already know.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "How could we tell whether a new approach is successful?",
               "answer": "We could ask whether it solves the original problem and makes daily life easier. Here, we would want to see whether employees can organise work around practical personal needs. I would compare people's experiences before and after a small trial rather than judge success by popularity alone.",
-              "noteVi": "Tiêu chí đo → áp dụng chủ đề → cách so sánh."
+              "noteVi": "Tiêu chí đo → áp dụng chủ đề → cách so sánh.",
+              "parts": [
+                {
+                  "text": "We could ask whether",
+                  "kind": "frame",
+                  "labelVi": "Đưa cách kiểm tra / đánh giá"
+                },
+                {
+                  "text": " it solves the original problem and makes daily life easier. Here, we would want to see whether employees can organise work around practical personal needs. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "I would compare",
+                  "kind": "frame",
+                  "labelVi": "Đề xuất so sánh + cụm danh từ"
+                },
+                {
+                  "text": " people's experiences before and after a small trial rather than judge success by popularity alone.",
+                  "kind": "detail"
+                }
+              ]
             }
           ]
         }
       ],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 437,
       "mainWordCount": 311,
       "phrases": [
@@ -120,27 +285,127 @@
         {
           "label": "Mở bài",
           "text": "I would like to talk about choosing a satisfying job. In my opinion, this topic is worth considering because it can affect ordinary decisions and experiences. I will look at a practical benefit, a possible difficulty and a way to make the approach work better.",
-          "noteVi": "Giới thiệu chủ đề và ba nhánh sẽ triển khai."
+          "noteVi": "Giới thiệu chủ đề và ba nhánh sẽ triển khai.",
+          "parts": [
+            {
+              "text": "I would like to talk about",
+              "kind": "frame",
+              "labelVi": "Giới thiệu chủ đề + cụm danh từ"
+            },
+            {
+              "text": " choosing a satisfying job. ",
+              "kind": "detail"
+            },
+            {
+              "text": "In my opinion,",
+              "kind": "frame",
+              "labelVi": "Nêu quan điểm cá nhân"
+            },
+            {
+              "text": " this topic is worth considering because it can affect ordinary decisions and experiences. I will look at a practical benefit, a possible difficulty and a way to make the approach work better.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Ý 1 — lợi ích thực tế",
           "text": "First, workers can think about the quality of their daily working life. This is possible because interest in the work and supportive colleagues can make a role easier to sustain. For example, a teacher may value a school where colleagues share materials and help new staff solve classroom problems. That example shows how an idea can be useful in a real situation. People are more likely to value an approach when they can see what it changes in their own lives.",
-          "noteVi": "Chọn việc cần cân nhắc cả nhu cầu tài chính và trải nghiệm làm việc hằng ngày."
+          "noteVi": "Chọn việc cần cân nhắc cả nhu cầu tài chính và trải nghiệm làm việc hằng ngày.",
+          "parts": [
+            {
+              "text": "First,",
+              "kind": "frame",
+              "labelVi": "Mở ý thứ nhất"
+            },
+            {
+              "text": " workers can think about the quality of their daily working life. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This is possible because",
+              "kind": "frame",
+              "labelVi": "Giải thích cơ chế + mệnh đề"
+            },
+            {
+              "text": " interest in the work and supportive colleagues can make a role easier to sustain. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a teacher may value a school where colleagues share materials and help new staff solve classroom problems. That example shows how an idea can be useful in a real situation. People are more likely to value an approach when they can see what it changes in their own lives.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Ý 2 — khó khăn",
           "text": "However, personal interest alone may not cover essential living costs. One reason is that rent, transport and family expenses still need to be paid regularly. For instance, a graduate may enjoy an unpaid position but be unable to continue without financial support. I do not think this means we should reject the whole idea. It means that we need to understand the needs of the people involved before expecting the same result for everyone.",
-          "noteVi": "Một trở ngại → lý do → ví dụ; tránh khẳng định tuyệt đối."
+          "noteVi": "Một trở ngại → lý do → ví dụ; tránh khẳng định tuyệt đối.",
+          "parts": [
+            {
+              "text": "However,",
+              "kind": "frame",
+              "labelVi": "Nêu ý đối lập hoặc giới hạn"
+            },
+            {
+              "text": " personal interest alone may not cover essential living costs. One reason is that rent, transport and family expenses still need to be paid regularly. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For instance,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a graduate may enjoy an unpaid position but be unable to continue without financial support. I do not think this means we should reject the whole idea. It means that we need to understand the needs of the people involved before expecting the same result for everyone.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Ý 3 — cách cải thiện",
           "text": "A useful step would be to compare basic financial needs with working conditions and opportunities to develop. To be more specific, a job seeker could list minimum living costs before comparing two offers with different responsibilities. I would start with a small trial and ask the people involved what helped and what remained difficult. Their feedback could then guide the next step, so that effort goes towards a real need.",
-          "noteVi": "Giải pháp cụ thể → cách thực hiện → phản hồi."
+          "noteVi": "Giải pháp cụ thể → cách thực hiện → phản hồi.",
+          "parts": [
+            {
+              "text": "A useful step would be to",
+              "kind": "frame",
+              "labelVi": "Đề xuất một bước + động từ nguyên mẫu"
+            },
+            {
+              "text": " compare basic financial needs with working conditions and opportunities to develop. ",
+              "kind": "detail"
+            },
+            {
+              "text": "To be more specific,",
+              "kind": "frame",
+              "labelVi": "Giải thích cụ thể hơn"
+            },
+            {
+              "text": " a job seeker could list minimum living costs before comparing two offers with different responsibilities. I would start with a small trial and ask the people involved what helped and what remained difficult. Their feedback could then guide the next step, so that effort goes towards a real need.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "To sum up, I think the potential benefit is valuable, but practical planning matters. We should keep the useful parts, recognise the difficulties and make changes when necessary. That would be more helpful than assuming that one approach suits everybody.",
-          "noteVi": "Chốt quan điểm, không thêm luận điểm mới."
+          "noteVi": "Chốt quan điểm, không thêm luận điểm mới.",
+          "parts": [
+            {
+              "text": "To sum up,",
+              "kind": "frame",
+              "labelVi": "Tóm tắt bài nói"
+            },
+            {
+              "text": " I think the potential benefit is valuable, but practical planning matters. We should keep the useful parts, recognise the difficulties and make changes when necessary. That would be more helpful than assuming that one approach suits everybody.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [
@@ -150,23 +415,88 @@
             {
               "question": "Should everyone follow the same approach to choosing a satisfying job?",
               "answer": "No, I do not think so. People have different needs and resources. For example, a graduate may enjoy an unpaid position but be unable to continue without financial support. A flexible approach would give that person a better chance to benefit.",
-              "noteVi": "Quan điểm → khác biệt nhu cầu → ví dụ."
+              "noteVi": "Quan điểm → khác biệt nhu cầu → ví dụ.",
+              "parts": [
+                {
+                  "text": "No, I do not think so.",
+                  "kind": "frame",
+                  "labelVi": "Trả lời câu hỏi Yes/No rồi giải thích"
+                },
+                {
+                  "text": " People have different needs and resources. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "For example,",
+                  "kind": "frame",
+                  "labelVi": "Đưa ví dụ + mệnh đề"
+                },
+                {
+                  "text": " a graduate may enjoy an unpaid position but be unable to continue without financial support. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "A flexible approach would",
+                  "kind": "frame",
+                  "labelVi": "Đề xuất cách linh hoạt + động từ nguyên mẫu"
+                },
+                {
+                  "text": " give that person a better chance to benefit.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "Who should help address the difficulty you mentioned?",
               "answer": "The people organising the activity should listen to those taking part. They could compare basic financial needs with working conditions and opportunities to develop. Participants should also explain what is difficult instead of assuming that organisers already know.",
-              "noteVi": "Nêu vai trò của cả người tổ chức và người tham gia."
+              "noteVi": "Nêu vai trò của cả người tổ chức và người tham gia.",
+              "parts": [
+                {
+                  "text": "The people organising the activity should listen to those taking part. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "They could",
+                  "kind": "frame",
+                  "labelVi": "Nêu hành động của đối tượng vừa nhắc"
+                },
+                {
+                  "text": " compare basic financial needs with working conditions and opportunities to develop. Participants should also explain what is difficult instead of assuming that organisers already know.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "How could we tell whether a new approach is successful?",
               "answer": "We could ask whether it solves the original problem and makes daily life easier. Here, we would want to see whether workers can think about the quality of their daily working life. I would compare people's experiences before and after a small trial rather than judge success by popularity alone.",
-              "noteVi": "Tiêu chí đo → áp dụng chủ đề → cách so sánh."
+              "noteVi": "Tiêu chí đo → áp dụng chủ đề → cách so sánh.",
+              "parts": [
+                {
+                  "text": "We could ask whether",
+                  "kind": "frame",
+                  "labelVi": "Đưa cách kiểm tra / đánh giá"
+                },
+                {
+                  "text": " it solves the original problem and makes daily life easier. Here, we would want to see whether workers can think about the quality of their daily working life. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "I would compare",
+                  "kind": "frame",
+                  "labelVi": "Đề xuất so sánh + cụm danh từ"
+                },
+                {
+                  "text": " people's experiences before and after a small trial rather than judge success by popularity alone.",
+                  "kind": "detail"
+                }
+              ]
             }
           ]
         }
       ],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 439,
       "mainWordCount": 310,
       "phrases": [
@@ -220,27 +550,127 @@
         {
           "label": "Mở bài",
           "text": "I would like to talk about work placements for students. In my opinion, this topic is worth considering because it can affect ordinary decisions and experiences. I will look at a practical benefit, a possible difficulty and a way to make the approach work better.",
-          "noteVi": "Giới thiệu chủ đề và ba nhánh sẽ triển khai."
+          "noteVi": "Giới thiệu chủ đề và ba nhánh sẽ triển khai.",
+          "parts": [
+            {
+              "text": "I would like to talk about",
+              "kind": "frame",
+              "labelVi": "Giới thiệu chủ đề + cụm danh từ"
+            },
+            {
+              "text": " work placements for students. ",
+              "kind": "detail"
+            },
+            {
+              "text": "In my opinion,",
+              "kind": "frame",
+              "labelVi": "Nêu quan điểm cá nhân"
+            },
+            {
+              "text": " this topic is worth considering because it can affect ordinary decisions and experiences. I will look at a practical benefit, a possible difficulty and a way to make the approach work better.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Ý 1 — lợi ích thực tế",
           "text": "First, students can connect classroom knowledge with workplace tasks. This is possible because real responsibilities show how a subject is used outside an assignment. For example, a business student can help organise a small shop's stock records and see why accurate information matters. That example shows how an idea can be useful in a real situation. People are more likely to value an approach when they can see what it changes in their own lives.",
-          "noteVi": "Thực tập cần nhiệm vụ có ý nghĩa, mục tiêu học và người hướng dẫn để không chỉ làm việc vặt."
+          "noteVi": "Thực tập cần nhiệm vụ có ý nghĩa, mục tiêu học và người hướng dẫn để không chỉ làm việc vặt.",
+          "parts": [
+            {
+              "text": "First,",
+              "kind": "frame",
+              "labelVi": "Mở ý thứ nhất"
+            },
+            {
+              "text": " students can connect classroom knowledge with workplace tasks. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This is possible because",
+              "kind": "frame",
+              "labelVi": "Giải thích cơ chế + mệnh đề"
+            },
+            {
+              "text": " real responsibilities show how a subject is used outside an assignment. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a business student can help organise a small shop's stock records and see why accurate information matters. That example shows how an idea can be useful in a real situation. People are more likely to value an approach when they can see what it changes in their own lives.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Ý 2 — khó khăn",
           "text": "However, a placement may offer little useful learning. One reason is that students may be given repetitive tasks without explanation or feedback. For instance, an intern may spend every day carrying documents and never learn about the department's main work. I do not think this means we should reject the whole idea. It means that we need to understand the needs of the people involved before expecting the same result for everyone.",
-          "noteVi": "Một trở ngại → lý do → ví dụ; tránh khẳng định tuyệt đối."
+          "noteVi": "Một trở ngại → lý do → ví dụ; tránh khẳng định tuyệt đối.",
+          "parts": [
+            {
+              "text": "However,",
+              "kind": "frame",
+              "labelVi": "Nêu ý đối lập hoặc giới hạn"
+            },
+            {
+              "text": " a placement may offer little useful learning. One reason is that students may be given repetitive tasks without explanation or feedback. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For instance,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " an intern may spend every day carrying documents and never learn about the department's main work. I do not think this means we should reject the whole idea. It means that we need to understand the needs of the people involved before expecting the same result for everyone.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Ý 3 — cách cải thiện",
           "text": "A useful step would be to set realistic learning objectives and appoint a workplace supervisor. To be more specific, a supervisor could review one task with the student each week and explain how it contributes to the business. I would start with a small trial and ask the people involved what helped and what remained difficult. Their feedback could then guide the next step, so that effort goes towards a real need.",
-          "noteVi": "Giải pháp cụ thể → cách thực hiện → phản hồi."
+          "noteVi": "Giải pháp cụ thể → cách thực hiện → phản hồi.",
+          "parts": [
+            {
+              "text": "A useful step would be to",
+              "kind": "frame",
+              "labelVi": "Đề xuất một bước + động từ nguyên mẫu"
+            },
+            {
+              "text": " set realistic learning objectives and appoint a workplace supervisor. ",
+              "kind": "detail"
+            },
+            {
+              "text": "To be more specific,",
+              "kind": "frame",
+              "labelVi": "Giải thích cụ thể hơn"
+            },
+            {
+              "text": " a supervisor could review one task with the student each week and explain how it contributes to the business. I would start with a small trial and ask the people involved what helped and what remained difficult. Their feedback could then guide the next step, so that effort goes towards a real need.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "To sum up, I think the potential benefit is valuable, but practical planning matters. We should keep the useful parts, recognise the difficulties and make changes when necessary. That would be more helpful than assuming that one approach suits everybody.",
-          "noteVi": "Chốt quan điểm, không thêm luận điểm mới."
+          "noteVi": "Chốt quan điểm, không thêm luận điểm mới.",
+          "parts": [
+            {
+              "text": "To sum up,",
+              "kind": "frame",
+              "labelVi": "Tóm tắt bài nói"
+            },
+            {
+              "text": " I think the potential benefit is valuable, but practical planning matters. We should keep the useful parts, recognise the difficulties and make changes when necessary. That would be more helpful than assuming that one approach suits everybody.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [
@@ -250,23 +680,88 @@
             {
               "question": "Should everyone follow the same approach to work placements for students?",
               "answer": "No, I do not think so. People have different needs and resources. For example, an intern may spend every day carrying documents and never learn about the department's main work. A flexible approach would give that person a better chance to benefit.",
-              "noteVi": "Quan điểm → khác biệt nhu cầu → ví dụ."
+              "noteVi": "Quan điểm → khác biệt nhu cầu → ví dụ.",
+              "parts": [
+                {
+                  "text": "No, I do not think so.",
+                  "kind": "frame",
+                  "labelVi": "Trả lời câu hỏi Yes/No rồi giải thích"
+                },
+                {
+                  "text": " People have different needs and resources. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "For example,",
+                  "kind": "frame",
+                  "labelVi": "Đưa ví dụ + mệnh đề"
+                },
+                {
+                  "text": " an intern may spend every day carrying documents and never learn about the department's main work. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "A flexible approach would",
+                  "kind": "frame",
+                  "labelVi": "Đề xuất cách linh hoạt + động từ nguyên mẫu"
+                },
+                {
+                  "text": " give that person a better chance to benefit.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "Who should help address the difficulty you mentioned?",
               "answer": "The people organising the activity should listen to those taking part. They could set realistic learning objectives and appoint a workplace supervisor. Participants should also explain what is difficult instead of assuming that organisers already know.",
-              "noteVi": "Nêu vai trò của cả người tổ chức và người tham gia."
+              "noteVi": "Nêu vai trò của cả người tổ chức và người tham gia.",
+              "parts": [
+                {
+                  "text": "The people organising the activity should listen to those taking part. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "They could",
+                  "kind": "frame",
+                  "labelVi": "Nêu hành động của đối tượng vừa nhắc"
+                },
+                {
+                  "text": " set realistic learning objectives and appoint a workplace supervisor. Participants should also explain what is difficult instead of assuming that organisers already know.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "How could we tell whether a new approach is successful?",
               "answer": "We could ask whether it solves the original problem and makes daily life easier. Here, we would want to see whether students can connect classroom knowledge with workplace tasks. I would compare people's experiences before and after a small trial rather than judge success by popularity alone.",
-              "noteVi": "Tiêu chí đo → áp dụng chủ đề → cách so sánh."
+              "noteVi": "Tiêu chí đo → áp dụng chủ đề → cách so sánh.",
+              "parts": [
+                {
+                  "text": "We could ask whether",
+                  "kind": "frame",
+                  "labelVi": "Đưa cách kiểm tra / đánh giá"
+                },
+                {
+                  "text": " it solves the original problem and makes daily life easier. Here, we would want to see whether students can connect classroom knowledge with workplace tasks. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "I would compare",
+                  "kind": "frame",
+                  "labelVi": "Đề xuất so sánh + cụm danh từ"
+                },
+                {
+                  "text": " people's experiences before and after a small trial rather than judge success by popularity alone.",
+                  "kind": "detail"
+                }
+              ]
             }
           ]
         }
       ],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 429,
       "mainWordCount": 304,
       "phrases": [
@@ -320,27 +815,127 @@
         {
           "label": "Mở bài",
           "text": "I would like to talk about team meetings. In my opinion, this topic is worth considering because it can affect ordinary decisions and experiences. I will look at a practical benefit, a possible difficulty and a way to make the approach work better.",
-          "noteVi": "Giới thiệu chủ đề và ba nhánh sẽ triển khai."
+          "noteVi": "Giới thiệu chủ đề và ba nhánh sẽ triển khai.",
+          "parts": [
+            {
+              "text": "I would like to talk about",
+              "kind": "frame",
+              "labelVi": "Giới thiệu chủ đề + cụm danh từ"
+            },
+            {
+              "text": " team meetings. ",
+              "kind": "detail"
+            },
+            {
+              "text": "In my opinion,",
+              "kind": "frame",
+              "labelVi": "Nêu quan điểm cá nhân"
+            },
+            {
+              "text": " this topic is worth considering because it can affect ordinary decisions and experiences. I will look at a practical benefit, a possible difficulty and a way to make the approach work better.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Ý 1 — lợi ích thực tế",
           "text": "First, staff can understand decisions without losing large amounts of working time. This is possible because a clear agenda separates issues that need discussion from information that can be sent in writing. For example, a team can spend fifteen minutes agreeing on a delivery problem instead of listening to an hour of unrelated updates. That example shows how an idea can be useful in a real situation. People are more likely to value an approach when they can see what it changes in their own lives.",
-          "noteVi": "Họp có mục đích tiết kiệm thời gian; vẫn phải cho người ít nói cơ hội chuẩn bị và góp ý."
+          "noteVi": "Họp có mục đích tiết kiệm thời gian; vẫn phải cho người ít nói cơ hội chuẩn bị và góp ý.",
+          "parts": [
+            {
+              "text": "First,",
+              "kind": "frame",
+              "labelVi": "Mở ý thứ nhất"
+            },
+            {
+              "text": " staff can understand decisions without losing large amounts of working time. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This is possible because",
+              "kind": "frame",
+              "labelVi": "Giải thích cơ chế + mệnh đề"
+            },
+            {
+              "text": " a clear agenda separates issues that need discussion from information that can be sent in writing. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a team can spend fifteen minutes agreeing on a delivery problem instead of listening to an hour of unrelated updates. That example shows how an idea can be useful in a real situation. People are more likely to value an approach when they can see what it changes in their own lives.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Ý 2 — khó khăn",
           "text": "However, very short meetings may leave some voices unheard. One reason is that quieter colleagues may need time to understand a problem and prepare a response. For instance, a new employee may not mention an important concern before the chair moves to the next item. I do not think this means we should reject the whole idea. It means that we need to understand the needs of the people involved before expecting the same result for everyone.",
-          "noteVi": "Một trở ngại → lý do → ví dụ; tránh khẳng định tuyệt đối."
+          "noteVi": "Một trở ngại → lý do → ví dụ; tránh khẳng định tuyệt đối.",
+          "parts": [
+            {
+              "text": "However,",
+              "kind": "frame",
+              "labelVi": "Nêu ý đối lập hoặc giới hạn"
+            },
+            {
+              "text": " very short meetings may leave some voices unheard. One reason is that quieter colleagues may need time to understand a problem and prepare a response. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For instance,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a new employee may not mention an important concern before the chair moves to the next item. I do not think this means we should reject the whole idea. It means that we need to understand the needs of the people involved before expecting the same result for everyone.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Ý 3 — cách cải thiện",
           "text": "A useful step would be to share questions in advance and invite contributions from everyone. To be more specific, a manager could send a short agenda the day before and collect written comments after the meeting. I would start with a small trial and ask the people involved what helped and what remained difficult. Their feedback could then guide the next step, so that effort goes towards a real need.",
-          "noteVi": "Giải pháp cụ thể → cách thực hiện → phản hồi."
+          "noteVi": "Giải pháp cụ thể → cách thực hiện → phản hồi.",
+          "parts": [
+            {
+              "text": "A useful step would be to",
+              "kind": "frame",
+              "labelVi": "Đề xuất một bước + động từ nguyên mẫu"
+            },
+            {
+              "text": " share questions in advance and invite contributions from everyone. ",
+              "kind": "detail"
+            },
+            {
+              "text": "To be more specific,",
+              "kind": "frame",
+              "labelVi": "Giải thích cụ thể hơn"
+            },
+            {
+              "text": " a manager could send a short agenda the day before and collect written comments after the meeting. I would start with a small trial and ask the people involved what helped and what remained difficult. Their feedback could then guide the next step, so that effort goes towards a real need.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "To sum up, I think the potential benefit is valuable, but practical planning matters. We should keep the useful parts, recognise the difficulties and make changes when necessary. That would be more helpful than assuming that one approach suits everybody.",
-          "noteVi": "Chốt quan điểm, không thêm luận điểm mới."
+          "noteVi": "Chốt quan điểm, không thêm luận điểm mới.",
+          "parts": [
+            {
+              "text": "To sum up,",
+              "kind": "frame",
+              "labelVi": "Tóm tắt bài nói"
+            },
+            {
+              "text": " I think the potential benefit is valuable, but practical planning matters. We should keep the useful parts, recognise the difficulties and make changes when necessary. That would be more helpful than assuming that one approach suits everybody.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [
@@ -350,23 +945,88 @@
             {
               "question": "Should everyone follow the same approach to team meetings?",
               "answer": "No, I do not think so. People have different needs and resources. For example, a new employee may not mention an important concern before the chair moves to the next item. A flexible approach would give that person a better chance to benefit.",
-              "noteVi": "Quan điểm → khác biệt nhu cầu → ví dụ."
+              "noteVi": "Quan điểm → khác biệt nhu cầu → ví dụ.",
+              "parts": [
+                {
+                  "text": "No, I do not think so.",
+                  "kind": "frame",
+                  "labelVi": "Trả lời câu hỏi Yes/No rồi giải thích"
+                },
+                {
+                  "text": " People have different needs and resources. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "For example,",
+                  "kind": "frame",
+                  "labelVi": "Đưa ví dụ + mệnh đề"
+                },
+                {
+                  "text": " a new employee may not mention an important concern before the chair moves to the next item. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "A flexible approach would",
+                  "kind": "frame",
+                  "labelVi": "Đề xuất cách linh hoạt + động từ nguyên mẫu"
+                },
+                {
+                  "text": " give that person a better chance to benefit.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "Who should help address the difficulty you mentioned?",
               "answer": "The people organising the activity should listen to those taking part. They could share questions in advance and invite contributions from everyone. Participants should also explain what is difficult instead of assuming that organisers already know.",
-              "noteVi": "Nêu vai trò của cả người tổ chức và người tham gia."
+              "noteVi": "Nêu vai trò của cả người tổ chức và người tham gia.",
+              "parts": [
+                {
+                  "text": "The people organising the activity should listen to those taking part. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "They could",
+                  "kind": "frame",
+                  "labelVi": "Nêu hành động của đối tượng vừa nhắc"
+                },
+                {
+                  "text": " share questions in advance and invite contributions from everyone. Participants should also explain what is difficult instead of assuming that organisers already know.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "How could we tell whether a new approach is successful?",
               "answer": "We could ask whether it solves the original problem and makes daily life easier. Here, we would want to see whether staff can understand decisions without losing large amounts of working time. I would compare people's experiences before and after a small trial rather than judge success by popularity alone.",
-              "noteVi": "Tiêu chí đo → áp dụng chủ đề → cách so sánh."
+              "noteVi": "Tiêu chí đo → áp dụng chủ đề → cách so sánh.",
+              "parts": [
+                {
+                  "text": "We could ask whether",
+                  "kind": "frame",
+                  "labelVi": "Đưa cách kiểm tra / đánh giá"
+                },
+                {
+                  "text": " it solves the original problem and makes daily life easier. Here, we would want to see whether staff can understand decisions without losing large amounts of working time. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "I would compare",
+                  "kind": "frame",
+                  "labelVi": "Đề xuất so sánh + cụm danh từ"
+                },
+                {
+                  "text": " people's experiences before and after a small trial rather than judge success by popularity alone.",
+                  "kind": "detail"
+                }
+              ]
             }
           ]
         }
       ],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 445,
       "mainWordCount": 316,
       "phrases": [
@@ -420,27 +1080,127 @@
         {
           "label": "Mở bài",
           "text": "I would like to talk about changing careers. In my opinion, this topic is worth considering because it can affect ordinary decisions and experiences. I will look at a practical benefit, a possible difficulty and a way to make the approach work better.",
-          "noteVi": "Giới thiệu chủ đề và ba nhánh sẽ triển khai."
+          "noteVi": "Giới thiệu chủ đề và ba nhánh sẽ triển khai.",
+          "parts": [
+            {
+              "text": "I would like to talk about",
+              "kind": "frame",
+              "labelVi": "Giới thiệu chủ đề + cụm danh từ"
+            },
+            {
+              "text": " changing careers. ",
+              "kind": "detail"
+            },
+            {
+              "text": "In my opinion,",
+              "kind": "frame",
+              "labelVi": "Nêu quan điểm cá nhân"
+            },
+            {
+              "text": " this topic is worth considering because it can affect ordinary decisions and experiences. I will look at a practical benefit, a possible difficulty and a way to make the approach work better.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Ý 1 — lợi ích thực tế",
           "text": "First, people can move towards work that better matches their skills or circumstances. This is possible because guidance can help them recognise useful experience rather than starting from nothing. For example, a shop worker with strong communication skills may prepare for a customer support role in another industry. That example shows how an idea can be useful in a real situation. People are more likely to value an approach when they can see what it changes in their own lives.",
-          "noteVi": "Đổi nghề nên tận dụng kỹ năng có sẵn và có kế hoạch tài chính, học tập, tìm việc thực tế."
+          "noteVi": "Đổi nghề nên tận dụng kỹ năng có sẵn và có kế hoạch tài chính, học tập, tìm việc thực tế.",
+          "parts": [
+            {
+              "text": "First,",
+              "kind": "frame",
+              "labelVi": "Mở ý thứ nhất"
+            },
+            {
+              "text": " people can move towards work that better matches their skills or circumstances. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This is possible because",
+              "kind": "frame",
+              "labelVi": "Giải thích cơ chế + mệnh đề"
+            },
+            {
+              "text": " guidance can help them recognise useful experience rather than starting from nothing. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a shop worker with strong communication skills may prepare for a customer support role in another industry. That example shows how an idea can be useful in a real situation. People are more likely to value an approach when they can see what it changes in their own lives.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Ý 2 — khó khăn",
           "text": "However, a sudden change can create financial pressure. One reason is that training may take time while the person still needs a regular income. For instance, someone may leave a job before checking the cost and duration of the course needed for a new occupation. I do not think this means we should reject the whole idea. It means that we need to understand the needs of the people involved before expecting the same result for everyone.",
-          "noteVi": "Một trở ngại → lý do → ví dụ; tránh khẳng định tuyệt đối."
+          "noteVi": "Một trở ngại → lý do → ví dụ; tránh khẳng định tuyệt đối.",
+          "parts": [
+            {
+              "text": "However,",
+              "kind": "frame",
+              "labelVi": "Nêu ý đối lập hoặc giới hạn"
+            },
+            {
+              "text": " a sudden change can create financial pressure. One reason is that training may take time while the person still needs a regular income. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For instance,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " someone may leave a job before checking the cost and duration of the course needed for a new occupation. I do not think this means we should reject the whole idea. It means that we need to understand the needs of the people involved before expecting the same result for everyone.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Ý 3 — cách cải thiện",
           "text": "A useful step would be to build a gradual plan that includes costs, training and realistic job research. To be more specific, a worker could take an evening course and speak to people in the target field before resigning. I would start with a small trial and ask the people involved what helped and what remained difficult. Their feedback could then guide the next step, so that effort goes towards a real need.",
-          "noteVi": "Giải pháp cụ thể → cách thực hiện → phản hồi."
+          "noteVi": "Giải pháp cụ thể → cách thực hiện → phản hồi.",
+          "parts": [
+            {
+              "text": "A useful step would be to",
+              "kind": "frame",
+              "labelVi": "Đề xuất một bước + động từ nguyên mẫu"
+            },
+            {
+              "text": " build a gradual plan that includes costs, training and realistic job research. ",
+              "kind": "detail"
+            },
+            {
+              "text": "To be more specific,",
+              "kind": "frame",
+              "labelVi": "Giải thích cụ thể hơn"
+            },
+            {
+              "text": " a worker could take an evening course and speak to people in the target field before resigning. I would start with a small trial and ask the people involved what helped and what remained difficult. Their feedback could then guide the next step, so that effort goes towards a real need.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "To sum up, I think the potential benefit is valuable, but practical planning matters. We should keep the useful parts, recognise the difficulties and make changes when necessary. That would be more helpful than assuming that one approach suits everybody.",
-          "noteVi": "Chốt quan điểm, không thêm luận điểm mới."
+          "noteVi": "Chốt quan điểm, không thêm luận điểm mới.",
+          "parts": [
+            {
+              "text": "To sum up,",
+              "kind": "frame",
+              "labelVi": "Tóm tắt bài nói"
+            },
+            {
+              "text": " I think the potential benefit is valuable, but practical planning matters. We should keep the useful parts, recognise the difficulties and make changes when necessary. That would be more helpful than assuming that one approach suits everybody.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [
@@ -450,23 +1210,88 @@
             {
               "question": "Should everyone follow the same approach to changing careers?",
               "answer": "No, I do not think so. People have different needs and resources. For example, someone may leave a job before checking the cost and duration of the course needed for a new occupation. A flexible approach would give that person a better chance to benefit.",
-              "noteVi": "Quan điểm → khác biệt nhu cầu → ví dụ."
+              "noteVi": "Quan điểm → khác biệt nhu cầu → ví dụ.",
+              "parts": [
+                {
+                  "text": "No, I do not think so.",
+                  "kind": "frame",
+                  "labelVi": "Trả lời câu hỏi Yes/No rồi giải thích"
+                },
+                {
+                  "text": " People have different needs and resources. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "For example,",
+                  "kind": "frame",
+                  "labelVi": "Đưa ví dụ + mệnh đề"
+                },
+                {
+                  "text": " someone may leave a job before checking the cost and duration of the course needed for a new occupation. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "A flexible approach would",
+                  "kind": "frame",
+                  "labelVi": "Đề xuất cách linh hoạt + động từ nguyên mẫu"
+                },
+                {
+                  "text": " give that person a better chance to benefit.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "Who should help address the difficulty you mentioned?",
               "answer": "The people organising the activity should listen to those taking part. They could build a gradual plan that includes costs, training and realistic job research. Participants should also explain what is difficult instead of assuming that organisers already know.",
-              "noteVi": "Nêu vai trò của cả người tổ chức và người tham gia."
+              "noteVi": "Nêu vai trò của cả người tổ chức và người tham gia.",
+              "parts": [
+                {
+                  "text": "The people organising the activity should listen to those taking part. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "They could",
+                  "kind": "frame",
+                  "labelVi": "Nêu hành động của đối tượng vừa nhắc"
+                },
+                {
+                  "text": " build a gradual plan that includes costs, training and realistic job research. Participants should also explain what is difficult instead of assuming that organisers already know.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "How could we tell whether a new approach is successful?",
               "answer": "We could ask whether it solves the original problem and makes daily life easier. Here, we would want to see whether people can move towards work that better matches their skills or circumstances. I would compare people's experiences before and after a small trial rather than judge success by popularity alone.",
-              "noteVi": "Tiêu chí đo → áp dụng chủ đề → cách so sánh."
+              "noteVi": "Tiêu chí đo → áp dụng chủ đề → cách so sánh.",
+              "parts": [
+                {
+                  "text": "We could ask whether",
+                  "kind": "frame",
+                  "labelVi": "Đưa cách kiểm tra / đánh giá"
+                },
+                {
+                  "text": " it solves the original problem and makes daily life easier. Here, we would want to see whether people can move towards work that better matches their skills or circumstances. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "I would compare",
+                  "kind": "frame",
+                  "labelVi": "Đề xuất so sánh + cụm danh từ"
+                },
+                {
+                  "text": " people's experiences before and after a small trial rather than judge success by popularity alone.",
+                  "kind": "detail"
+                }
+              ]
             }
           ]
         }
       ],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 448,
       "mainWordCount": 313,
       "phrases": [
@@ -520,27 +1345,127 @@
         {
           "label": "Mở bài",
           "text": "I would like to talk about community volunteering. In my opinion, this topic is worth considering because it can affect ordinary decisions and experiences. I will look at a practical benefit, a possible difficulty and a way to make the approach work better.",
-          "noteVi": "Giới thiệu chủ đề và ba nhánh sẽ triển khai."
+          "noteVi": "Giới thiệu chủ đề và ba nhánh sẽ triển khai.",
+          "parts": [
+            {
+              "text": "I would like to talk about",
+              "kind": "frame",
+              "labelVi": "Giới thiệu chủ đề + cụm danh từ"
+            },
+            {
+              "text": " community volunteering. ",
+              "kind": "detail"
+            },
+            {
+              "text": "In my opinion,",
+              "kind": "frame",
+              "labelVi": "Nêu quan điểm cá nhân"
+            },
+            {
+              "text": " this topic is worth considering because it can affect ordinary decisions and experiences. I will look at a practical benefit, a possible difficulty and a way to make the approach work better.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Ý 1 — lợi ích thực tế",
           "text": "First, residents can contribute useful skills and build local connections. This is possible because working towards a shared purpose brings together people who might not otherwise meet. For example, a retired office worker can help a neighbourhood group organise records for a food donation project. That example shows how an idea can be useful in a real situation. People are more likely to value an approach when they can see what it changes in their own lives.",
-          "noteVi": "Tình nguyện tạo kết nối nhưng cần cam kết vừa sức và hỗ trợ rõ, không chỉ dựa vào thiện chí."
+          "noteVi": "Tình nguyện tạo kết nối nhưng cần cam kết vừa sức và hỗ trợ rõ, không chỉ dựa vào thiện chí.",
+          "parts": [
+            {
+              "text": "First,",
+              "kind": "frame",
+              "labelVi": "Mở ý thứ nhất"
+            },
+            {
+              "text": " residents can contribute useful skills and build local connections. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This is possible because",
+              "kind": "frame",
+              "labelVi": "Giải thích cơ chế + mệnh đề"
+            },
+            {
+              "text": " working towards a shared purpose brings together people who might not otherwise meet. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a retired office worker can help a neighbourhood group organise records for a food donation project. That example shows how an idea can be useful in a real situation. People are more likely to value an approach when they can see what it changes in their own lives.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Ý 2 — khó khăn",
           "text": "However, volunteers may become tired or stop attending. One reason is that unpaid work still requires time, clear tasks and practical support. For instance, a volunteer may leave a project after being asked to cover extra shifts every weekend. I do not think this means we should reject the whole idea. It means that we need to understand the needs of the people involved before expecting the same result for everyone.",
-          "noteVi": "Một trở ngại → lý do → ví dụ; tránh khẳng định tuyệt đối."
+          "noteVi": "Một trở ngại → lý do → ví dụ; tránh khẳng định tuyệt đối.",
+          "parts": [
+            {
+              "text": "However,",
+              "kind": "frame",
+              "labelVi": "Nêu ý đối lập hoặc giới hạn"
+            },
+            {
+              "text": " volunteers may become tired or stop attending. One reason is that unpaid work still requires time, clear tasks and practical support. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For instance,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a volunteer may leave a project after being asked to cover extra shifts every weekend. I do not think this means we should reject the whole idea. It means that we need to understand the needs of the people involved before expecting the same result for everyone.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Ý 3 — cách cải thiện",
           "text": "A useful step would be to agree on manageable commitments and provide clear support. To be more specific, a coordinator could offer two-hour shifts and ask volunteers which tasks fit their skills and schedules. I would start with a small trial and ask the people involved what helped and what remained difficult. Their feedback could then guide the next step, so that effort goes towards a real need.",
-          "noteVi": "Giải pháp cụ thể → cách thực hiện → phản hồi."
+          "noteVi": "Giải pháp cụ thể → cách thực hiện → phản hồi.",
+          "parts": [
+            {
+              "text": "A useful step would be to",
+              "kind": "frame",
+              "labelVi": "Đề xuất một bước + động từ nguyên mẫu"
+            },
+            {
+              "text": " agree on manageable commitments and provide clear support. ",
+              "kind": "detail"
+            },
+            {
+              "text": "To be more specific,",
+              "kind": "frame",
+              "labelVi": "Giải thích cụ thể hơn"
+            },
+            {
+              "text": " a coordinator could offer two-hour shifts and ask volunteers which tasks fit their skills and schedules. I would start with a small trial and ask the people involved what helped and what remained difficult. Their feedback could then guide the next step, so that effort goes towards a real need.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "To sum up, I think the potential benefit is valuable, but practical planning matters. We should keep the useful parts, recognise the difficulties and make changes when necessary. That would be more helpful than assuming that one approach suits everybody.",
-          "noteVi": "Chốt quan điểm, không thêm luận điểm mới."
+          "noteVi": "Chốt quan điểm, không thêm luận điểm mới.",
+          "parts": [
+            {
+              "text": "To sum up,",
+              "kind": "frame",
+              "labelVi": "Tóm tắt bài nói"
+            },
+            {
+              "text": " I think the potential benefit is valuable, but practical planning matters. We should keep the useful parts, recognise the difficulties and make changes when necessary. That would be more helpful than assuming that one approach suits everybody.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [
@@ -550,23 +1475,88 @@
             {
               "question": "Should everyone follow the same approach to community volunteering?",
               "answer": "No, I do not think so. People have different needs and resources. For example, a volunteer may leave a project after being asked to cover extra shifts every weekend. A flexible approach would give that person a better chance to benefit.",
-              "noteVi": "Quan điểm → khác biệt nhu cầu → ví dụ."
+              "noteVi": "Quan điểm → khác biệt nhu cầu → ví dụ.",
+              "parts": [
+                {
+                  "text": "No, I do not think so.",
+                  "kind": "frame",
+                  "labelVi": "Trả lời câu hỏi Yes/No rồi giải thích"
+                },
+                {
+                  "text": " People have different needs and resources. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "For example,",
+                  "kind": "frame",
+                  "labelVi": "Đưa ví dụ + mệnh đề"
+                },
+                {
+                  "text": " a volunteer may leave a project after being asked to cover extra shifts every weekend. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "A flexible approach would",
+                  "kind": "frame",
+                  "labelVi": "Đề xuất cách linh hoạt + động từ nguyên mẫu"
+                },
+                {
+                  "text": " give that person a better chance to benefit.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "Who should help address the difficulty you mentioned?",
               "answer": "The people organising the activity should listen to those taking part. They could agree on manageable commitments and provide clear support. Participants should also explain what is difficult instead of assuming that organisers already know.",
-              "noteVi": "Nêu vai trò của cả người tổ chức và người tham gia."
+              "noteVi": "Nêu vai trò của cả người tổ chức và người tham gia.",
+              "parts": [
+                {
+                  "text": "The people organising the activity should listen to those taking part. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "They could",
+                  "kind": "frame",
+                  "labelVi": "Nêu hành động của đối tượng vừa nhắc"
+                },
+                {
+                  "text": " agree on manageable commitments and provide clear support. Participants should also explain what is difficult instead of assuming that organisers already know.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "How could we tell whether a new approach is successful?",
               "answer": "We could ask whether it solves the original problem and makes daily life easier. Here, we would want to see whether residents can contribute useful skills and build local connections. I would compare people's experiences before and after a small trial rather than judge success by popularity alone.",
-              "noteVi": "Tiêu chí đo → áp dụng chủ đề → cách so sánh."
+              "noteVi": "Tiêu chí đo → áp dụng chủ đề → cách so sánh.",
+              "parts": [
+                {
+                  "text": "We could ask whether",
+                  "kind": "frame",
+                  "labelVi": "Đưa cách kiểm tra / đánh giá"
+                },
+                {
+                  "text": " it solves the original problem and makes daily life easier. Here, we would want to see whether residents can contribute useful skills and build local connections. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "I would compare",
+                  "kind": "frame",
+                  "labelVi": "Đề xuất so sánh + cụm danh từ"
+                },
+                {
+                  "text": " people's experiences before and after a small trial rather than judge success by popularity alone.",
+                  "kind": "detail"
+                }
+              ]
             }
           ]
         }
       ],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 423,
       "mainWordCount": 299,
       "phrases": [
@@ -620,27 +1610,127 @@
         {
           "label": "Mở bài",
           "text": "I would like to talk about part-time jobs for students. In my opinion, this topic is worth considering because it can affect ordinary decisions and experiences. I will look at a practical benefit, a possible difficulty and a way to make the approach work better.",
-          "noteVi": "Giới thiệu chủ đề và ba nhánh sẽ triển khai."
+          "noteVi": "Giới thiệu chủ đề và ba nhánh sẽ triển khai.",
+          "parts": [
+            {
+              "text": "I would like to talk about",
+              "kind": "frame",
+              "labelVi": "Giới thiệu chủ đề + cụm danh từ"
+            },
+            {
+              "text": " part-time jobs for students. ",
+              "kind": "detail"
+            },
+            {
+              "text": "In my opinion,",
+              "kind": "frame",
+              "labelVi": "Nêu quan điểm cá nhân"
+            },
+            {
+              "text": " this topic is worth considering because it can affect ordinary decisions and experiences. I will look at a practical benefit, a possible difficulty and a way to make the approach work better.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Ý 1 — lợi ích thực tế",
           "text": "First, students can gain experience and contribute to their own expenses. This is possible because regular work can teach punctuality, communication and responsibility. For example, a student working one weekend shift in a cafe can practise dealing politely with customers. That example shows how an idea can be useful in a real situation. People are more likely to value an approach when they can see what it changes in their own lives.",
-          "noteVi": "Việc làm thêm rèn kinh nghiệm; số giờ cần phù hợp việc học và được giảm khi thi."
+          "noteVi": "Việc làm thêm rèn kinh nghiệm; số giờ cần phù hợp việc học và được giảm khi thi.",
+          "parts": [
+            {
+              "text": "First,",
+              "kind": "frame",
+              "labelVi": "Mở ý thứ nhất"
+            },
+            {
+              "text": " students can gain experience and contribute to their own expenses. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This is possible because",
+              "kind": "frame",
+              "labelVi": "Giải thích cơ chế + mệnh đề"
+            },
+            {
+              "text": " regular work can teach punctuality, communication and responsibility. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a student working one weekend shift in a cafe can practise dealing politely with customers. That example shows how an idea can be useful in a real situation. People are more likely to value an approach when they can see what it changes in their own lives.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Ý 2 — khó khăn",
           "text": "However, too many working hours can interfere with study. One reason is that a demanding shift schedule may leave little time for assignments and rest. For instance, a student may accept late shifts before an exam and arrive too tired to concentrate. I do not think this means we should reject the whole idea. It means that we need to understand the needs of the people involved before expecting the same result for everyone.",
-          "noteVi": "Một trở ngại → lý do → ví dụ; tránh khẳng định tuyệt đối."
+          "noteVi": "Một trở ngại → lý do → ví dụ; tránh khẳng định tuyệt đối.",
+          "parts": [
+            {
+              "text": "However,",
+              "kind": "frame",
+              "labelVi": "Nêu ý đối lập hoặc giới hạn"
+            },
+            {
+              "text": " too many working hours can interfere with study. One reason is that a demanding shift schedule may leave little time for assignments and rest. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For instance,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a student may accept late shifts before an exam and arrive too tired to concentrate. I do not think this means we should reject the whole idea. It means that we need to understand the needs of the people involved before expecting the same result for everyone.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Ý 3 — cách cải thiện",
           "text": "A useful step would be to limit working hours and plan around important study periods. To be more specific, a student could agree with an employer to reduce shifts during exam weeks. I would start with a small trial and ask the people involved what helped and what remained difficult. Their feedback could then guide the next step, so that effort goes towards a real need.",
-          "noteVi": "Giải pháp cụ thể → cách thực hiện → phản hồi."
+          "noteVi": "Giải pháp cụ thể → cách thực hiện → phản hồi.",
+          "parts": [
+            {
+              "text": "A useful step would be to",
+              "kind": "frame",
+              "labelVi": "Đề xuất một bước + động từ nguyên mẫu"
+            },
+            {
+              "text": " limit working hours and plan around important study periods. ",
+              "kind": "detail"
+            },
+            {
+              "text": "To be more specific,",
+              "kind": "frame",
+              "labelVi": "Giải thích cụ thể hơn"
+            },
+            {
+              "text": " a student could agree with an employer to reduce shifts during exam weeks. I would start with a small trial and ask the people involved what helped and what remained difficult. Their feedback could then guide the next step, so that effort goes towards a real need.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "To sum up, I think the potential benefit is valuable, but practical planning matters. We should keep the useful parts, recognise the difficulties and make changes when necessary. That would be more helpful than assuming that one approach suits everybody.",
-          "noteVi": "Chốt quan điểm, không thêm luận điểm mới."
+          "noteVi": "Chốt quan điểm, không thêm luận điểm mới.",
+          "parts": [
+            {
+              "text": "To sum up,",
+              "kind": "frame",
+              "labelVi": "Tóm tắt bài nói"
+            },
+            {
+              "text": " I think the potential benefit is valuable, but practical planning matters. We should keep the useful parts, recognise the difficulties and make changes when necessary. That would be more helpful than assuming that one approach suits everybody.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [
@@ -650,23 +1740,88 @@
             {
               "question": "Should everyone follow the same approach to part-time jobs for students?",
               "answer": "No, I do not think so. People have different needs and resources. For example, a student may accept late shifts before an exam and arrive too tired to concentrate. A flexible approach would give that person a better chance to benefit.",
-              "noteVi": "Quan điểm → khác biệt nhu cầu → ví dụ."
+              "noteVi": "Quan điểm → khác biệt nhu cầu → ví dụ.",
+              "parts": [
+                {
+                  "text": "No, I do not think so.",
+                  "kind": "frame",
+                  "labelVi": "Trả lời câu hỏi Yes/No rồi giải thích"
+                },
+                {
+                  "text": " People have different needs and resources. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "For example,",
+                  "kind": "frame",
+                  "labelVi": "Đưa ví dụ + mệnh đề"
+                },
+                {
+                  "text": " a student may accept late shifts before an exam and arrive too tired to concentrate. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "A flexible approach would",
+                  "kind": "frame",
+                  "labelVi": "Đề xuất cách linh hoạt + động từ nguyên mẫu"
+                },
+                {
+                  "text": " give that person a better chance to benefit.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "Who should help address the difficulty you mentioned?",
               "answer": "The people organising the activity should listen to those taking part. They could limit working hours and plan around important study periods. Participants should also explain what is difficult instead of assuming that organisers already know.",
-              "noteVi": "Nêu vai trò của cả người tổ chức và người tham gia."
+              "noteVi": "Nêu vai trò của cả người tổ chức và người tham gia.",
+              "parts": [
+                {
+                  "text": "The people organising the activity should listen to those taking part. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "They could",
+                  "kind": "frame",
+                  "labelVi": "Nêu hành động của đối tượng vừa nhắc"
+                },
+                {
+                  "text": " limit working hours and plan around important study periods. Participants should also explain what is difficult instead of assuming that organisers already know.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "How could we tell whether a new approach is successful?",
               "answer": "We could ask whether it solves the original problem and makes daily life easier. Here, we would want to see whether students can gain experience and contribute to their own expenses. I would compare people's experiences before and after a small trial rather than judge success by popularity alone.",
-              "noteVi": "Tiêu chí đo → áp dụng chủ đề → cách so sánh."
+              "noteVi": "Tiêu chí đo → áp dụng chủ đề → cách so sánh.",
+              "parts": [
+                {
+                  "text": "We could ask whether",
+                  "kind": "frame",
+                  "labelVi": "Đưa cách kiểm tra / đánh giá"
+                },
+                {
+                  "text": " it solves the original problem and makes daily life easier. Here, we would want to see whether students can gain experience and contribute to their own expenses. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "I would compare",
+                  "kind": "frame",
+                  "labelVi": "Đề xuất so sánh + cụm danh từ"
+                },
+                {
+                  "text": " people's experiences before and after a small trial rather than judge success by popularity alone.",
+                  "kind": "detail"
+                }
+              ]
             }
           ]
         }
       ],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 423,
       "mainWordCount": 297,
       "phrases": [
@@ -720,27 +1875,127 @@
         {
           "label": "Mở bài",
           "text": "I would like to talk about workplace training. In my opinion, this topic is worth considering because it can affect ordinary decisions and experiences. I will look at a practical benefit, a possible difficulty and a way to make the approach work better.",
-          "noteVi": "Giới thiệu chủ đề và ba nhánh sẽ triển khai."
+          "noteVi": "Giới thiệu chủ đề và ba nhánh sẽ triển khai.",
+          "parts": [
+            {
+              "text": "I would like to talk about",
+              "kind": "frame",
+              "labelVi": "Giới thiệu chủ đề + cụm danh từ"
+            },
+            {
+              "text": " workplace training. ",
+              "kind": "detail"
+            },
+            {
+              "text": "In my opinion,",
+              "kind": "frame",
+              "labelVi": "Nêu quan điểm cá nhân"
+            },
+            {
+              "text": " this topic is worth considering because it can affect ordinary decisions and experiences. I will look at a practical benefit, a possible difficulty and a way to make the approach work better.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Ý 1 — lợi ích thực tế",
           "text": "First, workers can adapt when tasks or systems change. This is possible because guided practice can prevent small misunderstandings from becoming repeated mistakes. For example, a shop team can practise using a new ordering system before it is introduced during a busy weekend. That example shows how an idea can be useful in a real situation. People are more likely to value an approach when they can see what it changes in their own lives.",
-          "noteVi": "Đào tạo nên dựa trên nhiệm vụ thật và cho thực hành, thay vì chỉ nghe bài giảng chung."
+          "noteVi": "Đào tạo nên dựa trên nhiệm vụ thật và cho thực hành, thay vì chỉ nghe bài giảng chung.",
+          "parts": [
+            {
+              "text": "First,",
+              "kind": "frame",
+              "labelVi": "Mở ý thứ nhất"
+            },
+            {
+              "text": " workers can adapt when tasks or systems change. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This is possible because",
+              "kind": "frame",
+              "labelVi": "Giải thích cơ chế + mệnh đề"
+            },
+            {
+              "text": " guided practice can prevent small misunderstandings from becoming repeated mistakes. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a shop team can practise using a new ordering system before it is introduced during a busy weekend. That example shows how an idea can be useful in a real situation. People are more likely to value an approach when they can see what it changes in their own lives.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Ý 2 — khó khăn",
           "text": "However, training can feel irrelevant when it is too general. One reason is that staff may spend time on material that does not match the problems they face. For instance, an experienced worker may attend a long presentation but still not know how to complete one essential new task. I do not think this means we should reject the whole idea. It means that we need to understand the needs of the people involved before expecting the same result for everyone.",
-          "noteVi": "Một trở ngại → lý do → ví dụ; tránh khẳng định tuyệt đối."
+          "noteVi": "Một trở ngại → lý do → ví dụ; tránh khẳng định tuyệt đối.",
+          "parts": [
+            {
+              "text": "However,",
+              "kind": "frame",
+              "labelVi": "Nêu ý đối lập hoặc giới hạn"
+            },
+            {
+              "text": " training can feel irrelevant when it is too general. One reason is that staff may spend time on material that does not match the problems they face. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For instance,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " an experienced worker may attend a long presentation but still not know how to complete one essential new task. I do not think this means we should reject the whole idea. It means that we need to understand the needs of the people involved before expecting the same result for everyone.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Ý 3 — cách cải thiện",
           "text": "A useful step would be to base sessions on real tasks and allow time for practice. To be more specific, a trainer could collect common questions beforehand and ask staff to complete a realistic example during the session. I would start with a small trial and ask the people involved what helped and what remained difficult. Their feedback could then guide the next step, so that effort goes towards a real need.",
-          "noteVi": "Giải pháp cụ thể → cách thực hiện → phản hồi."
+          "noteVi": "Giải pháp cụ thể → cách thực hiện → phản hồi.",
+          "parts": [
+            {
+              "text": "A useful step would be to",
+              "kind": "frame",
+              "labelVi": "Đề xuất một bước + động từ nguyên mẫu"
+            },
+            {
+              "text": " base sessions on real tasks and allow time for practice. ",
+              "kind": "detail"
+            },
+            {
+              "text": "To be more specific,",
+              "kind": "frame",
+              "labelVi": "Giải thích cụ thể hơn"
+            },
+            {
+              "text": " a trainer could collect common questions beforehand and ask staff to complete a realistic example during the session. I would start with a small trial and ask the people involved what helped and what remained difficult. Their feedback could then guide the next step, so that effort goes towards a real need.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "To sum up, I think the potential benefit is valuable, but practical planning matters. We should keep the useful parts, recognise the difficulties and make changes when necessary. That would be more helpful than assuming that one approach suits everybody.",
-          "noteVi": "Chốt quan điểm, không thêm luận điểm mới."
+          "noteVi": "Chốt quan điểm, không thêm luận điểm mới.",
+          "parts": [
+            {
+              "text": "To sum up,",
+              "kind": "frame",
+              "labelVi": "Tóm tắt bài nói"
+            },
+            {
+              "text": " I think the potential benefit is valuable, but practical planning matters. We should keep the useful parts, recognise the difficulties and make changes when necessary. That would be more helpful than assuming that one approach suits everybody.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [
@@ -750,23 +2005,88 @@
             {
               "question": "Should everyone follow the same approach to workplace training?",
               "answer": "No, I do not think so. People have different needs and resources. For example, an experienced worker may attend a long presentation but still not know how to complete one essential new task. A flexible approach would give that person a better chance to benefit.",
-              "noteVi": "Quan điểm → khác biệt nhu cầu → ví dụ."
+              "noteVi": "Quan điểm → khác biệt nhu cầu → ví dụ.",
+              "parts": [
+                {
+                  "text": "No, I do not think so.",
+                  "kind": "frame",
+                  "labelVi": "Trả lời câu hỏi Yes/No rồi giải thích"
+                },
+                {
+                  "text": " People have different needs and resources. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "For example,",
+                  "kind": "frame",
+                  "labelVi": "Đưa ví dụ + mệnh đề"
+                },
+                {
+                  "text": " an experienced worker may attend a long presentation but still not know how to complete one essential new task. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "A flexible approach would",
+                  "kind": "frame",
+                  "labelVi": "Đề xuất cách linh hoạt + động từ nguyên mẫu"
+                },
+                {
+                  "text": " give that person a better chance to benefit.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "Who should help address the difficulty you mentioned?",
               "answer": "The people organising the activity should listen to those taking part. They could base sessions on real tasks and allow time for practice. Participants should also explain what is difficult instead of assuming that organisers already know.",
-              "noteVi": "Nêu vai trò của cả người tổ chức và người tham gia."
+              "noteVi": "Nêu vai trò của cả người tổ chức và người tham gia.",
+              "parts": [
+                {
+                  "text": "The people organising the activity should listen to those taking part. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "They could",
+                  "kind": "frame",
+                  "labelVi": "Nêu hành động của đối tượng vừa nhắc"
+                },
+                {
+                  "text": " base sessions on real tasks and allow time for practice. Participants should also explain what is difficult instead of assuming that organisers already know.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "How could we tell whether a new approach is successful?",
               "answer": "We could ask whether it solves the original problem and makes daily life easier. Here, we would want to see whether workers can adapt when tasks or systems change. I would compare people's experiences before and after a small trial rather than judge success by popularity alone.",
-              "noteVi": "Tiêu chí đo → áp dụng chủ đề → cách so sánh."
+              "noteVi": "Tiêu chí đo → áp dụng chủ đề → cách so sánh.",
+              "parts": [
+                {
+                  "text": "We could ask whether",
+                  "kind": "frame",
+                  "labelVi": "Đưa cách kiểm tra / đánh giá"
+                },
+                {
+                  "text": " it solves the original problem and makes daily life easier. Here, we would want to see whether workers can adapt when tasks or systems change. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "I would compare",
+                  "kind": "frame",
+                  "labelVi": "Đề xuất so sánh + cụm danh từ"
+                },
+                {
+                  "text": " people's experiences before and after a small trial rather than judge success by popularity alone.",
+                  "kind": "detail"
+                }
+              ]
             }
           ]
         }
       ],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 440,
       "mainWordCount": 311,
       "phrases": [
@@ -820,27 +2140,127 @@
         {
           "label": "Mở bài",
           "text": "I would like to talk about sharing journeys to work. In my opinion, this topic is worth considering because it can affect ordinary decisions and experiences. I will look at a practical benefit, a possible difficulty and a way to make the approach work better.",
-          "noteVi": "Giới thiệu chủ đề và ba nhánh sẽ triển khai."
+          "noteVi": "Giới thiệu chủ đề và ba nhánh sẽ triển khai.",
+          "parts": [
+            {
+              "text": "I would like to talk about",
+              "kind": "frame",
+              "labelVi": "Giới thiệu chủ đề + cụm danh từ"
+            },
+            {
+              "text": " sharing journeys to work. ",
+              "kind": "detail"
+            },
+            {
+              "text": "In my opinion,",
+              "kind": "frame",
+              "labelVi": "Nêu quan điểm cá nhân"
+            },
+            {
+              "text": " this topic is worth considering because it can affect ordinary decisions and experiences. I will look at a practical benefit, a possible difficulty and a way to make the approach work better.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Ý 1 — lợi ích thực tế",
           "text": "First, employees can share travel costs and reduce the number of separate trips. This is possible because people travelling along similar routes may not need to use separate vehicles every day. For example, three colleagues living in the same area can arrange to travel together twice a week. That example shows how an idea can be useful in a real situation. People are more likely to value an approach when they can see what it changes in their own lives.",
-          "noteVi": "Đi chung xe giảm chuyến đi riêng và chia chi phí; cần phương án dự phòng khi lịch thay đổi."
+          "noteVi": "Đi chung xe giảm chuyến đi riêng và chia chi phí; cần phương án dự phòng khi lịch thay đổi.",
+          "parts": [
+            {
+              "text": "First,",
+              "kind": "frame",
+              "labelVi": "Mở ý thứ nhất"
+            },
+            {
+              "text": " employees can share travel costs and reduce the number of separate trips. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This is possible because",
+              "kind": "frame",
+              "labelVi": "Giải thích cơ chế + mệnh đề"
+            },
+            {
+              "text": " people travelling along similar routes may not need to use separate vehicles every day. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " three colleagues living in the same area can arrange to travel together twice a week. That example shows how an idea can be useful in a real situation. People are more likely to value an approach when they can see what it changes in their own lives.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Ý 2 — khó khăn",
           "text": "However, different schedules can make the arrangement unreliable. One reason is that a late meeting or family responsibility may change one person's finishing time. For instance, a colleague may need to leave early while the driver has to stay for an unexpected task. I do not think this means we should reject the whole idea. It means that we need to understand the needs of the people involved before expecting the same result for everyone.",
-          "noteVi": "Một trở ngại → lý do → ví dụ; tránh khẳng định tuyệt đối."
+          "noteVi": "Một trở ngại → lý do → ví dụ; tránh khẳng định tuyệt đối.",
+          "parts": [
+            {
+              "text": "However,",
+              "kind": "frame",
+              "labelVi": "Nêu ý đối lập hoặc giới hạn"
+            },
+            {
+              "text": " different schedules can make the arrangement unreliable. One reason is that a late meeting or family responsibility may change one person's finishing time. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For instance,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a colleague may need to leave early while the driver has to stay for an unexpected task. I do not think this means we should reject the whole idea. It means that we need to understand the needs of the people involved before expecting the same result for everyone.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Ý 3 — cách cải thiện",
           "text": "A useful step would be to agree on practical arrangements and allow flexibility. To be more specific, a small group could share a timetable, decide how costs are divided and keep an alternative way to travel home. I would start with a small trial and ask the people involved what helped and what remained difficult. Their feedback could then guide the next step, so that effort goes towards a real need.",
-          "noteVi": "Giải pháp cụ thể → cách thực hiện → phản hồi."
+          "noteVi": "Giải pháp cụ thể → cách thực hiện → phản hồi.",
+          "parts": [
+            {
+              "text": "A useful step would be to",
+              "kind": "frame",
+              "labelVi": "Đề xuất một bước + động từ nguyên mẫu"
+            },
+            {
+              "text": " agree on practical arrangements and allow flexibility. ",
+              "kind": "detail"
+            },
+            {
+              "text": "To be more specific,",
+              "kind": "frame",
+              "labelVi": "Giải thích cụ thể hơn"
+            },
+            {
+              "text": " a small group could share a timetable, decide how costs are divided and keep an alternative way to travel home. I would start with a small trial and ask the people involved what helped and what remained difficult. Their feedback could then guide the next step, so that effort goes towards a real need.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "To sum up, I think the potential benefit is valuable, but practical planning matters. We should keep the useful parts, recognise the difficulties and make changes when necessary. That would be more helpful than assuming that one approach suits everybody.",
-          "noteVi": "Chốt quan điểm, không thêm luận điểm mới."
+          "noteVi": "Chốt quan điểm, không thêm luận điểm mới.",
+          "parts": [
+            {
+              "text": "To sum up,",
+              "kind": "frame",
+              "labelVi": "Tóm tắt bài nói"
+            },
+            {
+              "text": " I think the potential benefit is valuable, but practical planning matters. We should keep the useful parts, recognise the difficulties and make changes when necessary. That would be more helpful than assuming that one approach suits everybody.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [
@@ -850,23 +2270,88 @@
             {
               "question": "Should everyone follow the same approach to sharing journeys to work?",
               "answer": "No, I do not think so. People have different needs and resources. For example, a colleague may need to leave early while the driver has to stay for an unexpected task. A flexible approach would give that person a better chance to benefit.",
-              "noteVi": "Quan điểm → khác biệt nhu cầu → ví dụ."
+              "noteVi": "Quan điểm → khác biệt nhu cầu → ví dụ.",
+              "parts": [
+                {
+                  "text": "No, I do not think so.",
+                  "kind": "frame",
+                  "labelVi": "Trả lời câu hỏi Yes/No rồi giải thích"
+                },
+                {
+                  "text": " People have different needs and resources. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "For example,",
+                  "kind": "frame",
+                  "labelVi": "Đưa ví dụ + mệnh đề"
+                },
+                {
+                  "text": " a colleague may need to leave early while the driver has to stay for an unexpected task. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "A flexible approach would",
+                  "kind": "frame",
+                  "labelVi": "Đề xuất cách linh hoạt + động từ nguyên mẫu"
+                },
+                {
+                  "text": " give that person a better chance to benefit.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "Who should help address the difficulty you mentioned?",
               "answer": "The people organising the activity should listen to those taking part. They could agree on practical arrangements and allow flexibility. Participants should also explain what is difficult instead of assuming that organisers already know.",
-              "noteVi": "Nêu vai trò của cả người tổ chức và người tham gia."
+              "noteVi": "Nêu vai trò của cả người tổ chức và người tham gia.",
+              "parts": [
+                {
+                  "text": "The people organising the activity should listen to those taking part. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "They could",
+                  "kind": "frame",
+                  "labelVi": "Nêu hành động của đối tượng vừa nhắc"
+                },
+                {
+                  "text": " agree on practical arrangements and allow flexibility. Participants should also explain what is difficult instead of assuming that organisers already know.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "How could we tell whether a new approach is successful?",
               "answer": "We could ask whether it solves the original problem and makes daily life easier. Here, we would want to see whether employees can share travel costs and reduce the number of separate trips. I would compare people's experiences before and after a small trial rather than judge success by popularity alone.",
-              "noteVi": "Tiêu chí đo → áp dụng chủ đề → cách so sánh."
+              "noteVi": "Tiêu chí đo → áp dụng chủ đề → cách so sánh.",
+              "parts": [
+                {
+                  "text": "We could ask whether",
+                  "kind": "frame",
+                  "labelVi": "Đưa cách kiểm tra / đánh giá"
+                },
+                {
+                  "text": " it solves the original problem and makes daily life easier. Here, we would want to see whether employees can share travel costs and reduce the number of separate trips. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "I would compare",
+                  "kind": "frame",
+                  "labelVi": "Đề xuất so sánh + cụm danh từ"
+                },
+                {
+                  "text": " people's experiences before and after a small trial rather than judge success by popularity alone.",
+                  "kind": "detail"
+                }
+              ]
             }
           ]
         }
       ],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 439,
       "mainWordCount": 311,
       "phrases": [
@@ -920,27 +2405,127 @@
         {
           "label": "Mở bài",
           "text": "I would like to talk about customer service training. In my opinion, this topic is worth considering because it can affect ordinary decisions and experiences. I will look at a practical benefit, a possible difficulty and a way to make the approach work better.",
-          "noteVi": "Giới thiệu chủ đề và ba nhánh sẽ triển khai."
+          "noteVi": "Giới thiệu chủ đề và ba nhánh sẽ triển khai.",
+          "parts": [
+            {
+              "text": "I would like to talk about",
+              "kind": "frame",
+              "labelVi": "Giới thiệu chủ đề + cụm danh từ"
+            },
+            {
+              "text": " customer service training. ",
+              "kind": "detail"
+            },
+            {
+              "text": "In my opinion,",
+              "kind": "frame",
+              "labelVi": "Nêu quan điểm cá nhân"
+            },
+            {
+              "text": " this topic is worth considering because it can affect ordinary decisions and experiences. I will look at a practical benefit, a possible difficulty and a way to make the approach work better.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Ý 1 — lợi ích thực tế",
           "text": "First, customers can understand what can be done about a problem. This is possible because clear communication can turn a confusing situation into a series of practical steps. For example, a shop assistant can explain the return process and tell a customer when to expect a response. That example shows how an idea can be useful in a real situation. People are more likely to value an approach when they can see what it changes in their own lives.",
-          "noteVi": "Giao tiếp lịch sự cần đi cùng quy trình và quyền xử lý để khách nhận được bước tiếp cụ thể."
+          "noteVi": "Giao tiếp lịch sự cần đi cùng quy trình và quyền xử lý để khách nhận được bước tiếp cụ thể.",
+          "parts": [
+            {
+              "text": "First,",
+              "kind": "frame",
+              "labelVi": "Mở ý thứ nhất"
+            },
+            {
+              "text": " customers can understand what can be done about a problem. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This is possible because",
+              "kind": "frame",
+              "labelVi": "Giải thích cơ chế + mệnh đề"
+            },
+            {
+              "text": " clear communication can turn a confusing situation into a series of practical steps. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a shop assistant can explain the return process and tell a customer when to expect a response. That example shows how an idea can be useful in a real situation. People are more likely to value an approach when they can see what it changes in their own lives.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Ý 2 — khó khăn",
           "text": "However, staff may be unable to solve problems without authority. One reason is that polite language alone does not change an unclear or inflexible company process. For instance, an employee may apologise repeatedly but be unable to offer any answer about a delayed refund. I do not think this means we should reject the whole idea. It means that we need to understand the needs of the people involved before expecting the same result for everyone.",
-          "noteVi": "Một trở ngại → lý do → ví dụ; tránh khẳng định tuyệt đối."
+          "noteVi": "Một trở ngại → lý do → ví dụ; tránh khẳng định tuyệt đối.",
+          "parts": [
+            {
+              "text": "However,",
+              "kind": "frame",
+              "labelVi": "Nêu ý đối lập hoặc giới hạn"
+            },
+            {
+              "text": " staff may be unable to solve problems without authority. One reason is that polite language alone does not change an unclear or inflexible company process. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For instance,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " an employee may apologise repeatedly but be unable to offer any answer about a delayed refund. I do not think this means we should reject the whole idea. It means that we need to understand the needs of the people involved before expecting the same result for everyone.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Ý 3 — cách cải thiện",
           "text": "A useful step would be to give staff clear guidance and a reliable route for difficult cases. To be more specific, a manager could provide a simple decision guide and make sure complex complaints reach the right person. I would start with a small trial and ask the people involved what helped and what remained difficult. Their feedback could then guide the next step, so that effort goes towards a real need.",
-          "noteVi": "Giải pháp cụ thể → cách thực hiện → phản hồi."
+          "noteVi": "Giải pháp cụ thể → cách thực hiện → phản hồi.",
+          "parts": [
+            {
+              "text": "A useful step would be to",
+              "kind": "frame",
+              "labelVi": "Đề xuất một bước + động từ nguyên mẫu"
+            },
+            {
+              "text": " give staff clear guidance and a reliable route for difficult cases. ",
+              "kind": "detail"
+            },
+            {
+              "text": "To be more specific,",
+              "kind": "frame",
+              "labelVi": "Giải thích cụ thể hơn"
+            },
+            {
+              "text": " a manager could provide a simple decision guide and make sure complex complaints reach the right person. I would start with a small trial and ask the people involved what helped and what remained difficult. Their feedback could then guide the next step, so that effort goes towards a real need.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "To sum up, I think the potential benefit is valuable, but practical planning matters. We should keep the useful parts, recognise the difficulties and make changes when necessary. That would be more helpful than assuming that one approach suits everybody.",
-          "noteVi": "Chốt quan điểm, không thêm luận điểm mới."
+          "noteVi": "Chốt quan điểm, không thêm luận điểm mới.",
+          "parts": [
+            {
+              "text": "To sum up,",
+              "kind": "frame",
+              "labelVi": "Tóm tắt bài nói"
+            },
+            {
+              "text": " I think the potential benefit is valuable, but practical planning matters. We should keep the useful parts, recognise the difficulties and make changes when necessary. That would be more helpful than assuming that one approach suits everybody.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [
@@ -950,23 +2535,88 @@
             {
               "question": "Should everyone follow the same approach to customer service training?",
               "answer": "No, I do not think so. People have different needs and resources. For example, an employee may apologise repeatedly but be unable to offer any answer about a delayed refund. A flexible approach would give that person a better chance to benefit.",
-              "noteVi": "Quan điểm → khác biệt nhu cầu → ví dụ."
+              "noteVi": "Quan điểm → khác biệt nhu cầu → ví dụ.",
+              "parts": [
+                {
+                  "text": "No, I do not think so.",
+                  "kind": "frame",
+                  "labelVi": "Trả lời câu hỏi Yes/No rồi giải thích"
+                },
+                {
+                  "text": " People have different needs and resources. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "For example,",
+                  "kind": "frame",
+                  "labelVi": "Đưa ví dụ + mệnh đề"
+                },
+                {
+                  "text": " an employee may apologise repeatedly but be unable to offer any answer about a delayed refund. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "A flexible approach would",
+                  "kind": "frame",
+                  "labelVi": "Đề xuất cách linh hoạt + động từ nguyên mẫu"
+                },
+                {
+                  "text": " give that person a better chance to benefit.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "Who should help address the difficulty you mentioned?",
               "answer": "The people organising the activity should listen to those taking part. They could give staff clear guidance and a reliable route for difficult cases. Participants should also explain what is difficult instead of assuming that organisers already know.",
-              "noteVi": "Nêu vai trò của cả người tổ chức và người tham gia."
+              "noteVi": "Nêu vai trò của cả người tổ chức và người tham gia.",
+              "parts": [
+                {
+                  "text": "The people organising the activity should listen to those taking part. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "They could",
+                  "kind": "frame",
+                  "labelVi": "Nêu hành động của đối tượng vừa nhắc"
+                },
+                {
+                  "text": " give staff clear guidance and a reliable route for difficult cases. Participants should also explain what is difficult instead of assuming that organisers already know.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "How could we tell whether a new approach is successful?",
               "answer": "We could ask whether it solves the original problem and makes daily life easier. Here, we would want to see whether customers can understand what can be done about a problem. I would compare people's experiences before and after a small trial rather than judge success by popularity alone.",
-              "noteVi": "Tiêu chí đo → áp dụng chủ đề → cách so sánh."
+              "noteVi": "Tiêu chí đo → áp dụng chủ đề → cách so sánh.",
+              "parts": [
+                {
+                  "text": "We could ask whether",
+                  "kind": "frame",
+                  "labelVi": "Đưa cách kiểm tra / đánh giá"
+                },
+                {
+                  "text": " it solves the original problem and makes daily life easier. Here, we would want to see whether customers can understand what can be done about a problem. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "I would compare",
+                  "kind": "frame",
+                  "labelVi": "Đề xuất so sánh + cụm danh từ"
+                },
+                {
+                  "text": " people's experiences before and after a small trial rather than judge success by popularity alone.",
+                  "kind": "detail"
+                }
+              ]
             }
           ]
         }
       ],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 440,
       "mainWordCount": 311,
       "phrases": [

@@ -1,3 +1,4 @@
+import { FrameLiteral } from "@/components/FrameText";
 import { useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Textarea } from "@/components/ui/misc";
@@ -31,7 +32,7 @@ const SLOT_LABELS: Record<string, string> = {
 export function FrameTemplate({ text, values }: { text: string; values?: Record<string, string> }) {
   return <>{text.split(/(\[[^\]]+\])/g).map((part, i) => part.startsWith("[")
     ? <span key={i} className="rounded bg-primary-soft px-0.5 font-semibold text-primary" title={SLOT_LABELS[part.slice(1, -1)] ?? "Ý thay theo đề"}>{values?.[part.slice(1, -1)]?.trim() ? values[part.slice(1, -1)] : part}</span>
-    : <span key={i}>{part}</span>)}</>;
+    : <FrameLiteral key={i}>{part}</FrameLiteral>)}</>;
 }
 
 export function FrameApplications({ deck, saved, onSave }: {
@@ -49,7 +50,7 @@ export function FrameApplications({ deck, saved, onSave }: {
   return <details className="rounded-xl border border-primary/30 bg-surface p-4" data-testid="frame-applications">
     <summary className="cursor-pointer font-semibold text-primary">Cùng một khung, đổi sang {deck.applications.length} chủ đề</summary>
     <div className="mt-4 space-y-4">
-      <p className="text-sm text-muted">Chữ thường là phần giữ lại. Phần được tô nền là ý thay theo đề. Chọn một chủ đề để xem sẵn cách điền; sau đó sửa vài ý cho phù hợp với bài của bạn.</p>
+      <p className="text-sm text-muted">Phần gạch chân là khung cần thuộc. Phần được tô nền là ý thay theo đề. Chọn một chủ đề để xem sẵn cách điền; sau đó sửa vài ý cho phù hợp với bài của bạn.</p>
       <label className="block text-sm font-medium">Chủ đề minh họa<select aria-label="Chủ đề minh họa" className="mt-1 h-11 w-full rounded-xl border border-border bg-surface px-3" value={topic} onChange={(e) => { const next = Number(e.target.value); onSave({ topic: next, values: { ...deck.applications[next].values } }); }}>{deck.applications.map((app, i) => <option key={app.title} value={i}>{app.title}</option>)}</select></label>
       <p className="text-xs text-muted">Đổi chủ đề sẽ nạp lại các ý mẫu cho khung này. Bài viết trong Writing Studio và lượt gõ thuộc không bị thay đổi.</p>
       <div className="flex flex-wrap gap-2"><Badge tone="primary">{wordCount(fixedFrameText(skeleton))} từ cố định</Badge><Badge>{count} từ sau khi điền</Badge></div>

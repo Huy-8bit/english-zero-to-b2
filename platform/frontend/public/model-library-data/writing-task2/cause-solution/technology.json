@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-05-v1",
+  "version": "2026-11-05-v2-frames",
   "samples": [
     {
       "id": "writing-task2-cause-solution-technology-01",
@@ -20,32 +20,123 @@
         {
           "label": "Mở bài",
           "text": "Although there may be value in the proposal that teachers should allow phones for carefully planned classroom activities, a practical difficulty is that notifications can distract students. Understanding why this happens is important before suggesting a solution. Otherwise, the same problem may return even after people have spent time and effort trying to improve the situation.",
-          "noteVi": "Giới thiệu đúng vấn đề được hỏi."
+          "noteVi": "Giới thiệu đúng vấn đề được hỏi.",
+          "parts": [
+            {
+              "text": "Although there may be value in ",
+              "kind": "detail"
+            },
+            {
+              "text": "the proposal that",
+              "kind": "frame",
+              "labelVi": "Giới thiệu đề xuất + mệnh đề"
+            },
+            {
+              "text": " teachers should allow phones for carefully planned classroom activities, a practical difficulty is that notifications can distract students. Understanding why this happens is important before suggesting a solution. Otherwise, the same problem may return even after people have spent time and effort trying to improve the situation.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Nguyên nhân",
           "text": "One reason for the difficulty is that phone rules are sometimes unclear or applied differently in each lesson. This can help explain why notifications can distract students. Consider the following situation: a pupil may stop following a discussion after receiving several messages from friends. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
-          "noteVi": "Nối điều kiện tổ chức với vấn đề."
+          "noteVi": "Nối điều kiện tổ chức với vấn đề.",
+          "parts": [
+            {
+              "text": "One reason for the difficulty is that",
+              "kind": "frame",
+              "labelVi": "Nêu nguyên nhân + mệnh đề"
+            },
+            {
+              "text": " phone rules are sometimes unclear or applied differently in each lesson. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This can help explain why",
+              "kind": "frame",
+              "labelVi": "Nối nguyên nhân với hiện tượng"
+            },
+            {
+              "text": " notifications can distract students. ",
+              "kind": "detail"
+            },
+            {
+              "text": "Consider the following situation:",
+              "kind": "frame",
+              "labelVi": "Dẫn một tình huống minh họa"
+            },
+            {
+              "text": " a pupil may stop following a discussion after receiving several messages from friends. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Giải pháp",
           "text": "A practical response would be to agree on specific times for phone use and keep devices away during other tasks. For example, a teacher could allow phones for a five-minute research task and then ask students to put them in their bags. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
-          "noteVi": "Hành động cụ thể có ví dụ thực hiện."
+          "noteVi": "Hành động cụ thể có ví dụ thực hiện.",
+          "parts": [
+            {
+              "text": "A practical response would be to",
+              "kind": "frame",
+              "labelVi": "Đưa giải pháp + động từ nguyên mẫu"
+            },
+            {
+              "text": " agree on specific times for phone use and keep devices away during other tasks. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a teacher could allow phones for a five-minute research task and then ask students to put them in their bags. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Vì sao giải pháp đáng làm?",
           "text": "The aim is not to abandon the useful parts of the idea. It is to make them accessible in practice. For example, a class can compare two digital maps to explain how a neighbourhood has changed. This illustrates the potential value of the fact that students can quickly access useful learning material. Asking participants what prevents them from benefiting would help organisers choose changes that actually matter.",
-          "noteVi": "Điện thoại có ích khi có nhiệm vụ rõ; thông báo và luật dùng không rõ dễ gây xao nhãng."
+          "noteVi": "Điện thoại có ích khi có nhiệm vụ rõ; thông báo và luật dùng không rõ dễ gây xao nhãng.",
+          "parts": [
+            {
+              "text": "The aim is not to abandon the useful parts of the idea. It is to make them accessible in practice. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a class can compare two digital maps to explain how a neighbourhood has changed. This illustrates the potential value of the fact that students can quickly access useful learning material. Asking participants what prevents them from benefiting would help organisers choose changes that actually matter.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, the problem is linked to the fact that phone rules are sometimes unclear or applied differently in each lesson. A practical response is to agree on specific times for phone use and keep devices away during other tasks. Trying this carefully and listening to the people affected is more convincing than expecting a general instruction to solve the difficulty on its own.",
-          "noteVi": "Tóm tắt nguyên nhân–giải pháp tương ứng."
+          "noteVi": "Tóm tắt nguyên nhân–giải pháp tương ứng.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " the problem is linked to the fact that phone rules are sometimes unclear or applied differently in each lesson. A practical response is to agree on specific times for phone use and keep devices away during other tasks. Trying this carefully and listening to the people affected is more convincing than expecting a general instruction to solve the difficulty on its own.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 349,
       "mainWordCount": 349,
       "phrases": [
@@ -95,32 +186,123 @@
         {
           "label": "Mở bài",
           "text": "Although there may be value in the proposal that people should set clear limits on the time they spend on social media, a practical difficulty is that strict limits may make some useful communication harder. Understanding why this happens is important before suggesting a solution. Otherwise, the same problem may return even after people have spent time and effort trying to improve the situation.",
-          "noteVi": "Giới thiệu đúng vấn đề được hỏi."
+          "noteVi": "Giới thiệu đúng vấn đề được hỏi.",
+          "parts": [
+            {
+              "text": "Although there may be value in ",
+              "kind": "detail"
+            },
+            {
+              "text": "the proposal that",
+              "kind": "frame",
+              "labelVi": "Giới thiệu đề xuất + mệnh đề"
+            },
+            {
+              "text": " people should set clear limits on the time they spend on social media, a practical difficulty is that strict limits may make some useful communication harder. Understanding why this happens is important before suggesting a solution. Otherwise, the same problem may return even after people have spent time and effort trying to improve the situation.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Nguyên nhân",
           "text": "One reason for the difficulty is that people often treat all online activity as equally useful or equally harmful. This can help explain why strict limits may make some useful communication harder. Consider the following situation: a student could miss a last-minute change to a group meeting if every social application is blocked. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
-          "noteVi": "Nối điều kiện tổ chức với vấn đề."
+          "noteVi": "Nối điều kiện tổ chức với vấn đề.",
+          "parts": [
+            {
+              "text": "One reason for the difficulty is that",
+              "kind": "frame",
+              "labelVi": "Nêu nguyên nhân + mệnh đề"
+            },
+            {
+              "text": " people often treat all online activity as equally useful or equally harmful. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This can help explain why",
+              "kind": "frame",
+              "labelVi": "Nối nguyên nhân với hiện tượng"
+            },
+            {
+              "text": " strict limits may make some useful communication harder. ",
+              "kind": "detail"
+            },
+            {
+              "text": "Consider the following situation:",
+              "kind": "frame",
+              "labelVi": "Dẫn một tình huống minh họa"
+            },
+            {
+              "text": " a student could miss a last-minute change to a group meeting if every social application is blocked. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Giải pháp",
           "text": "A practical response would be to separate necessary messages from passive scrolling. For example, someone could check a study group at set times while turning off recommendations and unrelated alerts. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
-          "noteVi": "Hành động cụ thể có ví dụ thực hiện."
+          "noteVi": "Hành động cụ thể có ví dụ thực hiện.",
+          "parts": [
+            {
+              "text": "A practical response would be to",
+              "kind": "frame",
+              "labelVi": "Đưa giải pháp + động từ nguyên mẫu"
+            },
+            {
+              "text": " separate necessary messages from passive scrolling. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " someone could check a study group at set times while turning off recommendations and unrelated alerts. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Vì sao giải pháp đáng làm?",
           "text": "The aim is not to abandon the useful parts of the idea. It is to make them accessible in practice. For example, a student can put the phone away after answering messages and spend the next hour preparing for a test. This illustrates the potential value of the fact that people can protect time for study, work and sleep. Asking participants what prevents them from benefiting would help organisers choose changes that actually matter.",
-          "noteVi": "Giới hạn thời gian giúp bảo vệ việc học và nghỉ ngơi; nên tách tin nhắn cần thiết khỏi lướt vô thức."
+          "noteVi": "Giới hạn thời gian giúp bảo vệ việc học và nghỉ ngơi; nên tách tin nhắn cần thiết khỏi lướt vô thức.",
+          "parts": [
+            {
+              "text": "The aim is not to abandon the useful parts of the idea. It is to make them accessible in practice. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a student can put the phone away after answering messages and spend the next hour preparing for a test. This illustrates the potential value of the fact that people can protect time for study, work and sleep. Asking participants what prevents them from benefiting would help organisers choose changes that actually matter.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, the problem is linked to the fact that people often treat all online activity as equally useful or equally harmful. A practical response is to separate necessary messages from passive scrolling. Trying this carefully and listening to the people affected is more convincing than expecting a general instruction to solve the difficulty on its own.",
-          "noteVi": "Tóm tắt nguyên nhân–giải pháp tương ứng."
+          "noteVi": "Tóm tắt nguyên nhân–giải pháp tương ứng.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " the problem is linked to the fact that people often treat all online activity as equally useful or equally harmful. A practical response is to separate necessary messages from passive scrolling. Trying this carefully and listening to the people affected is more convincing than expecting a general instruction to solve the difficulty on its own.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 354,
       "mainWordCount": 354,
       "phrases": [
@@ -170,32 +352,123 @@
         {
           "label": "Mở bài",
           "text": "Although there may be value in the proposal that online shopping is a useful option when buyers take basic precautions, a practical difficulty is that a product may not match the buyer's expectations. Understanding why this happens is important before suggesting a solution. Otherwise, the same problem may return even after people have spent time and effort trying to improve the situation.",
-          "noteVi": "Giới thiệu đúng vấn đề được hỏi."
+          "noteVi": "Giới thiệu đúng vấn đề được hỏi.",
+          "parts": [
+            {
+              "text": "Although there may be value in ",
+              "kind": "detail"
+            },
+            {
+              "text": "the proposal that",
+              "kind": "frame",
+              "labelVi": "Giới thiệu đề xuất + mệnh đề"
+            },
+            {
+              "text": " online shopping is a useful option when buyers take basic precautions, a practical difficulty is that a product may not match the buyer's expectations. Understanding why this happens is important before suggesting a solution. Otherwise, the same problem may return even after people have spent time and effort trying to improve the situation.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Nguyên nhân",
           "text": "One reason for the difficulty is that some buyers order quickly without checking measurements or return conditions. This can help explain why a product may not match the buyer's expectations. Consider the following situation: a jacket may arrive in the wrong size and need to be sent back before a refund is received. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
-          "noteVi": "Nối điều kiện tổ chức với vấn đề."
+          "noteVi": "Nối điều kiện tổ chức với vấn đề.",
+          "parts": [
+            {
+              "text": "One reason for the difficulty is that",
+              "kind": "frame",
+              "labelVi": "Nêu nguyên nhân + mệnh đề"
+            },
+            {
+              "text": " some buyers order quickly without checking measurements or return conditions. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This can help explain why",
+              "kind": "frame",
+              "labelVi": "Nối nguyên nhân với hiện tượng"
+            },
+            {
+              "text": " a product may not match the buyer's expectations. ",
+              "kind": "detail"
+            },
+            {
+              "text": "Consider the following situation:",
+              "kind": "frame",
+              "labelVi": "Dẫn một tình huống minh họa"
+            },
+            {
+              "text": " a jacket may arrive in the wrong size and need to be sent back before a refund is received. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Giải pháp",
           "text": "A practical response would be to check product details and the seller's return policy before paying. For example, a buyer could compare the size chart with an item they already own and save the order confirmation. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
-          "noteVi": "Hành động cụ thể có ví dụ thực hiện."
+          "noteVi": "Hành động cụ thể có ví dụ thực hiện.",
+          "parts": [
+            {
+              "text": "A practical response would be to",
+              "kind": "frame",
+              "labelVi": "Đưa giải pháp + động từ nguyên mẫu"
+            },
+            {
+              "text": " check product details and the seller's return policy before paying. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a buyer could compare the size chart with an item they already own and save the order confirmation. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Vì sao giải pháp đáng làm?",
           "text": "The aim is not to abandon the useful parts of the idea. It is to make them accessible in practice. For example, a parent can compare the size and price of school bags after the children have gone to bed. This illustrates the potential value of the fact that customers can compare products without visiting several shops. Asking participants what prevents them from benefiting would help organisers choose changes that actually matter.",
-          "noteVi": "Mua online tiết kiệm công đi lại; kiểm tra kích thước và điều kiện trả hàng giúp giảm rủi ro."
+          "noteVi": "Mua online tiết kiệm công đi lại; kiểm tra kích thước và điều kiện trả hàng giúp giảm rủi ro.",
+          "parts": [
+            {
+              "text": "The aim is not to abandon the useful parts of the idea. It is to make them accessible in practice. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a parent can compare the size and price of school bags after the children have gone to bed. This illustrates the potential value of the fact that customers can compare products without visiting several shops. Asking participants what prevents them from benefiting would help organisers choose changes that actually matter.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, the problem is linked to the fact that some buyers order quickly without checking measurements or return conditions. A practical response is to check product details and the seller's return policy before paying. Trying this carefully and listening to the people affected is more convincing than expecting a general instruction to solve the difficulty on its own.",
-          "noteVi": "Tóm tắt nguyên nhân–giải pháp tương ứng."
+          "noteVi": "Tóm tắt nguyên nhân–giải pháp tương ứng.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " the problem is linked to the fact that some buyers order quickly without checking measurements or return conditions. A practical response is to check product details and the seller's return policy before paying. Trying this carefully and listening to the people affected is more convincing than expecting a general instruction to solve the difficulty on its own.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 358,
       "mainWordCount": 358,
       "phrases": [
@@ -245,32 +518,123 @@
         {
           "label": "Mở bài",
           "text": "Although there may be value in the proposal that students should use AI as a study aid rather than as a replacement for their own work, a practical difficulty is that learners may accept incorrect information or avoid thinking for themselves. Understanding why this happens is important before suggesting a solution. Otherwise, the same problem may return even after people have spent time and effort trying to improve the situation.",
-          "noteVi": "Giới thiệu đúng vấn đề được hỏi."
+          "noteVi": "Giới thiệu đúng vấn đề được hỏi.",
+          "parts": [
+            {
+              "text": "Although there may be value in ",
+              "kind": "detail"
+            },
+            {
+              "text": "the proposal that",
+              "kind": "frame",
+              "labelVi": "Giới thiệu đề xuất + mệnh đề"
+            },
+            {
+              "text": " students should use AI as a study aid rather than as a replacement for their own work, a practical difficulty is that learners may accept incorrect information or avoid thinking for themselves. Understanding why this happens is important before suggesting a solution. Otherwise, the same problem may return even after people have spent time and effort trying to improve the situation.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Nguyên nhân",
           "text": "One reason for the difficulty is that students sometimes judge an answer by how fluent it sounds. This can help explain why learners may accept incorrect information or avoid thinking for themselves. Consider the following situation: a student may submit an essay containing invented details after copying an answer without checking it. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
-          "noteVi": "Nối điều kiện tổ chức với vấn đề."
+          "noteVi": "Nối điều kiện tổ chức với vấn đề.",
+          "parts": [
+            {
+              "text": "One reason for the difficulty is that",
+              "kind": "frame",
+              "labelVi": "Nêu nguyên nhân + mệnh đề"
+            },
+            {
+              "text": " students sometimes judge an answer by how fluent it sounds. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This can help explain why",
+              "kind": "frame",
+              "labelVi": "Nối nguyên nhân với hiện tượng"
+            },
+            {
+              "text": " learners may accept incorrect information or avoid thinking for themselves. ",
+              "kind": "detail"
+            },
+            {
+              "text": "Consider the following situation:",
+              "kind": "frame",
+              "labelVi": "Dẫn một tình huống minh họa"
+            },
+            {
+              "text": " a student may submit an essay containing invented details after copying an answer without checking it. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Giải pháp",
           "text": "A practical response would be to check important claims and explain the final answer in their own words. For example, a teacher could ask students to identify one weak point in an AI response before improving it. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
-          "noteVi": "Hành động cụ thể có ví dụ thực hiện."
+          "noteVi": "Hành động cụ thể có ví dụ thực hiện.",
+          "parts": [
+            {
+              "text": "A practical response would be to",
+              "kind": "frame",
+              "labelVi": "Đưa giải pháp + động từ nguyên mẫu"
+            },
+            {
+              "text": " check important claims and explain the final answer in their own words. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a teacher could ask students to identify one weak point in an AI response before improving it. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Vì sao giải pháp đáng làm?",
           "text": "The aim is not to abandon the useful parts of the idea. It is to make them accessible in practice. For example, a learner can ask for two simple examples of a grammar pattern and then write an original sentence. This illustrates the potential value of the fact that learners can get additional explanations and practice ideas. Asking participants what prevents them from benefiting would help organisers choose changes that actually matter.",
-          "noteVi": "AI hỗ trợ giải thích và luyện tập; cần kiểm tra thông tin và tự làm phần suy nghĩ chính."
+          "noteVi": "AI hỗ trợ giải thích và luyện tập; cần kiểm tra thông tin và tự làm phần suy nghĩ chính.",
+          "parts": [
+            {
+              "text": "The aim is not to abandon the useful parts of the idea. It is to make them accessible in practice. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a learner can ask for two simple examples of a grammar pattern and then write an original sentence. This illustrates the potential value of the fact that learners can get additional explanations and practice ideas. Asking participants what prevents them from benefiting would help organisers choose changes that actually matter.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, the problem is linked to the fact that students sometimes judge an answer by how fluent it sounds. A practical response is to check important claims and explain the final answer in their own words. Trying this carefully and listening to the people affected is more convincing than expecting a general instruction to solve the difficulty on its own.",
-          "noteVi": "Tóm tắt nguyên nhân–giải pháp tương ứng."
+          "noteVi": "Tóm tắt nguyên nhân–giải pháp tương ứng.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " the problem is linked to the fact that students sometimes judge an answer by how fluent it sounds. A practical response is to check important claims and explain the final answer in their own words. Trying this carefully and listening to the people affected is more convincing than expecting a general instruction to solve the difficulty on its own.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 368,
       "mainWordCount": 368,
       "phrases": [
@@ -320,32 +684,123 @@
         {
           "label": "Mở bài",
           "text": "Although there may be value in the proposal that schools should teach basic digital privacy skills, a practical difficulty is that privacy advice can be difficult to follow when settings change. Understanding why this happens is important before suggesting a solution. Otherwise, the same problem may return even after people have spent time and effort trying to improve the situation.",
-          "noteVi": "Giới thiệu đúng vấn đề được hỏi."
+          "noteVi": "Giới thiệu đúng vấn đề được hỏi.",
+          "parts": [
+            {
+              "text": "Although there may be value in ",
+              "kind": "detail"
+            },
+            {
+              "text": "the proposal that",
+              "kind": "frame",
+              "labelVi": "Giới thiệu đề xuất + mệnh đề"
+            },
+            {
+              "text": " schools should teach basic digital privacy skills, a practical difficulty is that privacy advice can be difficult to follow when settings change. Understanding why this happens is important before suggesting a solution. Otherwise, the same problem may return even after people have spent time and effort trying to improve the situation.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Nguyên nhân",
           "text": "One reason for the difficulty is that privacy lessons sometimes explain risks without practising the actual steps. This can help explain why privacy advice can be difficult to follow when settings change. Consider the following situation: a teenager may give up while trying to understand several pages of unclear account settings. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
-          "noteVi": "Nối điều kiện tổ chức với vấn đề."
+          "noteVi": "Nối điều kiện tổ chức với vấn đề.",
+          "parts": [
+            {
+              "text": "One reason for the difficulty is that",
+              "kind": "frame",
+              "labelVi": "Nêu nguyên nhân + mệnh đề"
+            },
+            {
+              "text": " privacy lessons sometimes explain risks without practising the actual steps. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This can help explain why",
+              "kind": "frame",
+              "labelVi": "Nối nguyên nhân với hiện tượng"
+            },
+            {
+              "text": " privacy advice can be difficult to follow when settings change. ",
+              "kind": "detail"
+            },
+            {
+              "text": "Consider the following situation:",
+              "kind": "frame",
+              "labelVi": "Dẫn một tình huống minh họa"
+            },
+            {
+              "text": " a teenager may give up while trying to understand several pages of unclear account settings. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Giải pháp",
           "text": "A practical response would be to teach a small number of practical checks using clear examples. For example, students could review a fictional profile and decide which information should not be public. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
-          "noteVi": "Hành động cụ thể có ví dụ thực hiện."
+          "noteVi": "Hành động cụ thể có ví dụ thực hiện.",
+          "parts": [
+            {
+              "text": "A practical response would be to",
+              "kind": "frame",
+              "labelVi": "Đưa giải pháp + động từ nguyên mẫu"
+            },
+            {
+              "text": " teach a small number of practical checks using clear examples. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " students could review a fictional profile and decide which information should not be public. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Vì sao giải pháp đáng làm?",
           "text": "The aim is not to abandon the useful parts of the idea. It is to make them accessible in practice. For example, a pupil can remove a home address from a public profile and restrict who can see photographs. This illustrates the potential value of the fact that young people can make more careful choices about what they share. Asking participants what prevents them from benefiting would help organisers choose changes that actually matter.",
-          "noteVi": "Dạy bảo vệ thông tin cần thao tác dễ làm và ví dụ cụ thể, không chỉ liệt kê rủi ro."
+          "noteVi": "Dạy bảo vệ thông tin cần thao tác dễ làm và ví dụ cụ thể, không chỉ liệt kê rủi ro.",
+          "parts": [
+            {
+              "text": "The aim is not to abandon the useful parts of the idea. It is to make them accessible in practice. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a pupil can remove a home address from a public profile and restrict who can see photographs. This illustrates the potential value of the fact that young people can make more careful choices about what they share. Asking participants what prevents them from benefiting would help organisers choose changes that actually matter.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, the problem is linked to the fact that privacy lessons sometimes explain risks without practising the actual steps. A practical response is to teach a small number of practical checks using clear examples. Trying this carefully and listening to the people affected is more convincing than expecting a general instruction to solve the difficulty on its own.",
-          "noteVi": "Tóm tắt nguyên nhân–giải pháp tương ứng."
+          "noteVi": "Tóm tắt nguyên nhân–giải pháp tương ứng.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " the problem is linked to the fact that privacy lessons sometimes explain risks without practising the actual steps. A practical response is to teach a small number of practical checks using clear examples. Trying this carefully and listening to the people affected is more convincing than expecting a general instruction to solve the difficulty on its own.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 352,
       "mainWordCount": 352,
       "phrases": [
@@ -395,32 +850,123 @@
         {
           "label": "Mở bài",
           "text": "Although there may be value in the proposal that employers should offer remote work when the job can be done effectively from home, a practical difficulty is that new workers may receive less informal support. Understanding why this happens is important before suggesting a solution. Otherwise, the same problem may return even after people have spent time and effort trying to improve the situation.",
-          "noteVi": "Giới thiệu đúng vấn đề được hỏi."
+          "noteVi": "Giới thiệu đúng vấn đề được hỏi.",
+          "parts": [
+            {
+              "text": "Although there may be value in ",
+              "kind": "detail"
+            },
+            {
+              "text": "the proposal that",
+              "kind": "frame",
+              "labelVi": "Giới thiệu đề xuất + mệnh đề"
+            },
+            {
+              "text": " employers should offer remote work when the job can be done effectively from home, a practical difficulty is that new workers may receive less informal support. Understanding why this happens is important before suggesting a solution. Otherwise, the same problem may return even after people have spent time and effort trying to improve the situation.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Nguyên nhân",
           "text": "One reason for the difficulty is that teams may move online without changing how they share information. This can help explain why new workers may receive less informal support. Consider the following situation: a new employee may wait several hours for an answer to a small question that blocks a task. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
-          "noteVi": "Nối điều kiện tổ chức với vấn đề."
+          "noteVi": "Nối điều kiện tổ chức với vấn đề.",
+          "parts": [
+            {
+              "text": "One reason for the difficulty is that",
+              "kind": "frame",
+              "labelVi": "Nêu nguyên nhân + mệnh đề"
+            },
+            {
+              "text": " teams may move online without changing how they share information. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This can help explain why",
+              "kind": "frame",
+              "labelVi": "Nối nguyên nhân với hiện tượng"
+            },
+            {
+              "text": " new workers may receive less informal support. ",
+              "kind": "detail"
+            },
+            {
+              "text": "Consider the following situation:",
+              "kind": "frame",
+              "labelVi": "Dẫn một tình huống minh họa"
+            },
+            {
+              "text": " a new employee may wait several hours for an answer to a small question that blocks a task. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Giải pháp",
           "text": "A practical response would be to agree on communication routines and provide regular support. For example, a team could hold a short morning check-in and keep a shared guide for common questions. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
-          "noteVi": "Hành động cụ thể có ví dụ thực hiện."
+          "noteVi": "Hành động cụ thể có ví dụ thực hiện.",
+          "parts": [
+            {
+              "text": "A practical response would be to",
+              "kind": "frame",
+              "labelVi": "Đưa giải pháp + động từ nguyên mẫu"
+            },
+            {
+              "text": " agree on communication routines and provide regular support. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a team could hold a short morning check-in and keep a shared guide for common questions. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Vì sao giải pháp đáng làm?",
           "text": "The aim is not to abandon the useful parts of the idea. It is to make them accessible in practice. For example, a parent can finish a report at home and still collect a child from school on time. This illustrates the potential value of the fact that employees can save time spent travelling. Asking participants what prevents them from benefiting would help organisers choose changes that actually matter.",
-          "noteVi": "Làm từ xa tiết kiệm đi lại; đội nhóm cần cách trao đổi và hỗ trợ nhân viên mới rõ ràng."
+          "noteVi": "Làm từ xa tiết kiệm đi lại; đội nhóm cần cách trao đổi và hỗ trợ nhân viên mới rõ ràng.",
+          "parts": [
+            {
+              "text": "The aim is not to abandon the useful parts of the idea. It is to make them accessible in practice. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a parent can finish a report at home and still collect a child from school on time. This illustrates the potential value of the fact that employees can save time spent travelling. Asking participants what prevents them from benefiting would help organisers choose changes that actually matter.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, the problem is linked to the fact that teams may move online without changing how they share information. A practical response is to agree on communication routines and provide regular support. Trying this carefully and listening to the people affected is more convincing than expecting a general instruction to solve the difficulty on its own.",
-          "noteVi": "Tóm tắt nguyên nhân–giải pháp tương ứng."
+          "noteVi": "Tóm tắt nguyên nhân–giải pháp tương ứng.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " the problem is linked to the fact that teams may move online without changing how they share information. A practical response is to agree on communication routines and provide regular support. Trying this carefully and listening to the people affected is more convincing than expecting a general instruction to solve the difficulty on its own.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 349,
       "mainWordCount": 349,
       "phrases": [
@@ -470,32 +1016,123 @@
         {
           "label": "Mở bài",
           "text": "Although there may be value in the proposal that local centres should provide beginner technology classes for older residents, a practical difficulty is that a fast lesson can leave beginners feeling discouraged. Understanding why this happens is important before suggesting a solution. Otherwise, the same problem may return even after people have spent time and effort trying to improve the situation.",
-          "noteVi": "Giới thiệu đúng vấn đề được hỏi."
+          "noteVi": "Giới thiệu đúng vấn đề được hỏi.",
+          "parts": [
+            {
+              "text": "Although there may be value in ",
+              "kind": "detail"
+            },
+            {
+              "text": "the proposal that",
+              "kind": "frame",
+              "labelVi": "Giới thiệu đề xuất + mệnh đề"
+            },
+            {
+              "text": " local centres should provide beginner technology classes for older residents, a practical difficulty is that a fast lesson can leave beginners feeling discouraged. Understanding why this happens is important before suggesting a solution. Otherwise, the same problem may return even after people have spent time and effort trying to improve the situation.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Nguyên nhân",
           "text": "One reason for the difficulty is that courses sometimes assume that all learners already know basic device controls. This can help explain why a fast lesson can leave beginners feeling discouraged. Consider the following situation: someone may miss the next step while still trying to find a small button on the screen. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
-          "noteVi": "Nối điều kiện tổ chức với vấn đề."
+          "noteVi": "Nối điều kiện tổ chức với vấn đề.",
+          "parts": [
+            {
+              "text": "One reason for the difficulty is that",
+              "kind": "frame",
+              "labelVi": "Nêu nguyên nhân + mệnh đề"
+            },
+            {
+              "text": " courses sometimes assume that all learners already know basic device controls. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This can help explain why",
+              "kind": "frame",
+              "labelVi": "Nối nguyên nhân với hiện tượng"
+            },
+            {
+              "text": " a fast lesson can leave beginners feeling discouraged. ",
+              "kind": "detail"
+            },
+            {
+              "text": "Consider the following situation:",
+              "kind": "frame",
+              "labelVi": "Dẫn một tình huống minh họa"
+            },
+            {
+              "text": " someone may miss the next step while still trying to find a small button on the screen. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Giải pháp",
           "text": "A practical response would be to use small groups and clear step-by-step practice. For example, a volunteer could give each learner a simple printed guide and let them repeat one task several times. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
-          "noteVi": "Hành động cụ thể có ví dụ thực hiện."
+          "noteVi": "Hành động cụ thể có ví dụ thực hiện.",
+          "parts": [
+            {
+              "text": "A practical response would be to",
+              "kind": "frame",
+              "labelVi": "Đưa giải pháp + động từ nguyên mẫu"
+            },
+            {
+              "text": " use small groups and clear step-by-step practice. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a volunteer could give each learner a simple printed guide and let them repeat one task several times. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Vì sao giải pháp đáng làm?",
           "text": "The aim is not to abandon the useful parts of the idea. It is to make them accessible in practice. For example, an older learner can practise joining a video call and later speak to family members who live far away. This illustrates the potential value of the fact that older people can use useful online services more independently. Asking participants what prevents them from benefiting would help organisers choose changes that actually matter.",
-          "noteVi": "Lớp công nghệ cho người lớn tuổi cần chậm, nhóm nhỏ và cho lặp lại thao tác."
+          "noteVi": "Lớp công nghệ cho người lớn tuổi cần chậm, nhóm nhỏ và cho lặp lại thao tác.",
+          "parts": [
+            {
+              "text": "The aim is not to abandon the useful parts of the idea. It is to make them accessible in practice. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " an older learner can practise joining a video call and later speak to family members who live far away. This illustrates the potential value of the fact that older people can use useful online services more independently. Asking participants what prevents them from benefiting would help organisers choose changes that actually matter.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, the problem is linked to the fact that courses sometimes assume that all learners already know basic device controls. A practical response is to use small groups and clear step-by-step practice. Trying this carefully and listening to the people affected is more convincing than expecting a general instruction to solve the difficulty on its own.",
-          "noteVi": "Tóm tắt nguyên nhân–giải pháp tương ứng."
+          "noteVi": "Tóm tắt nguyên nhân–giải pháp tương ứng.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " the problem is linked to the fact that courses sometimes assume that all learners already know basic device controls. A practical response is to use small groups and clear step-by-step practice. Trying this carefully and listening to the people affected is more convincing than expecting a general instruction to solve the difficulty on its own.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 353,
       "mainWordCount": 353,
       "phrases": [
@@ -545,32 +1182,123 @@
         {
           "label": "Mở bài",
           "text": "Although there may be value in the proposal that people should check the source before sharing online news, a practical difficulty is that checking every detail can feel time-consuming. Understanding why this happens is important before suggesting a solution. Otherwise, the same problem may return even after people have spent time and effort trying to improve the situation.",
-          "noteVi": "Giới thiệu đúng vấn đề được hỏi."
+          "noteVi": "Giới thiệu đúng vấn đề được hỏi.",
+          "parts": [
+            {
+              "text": "Although there may be value in ",
+              "kind": "detail"
+            },
+            {
+              "text": "the proposal that",
+              "kind": "frame",
+              "labelVi": "Giới thiệu đề xuất + mệnh đề"
+            },
+            {
+              "text": " people should check the source before sharing online news, a practical difficulty is that checking every detail can feel time-consuming. Understanding why this happens is important before suggesting a solution. Otherwise, the same problem may return even after people have spent time and effort trying to improve the situation.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Nguyên nhân",
           "text": "One reason for the difficulty is that emotional headlines can encourage immediate reactions. This can help explain why checking every detail can feel time-consuming. Consider the following situation: someone in a busy group chat may forward a dramatic headline without opening the article. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
-          "noteVi": "Nối điều kiện tổ chức với vấn đề."
+          "noteVi": "Nối điều kiện tổ chức với vấn đề.",
+          "parts": [
+            {
+              "text": "One reason for the difficulty is that",
+              "kind": "frame",
+              "labelVi": "Nêu nguyên nhân + mệnh đề"
+            },
+            {
+              "text": " emotional headlines can encourage immediate reactions. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This can help explain why",
+              "kind": "frame",
+              "labelVi": "Nối nguyên nhân với hiện tượng"
+            },
+            {
+              "text": " checking every detail can feel time-consuming. ",
+              "kind": "detail"
+            },
+            {
+              "text": "Consider the following situation:",
+              "kind": "frame",
+              "labelVi": "Dẫn một tình huống minh họa"
+            },
+            {
+              "text": " someone in a busy group chat may forward a dramatic headline without opening the article. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Giải pháp",
           "text": "A practical response would be to pause before sharing and look for an identifiable original source. For example, a class could compare a headline with the full report and note which details were omitted. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
-          "noteVi": "Hành động cụ thể có ví dụ thực hiện."
+          "noteVi": "Hành động cụ thể có ví dụ thực hiện.",
+          "parts": [
+            {
+              "text": "A practical response would be to",
+              "kind": "frame",
+              "labelVi": "Đưa giải pháp + động từ nguyên mẫu"
+            },
+            {
+              "text": " pause before sharing and look for an identifiable original source. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a class could compare a headline with the full report and note which details were omitted. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Vì sao giải pháp đáng làm?",
           "text": "The aim is not to abandon the useful parts of the idea. It is to make them accessible in practice. For example, a reader can discover that an alarming photograph was taken years earlier in a different place. This illustrates the potential value of the fact that readers can avoid spreading misleading information. Asking participants what prevents them from benefiting would help organisers choose changes that actually matter.",
-          "noteVi": "Đọc nguồn gốc và ngữ cảnh giúp tránh chia sẻ tin sai; đừng phản ứng chỉ theo tiêu đề."
+          "noteVi": "Đọc nguồn gốc và ngữ cảnh giúp tránh chia sẻ tin sai; đừng phản ứng chỉ theo tiêu đề.",
+          "parts": [
+            {
+              "text": "The aim is not to abandon the useful parts of the idea. It is to make them accessible in practice. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a reader can discover that an alarming photograph was taken years earlier in a different place. This illustrates the potential value of the fact that readers can avoid spreading misleading information. Asking participants what prevents them from benefiting would help organisers choose changes that actually matter.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, the problem is linked to the fact that emotional headlines can encourage immediate reactions. A practical response is to pause before sharing and look for an identifiable original source. Trying this carefully and listening to the people affected is more convincing than expecting a general instruction to solve the difficulty on its own.",
-          "noteVi": "Tóm tắt nguyên nhân–giải pháp tương ứng."
+          "noteVi": "Tóm tắt nguyên nhân–giải pháp tương ứng.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " the problem is linked to the fact that emotional headlines can encourage immediate reactions. A practical response is to pause before sharing and look for an identifiable original source. Trying this carefully and listening to the people affected is more convincing than expecting a general instruction to solve the difficulty on its own.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 334,
       "mainWordCount": 334,
       "phrases": [
@@ -620,32 +1348,123 @@
         {
           "label": "Mở bài",
           "text": "Although there may be value in the proposal that people should consider repairing suitable devices before replacing them, a practical difficulty is that some repairs can be expensive or impractical. Understanding why this happens is important before suggesting a solution. Otherwise, the same problem may return even after people have spent time and effort trying to improve the situation.",
-          "noteVi": "Giới thiệu đúng vấn đề được hỏi."
+          "noteVi": "Giới thiệu đúng vấn đề được hỏi.",
+          "parts": [
+            {
+              "text": "Although there may be value in ",
+              "kind": "detail"
+            },
+            {
+              "text": "the proposal that",
+              "kind": "frame",
+              "labelVi": "Giới thiệu đề xuất + mệnh đề"
+            },
+            {
+              "text": " people should consider repairing suitable devices before replacing them, a practical difficulty is that some repairs can be expensive or impractical. Understanding why this happens is important before suggesting a solution. Otherwise, the same problem may return even after people have spent time and effort trying to improve the situation.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Nguyên nhân",
           "text": "One reason for the difficulty is that buyers may not receive clear information about repair options. This can help explain why some repairs can be expensive or impractical. Consider the following situation: a customer may pay for an inspection only to discover that a replacement screen costs almost as much as another device. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
-          "noteVi": "Nối điều kiện tổ chức với vấn đề."
+          "noteVi": "Nối điều kiện tổ chức với vấn đề.",
+          "parts": [
+            {
+              "text": "One reason for the difficulty is that",
+              "kind": "frame",
+              "labelVi": "Nêu nguyên nhân + mệnh đề"
+            },
+            {
+              "text": " buyers may not receive clear information about repair options. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This can help explain why",
+              "kind": "frame",
+              "labelVi": "Nối nguyên nhân với hiện tượng"
+            },
+            {
+              "text": " some repairs can be expensive or impractical. ",
+              "kind": "detail"
+            },
+            {
+              "text": "Consider the following situation:",
+              "kind": "frame",
+              "labelVi": "Dẫn một tình huống minh họa"
+            },
+            {
+              "text": " a customer may pay for an inspection only to discover that a replacement screen costs almost as much as another device. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Giải pháp",
           "text": "A practical response would be to ask for a diagnosis and a cost estimate before deciding. For example, a repair service could explain the likely benefit, price and warranty in simple language. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
-          "noteVi": "Hành động cụ thể có ví dụ thực hiện."
+          "noteVi": "Hành động cụ thể có ví dụ thực hiện.",
+          "parts": [
+            {
+              "text": "A practical response would be to",
+              "kind": "frame",
+              "labelVi": "Đưa giải pháp + động từ nguyên mẫu"
+            },
+            {
+              "text": " ask for a diagnosis and a cost estimate before deciding. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a repair service could explain the likely benefit, price and warranty in simple language. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Vì sao giải pháp đáng làm?",
           "text": "The aim is not to abandon the useful parts of the idea. It is to make them accessible in practice. For example, a laptop with a worn battery may still be useful for schoolwork after the battery is replaced. This illustrates the potential value of the fact that a repair can extend the useful life of a product. Asking participants what prevents them from benefiting would help organisers choose changes that actually matter.",
-          "noteVi": "Sửa giúp kéo dài tuổi thọ đồ điện tử; cần biết chi phí và tính khả thi trước khi quyết định."
+          "noteVi": "Sửa giúp kéo dài tuổi thọ đồ điện tử; cần biết chi phí và tính khả thi trước khi quyết định.",
+          "parts": [
+            {
+              "text": "The aim is not to abandon the useful parts of the idea. It is to make them accessible in practice. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a laptop with a worn battery may still be useful for schoolwork after the battery is replaced. This illustrates the potential value of the fact that a repair can extend the useful life of a product. Asking participants what prevents them from benefiting would help organisers choose changes that actually matter.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, the problem is linked to the fact that buyers may not receive clear information about repair options. A practical response is to ask for a diagnosis and a cost estimate before deciding. Trying this carefully and listening to the people affected is more convincing than expecting a general instruction to solve the difficulty on its own.",
-          "noteVi": "Tóm tắt nguyên nhân–giải pháp tương ứng."
+          "noteVi": "Tóm tắt nguyên nhân–giải pháp tương ứng.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " the problem is linked to the fact that buyers may not receive clear information about repair options. A practical response is to ask for a diagnosis and a cost estimate before deciding. Trying this carefully and listening to the people affected is more convincing than expecting a general instruction to solve the difficulty on its own.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 351,
       "mainWordCount": 351,
       "phrases": [
@@ -695,32 +1514,123 @@
         {
           "label": "Mở bài",
           "text": "Although there may be value in the proposal that young people should balance gaming with other activities, a practical difficulty is that an unrealistic rule may lead to arguments rather than better habits. Understanding why this happens is important before suggesting a solution. Otherwise, the same problem may return even after people have spent time and effort trying to improve the situation.",
-          "noteVi": "Giới thiệu đúng vấn đề được hỏi."
+          "noteVi": "Giới thiệu đúng vấn đề được hỏi.",
+          "parts": [
+            {
+              "text": "Although there may be value in ",
+              "kind": "detail"
+            },
+            {
+              "text": "the proposal that",
+              "kind": "frame",
+              "labelVi": "Giới thiệu đề xuất + mệnh đề"
+            },
+            {
+              "text": " young people should balance gaming with other activities, a practical difficulty is that an unrealistic rule may lead to arguments rather than better habits. Understanding why this happens is important before suggesting a solution. Otherwise, the same problem may return even after people have spent time and effort trying to improve the situation.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Nguyên nhân",
           "text": "One reason for the difficulty is that families sometimes set limits without discussing how the activity works. This can help explain why an unrealistic rule may lead to arguments rather than better habits. Consider the following situation: a parent may demand an immediate stop in the middle of a team game that was arranged in advance. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
-          "noteVi": "Nối điều kiện tổ chức với vấn đề."
+          "noteVi": "Nối điều kiện tổ chức với vấn đề.",
+          "parts": [
+            {
+              "text": "One reason for the difficulty is that",
+              "kind": "frame",
+              "labelVi": "Nêu nguyên nhân + mệnh đề"
+            },
+            {
+              "text": " families sometimes set limits without discussing how the activity works. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This can help explain why",
+              "kind": "frame",
+              "labelVi": "Nối nguyên nhân với hiện tượng"
+            },
+            {
+              "text": " an unrealistic rule may lead to arguments rather than better habits. ",
+              "kind": "detail"
+            },
+            {
+              "text": "Consider the following situation:",
+              "kind": "frame",
+              "labelVi": "Dẫn một tình huống minh họa"
+            },
+            {
+              "text": " a parent may demand an immediate stop in the middle of a team game that was arranged in advance. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Giải pháp",
           "text": "A practical response would be to agree on realistic finishing times and responsibilities before play begins. For example, a family could decide on a final match and keep the same bedtime on school nights. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
-          "noteVi": "Hành động cụ thể có ví dụ thực hiện."
+          "noteVi": "Hành động cụ thể có ví dụ thực hiện.",
+          "parts": [
+            {
+              "text": "A practical response would be to",
+              "kind": "frame",
+              "labelVi": "Đưa giải pháp + động từ nguyên mẫu"
+            },
+            {
+              "text": " agree on realistic finishing times and responsibilities before play begins. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a family could decide on a final match and keep the same bedtime on school nights. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Vì sao giải pháp đáng làm?",
           "text": "The aim is not to abandon the useful parts of the idea. It is to make them accessible in practice. For example, a teenager can play with friends after finishing homework and still join a weekend football match. This illustrates the potential value of the fact that players can enjoy a hobby while still making time for other needs. Asking participants what prevents them from benefiting would help organisers choose changes that actually matter.",
-          "noteVi": "Cân bằng chơi game cần thỏa thuận thời gian thực tế và giữ trách nhiệm học, ngủ, vận động."
+          "noteVi": "Cân bằng chơi game cần thỏa thuận thời gian thực tế và giữ trách nhiệm học, ngủ, vận động.",
+          "parts": [
+            {
+              "text": "The aim is not to abandon the useful parts of the idea. It is to make them accessible in practice. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a teenager can play with friends after finishing homework and still join a weekend football match. This illustrates the potential value of the fact that players can enjoy a hobby while still making time for other needs. Asking participants what prevents them from benefiting would help organisers choose changes that actually matter.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, the problem is linked to the fact that families sometimes set limits without discussing how the activity works. A practical response is to agree on realistic finishing times and responsibilities before play begins. Trying this carefully and listening to the people affected is more convincing than expecting a general instruction to solve the difficulty on its own.",
-          "noteVi": "Tóm tắt nguyên nhân–giải pháp tương ứng."
+          "noteVi": "Tóm tắt nguyên nhân–giải pháp tương ứng.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " the problem is linked to the fact that families sometimes set limits without discussing how the activity works. A practical response is to agree on realistic finishing times and responsibilities before play begins. Trying this carefully and listening to the people affected is more convincing than expecting a general instruction to solve the difficulty on its own.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 361,
       "mainWordCount": 361,
       "phrases": [

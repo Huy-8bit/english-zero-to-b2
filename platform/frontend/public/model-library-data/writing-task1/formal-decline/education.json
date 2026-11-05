@@ -1,0 +1,1635 @@
+{
+  "version": "2026-11-05-v2-frames",
+  "samples": [
+    {
+      "id": "writing-task1-formal-decline-education-01",
+      "group": "writing-task1",
+      "type": "formal-decline",
+      "topic": "education",
+      "number": 1,
+      "title": "Lớp học trực tuyến",
+      "focus": "online university classes",
+      "prompt": "Ms Brown has invited you in a professional capacity to an online study workshop, but you cannot attend. Apologise, give a reason and suggest a suitable alternative.",
+      "requirementsVi": [
+        "Cảm ơn rồi từ chối lịch sự.",
+        "Giải thích ngắn, tránh viện nhiều lý do.",
+        "Đề xuất vẫn phù hợp quan hệ công việc."
+      ],
+      "summaryVi": "Học online giúp linh hoạt giờ học; cần thảo luận và hỗ trợ để tránh học một mình.",
+      "paragraphs": [
+        {
+          "label": "Mở thư và từ chối",
+          "text": "Dear Ms Brown,\n\nThank you for your invitation to an online study workshop. I appreciate being considered. Unfortunately, I am unable to attend on Saturday at nine in the morning, and I apologise for any inconvenience this may cause.",
+          "noteVi": "Cảm ơn rồi từ chối lịch sự.",
+          "parts": [
+            {
+              "text": "Dear ",
+              "kind": "frame"
+            },
+            {
+              "text": "Ms Brown",
+              "kind": "detail",
+              "labelVi": "danh xưng và họ người nhận"
+            },
+            {
+              "text": ",\n\nThank you for your invitation to ",
+              "kind": "frame"
+            },
+            {
+              "text": "an online study workshop",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". I appreciate being considered. Unfortunately, I am unable to attend on ",
+              "kind": "frame"
+            },
+            {
+              "text": "Saturday at nine in the morning",
+              "kind": "detail",
+              "labelVi": "ngày và giờ"
+            },
+            {
+              "text": ", and I apologise for any inconvenience this may cause.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Dear [danh xưng và họ người nhận],\n\nThank you for your invitation to [sự kiện / hoạt động]. I appreciate being considered. Unfortunately, I am unable to attend on [ngày và giờ], and I apologise for any inconvenience this may cause."
+        },
+        {
+          "label": "Lý do",
+          "text": "The reason is that I have to attend a family appointment that was arranged earlier. This commitment was arranged earlier, and I am unable to change it. I wanted to inform you as soon as possible so that you have time to adjust the arrangements if necessary.",
+          "noteVi": "Giải thích ngắn, tránh viện nhiều lý do.",
+          "parts": [
+            {
+              "text": "The reason is that I have to ",
+              "kind": "frame"
+            },
+            {
+              "text": "attend a family appointment that was arranged earlier",
+              "kind": "detail",
+              "labelVi": "việc bận — động từ nguyên mẫu"
+            },
+            {
+              "text": ". This commitment was arranged earlier, and I am unable to change it. I wanted to inform you as soon as possible so that you have time to adjust the arrangements if necessary.",
+              "kind": "frame"
+            }
+          ],
+          "template": "The reason is that I have to [việc bận — động từ nguyên mẫu]. This commitment was arranged earlier, and I am unable to change it. I wanted to inform you as soon as possible so that you have time to adjust the arrangements if necessary."
+        },
+        {
+          "label": "Đề xuất khác",
+          "text": "If possible, I would welcome the opportunity to attend a later session or receive the materials. I remain interested in online university classes, particularly because students can fit learning around work and family responsibilities. Please let me know whether this alternative would be suitable or whether you would prefer another arrangement.",
+          "noteVi": "Đề xuất vẫn phù hợp quan hệ công việc.",
+          "parts": [
+            {
+              "text": "If possible, I would welcome the opportunity to ",
+              "kind": "frame"
+            },
+            {
+              "text": "attend a later session or receive the materials",
+              "kind": "detail",
+              "labelVi": "đề xuất khác — động từ nguyên mẫu"
+            },
+            {
+              "text": ". I remain interested in ",
+              "kind": "frame"
+            },
+            {
+              "text": "online university classes",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": ", particularly because ",
+              "kind": "frame"
+            },
+            {
+              "text": "students can fit learning around work and family responsibilities",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". Please let me know whether this alternative would be suitable or whether you would prefer another arrangement.",
+              "kind": "frame"
+            }
+          ],
+          "template": "If possible, I would welcome the opportunity to [đề xuất khác — động từ nguyên mẫu]. I remain interested in [chủ đề], particularly because [lợi ích — chủ ngữ + động từ]. Please let me know whether this alternative would be suitable or whether you would prefer another arrangement."
+        },
+        {
+          "label": "Kết thư",
+          "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\nMinh Nguyen",
+          "noteVi": "Biết tên người nhận: Dear Ms/Mr + họ → Yours sincerely. Chưa biết tên: Dear Sir or Madam → Yours faithfully.",
+          "parts": [
+            {
+              "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh Nguyen",
+              "kind": "detail",
+              "labelVi": "họ tên của bạn"
+            }
+          ],
+          "template": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n[họ tên của bạn]"
+        }
+      ],
+      "sections": [],
+      "options": [],
+      "selectedOption": null,
+      "register": "formal",
+      "wordCount": 165,
+      "mainWordCount": 165,
+      "phrases": [
+        {
+          "en": "fit learning around work",
+          "vi": "sắp xếp việc học quanh giờ làm",
+          "inAnswer": true
+        },
+        {
+          "en": "recorded lessons",
+          "vi": "bài giảng ghi lại",
+          "inAnswer": false
+        },
+        {
+          "en": "discussion groups",
+          "vi": "nhóm thảo luận",
+          "inAnswer": false
+        }
+      ],
+      "framePhrases": [
+        {
+          "en": "Please let me know",
+          "vi": "Hãy cho tôi biết…"
+        }
+      ]
+    },
+    {
+      "id": "writing-task1-formal-decline-education-02",
+      "group": "writing-task1",
+      "type": "formal-decline",
+      "topic": "education",
+      "number": 2,
+      "title": "Thư viện trường",
+      "focus": "school libraries",
+      "prompt": "Ms Brown has invited you in a professional capacity to a school library open day, but you cannot attend. Apologise, give a reason and suggest a suitable alternative.",
+      "requirementsVi": [
+        "Cảm ơn rồi từ chối lịch sự.",
+        "Giải thích ngắn, tránh viện nhiều lý do.",
+        "Đề xuất vẫn phù hợp quan hệ công việc."
+      ],
+      "summaryVi": "Thư viện giảm chi phí và tạo chỗ học yên tĩnh; cần sách phù hợp và hướng dẫn tìm sách.",
+      "paragraphs": [
+        {
+          "label": "Mở thư và từ chối",
+          "text": "Dear Ms Brown,\n\nThank you for your invitation to a school library open day. I appreciate being considered. Unfortunately, I am unable to attend on Sunday at two in the afternoon, and I apologise for any inconvenience this may cause.",
+          "noteVi": "Cảm ơn rồi từ chối lịch sự.",
+          "parts": [
+            {
+              "text": "Dear ",
+              "kind": "frame"
+            },
+            {
+              "text": "Ms Brown",
+              "kind": "detail",
+              "labelVi": "danh xưng và họ người nhận"
+            },
+            {
+              "text": ",\n\nThank you for your invitation to ",
+              "kind": "frame"
+            },
+            {
+              "text": "a school library open day",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". I appreciate being considered. Unfortunately, I am unable to attend on ",
+              "kind": "frame"
+            },
+            {
+              "text": "Sunday at two in the afternoon",
+              "kind": "detail",
+              "labelVi": "ngày và giờ"
+            },
+            {
+              "text": ", and I apologise for any inconvenience this may cause.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Dear [danh xưng và họ người nhận],\n\nThank you for your invitation to [sự kiện / hoạt động]. I appreciate being considered. Unfortunately, I am unable to attend on [ngày và giờ], and I apologise for any inconvenience this may cause."
+        },
+        {
+          "label": "Lý do",
+          "text": "The reason is that I have to cover an extra shift at work. This commitment was arranged earlier, and I am unable to change it. I wanted to inform you as soon as possible so that you have time to adjust the arrangements if necessary.",
+          "noteVi": "Giải thích ngắn, tránh viện nhiều lý do.",
+          "parts": [
+            {
+              "text": "The reason is that I have to ",
+              "kind": "frame"
+            },
+            {
+              "text": "cover an extra shift at work",
+              "kind": "detail",
+              "labelVi": "việc bận — động từ nguyên mẫu"
+            },
+            {
+              "text": ". This commitment was arranged earlier, and I am unable to change it. I wanted to inform you as soon as possible so that you have time to adjust the arrangements if necessary.",
+              "kind": "frame"
+            }
+          ],
+          "template": "The reason is that I have to [việc bận — động từ nguyên mẫu]. This commitment was arranged earlier, and I am unable to change it. I wanted to inform you as soon as possible so that you have time to adjust the arrangements if necessary."
+        },
+        {
+          "label": "Đề xuất khác",
+          "text": "If possible, I would welcome the opportunity to attend a later session or receive the materials. I remain interested in school libraries, particularly because students have a quiet place to study without buying every book. Please let me know whether this alternative would be suitable or whether you would prefer another arrangement.",
+          "noteVi": "Đề xuất vẫn phù hợp quan hệ công việc.",
+          "parts": [
+            {
+              "text": "If possible, I would welcome the opportunity to ",
+              "kind": "frame"
+            },
+            {
+              "text": "attend a later session or receive the materials",
+              "kind": "detail",
+              "labelVi": "đề xuất khác — động từ nguyên mẫu"
+            },
+            {
+              "text": ". I remain interested in ",
+              "kind": "frame"
+            },
+            {
+              "text": "school libraries",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": ", particularly because ",
+              "kind": "frame"
+            },
+            {
+              "text": "students have a quiet place to study without buying every book",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". Please let me know whether this alternative would be suitable or whether you would prefer another arrangement.",
+              "kind": "frame"
+            }
+          ],
+          "template": "If possible, I would welcome the opportunity to [đề xuất khác — động từ nguyên mẫu]. I remain interested in [chủ đề], particularly because [lợi ích — chủ ngữ + động từ]. Please let me know whether this alternative would be suitable or whether you would prefer another arrangement."
+        },
+        {
+          "label": "Kết thư",
+          "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\nMinh Nguyen",
+          "noteVi": "Biết tên người nhận: Dear Ms/Mr + họ → Yours sincerely. Chưa biết tên: Dear Sir or Madam → Yours faithfully.",
+          "parts": [
+            {
+              "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh Nguyen",
+              "kind": "detail",
+              "labelVi": "họ tên của bạn"
+            }
+          ],
+          "template": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n[họ tên của bạn]"
+        }
+      ],
+      "sections": [],
+      "options": [],
+      "selectedOption": null,
+      "register": "formal",
+      "wordCount": 165,
+      "mainWordCount": 165,
+      "phrases": [
+        {
+          "en": "shared resources",
+          "vi": "tài nguyên dùng chung",
+          "inAnswer": false
+        },
+        {
+          "en": "a quiet place to study",
+          "vi": "nơi yên tĩnh để học",
+          "inAnswer": true
+        },
+        {
+          "en": "reading recommendation",
+          "vi": "gợi ý sách đọc",
+          "inAnswer": false
+        }
+      ],
+      "framePhrases": [
+        {
+          "en": "Please let me know",
+          "vi": "Hãy cho tôi biết…"
+        }
+      ]
+    },
+    {
+      "id": "writing-task1-formal-decline-education-03",
+      "group": "writing-task1",
+      "type": "formal-decline",
+      "topic": "education",
+      "number": 3,
+      "title": "Bài tập về nhà",
+      "focus": "homework for schoolchildren",
+      "prompt": "Ms Brown has invited you in a professional capacity to a homework planning session, but you cannot attend. Apologise, give a reason and suggest a suitable alternative.",
+      "requirementsVi": [
+        "Cảm ơn rồi từ chối lịch sự.",
+        "Giải thích ngắn, tránh viện nhiều lý do.",
+        "Đề xuất vẫn phù hợp quan hệ công việc."
+      ],
+      "summaryVi": "Bài tập ngắn giúp luyện đúng kỹ năng; bài quá nhiều tạo bất lợi cho trẻ thiếu chỗ học hoặc hỗ trợ.",
+      "paragraphs": [
+        {
+          "label": "Mở thư và từ chối",
+          "text": "Dear Ms Brown,\n\nThank you for your invitation to a homework planning session. I appreciate being considered. Unfortunately, I am unable to attend on Friday at six in the evening, and I apologise for any inconvenience this may cause.",
+          "noteVi": "Cảm ơn rồi từ chối lịch sự.",
+          "parts": [
+            {
+              "text": "Dear ",
+              "kind": "frame"
+            },
+            {
+              "text": "Ms Brown",
+              "kind": "detail",
+              "labelVi": "danh xưng và họ người nhận"
+            },
+            {
+              "text": ",\n\nThank you for your invitation to ",
+              "kind": "frame"
+            },
+            {
+              "text": "a homework planning session",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". I appreciate being considered. Unfortunately, I am unable to attend on ",
+              "kind": "frame"
+            },
+            {
+              "text": "Friday at six in the evening",
+              "kind": "detail",
+              "labelVi": "ngày và giờ"
+            },
+            {
+              "text": ", and I apologise for any inconvenience this may cause.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Dear [danh xưng và họ người nhận],\n\nThank you for your invitation to [sự kiện / hoạt động]. I appreciate being considered. Unfortunately, I am unable to attend on [ngày và giờ], and I apologise for any inconvenience this may cause."
+        },
+        {
+          "label": "Lý do",
+          "text": "The reason is that I have to help my parents move some furniture. This commitment was arranged earlier, and I am unable to change it. I wanted to inform you as soon as possible so that you have time to adjust the arrangements if necessary.",
+          "noteVi": "Giải thích ngắn, tránh viện nhiều lý do.",
+          "parts": [
+            {
+              "text": "The reason is that I have to ",
+              "kind": "frame"
+            },
+            {
+              "text": "help my parents move some furniture",
+              "kind": "detail",
+              "labelVi": "việc bận — động từ nguyên mẫu"
+            },
+            {
+              "text": ". This commitment was arranged earlier, and I am unable to change it. I wanted to inform you as soon as possible so that you have time to adjust the arrangements if necessary.",
+              "kind": "frame"
+            }
+          ],
+          "template": "The reason is that I have to [việc bận — động từ nguyên mẫu]. This commitment was arranged earlier, and I am unable to change it. I wanted to inform you as soon as possible so that you have time to adjust the arrangements if necessary."
+        },
+        {
+          "label": "Đề xuất khác",
+          "text": "If possible, I would welcome the opportunity to attend a later session or receive the materials. I remain interested in homework for schoolchildren, particularly because children can practise a skill after learning it in class. Please let me know whether this alternative would be suitable or whether you would prefer another arrangement.",
+          "noteVi": "Đề xuất vẫn phù hợp quan hệ công việc.",
+          "parts": [
+            {
+              "text": "If possible, I would welcome the opportunity to ",
+              "kind": "frame"
+            },
+            {
+              "text": "attend a later session or receive the materials",
+              "kind": "detail",
+              "labelVi": "đề xuất khác — động từ nguyên mẫu"
+            },
+            {
+              "text": ". I remain interested in ",
+              "kind": "frame"
+            },
+            {
+              "text": "homework for schoolchildren",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": ", particularly because ",
+              "kind": "frame"
+            },
+            {
+              "text": "children can practise a skill after learning it in class",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". Please let me know whether this alternative would be suitable or whether you would prefer another arrangement.",
+              "kind": "frame"
+            }
+          ],
+          "template": "If possible, I would welcome the opportunity to [đề xuất khác — động từ nguyên mẫu]. I remain interested in [chủ đề], particularly because [lợi ích — chủ ngữ + động từ]. Please let me know whether this alternative would be suitable or whether you would prefer another arrangement."
+        },
+        {
+          "label": "Kết thư",
+          "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\nMinh Nguyen",
+          "noteVi": "Biết tên người nhận: Dear Ms/Mr + họ → Yours sincerely. Chưa biết tên: Dear Sir or Madam → Yours faithfully.",
+          "parts": [
+            {
+              "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh Nguyen",
+              "kind": "detail",
+              "labelVi": "họ tên của bạn"
+            }
+          ],
+          "template": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n[họ tên của bạn]"
+        }
+      ],
+      "sections": [],
+      "options": [],
+      "selectedOption": null,
+      "register": "formal",
+      "wordCount": 164,
+      "mainWordCount": 164,
+      "phrases": [
+        {
+          "en": "a clear purpose",
+          "vi": "mục đích rõ ràng",
+          "inAnswer": false
+        },
+        {
+          "en": "total workload",
+          "vi": "tổng khối lượng việc",
+          "inAnswer": false
+        },
+        {
+          "en": "home conditions",
+          "vi": "điều kiện ở nhà",
+          "inAnswer": false
+        }
+      ],
+      "framePhrases": [
+        {
+          "en": "Please let me know",
+          "vi": "Hãy cho tôi biết…"
+        }
+      ]
+    },
+    {
+      "id": "writing-task1-formal-decline-education-04",
+      "group": "writing-task1",
+      "type": "formal-decline",
+      "topic": "education",
+      "number": 4,
+      "title": "Học tiếng Anh theo cặp",
+      "focus": "studying English with a partner",
+      "prompt": "Ms Brown has invited you in a professional capacity to an English conversation club meeting, but you cannot attend. Apologise, give a reason and suggest a suitable alternative.",
+      "requirementsVi": [
+        "Cảm ơn rồi từ chối lịch sự.",
+        "Giải thích ngắn, tránh viện nhiều lý do.",
+        "Đề xuất vẫn phù hợp quan hệ công việc."
+      ],
+      "summaryVi": "Có bạn học giúp nói đều hơn; cần đối chiếu mẫu đúng để không lặp lại lỗi của nhau.",
+      "paragraphs": [
+        {
+          "label": "Mở thư và từ chối",
+          "text": "Dear Ms Brown,\n\nThank you for your invitation to an English conversation club meeting. I appreciate being considered. Unfortunately, I am unable to attend on Saturday at ten in the morning, and I apologise for any inconvenience this may cause.",
+          "noteVi": "Cảm ơn rồi từ chối lịch sự.",
+          "parts": [
+            {
+              "text": "Dear ",
+              "kind": "frame"
+            },
+            {
+              "text": "Ms Brown",
+              "kind": "detail",
+              "labelVi": "danh xưng và họ người nhận"
+            },
+            {
+              "text": ",\n\nThank you for your invitation to ",
+              "kind": "frame"
+            },
+            {
+              "text": "an English conversation club meeting",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". I appreciate being considered. Unfortunately, I am unable to attend on ",
+              "kind": "frame"
+            },
+            {
+              "text": "Saturday at ten in the morning",
+              "kind": "detail",
+              "labelVi": "ngày và giờ"
+            },
+            {
+              "text": ", and I apologise for any inconvenience this may cause.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Dear [danh xưng và họ người nhận],\n\nThank you for your invitation to [sự kiện / hoạt động]. I appreciate being considered. Unfortunately, I am unable to attend on [ngày và giờ], and I apologise for any inconvenience this may cause."
+        },
+        {
+          "label": "Lý do",
+          "text": "The reason is that I have to take my younger brother to an important school event. This commitment was arranged earlier, and I am unable to change it. I wanted to inform you as soon as possible so that you have time to adjust the arrangements if necessary.",
+          "noteVi": "Giải thích ngắn, tránh viện nhiều lý do.",
+          "parts": [
+            {
+              "text": "The reason is that I have to ",
+              "kind": "frame"
+            },
+            {
+              "text": "take my younger brother to an important school event",
+              "kind": "detail",
+              "labelVi": "việc bận — động từ nguyên mẫu"
+            },
+            {
+              "text": ". This commitment was arranged earlier, and I am unable to change it. I wanted to inform you as soon as possible so that you have time to adjust the arrangements if necessary.",
+              "kind": "frame"
+            }
+          ],
+          "template": "The reason is that I have to [việc bận — động từ nguyên mẫu]. This commitment was arranged earlier, and I am unable to change it. I wanted to inform you as soon as possible so that you have time to adjust the arrangements if necessary."
+        },
+        {
+          "label": "Đề xuất khác",
+          "text": "If possible, I would welcome the opportunity to attend a later session or receive the materials. I remain interested in studying English with a partner, particularly because learners have more opportunities to speak. Please let me know whether this alternative would be suitable or whether you would prefer another arrangement.",
+          "noteVi": "Đề xuất vẫn phù hợp quan hệ công việc.",
+          "parts": [
+            {
+              "text": "If possible, I would welcome the opportunity to ",
+              "kind": "frame"
+            },
+            {
+              "text": "attend a later session or receive the materials",
+              "kind": "detail",
+              "labelVi": "đề xuất khác — động từ nguyên mẫu"
+            },
+            {
+              "text": ". I remain interested in ",
+              "kind": "frame"
+            },
+            {
+              "text": "studying English with a partner",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": ", particularly because ",
+              "kind": "frame"
+            },
+            {
+              "text": "learners have more opportunities to speak",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". Please let me know whether this alternative would be suitable or whether you would prefer another arrangement.",
+              "kind": "frame"
+            }
+          ],
+          "template": "If possible, I would welcome the opportunity to [đề xuất khác — động từ nguyên mẫu]. I remain interested in [chủ đề], particularly because [lợi ích — chủ ngữ + động từ]. Please let me know whether this alternative would be suitable or whether you would prefer another arrangement."
+        },
+        {
+          "label": "Kết thư",
+          "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\nMinh Nguyen",
+          "noteVi": "Biết tên người nhận: Dear Ms/Mr + họ → Yours sincerely. Chưa biết tên: Dear Sir or Madam → Yours faithfully.",
+          "parts": [
+            {
+              "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh Nguyen",
+              "kind": "detail",
+              "labelVi": "họ tên của bạn"
+            }
+          ],
+          "template": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n[họ tên của bạn]"
+        }
+      ],
+      "sections": [],
+      "options": [],
+      "selectedOption": null,
+      "register": "formal",
+      "wordCount": 166,
+      "mainWordCount": 166,
+      "phrases": [
+        {
+          "en": "a study partner",
+          "vi": "bạn cùng học",
+          "inAnswer": false
+        },
+        {
+          "en": "useful expressions",
+          "vi": "cách diễn đạt hữu ích",
+          "inAnswer": false
+        },
+        {
+          "en": "teacher feedback",
+          "vi": "góp ý của giáo viên",
+          "inAnswer": false
+        }
+      ],
+      "framePhrases": [
+        {
+          "en": "Please let me know",
+          "vi": "Hãy cho tôi biết…"
+        }
+      ]
+    },
+    {
+      "id": "writing-task1-formal-decline-education-05",
+      "group": "writing-task1",
+      "type": "formal-decline",
+      "topic": "education",
+      "number": 5,
+      "title": "Học kỹ năng sống",
+      "focus": "practical life skills at school",
+      "prompt": "Ms Brown has invited you in a professional capacity to a life skills workshop, but you cannot attend. Apologise, give a reason and suggest a suitable alternative.",
+      "requirementsVi": [
+        "Cảm ơn rồi từ chối lịch sự.",
+        "Giải thích ngắn, tránh viện nhiều lý do.",
+        "Đề xuất vẫn phù hợp quan hệ công việc."
+      ],
+      "summaryVi": "Kỹ năng sống giúp dùng kiến thức vào thực tế; nên lồng ghép vào môn có sẵn để tránh quá tải.",
+      "paragraphs": [
+        {
+          "label": "Mở thư và từ chối",
+          "text": "Dear Ms Brown,\n\nThank you for your invitation to a life skills workshop. I appreciate being considered. Unfortunately, I am unable to attend on Sunday at three in the afternoon, and I apologise for any inconvenience this may cause.",
+          "noteVi": "Cảm ơn rồi từ chối lịch sự.",
+          "parts": [
+            {
+              "text": "Dear ",
+              "kind": "frame"
+            },
+            {
+              "text": "Ms Brown",
+              "kind": "detail",
+              "labelVi": "danh xưng và họ người nhận"
+            },
+            {
+              "text": ",\n\nThank you for your invitation to ",
+              "kind": "frame"
+            },
+            {
+              "text": "a life skills workshop",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". I appreciate being considered. Unfortunately, I am unable to attend on ",
+              "kind": "frame"
+            },
+            {
+              "text": "Sunday at three in the afternoon",
+              "kind": "detail",
+              "labelVi": "ngày và giờ"
+            },
+            {
+              "text": ", and I apologise for any inconvenience this may cause.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Dear [danh xưng và họ người nhận],\n\nThank you for your invitation to [sự kiện / hoạt động]. I appreciate being considered. Unfortunately, I am unable to attend on [ngày và giờ], and I apologise for any inconvenience this may cause."
+        },
+        {
+          "label": "Lý do",
+          "text": "The reason is that I have to finish a group project with a deadline that evening. This commitment was arranged earlier, and I am unable to change it. I wanted to inform you as soon as possible so that you have time to adjust the arrangements if necessary.",
+          "noteVi": "Giải thích ngắn, tránh viện nhiều lý do.",
+          "parts": [
+            {
+              "text": "The reason is that I have to ",
+              "kind": "frame"
+            },
+            {
+              "text": "finish a group project with a deadline that evening",
+              "kind": "detail",
+              "labelVi": "việc bận — động từ nguyên mẫu"
+            },
+            {
+              "text": ". This commitment was arranged earlier, and I am unable to change it. I wanted to inform you as soon as possible so that you have time to adjust the arrangements if necessary.",
+              "kind": "frame"
+            }
+          ],
+          "template": "The reason is that I have to [việc bận — động từ nguyên mẫu]. This commitment was arranged earlier, and I am unable to change it. I wanted to inform you as soon as possible so that you have time to adjust the arrangements if necessary."
+        },
+        {
+          "label": "Đề xuất khác",
+          "text": "If possible, I would welcome the opportunity to attend a later session or receive the materials. I remain interested in practical life skills at school, particularly because students can use what they learn in everyday situations. Please let me know whether this alternative would be suitable or whether you would prefer another arrangement.",
+          "noteVi": "Đề xuất vẫn phù hợp quan hệ công việc.",
+          "parts": [
+            {
+              "text": "If possible, I would welcome the opportunity to ",
+              "kind": "frame"
+            },
+            {
+              "text": "attend a later session or receive the materials",
+              "kind": "detail",
+              "labelVi": "đề xuất khác — động từ nguyên mẫu"
+            },
+            {
+              "text": ". I remain interested in ",
+              "kind": "frame"
+            },
+            {
+              "text": "practical life skills at school",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": ", particularly because ",
+              "kind": "frame"
+            },
+            {
+              "text": "students can use what they learn in everyday situations",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". Please let me know whether this alternative would be suitable or whether you would prefer another arrangement.",
+              "kind": "frame"
+            }
+          ],
+          "template": "If possible, I would welcome the opportunity to [đề xuất khác — động từ nguyên mẫu]. I remain interested in [chủ đề], particularly because [lợi ích — chủ ngữ + động từ]. Please let me know whether this alternative would be suitable or whether you would prefer another arrangement."
+        },
+        {
+          "label": "Kết thư",
+          "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\nMinh Nguyen",
+          "noteVi": "Biết tên người nhận: Dear Ms/Mr + họ → Yours sincerely. Chưa biết tên: Dear Sir or Madam → Yours faithfully.",
+          "parts": [
+            {
+              "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh Nguyen",
+              "kind": "detail",
+              "labelVi": "họ tên của bạn"
+            }
+          ],
+          "template": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n[họ tên của bạn]"
+        }
+      ],
+      "sections": [],
+      "options": [],
+      "selectedOption": null,
+      "register": "formal",
+      "wordCount": 168,
+      "mainWordCount": 168,
+      "phrases": [
+        {
+          "en": "practical life skills",
+          "vi": "kỹ năng sống thực tế",
+          "inAnswer": true
+        },
+        {
+          "en": "plan a budget",
+          "vi": "lập ngân sách",
+          "inAnswer": false
+        },
+        {
+          "en": "an overloaded timetable",
+          "vi": "thời khóa biểu quá tải",
+          "inAnswer": false
+        }
+      ],
+      "framePhrases": [
+        {
+          "en": "Please let me know",
+          "vi": "Hãy cho tôi biết…"
+        }
+      ]
+    },
+    {
+      "id": "writing-task1-formal-decline-education-06",
+      "group": "writing-task1",
+      "type": "formal-decline",
+      "topic": "education",
+      "number": 6,
+      "title": "Học theo nhóm",
+      "focus": "group projects at school",
+      "prompt": "Ms Brown has invited you in a professional capacity to a student project workshop, but you cannot attend. Apologise, give a reason and suggest a suitable alternative.",
+      "requirementsVi": [
+        "Cảm ơn rồi từ chối lịch sự.",
+        "Giải thích ngắn, tránh viện nhiều lý do.",
+        "Đề xuất vẫn phù hợp quan hệ công việc."
+      ],
+      "summaryVi": "Làm nhóm rèn giao tiếp và trách nhiệm; cần xem cả đóng góp cá nhân khi chấm.",
+      "paragraphs": [
+        {
+          "label": "Mở thư và từ chối",
+          "text": "Dear Ms Brown,\n\nThank you for your invitation to a student project workshop. I appreciate being considered. Unfortunately, I am unable to attend on Wednesday at six in the evening, and I apologise for any inconvenience this may cause.",
+          "noteVi": "Cảm ơn rồi từ chối lịch sự.",
+          "parts": [
+            {
+              "text": "Dear ",
+              "kind": "frame"
+            },
+            {
+              "text": "Ms Brown",
+              "kind": "detail",
+              "labelVi": "danh xưng và họ người nhận"
+            },
+            {
+              "text": ",\n\nThank you for your invitation to ",
+              "kind": "frame"
+            },
+            {
+              "text": "a student project workshop",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". I appreciate being considered. Unfortunately, I am unable to attend on ",
+              "kind": "frame"
+            },
+            {
+              "text": "Wednesday at six in the evening",
+              "kind": "detail",
+              "labelVi": "ngày và giờ"
+            },
+            {
+              "text": ", and I apologise for any inconvenience this may cause.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Dear [danh xưng và họ người nhận],\n\nThank you for your invitation to [sự kiện / hoạt động]. I appreciate being considered. Unfortunately, I am unable to attend on [ngày và giờ], and I apologise for any inconvenience this may cause."
+        },
+        {
+          "label": "Lý do",
+          "text": "The reason is that I have to attend a training session required by my employer. This commitment was arranged earlier, and I am unable to change it. I wanted to inform you as soon as possible so that you have time to adjust the arrangements if necessary.",
+          "noteVi": "Giải thích ngắn, tránh viện nhiều lý do.",
+          "parts": [
+            {
+              "text": "The reason is that I have to ",
+              "kind": "frame"
+            },
+            {
+              "text": "attend a training session required by my employer",
+              "kind": "detail",
+              "labelVi": "việc bận — động từ nguyên mẫu"
+            },
+            {
+              "text": ". This commitment was arranged earlier, and I am unable to change it. I wanted to inform you as soon as possible so that you have time to adjust the arrangements if necessary.",
+              "kind": "frame"
+            }
+          ],
+          "template": "The reason is that I have to [việc bận — động từ nguyên mẫu]. This commitment was arranged earlier, and I am unable to change it. I wanted to inform you as soon as possible so that you have time to adjust the arrangements if necessary."
+        },
+        {
+          "label": "Đề xuất khác",
+          "text": "If possible, I would welcome the opportunity to attend a later session or receive the materials. I remain interested in group projects at school, particularly because students learn to explain ideas and share responsibility. Please let me know whether this alternative would be suitable or whether you would prefer another arrangement.",
+          "noteVi": "Đề xuất vẫn phù hợp quan hệ công việc.",
+          "parts": [
+            {
+              "text": "If possible, I would welcome the opportunity to ",
+              "kind": "frame"
+            },
+            {
+              "text": "attend a later session or receive the materials",
+              "kind": "detail",
+              "labelVi": "đề xuất khác — động từ nguyên mẫu"
+            },
+            {
+              "text": ". I remain interested in ",
+              "kind": "frame"
+            },
+            {
+              "text": "group projects at school",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": ", particularly because ",
+              "kind": "frame"
+            },
+            {
+              "text": "students learn to explain ideas and share responsibility",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". Please let me know whether this alternative would be suitable or whether you would prefer another arrangement.",
+              "kind": "frame"
+            }
+          ],
+          "template": "If possible, I would welcome the opportunity to [đề xuất khác — động từ nguyên mẫu]. I remain interested in [chủ đề], particularly because [lợi ích — chủ ngữ + động từ]. Please let me know whether this alternative would be suitable or whether you would prefer another arrangement."
+        },
+        {
+          "label": "Kết thư",
+          "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\nMinh Nguyen",
+          "noteVi": "Biết tên người nhận: Dear Ms/Mr + họ → Yours sincerely. Chưa biết tên: Dear Sir or Madam → Yours faithfully.",
+          "parts": [
+            {
+              "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh Nguyen",
+              "kind": "detail",
+              "labelVi": "họ tên của bạn"
+            }
+          ],
+          "template": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n[họ tên của bạn]"
+        }
+      ],
+      "sections": [],
+      "options": [],
+      "selectedOption": null,
+      "register": "formal",
+      "wordCount": 165,
+      "mainWordCount": 165,
+      "phrases": [
+        {
+          "en": "share responsibility",
+          "vi": "chia sẻ trách nhiệm",
+          "inAnswer": true
+        },
+        {
+          "en": "individual contribution",
+          "vi": "đóng góp cá nhân",
+          "inAnswer": false
+        },
+        {
+          "en": "progress checks",
+          "vi": "kiểm tra tiến độ",
+          "inAnswer": false
+        }
+      ],
+      "framePhrases": [
+        {
+          "en": "Please let me know",
+          "vi": "Hãy cho tôi biết…"
+        }
+      ]
+    },
+    {
+      "id": "writing-task1-formal-decline-education-07",
+      "group": "writing-task1",
+      "type": "formal-decline",
+      "topic": "education",
+      "number": 7,
+      "title": "Nghỉ giữa giờ học",
+      "focus": "short breaks during study",
+      "prompt": "Ms Brown has invited you in a professional capacity to a healthy study habits session, but you cannot attend. Apologise, give a reason and suggest a suitable alternative.",
+      "requirementsVi": [
+        "Cảm ơn rồi từ chối lịch sự.",
+        "Giải thích ngắn, tránh viện nhiều lý do.",
+        "Đề xuất vẫn phù hợp quan hệ công việc."
+      ],
+      "summaryVi": "Nghỉ ngắn giúp đổi nhịp học; cần quy trình rõ để không phá vỡ tiết học.",
+      "paragraphs": [
+        {
+          "label": "Mở thư và từ chối",
+          "text": "Dear Ms Brown,\n\nThank you for your invitation to a healthy study habits session. I appreciate being considered. Unfortunately, I am unable to attend on Saturday at two in the afternoon, and I apologise for any inconvenience this may cause.",
+          "noteVi": "Cảm ơn rồi từ chối lịch sự.",
+          "parts": [
+            {
+              "text": "Dear ",
+              "kind": "frame"
+            },
+            {
+              "text": "Ms Brown",
+              "kind": "detail",
+              "labelVi": "danh xưng và họ người nhận"
+            },
+            {
+              "text": ",\n\nThank you for your invitation to ",
+              "kind": "frame"
+            },
+            {
+              "text": "a healthy study habits session",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". I appreciate being considered. Unfortunately, I am unable to attend on ",
+              "kind": "frame"
+            },
+            {
+              "text": "Saturday at two in the afternoon",
+              "kind": "detail",
+              "labelVi": "ngày và giờ"
+            },
+            {
+              "text": ", and I apologise for any inconvenience this may cause.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Dear [danh xưng và họ người nhận],\n\nThank you for your invitation to [sự kiện / hoạt động]. I appreciate being considered. Unfortunately, I am unable to attend on [ngày và giờ], and I apologise for any inconvenience this may cause."
+        },
+        {
+          "label": "Lý do",
+          "text": "The reason is that I have to collect a relative arriving from another town. This commitment was arranged earlier, and I am unable to change it. I wanted to inform you as soon as possible so that you have time to adjust the arrangements if necessary.",
+          "noteVi": "Giải thích ngắn, tránh viện nhiều lý do.",
+          "parts": [
+            {
+              "text": "The reason is that I have to ",
+              "kind": "frame"
+            },
+            {
+              "text": "collect a relative arriving from another town",
+              "kind": "detail",
+              "labelVi": "việc bận — động từ nguyên mẫu"
+            },
+            {
+              "text": ". This commitment was arranged earlier, and I am unable to change it. I wanted to inform you as soon as possible so that you have time to adjust the arrangements if necessary.",
+              "kind": "frame"
+            }
+          ],
+          "template": "The reason is that I have to [việc bận — động từ nguyên mẫu]. This commitment was arranged earlier, and I am unable to change it. I wanted to inform you as soon as possible so that you have time to adjust the arrangements if necessary."
+        },
+        {
+          "label": "Đề xuất khác",
+          "text": "If possible, I would welcome the opportunity to attend a later session or receive the materials. I remain interested in short breaks during study, particularly because students can return to work with better attention. Please let me know whether this alternative would be suitable or whether you would prefer another arrangement.",
+          "noteVi": "Đề xuất vẫn phù hợp quan hệ công việc.",
+          "parts": [
+            {
+              "text": "If possible, I would welcome the opportunity to ",
+              "kind": "frame"
+            },
+            {
+              "text": "attend a later session or receive the materials",
+              "kind": "detail",
+              "labelVi": "đề xuất khác — động từ nguyên mẫu"
+            },
+            {
+              "text": ". I remain interested in ",
+              "kind": "frame"
+            },
+            {
+              "text": "short breaks during study",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": ", particularly because ",
+              "kind": "frame"
+            },
+            {
+              "text": "students can return to work with better attention",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". Please let me know whether this alternative would be suitable or whether you would prefer another arrangement.",
+              "kind": "frame"
+            }
+          ],
+          "template": "If possible, I would welcome the opportunity to [đề xuất khác — động từ nguyên mẫu]. I remain interested in [chủ đề], particularly because [lợi ích — chủ ngữ + động từ]. Please let me know whether this alternative would be suitable or whether you would prefer another arrangement."
+        },
+        {
+          "label": "Kết thư",
+          "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\nMinh Nguyen",
+          "noteVi": "Biết tên người nhận: Dear Ms/Mr + họ → Yours sincerely. Chưa biết tên: Dear Sir or Madam → Yours faithfully.",
+          "parts": [
+            {
+              "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh Nguyen",
+              "kind": "detail",
+              "labelVi": "họ tên của bạn"
+            }
+          ],
+          "template": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n[họ tên của bạn]"
+        }
+      ],
+      "sections": [],
+      "options": [],
+      "selectedOption": null,
+      "register": "formal",
+      "wordCount": 165,
+      "mainWordCount": 165,
+      "phrases": [
+        {
+          "en": "a short break",
+          "vi": "giờ nghỉ ngắn",
+          "inAnswer": false
+        },
+        {
+          "en": "return to work",
+          "vi": "quay lại làm việc",
+          "inAnswer": true
+        },
+        {
+          "en": "a clear routine",
+          "vi": "nếp sinh hoạt rõ ràng",
+          "inAnswer": false
+        }
+      ],
+      "framePhrases": [
+        {
+          "en": "Please let me know",
+          "vi": "Hãy cho tôi biết…"
+        }
+      ]
+    },
+    {
+      "id": "writing-task1-formal-decline-education-08",
+      "group": "writing-task1",
+      "type": "formal-decline",
+      "topic": "education",
+      "number": 8,
+      "title": "Đồng phục học sinh",
+      "focus": "school uniforms",
+      "prompt": "Ms Brown has invited you in a professional capacity to a school uniform exchange event, but you cannot attend. Apologise, give a reason and suggest a suitable alternative.",
+      "requirementsVi": [
+        "Cảm ơn rồi từ chối lịch sự.",
+        "Giải thích ngắn, tránh viện nhiều lý do.",
+        "Đề xuất vẫn phù hợp quan hệ công việc."
+      ],
+      "summaryVi": "Đồng phục đơn giản giảm áp lực ăn mặc; mẫu quá riêng và đắt có thể làm tăng gánh nặng.",
+      "paragraphs": [
+        {
+          "label": "Mở thư và từ chối",
+          "text": "Dear Ms Brown,\n\nThank you for your invitation to a school uniform exchange event. I appreciate being considered. Unfortunately, I am unable to attend on Sunday at ten in the morning, and I apologise for any inconvenience this may cause.",
+          "noteVi": "Cảm ơn rồi từ chối lịch sự.",
+          "parts": [
+            {
+              "text": "Dear ",
+              "kind": "frame"
+            },
+            {
+              "text": "Ms Brown",
+              "kind": "detail",
+              "labelVi": "danh xưng và họ người nhận"
+            },
+            {
+              "text": ",\n\nThank you for your invitation to ",
+              "kind": "frame"
+            },
+            {
+              "text": "a school uniform exchange event",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". I appreciate being considered. Unfortunately, I am unable to attend on ",
+              "kind": "frame"
+            },
+            {
+              "text": "Sunday at ten in the morning",
+              "kind": "detail",
+              "labelVi": "ngày và giờ"
+            },
+            {
+              "text": ", and I apologise for any inconvenience this may cause.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Dear [danh xưng và họ người nhận],\n\nThank you for your invitation to [sự kiện / hoạt động]. I appreciate being considered. Unfortunately, I am unable to attend on [ngày và giờ], and I apologise for any inconvenience this may cause."
+        },
+        {
+          "label": "Lý do",
+          "text": "The reason is that I have to take an exam that cannot be moved. This commitment was arranged earlier, and I am unable to change it. I wanted to inform you as soon as possible so that you have time to adjust the arrangements if necessary.",
+          "noteVi": "Giải thích ngắn, tránh viện nhiều lý do.",
+          "parts": [
+            {
+              "text": "The reason is that I have to ",
+              "kind": "frame"
+            },
+            {
+              "text": "take an exam that cannot be moved",
+              "kind": "detail",
+              "labelVi": "việc bận — động từ nguyên mẫu"
+            },
+            {
+              "text": ". This commitment was arranged earlier, and I am unable to change it. I wanted to inform you as soon as possible so that you have time to adjust the arrangements if necessary.",
+              "kind": "frame"
+            }
+          ],
+          "template": "The reason is that I have to [việc bận — động từ nguyên mẫu]. This commitment was arranged earlier, and I am unable to change it. I wanted to inform you as soon as possible so that you have time to adjust the arrangements if necessary."
+        },
+        {
+          "label": "Đề xuất khác",
+          "text": "If possible, I would welcome the opportunity to attend a later session or receive the materials. I remain interested in school uniforms, particularly because families can make daily clothing decisions more easily. Please let me know whether this alternative would be suitable or whether you would prefer another arrangement.",
+          "noteVi": "Đề xuất vẫn phù hợp quan hệ công việc.",
+          "parts": [
+            {
+              "text": "If possible, I would welcome the opportunity to ",
+              "kind": "frame"
+            },
+            {
+              "text": "attend a later session or receive the materials",
+              "kind": "detail",
+              "labelVi": "đề xuất khác — động từ nguyên mẫu"
+            },
+            {
+              "text": ". I remain interested in ",
+              "kind": "frame"
+            },
+            {
+              "text": "school uniforms",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": ", particularly because ",
+              "kind": "frame"
+            },
+            {
+              "text": "families can make daily clothing decisions more easily",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". Please let me know whether this alternative would be suitable or whether you would prefer another arrangement.",
+              "kind": "frame"
+            }
+          ],
+          "template": "If possible, I would welcome the opportunity to [đề xuất khác — động từ nguyên mẫu]. I remain interested in [chủ đề], particularly because [lợi ích — chủ ngữ + động từ]. Please let me know whether this alternative would be suitable or whether you would prefer another arrangement."
+        },
+        {
+          "label": "Kết thư",
+          "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\nMinh Nguyen",
+          "noteVi": "Biết tên người nhận: Dear Ms/Mr + họ → Yours sincerely. Chưa biết tên: Dear Sir or Madam → Yours faithfully.",
+          "parts": [
+            {
+              "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh Nguyen",
+              "kind": "detail",
+              "labelVi": "họ tên của bạn"
+            }
+          ],
+          "template": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n[họ tên của bạn]"
+        }
+      ],
+      "sections": [],
+      "options": [],
+      "selectedOption": null,
+      "register": "formal",
+      "wordCount": 163,
+      "mainWordCount": 163,
+      "phrases": [
+        {
+          "en": "an affordable uniform",
+          "vi": "đồng phục vừa túi tiền",
+          "inAnswer": false
+        },
+        {
+          "en": "family budgets",
+          "vi": "ngân sách gia đình",
+          "inAnswer": false
+        },
+        {
+          "en": "second-hand exchange",
+          "vi": "trao đổi đồ đã qua sử dụng",
+          "inAnswer": false
+        }
+      ],
+      "framePhrases": [
+        {
+          "en": "Please let me know",
+          "vi": "Hãy cho tôi biết…"
+        }
+      ]
+    },
+    {
+      "id": "writing-task1-formal-decline-education-09",
+      "group": "writing-task1",
+      "type": "formal-decline",
+      "topic": "education",
+      "number": 9,
+      "title": "Học nghề",
+      "focus": "vocational education",
+      "prompt": "Ms Brown has invited you in a professional capacity to a career and training information day, but you cannot attend. Apologise, give a reason and suggest a suitable alternative.",
+      "requirementsVi": [
+        "Cảm ơn rồi từ chối lịch sự.",
+        "Giải thích ngắn, tránh viện nhiều lý do.",
+        "Đề xuất vẫn phù hợp quan hệ công việc."
+      ],
+      "summaryVi": "Tư vấn học nghề mở thêm lựa chọn; cần hiểu nội dung học và điều kiện làm việc trước khi chọn.",
+      "paragraphs": [
+        {
+          "label": "Mở thư và từ chối",
+          "text": "Dear Ms Brown,\n\nThank you for your invitation to a career and training information day. I appreciate being considered. Unfortunately, I am unable to attend on Thursday at six in the evening, and I apologise for any inconvenience this may cause.",
+          "noteVi": "Cảm ơn rồi từ chối lịch sự.",
+          "parts": [
+            {
+              "text": "Dear ",
+              "kind": "frame"
+            },
+            {
+              "text": "Ms Brown",
+              "kind": "detail",
+              "labelVi": "danh xưng và họ người nhận"
+            },
+            {
+              "text": ",\n\nThank you for your invitation to ",
+              "kind": "frame"
+            },
+            {
+              "text": "a career and training information day",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". I appreciate being considered. Unfortunately, I am unable to attend on ",
+              "kind": "frame"
+            },
+            {
+              "text": "Thursday at six in the evening",
+              "kind": "detail",
+              "labelVi": "ngày và giờ"
+            },
+            {
+              "text": ", and I apologise for any inconvenience this may cause.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Dear [danh xưng và họ người nhận],\n\nThank you for your invitation to [sự kiện / hoạt động]. I appreciate being considered. Unfortunately, I am unable to attend on [ngày và giờ], and I apologise for any inconvenience this may cause."
+        },
+        {
+          "label": "Lý do",
+          "text": "The reason is that I have to help my family prepare for a gathering. This commitment was arranged earlier, and I am unable to change it. I wanted to inform you as soon as possible so that you have time to adjust the arrangements if necessary.",
+          "noteVi": "Giải thích ngắn, tránh viện nhiều lý do.",
+          "parts": [
+            {
+              "text": "The reason is that I have to ",
+              "kind": "frame"
+            },
+            {
+              "text": "help my family prepare for a gathering",
+              "kind": "detail",
+              "labelVi": "việc bận — động từ nguyên mẫu"
+            },
+            {
+              "text": ". This commitment was arranged earlier, and I am unable to change it. I wanted to inform you as soon as possible so that you have time to adjust the arrangements if necessary.",
+              "kind": "frame"
+            }
+          ],
+          "template": "The reason is that I have to [việc bận — động từ nguyên mẫu]. This commitment was arranged earlier, and I am unable to change it. I wanted to inform you as soon as possible so that you have time to adjust the arrangements if necessary."
+        },
+        {
+          "label": "Đề xuất khác",
+          "text": "If possible, I would welcome the opportunity to attend a later session or receive the materials. I remain interested in vocational education, particularly because students can discover routes that match practical interests. Please let me know whether this alternative would be suitable or whether you would prefer another arrangement.",
+          "noteVi": "Đề xuất vẫn phù hợp quan hệ công việc.",
+          "parts": [
+            {
+              "text": "If possible, I would welcome the opportunity to ",
+              "kind": "frame"
+            },
+            {
+              "text": "attend a later session or receive the materials",
+              "kind": "detail",
+              "labelVi": "đề xuất khác — động từ nguyên mẫu"
+            },
+            {
+              "text": ". I remain interested in ",
+              "kind": "frame"
+            },
+            {
+              "text": "vocational education",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": ", particularly because ",
+              "kind": "frame"
+            },
+            {
+              "text": "students can discover routes that match practical interests",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". Please let me know whether this alternative would be suitable or whether you would prefer another arrangement.",
+              "kind": "frame"
+            }
+          ],
+          "template": "If possible, I would welcome the opportunity to [đề xuất khác — động từ nguyên mẫu]. I remain interested in [chủ đề], particularly because [lợi ích — chủ ngữ + động từ]. Please let me know whether this alternative would be suitable or whether you would prefer another arrangement."
+        },
+        {
+          "label": "Kết thư",
+          "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\nMinh Nguyen",
+          "noteVi": "Biết tên người nhận: Dear Ms/Mr + họ → Yours sincerely. Chưa biết tên: Dear Sir or Madam → Yours faithfully.",
+          "parts": [
+            {
+              "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh Nguyen",
+              "kind": "detail",
+              "labelVi": "họ tên của bạn"
+            }
+          ],
+          "template": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n[họ tên của bạn]"
+        }
+      ],
+      "sections": [],
+      "options": [],
+      "selectedOption": null,
+      "register": "formal",
+      "wordCount": 164,
+      "mainWordCount": 164,
+      "phrases": [
+        {
+          "en": "vocational courses",
+          "vi": "khóa học nghề",
+          "inAnswer": false
+        },
+        {
+          "en": "entry requirements",
+          "vi": "điều kiện đầu vào",
+          "inAnswer": false
+        },
+        {
+          "en": "career guidance",
+          "vi": "hướng nghiệp",
+          "inAnswer": false
+        }
+      ],
+      "framePhrases": [
+        {
+          "en": "Please let me know",
+          "vi": "Hãy cho tôi biết…"
+        }
+      ]
+    },
+    {
+      "id": "writing-task1-formal-decline-education-10",
+      "group": "writing-task1",
+      "type": "formal-decline",
+      "topic": "education",
+      "number": 10,
+      "title": "Học suốt đời",
+      "focus": "learning new skills as an adult",
+      "prompt": "Ms Brown has invited you in a professional capacity to an adult learning open evening, but you cannot attend. Apologise, give a reason and suggest a suitable alternative.",
+      "requirementsVi": [
+        "Cảm ơn rồi từ chối lịch sự.",
+        "Giải thích ngắn, tránh viện nhiều lý do.",
+        "Đề xuất vẫn phù hợp quan hệ công việc."
+      ],
+      "summaryVi": "Lớp học cho người lớn cần vừa túi tiền và phù hợp giờ làm, đi lại, chăm con.",
+      "paragraphs": [
+        {
+          "label": "Mở thư và từ chối",
+          "text": "Dear Ms Brown,\n\nThank you for your invitation to an adult learning open evening. I appreciate being considered. Unfortunately, I am unable to attend on Friday at six in the evening, and I apologise for any inconvenience this may cause.",
+          "noteVi": "Cảm ơn rồi từ chối lịch sự.",
+          "parts": [
+            {
+              "text": "Dear ",
+              "kind": "frame"
+            },
+            {
+              "text": "Ms Brown",
+              "kind": "detail",
+              "labelVi": "danh xưng và họ người nhận"
+            },
+            {
+              "text": ",\n\nThank you for your invitation to ",
+              "kind": "frame"
+            },
+            {
+              "text": "an adult learning open evening",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". I appreciate being considered. Unfortunately, I am unable to attend on ",
+              "kind": "frame"
+            },
+            {
+              "text": "Friday at six in the evening",
+              "kind": "detail",
+              "labelVi": "ngày và giờ"
+            },
+            {
+              "text": ", and I apologise for any inconvenience this may cause.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Dear [danh xưng và họ người nhận],\n\nThank you for your invitation to [sự kiện / hoạt động]. I appreciate being considered. Unfortunately, I am unable to attend on [ngày và giờ], and I apologise for any inconvenience this may cause."
+        },
+        {
+          "label": "Lý do",
+          "text": "The reason is that I have to travel to my hometown for a family commitment. This commitment was arranged earlier, and I am unable to change it. I wanted to inform you as soon as possible so that you have time to adjust the arrangements if necessary.",
+          "noteVi": "Giải thích ngắn, tránh viện nhiều lý do.",
+          "parts": [
+            {
+              "text": "The reason is that I have to ",
+              "kind": "frame"
+            },
+            {
+              "text": "travel to my hometown for a family commitment",
+              "kind": "detail",
+              "labelVi": "việc bận — động từ nguyên mẫu"
+            },
+            {
+              "text": ". This commitment was arranged earlier, and I am unable to change it. I wanted to inform you as soon as possible so that you have time to adjust the arrangements if necessary.",
+              "kind": "frame"
+            }
+          ],
+          "template": "The reason is that I have to [việc bận — động từ nguyên mẫu]. This commitment was arranged earlier, and I am unable to change it. I wanted to inform you as soon as possible so that you have time to adjust the arrangements if necessary."
+        },
+        {
+          "label": "Đề xuất khác",
+          "text": "If possible, I would welcome the opportunity to attend a later session or receive the materials. I remain interested in learning new skills as an adult, particularly because adults can update skills without returning to full-time study. Please let me know whether this alternative would be suitable or whether you would prefer another arrangement.",
+          "noteVi": "Đề xuất vẫn phù hợp quan hệ công việc.",
+          "parts": [
+            {
+              "text": "If possible, I would welcome the opportunity to ",
+              "kind": "frame"
+            },
+            {
+              "text": "attend a later session or receive the materials",
+              "kind": "detail",
+              "labelVi": "đề xuất khác — động từ nguyên mẫu"
+            },
+            {
+              "text": ". I remain interested in ",
+              "kind": "frame"
+            },
+            {
+              "text": "learning new skills as an adult",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": ", particularly because ",
+              "kind": "frame"
+            },
+            {
+              "text": "adults can update skills without returning to full-time study",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". Please let me know whether this alternative would be suitable or whether you would prefer another arrangement.",
+              "kind": "frame"
+            }
+          ],
+          "template": "If possible, I would welcome the opportunity to [đề xuất khác — động từ nguyên mẫu]. I remain interested in [chủ đề], particularly because [lợi ích — chủ ngữ + động từ]. Please let me know whether this alternative would be suitable or whether you would prefer another arrangement."
+        },
+        {
+          "label": "Kết thư",
+          "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\nMinh Nguyen",
+          "noteVi": "Biết tên người nhận: Dear Ms/Mr + họ → Yours sincerely. Chưa biết tên: Dear Sir or Madam → Yours faithfully.",
+          "parts": [
+            {
+              "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh Nguyen",
+              "kind": "detail",
+              "labelVi": "họ tên của bạn"
+            }
+          ],
+          "template": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n[họ tên của bạn]"
+        }
+      ],
+      "sections": [],
+      "options": [],
+      "selectedOption": null,
+      "register": "formal",
+      "wordCount": 169,
+      "mainWordCount": 169,
+      "phrases": [
+        {
+          "en": "lifelong learning",
+          "vi": "học suốt đời",
+          "inAnswer": false
+        },
+        {
+          "en": "caring responsibilities",
+          "vi": "trách nhiệm chăm sóc gia đình",
+          "inAnswer": false
+        },
+        {
+          "en": "flexible schedules",
+          "vi": "lịch linh hoạt",
+          "inAnswer": false
+        }
+      ],
+      "framePhrases": [
+        {
+          "en": "Please let me know",
+          "vi": "Hãy cho tôi biết…"
+        }
+      ]
+    }
+  ]
+}

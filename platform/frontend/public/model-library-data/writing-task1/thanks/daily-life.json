@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-05-v1",
+  "version": "2026-11-05-v2-frames",
   "samples": [
     {
       "id": "writing-task1-thanks-daily-life-01",
@@ -9,40 +9,146 @@
       "number": 1,
       "title": "Thói quen đi bộ",
       "focus": "walking as a daily habit",
-      "prompt": "A friend helped you prepare for a neighbourhood walking event. Thank your friend, explain how the help made a difference, and suggest a way to show your appreciation.",
+      "prompt": "Your friend Alex helped you prepare for a neighbourhood walking event. Thank the person, explain the effect of the help and offer to return the favour.",
       "requirementsVi": [
-        "Cảm ơn việc giúp cụ thể.",
-        "Nêu tác dụng và điều học được.",
-        "Đề nghị đáp lại."
+        "Cảm ơn đúng hành động bạn đã giúp.",
+        "Kết quả và cảm nhận sau khi được giúp.",
+        "Điều học được và lời đề nghị đáp lại."
       ],
       "summaryVi": "Đi bộ dễ thành thói quen khi đường tới nơi cần đến thuận tiện và không bị cản trở.",
       "paragraphs": [
         {
-          "label": "Cảm ơn",
-          "text": "Hi Alex,\n\nI am writing to thank you for helping me prepare for a neighbourhood walking event. It was kind of you to give up part of your weekend, and I really appreciate the time you spent checking the plan with me.",
-          "noteVi": "Nêu hành động được giúp và sự trân trọng."
+          "label": "Mở thư và cảm ơn",
+          "text": "Hi Alex,\n\nI am writing to thank you for helping me organise the materials and check the programme. It was very kind of you, and I really appreciate the time you spent with me. Your help made preparing for a neighbourhood walking event much easier.",
+          "noteVi": "Cảm ơn đúng hành động bạn đã giúp.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nI am writing to thank you for ",
+              "kind": "frame"
+            },
+            {
+              "text": "helping me organise the materials and check the programme",
+              "kind": "detail",
+              "labelVi": "việc được giúp — V-ing"
+            },
+            {
+              "text": ". It was very kind of you, and I really appreciate the time you spent with me. Your help made preparing for ",
+              "kind": "frame"
+            },
+            {
+              "text": "a neighbourhood walking event",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": " much easier.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nI am writing to thank you for [việc được giúp — V-ing]. It was very kind of you, and I really appreciate the time you spent with me. Your help made preparing for [sự kiện / hoạt động] much easier."
         },
         {
-          "label": "Tác dụng",
-          "text": "Your suggestions helped us explore a short local route and note useful improvements without rushing through the instructions. You also reminded me to prepare comfortable walking shoes. That small detail made the session easier to organise, and I felt much more confident when the other participants arrived.",
-          "noteVi": "Dùng chi tiết để lời cảm ơn cụ thể."
-        },
-        {
-          "label": "Điều học được",
-          "text": "The discussion was useful because people can include gentle movement in ordinary routines. One example that stayed with me was this: a resident can walk to a nearby market instead of taking a motorbike for a very short trip. I would not have had as much time to listen and learn if I had still been struggling with the preparations on my own.",
-          "noteVi": "Đi bộ dễ thành thói quen khi đường tới nơi cần đến thuận tiện và không bị cản trở."
+          "label": "Kết quả",
+          "text": "Thanks to your help, I was able to explore a short local route and note useful improvements without rushing through the instructions. You also reminded me to bring comfortable walking shoes. It would have been much more difficult on my own, and I felt more confident knowing that I could count on you.",
+          "noteVi": "Kết quả và cảm nhận sau khi được giúp.",
+          "parts": [
+            {
+              "text": "Thanks to your help, I was able to ",
+              "kind": "frame"
+            },
+            {
+              "text": "explore a short local route and note useful improvements without rushing through the instructions",
+              "kind": "detail",
+              "labelVi": "kết quả — động từ nguyên mẫu"
+            },
+            {
+              "text": ". You also reminded me to bring ",
+              "kind": "frame"
+            },
+            {
+              "text": "comfortable walking shoes",
+              "kind": "detail",
+              "labelVi": "đồ cần mang"
+            },
+            {
+              "text": ". It would have been much more difficult on my own, and I felt more confident knowing that I could count on you.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Thanks to your help, I was able to [kết quả — động từ nguyên mẫu]. You also reminded me to bring [đồ cần mang]. It would have been much more difficult on my own, and I felt more confident knowing that I could count on you."
         },
         {
           "label": "Đáp lại",
-          "text": "I would like to take you out for lunch next weekend as a small way of saying thank you. Please tell me which day would suit you. Thanks again for being so supportive.\n\nBest wishes,\nMinh",
-          "noteVi": "Lời đề nghị đáp lại có hành động cụ thể."
+          "text": "One thing I learned was that people can include gentle movement in ordinary routines. For example, a resident can walk to a nearby market instead of taking a motorbike for a very short trip. I would like to take you out for lunch next weekend as a small way of saying thank you. Please tell me when you are free so that we can make a plan.",
+          "noteVi": "Điều học được và lời đề nghị đáp lại.",
+          "parts": [
+            {
+              "text": "One thing I learned was that ",
+              "kind": "frame"
+            },
+            {
+              "text": "people can include gentle movement in ordinary routines",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". For example, ",
+              "kind": "frame"
+            },
+            {
+              "text": "a resident can walk to a nearby market instead of taking a motorbike for a very short trip",
+              "kind": "detail",
+              "labelVi": "ví dụ — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I would like to ",
+              "kind": "frame"
+            },
+            {
+              "text": "take you out for lunch next weekend",
+              "kind": "detail",
+              "labelVi": "việc đáp lại — động từ nguyên mẫu"
+            },
+            {
+              "text": " as a small way of saying thank you. Please tell me when you are free so that we can make a plan.",
+              "kind": "frame"
+            }
+          ],
+          "template": "One thing I learned was that [lợi ích — chủ ngữ + động từ]. For example, [ví dụ — chủ ngữ + động từ]. I would like to [việc đáp lại — động từ nguyên mẫu] as a small way of saying thank you. Please tell me when you are free so that we can make a plan."
+        },
+        {
+          "label": "Kết thư",
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 188,
-      "mainWordCount": 188,
+      "register": "informal",
+      "wordCount": 199,
+      "mainWordCount": 199,
       "phrases": [
         {
           "en": "everyday walking",
@@ -66,6 +172,10 @@
           "vi": "Tôi viết để…"
         },
         {
+          "en": "For example",
+          "vi": "Ví dụ…"
+        },
+        {
           "en": "I would like to",
           "vi": "Tôi muốn…"
         }
@@ -79,40 +189,146 @@
       "number": 2,
       "title": "Nấu ăn ở nhà",
       "focus": "cooking simple meals at home",
-      "prompt": "A friend helped you prepare for a simple home cooking class. Thank your friend, explain how the help made a difference, and suggest a way to show your appreciation.",
+      "prompt": "Your friend Alex helped you prepare for a simple home cooking class. Thank the person, explain the effect of the help and offer to return the favour.",
       "requirementsVi": [
-        "Cảm ơn việc giúp cụ thể.",
-        "Nêu tác dụng và điều học được.",
-        "Đề nghị đáp lại."
+        "Cảm ơn đúng hành động bạn đã giúp.",
+        "Kết quả và cảm nhận sau khi được giúp.",
+        "Điều học được và lời đề nghị đáp lại."
       ],
       "summaryVi": "Biết vài món đơn giản giúp tự chủ ăn uống; công thức nên phù hợp bếp và thời gian thực tế.",
       "paragraphs": [
         {
-          "label": "Cảm ơn",
-          "text": "Hi Alex,\n\nI am writing to thank you for helping me prepare for a simple home cooking class. It was kind of you to give up part of your weekend, and I really appreciate the time you spent checking the plan with me.",
-          "noteVi": "Nêu hành động được giúp và sự trân trọng."
+          "label": "Mở thư và cảm ơn",
+          "text": "Hi Alex,\n\nI am writing to thank you for helping me organise the materials and check the programme. It was very kind of you, and I really appreciate the time you spent with me. Your help made preparing for a simple home cooking class much easier.",
+          "noteVi": "Cảm ơn đúng hành động bạn đã giúp.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nI am writing to thank you for ",
+              "kind": "frame"
+            },
+            {
+              "text": "helping me organise the materials and check the programme",
+              "kind": "detail",
+              "labelVi": "việc được giúp — V-ing"
+            },
+            {
+              "text": ". It was very kind of you, and I really appreciate the time you spent with me. Your help made preparing for ",
+              "kind": "frame"
+            },
+            {
+              "text": "a simple home cooking class",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": " much easier.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nI am writing to thank you for [việc được giúp — V-ing]. It was very kind of you, and I really appreciate the time you spent with me. Your help made preparing for [sự kiện / hoạt động] much easier."
         },
         {
-          "label": "Tác dụng",
-          "text": "Your suggestions helped us prepare an affordable meal using basic equipment without rushing through the instructions. You also reminded me to prepare a food container. That small detail made the session easier to organise, and I felt much more confident when the other participants arrived.",
-          "noteVi": "Dùng chi tiết để lời cảm ơn cụ thể."
-        },
-        {
-          "label": "Điều học được",
-          "text": "The discussion was useful because people have more control over their meals and spending. One example that stayed with me was this: a student can prepare rice, vegetables and eggs instead of ordering food every evening. I would not have had as much time to listen and learn if I had still been struggling with the preparations on my own.",
-          "noteVi": "Biết vài món đơn giản giúp tự chủ ăn uống; công thức nên phù hợp bếp và thời gian thực tế."
+          "label": "Kết quả",
+          "text": "Thanks to your help, I was able to prepare an affordable meal using basic equipment without rushing through the instructions. You also reminded me to bring a food container. It would have been much more difficult on my own, and I felt more confident knowing that I could count on you.",
+          "noteVi": "Kết quả và cảm nhận sau khi được giúp.",
+          "parts": [
+            {
+              "text": "Thanks to your help, I was able to ",
+              "kind": "frame"
+            },
+            {
+              "text": "prepare an affordable meal using basic equipment without rushing through the instructions",
+              "kind": "detail",
+              "labelVi": "kết quả — động từ nguyên mẫu"
+            },
+            {
+              "text": ". You also reminded me to bring ",
+              "kind": "frame"
+            },
+            {
+              "text": "a food container",
+              "kind": "detail",
+              "labelVi": "đồ cần mang"
+            },
+            {
+              "text": ". It would have been much more difficult on my own, and I felt more confident knowing that I could count on you.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Thanks to your help, I was able to [kết quả — động từ nguyên mẫu]. You also reminded me to bring [đồ cần mang]. It would have been much more difficult on my own, and I felt more confident knowing that I could count on you."
         },
         {
           "label": "Đáp lại",
-          "text": "I would like to take you out for lunch next weekend as a small way of saying thank you. Please tell me which day would suit you. Thanks again for being so supportive.\n\nBest wishes,\nMinh",
-          "noteVi": "Lời đề nghị đáp lại có hành động cụ thể."
+          "text": "One thing I learned was that people have more control over their meals and spending. For example, a student can prepare rice, vegetables and eggs instead of ordering food every evening. I would like to take you out for lunch next weekend as a small way of saying thank you. Please tell me when you are free so that we can make a plan.",
+          "noteVi": "Điều học được và lời đề nghị đáp lại.",
+          "parts": [
+            {
+              "text": "One thing I learned was that ",
+              "kind": "frame"
+            },
+            {
+              "text": "people have more control over their meals and spending",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". For example, ",
+              "kind": "frame"
+            },
+            {
+              "text": "a student can prepare rice, vegetables and eggs instead of ordering food every evening",
+              "kind": "detail",
+              "labelVi": "ví dụ — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I would like to ",
+              "kind": "frame"
+            },
+            {
+              "text": "take you out for lunch next weekend",
+              "kind": "detail",
+              "labelVi": "việc đáp lại — động từ nguyên mẫu"
+            },
+            {
+              "text": " as a small way of saying thank you. Please tell me when you are free so that we can make a plan.",
+              "kind": "frame"
+            }
+          ],
+          "template": "One thing I learned was that [lợi ích — chủ ngữ + động từ]. For example, [ví dụ — chủ ngữ + động từ]. I would like to [việc đáp lại — động từ nguyên mẫu] as a small way of saying thank you. Please tell me when you are free so that we can make a plan."
+        },
+        {
+          "label": "Kết thư",
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 184,
-      "mainWordCount": 184,
+      "register": "informal",
+      "wordCount": 195,
+      "mainWordCount": 195,
       "phrases": [
         {
           "en": "basic equipment",
@@ -136,6 +352,10 @@
           "vi": "Tôi viết để…"
         },
         {
+          "en": "For example",
+          "vi": "Ví dụ…"
+        },
+        {
           "en": "I would like to",
           "vi": "Tôi muốn…"
         }
@@ -149,40 +369,146 @@
       "number": 3,
       "title": "Thể thao đồng đội",
       "focus": "team sports in the community",
-      "prompt": "A friend helped you prepare for a beginner community sports session. Thank your friend, explain how the help made a difference, and suggest a way to show your appreciation.",
+      "prompt": "Your friend Alex helped you prepare for a beginner community sports session. Thank the person, explain the effect of the help and offer to return the favour.",
       "requirementsVi": [
-        "Cảm ơn việc giúp cụ thể.",
-        "Nêu tác dụng và điều học được.",
-        "Đề nghị đáp lại."
+        "Cảm ơn đúng hành động bạn đã giúp.",
+        "Kết quả và cảm nhận sau khi được giúp.",
+        "Điều học được và lời đề nghị đáp lại."
       ],
       "summaryVi": "Thể thao nhóm tạo kết nối; buổi dành cho người mới cần thân thiện và cho mọi người tham gia.",
       "paragraphs": [
         {
-          "label": "Cảm ơn",
-          "text": "Hi Alex,\n\nI am writing to thank you for helping me prepare for a beginner community sports session. It was kind of you to give up part of your weekend, and I really appreciate the time you spent checking the plan with me.",
-          "noteVi": "Nêu hành động được giúp và sự trân trọng."
+          "label": "Mở thư và cảm ơn",
+          "text": "Hi Alex,\n\nI am writing to thank you for helping me organise the materials and check the programme. It was very kind of you, and I really appreciate the time you spent with me. Your help made preparing for a beginner community sports session much easier.",
+          "noteVi": "Cảm ơn đúng hành động bạn đã giúp.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nI am writing to thank you for ",
+              "kind": "frame"
+            },
+            {
+              "text": "helping me organise the materials and check the programme",
+              "kind": "detail",
+              "labelVi": "việc được giúp — V-ing"
+            },
+            {
+              "text": ". It was very kind of you, and I really appreciate the time you spent with me. Your help made preparing for ",
+              "kind": "frame"
+            },
+            {
+              "text": "a beginner community sports session",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": " much easier.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nI am writing to thank you for [việc được giúp — V-ing]. It was very kind of you, and I really appreciate the time you spent with me. Your help made preparing for [sự kiện / hoạt động] much easier."
         },
         {
-          "label": "Tác dụng",
-          "text": "Your suggestions helped us try simple team games in a friendly group without rushing through the instructions. You also reminded me to prepare sports shoes and water. That small detail made the session easier to organise, and I felt much more confident when the other participants arrived.",
-          "noteVi": "Dùng chi tiết để lời cảm ơn cụ thể."
-        },
-        {
-          "label": "Điều học được",
-          "text": "The discussion was useful because residents can exercise while meeting other people. One example that stayed with me was this: a student new to a neighbourhood can join a weekend volleyball group and gradually get to know other players. I would not have had as much time to listen and learn if I had still been struggling with the preparations on my own.",
-          "noteVi": "Thể thao nhóm tạo kết nối; buổi dành cho người mới cần thân thiện và cho mọi người tham gia."
+          "label": "Kết quả",
+          "text": "Thanks to your help, I was able to try simple team games in a friendly group without rushing through the instructions. You also reminded me to bring sports shoes and water. It would have been much more difficult on my own, and I felt more confident knowing that I could count on you.",
+          "noteVi": "Kết quả và cảm nhận sau khi được giúp.",
+          "parts": [
+            {
+              "text": "Thanks to your help, I was able to ",
+              "kind": "frame"
+            },
+            {
+              "text": "try simple team games in a friendly group without rushing through the instructions",
+              "kind": "detail",
+              "labelVi": "kết quả — động từ nguyên mẫu"
+            },
+            {
+              "text": ". You also reminded me to bring ",
+              "kind": "frame"
+            },
+            {
+              "text": "sports shoes and water",
+              "kind": "detail",
+              "labelVi": "đồ cần mang"
+            },
+            {
+              "text": ". It would have been much more difficult on my own, and I felt more confident knowing that I could count on you.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Thanks to your help, I was able to [kết quả — động từ nguyên mẫu]. You also reminded me to bring [đồ cần mang]. It would have been much more difficult on my own, and I felt more confident knowing that I could count on you."
         },
         {
           "label": "Đáp lại",
-          "text": "I would like to take you out for lunch next weekend as a small way of saying thank you. Please tell me which day would suit you. Thanks again for being so supportive.\n\nBest wishes,\nMinh",
-          "noteVi": "Lời đề nghị đáp lại có hành động cụ thể."
+          "text": "One thing I learned was that residents can exercise while meeting other people. For example, a student new to a neighbourhood can join a weekend volleyball group and gradually get to know other players. I would like to take you out for lunch next weekend as a small way of saying thank you. Please tell me when you are free so that we can make a plan.",
+          "noteVi": "Điều học được và lời đề nghị đáp lại.",
+          "parts": [
+            {
+              "text": "One thing I learned was that ",
+              "kind": "frame"
+            },
+            {
+              "text": "residents can exercise while meeting other people",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". For example, ",
+              "kind": "frame"
+            },
+            {
+              "text": "a student new to a neighbourhood can join a weekend volleyball group and gradually get to know other players",
+              "kind": "detail",
+              "labelVi": "ví dụ — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I would like to ",
+              "kind": "frame"
+            },
+            {
+              "text": "take you out for lunch next weekend",
+              "kind": "detail",
+              "labelVi": "việc đáp lại — động từ nguyên mẫu"
+            },
+            {
+              "text": " as a small way of saying thank you. Please tell me when you are free so that we can make a plan.",
+              "kind": "frame"
+            }
+          ],
+          "template": "One thing I learned was that [lợi ích — chủ ngữ + động từ]. For example, [ví dụ — chủ ngữ + động từ]. I would like to [việc đáp lại — động từ nguyên mẫu] as a small way of saying thank you. Please tell me when you are free so that we can make a plan."
+        },
+        {
+          "label": "Kết thư",
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 189,
-      "mainWordCount": 189,
+      "register": "informal",
+      "wordCount": 200,
+      "mainWordCount": 200,
       "phrases": [
         {
           "en": "a beginner session",
@@ -206,6 +532,10 @@
           "vi": "Tôi viết để…"
         },
         {
+          "en": "For example",
+          "vi": "Ví dụ…"
+        },
+        {
           "en": "I would like to",
           "vi": "Tôi muốn…"
         }
@@ -219,40 +549,146 @@
       "number": 4,
       "title": "Ngủ và dùng điện thoại",
       "focus": "phone use before bedtime",
-      "prompt": "A friend helped you prepare for an evening routine discussion. Thank your friend, explain how the help made a difference, and suggest a way to show your appreciation.",
+      "prompt": "Your friend Alex helped you prepare for an evening routine discussion. Thank the person, explain the effect of the help and offer to return the favour.",
       "requirementsVi": [
-        "Cảm ơn việc giúp cụ thể.",
-        "Nêu tác dụng và điều học được.",
-        "Đề nghị đáp lại."
+        "Cảm ơn đúng hành động bạn đã giúp.",
+        "Kết quả và cảm nhận sau khi được giúp.",
+        "Điều học được và lời đề nghị đáp lại."
       ],
       "summaryVi": "Giảm lướt điện thoại giúp giữ giờ nghỉ; vẫn có thể giữ các liên lạc thực sự cần thiết.",
       "paragraphs": [
         {
-          "label": "Cảm ơn",
-          "text": "Hi Alex,\n\nI am writing to thank you for helping me prepare for an evening routine discussion. It was kind of you to give up part of your weekend, and I really appreciate the time you spent checking the plan with me.",
-          "noteVi": "Nêu hành động được giúp và sự trân trọng."
+          "label": "Mở thư và cảm ơn",
+          "text": "Hi Alex,\n\nI am writing to thank you for helping me organise the materials and check the programme. It was very kind of you, and I really appreciate the time you spent with me. Your help made preparing for an evening routine discussion much easier.",
+          "noteVi": "Cảm ơn đúng hành động bạn đã giúp.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nI am writing to thank you for ",
+              "kind": "frame"
+            },
+            {
+              "text": "helping me organise the materials and check the programme",
+              "kind": "detail",
+              "labelVi": "việc được giúp — V-ing"
+            },
+            {
+              "text": ". It was very kind of you, and I really appreciate the time you spent with me. Your help made preparing for ",
+              "kind": "frame"
+            },
+            {
+              "text": "an evening routine discussion",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": " much easier.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nI am writing to thank you for [việc được giúp — V-ing]. It was very kind of you, and I really appreciate the time you spent with me. Your help made preparing for [sự kiện / hoạt động] much easier."
         },
         {
-          "label": "Tác dụng",
-          "text": "Your suggestions helped us plan a realistic routine that protects time for rest without rushing through the instructions. You also reminded me to prepare a list of evening activities. That small detail made the session easier to organise, and I felt much more confident when the other participants arrived.",
-          "noteVi": "Dùng chi tiết để lời cảm ơn cụ thể."
-        },
-        {
-          "label": "Điều học được",
-          "text": "The discussion was useful because people can protect time intended for rest. One example that stayed with me was this: a student can finish necessary messages before reading a few pages of a book and going to bed at the planned time. I would not have had as much time to listen and learn if I had still been struggling with the preparations on my own.",
-          "noteVi": "Giảm lướt điện thoại giúp giữ giờ nghỉ; vẫn có thể giữ các liên lạc thực sự cần thiết."
+          "label": "Kết quả",
+          "text": "Thanks to your help, I was able to plan a realistic routine that protects time for rest without rushing through the instructions. You also reminded me to bring a list of evening activities. It would have been much more difficult on my own, and I felt more confident knowing that I could count on you.",
+          "noteVi": "Kết quả và cảm nhận sau khi được giúp.",
+          "parts": [
+            {
+              "text": "Thanks to your help, I was able to ",
+              "kind": "frame"
+            },
+            {
+              "text": "plan a realistic routine that protects time for rest without rushing through the instructions",
+              "kind": "detail",
+              "labelVi": "kết quả — động từ nguyên mẫu"
+            },
+            {
+              "text": ". You also reminded me to bring ",
+              "kind": "frame"
+            },
+            {
+              "text": "a list of evening activities",
+              "kind": "detail",
+              "labelVi": "đồ cần mang"
+            },
+            {
+              "text": ". It would have been much more difficult on my own, and I felt more confident knowing that I could count on you.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Thanks to your help, I was able to [kết quả — động từ nguyên mẫu]. You also reminded me to bring [đồ cần mang]. It would have been much more difficult on my own, and I felt more confident knowing that I could count on you."
         },
         {
           "label": "Đáp lại",
-          "text": "I would like to take you out for lunch next weekend as a small way of saying thank you. Please tell me which day would suit you. Thanks again for being so supportive.\n\nBest wishes,\nMinh",
-          "noteVi": "Lời đề nghị đáp lại có hành động cụ thể."
+          "text": "One thing I learned was that people can protect time intended for rest. For example, a student can finish necessary messages before reading a few pages of a book and going to bed at the planned time. I would like to take you out for lunch next weekend as a small way of saying thank you. Please tell me when you are free so that we can make a plan.",
+          "noteVi": "Điều học được và lời đề nghị đáp lại.",
+          "parts": [
+            {
+              "text": "One thing I learned was that ",
+              "kind": "frame"
+            },
+            {
+              "text": "people can protect time intended for rest",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". For example, ",
+              "kind": "frame"
+            },
+            {
+              "text": "a student can finish necessary messages before reading a few pages of a book and going to bed at the planned time",
+              "kind": "detail",
+              "labelVi": "ví dụ — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I would like to ",
+              "kind": "frame"
+            },
+            {
+              "text": "take you out for lunch next weekend",
+              "kind": "detail",
+              "labelVi": "việc đáp lại — động từ nguyên mẫu"
+            },
+            {
+              "text": " as a small way of saying thank you. Please tell me when you are free so that we can make a plan.",
+              "kind": "frame"
+            }
+          ],
+          "template": "One thing I learned was that [lợi ích — chủ ngữ + động từ]. For example, [ví dụ — chủ ngữ + động từ]. I would like to [việc đáp lại — động từ nguyên mẫu] as a small way of saying thank you. Please tell me when you are free so that we can make a plan."
+        },
+        {
+          "label": "Kết thư",
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 193,
-      "mainWordCount": 193,
+      "register": "informal",
+      "wordCount": 204,
+      "mainWordCount": 204,
       "phrases": [
         {
           "en": "a calmer routine",
@@ -276,6 +712,10 @@
           "vi": "Tôi viết để…"
         },
         {
+          "en": "For example",
+          "vi": "Ví dụ…"
+        },
+        {
           "en": "I would like to",
           "vi": "Tôi muốn…"
         }
@@ -289,40 +729,146 @@
       "number": 5,
       "title": "Chuyến đi cuối tuần",
       "focus": "short local trips",
-      "prompt": "A friend helped you prepare for a local travel planning evening. Thank your friend, explain how the help made a difference, and suggest a way to show your appreciation.",
+      "prompt": "Your friend Alex helped you prepare for a local travel planning evening. Thank the person, explain the effect of the help and offer to return the favour.",
       "requirementsVi": [
-        "Cảm ơn việc giúp cụ thể.",
-        "Nêu tác dụng và điều học được.",
-        "Đề nghị đáp lại."
+        "Cảm ơn đúng hành động bạn đã giúp.",
+        "Kết quả và cảm nhận sau khi được giúp.",
+        "Điều học được và lời đề nghị đáp lại."
       ],
       "summaryVi": "Đi gần tận dụng thời gian nghỉ; nên tìm giờ ít đông và điểm đến đa dạng hơn.",
       "paragraphs": [
         {
-          "label": "Cảm ơn",
-          "text": "Hi Alex,\n\nI am writing to thank you for helping me prepare for a local travel planning evening. It was kind of you to give up part of your weekend, and I really appreciate the time you spent checking the plan with me.",
-          "noteVi": "Nêu hành động được giúp và sự trân trọng."
+          "label": "Mở thư và cảm ơn",
+          "text": "Hi Alex,\n\nI am writing to thank you for helping me organise the materials and check the programme. It was very kind of you, and I really appreciate the time you spent with me. Your help made preparing for a local travel planning evening much easier.",
+          "noteVi": "Cảm ơn đúng hành động bạn đã giúp.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nI am writing to thank you for ",
+              "kind": "frame"
+            },
+            {
+              "text": "helping me organise the materials and check the programme",
+              "kind": "detail",
+              "labelVi": "việc được giúp — V-ing"
+            },
+            {
+              "text": ". It was very kind of you, and I really appreciate the time you spent with me. Your help made preparing for ",
+              "kind": "frame"
+            },
+            {
+              "text": "a local travel planning evening",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": " much easier.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nI am writing to thank you for [việc được giúp — V-ing]. It was very kind of you, and I really appreciate the time you spent with me. Your help made preparing for [sự kiện / hoạt động] much easier."
         },
         {
-          "label": "Tác dụng",
-          "text": "Your suggestions helped us design a relaxed day trip using nearby attractions without rushing through the instructions. You also reminded me to prepare a local map. That small detail made the session easier to organise, and I felt much more confident when the other participants arrived.",
-          "noteVi": "Dùng chi tiết để lời cảm ơn cụ thể."
-        },
-        {
-          "label": "Điều học được",
-          "text": "The discussion was useful because travellers can spend less of a short break on transport. One example that stayed with me was this: a family can take a morning bus to a nearby town and still have most of the day to explore. I would not have had as much time to listen and learn if I had still been struggling with the preparations on my own.",
-          "noteVi": "Đi gần tận dụng thời gian nghỉ; nên tìm giờ ít đông và điểm đến đa dạng hơn."
+          "label": "Kết quả",
+          "text": "Thanks to your help, I was able to design a relaxed day trip using nearby attractions without rushing through the instructions. You also reminded me to bring a local map. It would have been much more difficult on my own, and I felt more confident knowing that I could count on you.",
+          "noteVi": "Kết quả và cảm nhận sau khi được giúp.",
+          "parts": [
+            {
+              "text": "Thanks to your help, I was able to ",
+              "kind": "frame"
+            },
+            {
+              "text": "design a relaxed day trip using nearby attractions without rushing through the instructions",
+              "kind": "detail",
+              "labelVi": "kết quả — động từ nguyên mẫu"
+            },
+            {
+              "text": ". You also reminded me to bring ",
+              "kind": "frame"
+            },
+            {
+              "text": "a local map",
+              "kind": "detail",
+              "labelVi": "đồ cần mang"
+            },
+            {
+              "text": ". It would have been much more difficult on my own, and I felt more confident knowing that I could count on you.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Thanks to your help, I was able to [kết quả — động từ nguyên mẫu]. You also reminded me to bring [đồ cần mang]. It would have been much more difficult on my own, and I felt more confident knowing that I could count on you."
         },
         {
           "label": "Đáp lại",
-          "text": "I would like to take you out for lunch next weekend as a small way of saying thank you. Please tell me which day would suit you. Thanks again for being so supportive.\n\nBest wishes,\nMinh",
-          "noteVi": "Lời đề nghị đáp lại có hành động cụ thể."
+          "text": "One thing I learned was that travellers can spend less of a short break on transport. For example, a family can take a morning bus to a nearby town and still have most of the day to explore. I would like to take you out for lunch next weekend as a small way of saying thank you. Please tell me when you are free so that we can make a plan.",
+          "noteVi": "Điều học được và lời đề nghị đáp lại.",
+          "parts": [
+            {
+              "text": "One thing I learned was that ",
+              "kind": "frame"
+            },
+            {
+              "text": "travellers can spend less of a short break on transport",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". For example, ",
+              "kind": "frame"
+            },
+            {
+              "text": "a family can take a morning bus to a nearby town and still have most of the day to explore",
+              "kind": "detail",
+              "labelVi": "ví dụ — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I would like to ",
+              "kind": "frame"
+            },
+            {
+              "text": "take you out for lunch next weekend",
+              "kind": "detail",
+              "labelVi": "việc đáp lại — động từ nguyên mẫu"
+            },
+            {
+              "text": " as a small way of saying thank you. Please tell me when you are free so that we can make a plan.",
+              "kind": "frame"
+            }
+          ],
+          "template": "One thing I learned was that [lợi ích — chủ ngữ + động từ]. For example, [ví dụ — chủ ngữ + động từ]. I would like to [việc đáp lại — động từ nguyên mẫu] as a small way of saying thank you. Please tell me when you are free so that we can make a plan."
+        },
+        {
+          "label": "Kết thư",
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 192,
-      "mainWordCount": 192,
+      "register": "informal",
+      "wordCount": 203,
+      "mainWordCount": 203,
       "phrases": [
         {
           "en": "nearby destinations",
@@ -346,6 +892,10 @@
           "vi": "Tôi viết để…"
         },
         {
+          "en": "For example",
+          "vi": "Ví dụ…"
+        },
+        {
           "en": "I would like to",
           "vi": "Tôi muốn…"
         }
@@ -359,40 +909,146 @@
       "number": 6,
       "title": "Du lịch cùng gia đình",
       "focus": "planning family holidays",
-      "prompt": "A friend helped you prepare for a family travel planning session. Thank your friend, explain how the help made a difference, and suggest a way to show your appreciation.",
+      "prompt": "Your friend Alex helped you prepare for a family travel planning session. Thank the person, explain the effect of the help and offer to return the favour.",
       "requirementsVi": [
-        "Cảm ơn việc giúp cụ thể.",
-        "Nêu tác dụng và điều học được.",
-        "Đề nghị đáp lại."
+        "Cảm ơn đúng hành động bạn đã giúp.",
+        "Kết quả và cảm nhận sau khi được giúp.",
+        "Điều học được và lời đề nghị đáp lại."
       ],
       "summaryVi": "Cùng bàn giúp tôn trọng nhu cầu từng người; lịch đi cần có ưu tiên và giờ nghỉ.",
       "paragraphs": [
         {
-          "label": "Cảm ơn",
-          "text": "Hi Alex,\n\nI am writing to thank you for helping me prepare for a family travel planning session. It was kind of you to give up part of your weekend, and I really appreciate the time you spent checking the plan with me.",
-          "noteVi": "Nêu hành động được giúp và sự trân trọng."
+          "label": "Mở thư và cảm ơn",
+          "text": "Hi Alex,\n\nI am writing to thank you for helping me organise the materials and check the programme. It was very kind of you, and I really appreciate the time you spent with me. Your help made preparing for a family travel planning session much easier.",
+          "noteVi": "Cảm ơn đúng hành động bạn đã giúp.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nI am writing to thank you for ",
+              "kind": "frame"
+            },
+            {
+              "text": "helping me organise the materials and check the programme",
+              "kind": "detail",
+              "labelVi": "việc được giúp — V-ing"
+            },
+            {
+              "text": ". It was very kind of you, and I really appreciate the time you spent with me. Your help made preparing for ",
+              "kind": "frame"
+            },
+            {
+              "text": "a family travel planning session",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": " much easier.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nI am writing to thank you for [việc được giúp — V-ing]. It was very kind of you, and I really appreciate the time you spent with me. Your help made preparing for [sự kiện / hoạt động] much easier."
         },
         {
-          "label": "Tác dụng",
-          "text": "Your suggestions helped us compare interests and build a realistic holiday schedule without rushing through the instructions. You also reminded me to prepare a list of family travel preferences. That small detail made the session easier to organise, and I felt much more confident when the other participants arrived.",
-          "noteVi": "Dùng chi tiết để lời cảm ơn cụ thể."
-        },
-        {
-          "label": "Điều học được",
-          "text": "The discussion was useful because the plan can reflect more than one person's interests. One example that stayed with me was this: a family can combine a short museum visit with time in a park so that both adults and children enjoy the day. I would not have had as much time to listen and learn if I had still been struggling with the preparations on my own.",
-          "noteVi": "Cùng bàn giúp tôn trọng nhu cầu từng người; lịch đi cần có ưu tiên và giờ nghỉ."
+          "label": "Kết quả",
+          "text": "Thanks to your help, I was able to compare interests and build a realistic holiday schedule without rushing through the instructions. You also reminded me to bring a list of family travel preferences. It would have been much more difficult on my own, and I felt more confident knowing that I could count on you.",
+          "noteVi": "Kết quả và cảm nhận sau khi được giúp.",
+          "parts": [
+            {
+              "text": "Thanks to your help, I was able to ",
+              "kind": "frame"
+            },
+            {
+              "text": "compare interests and build a realistic holiday schedule without rushing through the instructions",
+              "kind": "detail",
+              "labelVi": "kết quả — động từ nguyên mẫu"
+            },
+            {
+              "text": ". You also reminded me to bring ",
+              "kind": "frame"
+            },
+            {
+              "text": "a list of family travel preferences",
+              "kind": "detail",
+              "labelVi": "đồ cần mang"
+            },
+            {
+              "text": ". It would have been much more difficult on my own, and I felt more confident knowing that I could count on you.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Thanks to your help, I was able to [kết quả — động từ nguyên mẫu]. You also reminded me to bring [đồ cần mang]. It would have been much more difficult on my own, and I felt more confident knowing that I could count on you."
         },
         {
           "label": "Đáp lại",
-          "text": "I would like to take you out for lunch next weekend as a small way of saying thank you. Please tell me which day would suit you. Thanks again for being so supportive.\n\nBest wishes,\nMinh",
-          "noteVi": "Lời đề nghị đáp lại có hành động cụ thể."
+          "text": "One thing I learned was that the plan can reflect more than one person's interests. For example, a family can combine a short museum visit with time in a park so that both adults and children enjoy the day. I would like to take you out for lunch next weekend as a small way of saying thank you. Please tell me when you are free so that we can make a plan.",
+          "noteVi": "Điều học được và lời đề nghị đáp lại.",
+          "parts": [
+            {
+              "text": "One thing I learned was that ",
+              "kind": "frame"
+            },
+            {
+              "text": "the plan can reflect more than one person's interests",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". For example, ",
+              "kind": "frame"
+            },
+            {
+              "text": "a family can combine a short museum visit with time in a park so that both adults and children enjoy the day",
+              "kind": "detail",
+              "labelVi": "ví dụ — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I would like to ",
+              "kind": "frame"
+            },
+            {
+              "text": "take you out for lunch next weekend",
+              "kind": "detail",
+              "labelVi": "việc đáp lại — động từ nguyên mẫu"
+            },
+            {
+              "text": " as a small way of saying thank you. Please tell me when you are free so that we can make a plan.",
+              "kind": "frame"
+            }
+          ],
+          "template": "One thing I learned was that [lợi ích — chủ ngữ + động từ]. For example, [ví dụ — chủ ngữ + động từ]. I would like to [việc đáp lại — động từ nguyên mẫu] as a small way of saying thank you. Please tell me when you are free so that we can make a plan."
+        },
+        {
+          "label": "Kết thư",
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 196,
-      "mainWordCount": 196,
+      "register": "informal",
+      "wordCount": 207,
+      "mainWordCount": 207,
       "phrases": [
         {
           "en": "a realistic schedule",
@@ -416,6 +1072,10 @@
           "vi": "Tôi viết để…"
         },
         {
+          "en": "For example",
+          "vi": "Ví dụ…"
+        },
+        {
           "en": "I would like to",
           "vi": "Tôi muốn…"
         }
@@ -429,40 +1089,146 @@
       "number": 7,
       "title": "Giữ quan hệ hàng xóm",
       "focus": "getting to know neighbours",
-      "prompt": "A friend helped you prepare for a neighbours' coffee morning. Thank your friend, explain how the help made a difference, and suggest a way to show your appreciation.",
+      "prompt": "Your friend Alex helped you prepare for a neighbours' coffee morning. Thank the person, explain the effect of the help and offer to return the favour.",
       "requirementsVi": [
-        "Cảm ơn việc giúp cụ thể.",
-        "Nêu tác dụng và điều học được.",
-        "Đề nghị đáp lại."
+        "Cảm ơn đúng hành động bạn đã giúp.",
+        "Kết quả và cảm nhận sau khi được giúp.",
+        "Điều học được và lời đề nghị đáp lại."
       ],
       "summaryVi": "Gặp hàng xóm tạo hỗ trợ gần gũi; hoạt động nên tự nguyện và tôn trọng lịch, sự riêng tư.",
       "paragraphs": [
         {
-          "label": "Cảm ơn",
-          "text": "Hi Alex,\n\nI am writing to thank you for helping me prepare for a neighbours' coffee morning. It was kind of you to give up part of your weekend, and I really appreciate the time you spent checking the plan with me.",
-          "noteVi": "Nêu hành động được giúp và sự trân trọng."
+          "label": "Mở thư và cảm ơn",
+          "text": "Hi Alex,\n\nI am writing to thank you for helping me organise the materials and check the programme. It was very kind of you, and I really appreciate the time you spent with me. Your help made preparing for a neighbours' coffee morning much easier.",
+          "noteVi": "Cảm ơn đúng hành động bạn đã giúp.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nI am writing to thank you for ",
+              "kind": "frame"
+            },
+            {
+              "text": "helping me organise the materials and check the programme",
+              "kind": "detail",
+              "labelVi": "việc được giúp — V-ing"
+            },
+            {
+              "text": ". It was very kind of you, and I really appreciate the time you spent with me. Your help made preparing for ",
+              "kind": "frame"
+            },
+            {
+              "text": "a neighbours' coffee morning",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": " much easier.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nI am writing to thank you for [việc được giúp — V-ing]. It was very kind of you, and I really appreciate the time you spent with me. Your help made preparing for [sự kiện / hoạt động] much easier."
         },
         {
-          "label": "Tác dụng",
-          "text": "Your suggestions helped us meet local residents and exchange practical information without rushing through the instructions. You also reminded me to prepare a small snack to share. That small detail made the session easier to organise, and I felt much more confident when the other participants arrived.",
-          "noteVi": "Dùng chi tiết để lời cảm ơn cụ thể."
-        },
-        {
-          "label": "Điều học được",
-          "text": "The discussion was useful because people can build a small local support network. One example that stayed with me was this: a resident can ask a neighbour to receive a parcel after meeting them at a building event. I would not have had as much time to listen and learn if I had still been struggling with the preparations on my own.",
-          "noteVi": "Gặp hàng xóm tạo hỗ trợ gần gũi; hoạt động nên tự nguyện và tôn trọng lịch, sự riêng tư."
+          "label": "Kết quả",
+          "text": "Thanks to your help, I was able to meet local residents and exchange practical information without rushing through the instructions. You also reminded me to bring a small snack to share. It would have been much more difficult on my own, and I felt more confident knowing that I could count on you.",
+          "noteVi": "Kết quả và cảm nhận sau khi được giúp.",
+          "parts": [
+            {
+              "text": "Thanks to your help, I was able to ",
+              "kind": "frame"
+            },
+            {
+              "text": "meet local residents and exchange practical information without rushing through the instructions",
+              "kind": "detail",
+              "labelVi": "kết quả — động từ nguyên mẫu"
+            },
+            {
+              "text": ". You also reminded me to bring ",
+              "kind": "frame"
+            },
+            {
+              "text": "a small snack to share",
+              "kind": "detail",
+              "labelVi": "đồ cần mang"
+            },
+            {
+              "text": ". It would have been much more difficult on my own, and I felt more confident knowing that I could count on you.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Thanks to your help, I was able to [kết quả — động từ nguyên mẫu]. You also reminded me to bring [đồ cần mang]. It would have been much more difficult on my own, and I felt more confident knowing that I could count on you."
         },
         {
           "label": "Đáp lại",
-          "text": "I would like to take you out for lunch next weekend as a small way of saying thank you. Please tell me which day would suit you. Thanks again for being so supportive.\n\nBest wishes,\nMinh",
-          "noteVi": "Lời đề nghị đáp lại có hành động cụ thể."
+          "text": "One thing I learned was that people can build a small local support network. For example, a resident can ask a neighbour to receive a parcel after meeting them at a building event. I would like to take you out for lunch next weekend as a small way of saying thank you. Please tell me when you are free so that we can make a plan.",
+          "noteVi": "Điều học được và lời đề nghị đáp lại.",
+          "parts": [
+            {
+              "text": "One thing I learned was that ",
+              "kind": "frame"
+            },
+            {
+              "text": "people can build a small local support network",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". For example, ",
+              "kind": "frame"
+            },
+            {
+              "text": "a resident can ask a neighbour to receive a parcel after meeting them at a building event",
+              "kind": "detail",
+              "labelVi": "ví dụ — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I would like to ",
+              "kind": "frame"
+            },
+            {
+              "text": "take you out for lunch next weekend",
+              "kind": "detail",
+              "labelVi": "việc đáp lại — động từ nguyên mẫu"
+            },
+            {
+              "text": " as a small way of saying thank you. Please tell me when you are free so that we can make a plan.",
+              "kind": "frame"
+            }
+          ],
+          "template": "One thing I learned was that [lợi ích — chủ ngữ + động từ]. For example, [ví dụ — chủ ngữ + động từ]. I would like to [việc đáp lại — động từ nguyên mẫu] as a small way of saying thank you. Please tell me when you are free so that we can make a plan."
+        },
+        {
+          "label": "Kết thư",
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 187,
-      "mainWordCount": 187,
+      "register": "informal",
+      "wordCount": 198,
+      "mainWordCount": 198,
       "phrases": [
         {
           "en": "a support network",
@@ -486,6 +1252,10 @@
           "vi": "Tôi viết để…"
         },
         {
+          "en": "For example",
+          "vi": "Ví dụ…"
+        },
+        {
           "en": "I would like to",
           "vi": "Tôi muốn…"
         }
@@ -499,40 +1269,146 @@
       "number": 8,
       "title": "Đọc sách giải trí",
       "focus": "reading for pleasure",
-      "prompt": "A friend helped you prepare for an informal book club meeting. Thank your friend, explain how the help made a difference, and suggest a way to show your appreciation.",
+      "prompt": "Your friend Alex helped you prepare for an informal book club meeting. Thank the person, explain the effect of the help and offer to return the favour.",
       "requirementsVi": [
-        "Cảm ơn việc giúp cụ thể.",
-        "Nêu tác dụng và điều học được.",
-        "Đề nghị đáp lại."
+        "Cảm ơn đúng hành động bạn đã giúp.",
+        "Kết quả và cảm nhận sau khi được giúp.",
+        "Điều học được và lời đề nghị đáp lại."
       ],
       "summaryVi": "Đọc giải trí cần lựa chọn phù hợp và tham gia linh hoạt để không biến thành áp lực hoàn thành chỉ tiêu.",
       "paragraphs": [
         {
-          "label": "Cảm ơn",
-          "text": "Hi Alex,\n\nI am writing to thank you for helping me prepare for an informal book club meeting. It was kind of you to give up part of your weekend, and I really appreciate the time you spent checking the plan with me.",
-          "noteVi": "Nêu hành động được giúp và sự trân trọng."
+          "label": "Mở thư và cảm ơn",
+          "text": "Hi Alex,\n\nI am writing to thank you for helping me organise the materials and check the programme. It was very kind of you, and I really appreciate the time you spent with me. Your help made preparing for an informal book club meeting much easier.",
+          "noteVi": "Cảm ơn đúng hành động bạn đã giúp.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nI am writing to thank you for ",
+              "kind": "frame"
+            },
+            {
+              "text": "helping me organise the materials and check the programme",
+              "kind": "detail",
+              "labelVi": "việc được giúp — V-ing"
+            },
+            {
+              "text": ". It was very kind of you, and I really appreciate the time you spent with me. Your help made preparing for ",
+              "kind": "frame"
+            },
+            {
+              "text": "an informal book club meeting",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": " much easier.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nI am writing to thank you for [việc được giúp — V-ing]. It was very kind of you, and I really appreciate the time you spent with me. Your help made preparing for [sự kiện / hoạt động] much easier."
         },
         {
-          "label": "Tác dụng",
-          "text": "Your suggestions helped us share a favourite short story and exchange reading suggestions without rushing through the instructions. You also reminded me to prepare a book or short story you enjoy. That small detail made the session easier to organise, and I felt much more confident when the other participants arrived.",
-          "noteVi": "Dùng chi tiết để lời cảm ơn cụ thể."
-        },
-        {
-          "label": "Điều học được",
-          "text": "The discussion was useful because people can discover ideas and enjoy quiet time away from daily pressure. One example that stayed with me was this: a reader can try a short story suggested by a neighbour and later discuss a favourite character. I would not have had as much time to listen and learn if I had still been struggling with the preparations on my own.",
-          "noteVi": "Đọc giải trí cần lựa chọn phù hợp và tham gia linh hoạt để không biến thành áp lực hoàn thành chỉ tiêu."
+          "label": "Kết quả",
+          "text": "Thanks to your help, I was able to share a favourite short story and exchange reading suggestions without rushing through the instructions. You also reminded me to bring a book or short story you enjoy. It would have been much more difficult on my own, and I felt more confident knowing that I could count on you.",
+          "noteVi": "Kết quả và cảm nhận sau khi được giúp.",
+          "parts": [
+            {
+              "text": "Thanks to your help, I was able to ",
+              "kind": "frame"
+            },
+            {
+              "text": "share a favourite short story and exchange reading suggestions without rushing through the instructions",
+              "kind": "detail",
+              "labelVi": "kết quả — động từ nguyên mẫu"
+            },
+            {
+              "text": ". You also reminded me to bring ",
+              "kind": "frame"
+            },
+            {
+              "text": "a book or short story you enjoy",
+              "kind": "detail",
+              "labelVi": "đồ cần mang"
+            },
+            {
+              "text": ". It would have been much more difficult on my own, and I felt more confident knowing that I could count on you.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Thanks to your help, I was able to [kết quả — động từ nguyên mẫu]. You also reminded me to bring [đồ cần mang]. It would have been much more difficult on my own, and I felt more confident knowing that I could count on you."
         },
         {
           "label": "Đáp lại",
-          "text": "I would like to take you out for lunch next weekend as a small way of saying thank you. Please tell me which day would suit you. Thanks again for being so supportive.\n\nBest wishes,\nMinh",
-          "noteVi": "Lời đề nghị đáp lại có hành động cụ thể."
+          "text": "One thing I learned was that people can discover ideas and enjoy quiet time away from daily pressure. For example, a reader can try a short story suggested by a neighbour and later discuss a favourite character. I would like to take you out for lunch next weekend as a small way of saying thank you. Please tell me when you are free so that we can make a plan.",
+          "noteVi": "Điều học được và lời đề nghị đáp lại.",
+          "parts": [
+            {
+              "text": "One thing I learned was that ",
+              "kind": "frame"
+            },
+            {
+              "text": "people can discover ideas and enjoy quiet time away from daily pressure",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". For example, ",
+              "kind": "frame"
+            },
+            {
+              "text": "a reader can try a short story suggested by a neighbour and later discuss a favourite character",
+              "kind": "detail",
+              "labelVi": "ví dụ — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I would like to ",
+              "kind": "frame"
+            },
+            {
+              "text": "take you out for lunch next weekend",
+              "kind": "detail",
+              "labelVi": "việc đáp lại — động từ nguyên mẫu"
+            },
+            {
+              "text": " as a small way of saying thank you. Please tell me when you are free so that we can make a plan.",
+              "kind": "frame"
+            }
+          ],
+          "template": "One thing I learned was that [lợi ích — chủ ngữ + động từ]. For example, [ví dụ — chủ ngữ + động từ]. I would like to [việc đáp lại — động từ nguyên mẫu] as a small way of saying thank you. Please tell me when you are free so that we can make a plan."
+        },
+        {
+          "label": "Kết thư",
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 196,
-      "mainWordCount": 196,
+      "register": "informal",
+      "wordCount": 207,
+      "mainWordCount": 207,
       "phrases": [
         {
           "en": "reading for pleasure",
@@ -556,6 +1432,10 @@
           "vi": "Tôi viết để…"
         },
         {
+          "en": "For example",
+          "vi": "Ví dụ…"
+        },
+        {
           "en": "I would like to",
           "vi": "Tôi muốn…"
         }
@@ -569,40 +1449,146 @@
       "number": 9,
       "title": "Quản lý chi tiêu",
       "focus": "planning everyday spending",
-      "prompt": "A friend helped you prepare for an everyday budgeting workshop. Thank your friend, explain how the help made a difference, and suggest a way to show your appreciation.",
+      "prompt": "Your friend Alex helped you prepare for an everyday budgeting workshop. Thank the person, explain the effect of the help and offer to return the favour.",
       "requirementsVi": [
-        "Cảm ơn việc giúp cụ thể.",
-        "Nêu tác dụng và điều học được.",
-        "Đề nghị đáp lại."
+        "Cảm ơn đúng hành động bạn đã giúp.",
+        "Kết quả và cảm nhận sau khi được giúp.",
+        "Điều học được và lời đề nghị đáp lại."
       ],
       "summaryVi": "Theo dõi chi tiêu giúp thấy nhu cầu thiết yếu; kế hoạch phải có khoảng linh hoạt cho việc phát sinh.",
       "paragraphs": [
         {
-          "label": "Cảm ơn",
-          "text": "Hi Alex,\n\nI am writing to thank you for helping me prepare for an everyday budgeting workshop. It was kind of you to give up part of your weekend, and I really appreciate the time you spent checking the plan with me.",
-          "noteVi": "Nêu hành động được giúp và sự trân trọng."
+          "label": "Mở thư và cảm ơn",
+          "text": "Hi Alex,\n\nI am writing to thank you for helping me organise the materials and check the programme. It was very kind of you, and I really appreciate the time you spent with me. Your help made preparing for an everyday budgeting workshop much easier.",
+          "noteVi": "Cảm ơn đúng hành động bạn đã giúp.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nI am writing to thank you for ",
+              "kind": "frame"
+            },
+            {
+              "text": "helping me organise the materials and check the programme",
+              "kind": "detail",
+              "labelVi": "việc được giúp — V-ing"
+            },
+            {
+              "text": ". It was very kind of you, and I really appreciate the time you spent with me. Your help made preparing for ",
+              "kind": "frame"
+            },
+            {
+              "text": "an everyday budgeting workshop",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": " much easier.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nI am writing to thank you for [việc được giúp — V-ing]. It was very kind of you, and I really appreciate the time you spent with me. Your help made preparing for [sự kiện / hoạt động] much easier."
         },
         {
-          "label": "Tác dụng",
-          "text": "Your suggestions helped us build a simple spending plan and practise adjusting it without rushing through the instructions. You also reminded me to prepare an example list of weekly expenses. That small detail made the session easier to organise, and I felt much more confident when the other participants arrived.",
-          "noteVi": "Dùng chi tiết để lời cảm ơn cụ thể."
-        },
-        {
-          "label": "Điều học được",
-          "text": "The discussion was useful because people can see whether their income covers essential needs. One example that stayed with me was this: a student can compare spending on transport, food and online orders before deciding where to cut back. I would not have had as much time to listen and learn if I had still been struggling with the preparations on my own.",
-          "noteVi": "Theo dõi chi tiêu giúp thấy nhu cầu thiết yếu; kế hoạch phải có khoảng linh hoạt cho việc phát sinh."
+          "label": "Kết quả",
+          "text": "Thanks to your help, I was able to build a simple spending plan and practise adjusting it without rushing through the instructions. You also reminded me to bring an example list of weekly expenses. It would have been much more difficult on my own, and I felt more confident knowing that I could count on you.",
+          "noteVi": "Kết quả và cảm nhận sau khi được giúp.",
+          "parts": [
+            {
+              "text": "Thanks to your help, I was able to ",
+              "kind": "frame"
+            },
+            {
+              "text": "build a simple spending plan and practise adjusting it without rushing through the instructions",
+              "kind": "detail",
+              "labelVi": "kết quả — động từ nguyên mẫu"
+            },
+            {
+              "text": ". You also reminded me to bring ",
+              "kind": "frame"
+            },
+            {
+              "text": "an example list of weekly expenses",
+              "kind": "detail",
+              "labelVi": "đồ cần mang"
+            },
+            {
+              "text": ". It would have been much more difficult on my own, and I felt more confident knowing that I could count on you.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Thanks to your help, I was able to [kết quả — động từ nguyên mẫu]. You also reminded me to bring [đồ cần mang]. It would have been much more difficult on my own, and I felt more confident knowing that I could count on you."
         },
         {
           "label": "Đáp lại",
-          "text": "I would like to take you out for lunch next weekend as a small way of saying thank you. Please tell me which day would suit you. Thanks again for being so supportive.\n\nBest wishes,\nMinh",
-          "noteVi": "Lời đề nghị đáp lại có hành động cụ thể."
+          "text": "One thing I learned was that people can see whether their income covers essential needs. For example, a student can compare spending on transport, food and online orders before deciding where to cut back. I would like to take you out for lunch next weekend as a small way of saying thank you. Please tell me when you are free so that we can make a plan.",
+          "noteVi": "Điều học được và lời đề nghị đáp lại.",
+          "parts": [
+            {
+              "text": "One thing I learned was that ",
+              "kind": "frame"
+            },
+            {
+              "text": "people can see whether their income covers essential needs",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". For example, ",
+              "kind": "frame"
+            },
+            {
+              "text": "a student can compare spending on transport, food and online orders before deciding where to cut back",
+              "kind": "detail",
+              "labelVi": "ví dụ — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I would like to ",
+              "kind": "frame"
+            },
+            {
+              "text": "take you out for lunch next weekend",
+              "kind": "detail",
+              "labelVi": "việc đáp lại — động từ nguyên mẫu"
+            },
+            {
+              "text": " as a small way of saying thank you. Please tell me when you are free so that we can make a plan.",
+              "kind": "frame"
+            }
+          ],
+          "template": "One thing I learned was that [lợi ích — chủ ngữ + động từ]. For example, [ví dụ — chủ ngữ + động từ]. I would like to [việc đáp lại — động từ nguyên mẫu] as a small way of saying thank you. Please tell me when you are free so that we can make a plan."
+        },
+        {
+          "label": "Kết thư",
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 191,
-      "mainWordCount": 191,
+      "register": "informal",
+      "wordCount": 202,
+      "mainWordCount": 202,
       "phrases": [
         {
           "en": "essential expenses",
@@ -626,6 +1612,10 @@
           "vi": "Tôi viết để…"
         },
         {
+          "en": "For example",
+          "vi": "Ví dụ…"
+        },
+        {
           "en": "I would like to",
           "vi": "Tôi muốn…"
         }
@@ -639,40 +1629,146 @@
       "number": 10,
       "title": "Dành thời gian cho sở thích",
       "focus": "making time for hobbies",
-      "prompt": "A friend helped you prepare for a beginner hobbies open day. Thank your friend, explain how the help made a difference, and suggest a way to show your appreciation.",
+      "prompt": "Your friend Alex helped you prepare for a beginner hobbies open day. Thank the person, explain the effect of the help and offer to return the favour.",
       "requirementsVi": [
-        "Cảm ơn việc giúp cụ thể.",
-        "Nêu tác dụng và điều học được.",
-        "Đề nghị đáp lại."
+        "Cảm ơn đúng hành động bạn đã giúp.",
+        "Kết quả và cảm nhận sau khi được giúp.",
+        "Điều học được và lời đề nghị đáp lại."
       ],
       "summaryVi": "Sở thích giúp đổi nhịp sống; nên bắt đầu nhỏ, vừa túi tiền và không so mình với người đã giỏi.",
       "paragraphs": [
         {
-          "label": "Cảm ơn",
-          "text": "Hi Alex,\n\nI am writing to thank you for helping me prepare for a beginner hobbies open day. It was kind of you to give up part of your weekend, and I really appreciate the time you spent checking the plan with me.",
-          "noteVi": "Nêu hành động được giúp và sự trân trọng."
+          "label": "Mở thư và cảm ơn",
+          "text": "Hi Alex,\n\nI am writing to thank you for helping me organise the materials and check the programme. It was very kind of you, and I really appreciate the time you spent with me. Your help made preparing for a beginner hobbies open day much easier.",
+          "noteVi": "Cảm ơn đúng hành động bạn đã giúp.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nI am writing to thank you for ",
+              "kind": "frame"
+            },
+            {
+              "text": "helping me organise the materials and check the programme",
+              "kind": "detail",
+              "labelVi": "việc được giúp — V-ing"
+            },
+            {
+              "text": ". It was very kind of you, and I really appreciate the time you spent with me. Your help made preparing for ",
+              "kind": "frame"
+            },
+            {
+              "text": "a beginner hobbies open day",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": " much easier.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nI am writing to thank you for [việc được giúp — V-ing]. It was very kind of you, and I really appreciate the time you spent with me. Your help made preparing for [sự kiện / hoạt động] much easier."
         },
         {
-          "label": "Tác dụng",
-          "text": "Your suggestions helped us try simple creative activities and choose a manageable first goal without rushing through the instructions. You also reminded me to prepare a notebook for ideas. That small detail made the session easier to organise, and I felt much more confident when the other participants arrived.",
-          "noteVi": "Dùng chi tiết để lời cảm ơn cụ thể."
-        },
-        {
-          "label": "Điều học được",
-          "text": "The discussion was useful because a hobby can provide a break from work and routine responsibilities. One example that stayed with me was this: an office worker can spend one evening each week learning to draw with a small local group. I would not have had as much time to listen and learn if I had still been struggling with the preparations on my own.",
-          "noteVi": "Sở thích giúp đổi nhịp sống; nên bắt đầu nhỏ, vừa túi tiền và không so mình với người đã giỏi."
+          "label": "Kết quả",
+          "text": "Thanks to your help, I was able to try simple creative activities and choose a manageable first goal without rushing through the instructions. You also reminded me to bring a notebook for ideas. It would have been much more difficult on my own, and I felt more confident knowing that I could count on you.",
+          "noteVi": "Kết quả và cảm nhận sau khi được giúp.",
+          "parts": [
+            {
+              "text": "Thanks to your help, I was able to ",
+              "kind": "frame"
+            },
+            {
+              "text": "try simple creative activities and choose a manageable first goal without rushing through the instructions",
+              "kind": "detail",
+              "labelVi": "kết quả — động từ nguyên mẫu"
+            },
+            {
+              "text": ". You also reminded me to bring ",
+              "kind": "frame"
+            },
+            {
+              "text": "a notebook for ideas",
+              "kind": "detail",
+              "labelVi": "đồ cần mang"
+            },
+            {
+              "text": ". It would have been much more difficult on my own, and I felt more confident knowing that I could count on you.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Thanks to your help, I was able to [kết quả — động từ nguyên mẫu]. You also reminded me to bring [đồ cần mang]. It would have been much more difficult on my own, and I felt more confident knowing that I could count on you."
         },
         {
           "label": "Đáp lại",
-          "text": "I would like to take you out for lunch next weekend as a small way of saying thank you. Please tell me which day would suit you. Thanks again for being so supportive.\n\nBest wishes,\nMinh",
-          "noteVi": "Lời đề nghị đáp lại có hành động cụ thể."
+          "text": "One thing I learned was that a hobby can provide a break from work and routine responsibilities. For example, an office worker can spend one evening each week learning to draw with a small local group. I would like to take you out for lunch next weekend as a small way of saying thank you. Please tell me when you are free so that we can make a plan.",
+          "noteVi": "Điều học được và lời đề nghị đáp lại.",
+          "parts": [
+            {
+              "text": "One thing I learned was that ",
+              "kind": "frame"
+            },
+            {
+              "text": "a hobby can provide a break from work and routine responsibilities",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". For example, ",
+              "kind": "frame"
+            },
+            {
+              "text": "an office worker can spend one evening each week learning to draw with a small local group",
+              "kind": "detail",
+              "labelVi": "ví dụ — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I would like to ",
+              "kind": "frame"
+            },
+            {
+              "text": "take you out for lunch next weekend",
+              "kind": "detail",
+              "labelVi": "việc đáp lại — động từ nguyên mẫu"
+            },
+            {
+              "text": " as a small way of saying thank you. Please tell me when you are free so that we can make a plan.",
+              "kind": "frame"
+            }
+          ],
+          "template": "One thing I learned was that [lợi ích — chủ ngữ + động từ]. For example, [ví dụ — chủ ngữ + động từ]. I would like to [việc đáp lại — động từ nguyên mẫu] as a small way of saying thank you. Please tell me when you are free so that we can make a plan."
+        },
+        {
+          "label": "Kết thư",
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 193,
-      "mainWordCount": 193,
+      "register": "informal",
+      "wordCount": 204,
+      "mainWordCount": 204,
       "phrases": [
         {
           "en": "make time for hobbies",
@@ -694,6 +1790,10 @@
         {
           "en": "I am writing to",
           "vi": "Tôi viết để…"
+        },
+        {
+          "en": "For example",
+          "vi": "Ví dụ…"
         },
         {
           "en": "I would like to",

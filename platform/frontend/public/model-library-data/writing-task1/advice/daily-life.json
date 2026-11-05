@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-05-v1",
+  "version": "2026-11-05-v2-frames",
   "samples": [
     {
       "id": "writing-task1-advice-daily-life-01",
@@ -9,40 +9,155 @@
       "number": 1,
       "title": "Thói quen đi bộ",
       "focus": "walking as a daily habit",
-      "prompt": "Your friend is interested in walking as a daily habit but does not know where to begin. Write an email giving practical advice, explaining a possible difficulty, and offering help.",
+      "prompt": "Your friend Alex has asked for advice about walking as a daily habit. Suggest a practical first step, explain a possible difficulty and recommend a way to address it.",
       "requirementsVi": [
-        "Cho bước bắt đầu cụ thể.",
-        "Giải thích một khó khăn và cách xử lý.",
-        "Đề nghị hỗ trợ thực tế."
+        "Đồng cảm trước khi đưa lời khuyên.",
+        "If I were you + would; start by + V-ing.",
+        "Khó khăn, giải pháp và cách bạn hỗ trợ."
       ],
       "summaryVi": "Đi bộ dễ thành thói quen khi đường tới nơi cần đến thuận tiện và không bị cản trở.",
       "paragraphs": [
         {
-          "label": "Mở thư",
-          "text": "Hi Alex,\n\nThanks for telling me about your interest in walking as a daily habit. I understand why you are unsure where to start. You do not need a perfect plan immediately, but a few practical steps could make things easier.",
-          "noteVi": "Đồng cảm, xác định mục đích khuyên."
+          "label": "Mở thư và lời khuyên",
+          "text": "Hi Alex,\n\nThanks for your email. I am glad you told me about your interest in walking as a daily habit. You asked for advice, so I have a few suggestions that you might find helpful. You do not need to do everything at once.",
+          "noteVi": "Đồng cảm trước khi đưa lời khuyên.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nThanks for your email. I am glad you told me about your interest in ",
+              "kind": "frame"
+            },
+            {
+              "text": "walking as a daily habit",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": ". You asked for advice, so I have a few suggestions that you might find helpful. You do not need to do everything at once.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nThanks for your email. I am glad you told me about your interest in [chủ đề]. You asked for advice, so I have a few suggestions that you might find helpful. You do not need to do everything at once."
         },
         {
-          "label": "Lời khuyên đầu",
-          "text": "First, I suggest joining a neighbourhood walking event at the park entrance on Saturday at nine in the morning. There, we can explore a short local route and note useful improvements. One useful point is that people can include gentle movement in ordinary routines. For example, a resident can walk to a nearby market instead of taking a motorbike for a very short trip.",
-          "noteVi": "Gợi ý hoạt động có ngày, nơi và lý do."
+          "label": "Gợi ý đầu",
+          "text": "If I were you, I would start by joining a neighbourhood walking event. There, you could explore a short local route and note useful improvements. This could be useful because people can include gentle movement in ordinary routines. For example, a resident can walk to a nearby market instead of taking a motorbike for a very short trip.",
+          "noteVi": "If I were you + would; start by + V-ing.",
+          "parts": [
+            {
+              "text": "If I were you, I would start by joining ",
+              "kind": "frame"
+            },
+            {
+              "text": "a neighbourhood walking event",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". There, you could ",
+              "kind": "frame"
+            },
+            {
+              "text": "explore a short local route and note useful improvements",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". This could be useful because ",
+              "kind": "frame"
+            },
+            {
+              "text": "people can include gentle movement in ordinary routines",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". For example, ",
+              "kind": "frame"
+            },
+            {
+              "text": "a resident can walk to a nearby market instead of taking a motorbike for a very short trip",
+              "kind": "detail",
+              "labelVi": "ví dụ — chủ ngữ + động từ"
+            },
+            {
+              "text": ".",
+              "kind": "frame"
+            }
+          ],
+          "template": "If I were you, I would start by joining [sự kiện / hoạt động]. There, you could [hoạt động — động từ nguyên mẫu]. This could be useful because [lợi ích — chủ ngữ + động từ]. For example, [ví dụ — chủ ngữ + động từ]."
         },
         {
-          "label": "Khó khăn và cách xử lý",
-          "text": "One thing to remember is that some routes are difficult to use. This can happen because street design may give little attention to people travelling on foot. A useful response would be to keep pavements clear and improve practical walking routes. For instance, a local group could identify one important route to the market and report the barriers along it. Try the idea on a small scale before deciding whether to continue.",
-          "noteVi": "Nêu giới hạn để lời khuyên không tuyệt đối."
+          "label": "Giới hạn và giúp đỡ",
+          "text": "One thing to remember is that some routes are difficult to use. A good idea would be to keep pavements clear and improve practical walking routes. For instance, a local group could identify one important route to the market and report the barriers along it. If you would like some help, we could make a simple plan together and see how it goes.",
+          "noteVi": "Khó khăn, giải pháp và cách bạn hỗ trợ.",
+          "parts": [
+            {
+              "text": "One thing to remember is that ",
+              "kind": "frame"
+            },
+            {
+              "text": "some routes are difficult to use",
+              "kind": "detail",
+              "labelVi": "khó khăn — chủ ngữ + động từ"
+            },
+            {
+              "text": ". A good idea would be to ",
+              "kind": "frame"
+            },
+            {
+              "text": "keep pavements clear and improve practical walking routes",
+              "kind": "detail",
+              "labelVi": "giải pháp — động từ nguyên mẫu"
+            },
+            {
+              "text": ". For instance, ",
+              "kind": "frame"
+            },
+            {
+              "text": "a local group could identify one important route to the market and report the barriers along it",
+              "kind": "detail",
+              "labelVi": "cách làm — chủ ngữ + động từ"
+            },
+            {
+              "text": ". If you would like some help, we could make a simple plan together and see how it goes.",
+              "kind": "frame"
+            }
+          ],
+          "template": "One thing to remember is that [khó khăn — chủ ngữ + động từ]. A good idea would be to [giải pháp — động từ nguyên mẫu]. For instance, [cách làm — chủ ngữ + động từ]. If you would like some help, we could make a simple plan together and see how it goes."
         },
         {
-          "label": "Đề nghị và kết",
-          "text": "If you like, I can come with you and help you write down the most useful points. Afterwards, we could make a simple plan together.\n\nPlease let me know what you think when you have a moment. I would be happy to answer any other questions.\n\nBest wishes,\nMinh",
-          "noteVi": "Hỗ trợ cụ thể, không chỉ nói good luck."
+          "label": "Kết thư",
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 226,
-      "mainWordCount": 226,
+      "register": "informal",
+      "wordCount": 200,
+      "mainWordCount": 200,
       "phrases": [
         {
           "en": "everyday walking",
@@ -64,10 +179,6 @@
         {
           "en": "For example",
           "vi": "Ví dụ…"
-        },
-        {
-          "en": "Please let me know",
-          "vi": "Hãy cho tôi biết…"
         }
       ]
     },
@@ -79,40 +190,155 @@
       "number": 2,
       "title": "Nấu ăn ở nhà",
       "focus": "cooking simple meals at home",
-      "prompt": "Your friend is interested in cooking simple meals at home but does not know where to begin. Write an email giving practical advice, explaining a possible difficulty, and offering help.",
+      "prompt": "Your friend Alex has asked for advice about cooking simple meals at home. Suggest a practical first step, explain a possible difficulty and recommend a way to address it.",
       "requirementsVi": [
-        "Cho bước bắt đầu cụ thể.",
-        "Giải thích một khó khăn và cách xử lý.",
-        "Đề nghị hỗ trợ thực tế."
+        "Đồng cảm trước khi đưa lời khuyên.",
+        "If I were you + would; start by + V-ing.",
+        "Khó khăn, giải pháp và cách bạn hỗ trợ."
       ],
       "summaryVi": "Biết vài món đơn giản giúp tự chủ ăn uống; công thức nên phù hợp bếp và thời gian thực tế.",
       "paragraphs": [
         {
-          "label": "Mở thư",
-          "text": "Hi Alex,\n\nThanks for telling me about your interest in cooking simple meals at home. I understand why you are unsure where to start. You do not need a perfect plan immediately, but a few practical steps could make things easier.",
-          "noteVi": "Đồng cảm, xác định mục đích khuyên."
+          "label": "Mở thư và lời khuyên",
+          "text": "Hi Alex,\n\nThanks for your email. I am glad you told me about your interest in cooking simple meals at home. You asked for advice, so I have a few suggestions that you might find helpful. You do not need to do everything at once.",
+          "noteVi": "Đồng cảm trước khi đưa lời khuyên.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nThanks for your email. I am glad you told me about your interest in ",
+              "kind": "frame"
+            },
+            {
+              "text": "cooking simple meals at home",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": ". You asked for advice, so I have a few suggestions that you might find helpful. You do not need to do everything at once.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nThanks for your email. I am glad you told me about your interest in [chủ đề]. You asked for advice, so I have a few suggestions that you might find helpful. You do not need to do everything at once."
         },
         {
-          "label": "Lời khuyên đầu",
-          "text": "First, I suggest joining a simple home cooking class at the community centre kitchen on Sunday at two in the afternoon. There, we can prepare an affordable meal using basic equipment. One useful point is that people have more control over their meals and spending. For example, a student can prepare rice, vegetables and eggs instead of ordering food every evening.",
-          "noteVi": "Gợi ý hoạt động có ngày, nơi và lý do."
+          "label": "Gợi ý đầu",
+          "text": "If I were you, I would start by joining a simple home cooking class. There, you could prepare an affordable meal using basic equipment. This could be useful because people have more control over their meals and spending. For example, a student can prepare rice, vegetables and eggs instead of ordering food every evening.",
+          "noteVi": "If I were you + would; start by + V-ing.",
+          "parts": [
+            {
+              "text": "If I were you, I would start by joining ",
+              "kind": "frame"
+            },
+            {
+              "text": "a simple home cooking class",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". There, you could ",
+              "kind": "frame"
+            },
+            {
+              "text": "prepare an affordable meal using basic equipment",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". This could be useful because ",
+              "kind": "frame"
+            },
+            {
+              "text": "people have more control over their meals and spending",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". For example, ",
+              "kind": "frame"
+            },
+            {
+              "text": "a student can prepare rice, vegetables and eggs instead of ordering food every evening",
+              "kind": "detail",
+              "labelVi": "ví dụ — chủ ngữ + động từ"
+            },
+            {
+              "text": ".",
+              "kind": "frame"
+            }
+          ],
+          "template": "If I were you, I would start by joining [sự kiện / hoạt động]. There, you could [hoạt động — động từ nguyên mẫu]. This could be useful because [lợi ích — chủ ngữ + động từ]. For example, [ví dụ — chủ ngữ + động từ]."
         },
         {
-          "label": "Khó khăn và cách xử lý",
-          "text": "One thing to remember is that cooking may feel difficult in shared or poorly equipped housing. This can happen because advice may assume that everyone has a large kitchen and plenty of free time. A useful response would be to teach flexible recipes that use basic equipment. For instance, a class could show how to prepare two meals with one pan and ingredients that can be used again the next day. Try the idea on a small scale before deciding whether to continue.",
-          "noteVi": "Nêu giới hạn để lời khuyên không tuyệt đối."
+          "label": "Giới hạn và giúp đỡ",
+          "text": "One thing to remember is that cooking may feel difficult in shared or poorly equipped housing. A good idea would be to teach flexible recipes that use basic equipment. For instance, a class could show how to prepare two meals with one pan and ingredients that can be used again the next day. If you would like some help, we could make a simple plan together and see how it goes.",
+          "noteVi": "Khó khăn, giải pháp và cách bạn hỗ trợ.",
+          "parts": [
+            {
+              "text": "One thing to remember is that ",
+              "kind": "frame"
+            },
+            {
+              "text": "cooking may feel difficult in shared or poorly equipped housing",
+              "kind": "detail",
+              "labelVi": "khó khăn — chủ ngữ + động từ"
+            },
+            {
+              "text": ". A good idea would be to ",
+              "kind": "frame"
+            },
+            {
+              "text": "teach flexible recipes that use basic equipment",
+              "kind": "detail",
+              "labelVi": "giải pháp — động từ nguyên mẫu"
+            },
+            {
+              "text": ". For instance, ",
+              "kind": "frame"
+            },
+            {
+              "text": "a class could show how to prepare two meals with one pan and ingredients that can be used again the next day",
+              "kind": "detail",
+              "labelVi": "cách làm — chủ ngữ + động từ"
+            },
+            {
+              "text": ". If you would like some help, we could make a simple plan together and see how it goes.",
+              "kind": "frame"
+            }
+          ],
+          "template": "One thing to remember is that [khó khăn — chủ ngữ + động từ]. A good idea would be to [giải pháp — động từ nguyên mẫu]. For instance, [cách làm — chủ ngữ + động từ]. If you would like some help, we could make a simple plan together and see how it goes."
         },
         {
-          "label": "Đề nghị và kết",
-          "text": "If you like, I can come with you and help you write down the most useful points. Afterwards, we could make a simple plan together.\n\nPlease let me know what you think when you have a moment. I would be happy to answer any other questions.\n\nBest wishes,\nMinh",
-          "noteVi": "Hỗ trợ cụ thể, không chỉ nói good luck."
+          "label": "Kết thư",
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 234,
-      "mainWordCount": 234,
+      "register": "informal",
+      "wordCount": 204,
+      "mainWordCount": 204,
       "phrases": [
         {
           "en": "basic equipment",
@@ -134,10 +360,6 @@
         {
           "en": "For example",
           "vi": "Ví dụ…"
-        },
-        {
-          "en": "Please let me know",
-          "vi": "Hãy cho tôi biết…"
         }
       ]
     },
@@ -149,40 +371,155 @@
       "number": 3,
       "title": "Thể thao đồng đội",
       "focus": "team sports in the community",
-      "prompt": "Your friend is interested in team sports in the community but does not know where to begin. Write an email giving practical advice, explaining a possible difficulty, and offering help.",
+      "prompt": "Your friend Alex has asked for advice about team sports in the community. Suggest a practical first step, explain a possible difficulty and recommend a way to address it.",
       "requirementsVi": [
-        "Cho bước bắt đầu cụ thể.",
-        "Giải thích một khó khăn và cách xử lý.",
-        "Đề nghị hỗ trợ thực tế."
+        "Đồng cảm trước khi đưa lời khuyên.",
+        "If I were you + would; start by + V-ing.",
+        "Khó khăn, giải pháp và cách bạn hỗ trợ."
       ],
       "summaryVi": "Thể thao nhóm tạo kết nối; buổi dành cho người mới cần thân thiện và cho mọi người tham gia.",
       "paragraphs": [
         {
-          "label": "Mở thư",
-          "text": "Hi Alex,\n\nThanks for telling me about your interest in team sports in the community. I understand why you are unsure where to start. You do not need a perfect plan immediately, but a few practical steps could make things easier.",
-          "noteVi": "Đồng cảm, xác định mục đích khuyên."
+          "label": "Mở thư và lời khuyên",
+          "text": "Hi Alex,\n\nThanks for your email. I am glad you told me about your interest in team sports in the community. You asked for advice, so I have a few suggestions that you might find helpful. You do not need to do everything at once.",
+          "noteVi": "Đồng cảm trước khi đưa lời khuyên.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nThanks for your email. I am glad you told me about your interest in ",
+              "kind": "frame"
+            },
+            {
+              "text": "team sports in the community",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": ". You asked for advice, so I have a few suggestions that you might find helpful. You do not need to do everything at once.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nThanks for your email. I am glad you told me about your interest in [chủ đề]. You asked for advice, so I have a few suggestions that you might find helpful. You do not need to do everything at once."
         },
         {
-          "label": "Lời khuyên đầu",
-          "text": "First, I suggest joining a beginner community sports session at the local sports centre on Friday at six in the evening. There, we can try simple team games in a friendly group. One useful point is that residents can exercise while meeting other people. For example, a student new to a neighbourhood can join a weekend volleyball group and gradually get to know other players.",
-          "noteVi": "Gợi ý hoạt động có ngày, nơi và lý do."
+          "label": "Gợi ý đầu",
+          "text": "If I were you, I would start by joining a beginner community sports session. There, you could try simple team games in a friendly group. This could be useful because residents can exercise while meeting other people. For example, a student new to a neighbourhood can join a weekend volleyball group and gradually get to know other players.",
+          "noteVi": "If I were you + would; start by + V-ing.",
+          "parts": [
+            {
+              "text": "If I were you, I would start by joining ",
+              "kind": "frame"
+            },
+            {
+              "text": "a beginner community sports session",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". There, you could ",
+              "kind": "frame"
+            },
+            {
+              "text": "try simple team games in a friendly group",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". This could be useful because ",
+              "kind": "frame"
+            },
+            {
+              "text": "residents can exercise while meeting other people",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". For example, ",
+              "kind": "frame"
+            },
+            {
+              "text": "a student new to a neighbourhood can join a weekend volleyball group and gradually get to know other players",
+              "kind": "detail",
+              "labelVi": "ví dụ — chủ ngữ + động từ"
+            },
+            {
+              "text": ".",
+              "kind": "frame"
+            }
+          ],
+          "template": "If I were you, I would start by joining [sự kiện / hoạt động]. There, you could [hoạt động — động từ nguyên mẫu]. This could be useful because [lợi ích — chủ ngữ + động từ]. For example, [ví dụ — chủ ngữ + động từ]."
         },
         {
-          "label": "Khó khăn và cách xử lý",
-          "text": "One thing to remember is that beginners may feel excluded by competitive groups. This can happen because sessions may not distinguish between beginner practice and serious competition. A useful response would be to offer welcoming beginner sessions with clear expectations. For instance, an organiser could start with simple drills and rotate teams so that everyone has a chance to take part. Try the idea on a small scale before deciding whether to continue.",
-          "noteVi": "Nêu giới hạn để lời khuyên không tuyệt đối."
+          "label": "Giới hạn và giúp đỡ",
+          "text": "One thing to remember is that beginners may feel excluded by competitive groups. A good idea would be to offer welcoming beginner sessions with clear expectations. For instance, an organiser could start with simple drills and rotate teams so that everyone has a chance to take part. If you would like some help, we could make a simple plan together and see how it goes.",
+          "noteVi": "Khó khăn, giải pháp và cách bạn hỗ trợ.",
+          "parts": [
+            {
+              "text": "One thing to remember is that ",
+              "kind": "frame"
+            },
+            {
+              "text": "beginners may feel excluded by competitive groups",
+              "kind": "detail",
+              "labelVi": "khó khăn — chủ ngữ + động từ"
+            },
+            {
+              "text": ". A good idea would be to ",
+              "kind": "frame"
+            },
+            {
+              "text": "offer welcoming beginner sessions with clear expectations",
+              "kind": "detail",
+              "labelVi": "giải pháp — động từ nguyên mẫu"
+            },
+            {
+              "text": ". For instance, ",
+              "kind": "frame"
+            },
+            {
+              "text": "an organiser could start with simple drills and rotate teams so that everyone has a chance to take part",
+              "kind": "detail",
+              "labelVi": "cách làm — chủ ngữ + động từ"
+            },
+            {
+              "text": ". If you would like some help, we could make a simple plan together and see how it goes.",
+              "kind": "frame"
+            }
+          ],
+          "template": "One thing to remember is that [khó khăn — chủ ngữ + động từ]. A good idea would be to [giải pháp — động từ nguyên mẫu]. For instance, [cách làm — chủ ngữ + động từ]. If you would like some help, we could make a simple plan together and see how it goes."
         },
         {
-          "label": "Đề nghị và kết",
-          "text": "If you like, I can come with you and help you write down the most useful points. Afterwards, we could make a simple plan together.\n\nPlease let me know what you think when you have a moment. I would be happy to answer any other questions.\n\nBest wishes,\nMinh",
-          "noteVi": "Hỗ trợ cụ thể, không chỉ nói good luck."
+          "label": "Kết thư",
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 228,
-      "mainWordCount": 228,
+      "register": "informal",
+      "wordCount": 202,
+      "mainWordCount": 202,
       "phrases": [
         {
           "en": "a beginner session",
@@ -204,10 +541,6 @@
         {
           "en": "For example",
           "vi": "Ví dụ…"
-        },
-        {
-          "en": "Please let me know",
-          "vi": "Hãy cho tôi biết…"
         }
       ]
     },
@@ -219,40 +552,155 @@
       "number": 4,
       "title": "Ngủ và dùng điện thoại",
       "focus": "phone use before bedtime",
-      "prompt": "Your friend is interested in phone use before bedtime but does not know where to begin. Write an email giving practical advice, explaining a possible difficulty, and offering help.",
+      "prompt": "Your friend Alex has asked for advice about phone use before bedtime. Suggest a practical first step, explain a possible difficulty and recommend a way to address it.",
       "requirementsVi": [
-        "Cho bước bắt đầu cụ thể.",
-        "Giải thích một khó khăn và cách xử lý.",
-        "Đề nghị hỗ trợ thực tế."
+        "Đồng cảm trước khi đưa lời khuyên.",
+        "If I were you + would; start by + V-ing.",
+        "Khó khăn, giải pháp và cách bạn hỗ trợ."
       ],
       "summaryVi": "Giảm lướt điện thoại giúp giữ giờ nghỉ; vẫn có thể giữ các liên lạc thực sự cần thiết.",
       "paragraphs": [
         {
-          "label": "Mở thư",
-          "text": "Hi Alex,\n\nThanks for telling me about your interest in phone use before bedtime. I understand why you are unsure where to start. You do not need a perfect plan immediately, but a few practical steps could make things easier.",
-          "noteVi": "Đồng cảm, xác định mục đích khuyên."
+          "label": "Mở thư và lời khuyên",
+          "text": "Hi Alex,\n\nThanks for your email. I am glad you told me about your interest in phone use before bedtime. You asked for advice, so I have a few suggestions that you might find helpful. You do not need to do everything at once.",
+          "noteVi": "Đồng cảm trước khi đưa lời khuyên.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nThanks for your email. I am glad you told me about your interest in ",
+              "kind": "frame"
+            },
+            {
+              "text": "phone use before bedtime",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": ". You asked for advice, so I have a few suggestions that you might find helpful. You do not need to do everything at once.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nThanks for your email. I am glad you told me about your interest in [chủ đề]. You asked for advice, so I have a few suggestions that you might find helpful. You do not need to do everything at once."
         },
         {
-          "label": "Lời khuyên đầu",
-          "text": "First, I suggest joining an evening routine discussion at the neighbourhood hall on Friday at six in the evening. There, we can plan a realistic routine that protects time for rest. One useful point is that people can protect time intended for rest. For example, a student can finish necessary messages before reading a few pages of a book and going to bed at the planned time.",
-          "noteVi": "Gợi ý hoạt động có ngày, nơi và lý do."
+          "label": "Gợi ý đầu",
+          "text": "If I were you, I would start by joining an evening routine discussion. There, you could plan a realistic routine that protects time for rest. This could be useful because people can protect time intended for rest. For example, a student can finish necessary messages before reading a few pages of a book and going to bed at the planned time.",
+          "noteVi": "If I were you + would; start by + V-ing.",
+          "parts": [
+            {
+              "text": "If I were you, I would start by joining ",
+              "kind": "frame"
+            },
+            {
+              "text": "an evening routine discussion",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". There, you could ",
+              "kind": "frame"
+            },
+            {
+              "text": "plan a realistic routine that protects time for rest",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". This could be useful because ",
+              "kind": "frame"
+            },
+            {
+              "text": "people can protect time intended for rest",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". For example, ",
+              "kind": "frame"
+            },
+            {
+              "text": "a student can finish necessary messages before reading a few pages of a book and going to bed at the planned time",
+              "kind": "detail",
+              "labelVi": "ví dụ — chủ ngữ + động từ"
+            },
+            {
+              "text": ".",
+              "kind": "frame"
+            }
+          ],
+          "template": "If I were you, I would start by joining [sự kiện / hoạt động]. There, you could [hoạt động — động từ nguyên mẫu]. This could be useful because [lợi ích — chủ ngữ + động từ]. For example, [ví dụ — chủ ngữ + động từ]."
         },
         {
-          "label": "Khó khăn và cách xử lý",
-          "text": "One thing to remember is that one strict rule may not suit everyone's responsibilities. This can happen because people may treat all phone activity as if it serves the same purpose. A useful response would be to reduce optional scrolling while keeping essential contact available. For instance, someone could silence unnecessary applications but allow calls from close family members. Try the idea on a small scale before deciding whether to continue.",
-          "noteVi": "Nêu giới hạn để lời khuyên không tuyệt đối."
+          "label": "Giới hạn và giúp đỡ",
+          "text": "One thing to remember is that one strict rule may not suit everyone's responsibilities. A good idea would be to reduce optional scrolling while keeping essential contact available. For instance, someone could silence unnecessary applications but allow calls from close family members. If you would like some help, we could make a simple plan together and see how it goes.",
+          "noteVi": "Khó khăn, giải pháp và cách bạn hỗ trợ.",
+          "parts": [
+            {
+              "text": "One thing to remember is that ",
+              "kind": "frame"
+            },
+            {
+              "text": "one strict rule may not suit everyone's responsibilities",
+              "kind": "detail",
+              "labelVi": "khó khăn — chủ ngữ + động từ"
+            },
+            {
+              "text": ". A good idea would be to ",
+              "kind": "frame"
+            },
+            {
+              "text": "reduce optional scrolling while keeping essential contact available",
+              "kind": "detail",
+              "labelVi": "giải pháp — động từ nguyên mẫu"
+            },
+            {
+              "text": ". For instance, ",
+              "kind": "frame"
+            },
+            {
+              "text": "someone could silence unnecessary applications but allow calls from close family members",
+              "kind": "detail",
+              "labelVi": "cách làm — chủ ngữ + động từ"
+            },
+            {
+              "text": ". If you would like some help, we could make a simple plan together and see how it goes.",
+              "kind": "frame"
+            }
+          ],
+          "template": "One thing to remember is that [khó khăn — chủ ngữ + động từ]. A good idea would be to [giải pháp — động từ nguyên mẫu]. For instance, [cách làm — chủ ngữ + động từ]. If you would like some help, we could make a simple plan together and see how it goes."
         },
         {
-          "label": "Đề nghị và kết",
-          "text": "If you like, I can come with you and help you write down the most useful points. Afterwards, we could make a simple plan together.\n\nPlease let me know what you think when you have a moment. I would be happy to answer any other questions.\n\nBest wishes,\nMinh",
-          "noteVi": "Hỗ trợ cụ thể, không chỉ nói good luck."
+          "label": "Kết thư",
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 227,
-      "mainWordCount": 227,
+      "register": "informal",
+      "wordCount": 199,
+      "mainWordCount": 199,
       "phrases": [
         {
           "en": "a calmer routine",
@@ -274,10 +722,6 @@
         {
           "en": "For example",
           "vi": "Ví dụ…"
-        },
-        {
-          "en": "Please let me know",
-          "vi": "Hãy cho tôi biết…"
         }
       ]
     },
@@ -289,40 +733,155 @@
       "number": 5,
       "title": "Chuyến đi cuối tuần",
       "focus": "short local trips",
-      "prompt": "Your friend is interested in short local trips but does not know where to begin. Write an email giving practical advice, explaining a possible difficulty, and offering help.",
+      "prompt": "Your friend Alex has asked for advice about short local trips. Suggest a practical first step, explain a possible difficulty and recommend a way to address it.",
       "requirementsVi": [
-        "Cho bước bắt đầu cụ thể.",
-        "Giải thích một khó khăn và cách xử lý.",
-        "Đề nghị hỗ trợ thực tế."
+        "Đồng cảm trước khi đưa lời khuyên.",
+        "If I were you + would; start by + V-ing.",
+        "Khó khăn, giải pháp và cách bạn hỗ trợ."
       ],
       "summaryVi": "Đi gần tận dụng thời gian nghỉ; nên tìm giờ ít đông và điểm đến đa dạng hơn.",
       "paragraphs": [
         {
-          "label": "Mở thư",
-          "text": "Hi Alex,\n\nThanks for telling me about your interest in short local trips. I understand why you are unsure where to start. You do not need a perfect plan immediately, but a few practical steps could make things easier.",
-          "noteVi": "Đồng cảm, xác định mục đích khuyên."
+          "label": "Mở thư và lời khuyên",
+          "text": "Hi Alex,\n\nThanks for your email. I am glad you told me about your interest in short local trips. You asked for advice, so I have a few suggestions that you might find helpful. You do not need to do everything at once.",
+          "noteVi": "Đồng cảm trước khi đưa lời khuyên.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nThanks for your email. I am glad you told me about your interest in ",
+              "kind": "frame"
+            },
+            {
+              "text": "short local trips",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": ". You asked for advice, so I have a few suggestions that you might find helpful. You do not need to do everything at once.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nThanks for your email. I am glad you told me about your interest in [chủ đề]. You asked for advice, so I have a few suggestions that you might find helpful. You do not need to do everything at once."
         },
         {
-          "label": "Lời khuyên đầu",
-          "text": "First, I suggest joining a local travel planning evening at the college workshop room on Friday at six in the evening. There, we can design a relaxed day trip using nearby attractions. One useful point is that travellers can spend less of a short break on transport. For example, a family can take a morning bus to a nearby town and still have most of the day to explore.",
-          "noteVi": "Gợi ý hoạt động có ngày, nơi và lý do."
+          "label": "Gợi ý đầu",
+          "text": "If I were you, I would start by joining a local travel planning evening. There, you could design a relaxed day trip using nearby attractions. This could be useful because travellers can spend less of a short break on transport. For example, a family can take a morning bus to a nearby town and still have most of the day to explore.",
+          "noteVi": "If I were you + would; start by + V-ing.",
+          "parts": [
+            {
+              "text": "If I were you, I would start by joining ",
+              "kind": "frame"
+            },
+            {
+              "text": "a local travel planning evening",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". There, you could ",
+              "kind": "frame"
+            },
+            {
+              "text": "design a relaxed day trip using nearby attractions",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". This could be useful because ",
+              "kind": "frame"
+            },
+            {
+              "text": "travellers can spend less of a short break on transport",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". For example, ",
+              "kind": "frame"
+            },
+            {
+              "text": "a family can take a morning bus to a nearby town and still have most of the day to explore",
+              "kind": "detail",
+              "labelVi": "ví dụ — chủ ngữ + động từ"
+            },
+            {
+              "text": ".",
+              "kind": "frame"
+            }
+          ],
+          "template": "If I were you, I would start by joining [sự kiện / hoạt động]. There, you could [hoạt động — động từ nguyên mẫu]. This could be useful because [lợi ích — chủ ngữ + động từ]. For example, [ví dụ — chủ ngữ + động từ]."
         },
         {
-          "label": "Khó khăn và cách xử lý",
-          "text": "One thing to remember is that popular local places may become crowded at the same time. This can happen because travel plans often follow the same photographs and recommendations. A useful response would be to research less busy times and a wider range of local places. For instance, a visitor could arrive earlier and include a small museum or walking route away from the busiest attraction. Try the idea on a small scale before deciding whether to continue.",
-          "noteVi": "Nêu giới hạn để lời khuyên không tuyệt đối."
+          "label": "Giới hạn và giúp đỡ",
+          "text": "One thing to remember is that popular local places may become crowded at the same time. A good idea would be to research less busy times and a wider range of local places. For instance, a visitor could arrive earlier and include a small museum or walking route away from the busiest attraction. If you would like some help, we could make a simple plan together and see how it goes.",
+          "noteVi": "Khó khăn, giải pháp và cách bạn hỗ trợ.",
+          "parts": [
+            {
+              "text": "One thing to remember is that ",
+              "kind": "frame"
+            },
+            {
+              "text": "popular local places may become crowded at the same time",
+              "kind": "detail",
+              "labelVi": "khó khăn — chủ ngữ + động từ"
+            },
+            {
+              "text": ". A good idea would be to ",
+              "kind": "frame"
+            },
+            {
+              "text": "research less busy times and a wider range of local places",
+              "kind": "detail",
+              "labelVi": "giải pháp — động từ nguyên mẫu"
+            },
+            {
+              "text": ". For instance, ",
+              "kind": "frame"
+            },
+            {
+              "text": "a visitor could arrive earlier and include a small museum or walking route away from the busiest attraction",
+              "kind": "detail",
+              "labelVi": "cách làm — chủ ngữ + động từ"
+            },
+            {
+              "text": ". If you would like some help, we could make a simple plan together and see how it goes.",
+              "kind": "frame"
+            }
+          ],
+          "template": "One thing to remember is that [khó khăn — chủ ngữ + động từ]. A good idea would be to [giải pháp — động từ nguyên mẫu]. For instance, [cách làm — chủ ngữ + động từ]. If you would like some help, we could make a simple plan together and see how it goes."
         },
         {
-          "label": "Đề nghị và kết",
-          "text": "If you like, I can come with you and help you write down the most useful points. Afterwards, we could make a simple plan together.\n\nPlease let me know what you think when you have a moment. I would be happy to answer any other questions.\n\nBest wishes,\nMinh",
-          "noteVi": "Hỗ trợ cụ thể, không chỉ nói good luck."
+          "label": "Kết thư",
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 235,
-      "mainWordCount": 235,
+      "register": "informal",
+      "wordCount": 210,
+      "mainWordCount": 210,
       "phrases": [
         {
           "en": "nearby destinations",
@@ -344,10 +903,6 @@
         {
           "en": "For example",
           "vi": "Ví dụ…"
-        },
-        {
-          "en": "Please let me know",
-          "vi": "Hãy cho tôi biết…"
         }
       ]
     },
@@ -359,40 +914,155 @@
       "number": 6,
       "title": "Du lịch cùng gia đình",
       "focus": "planning family holidays",
-      "prompt": "Your friend is interested in planning family holidays but does not know where to begin. Write an email giving practical advice, explaining a possible difficulty, and offering help.",
+      "prompt": "Your friend Alex has asked for advice about planning family holidays. Suggest a practical first step, explain a possible difficulty and recommend a way to address it.",
       "requirementsVi": [
-        "Cho bước bắt đầu cụ thể.",
-        "Giải thích một khó khăn và cách xử lý.",
-        "Đề nghị hỗ trợ thực tế."
+        "Đồng cảm trước khi đưa lời khuyên.",
+        "If I were you + would; start by + V-ing.",
+        "Khó khăn, giải pháp và cách bạn hỗ trợ."
       ],
       "summaryVi": "Cùng bàn giúp tôn trọng nhu cầu từng người; lịch đi cần có ưu tiên và giờ nghỉ.",
       "paragraphs": [
         {
-          "label": "Mở thư",
-          "text": "Hi Alex,\n\nThanks for telling me about your interest in planning family holidays. I understand why you are unsure where to start. You do not need a perfect plan immediately, but a few practical steps could make things easier.",
-          "noteVi": "Đồng cảm, xác định mục đích khuyên."
+          "label": "Mở thư và lời khuyên",
+          "text": "Hi Alex,\n\nThanks for your email. I am glad you told me about your interest in planning family holidays. You asked for advice, so I have a few suggestions that you might find helpful. You do not need to do everything at once.",
+          "noteVi": "Đồng cảm trước khi đưa lời khuyên.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nThanks for your email. I am glad you told me about your interest in ",
+              "kind": "frame"
+            },
+            {
+              "text": "planning family holidays",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": ". You asked for advice, so I have a few suggestions that you might find helpful. You do not need to do everything at once.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nThanks for your email. I am glad you told me about your interest in [chủ đề]. You asked for advice, so I have a few suggestions that you might find helpful. You do not need to do everything at once."
         },
         {
-          "label": "Lời khuyên đầu",
-          "text": "First, I suggest joining a family travel planning session at the community centre on Wednesday at six in the evening. There, we can compare interests and build a realistic holiday schedule. One useful point is that the plan can reflect more than one person's interests. For example, a family can combine a short museum visit with time in a park so that both adults and children enjoy the day.",
-          "noteVi": "Gợi ý hoạt động có ngày, nơi và lý do."
+          "label": "Gợi ý đầu",
+          "text": "If I were you, I would start by joining a family travel planning session. There, you could compare interests and build a realistic holiday schedule. This could be useful because the plan can reflect more than one person's interests. For example, a family can combine a short museum visit with time in a park so that both adults and children enjoy the day.",
+          "noteVi": "If I were you + would; start by + V-ing.",
+          "parts": [
+            {
+              "text": "If I were you, I would start by joining ",
+              "kind": "frame"
+            },
+            {
+              "text": "a family travel planning session",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". There, you could ",
+              "kind": "frame"
+            },
+            {
+              "text": "compare interests and build a realistic holiday schedule",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". This could be useful because ",
+              "kind": "frame"
+            },
+            {
+              "text": "the plan can reflect more than one person's interests",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". For example, ",
+              "kind": "frame"
+            },
+            {
+              "text": "a family can combine a short museum visit with time in a park so that both adults and children enjoy the day",
+              "kind": "detail",
+              "labelVi": "ví dụ — chủ ngữ + động từ"
+            },
+            {
+              "text": ".",
+              "kind": "frame"
+            }
+          ],
+          "template": "If I were you, I would start by joining [sự kiện / hoạt động]. There, you could [hoạt động — động từ nguyên mẫu]. This could be useful because [lợi ích — chủ ngữ + động từ]. For example, [ví dụ — chủ ngữ + động từ]."
         },
         {
-          "label": "Khó khăn và cách xử lý",
-          "text": "One thing to remember is that trying to satisfy everyone can make the schedule too busy. This can happen because planners may count activities without considering the time each one requires. A useful response would be to choose a small number of priorities and leave room for breaks. For instance, family members could each suggest one activity and then agree on a realistic plan with free time. Try the idea on a small scale before deciding whether to continue.",
-          "noteVi": "Nêu giới hạn để lời khuyên không tuyệt đối."
+          "label": "Giới hạn và giúp đỡ",
+          "text": "One thing to remember is that trying to satisfy everyone can make the schedule too busy. A good idea would be to choose a small number of priorities and leave room for breaks. For instance, family members could each suggest one activity and then agree on a realistic plan with free time. If you would like some help, we could make a simple plan together and see how it goes.",
+          "noteVi": "Khó khăn, giải pháp và cách bạn hỗ trợ.",
+          "parts": [
+            {
+              "text": "One thing to remember is that ",
+              "kind": "frame"
+            },
+            {
+              "text": "trying to satisfy everyone can make the schedule too busy",
+              "kind": "detail",
+              "labelVi": "khó khăn — chủ ngữ + động từ"
+            },
+            {
+              "text": ". A good idea would be to ",
+              "kind": "frame"
+            },
+            {
+              "text": "choose a small number of priorities and leave room for breaks",
+              "kind": "detail",
+              "labelVi": "giải pháp — động từ nguyên mẫu"
+            },
+            {
+              "text": ". For instance, ",
+              "kind": "frame"
+            },
+            {
+              "text": "family members could each suggest one activity and then agree on a realistic plan with free time",
+              "kind": "detail",
+              "labelVi": "cách làm — chủ ngữ + động từ"
+            },
+            {
+              "text": ". If you would like some help, we could make a simple plan together and see how it goes.",
+              "kind": "frame"
+            }
+          ],
+          "template": "One thing to remember is that [khó khăn — chủ ngữ + động từ]. A good idea would be to [giải pháp — động từ nguyên mẫu]. For instance, [cách làm — chủ ngữ + động từ]. If you would like some help, we could make a simple plan together and see how it goes."
         },
         {
-          "label": "Đề nghị và kết",
-          "text": "If you like, I can come with you and help you write down the most useful points. Afterwards, we could make a simple plan together.\n\nPlease let me know what you think when you have a moment. I would be happy to answer any other questions.\n\nBest wishes,\nMinh",
-          "noteVi": "Hỗ trợ cụ thể, không chỉ nói good luck."
+          "label": "Kết thư",
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 236,
-      "mainWordCount": 236,
+      "register": "informal",
+      "wordCount": 210,
+      "mainWordCount": 210,
       "phrases": [
         {
           "en": "a realistic schedule",
@@ -414,10 +1084,6 @@
         {
           "en": "For example",
           "vi": "Ví dụ…"
-        },
-        {
-          "en": "Please let me know",
-          "vi": "Hãy cho tôi biết…"
         }
       ]
     },
@@ -429,40 +1095,155 @@
       "number": 7,
       "title": "Giữ quan hệ hàng xóm",
       "focus": "getting to know neighbours",
-      "prompt": "Your friend is interested in getting to know neighbours but does not know where to begin. Write an email giving practical advice, explaining a possible difficulty, and offering help.",
+      "prompt": "Your friend Alex has asked for advice about getting to know neighbours. Suggest a practical first step, explain a possible difficulty and recommend a way to address it.",
       "requirementsVi": [
-        "Cho bước bắt đầu cụ thể.",
-        "Giải thích một khó khăn và cách xử lý.",
-        "Đề nghị hỗ trợ thực tế."
+        "Đồng cảm trước khi đưa lời khuyên.",
+        "If I were you + would; start by + V-ing.",
+        "Khó khăn, giải pháp và cách bạn hỗ trợ."
       ],
       "summaryVi": "Gặp hàng xóm tạo hỗ trợ gần gũi; hoạt động nên tự nguyện và tôn trọng lịch, sự riêng tư.",
       "paragraphs": [
         {
-          "label": "Mở thư",
-          "text": "Hi Alex,\n\nThanks for telling me about your interest in getting to know neighbours. I understand why you are unsure where to start. You do not need a perfect plan immediately, but a few practical steps could make things easier.",
-          "noteVi": "Đồng cảm, xác định mục đích khuyên."
+          "label": "Mở thư và lời khuyên",
+          "text": "Hi Alex,\n\nThanks for your email. I am glad you told me about your interest in getting to know neighbours. You asked for advice, so I have a few suggestions that you might find helpful. You do not need to do everything at once.",
+          "noteVi": "Đồng cảm trước khi đưa lời khuyên.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nThanks for your email. I am glad you told me about your interest in ",
+              "kind": "frame"
+            },
+            {
+              "text": "getting to know neighbours",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": ". You asked for advice, so I have a few suggestions that you might find helpful. You do not need to do everything at once.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nThanks for your email. I am glad you told me about your interest in [chủ đề]. You asked for advice, so I have a few suggestions that you might find helpful. You do not need to do everything at once."
         },
         {
-          "label": "Lời khuyên đầu",
-          "text": "First, I suggest joining a neighbours' coffee morning at the local library on Saturday at nine in the morning. There, we can meet local residents and exchange practical information. One useful point is that people can build a small local support network. For example, a resident can ask a neighbour to receive a parcel after meeting them at a building event.",
-          "noteVi": "Gợi ý hoạt động có ngày, nơi và lý do."
+          "label": "Gợi ý đầu",
+          "text": "If I were you, I would start by joining a neighbours' coffee morning. There, you could meet local residents and exchange practical information. This could be useful because people can build a small local support network. For example, a resident can ask a neighbour to receive a parcel after meeting them at a building event.",
+          "noteVi": "If I were you + would; start by + V-ing.",
+          "parts": [
+            {
+              "text": "If I were you, I would start by joining ",
+              "kind": "frame"
+            },
+            {
+              "text": "a neighbours' coffee morning",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". There, you could ",
+              "kind": "frame"
+            },
+            {
+              "text": "meet local residents and exchange practical information",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". This could be useful because ",
+              "kind": "frame"
+            },
+            {
+              "text": "people can build a small local support network",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". For example, ",
+              "kind": "frame"
+            },
+            {
+              "text": "a resident can ask a neighbour to receive a parcel after meeting them at a building event",
+              "kind": "detail",
+              "labelVi": "ví dụ — chủ ngữ + động từ"
+            },
+            {
+              "text": ".",
+              "kind": "frame"
+            }
+          ],
+          "template": "If I were you, I would start by joining [sự kiện / hoạt động]. There, you could [hoạt động — động từ nguyên mẫu]. This could be useful because [lợi ích — chủ ngữ + động từ]. For example, [ví dụ — chủ ngữ + động từ]."
         },
         {
-          "label": "Khó khăn và cách xử lý",
-          "text": "One thing to remember is that some people may feel pressured to join activities. This can happen because organisers may assume that one type of social event suits everyone. A useful response would be to offer quiet optional activities at different times. For instance, a building could combine a short coffee morning with a noticeboard where residents can exchange useful information. Try the idea on a small scale before deciding whether to continue.",
-          "noteVi": "Nêu giới hạn để lời khuyên không tuyệt đối."
+          "label": "Giới hạn và giúp đỡ",
+          "text": "One thing to remember is that some people may feel pressured to join activities. A good idea would be to offer quiet optional activities at different times. For instance, a building could combine a short coffee morning with a noticeboard where residents can exchange useful information. If you would like some help, we could make a simple plan together and see how it goes.",
+          "noteVi": "Khó khăn, giải pháp và cách bạn hỗ trợ.",
+          "parts": [
+            {
+              "text": "One thing to remember is that ",
+              "kind": "frame"
+            },
+            {
+              "text": "some people may feel pressured to join activities",
+              "kind": "detail",
+              "labelVi": "khó khăn — chủ ngữ + động từ"
+            },
+            {
+              "text": ". A good idea would be to ",
+              "kind": "frame"
+            },
+            {
+              "text": "offer quiet optional activities at different times",
+              "kind": "detail",
+              "labelVi": "giải pháp — động từ nguyên mẫu"
+            },
+            {
+              "text": ". For instance, ",
+              "kind": "frame"
+            },
+            {
+              "text": "a building could combine a short coffee morning with a noticeboard where residents can exchange useful information",
+              "kind": "detail",
+              "labelVi": "cách làm — chủ ngữ + động từ"
+            },
+            {
+              "text": ". If you would like some help, we could make a simple plan together and see how it goes.",
+              "kind": "frame"
+            }
+          ],
+          "template": "One thing to remember is that [khó khăn — chủ ngữ + động từ]. A good idea would be to [giải pháp — động từ nguyên mẫu]. For instance, [cách làm — chủ ngữ + động từ]. If you would like some help, we could make a simple plan together and see how it goes."
         },
         {
-          "label": "Đề nghị và kết",
-          "text": "If you like, I can come with you and help you write down the most useful points. Afterwards, we could make a simple plan together.\n\nPlease let me know what you think when you have a moment. I would be happy to answer any other questions.\n\nBest wishes,\nMinh",
-          "noteVi": "Hỗ trợ cụ thể, không chỉ nói good luck."
+          "label": "Kết thư",
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 223,
-      "mainWordCount": 223,
+      "register": "informal",
+      "wordCount": 197,
+      "mainWordCount": 197,
       "phrases": [
         {
           "en": "a support network",
@@ -484,10 +1265,6 @@
         {
           "en": "For example",
           "vi": "Ví dụ…"
-        },
-        {
-          "en": "Please let me know",
-          "vi": "Hãy cho tôi biết…"
         }
       ]
     },
@@ -499,40 +1276,155 @@
       "number": 8,
       "title": "Đọc sách giải trí",
       "focus": "reading for pleasure",
-      "prompt": "Your friend is interested in reading for pleasure but does not know where to begin. Write an email giving practical advice, explaining a possible difficulty, and offering help.",
+      "prompt": "Your friend Alex has asked for advice about reading for pleasure. Suggest a practical first step, explain a possible difficulty and recommend a way to address it.",
       "requirementsVi": [
-        "Cho bước bắt đầu cụ thể.",
-        "Giải thích một khó khăn và cách xử lý.",
-        "Đề nghị hỗ trợ thực tế."
+        "Đồng cảm trước khi đưa lời khuyên.",
+        "If I were you + would; start by + V-ing.",
+        "Khó khăn, giải pháp và cách bạn hỗ trợ."
       ],
       "summaryVi": "Đọc giải trí cần lựa chọn phù hợp và tham gia linh hoạt để không biến thành áp lực hoàn thành chỉ tiêu.",
       "paragraphs": [
         {
-          "label": "Mở thư",
-          "text": "Hi Alex,\n\nThanks for telling me about your interest in reading for pleasure. I understand why you are unsure where to start. You do not need a perfect plan immediately, but a few practical steps could make things easier.",
-          "noteVi": "Đồng cảm, xác định mục đích khuyên."
+          "label": "Mở thư và lời khuyên",
+          "text": "Hi Alex,\n\nThanks for your email. I am glad you told me about your interest in reading for pleasure. You asked for advice, so I have a few suggestions that you might find helpful. You do not need to do everything at once.",
+          "noteVi": "Đồng cảm trước khi đưa lời khuyên.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nThanks for your email. I am glad you told me about your interest in ",
+              "kind": "frame"
+            },
+            {
+              "text": "reading for pleasure",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": ". You asked for advice, so I have a few suggestions that you might find helpful. You do not need to do everything at once.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nThanks for your email. I am glad you told me about your interest in [chủ đề]. You asked for advice, so I have a few suggestions that you might find helpful. You do not need to do everything at once."
         },
         {
-          "label": "Lời khuyên đầu",
-          "text": "First, I suggest joining an informal book club meeting at the school meeting room on Sunday at ten in the morning. There, we can share a favourite short story and exchange reading suggestions. One useful point is that people can discover ideas and enjoy quiet time away from daily pressure. For example, a reader can try a short story suggested by a neighbour and later discuss a favourite character.",
-          "noteVi": "Gợi ý hoạt động có ngày, nơi và lý do."
+          "label": "Gợi ý đầu",
+          "text": "If I were you, I would start by joining an informal book club meeting. There, you could share a favourite short story and exchange reading suggestions. This could be useful because people can discover ideas and enjoy quiet time away from daily pressure. For example, a reader can try a short story suggested by a neighbour and later discuss a favourite character.",
+          "noteVi": "If I were you + would; start by + V-ing.",
+          "parts": [
+            {
+              "text": "If I were you, I would start by joining ",
+              "kind": "frame"
+            },
+            {
+              "text": "an informal book club meeting",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". There, you could ",
+              "kind": "frame"
+            },
+            {
+              "text": "share a favourite short story and exchange reading suggestions",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". This could be useful because ",
+              "kind": "frame"
+            },
+            {
+              "text": "people can discover ideas and enjoy quiet time away from daily pressure",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". For example, ",
+              "kind": "frame"
+            },
+            {
+              "text": "a reader can try a short story suggested by a neighbour and later discuss a favourite character",
+              "kind": "detail",
+              "labelVi": "ví dụ — chủ ngữ + động từ"
+            },
+            {
+              "text": ".",
+              "kind": "frame"
+            }
+          ],
+          "template": "If I were you, I would start by joining [sự kiện / hoạt động]. There, you could [hoạt động — động từ nguyên mẫu]. This could be useful because [lợi ích — chủ ngữ + động từ]. For example, [ví dụ — chủ ngữ + động từ]."
         },
         {
-          "label": "Khó khăn và cách xử lý",
-          "text": "One thing to remember is that a formal reading target may remove the enjoyment. This can happen because organisers may focus on the number of books rather than the experience of reading. A useful response would be to offer short varied choices and let members participate flexibly. For instance, a group could discuss one short story while allowing members to bring another book they enjoyed. Try the idea on a small scale before deciding whether to continue.",
-          "noteVi": "Nêu giới hạn để lời khuyên không tuyệt đối."
+          "label": "Giới hạn và giúp đỡ",
+          "text": "One thing to remember is that a formal reading target may remove the enjoyment. A good idea would be to offer short varied choices and let members participate flexibly. For instance, a group could discuss one short story while allowing members to bring another book they enjoyed. If you would like some help, we could make a simple plan together and see how it goes.",
+          "noteVi": "Khó khăn, giải pháp và cách bạn hỗ trợ.",
+          "parts": [
+            {
+              "text": "One thing to remember is that ",
+              "kind": "frame"
+            },
+            {
+              "text": "a formal reading target may remove the enjoyment",
+              "kind": "detail",
+              "labelVi": "khó khăn — chủ ngữ + động từ"
+            },
+            {
+              "text": ". A good idea would be to ",
+              "kind": "frame"
+            },
+            {
+              "text": "offer short varied choices and let members participate flexibly",
+              "kind": "detail",
+              "labelVi": "giải pháp — động từ nguyên mẫu"
+            },
+            {
+              "text": ". For instance, ",
+              "kind": "frame"
+            },
+            {
+              "text": "a group could discuss one short story while allowing members to bring another book they enjoyed",
+              "kind": "detail",
+              "labelVi": "cách làm — chủ ngữ + động từ"
+            },
+            {
+              "text": ". If you would like some help, we could make a simple plan together and see how it goes.",
+              "kind": "frame"
+            }
+          ],
+          "template": "One thing to remember is that [khó khăn — chủ ngữ + động từ]. A good idea would be to [giải pháp — động từ nguyên mẫu]. For instance, [cách làm — chủ ngữ + động từ]. If you would like some help, we could make a simple plan together and see how it goes."
         },
         {
-          "label": "Đề nghị và kết",
-          "text": "If you like, I can come with you and help you write down the most useful points. Afterwards, we could make a simple plan together.\n\nPlease let me know what you think when you have a moment. I would be happy to answer any other questions.\n\nBest wishes,\nMinh",
-          "noteVi": "Hỗ trợ cụ thể, không chỉ nói good luck."
+          "label": "Kết thư",
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 234,
-      "mainWordCount": 234,
+      "register": "informal",
+      "wordCount": 204,
+      "mainWordCount": 204,
       "phrases": [
         {
           "en": "reading for pleasure",
@@ -554,10 +1446,6 @@
         {
           "en": "For example",
           "vi": "Ví dụ…"
-        },
-        {
-          "en": "Please let me know",
-          "vi": "Hãy cho tôi biết…"
         }
       ]
     },
@@ -569,40 +1457,155 @@
       "number": 9,
       "title": "Quản lý chi tiêu",
       "focus": "planning everyday spending",
-      "prompt": "Your friend is interested in planning everyday spending but does not know where to begin. Write an email giving practical advice, explaining a possible difficulty, and offering help.",
+      "prompt": "Your friend Alex has asked for advice about planning everyday spending. Suggest a practical first step, explain a possible difficulty and recommend a way to address it.",
       "requirementsVi": [
-        "Cho bước bắt đầu cụ thể.",
-        "Giải thích một khó khăn và cách xử lý.",
-        "Đề nghị hỗ trợ thực tế."
+        "Đồng cảm trước khi đưa lời khuyên.",
+        "If I were you + would; start by + V-ing.",
+        "Khó khăn, giải pháp và cách bạn hỗ trợ."
       ],
       "summaryVi": "Theo dõi chi tiêu giúp thấy nhu cầu thiết yếu; kế hoạch phải có khoảng linh hoạt cho việc phát sinh.",
       "paragraphs": [
         {
-          "label": "Mở thư",
-          "text": "Hi Alex,\n\nThanks for telling me about your interest in planning everyday spending. I understand why you are unsure where to start. You do not need a perfect plan immediately, but a few practical steps could make things easier.",
-          "noteVi": "Đồng cảm, xác định mục đích khuyên."
+          "label": "Mở thư và lời khuyên",
+          "text": "Hi Alex,\n\nThanks for your email. I am glad you told me about your interest in planning everyday spending. You asked for advice, so I have a few suggestions that you might find helpful. You do not need to do everything at once.",
+          "noteVi": "Đồng cảm trước khi đưa lời khuyên.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nThanks for your email. I am glad you told me about your interest in ",
+              "kind": "frame"
+            },
+            {
+              "text": "planning everyday spending",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": ". You asked for advice, so I have a few suggestions that you might find helpful. You do not need to do everything at once.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nThanks for your email. I am glad you told me about your interest in [chủ đề]. You asked for advice, so I have a few suggestions that you might find helpful. You do not need to do everything at once."
         },
         {
-          "label": "Lời khuyên đầu",
-          "text": "First, I suggest joining an everyday budgeting workshop at the neighbourhood hall on Thursday at six in the evening. There, we can build a simple spending plan and practise adjusting it. One useful point is that people can see whether their income covers essential needs. For example, a student can compare spending on transport, food and online orders before deciding where to cut back.",
-          "noteVi": "Gợi ý hoạt động có ngày, nơi và lý do."
+          "label": "Gợi ý đầu",
+          "text": "If I were you, I would start by joining an everyday budgeting workshop. There, you could build a simple spending plan and practise adjusting it. This could be useful because people can see whether their income covers essential needs. For example, a student can compare spending on transport, food and online orders before deciding where to cut back.",
+          "noteVi": "If I were you + would; start by + V-ing.",
+          "parts": [
+            {
+              "text": "If I were you, I would start by joining ",
+              "kind": "frame"
+            },
+            {
+              "text": "an everyday budgeting workshop",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". There, you could ",
+              "kind": "frame"
+            },
+            {
+              "text": "build a simple spending plan and practise adjusting it",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". This could be useful because ",
+              "kind": "frame"
+            },
+            {
+              "text": "people can see whether their income covers essential needs",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". For example, ",
+              "kind": "frame"
+            },
+            {
+              "text": "a student can compare spending on transport, food and online orders before deciding where to cut back",
+              "kind": "detail",
+              "labelVi": "ví dụ — chủ ngữ + động từ"
+            },
+            {
+              "text": ".",
+              "kind": "frame"
+            }
+          ],
+          "template": "If I were you, I would start by joining [sự kiện / hoạt động]. There, you could [hoạt động — động từ nguyên mẫu]. This could be useful because [lợi ích — chủ ngữ + động từ]. For example, [ví dụ — chủ ngữ + động từ]."
         },
         {
-          "label": "Khó khăn và cách xử lý",
-          "text": "One thing to remember is that a strict plan can fail when unexpected costs appear. This can happen because people may create budgets with no allowance for change. A useful response would be to use a flexible plan and review it regularly. For instance, a learner could separate essential costs from optional purchases and leave a small amount for unexpected needs. Try the idea on a small scale before deciding whether to continue.",
-          "noteVi": "Nêu giới hạn để lời khuyên không tuyệt đối."
+          "label": "Giới hạn và giúp đỡ",
+          "text": "One thing to remember is that a strict plan can fail when unexpected costs appear. A good idea would be to use a flexible plan and review it regularly. For instance, a learner could separate essential costs from optional purchases and leave a small amount for unexpected needs. If you would like some help, we could make a simple plan together and see how it goes.",
+          "noteVi": "Khó khăn, giải pháp và cách bạn hỗ trợ.",
+          "parts": [
+            {
+              "text": "One thing to remember is that ",
+              "kind": "frame"
+            },
+            {
+              "text": "a strict plan can fail when unexpected costs appear",
+              "kind": "detail",
+              "labelVi": "khó khăn — chủ ngữ + động từ"
+            },
+            {
+              "text": ". A good idea would be to ",
+              "kind": "frame"
+            },
+            {
+              "text": "use a flexible plan and review it regularly",
+              "kind": "detail",
+              "labelVi": "giải pháp — động từ nguyên mẫu"
+            },
+            {
+              "text": ". For instance, ",
+              "kind": "frame"
+            },
+            {
+              "text": "a learner could separate essential costs from optional purchases and leave a small amount for unexpected needs",
+              "kind": "detail",
+              "labelVi": "cách làm — chủ ngữ + động từ"
+            },
+            {
+              "text": ". If you would like some help, we could make a simple plan together and see how it goes.",
+              "kind": "frame"
+            }
+          ],
+          "template": "One thing to remember is that [khó khăn — chủ ngữ + động từ]. A good idea would be to [giải pháp — động từ nguyên mẫu]. For instance, [cách làm — chủ ngữ + động từ]. If you would like some help, we could make a simple plan together and see how it goes."
         },
         {
-          "label": "Đề nghị và kết",
-          "text": "If you like, I can come with you and help you write down the most useful points. Afterwards, we could make a simple plan together.\n\nPlease let me know what you think when you have a moment. I would be happy to answer any other questions.\n\nBest wishes,\nMinh",
-          "noteVi": "Hỗ trợ cụ thể, không chỉ nói good luck."
+          "label": "Kết thư",
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 225,
-      "mainWordCount": 225,
+      "register": "informal",
+      "wordCount": 201,
+      "mainWordCount": 201,
       "phrases": [
         {
           "en": "essential expenses",
@@ -624,10 +1627,6 @@
         {
           "en": "For example",
           "vi": "Ví dụ…"
-        },
-        {
-          "en": "Please let me know",
-          "vi": "Hãy cho tôi biết…"
         }
       ]
     },
@@ -639,40 +1638,155 @@
       "number": 10,
       "title": "Dành thời gian cho sở thích",
       "focus": "making time for hobbies",
-      "prompt": "Your friend is interested in making time for hobbies but does not know where to begin. Write an email giving practical advice, explaining a possible difficulty, and offering help.",
+      "prompt": "Your friend Alex has asked for advice about making time for hobbies. Suggest a practical first step, explain a possible difficulty and recommend a way to address it.",
       "requirementsVi": [
-        "Cho bước bắt đầu cụ thể.",
-        "Giải thích một khó khăn và cách xử lý.",
-        "Đề nghị hỗ trợ thực tế."
+        "Đồng cảm trước khi đưa lời khuyên.",
+        "If I were you + would; start by + V-ing.",
+        "Khó khăn, giải pháp và cách bạn hỗ trợ."
       ],
       "summaryVi": "Sở thích giúp đổi nhịp sống; nên bắt đầu nhỏ, vừa túi tiền và không so mình với người đã giỏi.",
       "paragraphs": [
         {
-          "label": "Mở thư",
-          "text": "Hi Alex,\n\nThanks for telling me about your interest in making time for hobbies. I understand why you are unsure where to start. You do not need a perfect plan immediately, but a few practical steps could make things easier.",
-          "noteVi": "Đồng cảm, xác định mục đích khuyên."
+          "label": "Mở thư và lời khuyên",
+          "text": "Hi Alex,\n\nThanks for your email. I am glad you told me about your interest in making time for hobbies. You asked for advice, so I have a few suggestions that you might find helpful. You do not need to do everything at once.",
+          "noteVi": "Đồng cảm trước khi đưa lời khuyên.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nThanks for your email. I am glad you told me about your interest in ",
+              "kind": "frame"
+            },
+            {
+              "text": "making time for hobbies",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": ". You asked for advice, so I have a few suggestions that you might find helpful. You do not need to do everything at once.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nThanks for your email. I am glad you told me about your interest in [chủ đề]. You asked for advice, so I have a few suggestions that you might find helpful. You do not need to do everything at once."
         },
         {
-          "label": "Lời khuyên đầu",
-          "text": "First, I suggest joining a beginner hobbies open day at the college activity room on Saturday at three in the afternoon. There, we can try simple creative activities and choose a manageable first goal. One useful point is that a hobby can provide a break from work and routine responsibilities. For example, an office worker can spend one evening each week learning to draw with a small local group.",
-          "noteVi": "Gợi ý hoạt động có ngày, nơi và lý do."
+          "label": "Gợi ý đầu",
+          "text": "If I were you, I would start by joining a beginner hobbies open day. There, you could try simple creative activities and choose a manageable first goal. This could be useful because a hobby can provide a break from work and routine responsibilities. For example, an office worker can spend one evening each week learning to draw with a small local group.",
+          "noteVi": "If I were you + would; start by + V-ing.",
+          "parts": [
+            {
+              "text": "If I were you, I would start by joining ",
+              "kind": "frame"
+            },
+            {
+              "text": "a beginner hobbies open day",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". There, you could ",
+              "kind": "frame"
+            },
+            {
+              "text": "try simple creative activities and choose a manageable first goal",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". This could be useful because ",
+              "kind": "frame"
+            },
+            {
+              "text": "a hobby can provide a break from work and routine responsibilities",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". For example, ",
+              "kind": "frame"
+            },
+            {
+              "text": "an office worker can spend one evening each week learning to draw with a small local group",
+              "kind": "detail",
+              "labelVi": "ví dụ — chủ ngữ + động từ"
+            },
+            {
+              "text": ".",
+              "kind": "frame"
+            }
+          ],
+          "template": "If I were you, I would start by joining [sự kiện / hoạt động]. There, you could [hoạt động — động từ nguyên mẫu]. This could be useful because [lợi ích — chủ ngữ + động từ]. For example, [ví dụ — chủ ngữ + động từ]."
         },
         {
-          "label": "Khó khăn và cách xử lý",
-          "text": "One thing to remember is that an ambitious hobby plan can become another source of pressure. This can happen because people may compare their starting point with experienced hobbyists. A useful response would be to begin with small goals and choose an affordable way to practise. For instance, a beginner could borrow equipment and practise one simple skill for a short time each week. Try the idea on a small scale before deciding whether to continue.",
-          "noteVi": "Nêu giới hạn để lời khuyên không tuyệt đối."
+          "label": "Giới hạn và giúp đỡ",
+          "text": "One thing to remember is that an ambitious hobby plan can become another source of pressure. A good idea would be to begin with small goals and choose an affordable way to practise. For instance, a beginner could borrow equipment and practise one simple skill for a short time each week. If you would like some help, we could make a simple plan together and see how it goes.",
+          "noteVi": "Khó khăn, giải pháp và cách bạn hỗ trợ.",
+          "parts": [
+            {
+              "text": "One thing to remember is that ",
+              "kind": "frame"
+            },
+            {
+              "text": "an ambitious hobby plan can become another source of pressure",
+              "kind": "detail",
+              "labelVi": "khó khăn — chủ ngữ + động từ"
+            },
+            {
+              "text": ". A good idea would be to ",
+              "kind": "frame"
+            },
+            {
+              "text": "begin with small goals and choose an affordable way to practise",
+              "kind": "detail",
+              "labelVi": "giải pháp — động từ nguyên mẫu"
+            },
+            {
+              "text": ". For instance, ",
+              "kind": "frame"
+            },
+            {
+              "text": "a beginner could borrow equipment and practise one simple skill for a short time each week",
+              "kind": "detail",
+              "labelVi": "cách làm — chủ ngữ + động từ"
+            },
+            {
+              "text": ". If you would like some help, we could make a simple plan together and see how it goes.",
+              "kind": "frame"
+            }
+          ],
+          "template": "One thing to remember is that [khó khăn — chủ ngữ + động từ]. A good idea would be to [giải pháp — động từ nguyên mẫu]. For instance, [cách làm — chủ ngữ + động từ]. If you would like some help, we could make a simple plan together and see how it goes."
         },
         {
-          "label": "Đề nghị và kết",
-          "text": "If you like, I can come with you and help you write down the most useful points. Afterwards, we could make a simple plan together.\n\nPlease let me know what you think when you have a moment. I would be happy to answer any other questions.\n\nBest wishes,\nMinh",
-          "noteVi": "Hỗ trợ cụ thể, không chỉ nói good luck."
+          "label": "Kết thư",
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 234,
-      "mainWordCount": 234,
+      "register": "informal",
+      "wordCount": 209,
+      "mainWordCount": 209,
       "phrases": [
         {
           "en": "make time for hobbies",
@@ -694,10 +1808,6 @@
         {
           "en": "For example",
           "vi": "Ví dụ…"
-        },
-        {
-          "en": "Please let me know",
-          "vi": "Hãy cho tôi biết…"
         }
       ]
     }

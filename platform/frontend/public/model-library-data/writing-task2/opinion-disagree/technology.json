@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-05-v1",
+  "version": "2026-11-05-v2-frames",
   "samples": [
     {
       "id": "writing-task2-opinion-disagree-technology-01",
@@ -20,32 +20,146 @@
         {
           "label": "Mở bài",
           "text": "It is sometimes suggested that everyone should follow one standard approach to smartphones in the classroom, regardless of their needs. I disagree with this view. A shared goal can be useful, but an identical rule may ignore the practical conditions that determine whether people can benefit from it.",
-          "noteVi": "Phản đối sự cứng nhắc, không phủ nhận toàn bộ chủ đề."
+          "noteVi": "Phản đối sự cứng nhắc, không phủ nhận toàn bộ chủ đề.",
+          "parts": [
+            {
+              "text": "It is sometimes suggested that",
+              "kind": "frame",
+              "labelVi": "Dẫn một ý kiến + mệnh đề"
+            },
+            {
+              "text": " everyone should follow one standard approach to smartphones in the classroom, regardless of their needs. ",
+              "kind": "detail"
+            },
+            {
+              "text": "I disagree with this view.",
+              "kind": "frame",
+              "labelVi": "Nêu lập trường phản đối"
+            },
+            {
+              "text": " A shared goal can be useful, but an identical rule may ignore the practical conditions that determine whether people can benefit from it.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Lý do 1 — điều kiện khác nhau",
           "text": "A difficulty that should not be ignored is that notifications can distract students. This matters because a device used for learning also gives access to games and private messages. For instance, a pupil may stop following a discussion after receiving several messages from friends. The result may be frustration or a decision to stop taking part. This is not simply a question of people refusing to make an effort; practical conditions can prevent a reasonable idea from working as intended.",
-          "noteVi": "Điện thoại có ích khi có nhiệm vụ rõ; thông báo và luật dùng không rõ dễ gây xao nhãng."
+          "noteVi": "Điện thoại có ích khi có nhiệm vụ rõ; thông báo và luật dùng không rõ dễ gây xao nhãng.",
+          "parts": [
+            {
+              "text": "A difficulty that should not be ignored is that",
+              "kind": "frame",
+              "labelVi": "Nêu một khó khăn + mệnh đề"
+            },
+            {
+              "text": " notifications can distract students. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This matters because",
+              "kind": "frame",
+              "labelVi": "Giải thích vì sao điều đó quan trọng"
+            },
+            {
+              "text": " a device used for learning also gives access to games and private messages. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For instance,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a pupil may stop following a discussion after receiving several messages from friends. The result may be frustration or a decision to stop taking part. This is not simply a question of people refusing to make an effort; practical conditions can prevent a reasonable idea from working as intended.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Lý do 2 — nguyên nhân cần xử lý",
           "text": "One reason for the difficulty is that phone rules are sometimes unclear or applied differently in each lesson. This can help explain why notifications can distract students. Consider the following situation: a pupil may stop following a discussion after receiving several messages from friends. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
-          "noteVi": "Giải thích vì sao yêu cầu cố gắng hơn chưa đủ."
+          "noteVi": "Giải thích vì sao yêu cầu cố gắng hơn chưa đủ.",
+          "parts": [
+            {
+              "text": "One reason for the difficulty is that",
+              "kind": "frame",
+              "labelVi": "Nêu nguyên nhân + mệnh đề"
+            },
+            {
+              "text": " phone rules are sometimes unclear or applied differently in each lesson. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This can help explain why",
+              "kind": "frame",
+              "labelVi": "Nối nguyên nhân với hiện tượng"
+            },
+            {
+              "text": " notifications can distract students. ",
+              "kind": "detail"
+            },
+            {
+              "text": "Consider the following situation:",
+              "kind": "frame",
+              "labelVi": "Dẫn một tình huống minh họa"
+            },
+            {
+              "text": " a pupil may stop following a discussion after receiving several messages from friends. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Thừa nhận và hướng khác",
           "text": "This does not mean that the original idea has no value. For example, a class can compare two digital maps to explain how a neighbourhood has changed. The possibility that students can quickly access useful learning material is worth taking seriously. However, a better approach would be to agree on specific times for phone use and keep devices away during other tasks. A teacher could allow phones for a five-minute research task and then ask students to put them in their bags.",
-          "noteVi": "Thừa nhận điểm mạnh và đưa giải pháp có điều kiện."
+          "noteVi": "Thừa nhận điểm mạnh và đưa giải pháp có điều kiện.",
+          "parts": [
+            {
+              "text": "This does not mean that the original idea has no value. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a class can compare two digital maps to explain how a neighbourhood has changed. The possibility that students can quickly access useful learning material is worth taking seriously. ",
+              "kind": "detail"
+            },
+            {
+              "text": "However,",
+              "kind": "frame",
+              "labelVi": "Nêu ý đối lập hoặc giới hạn"
+            },
+            {
+              "text": " a better approach would be to agree on specific times for phone use and keep devices away during other tasks. A teacher could allow phones for a five-minute research task and then ask students to put them in their bags.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, I do not support requiring one method for everyone. A workable policy should keep its main purpose while allowing practical adjustments. This is more likely to help people participate than a rigid rule that treats different circumstances as if they were the same.",
-          "noteVi": "Chốt đúng đối tượng phản đối: một phương pháp cho mọi người."
+          "noteVi": "Chốt đúng đối tượng phản đối: một phương pháp cho mọi người.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " I do not support requiring one method for everyone. A workable policy should keep its main purpose while allowing practical adjustments. This is more likely to help people participate than a rigid rule that treats different circumstances as if they were the same.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 333,
       "mainWordCount": 333,
       "phrases": [
@@ -95,32 +209,146 @@
         {
           "label": "Mở bài",
           "text": "It is sometimes suggested that everyone should follow one standard approach to social media use, regardless of their needs. I disagree with this view. A shared goal can be useful, but an identical rule may ignore the practical conditions that determine whether people can benefit from it.",
-          "noteVi": "Phản đối sự cứng nhắc, không phủ nhận toàn bộ chủ đề."
+          "noteVi": "Phản đối sự cứng nhắc, không phủ nhận toàn bộ chủ đề.",
+          "parts": [
+            {
+              "text": "It is sometimes suggested that",
+              "kind": "frame",
+              "labelVi": "Dẫn một ý kiến + mệnh đề"
+            },
+            {
+              "text": " everyone should follow one standard approach to social media use, regardless of their needs. ",
+              "kind": "detail"
+            },
+            {
+              "text": "I disagree with this view.",
+              "kind": "frame",
+              "labelVi": "Nêu lập trường phản đối"
+            },
+            {
+              "text": " A shared goal can be useful, but an identical rule may ignore the practical conditions that determine whether people can benefit from it.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Lý do 1 — điều kiện khác nhau",
           "text": "A difficulty that should not be ignored is that strict limits may make some useful communication harder. This matters because friends, study groups and small businesses may rely on the same platforms. For instance, a student could miss a last-minute change to a group meeting if every social application is blocked. The result may be frustration or a decision to stop taking part. This is not simply a question of people refusing to make an effort; practical conditions can prevent a reasonable idea from working as intended.",
-          "noteVi": "Giới hạn thời gian giúp bảo vệ việc học và nghỉ ngơi; nên tách tin nhắn cần thiết khỏi lướt vô thức."
+          "noteVi": "Giới hạn thời gian giúp bảo vệ việc học và nghỉ ngơi; nên tách tin nhắn cần thiết khỏi lướt vô thức.",
+          "parts": [
+            {
+              "text": "A difficulty that should not be ignored is that",
+              "kind": "frame",
+              "labelVi": "Nêu một khó khăn + mệnh đề"
+            },
+            {
+              "text": " strict limits may make some useful communication harder. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This matters because",
+              "kind": "frame",
+              "labelVi": "Giải thích vì sao điều đó quan trọng"
+            },
+            {
+              "text": " friends, study groups and small businesses may rely on the same platforms. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For instance,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a student could miss a last-minute change to a group meeting if every social application is blocked. The result may be frustration or a decision to stop taking part. This is not simply a question of people refusing to make an effort; practical conditions can prevent a reasonable idea from working as intended.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Lý do 2 — nguyên nhân cần xử lý",
           "text": "One reason for the difficulty is that people often treat all online activity as equally useful or equally harmful. This can help explain why strict limits may make some useful communication harder. Consider the following situation: a student could miss a last-minute change to a group meeting if every social application is blocked. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
-          "noteVi": "Giải thích vì sao yêu cầu cố gắng hơn chưa đủ."
+          "noteVi": "Giải thích vì sao yêu cầu cố gắng hơn chưa đủ.",
+          "parts": [
+            {
+              "text": "One reason for the difficulty is that",
+              "kind": "frame",
+              "labelVi": "Nêu nguyên nhân + mệnh đề"
+            },
+            {
+              "text": " people often treat all online activity as equally useful or equally harmful. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This can help explain why",
+              "kind": "frame",
+              "labelVi": "Nối nguyên nhân với hiện tượng"
+            },
+            {
+              "text": " strict limits may make some useful communication harder. ",
+              "kind": "detail"
+            },
+            {
+              "text": "Consider the following situation:",
+              "kind": "frame",
+              "labelVi": "Dẫn một tình huống minh họa"
+            },
+            {
+              "text": " a student could miss a last-minute change to a group meeting if every social application is blocked. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Thừa nhận và hướng khác",
           "text": "This does not mean that the original idea has no value. For example, a student can put the phone away after answering messages and spend the next hour preparing for a test. The possibility that people can protect time for study, work and sleep is worth taking seriously. However, a better approach would be to separate necessary messages from passive scrolling. Someone could check a study group at set times while turning off recommendations and unrelated alerts.",
-          "noteVi": "Thừa nhận điểm mạnh và đưa giải pháp có điều kiện."
+          "noteVi": "Thừa nhận điểm mạnh và đưa giải pháp có điều kiện.",
+          "parts": [
+            {
+              "text": "This does not mean that the original idea has no value. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a student can put the phone away after answering messages and spend the next hour preparing for a test. The possibility that people can protect time for study, work and sleep is worth taking seriously. ",
+              "kind": "detail"
+            },
+            {
+              "text": "However,",
+              "kind": "frame",
+              "labelVi": "Nêu ý đối lập hoặc giới hạn"
+            },
+            {
+              "text": " a better approach would be to separate necessary messages from passive scrolling. Someone could check a study group at set times while turning off recommendations and unrelated alerts.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, I do not support requiring one method for everyone. A workable policy should keep its main purpose while allowing practical adjustments. This is more likely to help people participate than a rigid rule that treats different circumstances as if they were the same.",
-          "noteVi": "Chốt đúng đối tượng phản đối: một phương pháp cho mọi người."
+          "noteVi": "Chốt đúng đối tượng phản đối: một phương pháp cho mọi người.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " I do not support requiring one method for everyone. A workable policy should keep its main purpose while allowing practical adjustments. This is more likely to help people participate than a rigid rule that treats different circumstances as if they were the same.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 343,
       "mainWordCount": 343,
       "phrases": [
@@ -170,32 +398,146 @@
         {
           "label": "Mở bài",
           "text": "It is sometimes suggested that everyone should follow one standard approach to online shopping, regardless of their needs. I disagree with this view. A shared goal can be useful, but an identical rule may ignore the practical conditions that determine whether people can benefit from it.",
-          "noteVi": "Phản đối sự cứng nhắc, không phủ nhận toàn bộ chủ đề."
+          "noteVi": "Phản đối sự cứng nhắc, không phủ nhận toàn bộ chủ đề.",
+          "parts": [
+            {
+              "text": "It is sometimes suggested that",
+              "kind": "frame",
+              "labelVi": "Dẫn một ý kiến + mệnh đề"
+            },
+            {
+              "text": " everyone should follow one standard approach to online shopping, regardless of their needs. ",
+              "kind": "detail"
+            },
+            {
+              "text": "I disagree with this view.",
+              "kind": "frame",
+              "labelVi": "Nêu lập trường phản đối"
+            },
+            {
+              "text": " A shared goal can be useful, but an identical rule may ignore the practical conditions that determine whether people can benefit from it.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Lý do 1 — điều kiện khác nhau",
           "text": "A difficulty that should not be ignored is that a product may not match the buyer's expectations. This matters because photographs and short descriptions cannot show every detail. For instance, a jacket may arrive in the wrong size and need to be sent back before a refund is received. The result may be frustration or a decision to stop taking part. This is not simply a question of people refusing to make an effort; practical conditions can prevent a reasonable idea from working as intended.",
-          "noteVi": "Mua online tiết kiệm công đi lại; kiểm tra kích thước và điều kiện trả hàng giúp giảm rủi ro."
+          "noteVi": "Mua online tiết kiệm công đi lại; kiểm tra kích thước và điều kiện trả hàng giúp giảm rủi ro.",
+          "parts": [
+            {
+              "text": "A difficulty that should not be ignored is that",
+              "kind": "frame",
+              "labelVi": "Nêu một khó khăn + mệnh đề"
+            },
+            {
+              "text": " a product may not match the buyer's expectations. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This matters because",
+              "kind": "frame",
+              "labelVi": "Giải thích vì sao điều đó quan trọng"
+            },
+            {
+              "text": " photographs and short descriptions cannot show every detail. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For instance,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a jacket may arrive in the wrong size and need to be sent back before a refund is received. The result may be frustration or a decision to stop taking part. This is not simply a question of people refusing to make an effort; practical conditions can prevent a reasonable idea from working as intended.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Lý do 2 — nguyên nhân cần xử lý",
           "text": "One reason for the difficulty is that some buyers order quickly without checking measurements or return conditions. This can help explain why a product may not match the buyer's expectations. Consider the following situation: a jacket may arrive in the wrong size and need to be sent back before a refund is received. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
-          "noteVi": "Giải thích vì sao yêu cầu cố gắng hơn chưa đủ."
+          "noteVi": "Giải thích vì sao yêu cầu cố gắng hơn chưa đủ.",
+          "parts": [
+            {
+              "text": "One reason for the difficulty is that",
+              "kind": "frame",
+              "labelVi": "Nêu nguyên nhân + mệnh đề"
+            },
+            {
+              "text": " some buyers order quickly without checking measurements or return conditions. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This can help explain why",
+              "kind": "frame",
+              "labelVi": "Nối nguyên nhân với hiện tượng"
+            },
+            {
+              "text": " a product may not match the buyer's expectations. ",
+              "kind": "detail"
+            },
+            {
+              "text": "Consider the following situation:",
+              "kind": "frame",
+              "labelVi": "Dẫn một tình huống minh họa"
+            },
+            {
+              "text": " a jacket may arrive in the wrong size and need to be sent back before a refund is received. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Thừa nhận và hướng khác",
           "text": "This does not mean that the original idea has no value. For example, a parent can compare the size and price of school bags after the children have gone to bed. The possibility that customers can compare products without visiting several shops is worth taking seriously. However, a better approach would be to check product details and the seller's return policy before paying. A buyer could compare the size chart with an item they already own and save the order confirmation.",
-          "noteVi": "Thừa nhận điểm mạnh và đưa giải pháp có điều kiện."
+          "noteVi": "Thừa nhận điểm mạnh và đưa giải pháp có điều kiện.",
+          "parts": [
+            {
+              "text": "This does not mean that the original idea has no value. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a parent can compare the size and price of school bags after the children have gone to bed. The possibility that customers can compare products without visiting several shops is worth taking seriously. ",
+              "kind": "detail"
+            },
+            {
+              "text": "However,",
+              "kind": "frame",
+              "labelVi": "Nêu ý đối lập hoặc giới hạn"
+            },
+            {
+              "text": " a better approach would be to check product details and the seller's return policy before paying. A buyer could compare the size chart with an item they already own and save the order confirmation.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, I do not support requiring one method for everyone. A workable policy should keep its main purpose while allowing practical adjustments. This is more likely to help people participate than a rigid rule that treats different circumstances as if they were the same.",
-          "noteVi": "Chốt đúng đối tượng phản đối: một phương pháp cho mọi người."
+          "noteVi": "Chốt đúng đối tượng phản đối: một phương pháp cho mọi người.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " I do not support requiring one method for everyone. A workable policy should keep its main purpose while allowing practical adjustments. This is more likely to help people participate than a rigid rule that treats different circumstances as if they were the same.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 344,
       "mainWordCount": 344,
       "phrases": [
@@ -245,32 +587,146 @@
         {
           "label": "Mở bài",
           "text": "It is sometimes suggested that everyone should follow one standard approach to AI tools for study, regardless of their needs. I disagree with this view. A shared goal can be useful, but an identical rule may ignore the practical conditions that determine whether people can benefit from it.",
-          "noteVi": "Phản đối sự cứng nhắc, không phủ nhận toàn bộ chủ đề."
+          "noteVi": "Phản đối sự cứng nhắc, không phủ nhận toàn bộ chủ đề.",
+          "parts": [
+            {
+              "text": "It is sometimes suggested that",
+              "kind": "frame",
+              "labelVi": "Dẫn một ý kiến + mệnh đề"
+            },
+            {
+              "text": " everyone should follow one standard approach to AI tools for study, regardless of their needs. ",
+              "kind": "detail"
+            },
+            {
+              "text": "I disagree with this view.",
+              "kind": "frame",
+              "labelVi": "Nêu lập trường phản đối"
+            },
+            {
+              "text": " A shared goal can be useful, but an identical rule may ignore the practical conditions that determine whether people can benefit from it.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Lý do 1 — điều kiện khác nhau",
           "text": "A difficulty that should not be ignored is that learners may accept incorrect information or avoid thinking for themselves. This matters because a confident-looking answer is not necessarily accurate or suitable for the assignment. For instance, a student may submit an essay containing invented details after copying an answer without checking it. The result may be frustration or a decision to stop taking part. This is not simply a question of people refusing to make an effort; practical conditions can prevent a reasonable idea from working as intended.",
-          "noteVi": "AI hỗ trợ giải thích và luyện tập; cần kiểm tra thông tin và tự làm phần suy nghĩ chính."
+          "noteVi": "AI hỗ trợ giải thích và luyện tập; cần kiểm tra thông tin và tự làm phần suy nghĩ chính.",
+          "parts": [
+            {
+              "text": "A difficulty that should not be ignored is that",
+              "kind": "frame",
+              "labelVi": "Nêu một khó khăn + mệnh đề"
+            },
+            {
+              "text": " learners may accept incorrect information or avoid thinking for themselves. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This matters because",
+              "kind": "frame",
+              "labelVi": "Giải thích vì sao điều đó quan trọng"
+            },
+            {
+              "text": " a confident-looking answer is not necessarily accurate or suitable for the assignment. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For instance,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a student may submit an essay containing invented details after copying an answer without checking it. The result may be frustration or a decision to stop taking part. This is not simply a question of people refusing to make an effort; practical conditions can prevent a reasonable idea from working as intended.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Lý do 2 — nguyên nhân cần xử lý",
           "text": "One reason for the difficulty is that students sometimes judge an answer by how fluent it sounds. This can help explain why learners may accept incorrect information or avoid thinking for themselves. Consider the following situation: a student may submit an essay containing invented details after copying an answer without checking it. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
-          "noteVi": "Giải thích vì sao yêu cầu cố gắng hơn chưa đủ."
+          "noteVi": "Giải thích vì sao yêu cầu cố gắng hơn chưa đủ.",
+          "parts": [
+            {
+              "text": "One reason for the difficulty is that",
+              "kind": "frame",
+              "labelVi": "Nêu nguyên nhân + mệnh đề"
+            },
+            {
+              "text": " students sometimes judge an answer by how fluent it sounds. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This can help explain why",
+              "kind": "frame",
+              "labelVi": "Nối nguyên nhân với hiện tượng"
+            },
+            {
+              "text": " learners may accept incorrect information or avoid thinking for themselves. ",
+              "kind": "detail"
+            },
+            {
+              "text": "Consider the following situation:",
+              "kind": "frame",
+              "labelVi": "Dẫn một tình huống minh họa"
+            },
+            {
+              "text": " a student may submit an essay containing invented details after copying an answer without checking it. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Thừa nhận và hướng khác",
           "text": "This does not mean that the original idea has no value. For example, a learner can ask for two simple examples of a grammar pattern and then write an original sentence. The possibility that learners can get additional explanations and practice ideas is worth taking seriously. However, a better approach would be to check important claims and explain the final answer in their own words. A teacher could ask students to identify one weak point in an AI response before improving it.",
-          "noteVi": "Thừa nhận điểm mạnh và đưa giải pháp có điều kiện."
+          "noteVi": "Thừa nhận điểm mạnh và đưa giải pháp có điều kiện.",
+          "parts": [
+            {
+              "text": "This does not mean that the original idea has no value. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a learner can ask for two simple examples of a grammar pattern and then write an original sentence. The possibility that learners can get additional explanations and practice ideas is worth taking seriously. ",
+              "kind": "detail"
+            },
+            {
+              "text": "However,",
+              "kind": "frame",
+              "labelVi": "Nêu ý đối lập hoặc giới hạn"
+            },
+            {
+              "text": " a better approach would be to check important claims and explain the final answer in their own words. A teacher could ask students to identify one weak point in an AI response before improving it.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, I do not support requiring one method for everyone. A workable policy should keep its main purpose while allowing practical adjustments. This is more likely to help people participate than a rigid rule that treats different circumstances as if they were the same.",
-          "noteVi": "Chốt đúng đối tượng phản đối: một phương pháp cho mọi người."
+          "noteVi": "Chốt đúng đối tượng phản đối: một phương pháp cho mọi người.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " I do not support requiring one method for everyone. A workable policy should keep its main purpose while allowing practical adjustments. This is more likely to help people participate than a rigid rule that treats different circumstances as if they were the same.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 349,
       "mainWordCount": 349,
       "phrases": [
@@ -320,32 +776,146 @@
         {
           "label": "Mở bài",
           "text": "It is sometimes suggested that everyone should follow one standard approach to personal information online, regardless of their needs. I disagree with this view. A shared goal can be useful, but an identical rule may ignore the practical conditions that determine whether people can benefit from it.",
-          "noteVi": "Phản đối sự cứng nhắc, không phủ nhận toàn bộ chủ đề."
+          "noteVi": "Phản đối sự cứng nhắc, không phủ nhận toàn bộ chủ đề.",
+          "parts": [
+            {
+              "text": "It is sometimes suggested that",
+              "kind": "frame",
+              "labelVi": "Dẫn một ý kiến + mệnh đề"
+            },
+            {
+              "text": " everyone should follow one standard approach to personal information online, regardless of their needs. ",
+              "kind": "detail"
+            },
+            {
+              "text": "I disagree with this view.",
+              "kind": "frame",
+              "labelVi": "Nêu lập trường phản đối"
+            },
+            {
+              "text": " A shared goal can be useful, but an identical rule may ignore the practical conditions that determine whether people can benefit from it.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Lý do 1 — điều kiện khác nhau",
           "text": "A difficulty that should not be ignored is that privacy advice can be difficult to follow when settings change. This matters because a long list of technical instructions may confuse new users. For instance, a teenager may give up while trying to understand several pages of unclear account settings. The result may be frustration or a decision to stop taking part. This is not simply a question of people refusing to make an effort; practical conditions can prevent a reasonable idea from working as intended.",
-          "noteVi": "Dạy bảo vệ thông tin cần thao tác dễ làm và ví dụ cụ thể, không chỉ liệt kê rủi ro."
+          "noteVi": "Dạy bảo vệ thông tin cần thao tác dễ làm và ví dụ cụ thể, không chỉ liệt kê rủi ro.",
+          "parts": [
+            {
+              "text": "A difficulty that should not be ignored is that",
+              "kind": "frame",
+              "labelVi": "Nêu một khó khăn + mệnh đề"
+            },
+            {
+              "text": " privacy advice can be difficult to follow when settings change. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This matters because",
+              "kind": "frame",
+              "labelVi": "Giải thích vì sao điều đó quan trọng"
+            },
+            {
+              "text": " a long list of technical instructions may confuse new users. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For instance,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a teenager may give up while trying to understand several pages of unclear account settings. The result may be frustration or a decision to stop taking part. This is not simply a question of people refusing to make an effort; practical conditions can prevent a reasonable idea from working as intended.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Lý do 2 — nguyên nhân cần xử lý",
           "text": "One reason for the difficulty is that privacy lessons sometimes explain risks without practising the actual steps. This can help explain why privacy advice can be difficult to follow when settings change. Consider the following situation: a teenager may give up while trying to understand several pages of unclear account settings. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
-          "noteVi": "Giải thích vì sao yêu cầu cố gắng hơn chưa đủ."
+          "noteVi": "Giải thích vì sao yêu cầu cố gắng hơn chưa đủ.",
+          "parts": [
+            {
+              "text": "One reason for the difficulty is that",
+              "kind": "frame",
+              "labelVi": "Nêu nguyên nhân + mệnh đề"
+            },
+            {
+              "text": " privacy lessons sometimes explain risks without practising the actual steps. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This can help explain why",
+              "kind": "frame",
+              "labelVi": "Nối nguyên nhân với hiện tượng"
+            },
+            {
+              "text": " privacy advice can be difficult to follow when settings change. ",
+              "kind": "detail"
+            },
+            {
+              "text": "Consider the following situation:",
+              "kind": "frame",
+              "labelVi": "Dẫn một tình huống minh họa"
+            },
+            {
+              "text": " a teenager may give up while trying to understand several pages of unclear account settings. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Thừa nhận và hướng khác",
           "text": "This does not mean that the original idea has no value. For example, a pupil can remove a home address from a public profile and restrict who can see photographs. The possibility that young people can make more careful choices about what they share is worth taking seriously. However, a better approach would be to teach a small number of practical checks using clear examples. Students could review a fictional profile and decide which information should not be public.",
-          "noteVi": "Thừa nhận điểm mạnh và đưa giải pháp có điều kiện."
+          "noteVi": "Thừa nhận điểm mạnh và đưa giải pháp có điều kiện.",
+          "parts": [
+            {
+              "text": "This does not mean that the original idea has no value. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a pupil can remove a home address from a public profile and restrict who can see photographs. The possibility that young people can make more careful choices about what they share is worth taking seriously. ",
+              "kind": "detail"
+            },
+            {
+              "text": "However,",
+              "kind": "frame",
+              "labelVi": "Nêu ý đối lập hoặc giới hạn"
+            },
+            {
+              "text": " a better approach would be to teach a small number of practical checks using clear examples. Students could review a fictional profile and decide which information should not be public.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, I do not support requiring one method for everyone. A workable policy should keep its main purpose while allowing practical adjustments. This is more likely to help people participate than a rigid rule that treats different circumstances as if they were the same.",
-          "noteVi": "Chốt đúng đối tượng phản đối: một phương pháp cho mọi người."
+          "noteVi": "Chốt đúng đối tượng phản đối: một phương pháp cho mọi người.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " I do not support requiring one method for everyone. A workable policy should keep its main purpose while allowing practical adjustments. This is more likely to help people participate than a rigid rule that treats different circumstances as if they were the same.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 341,
       "mainWordCount": 341,
       "phrases": [
@@ -395,32 +965,146 @@
         {
           "label": "Mở bài",
           "text": "It is sometimes suggested that everyone should follow one standard approach to remote work, regardless of their needs. I disagree with this view. A shared goal can be useful, but an identical rule may ignore the practical conditions that determine whether people can benefit from it.",
-          "noteVi": "Phản đối sự cứng nhắc, không phủ nhận toàn bộ chủ đề."
+          "noteVi": "Phản đối sự cứng nhắc, không phủ nhận toàn bộ chủ đề.",
+          "parts": [
+            {
+              "text": "It is sometimes suggested that",
+              "kind": "frame",
+              "labelVi": "Dẫn một ý kiến + mệnh đề"
+            },
+            {
+              "text": " everyone should follow one standard approach to remote work, regardless of their needs. ",
+              "kind": "detail"
+            },
+            {
+              "text": "I disagree with this view.",
+              "kind": "frame",
+              "labelVi": "Nêu lập trường phản đối"
+            },
+            {
+              "text": " A shared goal can be useful, but an identical rule may ignore the practical conditions that determine whether people can benefit from it.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Lý do 1 — điều kiện khác nhau",
           "text": "A difficulty that should not be ignored is that new workers may receive less informal support. This matters because quick questions and casual discussions are harder when colleagues are not together. For instance, a new employee may wait several hours for an answer to a small question that blocks a task. The result may be frustration or a decision to stop taking part. This is not simply a question of people refusing to make an effort; practical conditions can prevent a reasonable idea from working as intended.",
-          "noteVi": "Làm từ xa tiết kiệm đi lại; đội nhóm cần cách trao đổi và hỗ trợ nhân viên mới rõ ràng."
+          "noteVi": "Làm từ xa tiết kiệm đi lại; đội nhóm cần cách trao đổi và hỗ trợ nhân viên mới rõ ràng.",
+          "parts": [
+            {
+              "text": "A difficulty that should not be ignored is that",
+              "kind": "frame",
+              "labelVi": "Nêu một khó khăn + mệnh đề"
+            },
+            {
+              "text": " new workers may receive less informal support. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This matters because",
+              "kind": "frame",
+              "labelVi": "Giải thích vì sao điều đó quan trọng"
+            },
+            {
+              "text": " quick questions and casual discussions are harder when colleagues are not together. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For instance,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a new employee may wait several hours for an answer to a small question that blocks a task. The result may be frustration or a decision to stop taking part. This is not simply a question of people refusing to make an effort; practical conditions can prevent a reasonable idea from working as intended.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Lý do 2 — nguyên nhân cần xử lý",
           "text": "One reason for the difficulty is that teams may move online without changing how they share information. This can help explain why new workers may receive less informal support. Consider the following situation: a new employee may wait several hours for an answer to a small question that blocks a task. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
-          "noteVi": "Giải thích vì sao yêu cầu cố gắng hơn chưa đủ."
+          "noteVi": "Giải thích vì sao yêu cầu cố gắng hơn chưa đủ.",
+          "parts": [
+            {
+              "text": "One reason for the difficulty is that",
+              "kind": "frame",
+              "labelVi": "Nêu nguyên nhân + mệnh đề"
+            },
+            {
+              "text": " teams may move online without changing how they share information. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This can help explain why",
+              "kind": "frame",
+              "labelVi": "Nối nguyên nhân với hiện tượng"
+            },
+            {
+              "text": " new workers may receive less informal support. ",
+              "kind": "detail"
+            },
+            {
+              "text": "Consider the following situation:",
+              "kind": "frame",
+              "labelVi": "Dẫn một tình huống minh họa"
+            },
+            {
+              "text": " a new employee may wait several hours for an answer to a small question that blocks a task. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Thừa nhận và hướng khác",
           "text": "This does not mean that the original idea has no value. For example, a parent can finish a report at home and still collect a child from school on time. The possibility that employees can save time spent travelling is worth taking seriously. However, a better approach would be to agree on communication routines and provide regular support. A team could hold a short morning check-in and keep a shared guide for common questions.",
-          "noteVi": "Thừa nhận điểm mạnh và đưa giải pháp có điều kiện."
+          "noteVi": "Thừa nhận điểm mạnh và đưa giải pháp có điều kiện.",
+          "parts": [
+            {
+              "text": "This does not mean that the original idea has no value. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a parent can finish a report at home and still collect a child from school on time. The possibility that employees can save time spent travelling is worth taking seriously. ",
+              "kind": "detail"
+            },
+            {
+              "text": "However,",
+              "kind": "frame",
+              "labelVi": "Nêu ý đối lập hoặc giới hạn"
+            },
+            {
+              "text": " a better approach would be to agree on communication routines and provide regular support. A team could hold a short morning check-in and keep a shared guide for common questions.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, I do not support requiring one method for everyone. A workable policy should keep its main purpose while allowing practical adjustments. This is more likely to help people participate than a rigid rule that treats different circumstances as if they were the same.",
-          "noteVi": "Chốt đúng đối tượng phản đối: một phương pháp cho mọi người."
+          "noteVi": "Chốt đúng đối tượng phản đối: một phương pháp cho mọi người.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " I do not support requiring one method for everyone. A workable policy should keep its main purpose while allowing practical adjustments. This is more likely to help people participate than a rigid rule that treats different circumstances as if they were the same.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 337,
       "mainWordCount": 337,
       "phrases": [
@@ -470,32 +1154,146 @@
         {
           "label": "Mở bài",
           "text": "It is sometimes suggested that everyone should follow one standard approach to computer lessons for older adults, regardless of their needs. I disagree with this view. A shared goal can be useful, but an identical rule may ignore the practical conditions that determine whether people can benefit from it.",
-          "noteVi": "Phản đối sự cứng nhắc, không phủ nhận toàn bộ chủ đề."
+          "noteVi": "Phản đối sự cứng nhắc, không phủ nhận toàn bộ chủ đề.",
+          "parts": [
+            {
+              "text": "It is sometimes suggested that",
+              "kind": "frame",
+              "labelVi": "Dẫn một ý kiến + mệnh đề"
+            },
+            {
+              "text": " everyone should follow one standard approach to computer lessons for older adults, regardless of their needs. ",
+              "kind": "detail"
+            },
+            {
+              "text": "I disagree with this view.",
+              "kind": "frame",
+              "labelVi": "Nêu lập trường phản đối"
+            },
+            {
+              "text": " A shared goal can be useful, but an identical rule may ignore the practical conditions that determine whether people can benefit from it.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Lý do 1 — điều kiện khác nhau",
           "text": "A difficulty that should not be ignored is that a fast lesson can leave beginners feeling discouraged. This matters because learners may need different amounts of time and repeated explanations. For instance, someone may miss the next step while still trying to find a small button on the screen. The result may be frustration or a decision to stop taking part. This is not simply a question of people refusing to make an effort; practical conditions can prevent a reasonable idea from working as intended.",
-          "noteVi": "Lớp công nghệ cho người lớn tuổi cần chậm, nhóm nhỏ và cho lặp lại thao tác."
+          "noteVi": "Lớp công nghệ cho người lớn tuổi cần chậm, nhóm nhỏ và cho lặp lại thao tác.",
+          "parts": [
+            {
+              "text": "A difficulty that should not be ignored is that",
+              "kind": "frame",
+              "labelVi": "Nêu một khó khăn + mệnh đề"
+            },
+            {
+              "text": " a fast lesson can leave beginners feeling discouraged. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This matters because",
+              "kind": "frame",
+              "labelVi": "Giải thích vì sao điều đó quan trọng"
+            },
+            {
+              "text": " learners may need different amounts of time and repeated explanations. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For instance,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " someone may miss the next step while still trying to find a small button on the screen. The result may be frustration or a decision to stop taking part. This is not simply a question of people refusing to make an effort; practical conditions can prevent a reasonable idea from working as intended.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Lý do 2 — nguyên nhân cần xử lý",
           "text": "One reason for the difficulty is that courses sometimes assume that all learners already know basic device controls. This can help explain why a fast lesson can leave beginners feeling discouraged. Consider the following situation: someone may miss the next step while still trying to find a small button on the screen. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
-          "noteVi": "Giải thích vì sao yêu cầu cố gắng hơn chưa đủ."
+          "noteVi": "Giải thích vì sao yêu cầu cố gắng hơn chưa đủ.",
+          "parts": [
+            {
+              "text": "One reason for the difficulty is that",
+              "kind": "frame",
+              "labelVi": "Nêu nguyên nhân + mệnh đề"
+            },
+            {
+              "text": " courses sometimes assume that all learners already know basic device controls. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This can help explain why",
+              "kind": "frame",
+              "labelVi": "Nối nguyên nhân với hiện tượng"
+            },
+            {
+              "text": " a fast lesson can leave beginners feeling discouraged. ",
+              "kind": "detail"
+            },
+            {
+              "text": "Consider the following situation:",
+              "kind": "frame",
+              "labelVi": "Dẫn một tình huống minh họa"
+            },
+            {
+              "text": " someone may miss the next step while still trying to find a small button on the screen. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Thừa nhận và hướng khác",
           "text": "This does not mean that the original idea has no value. For example, an older learner can practise joining a video call and later speak to family members who live far away. The possibility that older people can use useful online services more independently is worth taking seriously. However, a better approach would be to use small groups and clear step-by-step practice. A volunteer could give each learner a simple printed guide and let them repeat one task several times.",
-          "noteVi": "Thừa nhận điểm mạnh và đưa giải pháp có điều kiện."
+          "noteVi": "Thừa nhận điểm mạnh và đưa giải pháp có điều kiện.",
+          "parts": [
+            {
+              "text": "This does not mean that the original idea has no value. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " an older learner can practise joining a video call and later speak to family members who live far away. The possibility that older people can use useful online services more independently is worth taking seriously. ",
+              "kind": "detail"
+            },
+            {
+              "text": "However,",
+              "kind": "frame",
+              "labelVi": "Nêu ý đối lập hoặc giới hạn"
+            },
+            {
+              "text": " a better approach would be to use small groups and clear step-by-step practice. A volunteer could give each learner a simple printed guide and let them repeat one task several times.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, I do not support requiring one method for everyone. A workable policy should keep its main purpose while allowing practical adjustments. This is more likely to help people participate than a rigid rule that treats different circumstances as if they were the same.",
-          "noteVi": "Chốt đúng đối tượng phản đối: một phương pháp cho mọi người."
+          "noteVi": "Chốt đúng đối tượng phản đối: một phương pháp cho mọi người.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " I do not support requiring one method for everyone. A workable policy should keep its main purpose while allowing practical adjustments. This is more likely to help people participate than a rigid rule that treats different circumstances as if they were the same.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 345,
       "mainWordCount": 345,
       "phrases": [
@@ -545,32 +1343,146 @@
         {
           "label": "Mở bài",
           "text": "It is sometimes suggested that everyone should follow one standard approach to online news, regardless of their needs. I disagree with this view. A shared goal can be useful, but an identical rule may ignore the practical conditions that determine whether people can benefit from it.",
-          "noteVi": "Phản đối sự cứng nhắc, không phủ nhận toàn bộ chủ đề."
+          "noteVi": "Phản đối sự cứng nhắc, không phủ nhận toàn bộ chủ đề.",
+          "parts": [
+            {
+              "text": "It is sometimes suggested that",
+              "kind": "frame",
+              "labelVi": "Dẫn một ý kiến + mệnh đề"
+            },
+            {
+              "text": " everyone should follow one standard approach to online news, regardless of their needs. ",
+              "kind": "detail"
+            },
+            {
+              "text": "I disagree with this view.",
+              "kind": "frame",
+              "labelVi": "Nêu lập trường phản đối"
+            },
+            {
+              "text": " A shared goal can be useful, but an identical rule may ignore the practical conditions that determine whether people can benefit from it.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Lý do 1 — điều kiện khác nhau",
           "text": "A difficulty that should not be ignored is that checking every detail can feel time-consuming. This matters because short posts are designed to be read and shared quickly. For instance, someone in a busy group chat may forward a dramatic headline without opening the article. The result may be frustration or a decision to stop taking part. This is not simply a question of people refusing to make an effort; practical conditions can prevent a reasonable idea from working as intended.",
-          "noteVi": "Đọc nguồn gốc và ngữ cảnh giúp tránh chia sẻ tin sai; đừng phản ứng chỉ theo tiêu đề."
+          "noteVi": "Đọc nguồn gốc và ngữ cảnh giúp tránh chia sẻ tin sai; đừng phản ứng chỉ theo tiêu đề.",
+          "parts": [
+            {
+              "text": "A difficulty that should not be ignored is that",
+              "kind": "frame",
+              "labelVi": "Nêu một khó khăn + mệnh đề"
+            },
+            {
+              "text": " checking every detail can feel time-consuming. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This matters because",
+              "kind": "frame",
+              "labelVi": "Giải thích vì sao điều đó quan trọng"
+            },
+            {
+              "text": " short posts are designed to be read and shared quickly. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For instance,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " someone in a busy group chat may forward a dramatic headline without opening the article. The result may be frustration or a decision to stop taking part. This is not simply a question of people refusing to make an effort; practical conditions can prevent a reasonable idea from working as intended.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Lý do 2 — nguyên nhân cần xử lý",
           "text": "One reason for the difficulty is that emotional headlines can encourage immediate reactions. This can help explain why checking every detail can feel time-consuming. Consider the following situation: someone in a busy group chat may forward a dramatic headline without opening the article. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
-          "noteVi": "Giải thích vì sao yêu cầu cố gắng hơn chưa đủ."
+          "noteVi": "Giải thích vì sao yêu cầu cố gắng hơn chưa đủ.",
+          "parts": [
+            {
+              "text": "One reason for the difficulty is that",
+              "kind": "frame",
+              "labelVi": "Nêu nguyên nhân + mệnh đề"
+            },
+            {
+              "text": " emotional headlines can encourage immediate reactions. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This can help explain why",
+              "kind": "frame",
+              "labelVi": "Nối nguyên nhân với hiện tượng"
+            },
+            {
+              "text": " checking every detail can feel time-consuming. ",
+              "kind": "detail"
+            },
+            {
+              "text": "Consider the following situation:",
+              "kind": "frame",
+              "labelVi": "Dẫn một tình huống minh họa"
+            },
+            {
+              "text": " someone in a busy group chat may forward a dramatic headline without opening the article. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Thừa nhận và hướng khác",
           "text": "This does not mean that the original idea has no value. For example, a reader can discover that an alarming photograph was taken years earlier in a different place. The possibility that readers can avoid spreading misleading information is worth taking seriously. However, a better approach would be to pause before sharing and look for an identifiable original source. A class could compare a headline with the full report and note which details were omitted.",
-          "noteVi": "Thừa nhận điểm mạnh và đưa giải pháp có điều kiện."
+          "noteVi": "Thừa nhận điểm mạnh và đưa giải pháp có điều kiện.",
+          "parts": [
+            {
+              "text": "This does not mean that the original idea has no value. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a reader can discover that an alarming photograph was taken years earlier in a different place. The possibility that readers can avoid spreading misleading information is worth taking seriously. ",
+              "kind": "detail"
+            },
+            {
+              "text": "However,",
+              "kind": "frame",
+              "labelVi": "Nêu ý đối lập hoặc giới hạn"
+            },
+            {
+              "text": " a better approach would be to pause before sharing and look for an identifiable original source. A class could compare a headline with the full report and note which details were omitted.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, I do not support requiring one method for everyone. A workable policy should keep its main purpose while allowing practical adjustments. This is more likely to help people participate than a rigid rule that treats different circumstances as if they were the same.",
-          "noteVi": "Chốt đúng đối tượng phản đối: một phương pháp cho mọi người."
+          "noteVi": "Chốt đúng đối tượng phản đối: một phương pháp cho mọi người.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " I do not support requiring one method for everyone. A workable policy should keep its main purpose while allowing practical adjustments. This is more likely to help people participate than a rigid rule that treats different circumstances as if they were the same.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 324,
       "mainWordCount": 324,
       "phrases": [
@@ -620,32 +1532,146 @@
         {
           "label": "Mở bài",
           "text": "It is sometimes suggested that everyone should follow one standard approach to repairing electronic devices, regardless of their needs. I disagree with this view. A shared goal can be useful, but an identical rule may ignore the practical conditions that determine whether people can benefit from it.",
-          "noteVi": "Phản đối sự cứng nhắc, không phủ nhận toàn bộ chủ đề."
+          "noteVi": "Phản đối sự cứng nhắc, không phủ nhận toàn bộ chủ đề.",
+          "parts": [
+            {
+              "text": "It is sometimes suggested that",
+              "kind": "frame",
+              "labelVi": "Dẫn một ý kiến + mệnh đề"
+            },
+            {
+              "text": " everyone should follow one standard approach to repairing electronic devices, regardless of their needs. ",
+              "kind": "detail"
+            },
+            {
+              "text": "I disagree with this view.",
+              "kind": "frame",
+              "labelVi": "Nêu lập trường phản đối"
+            },
+            {
+              "text": " A shared goal can be useful, but an identical rule may ignore the practical conditions that determine whether people can benefit from it.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Lý do 1 — điều kiện khác nhau",
           "text": "A difficulty that should not be ignored is that some repairs can be expensive or impractical. This matters because spare parts may be difficult to find and the final cost may be uncertain. For instance, a customer may pay for an inspection only to discover that a replacement screen costs almost as much as another device. The result may be frustration or a decision to stop taking part. This is not simply a question of people refusing to make an effort; practical conditions can prevent a reasonable idea from working as intended.",
-          "noteVi": "Sửa giúp kéo dài tuổi thọ đồ điện tử; cần biết chi phí và tính khả thi trước khi quyết định."
+          "noteVi": "Sửa giúp kéo dài tuổi thọ đồ điện tử; cần biết chi phí và tính khả thi trước khi quyết định.",
+          "parts": [
+            {
+              "text": "A difficulty that should not be ignored is that",
+              "kind": "frame",
+              "labelVi": "Nêu một khó khăn + mệnh đề"
+            },
+            {
+              "text": " some repairs can be expensive or impractical. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This matters because",
+              "kind": "frame",
+              "labelVi": "Giải thích vì sao điều đó quan trọng"
+            },
+            {
+              "text": " spare parts may be difficult to find and the final cost may be uncertain. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For instance,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a customer may pay for an inspection only to discover that a replacement screen costs almost as much as another device. The result may be frustration or a decision to stop taking part. This is not simply a question of people refusing to make an effort; practical conditions can prevent a reasonable idea from working as intended.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Lý do 2 — nguyên nhân cần xử lý",
           "text": "One reason for the difficulty is that buyers may not receive clear information about repair options. This can help explain why some repairs can be expensive or impractical. Consider the following situation: a customer may pay for an inspection only to discover that a replacement screen costs almost as much as another device. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
-          "noteVi": "Giải thích vì sao yêu cầu cố gắng hơn chưa đủ."
+          "noteVi": "Giải thích vì sao yêu cầu cố gắng hơn chưa đủ.",
+          "parts": [
+            {
+              "text": "One reason for the difficulty is that",
+              "kind": "frame",
+              "labelVi": "Nêu nguyên nhân + mệnh đề"
+            },
+            {
+              "text": " buyers may not receive clear information about repair options. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This can help explain why",
+              "kind": "frame",
+              "labelVi": "Nối nguyên nhân với hiện tượng"
+            },
+            {
+              "text": " some repairs can be expensive or impractical. ",
+              "kind": "detail"
+            },
+            {
+              "text": "Consider the following situation:",
+              "kind": "frame",
+              "labelVi": "Dẫn một tình huống minh họa"
+            },
+            {
+              "text": " a customer may pay for an inspection only to discover that a replacement screen costs almost as much as another device. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Thừa nhận và hướng khác",
           "text": "This does not mean that the original idea has no value. For example, a laptop with a worn battery may still be useful for schoolwork after the battery is replaced. The possibility that a repair can extend the useful life of a product is worth taking seriously. However, a better approach would be to ask for a diagnosis and a cost estimate before deciding. A repair service could explain the likely benefit, price and warranty in simple language.",
-          "noteVi": "Thừa nhận điểm mạnh và đưa giải pháp có điều kiện."
+          "noteVi": "Thừa nhận điểm mạnh và đưa giải pháp có điều kiện.",
+          "parts": [
+            {
+              "text": "This does not mean that the original idea has no value. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a laptop with a worn battery may still be useful for schoolwork after the battery is replaced. The possibility that a repair can extend the useful life of a product is worth taking seriously. ",
+              "kind": "detail"
+            },
+            {
+              "text": "However,",
+              "kind": "frame",
+              "labelVi": "Nêu ý đối lập hoặc giới hạn"
+            },
+            {
+              "text": " a better approach would be to ask for a diagnosis and a cost estimate before deciding. A repair service could explain the likely benefit, price and warranty in simple language.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, I do not support requiring one method for everyone. A workable policy should keep its main purpose while allowing practical adjustments. This is more likely to help people participate than a rigid rule that treats different circumstances as if they were the same.",
-          "noteVi": "Chốt đúng đối tượng phản đối: một phương pháp cho mọi người."
+          "noteVi": "Chốt đúng đối tượng phản đối: một phương pháp cho mọi người.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " I do not support requiring one method for everyone. A workable policy should keep its main purpose while allowing practical adjustments. This is more likely to help people participate than a rigid rule that treats different circumstances as if they were the same.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 349,
       "mainWordCount": 349,
       "phrases": [
@@ -695,32 +1721,146 @@
         {
           "label": "Mở bài",
           "text": "It is sometimes suggested that everyone should follow one standard approach to video games in free time, regardless of their needs. I disagree with this view. A shared goal can be useful, but an identical rule may ignore the practical conditions that determine whether people can benefit from it.",
-          "noteVi": "Phản đối sự cứng nhắc, không phủ nhận toàn bộ chủ đề."
+          "noteVi": "Phản đối sự cứng nhắc, không phủ nhận toàn bộ chủ đề.",
+          "parts": [
+            {
+              "text": "It is sometimes suggested that",
+              "kind": "frame",
+              "labelVi": "Dẫn một ý kiến + mệnh đề"
+            },
+            {
+              "text": " everyone should follow one standard approach to video games in free time, regardless of their needs. ",
+              "kind": "detail"
+            },
+            {
+              "text": "I disagree with this view.",
+              "kind": "frame",
+              "labelVi": "Nêu lập trường phản đối"
+            },
+            {
+              "text": " A shared goal can be useful, but an identical rule may ignore the practical conditions that determine whether people can benefit from it.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Lý do 1 — điều kiện khác nhau",
           "text": "A difficulty that should not be ignored is that an unrealistic rule may lead to arguments rather than better habits. This matters because parents and children may disagree about when an online match can reasonably be stopped. For instance, a parent may demand an immediate stop in the middle of a team game that was arranged in advance. The result may be frustration or a decision to stop taking part. This is not simply a question of people refusing to make an effort; practical conditions can prevent a reasonable idea from working as intended.",
-          "noteVi": "Cân bằng chơi game cần thỏa thuận thời gian thực tế và giữ trách nhiệm học, ngủ, vận động."
+          "noteVi": "Cân bằng chơi game cần thỏa thuận thời gian thực tế và giữ trách nhiệm học, ngủ, vận động.",
+          "parts": [
+            {
+              "text": "A difficulty that should not be ignored is that",
+              "kind": "frame",
+              "labelVi": "Nêu một khó khăn + mệnh đề"
+            },
+            {
+              "text": " an unrealistic rule may lead to arguments rather than better habits. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This matters because",
+              "kind": "frame",
+              "labelVi": "Giải thích vì sao điều đó quan trọng"
+            },
+            {
+              "text": " parents and children may disagree about when an online match can reasonably be stopped. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For instance,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a parent may demand an immediate stop in the middle of a team game that was arranged in advance. The result may be frustration or a decision to stop taking part. This is not simply a question of people refusing to make an effort; practical conditions can prevent a reasonable idea from working as intended.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Lý do 2 — nguyên nhân cần xử lý",
           "text": "One reason for the difficulty is that families sometimes set limits without discussing how the activity works. This can help explain why an unrealistic rule may lead to arguments rather than better habits. Consider the following situation: a parent may demand an immediate stop in the middle of a team game that was arranged in advance. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
-          "noteVi": "Giải thích vì sao yêu cầu cố gắng hơn chưa đủ."
+          "noteVi": "Giải thích vì sao yêu cầu cố gắng hơn chưa đủ.",
+          "parts": [
+            {
+              "text": "One reason for the difficulty is that",
+              "kind": "frame",
+              "labelVi": "Nêu nguyên nhân + mệnh đề"
+            },
+            {
+              "text": " families sometimes set limits without discussing how the activity works. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This can help explain why",
+              "kind": "frame",
+              "labelVi": "Nối nguyên nhân với hiện tượng"
+            },
+            {
+              "text": " an unrealistic rule may lead to arguments rather than better habits. ",
+              "kind": "detail"
+            },
+            {
+              "text": "Consider the following situation:",
+              "kind": "frame",
+              "labelVi": "Dẫn một tình huống minh họa"
+            },
+            {
+              "text": " a parent may demand an immediate stop in the middle of a team game that was arranged in advance. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Thừa nhận và hướng khác",
           "text": "This does not mean that the original idea has no value. For example, a teenager can play with friends after finishing homework and still join a weekend football match. The possibility that players can enjoy a hobby while still making time for other needs is worth taking seriously. However, a better approach would be to agree on realistic finishing times and responsibilities before play begins. A family could decide on a final match and keep the same bedtime on school nights.",
-          "noteVi": "Thừa nhận điểm mạnh và đưa giải pháp có điều kiện."
+          "noteVi": "Thừa nhận điểm mạnh và đưa giải pháp có điều kiện.",
+          "parts": [
+            {
+              "text": "This does not mean that the original idea has no value. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a teenager can play with friends after finishing homework and still join a weekend football match. The possibility that players can enjoy a hobby while still making time for other needs is worth taking seriously. ",
+              "kind": "detail"
+            },
+            {
+              "text": "However,",
+              "kind": "frame",
+              "labelVi": "Nêu ý đối lập hoặc giới hạn"
+            },
+            {
+              "text": " a better approach would be to agree on realistic finishing times and responsibilities before play begins. A family could decide on a final match and keep the same bedtime on school nights.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, I do not support requiring one method for everyone. A workable policy should keep its main purpose while allowing practical adjustments. This is more likely to help people participate than a rigid rule that treats different circumstances as if they were the same.",
-          "noteVi": "Chốt đúng đối tượng phản đối: một phương pháp cho mọi người."
+          "noteVi": "Chốt đúng đối tượng phản đối: một phương pháp cho mọi người.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " I do not support requiring one method for everyone. A workable policy should keep its main purpose while allowing practical adjustments. This is more likely to help people participate than a rigid rule that treats different circumstances as if they were the same.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 359,
       "mainWordCount": 359,
       "phrases": [

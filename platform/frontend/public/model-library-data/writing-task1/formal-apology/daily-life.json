@@ -1,0 +1,1625 @@
+{
+  "version": "2026-11-05-v2-frames",
+  "samples": [
+    {
+      "id": "writing-task1-formal-apology-daily-life-01",
+      "group": "writing-task1",
+      "type": "formal-apology",
+      "topic": "daily-life",
+      "number": 1,
+      "title": "Thói quen đi bộ",
+      "focus": "walking as a daily habit",
+      "prompt": "You let Ms Brown, the event coordinator, down while preparing for a neighbourhood walking event. Apologise, explain what happened, and propose a specific way to put things right.",
+      "requirementsVi": [
+        "Nhận lỗi trực tiếp và đúng sự việc.",
+        "Giải thích nhưng không đổ lỗi.",
+        "Cách sửa cụ thể, biện pháp tránh lặp lại và xin phản hồi."
+      ],
+      "summaryVi": "Đi bộ dễ thành thói quen khi đường tới nơi cần đến thuận tiện và không bị cản trở.",
+      "paragraphs": [
+        {
+          "label": "Mở thư và xin lỗi",
+          "text": "Dear Ms Brown,\n\nI am writing to apologise for missing our planning meeting in connection with a neighbourhood walking event. I understand that this caused inconvenience, and I take responsibility for not informing you sooner.",
+          "noteVi": "Nhận lỗi trực tiếp và đúng sự việc.",
+          "parts": [
+            {
+              "text": "Dear ",
+              "kind": "frame"
+            },
+            {
+              "text": "Ms Brown",
+              "kind": "detail",
+              "labelVi": "danh xưng và họ người nhận"
+            },
+            {
+              "text": ",\n\nI am writing to apologise for ",
+              "kind": "frame"
+            },
+            {
+              "text": "missing our planning meeting",
+              "kind": "detail",
+              "labelVi": "lỗi cần xin lỗi — V-ing"
+            },
+            {
+              "text": " in connection with ",
+              "kind": "frame"
+            },
+            {
+              "text": "a neighbourhood walking event",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". I understand that this caused inconvenience, and I take responsibility for not informing you sooner.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Dear [danh xưng và họ người nhận],\n\nI am writing to apologise for [lỗi cần xin lỗi — V-ing] in connection with [sự kiện / hoạt động]. I understand that this caused inconvenience, and I take responsibility for not informing you sooner."
+        },
+        {
+          "label": "Giải thích",
+          "text": "The reason was that my train was cancelled. However, I recognise that I should have checked the arrangements and contacted you earlier. Please be assured that I do not take your time or assistance for granted.",
+          "noteVi": "Giải thích nhưng không đổ lỗi.",
+          "parts": [
+            {
+              "text": "The reason was that ",
+              "kind": "frame"
+            },
+            {
+              "text": "my train was cancelled",
+              "kind": "detail",
+              "labelVi": "lý do — chủ ngữ + động từ"
+            },
+            {
+              "text": ". However, I recognise that I should have checked the arrangements and contacted you earlier. Please be assured that I do not take your time or assistance for granted.",
+              "kind": "frame"
+            }
+          ],
+          "template": "The reason was that [lý do — chủ ngữ + động từ]. However, I recognise that I should have checked the arrangements and contacted you earlier. Please be assured that I do not take your time or assistance for granted."
+        },
+        {
+          "label": "Khắc phục",
+          "text": "To put matters right, I would like to arrive early at the next session and help prepare the materials. I will also make sure that I have comfortable walking shoes ready before the next session. In future, I will confirm the details in writing and inform you immediately if a problem arises. Please let me know whether this proposal is acceptable.",
+          "noteVi": "Cách sửa cụ thể, biện pháp tránh lặp lại và xin phản hồi.",
+          "parts": [
+            {
+              "text": "To put matters right, I would like to ",
+              "kind": "frame"
+            },
+            {
+              "text": "arrive early at the next session and help prepare the materials",
+              "kind": "detail",
+              "labelVi": "cách sửa — động từ nguyên mẫu"
+            },
+            {
+              "text": ". I will also make sure that I have ",
+              "kind": "frame"
+            },
+            {
+              "text": "comfortable walking shoes",
+              "kind": "detail",
+              "labelVi": "đồ cần mang"
+            },
+            {
+              "text": " ready before the next session. In future, I will confirm the details in writing and inform you immediately if a problem arises. Please let me know whether this proposal is acceptable.",
+              "kind": "frame"
+            }
+          ],
+          "template": "To put matters right, I would like to [cách sửa — động từ nguyên mẫu]. I will also make sure that I have [đồ cần mang] ready before the next session. In future, I will confirm the details in writing and inform you immediately if a problem arises. Please let me know whether this proposal is acceptable."
+        },
+        {
+          "label": "Kết thư",
+          "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\nMinh Nguyen",
+          "noteVi": "Biết tên người nhận: Dear Ms/Mr + họ → Yours sincerely. Chưa biết tên: Dear Sir or Madam → Yours faithfully.",
+          "parts": [
+            {
+              "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh Nguyen",
+              "kind": "detail",
+              "labelVi": "họ tên của bạn"
+            }
+          ],
+          "template": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n[họ tên của bạn]"
+        }
+      ],
+      "sections": [],
+      "options": [],
+      "selectedOption": null,
+      "register": "formal",
+      "wordCount": 160,
+      "mainWordCount": 160,
+      "phrases": [
+        {
+          "en": "everyday walking",
+          "vi": "đi bộ hằng ngày",
+          "inAnswer": false
+        },
+        {
+          "en": "keep pavements clear",
+          "vi": "giữ vỉa hè thông thoáng",
+          "inAnswer": false
+        },
+        {
+          "en": "a practical route",
+          "vi": "lộ trình thiết thực",
+          "inAnswer": false
+        }
+      ],
+      "framePhrases": [
+        {
+          "en": "I am writing to",
+          "vi": "Tôi viết để…"
+        },
+        {
+          "en": "Please let me know",
+          "vi": "Hãy cho tôi biết…"
+        },
+        {
+          "en": "I would like to",
+          "vi": "Tôi muốn…"
+        }
+      ]
+    },
+    {
+      "id": "writing-task1-formal-apology-daily-life-02",
+      "group": "writing-task1",
+      "type": "formal-apology",
+      "topic": "daily-life",
+      "number": 2,
+      "title": "Nấu ăn ở nhà",
+      "focus": "cooking simple meals at home",
+      "prompt": "You let Ms Brown, the event coordinator, down while preparing for a simple home cooking class. Apologise, explain what happened, and propose a specific way to put things right.",
+      "requirementsVi": [
+        "Nhận lỗi trực tiếp và đúng sự việc.",
+        "Giải thích nhưng không đổ lỗi.",
+        "Cách sửa cụ thể, biện pháp tránh lặp lại và xin phản hồi."
+      ],
+      "summaryVi": "Biết vài món đơn giản giúp tự chủ ăn uống; công thức nên phù hợp bếp và thời gian thực tế.",
+      "paragraphs": [
+        {
+          "label": "Mở thư và xin lỗi",
+          "text": "Dear Ms Brown,\n\nI am writing to apologise for replying to your message so late in connection with a simple home cooking class. I understand that this caused inconvenience, and I take responsibility for not informing you sooner.",
+          "noteVi": "Nhận lỗi trực tiếp và đúng sự việc.",
+          "parts": [
+            {
+              "text": "Dear ",
+              "kind": "frame"
+            },
+            {
+              "text": "Ms Brown",
+              "kind": "detail",
+              "labelVi": "danh xưng và họ người nhận"
+            },
+            {
+              "text": ",\n\nI am writing to apologise for ",
+              "kind": "frame"
+            },
+            {
+              "text": "replying to your message so late",
+              "kind": "detail",
+              "labelVi": "lỗi cần xin lỗi — V-ing"
+            },
+            {
+              "text": " in connection with ",
+              "kind": "frame"
+            },
+            {
+              "text": "a simple home cooking class",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". I understand that this caused inconvenience, and I take responsibility for not informing you sooner.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Dear [danh xưng và họ người nhận],\n\nI am writing to apologise for [lỗi cần xin lỗi — V-ing] in connection with [sự kiện / hoạt động]. I understand that this caused inconvenience, and I take responsibility for not informing you sooner."
+        },
+        {
+          "label": "Giải thích",
+          "text": "The reason was that I had saved your message in the wrong folder. However, I recognise that I should have checked the arrangements and contacted you earlier. Please be assured that I do not take your time or assistance for granted.",
+          "noteVi": "Giải thích nhưng không đổ lỗi.",
+          "parts": [
+            {
+              "text": "The reason was that ",
+              "kind": "frame"
+            },
+            {
+              "text": "I had saved your message in the wrong folder",
+              "kind": "detail",
+              "labelVi": "lý do — chủ ngữ + động từ"
+            },
+            {
+              "text": ". However, I recognise that I should have checked the arrangements and contacted you earlier. Please be assured that I do not take your time or assistance for granted.",
+              "kind": "frame"
+            }
+          ],
+          "template": "The reason was that [lý do — chủ ngữ + động từ]. However, I recognise that I should have checked the arrangements and contacted you earlier. Please be assured that I do not take your time or assistance for granted."
+        },
+        {
+          "label": "Khắc phục",
+          "text": "To put matters right, I would like to arrive early at the next session and help prepare the materials. I will also make sure that I have a food container ready before the next session. In future, I will confirm the details in writing and inform you immediately if a problem arises. Please let me know whether this proposal is acceptable.",
+          "noteVi": "Cách sửa cụ thể, biện pháp tránh lặp lại và xin phản hồi.",
+          "parts": [
+            {
+              "text": "To put matters right, I would like to ",
+              "kind": "frame"
+            },
+            {
+              "text": "arrive early at the next session and help prepare the materials",
+              "kind": "detail",
+              "labelVi": "cách sửa — động từ nguyên mẫu"
+            },
+            {
+              "text": ". I will also make sure that I have ",
+              "kind": "frame"
+            },
+            {
+              "text": "a food container",
+              "kind": "detail",
+              "labelVi": "đồ cần mang"
+            },
+            {
+              "text": " ready before the next session. In future, I will confirm the details in writing and inform you immediately if a problem arises. Please let me know whether this proposal is acceptable.",
+              "kind": "frame"
+            }
+          ],
+          "template": "To put matters right, I would like to [cách sửa — động từ nguyên mẫu]. I will also make sure that I have [đồ cần mang] ready before the next session. In future, I will confirm the details in writing and inform you immediately if a problem arises. Please let me know whether this proposal is acceptable."
+        },
+        {
+          "label": "Kết thư",
+          "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\nMinh Nguyen",
+          "noteVi": "Biết tên người nhận: Dear Ms/Mr + họ → Yours sincerely. Chưa biết tên: Dear Sir or Madam → Yours faithfully.",
+          "parts": [
+            {
+              "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh Nguyen",
+              "kind": "detail",
+              "labelVi": "họ tên của bạn"
+            }
+          ],
+          "template": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n[họ tên của bạn]"
+        }
+      ],
+      "sections": [],
+      "options": [],
+      "selectedOption": null,
+      "register": "formal",
+      "wordCount": 168,
+      "mainWordCount": 168,
+      "phrases": [
+        {
+          "en": "basic equipment",
+          "vi": "dụng cụ cơ bản",
+          "inAnswer": false
+        },
+        {
+          "en": "simple recipes",
+          "vi": "công thức đơn giản",
+          "inAnswer": false
+        },
+        {
+          "en": "prepare a meal",
+          "vi": "chuẩn bị bữa ăn",
+          "inAnswer": false
+        }
+      ],
+      "framePhrases": [
+        {
+          "en": "I am writing to",
+          "vi": "Tôi viết để…"
+        },
+        {
+          "en": "Please let me know",
+          "vi": "Hãy cho tôi biết…"
+        },
+        {
+          "en": "I would like to",
+          "vi": "Tôi muốn…"
+        }
+      ]
+    },
+    {
+      "id": "writing-task1-formal-apology-daily-life-03",
+      "group": "writing-task1",
+      "type": "formal-apology",
+      "topic": "daily-life",
+      "number": 3,
+      "title": "Thể thao đồng đội",
+      "focus": "team sports in the community",
+      "prompt": "You let Ms Brown, the event coordinator, down while preparing for a beginner community sports session. Apologise, explain what happened, and propose a specific way to put things right.",
+      "requirementsVi": [
+        "Nhận lỗi trực tiếp và đúng sự việc.",
+        "Giải thích nhưng không đổ lỗi.",
+        "Cách sửa cụ thể, biện pháp tránh lặp lại và xin phản hồi."
+      ],
+      "summaryVi": "Thể thao nhóm tạo kết nối; buổi dành cho người mới cần thân thiện và cho mọi người tham gia.",
+      "paragraphs": [
+        {
+          "label": "Mở thư và xin lỗi",
+          "text": "Dear Ms Brown,\n\nI am writing to apologise for forgetting to bring the materials I promised in connection with a beginner community sports session. I understand that this caused inconvenience, and I take responsibility for not informing you sooner.",
+          "noteVi": "Nhận lỗi trực tiếp và đúng sự việc.",
+          "parts": [
+            {
+              "text": "Dear ",
+              "kind": "frame"
+            },
+            {
+              "text": "Ms Brown",
+              "kind": "detail",
+              "labelVi": "danh xưng và họ người nhận"
+            },
+            {
+              "text": ",\n\nI am writing to apologise for ",
+              "kind": "frame"
+            },
+            {
+              "text": "forgetting to bring the materials I promised",
+              "kind": "detail",
+              "labelVi": "lỗi cần xin lỗi — V-ing"
+            },
+            {
+              "text": " in connection with ",
+              "kind": "frame"
+            },
+            {
+              "text": "a beginner community sports session",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". I understand that this caused inconvenience, and I take responsibility for not informing you sooner.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Dear [danh xưng và họ người nhận],\n\nI am writing to apologise for [lỗi cần xin lỗi — V-ing] in connection with [sự kiện / hoạt động]. I understand that this caused inconvenience, and I take responsibility for not informing you sooner."
+        },
+        {
+          "label": "Giải thích",
+          "text": "The reason was that I left the bag at home while rushing to catch a bus. However, I recognise that I should have checked the arrangements and contacted you earlier. Please be assured that I do not take your time or assistance for granted.",
+          "noteVi": "Giải thích nhưng không đổ lỗi.",
+          "parts": [
+            {
+              "text": "The reason was that ",
+              "kind": "frame"
+            },
+            {
+              "text": "I left the bag at home while rushing to catch a bus",
+              "kind": "detail",
+              "labelVi": "lý do — chủ ngữ + động từ"
+            },
+            {
+              "text": ". However, I recognise that I should have checked the arrangements and contacted you earlier. Please be assured that I do not take your time or assistance for granted.",
+              "kind": "frame"
+            }
+          ],
+          "template": "The reason was that [lý do — chủ ngữ + động từ]. However, I recognise that I should have checked the arrangements and contacted you earlier. Please be assured that I do not take your time or assistance for granted."
+        },
+        {
+          "label": "Khắc phục",
+          "text": "To put matters right, I would like to arrive early at the next session and help prepare the materials. I will also make sure that I have sports shoes and water ready before the next session. In future, I will confirm the details in writing and inform you immediately if a problem arises. Please let me know whether this proposal is acceptable.",
+          "noteVi": "Cách sửa cụ thể, biện pháp tránh lặp lại và xin phản hồi.",
+          "parts": [
+            {
+              "text": "To put matters right, I would like to ",
+              "kind": "frame"
+            },
+            {
+              "text": "arrive early at the next session and help prepare the materials",
+              "kind": "detail",
+              "labelVi": "cách sửa — động từ nguyên mẫu"
+            },
+            {
+              "text": ". I will also make sure that I have ",
+              "kind": "frame"
+            },
+            {
+              "text": "sports shoes and water",
+              "kind": "detail",
+              "labelVi": "đồ cần mang"
+            },
+            {
+              "text": " ready before the next session. In future, I will confirm the details in writing and inform you immediately if a problem arises. Please let me know whether this proposal is acceptable.",
+              "kind": "frame"
+            }
+          ],
+          "template": "To put matters right, I would like to [cách sửa — động từ nguyên mẫu]. I will also make sure that I have [đồ cần mang] ready before the next session. In future, I will confirm the details in writing and inform you immediately if a problem arises. Please let me know whether this proposal is acceptable."
+        },
+        {
+          "label": "Kết thư",
+          "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\nMinh Nguyen",
+          "noteVi": "Biết tên người nhận: Dear Ms/Mr + họ → Yours sincerely. Chưa biết tên: Dear Sir or Madam → Yours faithfully.",
+          "parts": [
+            {
+              "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh Nguyen",
+              "kind": "detail",
+              "labelVi": "họ tên của bạn"
+            }
+          ],
+          "template": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n[họ tên của bạn]"
+        }
+      ],
+      "sections": [],
+      "options": [],
+      "selectedOption": null,
+      "register": "formal",
+      "wordCount": 173,
+      "mainWordCount": 173,
+      "phrases": [
+        {
+          "en": "a beginner session",
+          "vi": "buổi cho người mới",
+          "inAnswer": false
+        },
+        {
+          "en": "take part",
+          "vi": "tham gia",
+          "inAnswer": false
+        },
+        {
+          "en": "a welcoming group",
+          "vi": "nhóm thân thiện với người mới",
+          "inAnswer": false
+        }
+      ],
+      "framePhrases": [
+        {
+          "en": "I am writing to",
+          "vi": "Tôi viết để…"
+        },
+        {
+          "en": "Please let me know",
+          "vi": "Hãy cho tôi biết…"
+        },
+        {
+          "en": "I would like to",
+          "vi": "Tôi muốn…"
+        }
+      ]
+    },
+    {
+      "id": "writing-task1-formal-apology-daily-life-04",
+      "group": "writing-task1",
+      "type": "formal-apology",
+      "topic": "daily-life",
+      "number": 4,
+      "title": "Ngủ và dùng điện thoại",
+      "focus": "phone use before bedtime",
+      "prompt": "You let Ms Brown, the event coordinator, down while preparing for an evening routine discussion. Apologise, explain what happened, and propose a specific way to put things right.",
+      "requirementsVi": [
+        "Nhận lỗi trực tiếp và đúng sự việc.",
+        "Giải thích nhưng không đổ lỗi.",
+        "Cách sửa cụ thể, biện pháp tránh lặp lại và xin phản hồi."
+      ],
+      "summaryVi": "Giảm lướt điện thoại giúp giữ giờ nghỉ; vẫn có thể giữ các liên lạc thực sự cần thiết.",
+      "paragraphs": [
+        {
+          "label": "Mở thư và xin lỗi",
+          "text": "Dear Ms Brown,\n\nI am writing to apologise for arriving late and keeping you waiting in connection with an evening routine discussion. I understand that this caused inconvenience, and I take responsibility for not informing you sooner.",
+          "noteVi": "Nhận lỗi trực tiếp và đúng sự việc.",
+          "parts": [
+            {
+              "text": "Dear ",
+              "kind": "frame"
+            },
+            {
+              "text": "Ms Brown",
+              "kind": "detail",
+              "labelVi": "danh xưng và họ người nhận"
+            },
+            {
+              "text": ",\n\nI am writing to apologise for ",
+              "kind": "frame"
+            },
+            {
+              "text": "arriving late and keeping you waiting",
+              "kind": "detail",
+              "labelVi": "lỗi cần xin lỗi — V-ing"
+            },
+            {
+              "text": " in connection with ",
+              "kind": "frame"
+            },
+            {
+              "text": "an evening routine discussion",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". I understand that this caused inconvenience, and I take responsibility for not informing you sooner.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Dear [danh xưng và họ người nhận],\n\nI am writing to apologise for [lỗi cần xin lỗi — V-ing] in connection with [sự kiện / hoạt động]. I understand that this caused inconvenience, and I take responsibility for not informing you sooner."
+        },
+        {
+          "label": "Giải thích",
+          "text": "The reason was that the bus broke down on the way. However, I recognise that I should have checked the arrangements and contacted you earlier. Please be assured that I do not take your time or assistance for granted.",
+          "noteVi": "Giải thích nhưng không đổ lỗi.",
+          "parts": [
+            {
+              "text": "The reason was that ",
+              "kind": "frame"
+            },
+            {
+              "text": "the bus broke down on the way",
+              "kind": "detail",
+              "labelVi": "lý do — chủ ngữ + động từ"
+            },
+            {
+              "text": ". However, I recognise that I should have checked the arrangements and contacted you earlier. Please be assured that I do not take your time or assistance for granted.",
+              "kind": "frame"
+            }
+          ],
+          "template": "The reason was that [lý do — chủ ngữ + động từ]. However, I recognise that I should have checked the arrangements and contacted you earlier. Please be assured that I do not take your time or assistance for granted."
+        },
+        {
+          "label": "Khắc phục",
+          "text": "To put matters right, I would like to arrive early at the next session and help prepare the materials. I will also make sure that I have a list of evening activities ready before the next session. In future, I will confirm the details in writing and inform you immediately if a problem arises. Please let me know whether this proposal is acceptable.",
+          "noteVi": "Cách sửa cụ thể, biện pháp tránh lặp lại và xin phản hồi.",
+          "parts": [
+            {
+              "text": "To put matters right, I would like to ",
+              "kind": "frame"
+            },
+            {
+              "text": "arrive early at the next session and help prepare the materials",
+              "kind": "detail",
+              "labelVi": "cách sửa — động từ nguyên mẫu"
+            },
+            {
+              "text": ". I will also make sure that I have ",
+              "kind": "frame"
+            },
+            {
+              "text": "a list of evening activities",
+              "kind": "detail",
+              "labelVi": "đồ cần mang"
+            },
+            {
+              "text": " ready before the next session. In future, I will confirm the details in writing and inform you immediately if a problem arises. Please let me know whether this proposal is acceptable.",
+              "kind": "frame"
+            }
+          ],
+          "template": "To put matters right, I would like to [cách sửa — động từ nguyên mẫu]. I will also make sure that I have [đồ cần mang] ready before the next session. In future, I will confirm the details in writing and inform you immediately if a problem arises. Please let me know whether this proposal is acceptable."
+        },
+        {
+          "label": "Kết thư",
+          "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\nMinh Nguyen",
+          "noteVi": "Biết tên người nhận: Dear Ms/Mr + họ → Yours sincerely. Chưa biết tên: Dear Sir or Madam → Yours faithfully.",
+          "parts": [
+            {
+              "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh Nguyen",
+              "kind": "detail",
+              "labelVi": "họ tên của bạn"
+            }
+          ],
+          "template": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n[họ tên của bạn]"
+        }
+      ],
+      "sections": [],
+      "options": [],
+      "selectedOption": null,
+      "register": "formal",
+      "wordCount": 167,
+      "mainWordCount": 167,
+      "phrases": [
+        {
+          "en": "a calmer routine",
+          "vi": "nếp sinh hoạt thư giãn hơn",
+          "inAnswer": false
+        },
+        {
+          "en": "essential contact",
+          "vi": "liên lạc thiết yếu",
+          "inAnswer": false
+        },
+        {
+          "en": "optional scrolling",
+          "vi": "lướt nội dung không cần thiết",
+          "inAnswer": false
+        }
+      ],
+      "framePhrases": [
+        {
+          "en": "I am writing to",
+          "vi": "Tôi viết để…"
+        },
+        {
+          "en": "Please let me know",
+          "vi": "Hãy cho tôi biết…"
+        },
+        {
+          "en": "I would like to",
+          "vi": "Tôi muốn…"
+        }
+      ]
+    },
+    {
+      "id": "writing-task1-formal-apology-daily-life-05",
+      "group": "writing-task1",
+      "type": "formal-apology",
+      "topic": "daily-life",
+      "number": 5,
+      "title": "Chuyến đi cuối tuần",
+      "focus": "short local trips",
+      "prompt": "You let Ms Brown, the event coordinator, down while preparing for a local travel planning evening. Apologise, explain what happened, and propose a specific way to put things right.",
+      "requirementsVi": [
+        "Nhận lỗi trực tiếp và đúng sự việc.",
+        "Giải thích nhưng không đổ lỗi.",
+        "Cách sửa cụ thể, biện pháp tránh lặp lại và xin phản hồi."
+      ],
+      "summaryVi": "Đi gần tận dụng thời gian nghỉ; nên tìm giờ ít đông và điểm đến đa dạng hơn.",
+      "paragraphs": [
+        {
+          "label": "Mở thư và xin lỗi",
+          "text": "Dear Ms Brown,\n\nI am writing to apologise for sending you the wrong meeting time in connection with a local travel planning evening. I understand that this caused inconvenience, and I take responsibility for not informing you sooner.",
+          "noteVi": "Nhận lỗi trực tiếp và đúng sự việc.",
+          "parts": [
+            {
+              "text": "Dear ",
+              "kind": "frame"
+            },
+            {
+              "text": "Ms Brown",
+              "kind": "detail",
+              "labelVi": "danh xưng và họ người nhận"
+            },
+            {
+              "text": ",\n\nI am writing to apologise for ",
+              "kind": "frame"
+            },
+            {
+              "text": "sending you the wrong meeting time",
+              "kind": "detail",
+              "labelVi": "lỗi cần xin lỗi — V-ing"
+            },
+            {
+              "text": " in connection with ",
+              "kind": "frame"
+            },
+            {
+              "text": "a local travel planning evening",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". I understand that this caused inconvenience, and I take responsibility for not informing you sooner.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Dear [danh xưng và họ người nhận],\n\nI am writing to apologise for [lỗi cần xin lỗi — V-ing] in connection with [sự kiện / hoạt động]. I understand that this caused inconvenience, and I take responsibility for not informing you sooner."
+        },
+        {
+          "label": "Giải thích",
+          "text": "The reason was that I copied the time from an earlier version of the plan. However, I recognise that I should have checked the arrangements and contacted you earlier. Please be assured that I do not take your time or assistance for granted.",
+          "noteVi": "Giải thích nhưng không đổ lỗi.",
+          "parts": [
+            {
+              "text": "The reason was that ",
+              "kind": "frame"
+            },
+            {
+              "text": "I copied the time from an earlier version of the plan",
+              "kind": "detail",
+              "labelVi": "lý do — chủ ngữ + động từ"
+            },
+            {
+              "text": ". However, I recognise that I should have checked the arrangements and contacted you earlier. Please be assured that I do not take your time or assistance for granted.",
+              "kind": "frame"
+            }
+          ],
+          "template": "The reason was that [lý do — chủ ngữ + động từ]. However, I recognise that I should have checked the arrangements and contacted you earlier. Please be assured that I do not take your time or assistance for granted."
+        },
+        {
+          "label": "Khắc phục",
+          "text": "To put matters right, I would like to arrive early at the next session and help prepare the materials. I will also make sure that I have a local map ready before the next session. In future, I will confirm the details in writing and inform you immediately if a problem arises. Please let me know whether this proposal is acceptable.",
+          "noteVi": "Cách sửa cụ thể, biện pháp tránh lặp lại và xin phản hồi.",
+          "parts": [
+            {
+              "text": "To put matters right, I would like to ",
+              "kind": "frame"
+            },
+            {
+              "text": "arrive early at the next session and help prepare the materials",
+              "kind": "detail",
+              "labelVi": "cách sửa — động từ nguyên mẫu"
+            },
+            {
+              "text": ". I will also make sure that I have ",
+              "kind": "frame"
+            },
+            {
+              "text": "a local map",
+              "kind": "detail",
+              "labelVi": "đồ cần mang"
+            },
+            {
+              "text": " ready before the next session. In future, I will confirm the details in writing and inform you immediately if a problem arises. Please let me know whether this proposal is acceptable.",
+              "kind": "frame"
+            }
+          ],
+          "template": "To put matters right, I would like to [cách sửa — động từ nguyên mẫu]. I will also make sure that I have [đồ cần mang] ready before the next session. In future, I will confirm the details in writing and inform you immediately if a problem arises. Please let me know whether this proposal is acceptable."
+        },
+        {
+          "label": "Kết thư",
+          "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\nMinh Nguyen",
+          "noteVi": "Biết tên người nhận: Dear Ms/Mr + họ → Yours sincerely. Chưa biết tên: Dear Sir or Madam → Yours faithfully.",
+          "parts": [
+            {
+              "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh Nguyen",
+              "kind": "detail",
+              "labelVi": "họ tên của bạn"
+            }
+          ],
+          "template": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n[họ tên của bạn]"
+        }
+      ],
+      "sections": [],
+      "options": [],
+      "selectedOption": null,
+      "register": "formal",
+      "wordCount": 170,
+      "mainWordCount": 170,
+      "phrases": [
+        {
+          "en": "nearby destinations",
+          "vi": "điểm đến gần",
+          "inAnswer": false
+        },
+        {
+          "en": "less busy times",
+          "vi": "thời điểm ít đông",
+          "inAnswer": false
+        },
+        {
+          "en": "a relaxed day trip",
+          "vi": "chuyến đi trong ngày thong thả",
+          "inAnswer": false
+        }
+      ],
+      "framePhrases": [
+        {
+          "en": "I am writing to",
+          "vi": "Tôi viết để…"
+        },
+        {
+          "en": "Please let me know",
+          "vi": "Hãy cho tôi biết…"
+        },
+        {
+          "en": "I would like to",
+          "vi": "Tôi muốn…"
+        }
+      ]
+    },
+    {
+      "id": "writing-task1-formal-apology-daily-life-06",
+      "group": "writing-task1",
+      "type": "formal-apology",
+      "topic": "daily-life",
+      "number": 6,
+      "title": "Du lịch cùng gia đình",
+      "focus": "planning family holidays",
+      "prompt": "You let Ms Brown, the event coordinator, down while preparing for a family travel planning session. Apologise, explain what happened, and propose a specific way to put things right.",
+      "requirementsVi": [
+        "Nhận lỗi trực tiếp và đúng sự việc.",
+        "Giải thích nhưng không đổ lỗi.",
+        "Cách sửa cụ thể, biện pháp tránh lặp lại và xin phản hồi."
+      ],
+      "summaryVi": "Cùng bàn giúp tôn trọng nhu cầu từng người; lịch đi cần có ưu tiên và giờ nghỉ.",
+      "paragraphs": [
+        {
+          "label": "Mở thư và xin lỗi",
+          "text": "Dear Ms Brown,\n\nI am writing to apologise for not returning your notes when I said I would in connection with a family travel planning session. I understand that this caused inconvenience, and I take responsibility for not informing you sooner.",
+          "noteVi": "Nhận lỗi trực tiếp và đúng sự việc.",
+          "parts": [
+            {
+              "text": "Dear ",
+              "kind": "frame"
+            },
+            {
+              "text": "Ms Brown",
+              "kind": "detail",
+              "labelVi": "danh xưng và họ người nhận"
+            },
+            {
+              "text": ",\n\nI am writing to apologise for ",
+              "kind": "frame"
+            },
+            {
+              "text": "not returning your notes when I said I would",
+              "kind": "detail",
+              "labelVi": "lỗi cần xin lỗi — V-ing"
+            },
+            {
+              "text": " in connection with ",
+              "kind": "frame"
+            },
+            {
+              "text": "a family travel planning session",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". I understand that this caused inconvenience, and I take responsibility for not informing you sooner.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Dear [danh xưng và họ người nhận],\n\nI am writing to apologise for [lỗi cần xin lỗi — V-ing] in connection with [sự kiện / hoạt động]. I understand that this caused inconvenience, and I take responsibility for not informing you sooner."
+        },
+        {
+          "label": "Giải thích",
+          "text": "The reason was that I left the notes at my parents' house. However, I recognise that I should have checked the arrangements and contacted you earlier. Please be assured that I do not take your time or assistance for granted.",
+          "noteVi": "Giải thích nhưng không đổ lỗi.",
+          "parts": [
+            {
+              "text": "The reason was that ",
+              "kind": "frame"
+            },
+            {
+              "text": "I left the notes at my parents' house",
+              "kind": "detail",
+              "labelVi": "lý do — chủ ngữ + động từ"
+            },
+            {
+              "text": ". However, I recognise that I should have checked the arrangements and contacted you earlier. Please be assured that I do not take your time or assistance for granted.",
+              "kind": "frame"
+            }
+          ],
+          "template": "The reason was that [lý do — chủ ngữ + động từ]. However, I recognise that I should have checked the arrangements and contacted you earlier. Please be assured that I do not take your time or assistance for granted."
+        },
+        {
+          "label": "Khắc phục",
+          "text": "To put matters right, I would like to arrive early at the next session and help prepare the materials. I will also make sure that I have a list of family travel preferences ready before the next session. In future, I will confirm the details in writing and inform you immediately if a problem arises. Please let me know whether this proposal is acceptable.",
+          "noteVi": "Cách sửa cụ thể, biện pháp tránh lặp lại và xin phản hồi.",
+          "parts": [
+            {
+              "text": "To put matters right, I would like to ",
+              "kind": "frame"
+            },
+            {
+              "text": "arrive early at the next session and help prepare the materials",
+              "kind": "detail",
+              "labelVi": "cách sửa — động từ nguyên mẫu"
+            },
+            {
+              "text": ". I will also make sure that I have ",
+              "kind": "frame"
+            },
+            {
+              "text": "a list of family travel preferences",
+              "kind": "detail",
+              "labelVi": "đồ cần mang"
+            },
+            {
+              "text": " ready before the next session. In future, I will confirm the details in writing and inform you immediately if a problem arises. Please let me know whether this proposal is acceptable.",
+              "kind": "frame"
+            }
+          ],
+          "template": "To put matters right, I would like to [cách sửa — động từ nguyên mẫu]. I will also make sure that I have [đồ cần mang] ready before the next session. In future, I will confirm the details in writing and inform you immediately if a problem arises. Please let me know whether this proposal is acceptable."
+        },
+        {
+          "label": "Kết thư",
+          "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\nMinh Nguyen",
+          "noteVi": "Biết tên người nhận: Dear Ms/Mr + họ → Yours sincerely. Chưa biết tên: Dear Sir or Madam → Yours faithfully.",
+          "parts": [
+            {
+              "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh Nguyen",
+              "kind": "detail",
+              "labelVi": "họ tên của bạn"
+            }
+          ],
+          "template": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n[họ tên của bạn]"
+        }
+      ],
+      "sections": [],
+      "options": [],
+      "selectedOption": null,
+      "register": "formal",
+      "wordCount": 173,
+      "mainWordCount": 173,
+      "phrases": [
+        {
+          "en": "a realistic schedule",
+          "vi": "lịch trình thực tế",
+          "inAnswer": false
+        },
+        {
+          "en": "agree on priorities",
+          "vi": "thống nhất ưu tiên",
+          "inAnswer": false
+        },
+        {
+          "en": "leave room for breaks",
+          "vi": "chừa thời gian nghỉ",
+          "inAnswer": false
+        }
+      ],
+      "framePhrases": [
+        {
+          "en": "I am writing to",
+          "vi": "Tôi viết để…"
+        },
+        {
+          "en": "Please let me know",
+          "vi": "Hãy cho tôi biết…"
+        },
+        {
+          "en": "I would like to",
+          "vi": "Tôi muốn…"
+        }
+      ]
+    },
+    {
+      "id": "writing-task1-formal-apology-daily-life-07",
+      "group": "writing-task1",
+      "type": "formal-apology",
+      "topic": "daily-life",
+      "number": 7,
+      "title": "Giữ quan hệ hàng xóm",
+      "focus": "getting to know neighbours",
+      "prompt": "You let Ms Brown, the event coordinator, down while preparing for a neighbours' coffee morning. Apologise, explain what happened, and propose a specific way to put things right.",
+      "requirementsVi": [
+        "Nhận lỗi trực tiếp và đúng sự việc.",
+        "Giải thích nhưng không đổ lỗi.",
+        "Cách sửa cụ thể, biện pháp tránh lặp lại và xin phản hồi."
+      ],
+      "summaryVi": "Gặp hàng xóm tạo hỗ trợ gần gũi; hoạt động nên tự nguyện và tôn trọng lịch, sự riêng tư.",
+      "paragraphs": [
+        {
+          "label": "Mở thư và xin lỗi",
+          "text": "Dear Ms Brown,\n\nI am writing to apologise for forgetting to confirm my attendance in connection with a neighbours' coffee morning. I understand that this caused inconvenience, and I take responsibility for not informing you sooner.",
+          "noteVi": "Nhận lỗi trực tiếp và đúng sự việc.",
+          "parts": [
+            {
+              "text": "Dear ",
+              "kind": "frame"
+            },
+            {
+              "text": "Ms Brown",
+              "kind": "detail",
+              "labelVi": "danh xưng và họ người nhận"
+            },
+            {
+              "text": ",\n\nI am writing to apologise for ",
+              "kind": "frame"
+            },
+            {
+              "text": "forgetting to confirm my attendance",
+              "kind": "detail",
+              "labelVi": "lỗi cần xin lỗi — V-ing"
+            },
+            {
+              "text": " in connection with ",
+              "kind": "frame"
+            },
+            {
+              "text": "a neighbours' coffee morning",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". I understand that this caused inconvenience, and I take responsibility for not informing you sooner.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Dear [danh xưng và họ người nhận],\n\nI am writing to apologise for [lỗi cần xin lỗi — V-ing] in connection with [sự kiện / hoạt động]. I understand that this caused inconvenience, and I take responsibility for not informing you sooner."
+        },
+        {
+          "label": "Giải thích",
+          "text": "The reason was that I mistakenly thought my reply had been sent. However, I recognise that I should have checked the arrangements and contacted you earlier. Please be assured that I do not take your time or assistance for granted.",
+          "noteVi": "Giải thích nhưng không đổ lỗi.",
+          "parts": [
+            {
+              "text": "The reason was that ",
+              "kind": "frame"
+            },
+            {
+              "text": "I mistakenly thought my reply had been sent",
+              "kind": "detail",
+              "labelVi": "lý do — chủ ngữ + động từ"
+            },
+            {
+              "text": ". However, I recognise that I should have checked the arrangements and contacted you earlier. Please be assured that I do not take your time or assistance for granted.",
+              "kind": "frame"
+            }
+          ],
+          "template": "The reason was that [lý do — chủ ngữ + động từ]. However, I recognise that I should have checked the arrangements and contacted you earlier. Please be assured that I do not take your time or assistance for granted."
+        },
+        {
+          "label": "Khắc phục",
+          "text": "To put matters right, I would like to arrive early at the next session and help prepare the materials. I will also make sure that I have a small snack to share ready before the next session. In future, I will confirm the details in writing and inform you immediately if a problem arises. Please let me know whether this proposal is acceptable.",
+          "noteVi": "Cách sửa cụ thể, biện pháp tránh lặp lại và xin phản hồi.",
+          "parts": [
+            {
+              "text": "To put matters right, I would like to ",
+              "kind": "frame"
+            },
+            {
+              "text": "arrive early at the next session and help prepare the materials",
+              "kind": "detail",
+              "labelVi": "cách sửa — động từ nguyên mẫu"
+            },
+            {
+              "text": ". I will also make sure that I have ",
+              "kind": "frame"
+            },
+            {
+              "text": "a small snack to share",
+              "kind": "detail",
+              "labelVi": "đồ cần mang"
+            },
+            {
+              "text": " ready before the next session. In future, I will confirm the details in writing and inform you immediately if a problem arises. Please let me know whether this proposal is acceptable.",
+              "kind": "frame"
+            }
+          ],
+          "template": "To put matters right, I would like to [cách sửa — động từ nguyên mẫu]. I will also make sure that I have [đồ cần mang] ready before the next session. In future, I will confirm the details in writing and inform you immediately if a problem arises. Please let me know whether this proposal is acceptable."
+        },
+        {
+          "label": "Kết thư",
+          "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\nMinh Nguyen",
+          "noteVi": "Biết tên người nhận: Dear Ms/Mr + họ → Yours sincerely. Chưa biết tên: Dear Sir or Madam → Yours faithfully.",
+          "parts": [
+            {
+              "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh Nguyen",
+              "kind": "detail",
+              "labelVi": "họ tên của bạn"
+            }
+          ],
+          "template": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n[họ tên của bạn]"
+        }
+      ],
+      "sections": [],
+      "options": [],
+      "selectedOption": null,
+      "register": "formal",
+      "wordCount": 167,
+      "mainWordCount": 167,
+      "phrases": [
+        {
+          "en": "a support network",
+          "vi": "mạng lưới hỗ trợ",
+          "inAnswer": false
+        },
+        {
+          "en": "respect privacy",
+          "vi": "tôn trọng riêng tư",
+          "inAnswer": false
+        },
+        {
+          "en": "optional activities",
+          "vi": "hoạt động tự chọn",
+          "inAnswer": false
+        }
+      ],
+      "framePhrases": [
+        {
+          "en": "I am writing to",
+          "vi": "Tôi viết để…"
+        },
+        {
+          "en": "Please let me know",
+          "vi": "Hãy cho tôi biết…"
+        },
+        {
+          "en": "I would like to",
+          "vi": "Tôi muốn…"
+        }
+      ]
+    },
+    {
+      "id": "writing-task1-formal-apology-daily-life-08",
+      "group": "writing-task1",
+      "type": "formal-apology",
+      "topic": "daily-life",
+      "number": 8,
+      "title": "Đọc sách giải trí",
+      "focus": "reading for pleasure",
+      "prompt": "You let Ms Brown, the event coordinator, down while preparing for an informal book club meeting. Apologise, explain what happened, and propose a specific way to put things right.",
+      "requirementsVi": [
+        "Nhận lỗi trực tiếp và đúng sự việc.",
+        "Giải thích nhưng không đổ lỗi.",
+        "Cách sửa cụ thể, biện pháp tránh lặp lại và xin phản hồi."
+      ],
+      "summaryVi": "Đọc giải trí cần lựa chọn phù hợp và tham gia linh hoạt để không biến thành áp lực hoàn thành chỉ tiêu.",
+      "paragraphs": [
+        {
+          "label": "Mở thư và xin lỗi",
+          "text": "Dear Ms Brown,\n\nI am writing to apologise for changing my plans at the last minute in connection with an informal book club meeting. I understand that this caused inconvenience, and I take responsibility for not informing you sooner.",
+          "noteVi": "Nhận lỗi trực tiếp và đúng sự việc.",
+          "parts": [
+            {
+              "text": "Dear ",
+              "kind": "frame"
+            },
+            {
+              "text": "Ms Brown",
+              "kind": "detail",
+              "labelVi": "danh xưng và họ người nhận"
+            },
+            {
+              "text": ",\n\nI am writing to apologise for ",
+              "kind": "frame"
+            },
+            {
+              "text": "changing my plans at the last minute",
+              "kind": "detail",
+              "labelVi": "lỗi cần xin lỗi — V-ing"
+            },
+            {
+              "text": " in connection with ",
+              "kind": "frame"
+            },
+            {
+              "text": "an informal book club meeting",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". I understand that this caused inconvenience, and I take responsibility for not informing you sooner.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Dear [danh xưng và họ người nhận],\n\nI am writing to apologise for [lỗi cần xin lỗi — V-ing] in connection with [sự kiện / hoạt động]. I understand that this caused inconvenience, and I take responsibility for not informing you sooner."
+        },
+        {
+          "label": "Giải thích",
+          "text": "The reason was that my work schedule changed unexpectedly. However, I recognise that I should have checked the arrangements and contacted you earlier. Please be assured that I do not take your time or assistance for granted.",
+          "noteVi": "Giải thích nhưng không đổ lỗi.",
+          "parts": [
+            {
+              "text": "The reason was that ",
+              "kind": "frame"
+            },
+            {
+              "text": "my work schedule changed unexpectedly",
+              "kind": "detail",
+              "labelVi": "lý do — chủ ngữ + động từ"
+            },
+            {
+              "text": ". However, I recognise that I should have checked the arrangements and contacted you earlier. Please be assured that I do not take your time or assistance for granted.",
+              "kind": "frame"
+            }
+          ],
+          "template": "The reason was that [lý do — chủ ngữ + động từ]. However, I recognise that I should have checked the arrangements and contacted you earlier. Please be assured that I do not take your time or assistance for granted."
+        },
+        {
+          "label": "Khắc phục",
+          "text": "To put matters right, I would like to arrive early at the next session and help prepare the materials. I will also make sure that I have a book or short story you enjoy ready before the next session. In future, I will confirm the details in writing and inform you immediately if a problem arises. Please let me know whether this proposal is acceptable.",
+          "noteVi": "Cách sửa cụ thể, biện pháp tránh lặp lại và xin phản hồi.",
+          "parts": [
+            {
+              "text": "To put matters right, I would like to ",
+              "kind": "frame"
+            },
+            {
+              "text": "arrive early at the next session and help prepare the materials",
+              "kind": "detail",
+              "labelVi": "cách sửa — động từ nguyên mẫu"
+            },
+            {
+              "text": ". I will also make sure that I have ",
+              "kind": "frame"
+            },
+            {
+              "text": "a book or short story you enjoy",
+              "kind": "detail",
+              "labelVi": "đồ cần mang"
+            },
+            {
+              "text": " ready before the next session. In future, I will confirm the details in writing and inform you immediately if a problem arises. Please let me know whether this proposal is acceptable.",
+              "kind": "frame"
+            }
+          ],
+          "template": "To put matters right, I would like to [cách sửa — động từ nguyên mẫu]. I will also make sure that I have [đồ cần mang] ready before the next session. In future, I will confirm the details in writing and inform you immediately if a problem arises. Please let me know whether this proposal is acceptable."
+        },
+        {
+          "label": "Kết thư",
+          "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\nMinh Nguyen",
+          "noteVi": "Biết tên người nhận: Dear Ms/Mr + họ → Yours sincerely. Chưa biết tên: Dear Sir or Madam → Yours faithfully.",
+          "parts": [
+            {
+              "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh Nguyen",
+              "kind": "detail",
+              "labelVi": "họ tên của bạn"
+            }
+          ],
+          "template": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n[họ tên của bạn]"
+        }
+      ],
+      "sections": [],
+      "options": [],
+      "selectedOption": null,
+      "register": "formal",
+      "wordCount": 169,
+      "mainWordCount": 169,
+      "phrases": [
+        {
+          "en": "reading for pleasure",
+          "vi": "đọc vì niềm vui",
+          "inAnswer": false
+        },
+        {
+          "en": "a reading suggestion",
+          "vi": "gợi ý sách đọc",
+          "inAnswer": false
+        },
+        {
+          "en": "participate flexibly",
+          "vi": "tham gia linh hoạt",
+          "inAnswer": false
+        }
+      ],
+      "framePhrases": [
+        {
+          "en": "I am writing to",
+          "vi": "Tôi viết để…"
+        },
+        {
+          "en": "Please let me know",
+          "vi": "Hãy cho tôi biết…"
+        },
+        {
+          "en": "I would like to",
+          "vi": "Tôi muốn…"
+        }
+      ]
+    },
+    {
+      "id": "writing-task1-formal-apology-daily-life-09",
+      "group": "writing-task1",
+      "type": "formal-apology",
+      "topic": "daily-life",
+      "number": 9,
+      "title": "Quản lý chi tiêu",
+      "focus": "planning everyday spending",
+      "prompt": "You let Ms Brown, the event coordinator, down while preparing for an everyday budgeting workshop. Apologise, explain what happened, and propose a specific way to put things right.",
+      "requirementsVi": [
+        "Nhận lỗi trực tiếp và đúng sự việc.",
+        "Giải thích nhưng không đổ lỗi.",
+        "Cách sửa cụ thể, biện pháp tránh lặp lại và xin phản hồi."
+      ],
+      "summaryVi": "Theo dõi chi tiêu giúp thấy nhu cầu thiết yếu; kế hoạch phải có khoảng linh hoạt cho việc phát sinh.",
+      "paragraphs": [
+        {
+          "label": "Mở thư và xin lỗi",
+          "text": "Dear Ms Brown,\n\nI am writing to apologise for missing your call about the arrangements in connection with an everyday budgeting workshop. I understand that this caused inconvenience, and I take responsibility for not informing you sooner.",
+          "noteVi": "Nhận lỗi trực tiếp và đúng sự việc.",
+          "parts": [
+            {
+              "text": "Dear ",
+              "kind": "frame"
+            },
+            {
+              "text": "Ms Brown",
+              "kind": "detail",
+              "labelVi": "danh xưng và họ người nhận"
+            },
+            {
+              "text": ",\n\nI am writing to apologise for ",
+              "kind": "frame"
+            },
+            {
+              "text": "missing your call about the arrangements",
+              "kind": "detail",
+              "labelVi": "lỗi cần xin lỗi — V-ing"
+            },
+            {
+              "text": " in connection with ",
+              "kind": "frame"
+            },
+            {
+              "text": "an everyday budgeting workshop",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". I understand that this caused inconvenience, and I take responsibility for not informing you sooner.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Dear [danh xưng và họ người nhận],\n\nI am writing to apologise for [lỗi cần xin lỗi — V-ing] in connection with [sự kiện / hoạt động]. I understand that this caused inconvenience, and I take responsibility for not informing you sooner."
+        },
+        {
+          "label": "Giải thích",
+          "text": "The reason was that my phone battery ran out. However, I recognise that I should have checked the arrangements and contacted you earlier. Please be assured that I do not take your time or assistance for granted.",
+          "noteVi": "Giải thích nhưng không đổ lỗi.",
+          "parts": [
+            {
+              "text": "The reason was that ",
+              "kind": "frame"
+            },
+            {
+              "text": "my phone battery ran out",
+              "kind": "detail",
+              "labelVi": "lý do — chủ ngữ + động từ"
+            },
+            {
+              "text": ". However, I recognise that I should have checked the arrangements and contacted you earlier. Please be assured that I do not take your time or assistance for granted.",
+              "kind": "frame"
+            }
+          ],
+          "template": "The reason was that [lý do — chủ ngữ + động từ]. However, I recognise that I should have checked the arrangements and contacted you earlier. Please be assured that I do not take your time or assistance for granted."
+        },
+        {
+          "label": "Khắc phục",
+          "text": "To put matters right, I would like to arrive early at the next session and help prepare the materials. I will also make sure that I have an example list of weekly expenses ready before the next session. In future, I will confirm the details in writing and inform you immediately if a problem arises. Please let me know whether this proposal is acceptable.",
+          "noteVi": "Cách sửa cụ thể, biện pháp tránh lặp lại và xin phản hồi.",
+          "parts": [
+            {
+              "text": "To put matters right, I would like to ",
+              "kind": "frame"
+            },
+            {
+              "text": "arrive early at the next session and help prepare the materials",
+              "kind": "detail",
+              "labelVi": "cách sửa — động từ nguyên mẫu"
+            },
+            {
+              "text": ". I will also make sure that I have ",
+              "kind": "frame"
+            },
+            {
+              "text": "an example list of weekly expenses",
+              "kind": "detail",
+              "labelVi": "đồ cần mang"
+            },
+            {
+              "text": " ready before the next session. In future, I will confirm the details in writing and inform you immediately if a problem arises. Please let me know whether this proposal is acceptable.",
+              "kind": "frame"
+            }
+          ],
+          "template": "To put matters right, I would like to [cách sửa — động từ nguyên mẫu]. I will also make sure that I have [đồ cần mang] ready before the next session. In future, I will confirm the details in writing and inform you immediately if a problem arises. Please let me know whether this proposal is acceptable."
+        },
+        {
+          "label": "Kết thư",
+          "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\nMinh Nguyen",
+          "noteVi": "Biết tên người nhận: Dear Ms/Mr + họ → Yours sincerely. Chưa biết tên: Dear Sir or Madam → Yours faithfully.",
+          "parts": [
+            {
+              "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh Nguyen",
+              "kind": "detail",
+              "labelVi": "họ tên của bạn"
+            }
+          ],
+          "template": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n[họ tên của bạn]"
+        }
+      ],
+      "sections": [],
+      "options": [],
+      "selectedOption": null,
+      "register": "formal",
+      "wordCount": 166,
+      "mainWordCount": 166,
+      "phrases": [
+        {
+          "en": "essential expenses",
+          "vi": "chi phí thiết yếu",
+          "inAnswer": false
+        },
+        {
+          "en": "unexpected costs",
+          "vi": "chi phí bất ngờ",
+          "inAnswer": false
+        },
+        {
+          "en": "review a spending plan",
+          "vi": "xem lại kế hoạch chi tiêu",
+          "inAnswer": false
+        }
+      ],
+      "framePhrases": [
+        {
+          "en": "I am writing to",
+          "vi": "Tôi viết để…"
+        },
+        {
+          "en": "Please let me know",
+          "vi": "Hãy cho tôi biết…"
+        },
+        {
+          "en": "I would like to",
+          "vi": "Tôi muốn…"
+        }
+      ]
+    },
+    {
+      "id": "writing-task1-formal-apology-daily-life-10",
+      "group": "writing-task1",
+      "type": "formal-apology",
+      "topic": "daily-life",
+      "number": 10,
+      "title": "Dành thời gian cho sở thích",
+      "focus": "making time for hobbies",
+      "prompt": "You let Ms Brown, the event coordinator, down while preparing for a beginner hobbies open day. Apologise, explain what happened, and propose a specific way to put things right.",
+      "requirementsVi": [
+        "Nhận lỗi trực tiếp và đúng sự việc.",
+        "Giải thích nhưng không đổ lỗi.",
+        "Cách sửa cụ thể, biện pháp tránh lặp lại và xin phản hồi."
+      ],
+      "summaryVi": "Sở thích giúp đổi nhịp sống; nên bắt đầu nhỏ, vừa túi tiền và không so mình với người đã giỏi.",
+      "paragraphs": [
+        {
+          "label": "Mở thư và xin lỗi",
+          "text": "Dear Ms Brown,\n\nI am writing to apologise for not completing my part of the preparation on time in connection with a beginner hobbies open day. I understand that this caused inconvenience, and I take responsibility for not informing you sooner.",
+          "noteVi": "Nhận lỗi trực tiếp và đúng sự việc.",
+          "parts": [
+            {
+              "text": "Dear ",
+              "kind": "frame"
+            },
+            {
+              "text": "Ms Brown",
+              "kind": "detail",
+              "labelVi": "danh xưng và họ người nhận"
+            },
+            {
+              "text": ",\n\nI am writing to apologise for ",
+              "kind": "frame"
+            },
+            {
+              "text": "not completing my part of the preparation on time",
+              "kind": "detail",
+              "labelVi": "lỗi cần xin lỗi — V-ing"
+            },
+            {
+              "text": " in connection with ",
+              "kind": "frame"
+            },
+            {
+              "text": "a beginner hobbies open day",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". I understand that this caused inconvenience, and I take responsibility for not informing you sooner.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Dear [danh xưng và họ người nhận],\n\nI am writing to apologise for [lỗi cần xin lỗi — V-ing] in connection with [sự kiện / hoạt động]. I understand that this caused inconvenience, and I take responsibility for not informing you sooner."
+        },
+        {
+          "label": "Giải thích",
+          "text": "The reason was that I underestimated how long another task would take. However, I recognise that I should have checked the arrangements and contacted you earlier. Please be assured that I do not take your time or assistance for granted.",
+          "noteVi": "Giải thích nhưng không đổ lỗi.",
+          "parts": [
+            {
+              "text": "The reason was that ",
+              "kind": "frame"
+            },
+            {
+              "text": "I underestimated how long another task would take",
+              "kind": "detail",
+              "labelVi": "lý do — chủ ngữ + động từ"
+            },
+            {
+              "text": ". However, I recognise that I should have checked the arrangements and contacted you earlier. Please be assured that I do not take your time or assistance for granted.",
+              "kind": "frame"
+            }
+          ],
+          "template": "The reason was that [lý do — chủ ngữ + động từ]. However, I recognise that I should have checked the arrangements and contacted you earlier. Please be assured that I do not take your time or assistance for granted."
+        },
+        {
+          "label": "Khắc phục",
+          "text": "To put matters right, I would like to arrive early at the next session and help prepare the materials. I will also make sure that I have a notebook for ideas ready before the next session. In future, I will confirm the details in writing and inform you immediately if a problem arises. Please let me know whether this proposal is acceptable.",
+          "noteVi": "Cách sửa cụ thể, biện pháp tránh lặp lại và xin phản hồi.",
+          "parts": [
+            {
+              "text": "To put matters right, I would like to ",
+              "kind": "frame"
+            },
+            {
+              "text": "arrive early at the next session and help prepare the materials",
+              "kind": "detail",
+              "labelVi": "cách sửa — động từ nguyên mẫu"
+            },
+            {
+              "text": ". I will also make sure that I have ",
+              "kind": "frame"
+            },
+            {
+              "text": "a notebook for ideas",
+              "kind": "detail",
+              "labelVi": "đồ cần mang"
+            },
+            {
+              "text": " ready before the next session. In future, I will confirm the details in writing and inform you immediately if a problem arises. Please let me know whether this proposal is acceptable.",
+              "kind": "frame"
+            }
+          ],
+          "template": "To put matters right, I would like to [cách sửa — động từ nguyên mẫu]. I will also make sure that I have [đồ cần mang] ready before the next session. In future, I will confirm the details in writing and inform you immediately if a problem arises. Please let me know whether this proposal is acceptable."
+        },
+        {
+          "label": "Kết thư",
+          "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\nMinh Nguyen",
+          "noteVi": "Biết tên người nhận: Dear Ms/Mr + họ → Yours sincerely. Chưa biết tên: Dear Sir or Madam → Yours faithfully.",
+          "parts": [
+            {
+              "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh Nguyen",
+              "kind": "detail",
+              "labelVi": "họ tên của bạn"
+            }
+          ],
+          "template": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n[họ tên của bạn]"
+        }
+      ],
+      "sections": [],
+      "options": [],
+      "selectedOption": null,
+      "register": "formal",
+      "wordCount": 171,
+      "mainWordCount": 171,
+      "phrases": [
+        {
+          "en": "make time for hobbies",
+          "vi": "dành thời gian cho sở thích",
+          "inAnswer": false
+        },
+        {
+          "en": "small achievable goals",
+          "vi": "mục tiêu nhỏ có thể đạt",
+          "inAnswer": false
+        },
+        {
+          "en": "borrow equipment",
+          "vi": "mượn dụng cụ",
+          "inAnswer": false
+        }
+      ],
+      "framePhrases": [
+        {
+          "en": "I am writing to",
+          "vi": "Tôi viết để…"
+        },
+        {
+          "en": "Please let me know",
+          "vi": "Hãy cho tôi biết…"
+        },
+        {
+          "en": "I would like to",
+          "vi": "Tôi muốn…"
+        }
+      ]
+    }
+  ]
+}

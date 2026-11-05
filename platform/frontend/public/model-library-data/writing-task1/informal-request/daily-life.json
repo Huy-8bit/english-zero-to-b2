@@ -1,0 +1,1765 @@
+{
+  "version": "2026-11-05-v2-frames",
+  "samples": [
+    {
+      "id": "writing-task1-informal-request-daily-life-01",
+      "group": "writing-task1",
+      "type": "informal-request",
+      "topic": "daily-life",
+      "number": 1,
+      "title": "Thói quen đi bộ",
+      "focus": "walking as a daily habit",
+      "prompt": "Ask your friend Alex for information about a neighbourhood walking event. Explain your needs, ask about the time and cost, and find out whether it suits beginners.",
+      "requirementsVi": [
+        "Nhờ người bạn, không dùng giọng công văn.",
+        "Nói vì sao cần thông tin.",
+        "Câu hỏi lịch sự nhưng gần gũi, không gây áp lực."
+      ],
+      "summaryVi": "Đi bộ dễ thành thói quen khi đường tới nơi cần đến thuận tiện và không bị cản trở.",
+      "paragraphs": [
+        {
+          "label": "Mở thư và nhờ giúp",
+          "text": "Hi Alex,\n\nI hope you are well. I am writing to ask for your help with a neighbourhood walking event. I know you have some experience with walking as a daily habit, so I thought you might be able to give me a few useful details.",
+          "noteVi": "Nhờ người bạn, không dùng giọng công văn.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nI hope you are well. I am writing to ask for your help with ",
+              "kind": "frame"
+            },
+            {
+              "text": "a neighbourhood walking event",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". I know you have some experience with ",
+              "kind": "frame"
+            },
+            {
+              "text": "walking as a daily habit",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": ", so I thought you might be able to give me a few useful details.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nI hope you are well. I am writing to ask for your help with [sự kiện / hoạt động]. I know you have some experience with [chủ đề], so I thought you might be able to give me a few useful details."
+        },
+        {
+          "label": "Nhu cầu",
+          "text": "The main thing is that I have limited experience and would prefer a practical introduction. I would like to explore a short local route and note useful improvements, and I think this could help because people can include gentle movement in ordinary routines. Before I make a plan, there are a couple of things I would like to check.",
+          "noteVi": "Nói vì sao cần thông tin.",
+          "parts": [
+            {
+              "text": "The main thing is that ",
+              "kind": "frame"
+            },
+            {
+              "text": "I have limited experience and would prefer a practical introduction",
+              "kind": "detail",
+              "labelVi": "nhu cầu — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I would like to ",
+              "kind": "frame"
+            },
+            {
+              "text": "explore a short local route and note useful improvements",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ", and I think this could help because ",
+              "kind": "frame"
+            },
+            {
+              "text": "people can include gentle movement in ordinary routines",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". Before I make a plan, there are a couple of things I would like to check.",
+              "kind": "frame"
+            }
+          ],
+          "template": "The main thing is that [nhu cầu — chủ ngữ + động từ]. I would like to [hoạt động — động từ nguyên mẫu], and I think this could help because [lợi ích — chủ ngữ + động từ]. Before I make a plan, there are a couple of things I would like to check."
+        },
+        {
+          "label": "Câu hỏi",
+          "text": "Could you let me know whether the session is on Saturday at nine in the morning? I would also like to know how much it costs and whether beginners are welcome. If you have any other tips, I would love to hear them. There is no rush, so just reply when you have a moment.",
+          "noteVi": "Câu hỏi lịch sự nhưng gần gũi, không gây áp lực.",
+          "parts": [
+            {
+              "text": "Could you let me know ",
+              "kind": "frame"
+            },
+            {
+              "text": "whether the session is on Saturday at nine in the morning",
+              "kind": "detail",
+              "labelVi": "whether / wh + chủ ngữ + động từ"
+            },
+            {
+              "text": "? I would also like to know ",
+              "kind": "frame"
+            },
+            {
+              "text": "how much it costs and whether beginners are welcome",
+              "kind": "detail",
+              "labelVi": "câu hỏi gián tiếp thứ hai"
+            },
+            {
+              "text": ". If you have any other tips, I would love to hear them. There is no rush, so just reply when you have a moment.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Could you let me know [whether / wh + chủ ngữ + động từ]? I would also like to know [câu hỏi gián tiếp thứ hai]. If you have any other tips, I would love to hear them. There is no rush, so just reply when you have a moment."
+        },
+        {
+          "label": "Kết thư",
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
+        }
+      ],
+      "sections": [],
+      "options": [],
+      "selectedOption": null,
+      "register": "informal",
+      "wordCount": 194,
+      "mainWordCount": 194,
+      "phrases": [
+        {
+          "en": "everyday walking",
+          "vi": "đi bộ hằng ngày",
+          "inAnswer": false
+        },
+        {
+          "en": "keep pavements clear",
+          "vi": "giữ vỉa hè thông thoáng",
+          "inAnswer": false
+        },
+        {
+          "en": "a practical route",
+          "vi": "lộ trình thiết thực",
+          "inAnswer": false
+        }
+      ],
+      "framePhrases": [
+        {
+          "en": "I am writing to",
+          "vi": "Tôi viết để…"
+        },
+        {
+          "en": "I would like to",
+          "vi": "Tôi muốn…"
+        }
+      ]
+    },
+    {
+      "id": "writing-task1-informal-request-daily-life-02",
+      "group": "writing-task1",
+      "type": "informal-request",
+      "topic": "daily-life",
+      "number": 2,
+      "title": "Nấu ăn ở nhà",
+      "focus": "cooking simple meals at home",
+      "prompt": "Ask your friend Alex for information about a simple home cooking class. Explain your needs, ask about the time and cost, and find out whether it suits beginners.",
+      "requirementsVi": [
+        "Nhờ người bạn, không dùng giọng công văn.",
+        "Nói vì sao cần thông tin.",
+        "Câu hỏi lịch sự nhưng gần gũi, không gây áp lực."
+      ],
+      "summaryVi": "Biết vài món đơn giản giúp tự chủ ăn uống; công thức nên phù hợp bếp và thời gian thực tế.",
+      "paragraphs": [
+        {
+          "label": "Mở thư và nhờ giúp",
+          "text": "Hi Alex,\n\nI hope you are well. I am writing to ask for your help with a simple home cooking class. I know you have some experience with cooking simple meals at home, so I thought you might be able to give me a few useful details.",
+          "noteVi": "Nhờ người bạn, không dùng giọng công văn.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nI hope you are well. I am writing to ask for your help with ",
+              "kind": "frame"
+            },
+            {
+              "text": "a simple home cooking class",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". I know you have some experience with ",
+              "kind": "frame"
+            },
+            {
+              "text": "cooking simple meals at home",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": ", so I thought you might be able to give me a few useful details.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nI hope you are well. I am writing to ask for your help with [sự kiện / hoạt động]. I know you have some experience with [chủ đề], so I thought you might be able to give me a few useful details."
+        },
+        {
+          "label": "Nhu cầu",
+          "text": "The main thing is that I have limited experience and would prefer a practical introduction. I would like to prepare an affordable meal using basic equipment, and I think this could help because people have more control over their meals and spending. Before I make a plan, there are a couple of things I would like to check.",
+          "noteVi": "Nói vì sao cần thông tin.",
+          "parts": [
+            {
+              "text": "The main thing is that ",
+              "kind": "frame"
+            },
+            {
+              "text": "I have limited experience and would prefer a practical introduction",
+              "kind": "detail",
+              "labelVi": "nhu cầu — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I would like to ",
+              "kind": "frame"
+            },
+            {
+              "text": "prepare an affordable meal using basic equipment",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ", and I think this could help because ",
+              "kind": "frame"
+            },
+            {
+              "text": "people have more control over their meals and spending",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". Before I make a plan, there are a couple of things I would like to check.",
+              "kind": "frame"
+            }
+          ],
+          "template": "The main thing is that [nhu cầu — chủ ngữ + động từ]. I would like to [hoạt động — động từ nguyên mẫu], and I think this could help because [lợi ích — chủ ngữ + động từ]. Before I make a plan, there are a couple of things I would like to check."
+        },
+        {
+          "label": "Câu hỏi",
+          "text": "Could you let me know whether the session is on Sunday at two in the afternoon? I would also like to know how much it costs and whether beginners are welcome. If you have any other tips, I would love to hear them. There is no rush, so just reply when you have a moment.",
+          "noteVi": "Câu hỏi lịch sự nhưng gần gũi, không gây áp lực.",
+          "parts": [
+            {
+              "text": "Could you let me know ",
+              "kind": "frame"
+            },
+            {
+              "text": "whether the session is on Sunday at two in the afternoon",
+              "kind": "detail",
+              "labelVi": "whether / wh + chủ ngữ + động từ"
+            },
+            {
+              "text": "? I would also like to know ",
+              "kind": "frame"
+            },
+            {
+              "text": "how much it costs and whether beginners are welcome",
+              "kind": "detail",
+              "labelVi": "câu hỏi gián tiếp thứ hai"
+            },
+            {
+              "text": ". If you have any other tips, I would love to hear them. There is no rush, so just reply when you have a moment.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Could you let me know [whether / wh + chủ ngữ + động từ]? I would also like to know [câu hỏi gián tiếp thứ hai]. If you have any other tips, I would love to hear them. There is no rush, so just reply when you have a moment."
+        },
+        {
+          "label": "Kết thư",
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
+        }
+      ],
+      "sections": [],
+      "options": [],
+      "selectedOption": null,
+      "register": "informal",
+      "wordCount": 194,
+      "mainWordCount": 194,
+      "phrases": [
+        {
+          "en": "basic equipment",
+          "vi": "dụng cụ cơ bản",
+          "inAnswer": true
+        },
+        {
+          "en": "simple recipes",
+          "vi": "công thức đơn giản",
+          "inAnswer": false
+        },
+        {
+          "en": "prepare a meal",
+          "vi": "chuẩn bị bữa ăn",
+          "inAnswer": false
+        }
+      ],
+      "framePhrases": [
+        {
+          "en": "I am writing to",
+          "vi": "Tôi viết để…"
+        },
+        {
+          "en": "I would like to",
+          "vi": "Tôi muốn…"
+        }
+      ]
+    },
+    {
+      "id": "writing-task1-informal-request-daily-life-03",
+      "group": "writing-task1",
+      "type": "informal-request",
+      "topic": "daily-life",
+      "number": 3,
+      "title": "Thể thao đồng đội",
+      "focus": "team sports in the community",
+      "prompt": "Ask your friend Alex for information about a beginner community sports session. Explain your needs, ask about the time and cost, and find out whether it suits beginners.",
+      "requirementsVi": [
+        "Nhờ người bạn, không dùng giọng công văn.",
+        "Nói vì sao cần thông tin.",
+        "Câu hỏi lịch sự nhưng gần gũi, không gây áp lực."
+      ],
+      "summaryVi": "Thể thao nhóm tạo kết nối; buổi dành cho người mới cần thân thiện và cho mọi người tham gia.",
+      "paragraphs": [
+        {
+          "label": "Mở thư và nhờ giúp",
+          "text": "Hi Alex,\n\nI hope you are well. I am writing to ask for your help with a beginner community sports session. I know you have some experience with team sports in the community, so I thought you might be able to give me a few useful details.",
+          "noteVi": "Nhờ người bạn, không dùng giọng công văn.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nI hope you are well. I am writing to ask for your help with ",
+              "kind": "frame"
+            },
+            {
+              "text": "a beginner community sports session",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". I know you have some experience with ",
+              "kind": "frame"
+            },
+            {
+              "text": "team sports in the community",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": ", so I thought you might be able to give me a few useful details.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nI hope you are well. I am writing to ask for your help with [sự kiện / hoạt động]. I know you have some experience with [chủ đề], so I thought you might be able to give me a few useful details."
+        },
+        {
+          "label": "Nhu cầu",
+          "text": "The main thing is that I have limited experience and would prefer a practical introduction. I would like to try simple team games in a friendly group, and I think this could help because residents can exercise while meeting other people. Before I make a plan, there are a couple of things I would like to check.",
+          "noteVi": "Nói vì sao cần thông tin.",
+          "parts": [
+            {
+              "text": "The main thing is that ",
+              "kind": "frame"
+            },
+            {
+              "text": "I have limited experience and would prefer a practical introduction",
+              "kind": "detail",
+              "labelVi": "nhu cầu — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I would like to ",
+              "kind": "frame"
+            },
+            {
+              "text": "try simple team games in a friendly group",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ", and I think this could help because ",
+              "kind": "frame"
+            },
+            {
+              "text": "residents can exercise while meeting other people",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". Before I make a plan, there are a couple of things I would like to check.",
+              "kind": "frame"
+            }
+          ],
+          "template": "The main thing is that [nhu cầu — chủ ngữ + động từ]. I would like to [hoạt động — động từ nguyên mẫu], and I think this could help because [lợi ích — chủ ngữ + động từ]. Before I make a plan, there are a couple of things I would like to check."
+        },
+        {
+          "label": "Câu hỏi",
+          "text": "Could you let me know whether the session is on Friday at six in the evening? I would also like to know how much it costs and whether beginners are welcome. If you have any other tips, I would love to hear them. There is no rush, so just reply when you have a moment.",
+          "noteVi": "Câu hỏi lịch sự nhưng gần gũi, không gây áp lực.",
+          "parts": [
+            {
+              "text": "Could you let me know ",
+              "kind": "frame"
+            },
+            {
+              "text": "whether the session is on Friday at six in the evening",
+              "kind": "detail",
+              "labelVi": "whether / wh + chủ ngữ + động từ"
+            },
+            {
+              "text": "? I would also like to know ",
+              "kind": "frame"
+            },
+            {
+              "text": "how much it costs and whether beginners are welcome",
+              "kind": "detail",
+              "labelVi": "câu hỏi gián tiếp thứ hai"
+            },
+            {
+              "text": ". If you have any other tips, I would love to hear them. There is no rush, so just reply when you have a moment.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Could you let me know [whether / wh + chủ ngữ + động từ]? I would also like to know [câu hỏi gián tiếp thứ hai]. If you have any other tips, I would love to hear them. There is no rush, so just reply when you have a moment."
+        },
+        {
+          "label": "Kết thư",
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
+        }
+      ],
+      "sections": [],
+      "options": [],
+      "selectedOption": null,
+      "register": "informal",
+      "wordCount": 193,
+      "mainWordCount": 193,
+      "phrases": [
+        {
+          "en": "a beginner session",
+          "vi": "buổi cho người mới",
+          "inAnswer": false
+        },
+        {
+          "en": "take part",
+          "vi": "tham gia",
+          "inAnswer": false
+        },
+        {
+          "en": "a welcoming group",
+          "vi": "nhóm thân thiện với người mới",
+          "inAnswer": false
+        }
+      ],
+      "framePhrases": [
+        {
+          "en": "I am writing to",
+          "vi": "Tôi viết để…"
+        },
+        {
+          "en": "I would like to",
+          "vi": "Tôi muốn…"
+        }
+      ]
+    },
+    {
+      "id": "writing-task1-informal-request-daily-life-04",
+      "group": "writing-task1",
+      "type": "informal-request",
+      "topic": "daily-life",
+      "number": 4,
+      "title": "Ngủ và dùng điện thoại",
+      "focus": "phone use before bedtime",
+      "prompt": "Ask your friend Alex for information about an evening routine discussion. Explain your needs, ask about the time and cost, and find out whether it suits beginners.",
+      "requirementsVi": [
+        "Nhờ người bạn, không dùng giọng công văn.",
+        "Nói vì sao cần thông tin.",
+        "Câu hỏi lịch sự nhưng gần gũi, không gây áp lực."
+      ],
+      "summaryVi": "Giảm lướt điện thoại giúp giữ giờ nghỉ; vẫn có thể giữ các liên lạc thực sự cần thiết.",
+      "paragraphs": [
+        {
+          "label": "Mở thư và nhờ giúp",
+          "text": "Hi Alex,\n\nI hope you are well. I am writing to ask for your help with an evening routine discussion. I know you have some experience with phone use before bedtime, so I thought you might be able to give me a few useful details.",
+          "noteVi": "Nhờ người bạn, không dùng giọng công văn.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nI hope you are well. I am writing to ask for your help with ",
+              "kind": "frame"
+            },
+            {
+              "text": "an evening routine discussion",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". I know you have some experience with ",
+              "kind": "frame"
+            },
+            {
+              "text": "phone use before bedtime",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": ", so I thought you might be able to give me a few useful details.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nI hope you are well. I am writing to ask for your help with [sự kiện / hoạt động]. I know you have some experience with [chủ đề], so I thought you might be able to give me a few useful details."
+        },
+        {
+          "label": "Nhu cầu",
+          "text": "The main thing is that I have limited experience and would prefer a practical introduction. I would like to plan a realistic routine that protects time for rest, and I think this could help because people can protect time intended for rest. Before I make a plan, there are a couple of things I would like to check.",
+          "noteVi": "Nói vì sao cần thông tin.",
+          "parts": [
+            {
+              "text": "The main thing is that ",
+              "kind": "frame"
+            },
+            {
+              "text": "I have limited experience and would prefer a practical introduction",
+              "kind": "detail",
+              "labelVi": "nhu cầu — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I would like to ",
+              "kind": "frame"
+            },
+            {
+              "text": "plan a realistic routine that protects time for rest",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ", and I think this could help because ",
+              "kind": "frame"
+            },
+            {
+              "text": "people can protect time intended for rest",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". Before I make a plan, there are a couple of things I would like to check.",
+              "kind": "frame"
+            }
+          ],
+          "template": "The main thing is that [nhu cầu — chủ ngữ + động từ]. I would like to [hoạt động — động từ nguyên mẫu], and I think this could help because [lợi ích — chủ ngữ + động từ]. Before I make a plan, there are a couple of things I would like to check."
+        },
+        {
+          "label": "Câu hỏi",
+          "text": "Could you let me know whether the session is on Friday at six in the evening? I would also like to know how much it costs and whether beginners are welcome. If you have any other tips, I would love to hear them. There is no rush, so just reply when you have a moment.",
+          "noteVi": "Câu hỏi lịch sự nhưng gần gũi, không gây áp lực.",
+          "parts": [
+            {
+              "text": "Could you let me know ",
+              "kind": "frame"
+            },
+            {
+              "text": "whether the session is on Friday at six in the evening",
+              "kind": "detail",
+              "labelVi": "whether / wh + chủ ngữ + động từ"
+            },
+            {
+              "text": "? I would also like to know ",
+              "kind": "frame"
+            },
+            {
+              "text": "how much it costs and whether beginners are welcome",
+              "kind": "detail",
+              "labelVi": "câu hỏi gián tiếp thứ hai"
+            },
+            {
+              "text": ". If you have any other tips, I would love to hear them. There is no rush, so just reply when you have a moment.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Could you let me know [whether / wh + chủ ngữ + động từ]? I would also like to know [câu hỏi gián tiếp thứ hai]. If you have any other tips, I would love to hear them. There is no rush, so just reply when you have a moment."
+        },
+        {
+          "label": "Kết thư",
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
+        }
+      ],
+      "sections": [],
+      "options": [],
+      "selectedOption": null,
+      "register": "informal",
+      "wordCount": 192,
+      "mainWordCount": 192,
+      "phrases": [
+        {
+          "en": "a calmer routine",
+          "vi": "nếp sinh hoạt thư giãn hơn",
+          "inAnswer": false
+        },
+        {
+          "en": "essential contact",
+          "vi": "liên lạc thiết yếu",
+          "inAnswer": false
+        },
+        {
+          "en": "optional scrolling",
+          "vi": "lướt nội dung không cần thiết",
+          "inAnswer": false
+        }
+      ],
+      "framePhrases": [
+        {
+          "en": "I am writing to",
+          "vi": "Tôi viết để…"
+        },
+        {
+          "en": "I would like to",
+          "vi": "Tôi muốn…"
+        }
+      ]
+    },
+    {
+      "id": "writing-task1-informal-request-daily-life-05",
+      "group": "writing-task1",
+      "type": "informal-request",
+      "topic": "daily-life",
+      "number": 5,
+      "title": "Chuyến đi cuối tuần",
+      "focus": "short local trips",
+      "prompt": "Ask your friend Alex for information about a local travel planning evening. Explain your needs, ask about the time and cost, and find out whether it suits beginners.",
+      "requirementsVi": [
+        "Nhờ người bạn, không dùng giọng công văn.",
+        "Nói vì sao cần thông tin.",
+        "Câu hỏi lịch sự nhưng gần gũi, không gây áp lực."
+      ],
+      "summaryVi": "Đi gần tận dụng thời gian nghỉ; nên tìm giờ ít đông và điểm đến đa dạng hơn.",
+      "paragraphs": [
+        {
+          "label": "Mở thư và nhờ giúp",
+          "text": "Hi Alex,\n\nI hope you are well. I am writing to ask for your help with a local travel planning evening. I know you have some experience with short local trips, so I thought you might be able to give me a few useful details.",
+          "noteVi": "Nhờ người bạn, không dùng giọng công văn.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nI hope you are well. I am writing to ask for your help with ",
+              "kind": "frame"
+            },
+            {
+              "text": "a local travel planning evening",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". I know you have some experience with ",
+              "kind": "frame"
+            },
+            {
+              "text": "short local trips",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": ", so I thought you might be able to give me a few useful details.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nI hope you are well. I am writing to ask for your help with [sự kiện / hoạt động]. I know you have some experience with [chủ đề], so I thought you might be able to give me a few useful details."
+        },
+        {
+          "label": "Nhu cầu",
+          "text": "The main thing is that I have limited experience and would prefer a practical introduction. I would like to design a relaxed day trip using nearby attractions, and I think this could help because travellers can spend less of a short break on transport. Before I make a plan, there are a couple of things I would like to check.",
+          "noteVi": "Nói vì sao cần thông tin.",
+          "parts": [
+            {
+              "text": "The main thing is that ",
+              "kind": "frame"
+            },
+            {
+              "text": "I have limited experience and would prefer a practical introduction",
+              "kind": "detail",
+              "labelVi": "nhu cầu — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I would like to ",
+              "kind": "frame"
+            },
+            {
+              "text": "design a relaxed day trip using nearby attractions",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ", and I think this could help because ",
+              "kind": "frame"
+            },
+            {
+              "text": "travellers can spend less of a short break on transport",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". Before I make a plan, there are a couple of things I would like to check.",
+              "kind": "frame"
+            }
+          ],
+          "template": "The main thing is that [nhu cầu — chủ ngữ + động từ]. I would like to [hoạt động — động từ nguyên mẫu], and I think this could help because [lợi ích — chủ ngữ + động từ]. Before I make a plan, there are a couple of things I would like to check."
+        },
+        {
+          "label": "Câu hỏi",
+          "text": "Could you let me know whether the session is on Friday at six in the evening? I would also like to know how much it costs and whether beginners are welcome. If you have any other tips, I would love to hear them. There is no rush, so just reply when you have a moment.",
+          "noteVi": "Câu hỏi lịch sự nhưng gần gũi, không gây áp lực.",
+          "parts": [
+            {
+              "text": "Could you let me know ",
+              "kind": "frame"
+            },
+            {
+              "text": "whether the session is on Friday at six in the evening",
+              "kind": "detail",
+              "labelVi": "whether / wh + chủ ngữ + động từ"
+            },
+            {
+              "text": "? I would also like to know ",
+              "kind": "frame"
+            },
+            {
+              "text": "how much it costs and whether beginners are welcome",
+              "kind": "detail",
+              "labelVi": "câu hỏi gián tiếp thứ hai"
+            },
+            {
+              "text": ". If you have any other tips, I would love to hear them. There is no rush, so just reply when you have a moment.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Could you let me know [whether / wh + chủ ngữ + động từ]? I would also like to know [câu hỏi gián tiếp thứ hai]. If you have any other tips, I would love to hear them. There is no rush, so just reply when you have a moment."
+        },
+        {
+          "label": "Kết thư",
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
+        }
+      ],
+      "sections": [],
+      "options": [],
+      "selectedOption": null,
+      "register": "informal",
+      "wordCount": 194,
+      "mainWordCount": 194,
+      "phrases": [
+        {
+          "en": "nearby destinations",
+          "vi": "điểm đến gần",
+          "inAnswer": false
+        },
+        {
+          "en": "less busy times",
+          "vi": "thời điểm ít đông",
+          "inAnswer": false
+        },
+        {
+          "en": "a relaxed day trip",
+          "vi": "chuyến đi trong ngày thong thả",
+          "inAnswer": true
+        }
+      ],
+      "framePhrases": [
+        {
+          "en": "I am writing to",
+          "vi": "Tôi viết để…"
+        },
+        {
+          "en": "I would like to",
+          "vi": "Tôi muốn…"
+        }
+      ]
+    },
+    {
+      "id": "writing-task1-informal-request-daily-life-06",
+      "group": "writing-task1",
+      "type": "informal-request",
+      "topic": "daily-life",
+      "number": 6,
+      "title": "Du lịch cùng gia đình",
+      "focus": "planning family holidays",
+      "prompt": "Ask your friend Alex for information about a family travel planning session. Explain your needs, ask about the time and cost, and find out whether it suits beginners.",
+      "requirementsVi": [
+        "Nhờ người bạn, không dùng giọng công văn.",
+        "Nói vì sao cần thông tin.",
+        "Câu hỏi lịch sự nhưng gần gũi, không gây áp lực."
+      ],
+      "summaryVi": "Cùng bàn giúp tôn trọng nhu cầu từng người; lịch đi cần có ưu tiên và giờ nghỉ.",
+      "paragraphs": [
+        {
+          "label": "Mở thư và nhờ giúp",
+          "text": "Hi Alex,\n\nI hope you are well. I am writing to ask for your help with a family travel planning session. I know you have some experience with planning family holidays, so I thought you might be able to give me a few useful details.",
+          "noteVi": "Nhờ người bạn, không dùng giọng công văn.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nI hope you are well. I am writing to ask for your help with ",
+              "kind": "frame"
+            },
+            {
+              "text": "a family travel planning session",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". I know you have some experience with ",
+              "kind": "frame"
+            },
+            {
+              "text": "planning family holidays",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": ", so I thought you might be able to give me a few useful details.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nI hope you are well. I am writing to ask for your help with [sự kiện / hoạt động]. I know you have some experience with [chủ đề], so I thought you might be able to give me a few useful details."
+        },
+        {
+          "label": "Nhu cầu",
+          "text": "The main thing is that I have limited experience and would prefer a practical introduction. I would like to compare interests and build a realistic holiday schedule, and I think this could help because the plan can reflect more than one person's interests. Before I make a plan, there are a couple of things I would like to check.",
+          "noteVi": "Nói vì sao cần thông tin.",
+          "parts": [
+            {
+              "text": "The main thing is that ",
+              "kind": "frame"
+            },
+            {
+              "text": "I have limited experience and would prefer a practical introduction",
+              "kind": "detail",
+              "labelVi": "nhu cầu — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I would like to ",
+              "kind": "frame"
+            },
+            {
+              "text": "compare interests and build a realistic holiday schedule",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ", and I think this could help because ",
+              "kind": "frame"
+            },
+            {
+              "text": "the plan can reflect more than one person's interests",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". Before I make a plan, there are a couple of things I would like to check.",
+              "kind": "frame"
+            }
+          ],
+          "template": "The main thing is that [nhu cầu — chủ ngữ + động từ]. I would like to [hoạt động — động từ nguyên mẫu], and I think this could help because [lợi ích — chủ ngữ + động từ]. Before I make a plan, there are a couple of things I would like to check."
+        },
+        {
+          "label": "Câu hỏi",
+          "text": "Could you let me know whether the session is on Wednesday at six in the evening? I would also like to know how much it costs and whether beginners are welcome. If you have any other tips, I would love to hear them. There is no rush, so just reply when you have a moment.",
+          "noteVi": "Câu hỏi lịch sự nhưng gần gũi, không gây áp lực.",
+          "parts": [
+            {
+              "text": "Could you let me know ",
+              "kind": "frame"
+            },
+            {
+              "text": "whether the session is on Wednesday at six in the evening",
+              "kind": "detail",
+              "labelVi": "whether / wh + chủ ngữ + động từ"
+            },
+            {
+              "text": "? I would also like to know ",
+              "kind": "frame"
+            },
+            {
+              "text": "how much it costs and whether beginners are welcome",
+              "kind": "detail",
+              "labelVi": "câu hỏi gián tiếp thứ hai"
+            },
+            {
+              "text": ". If you have any other tips, I would love to hear them. There is no rush, so just reply when you have a moment.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Could you let me know [whether / wh + chủ ngữ + động từ]? I would also like to know [câu hỏi gián tiếp thứ hai]. If you have any other tips, I would love to hear them. There is no rush, so just reply when you have a moment."
+        },
+        {
+          "label": "Kết thư",
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
+        }
+      ],
+      "sections": [],
+      "options": [],
+      "selectedOption": null,
+      "register": "informal",
+      "wordCount": 193,
+      "mainWordCount": 193,
+      "phrases": [
+        {
+          "en": "a realistic schedule",
+          "vi": "lịch trình thực tế",
+          "inAnswer": false
+        },
+        {
+          "en": "agree on priorities",
+          "vi": "thống nhất ưu tiên",
+          "inAnswer": false
+        },
+        {
+          "en": "leave room for breaks",
+          "vi": "chừa thời gian nghỉ",
+          "inAnswer": false
+        }
+      ],
+      "framePhrases": [
+        {
+          "en": "I am writing to",
+          "vi": "Tôi viết để…"
+        },
+        {
+          "en": "I would like to",
+          "vi": "Tôi muốn…"
+        }
+      ]
+    },
+    {
+      "id": "writing-task1-informal-request-daily-life-07",
+      "group": "writing-task1",
+      "type": "informal-request",
+      "topic": "daily-life",
+      "number": 7,
+      "title": "Giữ quan hệ hàng xóm",
+      "focus": "getting to know neighbours",
+      "prompt": "Ask your friend Alex for information about a neighbours' coffee morning. Explain your needs, ask about the time and cost, and find out whether it suits beginners.",
+      "requirementsVi": [
+        "Nhờ người bạn, không dùng giọng công văn.",
+        "Nói vì sao cần thông tin.",
+        "Câu hỏi lịch sự nhưng gần gũi, không gây áp lực."
+      ],
+      "summaryVi": "Gặp hàng xóm tạo hỗ trợ gần gũi; hoạt động nên tự nguyện và tôn trọng lịch, sự riêng tư.",
+      "paragraphs": [
+        {
+          "label": "Mở thư và nhờ giúp",
+          "text": "Hi Alex,\n\nI hope you are well. I am writing to ask for your help with a neighbours' coffee morning. I know you have some experience with getting to know neighbours, so I thought you might be able to give me a few useful details.",
+          "noteVi": "Nhờ người bạn, không dùng giọng công văn.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nI hope you are well. I am writing to ask for your help with ",
+              "kind": "frame"
+            },
+            {
+              "text": "a neighbours' coffee morning",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". I know you have some experience with ",
+              "kind": "frame"
+            },
+            {
+              "text": "getting to know neighbours",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": ", so I thought you might be able to give me a few useful details.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nI hope you are well. I am writing to ask for your help with [sự kiện / hoạt động]. I know you have some experience with [chủ đề], so I thought you might be able to give me a few useful details."
+        },
+        {
+          "label": "Nhu cầu",
+          "text": "The main thing is that I have limited experience and would prefer a practical introduction. I would like to meet local residents and exchange practical information, and I think this could help because people can build a small local support network. Before I make a plan, there are a couple of things I would like to check.",
+          "noteVi": "Nói vì sao cần thông tin.",
+          "parts": [
+            {
+              "text": "The main thing is that ",
+              "kind": "frame"
+            },
+            {
+              "text": "I have limited experience and would prefer a practical introduction",
+              "kind": "detail",
+              "labelVi": "nhu cầu — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I would like to ",
+              "kind": "frame"
+            },
+            {
+              "text": "meet local residents and exchange practical information",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ", and I think this could help because ",
+              "kind": "frame"
+            },
+            {
+              "text": "people can build a small local support network",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". Before I make a plan, there are a couple of things I would like to check.",
+              "kind": "frame"
+            }
+          ],
+          "template": "The main thing is that [nhu cầu — chủ ngữ + động từ]. I would like to [hoạt động — động từ nguyên mẫu], and I think this could help because [lợi ích — chủ ngữ + động từ]. Before I make a plan, there are a couple of things I would like to check."
+        },
+        {
+          "label": "Câu hỏi",
+          "text": "Could you let me know whether the session is on Saturday at nine in the morning? I would also like to know how much it costs and whether beginners are welcome. If you have any other tips, I would love to hear them. There is no rush, so just reply when you have a moment.",
+          "noteVi": "Câu hỏi lịch sự nhưng gần gũi, không gây áp lực.",
+          "parts": [
+            {
+              "text": "Could you let me know ",
+              "kind": "frame"
+            },
+            {
+              "text": "whether the session is on Saturday at nine in the morning",
+              "kind": "detail",
+              "labelVi": "whether / wh + chủ ngữ + động từ"
+            },
+            {
+              "text": "? I would also like to know ",
+              "kind": "frame"
+            },
+            {
+              "text": "how much it costs and whether beginners are welcome",
+              "kind": "detail",
+              "labelVi": "câu hỏi gián tiếp thứ hai"
+            },
+            {
+              "text": ". If you have any other tips, I would love to hear them. There is no rush, so just reply when you have a moment.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Could you let me know [whether / wh + chủ ngữ + động từ]? I would also like to know [câu hỏi gián tiếp thứ hai]. If you have any other tips, I would love to hear them. There is no rush, so just reply when you have a moment."
+        },
+        {
+          "label": "Kết thư",
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
+        }
+      ],
+      "sections": [],
+      "options": [],
+      "selectedOption": null,
+      "register": "informal",
+      "wordCount": 191,
+      "mainWordCount": 191,
+      "phrases": [
+        {
+          "en": "a support network",
+          "vi": "mạng lưới hỗ trợ",
+          "inAnswer": false
+        },
+        {
+          "en": "respect privacy",
+          "vi": "tôn trọng riêng tư",
+          "inAnswer": false
+        },
+        {
+          "en": "optional activities",
+          "vi": "hoạt động tự chọn",
+          "inAnswer": false
+        }
+      ],
+      "framePhrases": [
+        {
+          "en": "I am writing to",
+          "vi": "Tôi viết để…"
+        },
+        {
+          "en": "I would like to",
+          "vi": "Tôi muốn…"
+        }
+      ]
+    },
+    {
+      "id": "writing-task1-informal-request-daily-life-08",
+      "group": "writing-task1",
+      "type": "informal-request",
+      "topic": "daily-life",
+      "number": 8,
+      "title": "Đọc sách giải trí",
+      "focus": "reading for pleasure",
+      "prompt": "Ask your friend Alex for information about an informal book club meeting. Explain your needs, ask about the time and cost, and find out whether it suits beginners.",
+      "requirementsVi": [
+        "Nhờ người bạn, không dùng giọng công văn.",
+        "Nói vì sao cần thông tin.",
+        "Câu hỏi lịch sự nhưng gần gũi, không gây áp lực."
+      ],
+      "summaryVi": "Đọc giải trí cần lựa chọn phù hợp và tham gia linh hoạt để không biến thành áp lực hoàn thành chỉ tiêu.",
+      "paragraphs": [
+        {
+          "label": "Mở thư và nhờ giúp",
+          "text": "Hi Alex,\n\nI hope you are well. I am writing to ask for your help with an informal book club meeting. I know you have some experience with reading for pleasure, so I thought you might be able to give me a few useful details.",
+          "noteVi": "Nhờ người bạn, không dùng giọng công văn.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nI hope you are well. I am writing to ask for your help with ",
+              "kind": "frame"
+            },
+            {
+              "text": "an informal book club meeting",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". I know you have some experience with ",
+              "kind": "frame"
+            },
+            {
+              "text": "reading for pleasure",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": ", so I thought you might be able to give me a few useful details.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nI hope you are well. I am writing to ask for your help with [sự kiện / hoạt động]. I know you have some experience with [chủ đề], so I thought you might be able to give me a few useful details."
+        },
+        {
+          "label": "Nhu cầu",
+          "text": "The main thing is that I have limited experience and would prefer a practical introduction. I would like to share a favourite short story and exchange reading suggestions, and I think this could help because people can discover ideas and enjoy quiet time away from daily pressure. Before I make a plan, there are a couple of things I would like to check.",
+          "noteVi": "Nói vì sao cần thông tin.",
+          "parts": [
+            {
+              "text": "The main thing is that ",
+              "kind": "frame"
+            },
+            {
+              "text": "I have limited experience and would prefer a practical introduction",
+              "kind": "detail",
+              "labelVi": "nhu cầu — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I would like to ",
+              "kind": "frame"
+            },
+            {
+              "text": "share a favourite short story and exchange reading suggestions",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ", and I think this could help because ",
+              "kind": "frame"
+            },
+            {
+              "text": "people can discover ideas and enjoy quiet time away from daily pressure",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". Before I make a plan, there are a couple of things I would like to check.",
+              "kind": "frame"
+            }
+          ],
+          "template": "The main thing is that [nhu cầu — chủ ngữ + động từ]. I would like to [hoạt động — động từ nguyên mẫu], and I think this could help because [lợi ích — chủ ngữ + động từ]. Before I make a plan, there are a couple of things I would like to check."
+        },
+        {
+          "label": "Câu hỏi",
+          "text": "Could you let me know whether the session is on Sunday at ten in the morning? I would also like to know how much it costs and whether beginners are welcome. If you have any other tips, I would love to hear them. There is no rush, so just reply when you have a moment.",
+          "noteVi": "Câu hỏi lịch sự nhưng gần gũi, không gây áp lực.",
+          "parts": [
+            {
+              "text": "Could you let me know ",
+              "kind": "frame"
+            },
+            {
+              "text": "whether the session is on Sunday at ten in the morning",
+              "kind": "detail",
+              "labelVi": "whether / wh + chủ ngữ + động từ"
+            },
+            {
+              "text": "? I would also like to know ",
+              "kind": "frame"
+            },
+            {
+              "text": "how much it costs and whether beginners are welcome",
+              "kind": "detail",
+              "labelVi": "câu hỏi gián tiếp thứ hai"
+            },
+            {
+              "text": ". If you have any other tips, I would love to hear them. There is no rush, so just reply when you have a moment.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Could you let me know [whether / wh + chủ ngữ + động từ]? I would also like to know [câu hỏi gián tiếp thứ hai]. If you have any other tips, I would love to hear them. There is no rush, so just reply when you have a moment."
+        },
+        {
+          "label": "Kết thư",
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
+        }
+      ],
+      "sections": [],
+      "options": [],
+      "selectedOption": null,
+      "register": "informal",
+      "wordCount": 197,
+      "mainWordCount": 197,
+      "phrases": [
+        {
+          "en": "reading for pleasure",
+          "vi": "đọc vì niềm vui",
+          "inAnswer": true
+        },
+        {
+          "en": "a reading suggestion",
+          "vi": "gợi ý sách đọc",
+          "inAnswer": false
+        },
+        {
+          "en": "participate flexibly",
+          "vi": "tham gia linh hoạt",
+          "inAnswer": false
+        }
+      ],
+      "framePhrases": [
+        {
+          "en": "I am writing to",
+          "vi": "Tôi viết để…"
+        },
+        {
+          "en": "I would like to",
+          "vi": "Tôi muốn…"
+        }
+      ]
+    },
+    {
+      "id": "writing-task1-informal-request-daily-life-09",
+      "group": "writing-task1",
+      "type": "informal-request",
+      "topic": "daily-life",
+      "number": 9,
+      "title": "Quản lý chi tiêu",
+      "focus": "planning everyday spending",
+      "prompt": "Ask your friend Alex for information about an everyday budgeting workshop. Explain your needs, ask about the time and cost, and find out whether it suits beginners.",
+      "requirementsVi": [
+        "Nhờ người bạn, không dùng giọng công văn.",
+        "Nói vì sao cần thông tin.",
+        "Câu hỏi lịch sự nhưng gần gũi, không gây áp lực."
+      ],
+      "summaryVi": "Theo dõi chi tiêu giúp thấy nhu cầu thiết yếu; kế hoạch phải có khoảng linh hoạt cho việc phát sinh.",
+      "paragraphs": [
+        {
+          "label": "Mở thư và nhờ giúp",
+          "text": "Hi Alex,\n\nI hope you are well. I am writing to ask for your help with an everyday budgeting workshop. I know you have some experience with planning everyday spending, so I thought you might be able to give me a few useful details.",
+          "noteVi": "Nhờ người bạn, không dùng giọng công văn.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nI hope you are well. I am writing to ask for your help with ",
+              "kind": "frame"
+            },
+            {
+              "text": "an everyday budgeting workshop",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". I know you have some experience with ",
+              "kind": "frame"
+            },
+            {
+              "text": "planning everyday spending",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": ", so I thought you might be able to give me a few useful details.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nI hope you are well. I am writing to ask for your help with [sự kiện / hoạt động]. I know you have some experience with [chủ đề], so I thought you might be able to give me a few useful details."
+        },
+        {
+          "label": "Nhu cầu",
+          "text": "The main thing is that I have limited experience and would prefer a practical introduction. I would like to build a simple spending plan and practise adjusting it, and I think this could help because people can see whether their income covers essential needs. Before I make a plan, there are a couple of things I would like to check.",
+          "noteVi": "Nói vì sao cần thông tin.",
+          "parts": [
+            {
+              "text": "The main thing is that ",
+              "kind": "frame"
+            },
+            {
+              "text": "I have limited experience and would prefer a practical introduction",
+              "kind": "detail",
+              "labelVi": "nhu cầu — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I would like to ",
+              "kind": "frame"
+            },
+            {
+              "text": "build a simple spending plan and practise adjusting it",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ", and I think this could help because ",
+              "kind": "frame"
+            },
+            {
+              "text": "people can see whether their income covers essential needs",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". Before I make a plan, there are a couple of things I would like to check.",
+              "kind": "frame"
+            }
+          ],
+          "template": "The main thing is that [nhu cầu — chủ ngữ + động từ]. I would like to [hoạt động — động từ nguyên mẫu], and I think this could help because [lợi ích — chủ ngữ + động từ]. Before I make a plan, there are a couple of things I would like to check."
+        },
+        {
+          "label": "Câu hỏi",
+          "text": "Could you let me know whether the session is on Thursday at six in the evening? I would also like to know how much it costs and whether beginners are welcome. If you have any other tips, I would love to hear them. There is no rush, so just reply when you have a moment.",
+          "noteVi": "Câu hỏi lịch sự nhưng gần gũi, không gây áp lực.",
+          "parts": [
+            {
+              "text": "Could you let me know ",
+              "kind": "frame"
+            },
+            {
+              "text": "whether the session is on Thursday at six in the evening",
+              "kind": "detail",
+              "labelVi": "whether / wh + chủ ngữ + động từ"
+            },
+            {
+              "text": "? I would also like to know ",
+              "kind": "frame"
+            },
+            {
+              "text": "how much it costs and whether beginners are welcome",
+              "kind": "detail",
+              "labelVi": "câu hỏi gián tiếp thứ hai"
+            },
+            {
+              "text": ". If you have any other tips, I would love to hear them. There is no rush, so just reply when you have a moment.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Could you let me know [whether / wh + chủ ngữ + động từ]? I would also like to know [câu hỏi gián tiếp thứ hai]. If you have any other tips, I would love to hear them. There is no rush, so just reply when you have a moment."
+        },
+        {
+          "label": "Kết thư",
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
+        }
+      ],
+      "sections": [],
+      "options": [],
+      "selectedOption": null,
+      "register": "informal",
+      "wordCount": 193,
+      "mainWordCount": 193,
+      "phrases": [
+        {
+          "en": "essential expenses",
+          "vi": "chi phí thiết yếu",
+          "inAnswer": false
+        },
+        {
+          "en": "unexpected costs",
+          "vi": "chi phí bất ngờ",
+          "inAnswer": false
+        },
+        {
+          "en": "review a spending plan",
+          "vi": "xem lại kế hoạch chi tiêu",
+          "inAnswer": false
+        }
+      ],
+      "framePhrases": [
+        {
+          "en": "I am writing to",
+          "vi": "Tôi viết để…"
+        },
+        {
+          "en": "I would like to",
+          "vi": "Tôi muốn…"
+        }
+      ]
+    },
+    {
+      "id": "writing-task1-informal-request-daily-life-10",
+      "group": "writing-task1",
+      "type": "informal-request",
+      "topic": "daily-life",
+      "number": 10,
+      "title": "Dành thời gian cho sở thích",
+      "focus": "making time for hobbies",
+      "prompt": "Ask your friend Alex for information about a beginner hobbies open day. Explain your needs, ask about the time and cost, and find out whether it suits beginners.",
+      "requirementsVi": [
+        "Nhờ người bạn, không dùng giọng công văn.",
+        "Nói vì sao cần thông tin.",
+        "Câu hỏi lịch sự nhưng gần gũi, không gây áp lực."
+      ],
+      "summaryVi": "Sở thích giúp đổi nhịp sống; nên bắt đầu nhỏ, vừa túi tiền và không so mình với người đã giỏi.",
+      "paragraphs": [
+        {
+          "label": "Mở thư và nhờ giúp",
+          "text": "Hi Alex,\n\nI hope you are well. I am writing to ask for your help with a beginner hobbies open day. I know you have some experience with making time for hobbies, so I thought you might be able to give me a few useful details.",
+          "noteVi": "Nhờ người bạn, không dùng giọng công văn.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nI hope you are well. I am writing to ask for your help with ",
+              "kind": "frame"
+            },
+            {
+              "text": "a beginner hobbies open day",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". I know you have some experience with ",
+              "kind": "frame"
+            },
+            {
+              "text": "making time for hobbies",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": ", so I thought you might be able to give me a few useful details.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nI hope you are well. I am writing to ask for your help with [sự kiện / hoạt động]. I know you have some experience with [chủ đề], so I thought you might be able to give me a few useful details."
+        },
+        {
+          "label": "Nhu cầu",
+          "text": "The main thing is that I have limited experience and would prefer a practical introduction. I would like to try simple creative activities and choose a manageable first goal, and I think this could help because a hobby can provide a break from work and routine responsibilities. Before I make a plan, there are a couple of things I would like to check.",
+          "noteVi": "Nói vì sao cần thông tin.",
+          "parts": [
+            {
+              "text": "The main thing is that ",
+              "kind": "frame"
+            },
+            {
+              "text": "I have limited experience and would prefer a practical introduction",
+              "kind": "detail",
+              "labelVi": "nhu cầu — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I would like to ",
+              "kind": "frame"
+            },
+            {
+              "text": "try simple creative activities and choose a manageable first goal",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ", and I think this could help because ",
+              "kind": "frame"
+            },
+            {
+              "text": "a hobby can provide a break from work and routine responsibilities",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". Before I make a plan, there are a couple of things I would like to check.",
+              "kind": "frame"
+            }
+          ],
+          "template": "The main thing is that [nhu cầu — chủ ngữ + động từ]. I would like to [hoạt động — động từ nguyên mẫu], and I think this could help because [lợi ích — chủ ngữ + động từ]. Before I make a plan, there are a couple of things I would like to check."
+        },
+        {
+          "label": "Câu hỏi",
+          "text": "Could you let me know whether the session is on Saturday at three in the afternoon? I would also like to know how much it costs and whether beginners are welcome. If you have any other tips, I would love to hear them. There is no rush, so just reply when you have a moment.",
+          "noteVi": "Câu hỏi lịch sự nhưng gần gũi, không gây áp lực.",
+          "parts": [
+            {
+              "text": "Could you let me know ",
+              "kind": "frame"
+            },
+            {
+              "text": "whether the session is on Saturday at three in the afternoon",
+              "kind": "detail",
+              "labelVi": "whether / wh + chủ ngữ + động từ"
+            },
+            {
+              "text": "? I would also like to know ",
+              "kind": "frame"
+            },
+            {
+              "text": "how much it costs and whether beginners are welcome",
+              "kind": "detail",
+              "labelVi": "câu hỏi gián tiếp thứ hai"
+            },
+            {
+              "text": ". If you have any other tips, I would love to hear them. There is no rush, so just reply when you have a moment.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Could you let me know [whether / wh + chủ ngữ + động từ]? I would also like to know [câu hỏi gián tiếp thứ hai]. If you have any other tips, I would love to hear them. There is no rush, so just reply when you have a moment."
+        },
+        {
+          "label": "Kết thư",
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
+        }
+      ],
+      "sections": [],
+      "options": [],
+      "selectedOption": null,
+      "register": "informal",
+      "wordCount": 198,
+      "mainWordCount": 198,
+      "phrases": [
+        {
+          "en": "make time for hobbies",
+          "vi": "dành thời gian cho sở thích",
+          "inAnswer": false
+        },
+        {
+          "en": "small achievable goals",
+          "vi": "mục tiêu nhỏ có thể đạt",
+          "inAnswer": false
+        },
+        {
+          "en": "borrow equipment",
+          "vi": "mượn dụng cụ",
+          "inAnswer": false
+        }
+      ],
+      "framePhrases": [
+        {
+          "en": "I am writing to",
+          "vi": "Tôi viết để…"
+        },
+        {
+          "en": "I would like to",
+          "vi": "Tôi muốn…"
+        }
+      ]
+    }
+  ]
+}

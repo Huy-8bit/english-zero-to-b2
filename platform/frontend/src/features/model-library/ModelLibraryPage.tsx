@@ -2,12 +2,13 @@ import { useEffect, useRef, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { ArrowLeft, ArrowRight, Bookmark, BookOpen, Check, PenLine, Mic, Square } from "lucide-react";
+import { FrameLiteral, FrameSkeleton, FrameText } from "@/components/FrameText";
 import { Button } from "@/components/ui/button";
 import { EmptyState, ErrorBox, Input, PageHeader, Skeleton } from "@/components/ui/misc";
 import { SpeakButton, TtsNote } from "@/components/SpeakButton";
 import { cn, safeStorage } from "@/lib/utils";
 import { stopSpeaking } from "@/lib/tts";
-import { fetchBucket, fetchIndex, loadProgress, matchesSearch, PROGRESS_KEY, selection, updateProgress, type LibraryIndex, type LibraryProgress, type Sample, type SampleSummary } from "./library";
+import { REGISTER_LABELS, fetchBucket, fetchIndex, loadProgress, matchesSearch, PROGRESS_KEY, selection, updateProgress, type LibraryIndex, type LibraryProgress, type Sample, type SampleSummary } from "./library";
 
 const number = (n: number) => n.toLocaleString("vi-VN");
 const selectClass = "mt-2 h-12 w-full min-w-0 rounded-xl border border-border bg-surface px-3 text-sm";
@@ -24,7 +25,7 @@ function Library({ index }: { index: LibraryIndex }) {
   const [params, setParams] = useSearchParams();
   const [progress, setProgress] = useState(loadProgress);
   const current = selection(index, params);
-  const { skill, groups, group, types, type, topic, sample } = current;
+  const { skill, groups, group, types, type, topic, sample, register } = current;
   const bucket = index.samples.filter((s) => s.group === group.id && s.type === type.id && s.topic === topic.id);
   const search = params.get("q") ?? "";
   const status = params.get("status") ?? "all";
@@ -36,18 +37,18 @@ function Library({ index }: { index: LibraryIndex }) {
     Object.entries(values).forEach(([key, value]) => value === null ? next.delete(key) : next.set(key, value));
     setParams(next, { replace });
   };
-  const open = (s: SampleSummary) => patch({ skill, group: s.group, type: s.type, topic: s.topic, sample: s.id });
+  const open = (s: SampleSummary) => patch({ skill, group: s.group, type: s.type, topic: s.topic, register: s.register, sample: s.id });
   const toggle = (id: string, field: "saved" | "read") => {
     const next = updateProgress(progress, id, field);
     safeStorage().set(PROGRESS_KEY, next);
     setProgress(next);
   };
-  if (sample) return <SampleReader key={sample.id} summary={sample} index={index} progress={progress} bucket={bucket} onOpen={open} onBack={() => patch({ sample: null, skill, group: group.id, type: type.id, topic: topic.id })} onToggle={toggle} />;
+  if (sample) return <SampleReader key={sample.id} summary={sample} index={index} progress={progress} bucket={bucket} onOpen={open} onBack={() => patch({ sample: null, skill, group: group.id, type: type.id, topic: topic.id, register: register ?? null })} onToggle={toggle} />;
   return <>
     <PageHeader title="Thư viện bài mẫu" subtitle={`${number(index.total)} bài tham khảo Writing & Speaking · Dàn ý tiếng Việt · Cụm từ dễ áp dụng`} />
     {params.has("sample") && <p role="alert" className="mb-4 rounded-xl border border-border p-3 text-sm">Không tìm thấy bài trong liên kết này. Bạn có thể chọn lại từ danh mục bên dưới.</p>}
     <div className="mb-6 flex flex-wrap gap-2" aria-label="Kỹ năng">
-      {(["writing", "speaking"] as const).map((s) => <Button key={s} variant={skill === s ? "primary" : "outline"} aria-pressed={skill === s} onClick={() => patch({ skill: s, group: null, type: null, topic: null, sample: null, q: null, status: null })}>
+      {(["writing", "speaking"] as const).map((s) => <Button key={s} variant={skill === s ? "primary" : "outline"} aria-pressed={skill === s} onClick={() => patch({ skill: s, group: null, type: null, topic: null, register: null, sample: null, q: null, status: null })}>
         {s === "writing" ? <PenLine size={16} /> : <Mic size={16} />}{s === "writing" ? "Writing" : "Speaking"} · {number(index.groups.filter((g) => g.skill === s).reduce((sum, g) => sum + g.count, 0))}
       </Button>)}
       <span className="self-center text-sm text-muted">Đã đọc {readCount}/{number(skillSamples.length)} bài</span>
@@ -56,16 +57,22 @@ function Library({ index }: { index: LibraryIndex }) {
       <h2 className="text-lg font-semibold">Mỗi lần một dạng, một chủ đề, 10 bài.</h2>
       <p className="mt-2 text-sm leading-relaxed">Đọc đề và dàn ý → đọc bài mẫu → ghi nhớ cụm từ → che gợi ý và thử viết hoặc nói lại. 50 tình huống được dùng xuyên các dạng để bạn ôn lại từ quen thuộc và thấy cách đổi khung theo yêu cầu đề.</p>
       <div className="mt-4 flex flex-wrap gap-3"><Link className={linkClass} to={skill === "writing" ? "/writing-studio?mode=exam" : "/speaking-studio"}>{skill === "writing" ? "Gõ thuộc khung Writing" : "Mở luyện Speaking"}<ArrowRight size={15} /></Link>
-        <details className="max-w-xl text-sm"><summary className="cursor-pointer py-2 text-muted">Có những dạng nào? Bài mẫu dùng thế nào?</summary><p className="mt-2 leading-relaxed">Writing Task 1: 10 mục đích thư/email. Task 2: 10 dạng và biến thể bài luận. Speaking: đủ 3 phần. Mỗi dạng/phần có 5 nhóm chủ đề × 10 bài. Đây là cách phân nhóm để tự học, không phải danh mục dạng đề cố định của kỳ thi.</p><p className="mt-2 leading-relaxed">Bài tự biên soạn, dùng chung khung với nội dung theo tình huống; không phải đề thi thật hay bài được chứng nhận điểm. Học cách triển khai và thay chi tiết cho đúng đề, không chép nguyên bài vào mọi chủ đề. Thư dài hơn mức tối thiểu để bạn có thêm câu tham khảo.</p><a className="mt-2 inline-block underline" href="https://vstep.vnu.edu.vn/test-format/" target="_blank" rel="noreferrer">Thể thức VSTEP · ĐHQGHN</a></details>
+        <details className="max-w-xl text-sm"><summary className="cursor-pointer py-2 text-muted">Có những dạng nào? Bài mẫu dùng thế nào?</summary><p className="mt-2 leading-relaxed">Writing Task 1: 2 giọng thư — trang trọng (10 mục đích) và thân mật (8 mục đích). Task 2: 10 dạng và biến thể bài luận. Speaking: đủ 3 phần. Mỗi dạng/phần có 5 nhóm chủ đề × 10 bài. Đây là cách phân nhóm để tự học, không phải danh mục dạng đề cố định của kỳ thi.</p><p className="mt-2 leading-relaxed">Bài tự biên soạn, dùng chung khung với nội dung theo tình huống; không phải đề thi thật hay bài được chứng nhận điểm. Học cách triển khai và thay chi tiết cho đúng đề, không chép nguyên bài vào mọi chủ đề. Thư dài hơn mức tối thiểu để bạn có thêm câu tham khảo.</p><a className="mt-2 inline-block underline" href="https://vstep.vnu.edu.vn/test-format/" target="_blank" rel="noreferrer">Thể thức VSTEP · ĐHQGHN</a></details>
       </div>
     </section>
     <div className="mb-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3" aria-label="Task hoặc phần thi">
       {groups.map((g) => <button key={g.id} type="button" aria-pressed={group.id === g.id} className={cn("rounded-xl border p-4 text-left", group.id === g.id ? "border-primary bg-primary-soft text-primary" : "border-border bg-surface hover:bg-surface-2")} onClick={() => patch({ group: g.id, type: null, q: null, status: null })}>
-        <span className="block font-semibold">{g.label}</span><span className="mt-1 block text-sm">{g.count} bài · {g.skill === "writing" ? "10 dạng" : "5 chủ đề"}</span>
+        <span className="block font-semibold">{g.label}</span><span className="mt-1 block text-sm">{g.count} bài · {g.id === "writing-task1" ? "2 giọng thư · 18 dạng" : g.skill === "writing" ? "10 dạng" : "5 chủ đề"}</span>
       </button>)}
     </div>
     <div className="rounded-2xl border border-border bg-surface p-4 sm:p-5">
       <p className="mb-4 text-sm text-muted">{group.description}{group.minimum ? ` Bài thi cần ít nhất ${group.minimum} từ.` : ""}</p>
+      {register && <fieldset className="mb-5"><legend className="mb-2 text-sm font-semibold">Giọng thư — quan hệ với người nhận</legend>
+        <div className="grid gap-3 sm:grid-cols-2">{(["formal", "informal"] as const).map((r) => <button type="button" key={r} aria-pressed={register === r} className={cn("rounded-xl border p-4 text-left", register === r ? "border-primary bg-primary-soft text-primary" : "border-border hover:bg-surface-2")} onClick={() => patch({ register: r, type: null, q: null, status: null })}>
+          <span className="block font-semibold">{REGISTER_LABELS[r]}</span><span className="mt-1 block text-sm">{r === "formal" ? "Công ty, cơ quan, người chưa thân · 10 mục đích" : "Bạn bè, người thân · 8 mục đích"}</span>
+        </button>)}</div>
+        <p className="mt-3 text-sm text-muted">Cùng một mục đích có thể viết theo hai giọng. Ví dụ: trả lời khách hàng dùng thư trang trọng; trả lời một người bạn dùng thư thân mật.</p>
+      </fieldset>}
       <div className="grid gap-4 sm:grid-cols-2">
         <label className="min-w-0 text-sm font-medium">1. Dạng bài<select className={selectClass} value={type.id} onChange={(e) => patch({ type: e.target.value, q: null, status: null })}>{types.map((t) => <option key={t.id} value={t.id}>{t.label} · 50 bài</option>)}</select></label>
         <label className="min-w-0 text-sm font-medium">2. Nhóm chủ đề<select className={selectClass} value={topic.id} onChange={(e) => patch({ topic: e.target.value, q: null, status: null })}>{index.topics.map((t) => <option key={t.id} value={t.id}>{t.label} · 10 bài</option>)}</select></label>
@@ -91,21 +98,29 @@ function SampleReader({ summary, index, progress, bucket, onOpen, onBack, onTogg
 }) {
   const query = useQuery({ queryKey: ["model-library-bucket", index.version, summary.bucket], queryFn: ({ signal }) => fetchBucket(summary.bucket, index.version, signal), staleTime: Infinity, retry: 1 });
   const [notes, setNotes] = useState(true);
+  const [frames, setFrames] = useState(true);
   const title = useRef<HTMLHeadingElement>(null);
   const group = index.groups.find((g) => g.id === summary.group)!;
   const type = index.types.find((t) => t.id === summary.type && t.group === summary.group)!;
   const topic = index.topics.find((t) => t.id === summary.topic)!;
   const sample = query.data?.find((s) => s.id === summary.id);
+  const counterpartType = summary.register ? index.types.find((t) => t.group === summary.group && t.purpose === type.purpose && t.register !== summary.register) : undefined;
+  const counterpart = counterpartType ? index.samples.find((s) => s.group === summary.group && s.type === counterpartType.id && s.topic === summary.topic && s.number === summary.number) : undefined;
   const item = progress.items[summary.id];
   const position = bucket.findIndex((s) => s.id === summary.id);
   useEffect(() => { title.current?.focus({ preventScroll: true }); window.scrollTo({ top: 0 }); return () => stopSpeaking(); }, []);
   const navigation = <nav className="flex flex-wrap justify-between gap-3" aria-label="Chuyển bài trong chủ đề"><Button variant="outline" disabled={position === 0} onClick={() => onOpen(bucket[position - 1])}><ArrowLeft size={15} />Bài trước</Button><span className="self-center text-sm text-muted">Bài {summary.number}/{bucket.length}</span><Button variant="outline" disabled={position === bucket.length - 1} onClick={() => onOpen(bucket[position + 1])}>Bài tiếp<ArrowRight size={15} /></Button></nav>;
   return <div className="mx-auto max-w-4xl">
     <Button variant="ghost" className="mb-4" onClick={onBack}><ArrowLeft size={16} />Danh sách 10 bài</Button>
-    <p className="text-sm text-muted">{group.label} / {type.label} / {topic.label}</p>
+    <p className="text-sm text-muted">{group.label} / {summary.register && `${REGISTER_LABELS[summary.register]} / `}{type.label} / {topic.label}</p>
     <h1 ref={title} tabIndex={-1} className="mt-2 text-2xl font-bold outline-none">{String(summary.number).padStart(2, "0")}. {summary.title}</h1>
     <p lang="en" className="mt-1 text-muted">{summary.focus}</p>
     <div className="my-5 flex flex-wrap gap-2"><Button variant={item?.saved ? "primary" : "outline"} aria-pressed={!!item?.saved} onClick={() => onToggle(summary.id, "saved")}><Bookmark size={16} />{item?.saved ? "Đã lưu bài" : "Lưu bài"}</Button><Button variant={item?.read ? "success" : "outline"} aria-pressed={!!item?.read} onClick={() => onToggle(summary.id, "read")}><Check size={16} />{item?.read ? "Đã đọc bài" : "Đánh dấu đã đọc"}</Button><Button variant="outline" aria-pressed={!notes} onClick={() => setNotes(!notes)}>{notes ? "Chỉ đọc bài tiếng Anh" : "Hiện gợi ý tiếng Việt"}</Button></div>
+    <div className="mb-5 rounded-xl border border-border bg-surface p-4 text-sm">
+      <label className="flex cursor-pointer items-center gap-2 font-medium"><input type="checkbox" checked={frames} onChange={(e) => setFrames(e.target.checked)} />Gạch chân khung cần thuộc</label>
+      <p className="mt-2 leading-relaxed"><FrameLiteral>Phần gạch chân</FrameLiteral> là câu khung có thể dùng lại trong dạng này. Phần còn lại là ý cần hiểu và đổi theo đề; đừng học thuộc tên, ngày hoặc ví dụ của bài mẫu.</p>
+      {counterpart && <Button variant="outline" className="mt-3 h-auto min-h-10 whitespace-normal py-2 text-left" onClick={() => onOpen(counterpart)}>So sánh: bản {REGISTER_LABELS[counterpart.register!].toLowerCase()} cùng tình huống<ArrowRight size={15} /></Button>}
+    </div>
     {navigation}
     {query.isPending ? <p role="status" className="py-8">Đang tải nội dung 10 bài của chủ đề…</p> : query.isError ? <div className="my-5"><ErrorBox error={query.error} onRetry={() => void query.refetch()} /></div> : !sample ? <div className="my-5"><ErrorBox error={new Error("Không tìm thấy nội dung bài. Hãy tải lại trang.")} /></div> : <>
       <section className="my-6 rounded-2xl border border-primary/30 bg-primary-soft/20 p-5" aria-labelledby="sample-prompt">
@@ -113,9 +128,10 @@ function SampleReader({ summary, index, progress, bucket, onOpen, onBack, onTogg
         {sample.options.length > 0 && <ol className="mt-3 list-inside list-decimal space-y-2" lang="en">{sample.options.map((option) => <li key={option}>{option}</li>)}</ol>}
         {notes && <div className="mt-5 border-t border-border pt-4"><h3 className="text-sm font-semibold">Đọc đề trước khi học bài mẫu</h3><ul className="mt-2 list-disc space-y-1 pl-5 text-sm">{sample.requirementsVi.map((requirement) => <li key={requirement}>{requirement}</li>)}</ul>{sample.selectedOption !== null && <p className="mt-3 text-sm">Bài mẫu chọn phương án {sample.selectedOption + 1}; lý do cần bám điều kiện của đề.</p>}</div>}
       </section>
+      {notes && sample.register && <LetterFrameGuide sample={sample} />}
       <section aria-labelledby="sample-answer" className="rounded-2xl border border-border bg-surface p-5 sm:p-8">
         <div className="mb-6 flex flex-wrap items-center justify-between gap-3"><h2 id="sample-answer" className="text-xl font-semibold">Bài mẫu hoàn chỉnh</h2><span className="text-sm text-muted">{sample.mainWordCount || sample.wordCount} từ{sample.group === "speaking-part3" ? " + hỏi đáp mở rộng" : ""}</span></div>
-        <Answer sample={sample} notes={notes} />
+        <Answer sample={sample} notes={notes} frames={frames} />
         <div className="mt-6 border-t border-border pt-4"><Button variant="ghost" size="sm" onClick={stopSpeaking}><Square size={13} />Dừng đọc</Button><TtsNote /></div>
       </section>
       {notes && <section className="my-6 rounded-2xl border border-border bg-surface p-5 sm:p-8" aria-labelledby="sample-phrases"><h2 id="sample-phrases" className="text-lg font-semibold">Nhớ ý trước, học cụm từ sau</h2><p className="mt-3 text-sm leading-relaxed">{sample.summaryVi}</p>
@@ -130,12 +146,29 @@ function SampleReader({ summary, index, progress, bucket, onOpen, onBack, onTogg
   </div>;
 }
 
-function Answer({ sample, notes }: { sample: Sample; notes: boolean }) {
+function Answer({ sample, notes, frames }: { sample: Sample; notes: boolean; frames: boolean }) {
   return <div className="space-y-7" data-testid="sample-answer-body">
     {sample.paragraphs.map((p, i) => <div key={p.label} className="reader-prose">
       <div className="mb-2 flex items-center justify-between gap-3">{notes ? <h3 className="text-sm font-semibold text-primary">{i + 1}. {p.label}</h3> : <span className="sr-only">Đoạn {i + 1}</span>}<SpeakButton text={p.text} label={`Nghe đoạn ${i + 1}`} /></div>
-      <p lang="en" className="whitespace-pre-line text-lg leading-loose">{p.text}</p>{notes && <p className="mt-3 border-l-2 border-border pl-3 text-xs text-muted">{p.noteVi}</p>}
+      <p lang="en" className="whitespace-pre-line text-lg leading-loose"><FrameText text={p.text} parts={p.parts} enabled={frames} /></p>{notes && <p className="mt-3 border-l-2 border-border pl-3 text-xs text-muted">{p.noteVi}</p>}
     </div>)}
-    {sample.sections.map((section) => <section key={section.label} className="space-y-6"><h3 className="border-b border-border pb-3 font-semibold">{section.label}</h3>{section.questions.map((q, i) => <div key={q.question} className="reader-prose"><div className="mb-2 flex items-start justify-between gap-3"><h4 lang="en" className="font-semibold">{i + 1}. {q.question}</h4><SpeakButton text={q.answer} label={`Nghe trả lời: ${q.question}`} /></div><p lang="en" className="text-lg leading-loose">{q.answer}</p>{notes && <p className="mt-3 border-l-2 border-border pl-3 text-xs text-muted">{q.noteVi}</p>}</div>)}</section>)}
+    {sample.sections.map((section) => <section key={section.label} className="space-y-6"><h3 className="border-b border-border pb-3 font-semibold">{section.label}</h3>{section.questions.map((q, i) => <div key={q.question} className="reader-prose"><div className="mb-2 flex items-start justify-between gap-3"><h4 lang="en" className="font-semibold">{i + 1}. {q.question}</h4><SpeakButton text={q.answer} label={`Nghe trả lời: ${q.question}`} /></div><p lang="en" className="text-lg leading-loose"><FrameText text={q.answer} parts={q.parts} enabled={frames} /></p>{notes && <p className="mt-3 border-l-2 border-border pl-3 text-xs text-muted">{q.noteVi}</p>}</div>)}</section>)}
   </div>;
+}
+
+
+function LetterFrameGuide({ sample }: { sample: Sample }) {
+  const formal = sample.register === "formal";
+  const common = formal
+    ? "Dear [danh xưng và họ người nhận],\n\nI am writing to [mục đích — động từ nguyên mẫu].\nFirst of all, [trả lời yêu cầu 1].\nIn addition, [trả lời yêu cầu 2].\nFinally, [trả lời yêu cầu 3].\nThank you for your time and consideration. I look forward to hearing from you.\n\nYours sincerely,\n[họ tên của bạn]"
+    : "Hi [tên người bạn],\n\nI hope you are well. I am writing to [mục đích — động từ nguyên mẫu].\nFirst of all, [trả lời yêu cầu 1].\nAs for [điều tiếp theo được hỏi], [câu trả lời].\nOne more thing, [trả lời yêu cầu cuối].\nWrite back when you have a moment and let me know what you think.\n\nBest wishes,\n[tên của bạn]";
+  return <details className="mb-6 rounded-2xl border border-primary/30 bg-primary-soft/20 p-5" data-testid="letter-frame-guide">
+    <summary className="cursor-pointer text-lg font-semibold">Khung thư {formal ? "trang trọng" : "thân mật"} — học chung, rồi đổi mục đích</summary>
+    <p className="mt-3 text-sm leading-relaxed">Học bộ khung chung trước. Các ô trong ngoặc là phần phải tự điền; thêm giải thích và ví dụ để trả lời đủ đề. Khung rút gọn này chưa phải một bài hoàn chỉnh đủ số từ.</p>
+    <p lang="en" className="mt-4 whitespace-pre-line rounded-xl border border-border bg-surface p-4 text-lg leading-loose"><FrameSkeleton text={common} /></p>
+    <p className="mt-3 text-sm text-muted">{formal ? "Biết tên: Dear Ms/Mr + họ → Yours sincerely. Không biết tên: Dear Sir or Madam → Yours faithfully. Dùng câu đầy đủ, lời đề nghị lịch sự; tránh Hi, cheers, wanna/gonna." : "Dùng với bạn bè/người thân: Hi/Dear + tên riêng → Best wishes / All the best. Có thể dùng dạng rút gọn như I'm, can't; không cần cố dùng từ khó."}</p>
+    <h3 className="mb-3 mt-6 font-semibold">Khung đầy đủ của mục đích đang học</h3>
+    <p className="mb-4 text-sm text-muted">Đây là phần khung được dùng trong cả 50 bài của dạng này. Giữ cấu trúc, thay các ô và điều chỉnh câu nếu yêu cầu đề khác.</p>
+    <div className="space-y-5">{sample.paragraphs.map((p) => <div key={p.label}><h4 className="mb-2 text-sm font-semibold">{p.label}</h4><p lang="en" className="whitespace-pre-line text-lg leading-loose"><FrameSkeleton text={p.template!} /></p></div>)}</div>
+  </details>;
 }

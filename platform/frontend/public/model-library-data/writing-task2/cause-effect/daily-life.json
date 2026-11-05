@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-05-v1",
+  "version": "2026-11-05-v2-frames",
   "samples": [
     {
       "id": "writing-task2-cause-effect-daily-life-01",
@@ -20,32 +20,132 @@
         {
           "label": "Mở bài",
           "text": "Difficulties related to walking as a daily habit can have effects beyond the activity itself. One important example is the possibility that some routes are difficult to use. Looking at the causes and consequences can explain why a proposal that appears useful may produce a disappointing experience for some people.",
-          "noteVi": "Xác định vấn đề, báo trước nguyên nhân và hệ quả."
+          "noteVi": "Xác định vấn đề, báo trước nguyên nhân và hệ quả.",
+          "parts": [
+            {
+              "text": "Difficulties related to walking as a daily habit can have effects beyond the activity itself. ",
+              "kind": "detail"
+            },
+            {
+              "text": "One important example is",
+              "kind": "frame",
+              "labelVi": "Giới thiệu ví dụ quan trọng"
+            },
+            {
+              "text": " the possibility that some routes are difficult to use. Looking at the causes and consequences can explain why a proposal that appears useful may produce a disappointing experience for some people.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Nguyên nhân",
           "text": "One reason for the difficulty is that street design may give little attention to people travelling on foot. This can help explain why some routes are difficult to use. Consider the following situation: a parent with a pushchair may have to step into the road because the pavement is blocked. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
-          "noteVi": "Giải thích cơ chế gây khó khăn."
+          "noteVi": "Giải thích cơ chế gây khó khăn.",
+          "parts": [
+            {
+              "text": "One reason for the difficulty is that",
+              "kind": "frame",
+              "labelVi": "Nêu nguyên nhân + mệnh đề"
+            },
+            {
+              "text": " street design may give little attention to people travelling on foot. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This can help explain why",
+              "kind": "frame",
+              "labelVi": "Nối nguyên nhân với hiện tượng"
+            },
+            {
+              "text": " some routes are difficult to use. ",
+              "kind": "detail"
+            },
+            {
+              "text": "Consider the following situation:",
+              "kind": "frame",
+              "labelVi": "Dẫn một tình huống minh họa"
+            },
+            {
+              "text": " a parent with a pushchair may have to step into the road because the pavement is blocked. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Hệ quả trực tiếp",
           "text": "The immediate effect can be frustration and difficulty taking part. This is understandable because uneven paths, missing crossings and parked vehicles can create barriers. A concrete example is that a parent with a pushchair may have to step into the road because the pavement is blocked. The person involved may then need to change plans, ask for additional help or look for a different way to meet the same need. The impact therefore extends beyond one unsuccessful attempt.",
-          "noteVi": "Nối tình huống với việc phải thay đổi kế hoạch."
+          "noteVi": "Nối tình huống với việc phải thay đổi kế hoạch.",
+          "parts": [
+            {
+              "text": "The immediate effect can be frustration and difficulty taking part. This is understandable because uneven paths, missing crossings and parked vehicles can create barriers. ",
+              "kind": "detail"
+            },
+            {
+              "text": "A concrete example is that",
+              "kind": "frame",
+              "labelVi": "Ví dụ cụ thể + mệnh đề"
+            },
+            {
+              "text": " a parent with a pushchair may have to step into the road because the pavement is blocked. The person involved may then need to change plans, ask for additional help or look for a different way to meet the same need. The impact therefore extends beyond one unsuccessful attempt.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Hệ quả lâu dài",
           "text": "A further effect is that people may become less willing to take part in similar activities. This matters because people can include gentle movement in ordinary routines. For example, a resident can walk to a nearby market instead of taking a motorbike for a very short trip. If a negative experience prevents someone from trying again, that potential benefit may be lost. Repeated difficulties can also reduce confidence in the organisation or advice behind the activity.",
-          "noteVi": "Đi bộ dễ thành thói quen khi đường tới nơi cần đến thuận tiện và không bị cản trở."
+          "noteVi": "Đi bộ dễ thành thói quen khi đường tới nơi cần đến thuận tiện và không bị cản trở.",
+          "parts": [
+            {
+              "text": "A further effect is that",
+              "kind": "frame",
+              "labelVi": "Thêm một hệ quả + mệnh đề"
+            },
+            {
+              "text": " people may become less willing to take part in similar activities. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This matters because",
+              "kind": "frame",
+              "labelVi": "Giải thích vì sao điều đó quan trọng"
+            },
+            {
+              "text": " people can include gentle movement in ordinary routines. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a resident can walk to a nearby market instead of taking a motorbike for a very short trip. If a negative experience prevents someone from trying again, that potential benefit may be lost. Repeated difficulties can also reduce confidence in the organisation or advice behind the activity.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, the difficulty is partly caused by the fact that street design may give little attention to people travelling on foot. Its effects can include immediate inconvenience, lost opportunities and reduced willingness to participate in the future. These consequences show why the practical conditions of an activity matter as much as its intended purpose.",
-          "noteVi": "Tóm tắt nguyên nhân và hệ quả đã bàn."
+          "noteVi": "Tóm tắt nguyên nhân và hệ quả đã bàn.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " the difficulty is partly caused by the fact that street design may give little attention to people travelling on foot. Its effects can include immediate inconvenience, lost opportunities and reduced willingness to participate in the future. These consequences show why the practical conditions of an activity matter as much as its intended purpose.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 343,
       "mainWordCount": 343,
       "phrases": [
@@ -95,32 +195,132 @@
         {
           "label": "Mở bài",
           "text": "Difficulties related to cooking simple meals at home can have effects beyond the activity itself. One important example is the possibility that cooking may feel difficult in shared or poorly equipped housing. Looking at the causes and consequences can explain why a proposal that appears useful may produce a disappointing experience for some people.",
-          "noteVi": "Xác định vấn đề, báo trước nguyên nhân và hệ quả."
+          "noteVi": "Xác định vấn đề, báo trước nguyên nhân và hệ quả.",
+          "parts": [
+            {
+              "text": "Difficulties related to cooking simple meals at home can have effects beyond the activity itself. ",
+              "kind": "detail"
+            },
+            {
+              "text": "One important example is",
+              "kind": "frame",
+              "labelVi": "Giới thiệu ví dụ quan trọng"
+            },
+            {
+              "text": " the possibility that cooking may feel difficult in shared or poorly equipped housing. Looking at the causes and consequences can explain why a proposal that appears useful may produce a disappointing experience for some people.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Nguyên nhân",
           "text": "One reason for the difficulty is that advice may assume that everyone has a large kitchen and plenty of free time. This can help explain why cooking may feel difficult in shared or poorly equipped housing. Consider the following situation: someone sharing one small cooker with several housemates may struggle to prepare a meal at a busy time. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
-          "noteVi": "Giải thích cơ chế gây khó khăn."
+          "noteVi": "Giải thích cơ chế gây khó khăn.",
+          "parts": [
+            {
+              "text": "One reason for the difficulty is that",
+              "kind": "frame",
+              "labelVi": "Nêu nguyên nhân + mệnh đề"
+            },
+            {
+              "text": " advice may assume that everyone has a large kitchen and plenty of free time. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This can help explain why",
+              "kind": "frame",
+              "labelVi": "Nối nguyên nhân với hiện tượng"
+            },
+            {
+              "text": " cooking may feel difficult in shared or poorly equipped housing. ",
+              "kind": "detail"
+            },
+            {
+              "text": "Consider the following situation:",
+              "kind": "frame",
+              "labelVi": "Dẫn một tình huống minh họa"
+            },
+            {
+              "text": " someone sharing one small cooker with several housemates may struggle to prepare a meal at a busy time. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Hệ quả trực tiếp",
           "text": "The immediate effect can be frustration and difficulty taking part. This is understandable because limited space and equipment can make even simple recipes inconvenient. A concrete example is that someone sharing one small cooker with several housemates may struggle to prepare a meal at a busy time. The person involved may then need to change plans, ask for additional help or look for a different way to meet the same need. The impact therefore extends beyond one unsuccessful attempt.",
-          "noteVi": "Nối tình huống với việc phải thay đổi kế hoạch."
+          "noteVi": "Nối tình huống với việc phải thay đổi kế hoạch.",
+          "parts": [
+            {
+              "text": "The immediate effect can be frustration and difficulty taking part. This is understandable because limited space and equipment can make even simple recipes inconvenient. ",
+              "kind": "detail"
+            },
+            {
+              "text": "A concrete example is that",
+              "kind": "frame",
+              "labelVi": "Ví dụ cụ thể + mệnh đề"
+            },
+            {
+              "text": " someone sharing one small cooker with several housemates may struggle to prepare a meal at a busy time. The person involved may then need to change plans, ask for additional help or look for a different way to meet the same need. The impact therefore extends beyond one unsuccessful attempt.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Hệ quả lâu dài",
           "text": "A further effect is that people may become less willing to take part in similar activities. This matters because people have more control over their meals and spending. For example, a student can prepare rice, vegetables and eggs instead of ordering food every evening. If a negative experience prevents someone from trying again, that potential benefit may be lost. Repeated difficulties can also reduce confidence in the organisation or advice behind the activity.",
-          "noteVi": "Biết vài món đơn giản giúp tự chủ ăn uống; công thức nên phù hợp bếp và thời gian thực tế."
+          "noteVi": "Biết vài món đơn giản giúp tự chủ ăn uống; công thức nên phù hợp bếp và thời gian thực tế.",
+          "parts": [
+            {
+              "text": "A further effect is that",
+              "kind": "frame",
+              "labelVi": "Thêm một hệ quả + mệnh đề"
+            },
+            {
+              "text": " people may become less willing to take part in similar activities. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This matters because",
+              "kind": "frame",
+              "labelVi": "Giải thích vì sao điều đó quan trọng"
+            },
+            {
+              "text": " people have more control over their meals and spending. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a student can prepare rice, vegetables and eggs instead of ordering food every evening. If a negative experience prevents someone from trying again, that potential benefit may be lost. Repeated difficulties can also reduce confidence in the organisation or advice behind the activity.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, the difficulty is partly caused by the fact that advice may assume that everyone has a large kitchen and plenty of free time. Its effects can include immediate inconvenience, lost opportunities and reduced willingness to participate in the future. These consequences show why the practical conditions of an activity matter as much as its intended purpose.",
-          "noteVi": "Tóm tắt nguyên nhân và hệ quả đã bàn."
+          "noteVi": "Tóm tắt nguyên nhân và hệ quả đã bàn.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " the difficulty is partly caused by the fact that advice may assume that everyone has a large kitchen and plenty of free time. Its effects can include immediate inconvenience, lost opportunities and reduced willingness to participate in the future. These consequences show why the practical conditions of an activity matter as much as its intended purpose.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 356,
       "mainWordCount": 356,
       "phrases": [
@@ -170,32 +370,132 @@
         {
           "label": "Mở bài",
           "text": "Difficulties related to team sports in the community can have effects beyond the activity itself. One important example is the possibility that beginners may feel excluded by competitive groups. Looking at the causes and consequences can explain why a proposal that appears useful may produce a disappointing experience for some people.",
-          "noteVi": "Xác định vấn đề, báo trước nguyên nhân và hệ quả."
+          "noteVi": "Xác định vấn đề, báo trước nguyên nhân và hệ quả.",
+          "parts": [
+            {
+              "text": "Difficulties related to team sports in the community can have effects beyond the activity itself. ",
+              "kind": "detail"
+            },
+            {
+              "text": "One important example is",
+              "kind": "frame",
+              "labelVi": "Giới thiệu ví dụ quan trọng"
+            },
+            {
+              "text": " the possibility that beginners may feel excluded by competitive groups. Looking at the causes and consequences can explain why a proposal that appears useful may produce a disappointing experience for some people.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Nguyên nhân",
           "text": "One reason for the difficulty is that sessions may not distinguish between beginner practice and serious competition. This can help explain why beginners may feel excluded by competitive groups. Consider the following situation: a new player may stop attending after rarely being passed the ball during a match. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
-          "noteVi": "Giải thích cơ chế gây khó khăn."
+          "noteVi": "Giải thích cơ chế gây khó khăn.",
+          "parts": [
+            {
+              "text": "One reason for the difficulty is that",
+              "kind": "frame",
+              "labelVi": "Nêu nguyên nhân + mệnh đề"
+            },
+            {
+              "text": " sessions may not distinguish between beginner practice and serious competition. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This can help explain why",
+              "kind": "frame",
+              "labelVi": "Nối nguyên nhân với hiện tượng"
+            },
+            {
+              "text": " beginners may feel excluded by competitive groups. ",
+              "kind": "detail"
+            },
+            {
+              "text": "Consider the following situation:",
+              "kind": "frame",
+              "labelVi": "Dẫn một tình huống minh họa"
+            },
+            {
+              "text": " a new player may stop attending after rarely being passed the ball during a match. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Hệ quả trực tiếp",
           "text": "The immediate effect can be frustration and difficulty taking part. This is understandable because experienced players may focus on winning rather than helping new members learn. A concrete example is that a new player may stop attending after rarely being passed the ball during a match. The person involved may then need to change plans, ask for additional help or look for a different way to meet the same need. The impact therefore extends beyond one unsuccessful attempt.",
-          "noteVi": "Nối tình huống với việc phải thay đổi kế hoạch."
+          "noteVi": "Nối tình huống với việc phải thay đổi kế hoạch.",
+          "parts": [
+            {
+              "text": "The immediate effect can be frustration and difficulty taking part. This is understandable because experienced players may focus on winning rather than helping new members learn. ",
+              "kind": "detail"
+            },
+            {
+              "text": "A concrete example is that",
+              "kind": "frame",
+              "labelVi": "Ví dụ cụ thể + mệnh đề"
+            },
+            {
+              "text": " a new player may stop attending after rarely being passed the ball during a match. The person involved may then need to change plans, ask for additional help or look for a different way to meet the same need. The impact therefore extends beyond one unsuccessful attempt.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Hệ quả lâu dài",
           "text": "A further effect is that people may become less willing to take part in similar activities. This matters because residents can exercise while meeting other people. For example, a student new to a neighbourhood can join a weekend volleyball group and gradually get to know other players. If a negative experience prevents someone from trying again, that potential benefit may be lost. Repeated difficulties can also reduce confidence in the organisation or advice behind the activity.",
-          "noteVi": "Thể thao nhóm tạo kết nối; buổi dành cho người mới cần thân thiện và cho mọi người tham gia."
+          "noteVi": "Thể thao nhóm tạo kết nối; buổi dành cho người mới cần thân thiện và cho mọi người tham gia.",
+          "parts": [
+            {
+              "text": "A further effect is that",
+              "kind": "frame",
+              "labelVi": "Thêm một hệ quả + mệnh đề"
+            },
+            {
+              "text": " people may become less willing to take part in similar activities. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This matters because",
+              "kind": "frame",
+              "labelVi": "Giải thích vì sao điều đó quan trọng"
+            },
+            {
+              "text": " residents can exercise while meeting other people. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a student new to a neighbourhood can join a weekend volleyball group and gradually get to know other players. If a negative experience prevents someone from trying again, that potential benefit may be lost. Repeated difficulties can also reduce confidence in the organisation or advice behind the activity.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, the difficulty is partly caused by the fact that sessions may not distinguish between beginner practice and serious competition. Its effects can include immediate inconvenience, lost opportunities and reduced willingness to participate in the future. These consequences show why the practical conditions of an activity matter as much as its intended purpose.",
-          "noteVi": "Tóm tắt nguyên nhân và hệ quả đã bàn."
+          "noteVi": "Tóm tắt nguyên nhân và hệ quả đã bàn.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " the difficulty is partly caused by the fact that sessions may not distinguish between beginner practice and serious competition. Its effects can include immediate inconvenience, lost opportunities and reduced willingness to participate in the future. These consequences show why the practical conditions of an activity matter as much as its intended purpose.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 341,
       "mainWordCount": 341,
       "phrases": [
@@ -245,32 +545,132 @@
         {
           "label": "Mở bài",
           "text": "Difficulties related to phone use before bedtime can have effects beyond the activity itself. One important example is the possibility that one strict rule may not suit everyone's responsibilities. Looking at the causes and consequences can explain why a proposal that appears useful may produce a disappointing experience for some people.",
-          "noteVi": "Xác định vấn đề, báo trước nguyên nhân và hệ quả."
+          "noteVi": "Xác định vấn đề, báo trước nguyên nhân và hệ quả.",
+          "parts": [
+            {
+              "text": "Difficulties related to phone use before bedtime can have effects beyond the activity itself. ",
+              "kind": "detail"
+            },
+            {
+              "text": "One important example is",
+              "kind": "frame",
+              "labelVi": "Giới thiệu ví dụ quan trọng"
+            },
+            {
+              "text": " the possibility that one strict rule may not suit everyone's responsibilities. Looking at the causes and consequences can explain why a proposal that appears useful may produce a disappointing experience for some people.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Nguyên nhân",
           "text": "One reason for the difficulty is that people may treat all phone activity as if it serves the same purpose. This can help explain why one strict rule may not suit everyone's responsibilities. Consider the following situation: a person caring for a relative may need to keep important calls available overnight. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
-          "noteVi": "Giải thích cơ chế gây khó khăn."
+          "noteVi": "Giải thích cơ chế gây khó khăn.",
+          "parts": [
+            {
+              "text": "One reason for the difficulty is that",
+              "kind": "frame",
+              "labelVi": "Nêu nguyên nhân + mệnh đề"
+            },
+            {
+              "text": " people may treat all phone activity as if it serves the same purpose. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This can help explain why",
+              "kind": "frame",
+              "labelVi": "Nối nguyên nhân với hiện tượng"
+            },
+            {
+              "text": " one strict rule may not suit everyone's responsibilities. ",
+              "kind": "detail"
+            },
+            {
+              "text": "Consider the following situation:",
+              "kind": "frame",
+              "labelVi": "Dẫn một tình huống minh họa"
+            },
+            {
+              "text": " a person caring for a relative may need to keep important calls available overnight. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Hệ quả trực tiếp",
           "text": "The immediate effect can be frustration and difficulty taking part. This is understandable because some people need to remain reachable for work or family reasons. A concrete example is that a person caring for a relative may need to keep important calls available overnight. The person involved may then need to change plans, ask for additional help or look for a different way to meet the same need. The impact therefore extends beyond one unsuccessful attempt.",
-          "noteVi": "Nối tình huống với việc phải thay đổi kế hoạch."
+          "noteVi": "Nối tình huống với việc phải thay đổi kế hoạch.",
+          "parts": [
+            {
+              "text": "The immediate effect can be frustration and difficulty taking part. This is understandable because some people need to remain reachable for work or family reasons. ",
+              "kind": "detail"
+            },
+            {
+              "text": "A concrete example is that",
+              "kind": "frame",
+              "labelVi": "Ví dụ cụ thể + mệnh đề"
+            },
+            {
+              "text": " a person caring for a relative may need to keep important calls available overnight. The person involved may then need to change plans, ask for additional help or look for a different way to meet the same need. The impact therefore extends beyond one unsuccessful attempt.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Hệ quả lâu dài",
           "text": "A further effect is that people may become less willing to take part in similar activities. This matters because people can protect time intended for rest. For example, a student can finish necessary messages before reading a few pages of a book and going to bed at the planned time. If a negative experience prevents someone from trying again, that potential benefit may be lost. Repeated difficulties can also reduce confidence in the organisation or advice behind the activity.",
-          "noteVi": "Giảm lướt điện thoại giúp giữ giờ nghỉ; vẫn có thể giữ các liên lạc thực sự cần thiết."
+          "noteVi": "Giảm lướt điện thoại giúp giữ giờ nghỉ; vẫn có thể giữ các liên lạc thực sự cần thiết.",
+          "parts": [
+            {
+              "text": "A further effect is that",
+              "kind": "frame",
+              "labelVi": "Thêm một hệ quả + mệnh đề"
+            },
+            {
+              "text": " people may become less willing to take part in similar activities. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This matters because",
+              "kind": "frame",
+              "labelVi": "Giải thích vì sao điều đó quan trọng"
+            },
+            {
+              "text": " people can protect time intended for rest. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a student can finish necessary messages before reading a few pages of a book and going to bed at the planned time. If a negative experience prevents someone from trying again, that potential benefit may be lost. Repeated difficulties can also reduce confidence in the organisation or advice behind the activity.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, the difficulty is partly caused by the fact that people may treat all phone activity as if it serves the same purpose. Its effects can include immediate inconvenience, lost opportunities and reduced willingness to participate in the future. These consequences show why the practical conditions of an activity matter as much as its intended purpose.",
-          "noteVi": "Tóm tắt nguyên nhân và hệ quả đã bàn."
+          "noteVi": "Tóm tắt nguyên nhân và hệ quả đã bàn.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " the difficulty is partly caused by the fact that people may treat all phone activity as if it serves the same purpose. Its effects can include immediate inconvenience, lost opportunities and reduced willingness to participate in the future. These consequences show why the practical conditions of an activity matter as much as its intended purpose.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 348,
       "mainWordCount": 348,
       "phrases": [
@@ -320,32 +720,132 @@
         {
           "label": "Mở bài",
           "text": "Difficulties related to short local trips can have effects beyond the activity itself. One important example is the possibility that popular local places may become crowded at the same time. Looking at the causes and consequences can explain why a proposal that appears useful may produce a disappointing experience for some people.",
-          "noteVi": "Xác định vấn đề, báo trước nguyên nhân và hệ quả."
+          "noteVi": "Xác định vấn đề, báo trước nguyên nhân và hệ quả.",
+          "parts": [
+            {
+              "text": "Difficulties related to short local trips can have effects beyond the activity itself. ",
+              "kind": "detail"
+            },
+            {
+              "text": "One important example is",
+              "kind": "frame",
+              "labelVi": "Giới thiệu ví dụ quan trọng"
+            },
+            {
+              "text": " the possibility that popular local places may become crowded at the same time. Looking at the causes and consequences can explain why a proposal that appears useful may produce a disappointing experience for some people.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Nguyên nhân",
           "text": "One reason for the difficulty is that travel plans often follow the same photographs and recommendations. This can help explain why popular local places may become crowded at the same time. Consider the following situation: a small cafe near a famous viewpoint may have a long queue while quieter streets nearby receive few visitors. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
-          "noteVi": "Giải thích cơ chế gây khó khăn."
+          "noteVi": "Giải thích cơ chế gây khó khăn.",
+          "parts": [
+            {
+              "text": "One reason for the difficulty is that",
+              "kind": "frame",
+              "labelVi": "Nêu nguyên nhân + mệnh đề"
+            },
+            {
+              "text": " travel plans often follow the same photographs and recommendations. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This can help explain why",
+              "kind": "frame",
+              "labelVi": "Nối nguyên nhân với hiện tượng"
+            },
+            {
+              "text": " popular local places may become crowded at the same time. ",
+              "kind": "detail"
+            },
+            {
+              "text": "Consider the following situation:",
+              "kind": "frame",
+              "labelVi": "Dẫn một tình huống minh họa"
+            },
+            {
+              "text": " a small cafe near a famous viewpoint may have a long queue while quieter streets nearby receive few visitors. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Hệ quả trực tiếp",
           "text": "The immediate effect can be frustration and difficulty taking part. This is understandable because many visitors may choose the same convenient destination on weekends. A concrete example is that a small cafe near a famous viewpoint may have a long queue while quieter streets nearby receive few visitors. The person involved may then need to change plans, ask for additional help or look for a different way to meet the same need. The impact therefore extends beyond one unsuccessful attempt.",
-          "noteVi": "Nối tình huống với việc phải thay đổi kế hoạch."
+          "noteVi": "Nối tình huống với việc phải thay đổi kế hoạch.",
+          "parts": [
+            {
+              "text": "The immediate effect can be frustration and difficulty taking part. This is understandable because many visitors may choose the same convenient destination on weekends. ",
+              "kind": "detail"
+            },
+            {
+              "text": "A concrete example is that",
+              "kind": "frame",
+              "labelVi": "Ví dụ cụ thể + mệnh đề"
+            },
+            {
+              "text": " a small cafe near a famous viewpoint may have a long queue while quieter streets nearby receive few visitors. The person involved may then need to change plans, ask for additional help or look for a different way to meet the same need. The impact therefore extends beyond one unsuccessful attempt.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Hệ quả lâu dài",
           "text": "A further effect is that people may become less willing to take part in similar activities. This matters because travellers can spend less of a short break on transport. For example, a family can take a morning bus to a nearby town and still have most of the day to explore. If a negative experience prevents someone from trying again, that potential benefit may be lost. Repeated difficulties can also reduce confidence in the organisation or advice behind the activity.",
-          "noteVi": "Đi gần tận dụng thời gian nghỉ; nên tìm giờ ít đông và điểm đến đa dạng hơn."
+          "noteVi": "Đi gần tận dụng thời gian nghỉ; nên tìm giờ ít đông và điểm đến đa dạng hơn.",
+          "parts": [
+            {
+              "text": "A further effect is that",
+              "kind": "frame",
+              "labelVi": "Thêm một hệ quả + mệnh đề"
+            },
+            {
+              "text": " people may become less willing to take part in similar activities. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This matters because",
+              "kind": "frame",
+              "labelVi": "Giải thích vì sao điều đó quan trọng"
+            },
+            {
+              "text": " travellers can spend less of a short break on transport. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a family can take a morning bus to a nearby town and still have most of the day to explore. If a negative experience prevents someone from trying again, that potential benefit may be lost. Repeated difficulties can also reduce confidence in the organisation or advice behind the activity.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, the difficulty is partly caused by the fact that travel plans often follow the same photographs and recommendations. Its effects can include immediate inconvenience, lost opportunities and reduced willingness to participate in the future. These consequences show why the practical conditions of an activity matter as much as its intended purpose.",
-          "noteVi": "Tóm tắt nguyên nhân và hệ quả đã bàn."
+          "noteVi": "Tóm tắt nguyên nhân và hệ quả đã bàn.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " the difficulty is partly caused by the fact that travel plans often follow the same photographs and recommendations. Its effects can include immediate inconvenience, lost opportunities and reduced willingness to participate in the future. These consequences show why the practical conditions of an activity matter as much as its intended purpose.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 353,
       "mainWordCount": 353,
       "phrases": [
@@ -395,32 +895,132 @@
         {
           "label": "Mở bài",
           "text": "Difficulties related to planning family holidays can have effects beyond the activity itself. One important example is the possibility that trying to satisfy everyone can make the schedule too busy. Looking at the causes and consequences can explain why a proposal that appears useful may produce a disappointing experience for some people.",
-          "noteVi": "Xác định vấn đề, báo trước nguyên nhân và hệ quả."
+          "noteVi": "Xác định vấn đề, báo trước nguyên nhân và hệ quả.",
+          "parts": [
+            {
+              "text": "Difficulties related to planning family holidays can have effects beyond the activity itself. ",
+              "kind": "detail"
+            },
+            {
+              "text": "One important example is",
+              "kind": "frame",
+              "labelVi": "Giới thiệu ví dụ quan trọng"
+            },
+            {
+              "text": " the possibility that trying to satisfy everyone can make the schedule too busy. Looking at the causes and consequences can explain why a proposal that appears useful may produce a disappointing experience for some people.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Nguyên nhân",
           "text": "One reason for the difficulty is that planners may count activities without considering the time each one requires. This can help explain why trying to satisfy everyone can make the schedule too busy. Consider the following situation: a family may rush between several attractions and finish the day tired rather than pleased. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
-          "noteVi": "Giải thích cơ chế gây khó khăn."
+          "noteVi": "Giải thích cơ chế gây khó khăn.",
+          "parts": [
+            {
+              "text": "One reason for the difficulty is that",
+              "kind": "frame",
+              "labelVi": "Nêu nguyên nhân + mệnh đề"
+            },
+            {
+              "text": " planners may count activities without considering the time each one requires. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This can help explain why",
+              "kind": "frame",
+              "labelVi": "Nối nguyên nhân với hiện tượng"
+            },
+            {
+              "text": " trying to satisfy everyone can make the schedule too busy. ",
+              "kind": "detail"
+            },
+            {
+              "text": "Consider the following situation:",
+              "kind": "frame",
+              "labelVi": "Dẫn một tình huống minh họa"
+            },
+            {
+              "text": " a family may rush between several attractions and finish the day tired rather than pleased. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Hệ quả trực tiếp",
           "text": "The immediate effect can be frustration and difficulty taking part. This is understandable because adding every suggested activity may leave little time for travel, meals or rest. A concrete example is that a family may rush between several attractions and finish the day tired rather than pleased. The person involved may then need to change plans, ask for additional help or look for a different way to meet the same need. The impact therefore extends beyond one unsuccessful attempt.",
-          "noteVi": "Nối tình huống với việc phải thay đổi kế hoạch."
+          "noteVi": "Nối tình huống với việc phải thay đổi kế hoạch.",
+          "parts": [
+            {
+              "text": "The immediate effect can be frustration and difficulty taking part. This is understandable because adding every suggested activity may leave little time for travel, meals or rest. ",
+              "kind": "detail"
+            },
+            {
+              "text": "A concrete example is that",
+              "kind": "frame",
+              "labelVi": "Ví dụ cụ thể + mệnh đề"
+            },
+            {
+              "text": " a family may rush between several attractions and finish the day tired rather than pleased. The person involved may then need to change plans, ask for additional help or look for a different way to meet the same need. The impact therefore extends beyond one unsuccessful attempt.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Hệ quả lâu dài",
           "text": "A further effect is that people may become less willing to take part in similar activities. This matters because the plan can reflect more than one person's interests. For example, a family can combine a short museum visit with time in a park so that both adults and children enjoy the day. If a negative experience prevents someone from trying again, that potential benefit may be lost. Repeated difficulties can also reduce confidence in the organisation or advice behind the activity.",
-          "noteVi": "Cùng bàn giúp tôn trọng nhu cầu từng người; lịch đi cần có ưu tiên và giờ nghỉ."
+          "noteVi": "Cùng bàn giúp tôn trọng nhu cầu từng người; lịch đi cần có ưu tiên và giờ nghỉ.",
+          "parts": [
+            {
+              "text": "A further effect is that",
+              "kind": "frame",
+              "labelVi": "Thêm một hệ quả + mệnh đề"
+            },
+            {
+              "text": " people may become less willing to take part in similar activities. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This matters because",
+              "kind": "frame",
+              "labelVi": "Giải thích vì sao điều đó quan trọng"
+            },
+            {
+              "text": " the plan can reflect more than one person's interests. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a family can combine a short museum visit with time in a park so that both adults and children enjoy the day. If a negative experience prevents someone from trying again, that potential benefit may be lost. Repeated difficulties can also reduce confidence in the organisation or advice behind the activity.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, the difficulty is partly caused by the fact that planners may count activities without considering the time each one requires. Its effects can include immediate inconvenience, lost opportunities and reduced willingness to participate in the future. These consequences show why the practical conditions of an activity matter as much as its intended purpose.",
-          "noteVi": "Tóm tắt nguyên nhân và hệ quả đã bàn."
+          "noteVi": "Tóm tắt nguyên nhân và hệ quả đã bàn.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " the difficulty is partly caused by the fact that planners may count activities without considering the time each one requires. Its effects can include immediate inconvenience, lost opportunities and reduced willingness to participate in the future. These consequences show why the practical conditions of an activity matter as much as its intended purpose.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 353,
       "mainWordCount": 353,
       "phrases": [
@@ -470,32 +1070,132 @@
         {
           "label": "Mở bài",
           "text": "Difficulties related to getting to know neighbours can have effects beyond the activity itself. One important example is the possibility that some people may feel pressured to join activities. Looking at the causes and consequences can explain why a proposal that appears useful may produce a disappointing experience for some people.",
-          "noteVi": "Xác định vấn đề, báo trước nguyên nhân và hệ quả."
+          "noteVi": "Xác định vấn đề, báo trước nguyên nhân và hệ quả.",
+          "parts": [
+            {
+              "text": "Difficulties related to getting to know neighbours can have effects beyond the activity itself. ",
+              "kind": "detail"
+            },
+            {
+              "text": "One important example is",
+              "kind": "frame",
+              "labelVi": "Giới thiệu ví dụ quan trọng"
+            },
+            {
+              "text": " the possibility that some people may feel pressured to join activities. Looking at the causes and consequences can explain why a proposal that appears useful may produce a disappointing experience for some people.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Nguyên nhân",
           "text": "One reason for the difficulty is that organisers may assume that one type of social event suits everyone. This can help explain why some people may feel pressured to join activities. Consider the following situation: a person who works night shifts may not want to attend a loud weekend gathering. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
-          "noteVi": "Giải thích cơ chế gây khó khăn."
+          "noteVi": "Giải thích cơ chế gây khó khăn.",
+          "parts": [
+            {
+              "text": "One reason for the difficulty is that",
+              "kind": "frame",
+              "labelVi": "Nêu nguyên nhân + mệnh đề"
+            },
+            {
+              "text": " organisers may assume that one type of social event suits everyone. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This can help explain why",
+              "kind": "frame",
+              "labelVi": "Nối nguyên nhân với hiện tượng"
+            },
+            {
+              "text": " some people may feel pressured to join activities. ",
+              "kind": "detail"
+            },
+            {
+              "text": "Consider the following situation:",
+              "kind": "frame",
+              "labelVi": "Dẫn một tình huống minh họa"
+            },
+            {
+              "text": " a person who works night shifts may not want to attend a loud weekend gathering. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Hệ quả trực tiếp",
           "text": "The immediate effect can be frustration and difficulty taking part. This is understandable because residents have different schedules and preferences about privacy. A concrete example is that a person who works night shifts may not want to attend a loud weekend gathering. The person involved may then need to change plans, ask for additional help or look for a different way to meet the same need. The impact therefore extends beyond one unsuccessful attempt.",
-          "noteVi": "Nối tình huống với việc phải thay đổi kế hoạch."
+          "noteVi": "Nối tình huống với việc phải thay đổi kế hoạch.",
+          "parts": [
+            {
+              "text": "The immediate effect can be frustration and difficulty taking part. This is understandable because residents have different schedules and preferences about privacy. ",
+              "kind": "detail"
+            },
+            {
+              "text": "A concrete example is that",
+              "kind": "frame",
+              "labelVi": "Ví dụ cụ thể + mệnh đề"
+            },
+            {
+              "text": " a person who works night shifts may not want to attend a loud weekend gathering. The person involved may then need to change plans, ask for additional help or look for a different way to meet the same need. The impact therefore extends beyond one unsuccessful attempt.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Hệ quả lâu dài",
           "text": "A further effect is that people may become less willing to take part in similar activities. This matters because people can build a small local support network. For example, a resident can ask a neighbour to receive a parcel after meeting them at a building event. If a negative experience prevents someone from trying again, that potential benefit may be lost. Repeated difficulties can also reduce confidence in the organisation or advice behind the activity.",
-          "noteVi": "Gặp hàng xóm tạo hỗ trợ gần gũi; hoạt động nên tự nguyện và tôn trọng lịch, sự riêng tư."
+          "noteVi": "Gặp hàng xóm tạo hỗ trợ gần gũi; hoạt động nên tự nguyện và tôn trọng lịch, sự riêng tư.",
+          "parts": [
+            {
+              "text": "A further effect is that",
+              "kind": "frame",
+              "labelVi": "Thêm một hệ quả + mệnh đề"
+            },
+            {
+              "text": " people may become less willing to take part in similar activities. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This matters because",
+              "kind": "frame",
+              "labelVi": "Giải thích vì sao điều đó quan trọng"
+            },
+            {
+              "text": " people can build a small local support network. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a resident can ask a neighbour to receive a parcel after meeting them at a building event. If a negative experience prevents someone from trying again, that potential benefit may be lost. Repeated difficulties can also reduce confidence in the organisation or advice behind the activity.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, the difficulty is partly caused by the fact that organisers may assume that one type of social event suits everyone. Its effects can include immediate inconvenience, lost opportunities and reduced willingness to participate in the future. These consequences show why the practical conditions of an activity matter as much as its intended purpose.",
-          "noteVi": "Tóm tắt nguyên nhân và hệ quả đã bàn."
+          "noteVi": "Tóm tắt nguyên nhân và hệ quả đã bàn.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " the difficulty is partly caused by the fact that organisers may assume that one type of social event suits everyone. Its effects can include immediate inconvenience, lost opportunities and reduced willingness to participate in the future. These consequences show why the practical conditions of an activity matter as much as its intended purpose.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 339,
       "mainWordCount": 339,
       "phrases": [
@@ -545,32 +1245,132 @@
         {
           "label": "Mở bài",
           "text": "Difficulties related to reading for pleasure can have effects beyond the activity itself. One important example is the possibility that a formal reading target may remove the enjoyment. Looking at the causes and consequences can explain why a proposal that appears useful may produce a disappointing experience for some people.",
-          "noteVi": "Xác định vấn đề, báo trước nguyên nhân và hệ quả."
+          "noteVi": "Xác định vấn đề, báo trước nguyên nhân và hệ quả.",
+          "parts": [
+            {
+              "text": "Difficulties related to reading for pleasure can have effects beyond the activity itself. ",
+              "kind": "detail"
+            },
+            {
+              "text": "One important example is",
+              "kind": "frame",
+              "labelVi": "Giới thiệu ví dụ quan trọng"
+            },
+            {
+              "text": " the possibility that a formal reading target may remove the enjoyment. Looking at the causes and consequences can explain why a proposal that appears useful may produce a disappointing experience for some people.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Nguyên nhân",
           "text": "One reason for the difficulty is that organisers may focus on the number of books rather than the experience of reading. This can help explain why a formal reading target may remove the enjoyment. Consider the following situation: a busy worker may leave a book group because finishing a long novel every week feels like homework. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
-          "noteVi": "Giải thích cơ chế gây khó khăn."
+          "noteVi": "Giải thích cơ chế gây khó khăn.",
+          "parts": [
+            {
+              "text": "One reason for the difficulty is that",
+              "kind": "frame",
+              "labelVi": "Nêu nguyên nhân + mệnh đề"
+            },
+            {
+              "text": " organisers may focus on the number of books rather than the experience of reading. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This can help explain why",
+              "kind": "frame",
+              "labelVi": "Nối nguyên nhân với hiện tượng"
+            },
+            {
+              "text": " a formal reading target may remove the enjoyment. ",
+              "kind": "detail"
+            },
+            {
+              "text": "Consider the following situation:",
+              "kind": "frame",
+              "labelVi": "Dẫn một tình huống minh họa"
+            },
+            {
+              "text": " a busy worker may leave a book group because finishing a long novel every week feels like homework. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Hệ quả trực tiếp",
           "text": "The immediate effect can be frustration and difficulty taking part. This is understandable because people read at different speeds and have different amounts of free time. A concrete example is that a busy worker may leave a book group because finishing a long novel every week feels like homework. The person involved may then need to change plans, ask for additional help or look for a different way to meet the same need. The impact therefore extends beyond one unsuccessful attempt.",
-          "noteVi": "Nối tình huống với việc phải thay đổi kế hoạch."
+          "noteVi": "Nối tình huống với việc phải thay đổi kế hoạch.",
+          "parts": [
+            {
+              "text": "The immediate effect can be frustration and difficulty taking part. This is understandable because people read at different speeds and have different amounts of free time. ",
+              "kind": "detail"
+            },
+            {
+              "text": "A concrete example is that",
+              "kind": "frame",
+              "labelVi": "Ví dụ cụ thể + mệnh đề"
+            },
+            {
+              "text": " a busy worker may leave a book group because finishing a long novel every week feels like homework. The person involved may then need to change plans, ask for additional help or look for a different way to meet the same need. The impact therefore extends beyond one unsuccessful attempt.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Hệ quả lâu dài",
           "text": "A further effect is that people may become less willing to take part in similar activities. This matters because people can discover ideas and enjoy quiet time away from daily pressure. For example, a reader can try a short story suggested by a neighbour and later discuss a favourite character. If a negative experience prevents someone from trying again, that potential benefit may be lost. Repeated difficulties can also reduce confidence in the organisation or advice behind the activity.",
-          "noteVi": "Đọc giải trí cần lựa chọn phù hợp và tham gia linh hoạt để không biến thành áp lực hoàn thành chỉ tiêu."
+          "noteVi": "Đọc giải trí cần lựa chọn phù hợp và tham gia linh hoạt để không biến thành áp lực hoàn thành chỉ tiêu.",
+          "parts": [
+            {
+              "text": "A further effect is that",
+              "kind": "frame",
+              "labelVi": "Thêm một hệ quả + mệnh đề"
+            },
+            {
+              "text": " people may become less willing to take part in similar activities. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This matters because",
+              "kind": "frame",
+              "labelVi": "Giải thích vì sao điều đó quan trọng"
+            },
+            {
+              "text": " people can discover ideas and enjoy quiet time away from daily pressure. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a reader can try a short story suggested by a neighbour and later discuss a favourite character. If a negative experience prevents someone from trying again, that potential benefit may be lost. Repeated difficulties can also reduce confidence in the organisation or advice behind the activity.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, the difficulty is partly caused by the fact that organisers may focus on the number of books rather than the experience of reading. Its effects can include immediate inconvenience, lost opportunities and reduced willingness to participate in the future. These consequences show why the practical conditions of an activity matter as much as its intended purpose.",
-          "noteVi": "Tóm tắt nguyên nhân và hệ quả đã bàn."
+          "noteVi": "Tóm tắt nguyên nhân và hệ quả đã bàn.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " the difficulty is partly caused by the fact that organisers may focus on the number of books rather than the experience of reading. Its effects can include immediate inconvenience, lost opportunities and reduced willingness to participate in the future. These consequences show why the practical conditions of an activity matter as much as its intended purpose.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 358,
       "mainWordCount": 358,
       "phrases": [
@@ -620,32 +1420,132 @@
         {
           "label": "Mở bài",
           "text": "Difficulties related to planning everyday spending can have effects beyond the activity itself. One important example is the possibility that a strict plan can fail when unexpected costs appear. Looking at the causes and consequences can explain why a proposal that appears useful may produce a disappointing experience for some people.",
-          "noteVi": "Xác định vấn đề, báo trước nguyên nhân và hệ quả."
+          "noteVi": "Xác định vấn đề, báo trước nguyên nhân và hệ quả.",
+          "parts": [
+            {
+              "text": "Difficulties related to planning everyday spending can have effects beyond the activity itself. ",
+              "kind": "detail"
+            },
+            {
+              "text": "One important example is",
+              "kind": "frame",
+              "labelVi": "Giới thiệu ví dụ quan trọng"
+            },
+            {
+              "text": " the possibility that a strict plan can fail when unexpected costs appear. Looking at the causes and consequences can explain why a proposal that appears useful may produce a disappointing experience for some people.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Nguyên nhân",
           "text": "One reason for the difficulty is that people may create budgets with no allowance for change. This can help explain why a strict plan can fail when unexpected costs appear. Consider the following situation: someone may abandon a whole spending plan after paying for an urgent bicycle repair. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
-          "noteVi": "Giải thích cơ chế gây khó khăn."
+          "noteVi": "Giải thích cơ chế gây khó khăn.",
+          "parts": [
+            {
+              "text": "One reason for the difficulty is that",
+              "kind": "frame",
+              "labelVi": "Nêu nguyên nhân + mệnh đề"
+            },
+            {
+              "text": " people may create budgets with no allowance for change. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This can help explain why",
+              "kind": "frame",
+              "labelVi": "Nối nguyên nhân với hiện tượng"
+            },
+            {
+              "text": " a strict plan can fail when unexpected costs appear. ",
+              "kind": "detail"
+            },
+            {
+              "text": "Consider the following situation:",
+              "kind": "frame",
+              "labelVi": "Dẫn một tình huống minh họa"
+            },
+            {
+              "text": " someone may abandon a whole spending plan after paying for an urgent bicycle repair. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Hệ quả trực tiếp",
           "text": "The immediate effect can be frustration and difficulty taking part. This is understandable because real life includes repairs, travel changes and other expenses that are hard to predict. A concrete example is that someone may abandon a whole spending plan after paying for an urgent bicycle repair. The person involved may then need to change plans, ask for additional help or look for a different way to meet the same need. The impact therefore extends beyond one unsuccessful attempt.",
-          "noteVi": "Nối tình huống với việc phải thay đổi kế hoạch."
+          "noteVi": "Nối tình huống với việc phải thay đổi kế hoạch.",
+          "parts": [
+            {
+              "text": "The immediate effect can be frustration and difficulty taking part. This is understandable because real life includes repairs, travel changes and other expenses that are hard to predict. ",
+              "kind": "detail"
+            },
+            {
+              "text": "A concrete example is that",
+              "kind": "frame",
+              "labelVi": "Ví dụ cụ thể + mệnh đề"
+            },
+            {
+              "text": " someone may abandon a whole spending plan after paying for an urgent bicycle repair. The person involved may then need to change plans, ask for additional help or look for a different way to meet the same need. The impact therefore extends beyond one unsuccessful attempt.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Hệ quả lâu dài",
           "text": "A further effect is that people may become less willing to take part in similar activities. This matters because people can see whether their income covers essential needs. For example, a student can compare spending on transport, food and online orders before deciding where to cut back. If a negative experience prevents someone from trying again, that potential benefit may be lost. Repeated difficulties can also reduce confidence in the organisation or advice behind the activity.",
-          "noteVi": "Theo dõi chi tiêu giúp thấy nhu cầu thiết yếu; kế hoạch phải có khoảng linh hoạt cho việc phát sinh."
+          "noteVi": "Theo dõi chi tiêu giúp thấy nhu cầu thiết yếu; kế hoạch phải có khoảng linh hoạt cho việc phát sinh.",
+          "parts": [
+            {
+              "text": "A further effect is that",
+              "kind": "frame",
+              "labelVi": "Thêm một hệ quả + mệnh đề"
+            },
+            {
+              "text": " people may become less willing to take part in similar activities. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This matters because",
+              "kind": "frame",
+              "labelVi": "Giải thích vì sao điều đó quan trọng"
+            },
+            {
+              "text": " people can see whether their income covers essential needs. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a student can compare spending on transport, food and online orders before deciding where to cut back. If a negative experience prevents someone from trying again, that potential benefit may be lost. Repeated difficulties can also reduce confidence in the organisation or advice behind the activity.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, the difficulty is partly caused by the fact that people may create budgets with no allowance for change. Its effects can include immediate inconvenience, lost opportunities and reduced willingness to participate in the future. These consequences show why the practical conditions of an activity matter as much as its intended purpose.",
-          "noteVi": "Tóm tắt nguyên nhân và hệ quả đã bàn."
+          "noteVi": "Tóm tắt nguyên nhân và hệ quả đã bàn.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " the difficulty is partly caused by the fact that people may create budgets with no allowance for change. Its effects can include immediate inconvenience, lost opportunities and reduced willingness to participate in the future. These consequences show why the practical conditions of an activity matter as much as its intended purpose.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 341,
       "mainWordCount": 341,
       "phrases": [
@@ -695,32 +1595,132 @@
         {
           "label": "Mở bài",
           "text": "Difficulties related to making time for hobbies can have effects beyond the activity itself. One important example is the possibility that an ambitious hobby plan can become another source of pressure. Looking at the causes and consequences can explain why a proposal that appears useful may produce a disappointing experience for some people.",
-          "noteVi": "Xác định vấn đề, báo trước nguyên nhân và hệ quả."
+          "noteVi": "Xác định vấn đề, báo trước nguyên nhân và hệ quả.",
+          "parts": [
+            {
+              "text": "Difficulties related to making time for hobbies can have effects beyond the activity itself. ",
+              "kind": "detail"
+            },
+            {
+              "text": "One important example is",
+              "kind": "frame",
+              "labelVi": "Giới thiệu ví dụ quan trọng"
+            },
+            {
+              "text": " the possibility that an ambitious hobby plan can become another source of pressure. Looking at the causes and consequences can explain why a proposal that appears useful may produce a disappointing experience for some people.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Nguyên nhân",
           "text": "One reason for the difficulty is that people may compare their starting point with experienced hobbyists. This can help explain why an ambitious hobby plan can become another source of pressure. Consider the following situation: someone may stop practising music after trying to learn several difficult pieces in the first week. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
-          "noteVi": "Giải thích cơ chế gây khó khăn."
+          "noteVi": "Giải thích cơ chế gây khó khăn.",
+          "parts": [
+            {
+              "text": "One reason for the difficulty is that",
+              "kind": "frame",
+              "labelVi": "Nêu nguyên nhân + mệnh đề"
+            },
+            {
+              "text": " people may compare their starting point with experienced hobbyists. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This can help explain why",
+              "kind": "frame",
+              "labelVi": "Nối nguyên nhân với hiện tượng"
+            },
+            {
+              "text": " an ambitious hobby plan can become another source of pressure. ",
+              "kind": "detail"
+            },
+            {
+              "text": "Consider the following situation:",
+              "kind": "frame",
+              "labelVi": "Dẫn một tình huống minh họa"
+            },
+            {
+              "text": " someone may stop practising music after trying to learn several difficult pieces in the first week. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Hệ quả trực tiếp",
           "text": "The immediate effect can be frustration and difficulty taking part. This is understandable because expensive equipment and demanding goals may make a beginner feel unsuccessful. A concrete example is that someone may stop practising music after trying to learn several difficult pieces in the first week. The person involved may then need to change plans, ask for additional help or look for a different way to meet the same need. The impact therefore extends beyond one unsuccessful attempt.",
-          "noteVi": "Nối tình huống với việc phải thay đổi kế hoạch."
+          "noteVi": "Nối tình huống với việc phải thay đổi kế hoạch.",
+          "parts": [
+            {
+              "text": "The immediate effect can be frustration and difficulty taking part. This is understandable because expensive equipment and demanding goals may make a beginner feel unsuccessful. ",
+              "kind": "detail"
+            },
+            {
+              "text": "A concrete example is that",
+              "kind": "frame",
+              "labelVi": "Ví dụ cụ thể + mệnh đề"
+            },
+            {
+              "text": " someone may stop practising music after trying to learn several difficult pieces in the first week. The person involved may then need to change plans, ask for additional help or look for a different way to meet the same need. The impact therefore extends beyond one unsuccessful attempt.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Hệ quả lâu dài",
           "text": "A further effect is that people may become less willing to take part in similar activities. This matters because a hobby can provide a break from work and routine responsibilities. For example, an office worker can spend one evening each week learning to draw with a small local group. If a negative experience prevents someone from trying again, that potential benefit may be lost. Repeated difficulties can also reduce confidence in the organisation or advice behind the activity.",
-          "noteVi": "Sở thích giúp đổi nhịp sống; nên bắt đầu nhỏ, vừa túi tiền và không so mình với người đã giỏi."
+          "noteVi": "Sở thích giúp đổi nhịp sống; nên bắt đầu nhỏ, vừa túi tiền và không so mình với người đã giỏi.",
+          "parts": [
+            {
+              "text": "A further effect is that",
+              "kind": "frame",
+              "labelVi": "Thêm một hệ quả + mệnh đề"
+            },
+            {
+              "text": " people may become less willing to take part in similar activities. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This matters because",
+              "kind": "frame",
+              "labelVi": "Giải thích vì sao điều đó quan trọng"
+            },
+            {
+              "text": " a hobby can provide a break from work and routine responsibilities. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " an office worker can spend one evening each week learning to draw with a small local group. If a negative experience prevents someone from trying again, that potential benefit may be lost. Repeated difficulties can also reduce confidence in the organisation or advice behind the activity.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, the difficulty is partly caused by the fact that people may compare their starting point with experienced hobbyists. Its effects can include immediate inconvenience, lost opportunities and reduced willingness to participate in the future. These consequences show why the practical conditions of an activity matter as much as its intended purpose.",
-          "noteVi": "Tóm tắt nguyên nhân và hệ quả đã bàn."
+          "noteVi": "Tóm tắt nguyên nhân và hệ quả đã bàn.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " the difficulty is partly caused by the fact that people may compare their starting point with experienced hobbyists. Its effects can include immediate inconvenience, lost opportunities and reduced willingness to participate in the future. These consequences show why the practical conditions of an activity matter as much as its intended purpose.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 347,
       "mainWordCount": 347,
       "phrases": [

@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-05-v1",
+  "version": "2026-11-05-v2-frames",
   "samples": [
     {
       "id": "speaking-part3-development-education-01",
@@ -20,27 +20,127 @@
         {
           "label": "Mở bài",
           "text": "I would like to talk about online university classes. In my opinion, this topic is worth considering because it can affect ordinary decisions and experiences. I will look at a practical benefit, a possible difficulty and a way to make the approach work better.",
-          "noteVi": "Giới thiệu chủ đề và ba nhánh sẽ triển khai."
+          "noteVi": "Giới thiệu chủ đề và ba nhánh sẽ triển khai.",
+          "parts": [
+            {
+              "text": "I would like to talk about",
+              "kind": "frame",
+              "labelVi": "Giới thiệu chủ đề + cụm danh từ"
+            },
+            {
+              "text": " online university classes. ",
+              "kind": "detail"
+            },
+            {
+              "text": "In my opinion,",
+              "kind": "frame",
+              "labelVi": "Nêu quan điểm cá nhân"
+            },
+            {
+              "text": " this topic is worth considering because it can affect ordinary decisions and experiences. I will look at a practical benefit, a possible difficulty and a way to make the approach work better.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Ý 1 — lợi ích thực tế",
           "text": "First, students can fit learning around work and family responsibilities. This is possible because recorded lessons can be watched again at a convenient time. For example, a student who works in a restaurant can review a morning lecture after the evening shift. That example shows how an idea can be useful in a real situation. People are more likely to value an approach when they can see what it changes in their own lives.",
-          "noteVi": "Học online giúp linh hoạt giờ học; cần thảo luận và hỗ trợ để tránh học một mình."
+          "noteVi": "Học online giúp linh hoạt giờ học; cần thảo luận và hỗ trợ để tránh học một mình.",
+          "parts": [
+            {
+              "text": "First,",
+              "kind": "frame",
+              "labelVi": "Mở ý thứ nhất"
+            },
+            {
+              "text": " students can fit learning around work and family responsibilities. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This is possible because",
+              "kind": "frame",
+              "labelVi": "Giải thích cơ chế + mệnh đề"
+            },
+            {
+              "text": " recorded lessons can be watched again at a convenient time. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a student who works in a restaurant can review a morning lecture after the evening shift. That example shows how an idea can be useful in a real situation. People are more likely to value an approach when they can see what it changes in their own lives.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Ý 2 — khó khăn",
           "text": "However, some learners may feel isolated. One reason is that a screen does not always make it easy to ask a quick question or form friendships. For instance, a first-year student may stop working on a difficult task instead of asking a classmate for help. I do not think this means we should reject the whole idea. It means that we need to understand the needs of the people involved before expecting the same result for everyone.",
-          "noteVi": "Một trở ngại → lý do → ví dụ; tránh khẳng định tuyệt đối."
+          "noteVi": "Một trở ngại → lý do → ví dụ; tránh khẳng định tuyệt đối.",
+          "parts": [
+            {
+              "text": "However,",
+              "kind": "frame",
+              "labelVi": "Nêu ý đối lập hoặc giới hạn"
+            },
+            {
+              "text": " some learners may feel isolated. One reason is that a screen does not always make it easy to ask a quick question or form friendships. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For instance,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a first-year student may stop working on a difficult task instead of asking a classmate for help. I do not think this means we should reject the whole idea. It means that we need to understand the needs of the people involved before expecting the same result for everyone.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Ý 3 — cách cải thiện",
           "text": "A useful step would be to schedule small weekly discussion groups. To be more specific, a teacher could meet six students at a time and ask each person to explain one difficult point. I would start with a small trial and ask the people involved what helped and what remained difficult. Their feedback could then guide the next step, so that effort goes towards a real need.",
-          "noteVi": "Giải pháp cụ thể → cách thực hiện → phản hồi."
+          "noteVi": "Giải pháp cụ thể → cách thực hiện → phản hồi.",
+          "parts": [
+            {
+              "text": "A useful step would be to",
+              "kind": "frame",
+              "labelVi": "Đề xuất một bước + động từ nguyên mẫu"
+            },
+            {
+              "text": " schedule small weekly discussion groups. ",
+              "kind": "detail"
+            },
+            {
+              "text": "To be more specific,",
+              "kind": "frame",
+              "labelVi": "Giải thích cụ thể hơn"
+            },
+            {
+              "text": " a teacher could meet six students at a time and ask each person to explain one difficult point. I would start with a small trial and ask the people involved what helped and what remained difficult. Their feedback could then guide the next step, so that effort goes towards a real need.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "To sum up, I think the potential benefit is valuable, but practical planning matters. We should keep the useful parts, recognise the difficulties and make changes when necessary. That would be more helpful than assuming that one approach suits everybody.",
-          "noteVi": "Chốt quan điểm, không thêm luận điểm mới."
+          "noteVi": "Chốt quan điểm, không thêm luận điểm mới.",
+          "parts": [
+            {
+              "text": "To sum up,",
+              "kind": "frame",
+              "labelVi": "Tóm tắt bài nói"
+            },
+            {
+              "text": " I think the potential benefit is valuable, but practical planning matters. We should keep the useful parts, recognise the difficulties and make changes when necessary. That would be more helpful than assuming that one approach suits everybody.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [
@@ -50,23 +150,88 @@
             {
               "question": "Should everyone follow the same approach to online university classes?",
               "answer": "No, I do not think so. People have different needs and resources. For example, a first-year student may stop working on a difficult task instead of asking a classmate for help. A flexible approach would give that person a better chance to benefit.",
-              "noteVi": "Quan điểm → khác biệt nhu cầu → ví dụ."
+              "noteVi": "Quan điểm → khác biệt nhu cầu → ví dụ.",
+              "parts": [
+                {
+                  "text": "No, I do not think so.",
+                  "kind": "frame",
+                  "labelVi": "Trả lời câu hỏi Yes/No rồi giải thích"
+                },
+                {
+                  "text": " People have different needs and resources. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "For example,",
+                  "kind": "frame",
+                  "labelVi": "Đưa ví dụ + mệnh đề"
+                },
+                {
+                  "text": " a first-year student may stop working on a difficult task instead of asking a classmate for help. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "A flexible approach would",
+                  "kind": "frame",
+                  "labelVi": "Đề xuất cách linh hoạt + động từ nguyên mẫu"
+                },
+                {
+                  "text": " give that person a better chance to benefit.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "Who should help address the difficulty you mentioned?",
               "answer": "The people organising the activity should listen to those taking part. They could schedule small weekly discussion groups. Participants should also explain what is difficult instead of assuming that organisers already know.",
-              "noteVi": "Nêu vai trò của cả người tổ chức và người tham gia."
+              "noteVi": "Nêu vai trò của cả người tổ chức và người tham gia.",
+              "parts": [
+                {
+                  "text": "The people organising the activity should listen to those taking part. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "They could",
+                  "kind": "frame",
+                  "labelVi": "Nêu hành động của đối tượng vừa nhắc"
+                },
+                {
+                  "text": " schedule small weekly discussion groups. Participants should also explain what is difficult instead of assuming that organisers already know.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "How could we tell whether a new approach is successful?",
               "answer": "We could ask whether it solves the original problem and makes daily life easier. Here, we would want to see whether students can fit learning around work and family responsibilities. I would compare people's experiences before and after a small trial rather than judge success by popularity alone.",
-              "noteVi": "Tiêu chí đo → áp dụng chủ đề → cách so sánh."
+              "noteVi": "Tiêu chí đo → áp dụng chủ đề → cách so sánh.",
+              "parts": [
+                {
+                  "text": "We could ask whether",
+                  "kind": "frame",
+                  "labelVi": "Đưa cách kiểm tra / đánh giá"
+                },
+                {
+                  "text": " it solves the original problem and makes daily life easier. Here, we would want to see whether students can fit learning around work and family responsibilities. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "I would compare",
+                  "kind": "frame",
+                  "labelVi": "Đề xuất so sánh + cụm danh từ"
+                },
+                {
+                  "text": " people's experiences before and after a small trial rather than judge success by popularity alone.",
+                  "kind": "detail"
+                }
+              ]
             }
           ]
         }
       ],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 425,
       "mainWordCount": 302,
       "phrases": [
@@ -120,27 +285,127 @@
         {
           "label": "Mở bài",
           "text": "I would like to talk about school libraries. In my opinion, this topic is worth considering because it can affect ordinary decisions and experiences. I will look at a practical benefit, a possible difficulty and a way to make the approach work better.",
-          "noteVi": "Giới thiệu chủ đề và ba nhánh sẽ triển khai."
+          "noteVi": "Giới thiệu chủ đề và ba nhánh sẽ triển khai.",
+          "parts": [
+            {
+              "text": "I would like to talk about",
+              "kind": "frame",
+              "labelVi": "Giới thiệu chủ đề + cụm danh từ"
+            },
+            {
+              "text": " school libraries. ",
+              "kind": "detail"
+            },
+            {
+              "text": "In my opinion,",
+              "kind": "frame",
+              "labelVi": "Nêu quan điểm cá nhân"
+            },
+            {
+              "text": " this topic is worth considering because it can affect ordinary decisions and experiences. I will look at a practical benefit, a possible difficulty and a way to make the approach work better.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Ý 1 — lợi ích thực tế",
           "text": "First, students have a quiet place to study without buying every book. This is possible because shared resources help learners whose homes are noisy or crowded. For example, two students can use a library reference book to prepare a science presentation after school. That example shows how an idea can be useful in a real situation. People are more likely to value an approach when they can see what it changes in their own lives.",
-          "noteVi": "Thư viện giảm chi phí và tạo chỗ học yên tĩnh; cần sách phù hợp và hướng dẫn tìm sách."
+          "noteVi": "Thư viện giảm chi phí và tạo chỗ học yên tĩnh; cần sách phù hợp và hướng dẫn tìm sách.",
+          "parts": [
+            {
+              "text": "First,",
+              "kind": "frame",
+              "labelVi": "Mở ý thứ nhất"
+            },
+            {
+              "text": " students have a quiet place to study without buying every book. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This is possible because",
+              "kind": "frame",
+              "labelVi": "Giải thích cơ chế + mệnh đề"
+            },
+            {
+              "text": " shared resources help learners whose homes are noisy or crowded. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " two students can use a library reference book to prepare a science presentation after school. That example shows how an idea can be useful in a real situation. People are more likely to value an approach when they can see what it changes in their own lives.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Ý 2 — khó khăn",
           "text": "However, new books may remain unused. One reason is that students need help finding material that matches their level and interests. For instance, a younger reader may give up when the only books on display are too difficult. I do not think this means we should reject the whole idea. It means that we need to understand the needs of the people involved before expecting the same result for everyone.",
-          "noteVi": "Một trở ngại → lý do → ví dụ; tránh khẳng định tuyệt đối."
+          "noteVi": "Một trở ngại → lý do → ví dụ; tránh khẳng định tuyệt đối.",
+          "parts": [
+            {
+              "text": "However,",
+              "kind": "frame",
+              "labelVi": "Nêu ý đối lập hoặc giới hạn"
+            },
+            {
+              "text": " new books may remain unused. One reason is that students need help finding material that matches their level and interests. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For instance,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a younger reader may give up when the only books on display are too difficult. I do not think this means we should reject the whole idea. It means that we need to understand the needs of the people involved before expecting the same result for everyone.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Ý 3 — cách cải thiện",
           "text": "A useful step would be to ask students for suggestions and organise short library tours. To be more specific, a librarian could show each class where to find simple reference books and offer a weekly reading recommendation. I would start with a small trial and ask the people involved what helped and what remained difficult. Their feedback could then guide the next step, so that effort goes towards a real need.",
-          "noteVi": "Giải pháp cụ thể → cách thực hiện → phản hồi."
+          "noteVi": "Giải pháp cụ thể → cách thực hiện → phản hồi.",
+          "parts": [
+            {
+              "text": "A useful step would be to",
+              "kind": "frame",
+              "labelVi": "Đề xuất một bước + động từ nguyên mẫu"
+            },
+            {
+              "text": " ask students for suggestions and organise short library tours. ",
+              "kind": "detail"
+            },
+            {
+              "text": "To be more specific,",
+              "kind": "frame",
+              "labelVi": "Giải thích cụ thể hơn"
+            },
+            {
+              "text": " a librarian could show each class where to find simple reference books and offer a weekly reading recommendation. I would start with a small trial and ask the people involved what helped and what remained difficult. Their feedback could then guide the next step, so that effort goes towards a real need.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "To sum up, I think the potential benefit is valuable, but practical planning matters. We should keep the useful parts, recognise the difficulties and make changes when necessary. That would be more helpful than assuming that one approach suits everybody.",
-          "noteVi": "Chốt quan điểm, không thêm luận điểm mới."
+          "noteVi": "Chốt quan điểm, không thêm luận điểm mới.",
+          "parts": [
+            {
+              "text": "To sum up,",
+              "kind": "frame",
+              "labelVi": "Tóm tắt bài nói"
+            },
+            {
+              "text": " I think the potential benefit is valuable, but practical planning matters. We should keep the useful parts, recognise the difficulties and make changes when necessary. That would be more helpful than assuming that one approach suits everybody.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [
@@ -150,23 +415,88 @@
             {
               "question": "Should everyone follow the same approach to school libraries?",
               "answer": "No, I do not think so. People have different needs and resources. For example, a younger reader may give up when the only books on display are too difficult. A flexible approach would give that person a better chance to benefit.",
-              "noteVi": "Quan điểm → khác biệt nhu cầu → ví dụ."
+              "noteVi": "Quan điểm → khác biệt nhu cầu → ví dụ.",
+              "parts": [
+                {
+                  "text": "No, I do not think so.",
+                  "kind": "frame",
+                  "labelVi": "Trả lời câu hỏi Yes/No rồi giải thích"
+                },
+                {
+                  "text": " People have different needs and resources. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "For example,",
+                  "kind": "frame",
+                  "labelVi": "Đưa ví dụ + mệnh đề"
+                },
+                {
+                  "text": " a younger reader may give up when the only books on display are too difficult. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "A flexible approach would",
+                  "kind": "frame",
+                  "labelVi": "Đề xuất cách linh hoạt + động từ nguyên mẫu"
+                },
+                {
+                  "text": " give that person a better chance to benefit.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "Who should help address the difficulty you mentioned?",
               "answer": "The people organising the activity should listen to those taking part. They could ask students for suggestions and organise short library tours. Participants should also explain what is difficult instead of assuming that organisers already know.",
-              "noteVi": "Nêu vai trò của cả người tổ chức và người tham gia."
+              "noteVi": "Nêu vai trò của cả người tổ chức và người tham gia.",
+              "parts": [
+                {
+                  "text": "The people organising the activity should listen to those taking part. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "They could",
+                  "kind": "frame",
+                  "labelVi": "Nêu hành động của đối tượng vừa nhắc"
+                },
+                {
+                  "text": " ask students for suggestions and organise short library tours. Participants should also explain what is difficult instead of assuming that organisers already know.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "How could we tell whether a new approach is successful?",
               "answer": "We could ask whether it solves the original problem and makes daily life easier. Here, we would want to see whether students have a quiet place to study without buying every book. I would compare people's experiences before and after a small trial rather than judge success by popularity alone.",
-              "noteVi": "Tiêu chí đo → áp dụng chủ đề → cách so sánh."
+              "noteVi": "Tiêu chí đo → áp dụng chủ đề → cách so sánh.",
+              "parts": [
+                {
+                  "text": "We could ask whether",
+                  "kind": "frame",
+                  "labelVi": "Đưa cách kiểm tra / đánh giá"
+                },
+                {
+                  "text": " it solves the original problem and makes daily life easier. Here, we would want to see whether students have a quiet place to study without buying every book. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "I would compare",
+                  "kind": "frame",
+                  "labelVi": "Đề xuất so sánh + cụm danh từ"
+                },
+                {
+                  "text": " people's experiences before and after a small trial rather than judge success by popularity alone.",
+                  "kind": "detail"
+                }
+              ]
             }
           ]
         }
       ],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 426,
       "mainWordCount": 299,
       "phrases": [
@@ -220,27 +550,127 @@
         {
           "label": "Mở bài",
           "text": "I would like to talk about homework for schoolchildren. In my opinion, this topic is worth considering because it can affect ordinary decisions and experiences. I will look at a practical benefit, a possible difficulty and a way to make the approach work better.",
-          "noteVi": "Giới thiệu chủ đề và ba nhánh sẽ triển khai."
+          "noteVi": "Giới thiệu chủ đề và ba nhánh sẽ triển khai.",
+          "parts": [
+            {
+              "text": "I would like to talk about",
+              "kind": "frame",
+              "labelVi": "Giới thiệu chủ đề + cụm danh từ"
+            },
+            {
+              "text": " homework for schoolchildren. ",
+              "kind": "detail"
+            },
+            {
+              "text": "In my opinion,",
+              "kind": "frame",
+              "labelVi": "Nêu quan điểm cá nhân"
+            },
+            {
+              "text": " this topic is worth considering because it can affect ordinary decisions and experiences. I will look at a practical benefit, a possible difficulty and a way to make the approach work better.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Ý 1 — lợi ích thực tế",
           "text": "First, children can practise a skill after learning it in class. This is possible because short tasks can show which steps a child still does not understand. For example, five carefully chosen maths questions can reveal whether a pupil knows how to use a new method. That example shows how an idea can be useful in a real situation. People are more likely to value an approach when they can see what it changes in their own lives.",
-          "noteVi": "Bài tập ngắn giúp luyện đúng kỹ năng; bài quá nhiều tạo bất lợi cho trẻ thiếu chỗ học hoặc hỗ trợ."
+          "noteVi": "Bài tập ngắn giúp luyện đúng kỹ năng; bài quá nhiều tạo bất lợi cho trẻ thiếu chỗ học hoặc hỗ trợ.",
+          "parts": [
+            {
+              "text": "First,",
+              "kind": "frame",
+              "labelVi": "Mở ý thứ nhất"
+            },
+            {
+              "text": " children can practise a skill after learning it in class. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This is possible because",
+              "kind": "frame",
+              "labelVi": "Giải thích cơ chế + mệnh đề"
+            },
+            {
+              "text": " short tasks can show which steps a child still does not understand. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " five carefully chosen maths questions can reveal whether a pupil knows how to use a new method. That example shows how an idea can be useful in a real situation. People are more likely to value an approach when they can see what it changes in their own lives.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Ý 2 — khó khăn",
           "text": "However, too much homework can take time away from rest and family life. One reason is that children have different home conditions and may not receive the same support. For instance, a pupil sharing one room with younger siblings may find a long evening assignment difficult to finish. I do not think this means we should reject the whole idea. It means that we need to understand the needs of the people involved before expecting the same result for everyone.",
-          "noteVi": "Một trở ngại → lý do → ví dụ; tránh khẳng định tuyệt đối."
+          "noteVi": "Một trở ngại → lý do → ví dụ; tránh khẳng định tuyệt đối.",
+          "parts": [
+            {
+              "text": "However,",
+              "kind": "frame",
+              "labelVi": "Nêu ý đối lập hoặc giới hạn"
+            },
+            {
+              "text": " too much homework can take time away from rest and family life. One reason is that children have different home conditions and may not receive the same support. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For instance,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a pupil sharing one room with younger siblings may find a long evening assignment difficult to finish. I do not think this means we should reject the whole idea. It means that we need to understand the needs of the people involved before expecting the same result for everyone.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Ý 3 — cách cải thiện",
           "text": "A useful step would be to coordinate homework and give short tasks with clear purposes. To be more specific, teachers could agree on a weekly limit and provide time at school for pupils who need help. I would start with a small trial and ask the people involved what helped and what remained difficult. Their feedback could then guide the next step, so that effort goes towards a real need.",
-          "noteVi": "Giải pháp cụ thể → cách thực hiện → phản hồi."
+          "noteVi": "Giải pháp cụ thể → cách thực hiện → phản hồi.",
+          "parts": [
+            {
+              "text": "A useful step would be to",
+              "kind": "frame",
+              "labelVi": "Đề xuất một bước + động từ nguyên mẫu"
+            },
+            {
+              "text": " coordinate homework and give short tasks with clear purposes. ",
+              "kind": "detail"
+            },
+            {
+              "text": "To be more specific,",
+              "kind": "frame",
+              "labelVi": "Giải thích cụ thể hơn"
+            },
+            {
+              "text": " teachers could agree on a weekly limit and provide time at school for pupils who need help. I would start with a small trial and ask the people involved what helped and what remained difficult. Their feedback could then guide the next step, so that effort goes towards a real need.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "To sum up, I think the potential benefit is valuable, but practical planning matters. We should keep the useful parts, recognise the difficulties and make changes when necessary. That would be more helpful than assuming that one approach suits everybody.",
-          "noteVi": "Chốt quan điểm, không thêm luận điểm mới."
+          "noteVi": "Chốt quan điểm, không thêm luận điểm mới.",
+          "parts": [
+            {
+              "text": "To sum up,",
+              "kind": "frame",
+              "labelVi": "Tóm tắt bài nói"
+            },
+            {
+              "text": " I think the potential benefit is valuable, but practical planning matters. We should keep the useful parts, recognise the difficulties and make changes when necessary. That would be more helpful than assuming that one approach suits everybody.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [
@@ -250,23 +680,88 @@
             {
               "question": "Should everyone follow the same approach to homework for schoolchildren?",
               "answer": "No, I do not think so. People have different needs and resources. For example, a pupil sharing one room with younger siblings may find a long evening assignment difficult to finish. A flexible approach would give that person a better chance to benefit.",
-              "noteVi": "Quan điểm → khác biệt nhu cầu → ví dụ."
+              "noteVi": "Quan điểm → khác biệt nhu cầu → ví dụ.",
+              "parts": [
+                {
+                  "text": "No, I do not think so.",
+                  "kind": "frame",
+                  "labelVi": "Trả lời câu hỏi Yes/No rồi giải thích"
+                },
+                {
+                  "text": " People have different needs and resources. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "For example,",
+                  "kind": "frame",
+                  "labelVi": "Đưa ví dụ + mệnh đề"
+                },
+                {
+                  "text": " a pupil sharing one room with younger siblings may find a long evening assignment difficult to finish. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "A flexible approach would",
+                  "kind": "frame",
+                  "labelVi": "Đề xuất cách linh hoạt + động từ nguyên mẫu"
+                },
+                {
+                  "text": " give that person a better chance to benefit.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "Who should help address the difficulty you mentioned?",
               "answer": "The people organising the activity should listen to those taking part. They could coordinate homework and give short tasks with clear purposes. Participants should also explain what is difficult instead of assuming that organisers already know.",
-              "noteVi": "Nêu vai trò của cả người tổ chức và người tham gia."
+              "noteVi": "Nêu vai trò của cả người tổ chức và người tham gia.",
+              "parts": [
+                {
+                  "text": "The people organising the activity should listen to those taking part. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "They could",
+                  "kind": "frame",
+                  "labelVi": "Nêu hành động của đối tượng vừa nhắc"
+                },
+                {
+                  "text": " coordinate homework and give short tasks with clear purposes. Participants should also explain what is difficult instead of assuming that organisers already know.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "How could we tell whether a new approach is successful?",
               "answer": "We could ask whether it solves the original problem and makes daily life easier. Here, we would want to see whether children can practise a skill after learning it in class. I would compare people's experiences before and after a small trial rather than judge success by popularity alone.",
-              "noteVi": "Tiêu chí đo → áp dụng chủ đề → cách so sánh."
+              "noteVi": "Tiêu chí đo → áp dụng chủ đề → cách so sánh.",
+              "parts": [
+                {
+                  "text": "We could ask whether",
+                  "kind": "frame",
+                  "labelVi": "Đưa cách kiểm tra / đánh giá"
+                },
+                {
+                  "text": " it solves the original problem and makes daily life easier. Here, we would want to see whether children can practise a skill after learning it in class. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "I would compare",
+                  "kind": "frame",
+                  "labelVi": "Đề xuất so sánh + cụm danh từ"
+                },
+                {
+                  "text": " people's experiences before and after a small trial rather than judge success by popularity alone.",
+                  "kind": "detail"
+                }
+              ]
             }
           ]
         }
       ],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 440,
       "mainWordCount": 312,
       "phrases": [
@@ -320,27 +815,127 @@
         {
           "label": "Mở bài",
           "text": "I would like to talk about studying English with a partner. In my opinion, this topic is worth considering because it can affect ordinary decisions and experiences. I will look at a practical benefit, a possible difficulty and a way to make the approach work better.",
-          "noteVi": "Giới thiệu chủ đề và ba nhánh sẽ triển khai."
+          "noteVi": "Giới thiệu chủ đề và ba nhánh sẽ triển khai.",
+          "parts": [
+            {
+              "text": "I would like to talk about",
+              "kind": "frame",
+              "labelVi": "Giới thiệu chủ đề + cụm danh từ"
+            },
+            {
+              "text": " studying English with a partner. ",
+              "kind": "detail"
+            },
+            {
+              "text": "In my opinion,",
+              "kind": "frame",
+              "labelVi": "Nêu quan điểm cá nhân"
+            },
+            {
+              "text": " this topic is worth considering because it can affect ordinary decisions and experiences. I will look at a practical benefit, a possible difficulty and a way to make the approach work better.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Ý 1 — lợi ích thực tế",
           "text": "First, learners have more opportunities to speak. This is possible because a regular partner gives them a reason to prepare and use new expressions. For example, two friends can exchange short voice messages about their day and discuss one useful phrase each evening. That example shows how an idea can be useful in a real situation. People are more likely to value an approach when they can see what it changes in their own lives.",
-          "noteVi": "Có bạn học giúp nói đều hơn; cần đối chiếu mẫu đúng để không lặp lại lỗi của nhau."
+          "noteVi": "Có bạn học giúp nói đều hơn; cần đối chiếu mẫu đúng để không lặp lại lỗi của nhau.",
+          "parts": [
+            {
+              "text": "First,",
+              "kind": "frame",
+              "labelVi": "Mở ý thứ nhất"
+            },
+            {
+              "text": " learners have more opportunities to speak. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This is possible because",
+              "kind": "frame",
+              "labelVi": "Giải thích cơ chế + mệnh đề"
+            },
+            {
+              "text": " a regular partner gives them a reason to prepare and use new expressions. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " two friends can exchange short voice messages about their day and discuss one useful phrase each evening. That example shows how an idea can be useful in a real situation. People are more likely to value an approach when they can see what it changes in their own lives.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Ý 2 — khó khăn",
           "text": "However, partners may repeat the same mistakes. One reason is that neither learner may know whether an expression is natural or accurate. For instance, two beginners might use the wrong past-tense form repeatedly because neither notices it. I do not think this means we should reject the whole idea. It means that we need to understand the needs of the people involved before expecting the same result for everyone.",
-          "noteVi": "Một trở ngại → lý do → ví dụ; tránh khẳng định tuyệt đối."
+          "noteVi": "Một trở ngại → lý do → ví dụ; tránh khẳng định tuyệt đối.",
+          "parts": [
+            {
+              "text": "However,",
+              "kind": "frame",
+              "labelVi": "Nêu ý đối lập hoặc giới hạn"
+            },
+            {
+              "text": " partners may repeat the same mistakes. One reason is that neither learner may know whether an expression is natural or accurate. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For instance,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " two beginners might use the wrong past-tense form repeatedly because neither notices it. I do not think this means we should reject the whole idea. It means that we need to understand the needs of the people involved before expecting the same result for everyone.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Ý 3 — cách cải thiện",
           "text": "A useful step would be to combine partner practice with checked materials and occasional teacher support. To be more specific, partners could compare a short dialogue with a trusted model before recording their own version. I would start with a small trial and ask the people involved what helped and what remained difficult. Their feedback could then guide the next step, so that effort goes towards a real need.",
-          "noteVi": "Giải pháp cụ thể → cách thực hiện → phản hồi."
+          "noteVi": "Giải pháp cụ thể → cách thực hiện → phản hồi.",
+          "parts": [
+            {
+              "text": "A useful step would be to",
+              "kind": "frame",
+              "labelVi": "Đề xuất một bước + động từ nguyên mẫu"
+            },
+            {
+              "text": " combine partner practice with checked materials and occasional teacher support. ",
+              "kind": "detail"
+            },
+            {
+              "text": "To be more specific,",
+              "kind": "frame",
+              "labelVi": "Giải thích cụ thể hơn"
+            },
+            {
+              "text": " partners could compare a short dialogue with a trusted model before recording their own version. I would start with a small trial and ask the people involved what helped and what remained difficult. Their feedback could then guide the next step, so that effort goes towards a real need.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "To sum up, I think the potential benefit is valuable, but practical planning matters. We should keep the useful parts, recognise the difficulties and make changes when necessary. That would be more helpful than assuming that one approach suits everybody.",
-          "noteVi": "Chốt quan điểm, không thêm luận điểm mới."
+          "noteVi": "Chốt quan điểm, không thêm luận điểm mới.",
+          "parts": [
+            {
+              "text": "To sum up,",
+              "kind": "frame",
+              "labelVi": "Tóm tắt bài nói"
+            },
+            {
+              "text": " I think the potential benefit is valuable, but practical planning matters. We should keep the useful parts, recognise the difficulties and make changes when necessary. That would be more helpful than assuming that one approach suits everybody.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [
@@ -350,23 +945,88 @@
             {
               "question": "Should everyone follow the same approach to studying English with a partner?",
               "answer": "No, I do not think so. People have different needs and resources. For example, two beginners might use the wrong past-tense form repeatedly because neither notices it. A flexible approach would give that person a better chance to benefit.",
-              "noteVi": "Quan điểm → khác biệt nhu cầu → ví dụ."
+              "noteVi": "Quan điểm → khác biệt nhu cầu → ví dụ.",
+              "parts": [
+                {
+                  "text": "No, I do not think so.",
+                  "kind": "frame",
+                  "labelVi": "Trả lời câu hỏi Yes/No rồi giải thích"
+                },
+                {
+                  "text": " People have different needs and resources. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "For example,",
+                  "kind": "frame",
+                  "labelVi": "Đưa ví dụ + mệnh đề"
+                },
+                {
+                  "text": " two beginners might use the wrong past-tense form repeatedly because neither notices it. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "A flexible approach would",
+                  "kind": "frame",
+                  "labelVi": "Đề xuất cách linh hoạt + động từ nguyên mẫu"
+                },
+                {
+                  "text": " give that person a better chance to benefit.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "Who should help address the difficulty you mentioned?",
               "answer": "The people organising the activity should listen to those taking part. They could combine partner practice with checked materials and occasional teacher support. Participants should also explain what is difficult instead of assuming that organisers already know.",
-              "noteVi": "Nêu vai trò của cả người tổ chức và người tham gia."
+              "noteVi": "Nêu vai trò của cả người tổ chức và người tham gia.",
+              "parts": [
+                {
+                  "text": "The people organising the activity should listen to those taking part. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "They could",
+                  "kind": "frame",
+                  "labelVi": "Nêu hành động của đối tượng vừa nhắc"
+                },
+                {
+                  "text": " combine partner practice with checked materials and occasional teacher support. Participants should also explain what is difficult instead of assuming that organisers already know.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "How could we tell whether a new approach is successful?",
               "answer": "We could ask whether it solves the original problem and makes daily life easier. Here, we would want to see whether learners have more opportunities to speak. I would compare people's experiences before and after a small trial rather than judge success by popularity alone.",
-              "noteVi": "Tiêu chí đo → áp dụng chủ đề → cách so sánh."
+              "noteVi": "Tiêu chí đo → áp dụng chủ đề → cách so sánh.",
+              "parts": [
+                {
+                  "text": "We could ask whether",
+                  "kind": "frame",
+                  "labelVi": "Đưa cách kiểm tra / đánh giá"
+                },
+                {
+                  "text": " it solves the original problem and makes daily life easier. Here, we would want to see whether learners have more opportunities to speak. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "I would compare",
+                  "kind": "frame",
+                  "labelVi": "Đề xuất so sánh + cụm danh từ"
+                },
+                {
+                  "text": " people's experiences before and after a small trial rather than judge success by popularity alone.",
+                  "kind": "detail"
+                }
+              ]
             }
           ]
         }
       ],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 420,
       "mainWordCount": 299,
       "phrases": [
@@ -420,27 +1080,127 @@
         {
           "label": "Mở bài",
           "text": "I would like to talk about practical life skills at school. In my opinion, this topic is worth considering because it can affect ordinary decisions and experiences. I will look at a practical benefit, a possible difficulty and a way to make the approach work better.",
-          "noteVi": "Giới thiệu chủ đề và ba nhánh sẽ triển khai."
+          "noteVi": "Giới thiệu chủ đề và ba nhánh sẽ triển khai.",
+          "parts": [
+            {
+              "text": "I would like to talk about",
+              "kind": "frame",
+              "labelVi": "Giới thiệu chủ đề + cụm danh từ"
+            },
+            {
+              "text": " practical life skills at school. ",
+              "kind": "detail"
+            },
+            {
+              "text": "In my opinion,",
+              "kind": "frame",
+              "labelVi": "Nêu quan điểm cá nhân"
+            },
+            {
+              "text": " this topic is worth considering because it can affect ordinary decisions and experiences. I will look at a practical benefit, a possible difficulty and a way to make the approach work better.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Ý 1 — lợi ích thực tế",
           "text": "First, students can use what they learn in everyday situations. This is possible because tasks such as planning a budget connect classroom knowledge with real decisions. For example, a class can compare food prices and plan an affordable lunch while practising basic maths. That example shows how an idea can be useful in a real situation. People are more likely to value an approach when they can see what it changes in their own lives.",
-          "noteVi": "Kỹ năng sống giúp dùng kiến thức vào thực tế; nên lồng ghép vào môn có sẵn để tránh quá tải."
+          "noteVi": "Kỹ năng sống giúp dùng kiến thức vào thực tế; nên lồng ghép vào môn có sẵn để tránh quá tải.",
+          "parts": [
+            {
+              "text": "First,",
+              "kind": "frame",
+              "labelVi": "Mở ý thứ nhất"
+            },
+            {
+              "text": " students can use what they learn in everyday situations. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This is possible because",
+              "kind": "frame",
+              "labelVi": "Giải thích cơ chế + mệnh đề"
+            },
+            {
+              "text": " tasks such as planning a budget connect classroom knowledge with real decisions. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a class can compare food prices and plan an affordable lunch while practising basic maths. That example shows how an idea can be useful in a real situation. People are more likely to value an approach when they can see what it changes in their own lives.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Ý 2 — khó khăn",
           "text": "However, an already busy timetable can become overloaded. One reason is that adding a separate subject may reduce time for other important learning. For instance, students preparing for exams may struggle if a long extra course is added without removing anything else. I do not think this means we should reject the whole idea. It means that we need to understand the needs of the people involved before expecting the same result for everyone.",
-          "noteVi": "Một trở ngại → lý do → ví dụ; tránh khẳng định tuyệt đối."
+          "noteVi": "Một trở ngại → lý do → ví dụ; tránh khẳng định tuyệt đối.",
+          "parts": [
+            {
+              "text": "However,",
+              "kind": "frame",
+              "labelVi": "Nêu ý đối lập hoặc giới hạn"
+            },
+            {
+              "text": " an already busy timetable can become overloaded. One reason is that adding a separate subject may reduce time for other important learning. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For instance,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " students preparing for exams may struggle if a long extra course is added without removing anything else. I do not think this means we should reject the whole idea. It means that we need to understand the needs of the people involved before expecting the same result for everyone.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Ý 3 — cách cải thiện",
           "text": "A useful step would be to include practical activities within suitable subjects. To be more specific, a maths teacher could use a household budget as an example instead of adding a new weekly class. I would start with a small trial and ask the people involved what helped and what remained difficult. Their feedback could then guide the next step, so that effort goes towards a real need.",
-          "noteVi": "Giải pháp cụ thể → cách thực hiện → phản hồi."
+          "noteVi": "Giải pháp cụ thể → cách thực hiện → phản hồi.",
+          "parts": [
+            {
+              "text": "A useful step would be to",
+              "kind": "frame",
+              "labelVi": "Đề xuất một bước + động từ nguyên mẫu"
+            },
+            {
+              "text": " include practical activities within suitable subjects. ",
+              "kind": "detail"
+            },
+            {
+              "text": "To be more specific,",
+              "kind": "frame",
+              "labelVi": "Giải thích cụ thể hơn"
+            },
+            {
+              "text": " a maths teacher could use a household budget as an example instead of adding a new weekly class. I would start with a small trial and ask the people involved what helped and what remained difficult. Their feedback could then guide the next step, so that effort goes towards a real need.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "To sum up, I think the potential benefit is valuable, but practical planning matters. We should keep the useful parts, recognise the difficulties and make changes when necessary. That would be more helpful than assuming that one approach suits everybody.",
-          "noteVi": "Chốt quan điểm, không thêm luận điểm mới."
+          "noteVi": "Chốt quan điểm, không thêm luận điểm mới.",
+          "parts": [
+            {
+              "text": "To sum up,",
+              "kind": "frame",
+              "labelVi": "Tóm tắt bài nói"
+            },
+            {
+              "text": " I think the potential benefit is valuable, but practical planning matters. We should keep the useful parts, recognise the difficulties and make changes when necessary. That would be more helpful than assuming that one approach suits everybody.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [
@@ -450,23 +1210,88 @@
             {
               "question": "Should everyone follow the same approach to practical life skills at school?",
               "answer": "No, I do not think so. People have different needs and resources. For example, students preparing for exams may struggle if a long extra course is added without removing anything else. A flexible approach would give that person a better chance to benefit.",
-              "noteVi": "Quan điểm → khác biệt nhu cầu → ví dụ."
+              "noteVi": "Quan điểm → khác biệt nhu cầu → ví dụ.",
+              "parts": [
+                {
+                  "text": "No, I do not think so.",
+                  "kind": "frame",
+                  "labelVi": "Trả lời câu hỏi Yes/No rồi giải thích"
+                },
+                {
+                  "text": " People have different needs and resources. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "For example,",
+                  "kind": "frame",
+                  "labelVi": "Đưa ví dụ + mệnh đề"
+                },
+                {
+                  "text": " students preparing for exams may struggle if a long extra course is added without removing anything else. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "A flexible approach would",
+                  "kind": "frame",
+                  "labelVi": "Đề xuất cách linh hoạt + động từ nguyên mẫu"
+                },
+                {
+                  "text": " give that person a better chance to benefit.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "Who should help address the difficulty you mentioned?",
               "answer": "The people organising the activity should listen to those taking part. They could include practical activities within suitable subjects. Participants should also explain what is difficult instead of assuming that organisers already know.",
-              "noteVi": "Nêu vai trò của cả người tổ chức và người tham gia."
+              "noteVi": "Nêu vai trò của cả người tổ chức và người tham gia.",
+              "parts": [
+                {
+                  "text": "The people organising the activity should listen to those taking part. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "They could",
+                  "kind": "frame",
+                  "labelVi": "Nêu hành động của đối tượng vừa nhắc"
+                },
+                {
+                  "text": " include practical activities within suitable subjects. Participants should also explain what is difficult instead of assuming that organisers already know.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "How could we tell whether a new approach is successful?",
               "answer": "We could ask whether it solves the original problem and makes daily life easier. Here, we would want to see whether students can use what they learn in everyday situations. I would compare people's experiences before and after a small trial rather than judge success by popularity alone.",
-              "noteVi": "Tiêu chí đo → áp dụng chủ đề → cách so sánh."
+              "noteVi": "Tiêu chí đo → áp dụng chủ đề → cách so sánh.",
+              "parts": [
+                {
+                  "text": "We could ask whether",
+                  "kind": "frame",
+                  "labelVi": "Đưa cách kiểm tra / đánh giá"
+                },
+                {
+                  "text": " it solves the original problem and makes daily life easier. Here, we would want to see whether students can use what they learn in everyday situations. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "I would compare",
+                  "kind": "frame",
+                  "labelVi": "Đề xuất so sánh + cụm danh từ"
+                },
+                {
+                  "text": " people's experiences before and after a small trial rather than judge success by popularity alone.",
+                  "kind": "detail"
+                }
+              ]
             }
           ]
         }
       ],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 427,
       "mainWordCount": 303,
       "phrases": [
@@ -520,27 +1345,127 @@
         {
           "label": "Mở bài",
           "text": "I would like to talk about group projects at school. In my opinion, this topic is worth considering because it can affect ordinary decisions and experiences. I will look at a practical benefit, a possible difficulty and a way to make the approach work better.",
-          "noteVi": "Giới thiệu chủ đề và ba nhánh sẽ triển khai."
+          "noteVi": "Giới thiệu chủ đề và ba nhánh sẽ triển khai.",
+          "parts": [
+            {
+              "text": "I would like to talk about",
+              "kind": "frame",
+              "labelVi": "Giới thiệu chủ đề + cụm danh từ"
+            },
+            {
+              "text": " group projects at school. ",
+              "kind": "detail"
+            },
+            {
+              "text": "In my opinion,",
+              "kind": "frame",
+              "labelVi": "Nêu quan điểm cá nhân"
+            },
+            {
+              "text": " this topic is worth considering because it can affect ordinary decisions and experiences. I will look at a practical benefit, a possible difficulty and a way to make the approach work better.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Ý 1 — lợi ích thực tế",
           "text": "First, students learn to explain ideas and share responsibility. This is possible because a joint task requires them to organise work and listen to other views. For example, a group preparing a history exhibition can divide research, writing and display design among its members. That example shows how an idea can be useful in a real situation. People are more likely to value an approach when they can see what it changes in their own lives.",
-          "noteVi": "Làm nhóm rèn giao tiếp và trách nhiệm; cần xem cả đóng góp cá nhân khi chấm."
+          "noteVi": "Làm nhóm rèn giao tiếp và trách nhiệm; cần xem cả đóng góp cá nhân khi chấm.",
+          "parts": [
+            {
+              "text": "First,",
+              "kind": "frame",
+              "labelVi": "Mở ý thứ nhất"
+            },
+            {
+              "text": " students learn to explain ideas and share responsibility. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This is possible because",
+              "kind": "frame",
+              "labelVi": "Giải thích cơ chế + mệnh đề"
+            },
+            {
+              "text": " a joint task requires them to organise work and listen to other views. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a group preparing a history exhibition can divide research, writing and display design among its members. That example shows how an idea can be useful in a real situation. People are more likely to value an approach when they can see what it changes in their own lives.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Ý 2 — khó khăn",
           "text": "However, the workload may not be shared fairly. One reason is that one confident student may complete most tasks while quieter members take little part. For instance, a pupil may receive the same group mark despite missing meetings and contributing no research. I do not think this means we should reject the whole idea. It means that we need to understand the needs of the people involved before expecting the same result for everyone.",
-          "noteVi": "Một trở ngại → lý do → ví dụ; tránh khẳng định tuyệt đối."
+          "noteVi": "Một trở ngại → lý do → ví dụ; tránh khẳng định tuyệt đối.",
+          "parts": [
+            {
+              "text": "However,",
+              "kind": "frame",
+              "labelVi": "Nêu ý đối lập hoặc giới hạn"
+            },
+            {
+              "text": " the workload may not be shared fairly. One reason is that one confident student may complete most tasks while quieter members take little part. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For instance,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a pupil may receive the same group mark despite missing meetings and contributing no research. I do not think this means we should reject the whole idea. It means that we need to understand the needs of the people involved before expecting the same result for everyone.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Ý 3 — cách cải thiện",
           "text": "A useful step would be to combine a group result with individual reflection and progress checks. To be more specific, each student could explain one contribution and show a short record of the work they completed. I would start with a small trial and ask the people involved what helped and what remained difficult. Their feedback could then guide the next step, so that effort goes towards a real need.",
-          "noteVi": "Giải pháp cụ thể → cách thực hiện → phản hồi."
+          "noteVi": "Giải pháp cụ thể → cách thực hiện → phản hồi.",
+          "parts": [
+            {
+              "text": "A useful step would be to",
+              "kind": "frame",
+              "labelVi": "Đề xuất một bước + động từ nguyên mẫu"
+            },
+            {
+              "text": " combine a group result with individual reflection and progress checks. ",
+              "kind": "detail"
+            },
+            {
+              "text": "To be more specific,",
+              "kind": "frame",
+              "labelVi": "Giải thích cụ thể hơn"
+            },
+            {
+              "text": " each student could explain one contribution and show a short record of the work they completed. I would start with a small trial and ask the people involved what helped and what remained difficult. Their feedback could then guide the next step, so that effort goes towards a real need.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "To sum up, I think the potential benefit is valuable, but practical planning matters. We should keep the useful parts, recognise the difficulties and make changes when necessary. That would be more helpful than assuming that one approach suits everybody.",
-          "noteVi": "Chốt quan điểm, không thêm luận điểm mới."
+          "noteVi": "Chốt quan điểm, không thêm luận điểm mới.",
+          "parts": [
+            {
+              "text": "To sum up,",
+              "kind": "frame",
+              "labelVi": "Tóm tắt bài nói"
+            },
+            {
+              "text": " I think the potential benefit is valuable, but practical planning matters. We should keep the useful parts, recognise the difficulties and make changes when necessary. That would be more helpful than assuming that one approach suits everybody.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [
@@ -550,23 +1475,88 @@
             {
               "question": "Should everyone follow the same approach to group projects at school?",
               "answer": "No, I do not think so. People have different needs and resources. For example, a pupil may receive the same group mark despite missing meetings and contributing no research. A flexible approach would give that person a better chance to benefit.",
-              "noteVi": "Quan điểm → khác biệt nhu cầu → ví dụ."
+              "noteVi": "Quan điểm → khác biệt nhu cầu → ví dụ.",
+              "parts": [
+                {
+                  "text": "No, I do not think so.",
+                  "kind": "frame",
+                  "labelVi": "Trả lời câu hỏi Yes/No rồi giải thích"
+                },
+                {
+                  "text": " People have different needs and resources. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "For example,",
+                  "kind": "frame",
+                  "labelVi": "Đưa ví dụ + mệnh đề"
+                },
+                {
+                  "text": " a pupil may receive the same group mark despite missing meetings and contributing no research. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "A flexible approach would",
+                  "kind": "frame",
+                  "labelVi": "Đề xuất cách linh hoạt + động từ nguyên mẫu"
+                },
+                {
+                  "text": " give that person a better chance to benefit.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "Who should help address the difficulty you mentioned?",
               "answer": "The people organising the activity should listen to those taking part. They could combine a group result with individual reflection and progress checks. Participants should also explain what is difficult instead of assuming that organisers already know.",
-              "noteVi": "Nêu vai trò của cả người tổ chức và người tham gia."
+              "noteVi": "Nêu vai trò của cả người tổ chức và người tham gia.",
+              "parts": [
+                {
+                  "text": "The people organising the activity should listen to those taking part. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "They could",
+                  "kind": "frame",
+                  "labelVi": "Nêu hành động của đối tượng vừa nhắc"
+                },
+                {
+                  "text": " combine a group result with individual reflection and progress checks. Participants should also explain what is difficult instead of assuming that organisers already know.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "How could we tell whether a new approach is successful?",
               "answer": "We could ask whether it solves the original problem and makes daily life easier. Here, we would want to see whether students learn to explain ideas and share responsibility. I would compare people's experiences before and after a small trial rather than judge success by popularity alone.",
-              "noteVi": "Tiêu chí đo → áp dụng chủ đề → cách so sánh."
+              "noteVi": "Tiêu chí đo → áp dụng chủ đề → cách so sánh.",
+              "parts": [
+                {
+                  "text": "We could ask whether",
+                  "kind": "frame",
+                  "labelVi": "Đưa cách kiểm tra / đánh giá"
+                },
+                {
+                  "text": " it solves the original problem and makes daily life easier. Here, we would want to see whether students learn to explain ideas and share responsibility. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "I would compare",
+                  "kind": "frame",
+                  "labelVi": "Đề xuất so sánh + cụm danh từ"
+                },
+                {
+                  "text": " people's experiences before and after a small trial rather than judge success by popularity alone.",
+                  "kind": "detail"
+                }
+              ]
             }
           ]
         }
       ],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 430,
       "mainWordCount": 305,
       "phrases": [
@@ -620,27 +1610,127 @@
         {
           "label": "Mở bài",
           "text": "I would like to talk about short breaks during study. In my opinion, this topic is worth considering because it can affect ordinary decisions and experiences. I will look at a practical benefit, a possible difficulty and a way to make the approach work better.",
-          "noteVi": "Giới thiệu chủ đề và ba nhánh sẽ triển khai."
+          "noteVi": "Giới thiệu chủ đề và ba nhánh sẽ triển khai.",
+          "parts": [
+            {
+              "text": "I would like to talk about",
+              "kind": "frame",
+              "labelVi": "Giới thiệu chủ đề + cụm danh từ"
+            },
+            {
+              "text": " short breaks during study. ",
+              "kind": "detail"
+            },
+            {
+              "text": "In my opinion,",
+              "kind": "frame",
+              "labelVi": "Nêu quan điểm cá nhân"
+            },
+            {
+              "text": " this topic is worth considering because it can affect ordinary decisions and experiences. I will look at a practical benefit, a possible difficulty and a way to make the approach work better.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Ý 1 — lợi ích thực tế",
           "text": "First, students can return to work with better attention. This is possible because standing up or changing activity can interrupt a long period of sitting. For example, after a demanding writing task, pupils can stretch for a few minutes before reviewing their work. That example shows how an idea can be useful in a real situation. People are more likely to value an approach when they can see what it changes in their own lives.",
-          "noteVi": "Nghỉ ngắn giúp đổi nhịp học; cần quy trình rõ để không phá vỡ tiết học."
+          "noteVi": "Nghỉ ngắn giúp đổi nhịp học; cần quy trình rõ để không phá vỡ tiết học.",
+          "parts": [
+            {
+              "text": "First,",
+              "kind": "frame",
+              "labelVi": "Mở ý thứ nhất"
+            },
+            {
+              "text": " students can return to work with better attention. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This is possible because",
+              "kind": "frame",
+              "labelVi": "Giải thích cơ chế + mệnh đề"
+            },
+            {
+              "text": " standing up or changing activity can interrupt a long period of sitting. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " after a demanding writing task, pupils can stretch for a few minutes before reviewing their work. That example shows how an idea can be useful in a real situation. People are more likely to value an approach when they can see what it changes in their own lives.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Ý 2 — khó khăn",
           "text": "However, poorly organised breaks can interrupt the lesson. One reason is that students may find it hard to settle again if the activity has no clear ending. For instance, a noisy game in the middle of a lesson may take longer to stop than the break itself. I do not think this means we should reject the whole idea. It means that we need to understand the needs of the people involved before expecting the same result for everyone.",
-          "noteVi": "Một trở ngại → lý do → ví dụ; tránh khẳng định tuyệt đối."
+          "noteVi": "Một trở ngại → lý do → ví dụ; tránh khẳng định tuyệt đối.",
+          "parts": [
+            {
+              "text": "However,",
+              "kind": "frame",
+              "labelVi": "Nêu ý đối lập hoặc giới hạn"
+            },
+            {
+              "text": " poorly organised breaks can interrupt the lesson. One reason is that students may find it hard to settle again if the activity has no clear ending. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For instance,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a noisy game in the middle of a lesson may take longer to stop than the break itself. I do not think this means we should reject the whole idea. It means that we need to understand the needs of the people involved before expecting the same result for everyone.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Ý 3 — cách cải thiện",
           "text": "A useful step would be to use brief predictable activities and a clear signal to return. To be more specific, a teacher could set a two-minute stretch break and display the next task before it begins. I would start with a small trial and ask the people involved what helped and what remained difficult. Their feedback could then guide the next step, so that effort goes towards a real need.",
-          "noteVi": "Giải pháp cụ thể → cách thực hiện → phản hồi."
+          "noteVi": "Giải pháp cụ thể → cách thực hiện → phản hồi.",
+          "parts": [
+            {
+              "text": "A useful step would be to",
+              "kind": "frame",
+              "labelVi": "Đề xuất một bước + động từ nguyên mẫu"
+            },
+            {
+              "text": " use brief predictable activities and a clear signal to return. ",
+              "kind": "detail"
+            },
+            {
+              "text": "To be more specific,",
+              "kind": "frame",
+              "labelVi": "Giải thích cụ thể hơn"
+            },
+            {
+              "text": " a teacher could set a two-minute stretch break and display the next task before it begins. I would start with a small trial and ask the people involved what helped and what remained difficult. Their feedback could then guide the next step, so that effort goes towards a real need.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "To sum up, I think the potential benefit is valuable, but practical planning matters. We should keep the useful parts, recognise the difficulties and make changes when necessary. That would be more helpful than assuming that one approach suits everybody.",
-          "noteVi": "Chốt quan điểm, không thêm luận điểm mới."
+          "noteVi": "Chốt quan điểm, không thêm luận điểm mới.",
+          "parts": [
+            {
+              "text": "To sum up,",
+              "kind": "frame",
+              "labelVi": "Tóm tắt bài nói"
+            },
+            {
+              "text": " I think the potential benefit is valuable, but practical planning matters. We should keep the useful parts, recognise the difficulties and make changes when necessary. That would be more helpful than assuming that one approach suits everybody.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [
@@ -650,23 +1740,88 @@
             {
               "question": "Should everyone follow the same approach to short breaks during study?",
               "answer": "No, I do not think so. People have different needs and resources. For example, a noisy game in the middle of a lesson may take longer to stop than the break itself. A flexible approach would give that person a better chance to benefit.",
-              "noteVi": "Quan điểm → khác biệt nhu cầu → ví dụ."
+              "noteVi": "Quan điểm → khác biệt nhu cầu → ví dụ.",
+              "parts": [
+                {
+                  "text": "No, I do not think so.",
+                  "kind": "frame",
+                  "labelVi": "Trả lời câu hỏi Yes/No rồi giải thích"
+                },
+                {
+                  "text": " People have different needs and resources. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "For example,",
+                  "kind": "frame",
+                  "labelVi": "Đưa ví dụ + mệnh đề"
+                },
+                {
+                  "text": " a noisy game in the middle of a lesson may take longer to stop than the break itself. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "A flexible approach would",
+                  "kind": "frame",
+                  "labelVi": "Đề xuất cách linh hoạt + động từ nguyên mẫu"
+                },
+                {
+                  "text": " give that person a better chance to benefit.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "Who should help address the difficulty you mentioned?",
               "answer": "The people organising the activity should listen to those taking part. They could use brief predictable activities and a clear signal to return. Participants should also explain what is difficult instead of assuming that organisers already know.",
-              "noteVi": "Nêu vai trò của cả người tổ chức và người tham gia."
+              "noteVi": "Nêu vai trò của cả người tổ chức và người tham gia.",
+              "parts": [
+                {
+                  "text": "The people organising the activity should listen to those taking part. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "They could",
+                  "kind": "frame",
+                  "labelVi": "Nêu hành động của đối tượng vừa nhắc"
+                },
+                {
+                  "text": " use brief predictable activities and a clear signal to return. Participants should also explain what is difficult instead of assuming that organisers already know.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "How could we tell whether a new approach is successful?",
               "answer": "We could ask whether it solves the original problem and makes daily life easier. Here, we would want to see whether students can return to work with better attention. I would compare people's experiences before and after a small trial rather than judge success by popularity alone.",
-              "noteVi": "Tiêu chí đo → áp dụng chủ đề → cách so sánh."
+              "noteVi": "Tiêu chí đo → áp dụng chủ đề → cách so sánh.",
+              "parts": [
+                {
+                  "text": "We could ask whether",
+                  "kind": "frame",
+                  "labelVi": "Đưa cách kiểm tra / đánh giá"
+                },
+                {
+                  "text": " it solves the original problem and makes daily life easier. Here, we would want to see whether students can return to work with better attention. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "I would compare",
+                  "kind": "frame",
+                  "labelVi": "Đề xuất so sánh + cụm danh từ"
+                },
+                {
+                  "text": " people's experiences before and after a small trial rather than judge success by popularity alone.",
+                  "kind": "detail"
+                }
+              ]
             }
           ]
         }
       ],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 437,
       "mainWordCount": 309,
       "phrases": [
@@ -720,27 +1875,127 @@
         {
           "label": "Mở bài",
           "text": "I would like to talk about school uniforms. In my opinion, this topic is worth considering because it can affect ordinary decisions and experiences. I will look at a practical benefit, a possible difficulty and a way to make the approach work better.",
-          "noteVi": "Giới thiệu chủ đề và ba nhánh sẽ triển khai."
+          "noteVi": "Giới thiệu chủ đề và ba nhánh sẽ triển khai.",
+          "parts": [
+            {
+              "text": "I would like to talk about",
+              "kind": "frame",
+              "labelVi": "Giới thiệu chủ đề + cụm danh từ"
+            },
+            {
+              "text": " school uniforms. ",
+              "kind": "detail"
+            },
+            {
+              "text": "In my opinion,",
+              "kind": "frame",
+              "labelVi": "Nêu quan điểm cá nhân"
+            },
+            {
+              "text": " this topic is worth considering because it can affect ordinary decisions and experiences. I will look at a practical benefit, a possible difficulty and a way to make the approach work better.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Ý 1 — lợi ích thực tế",
           "text": "First, families can make daily clothing decisions more easily. This is possible because a shared dress rule can reduce pressure to buy fashionable outfits for school. For example, a student can wear the same school shirt each week without worrying about keeping up with new trends. That example shows how an idea can be useful in a real situation. People are more likely to value an approach when they can see what it changes in their own lives.",
-          "noteVi": "Đồng phục đơn giản giảm áp lực ăn mặc; mẫu quá riêng và đắt có thể làm tăng gánh nặng."
+          "noteVi": "Đồng phục đơn giản giảm áp lực ăn mặc; mẫu quá riêng và đắt có thể làm tăng gánh nặng.",
+          "parts": [
+            {
+              "text": "First,",
+              "kind": "frame",
+              "labelVi": "Mở ý thứ nhất"
+            },
+            {
+              "text": " families can make daily clothing decisions more easily. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This is possible because",
+              "kind": "frame",
+              "labelVi": "Giải thích cơ chế + mệnh đề"
+            },
+            {
+              "text": " a shared dress rule can reduce pressure to buy fashionable outfits for school. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a student can wear the same school shirt each week without worrying about keeping up with new trends. That example shows how an idea can be useful in a real situation. People are more likely to value an approach when they can see what it changes in their own lives.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Ý 2 — khó khăn",
           "text": "However, uniform costs can still be difficult for some families. One reason is that special designs sold by only one supplier may be expensive. For instance, parents with three children may struggle to replace several branded jackets at the start of term. I do not think this means we should reject the whole idea. It means that we need to understand the needs of the people involved before expecting the same result for everyone.",
-          "noteVi": "Một trở ngại → lý do → ví dụ; tránh khẳng định tuyệt đối."
+          "noteVi": "Một trở ngại → lý do → ví dụ; tránh khẳng định tuyệt đối.",
+          "parts": [
+            {
+              "text": "However,",
+              "kind": "frame",
+              "labelVi": "Nêu ý đối lập hoặc giới hạn"
+            },
+            {
+              "text": " uniform costs can still be difficult for some families. One reason is that special designs sold by only one supplier may be expensive. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For instance,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " parents with three children may struggle to replace several branded jackets at the start of term. I do not think this means we should reject the whole idea. It means that we need to understand the needs of the people involved before expecting the same result for everyone.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Ý 3 — cách cải thiện",
           "text": "A useful step would be to allow inexpensive basic items and offer second-hand exchanges. To be more specific, plain shirts in an agreed colour could be accepted alongside a school-run uniform exchange. I would start with a small trial and ask the people involved what helped and what remained difficult. Their feedback could then guide the next step, so that effort goes towards a real need.",
-          "noteVi": "Giải pháp cụ thể → cách thực hiện → phản hồi."
+          "noteVi": "Giải pháp cụ thể → cách thực hiện → phản hồi.",
+          "parts": [
+            {
+              "text": "A useful step would be to",
+              "kind": "frame",
+              "labelVi": "Đề xuất một bước + động từ nguyên mẫu"
+            },
+            {
+              "text": " allow inexpensive basic items and offer second-hand exchanges. ",
+              "kind": "detail"
+            },
+            {
+              "text": "To be more specific,",
+              "kind": "frame",
+              "labelVi": "Giải thích cụ thể hơn"
+            },
+            {
+              "text": " plain shirts in an agreed colour could be accepted alongside a school-run uniform exchange. I would start with a small trial and ask the people involved what helped and what remained difficult. Their feedback could then guide the next step, so that effort goes towards a real need.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "To sum up, I think the potential benefit is valuable, but practical planning matters. We should keep the useful parts, recognise the difficulties and make changes when necessary. That would be more helpful than assuming that one approach suits everybody.",
-          "noteVi": "Chốt quan điểm, không thêm luận điểm mới."
+          "noteVi": "Chốt quan điểm, không thêm luận điểm mới.",
+          "parts": [
+            {
+              "text": "To sum up,",
+              "kind": "frame",
+              "labelVi": "Tóm tắt bài nói"
+            },
+            {
+              "text": " I think the potential benefit is valuable, but practical planning matters. We should keep the useful parts, recognise the difficulties and make changes when necessary. That would be more helpful than assuming that one approach suits everybody.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [
@@ -750,23 +2005,88 @@
             {
               "question": "Should everyone follow the same approach to school uniforms?",
               "answer": "No, I do not think so. People have different needs and resources. For example, parents with three children may struggle to replace several branded jackets at the start of term. A flexible approach would give that person a better chance to benefit.",
-              "noteVi": "Quan điểm → khác biệt nhu cầu → ví dụ."
+              "noteVi": "Quan điểm → khác biệt nhu cầu → ví dụ.",
+              "parts": [
+                {
+                  "text": "No, I do not think so.",
+                  "kind": "frame",
+                  "labelVi": "Trả lời câu hỏi Yes/No rồi giải thích"
+                },
+                {
+                  "text": " People have different needs and resources. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "For example,",
+                  "kind": "frame",
+                  "labelVi": "Đưa ví dụ + mệnh đề"
+                },
+                {
+                  "text": " parents with three children may struggle to replace several branded jackets at the start of term. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "A flexible approach would",
+                  "kind": "frame",
+                  "labelVi": "Đề xuất cách linh hoạt + động từ nguyên mẫu"
+                },
+                {
+                  "text": " give that person a better chance to benefit.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "Who should help address the difficulty you mentioned?",
               "answer": "The people organising the activity should listen to those taking part. They could allow inexpensive basic items and offer second-hand exchanges. Participants should also explain what is difficult instead of assuming that organisers already know.",
-              "noteVi": "Nêu vai trò của cả người tổ chức và người tham gia."
+              "noteVi": "Nêu vai trò của cả người tổ chức và người tham gia.",
+              "parts": [
+                {
+                  "text": "The people organising the activity should listen to those taking part. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "They could",
+                  "kind": "frame",
+                  "labelVi": "Nêu hành động của đối tượng vừa nhắc"
+                },
+                {
+                  "text": " allow inexpensive basic items and offer second-hand exchanges. Participants should also explain what is difficult instead of assuming that organisers already know.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "How could we tell whether a new approach is successful?",
               "answer": "We could ask whether it solves the original problem and makes daily life easier. Here, we would want to see whether families can make daily clothing decisions more easily. I would compare people's experiences before and after a small trial rather than judge success by popularity alone.",
-              "noteVi": "Tiêu chí đo → áp dụng chủ đề → cách so sánh."
+              "noteVi": "Tiêu chí đo → áp dụng chủ đề → cách so sánh.",
+              "parts": [
+                {
+                  "text": "We could ask whether",
+                  "kind": "frame",
+                  "labelVi": "Đưa cách kiểm tra / đánh giá"
+                },
+                {
+                  "text": " it solves the original problem and makes daily life easier. Here, we would want to see whether families can make daily clothing decisions more easily. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "I would compare",
+                  "kind": "frame",
+                  "labelVi": "Đề xuất so sánh + cụm danh từ"
+                },
+                {
+                  "text": " people's experiences before and after a small trial rather than judge success by popularity alone.",
+                  "kind": "detail"
+                }
+              ]
             }
           ]
         }
       ],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 425,
       "mainWordCount": 301,
       "phrases": [
@@ -820,27 +2140,127 @@
         {
           "label": "Mở bài",
           "text": "I would like to talk about vocational education. In my opinion, this topic is worth considering because it can affect ordinary decisions and experiences. I will look at a practical benefit, a possible difficulty and a way to make the approach work better.",
-          "noteVi": "Giới thiệu chủ đề và ba nhánh sẽ triển khai."
+          "noteVi": "Giới thiệu chủ đề và ba nhánh sẽ triển khai.",
+          "parts": [
+            {
+              "text": "I would like to talk about",
+              "kind": "frame",
+              "labelVi": "Giới thiệu chủ đề + cụm danh từ"
+            },
+            {
+              "text": " vocational education. ",
+              "kind": "detail"
+            },
+            {
+              "text": "In my opinion,",
+              "kind": "frame",
+              "labelVi": "Nêu quan điểm cá nhân"
+            },
+            {
+              "text": " this topic is worth considering because it can affect ordinary decisions and experiences. I will look at a practical benefit, a possible difficulty and a way to make the approach work better.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Ý 1 — lợi ích thực tế",
           "text": "First, students can discover routes that match practical interests. This is possible because not every useful career begins with the same academic programme. For example, a teenager who enjoys repairing machines may benefit from visiting a technical training centre. That example shows how an idea can be useful in a real situation. People are more likely to value an approach when they can see what it changes in their own lives.",
-          "noteVi": "Tư vấn học nghề mở thêm lựa chọn; cần hiểu nội dung học và điều kiện làm việc trước khi chọn."
+          "noteVi": "Tư vấn học nghề mở thêm lựa chọn; cần hiểu nội dung học và điều kiện làm việc trước khi chọn.",
+          "parts": [
+            {
+              "text": "First,",
+              "kind": "frame",
+              "labelVi": "Mở ý thứ nhất"
+            },
+            {
+              "text": " students can discover routes that match practical interests. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This is possible because",
+              "kind": "frame",
+              "labelVi": "Giải thích cơ chế + mệnh đề"
+            },
+            {
+              "text": " not every useful career begins with the same academic programme. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a teenager who enjoys repairing machines may benefit from visiting a technical training centre. That example shows how an idea can be useful in a real situation. People are more likely to value an approach when they can see what it changes in their own lives.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Ý 2 — khó khăn",
           "text": "However, students might choose too early with limited information. One reason is that a course title alone does not explain future working conditions or entry requirements. For instance, a young person may enrol in a hospitality course without realising that some jobs involve evening shifts. I do not think this means we should reject the whole idea. It means that we need to understand the needs of the people involved before expecting the same result for everyone.",
-          "noteVi": "Một trở ngại → lý do → ví dụ; tránh khẳng định tuyệt đối."
+          "noteVi": "Một trở ngại → lý do → ví dụ; tránh khẳng định tuyệt đối.",
+          "parts": [
+            {
+              "text": "However,",
+              "kind": "frame",
+              "labelVi": "Nêu ý đối lập hoặc giới hạn"
+            },
+            {
+              "text": " students might choose too early with limited information. One reason is that a course title alone does not explain future working conditions or entry requirements. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For instance,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a young person may enrol in a hospitality course without realising that some jobs involve evening shifts. I do not think this means we should reject the whole idea. It means that we need to understand the needs of the people involved before expecting the same result for everyone.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Ý 3 — cách cải thiện",
           "text": "A useful step would be to provide course visits and balanced guidance about work and further study. To be more specific, schools could invite former students from several training routes to discuss both the benefits and difficulties. I would start with a small trial and ask the people involved what helped and what remained difficult. Their feedback could then guide the next step, so that effort goes towards a real need.",
-          "noteVi": "Giải pháp cụ thể → cách thực hiện → phản hồi."
+          "noteVi": "Giải pháp cụ thể → cách thực hiện → phản hồi.",
+          "parts": [
+            {
+              "text": "A useful step would be to",
+              "kind": "frame",
+              "labelVi": "Đề xuất một bước + động từ nguyên mẫu"
+            },
+            {
+              "text": " provide course visits and balanced guidance about work and further study. ",
+              "kind": "detail"
+            },
+            {
+              "text": "To be more specific,",
+              "kind": "frame",
+              "labelVi": "Giải thích cụ thể hơn"
+            },
+            {
+              "text": " schools could invite former students from several training routes to discuss both the benefits and difficulties. I would start with a small trial and ask the people involved what helped and what remained difficult. Their feedback could then guide the next step, so that effort goes towards a real need.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "To sum up, I think the potential benefit is valuable, but practical planning matters. We should keep the useful parts, recognise the difficulties and make changes when necessary. That would be more helpful than assuming that one approach suits everybody.",
-          "noteVi": "Chốt quan điểm, không thêm luận điểm mới."
+          "noteVi": "Chốt quan điểm, không thêm luận điểm mới.",
+          "parts": [
+            {
+              "text": "To sum up,",
+              "kind": "frame",
+              "labelVi": "Tóm tắt bài nói"
+            },
+            {
+              "text": " I think the potential benefit is valuable, but practical planning matters. We should keep the useful parts, recognise the difficulties and make changes when necessary. That would be more helpful than assuming that one approach suits everybody.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [
@@ -850,23 +2270,88 @@
             {
               "question": "Should everyone follow the same approach to vocational education?",
               "answer": "No, I do not think so. People have different needs and resources. For example, a young person may enrol in a hospitality course without realising that some jobs involve evening shifts. A flexible approach would give that person a better chance to benefit.",
-              "noteVi": "Quan điểm → khác biệt nhu cầu → ví dụ."
+              "noteVi": "Quan điểm → khác biệt nhu cầu → ví dụ.",
+              "parts": [
+                {
+                  "text": "No, I do not think so.",
+                  "kind": "frame",
+                  "labelVi": "Trả lời câu hỏi Yes/No rồi giải thích"
+                },
+                {
+                  "text": " People have different needs and resources. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "For example,",
+                  "kind": "frame",
+                  "labelVi": "Đưa ví dụ + mệnh đề"
+                },
+                {
+                  "text": " a young person may enrol in a hospitality course without realising that some jobs involve evening shifts. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "A flexible approach would",
+                  "kind": "frame",
+                  "labelVi": "Đề xuất cách linh hoạt + động từ nguyên mẫu"
+                },
+                {
+                  "text": " give that person a better chance to benefit.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "Who should help address the difficulty you mentioned?",
               "answer": "The people organising the activity should listen to those taking part. They could provide course visits and balanced guidance about work and further study. Participants should also explain what is difficult instead of assuming that organisers already know.",
-              "noteVi": "Nêu vai trò của cả người tổ chức và người tham gia."
+              "noteVi": "Nêu vai trò của cả người tổ chức và người tham gia.",
+              "parts": [
+                {
+                  "text": "The people organising the activity should listen to those taking part. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "They could",
+                  "kind": "frame",
+                  "labelVi": "Nêu hành động của đối tượng vừa nhắc"
+                },
+                {
+                  "text": " provide course visits and balanced guidance about work and further study. Participants should also explain what is difficult instead of assuming that organisers already know.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "How could we tell whether a new approach is successful?",
               "answer": "We could ask whether it solves the original problem and makes daily life easier. Here, we would want to see whether students can discover routes that match practical interests. I would compare people's experiences before and after a small trial rather than judge success by popularity alone.",
-              "noteVi": "Tiêu chí đo → áp dụng chủ đề → cách so sánh."
+              "noteVi": "Tiêu chí đo → áp dụng chủ đề → cách so sánh.",
+              "parts": [
+                {
+                  "text": "We could ask whether",
+                  "kind": "frame",
+                  "labelVi": "Đưa cách kiểm tra / đánh giá"
+                },
+                {
+                  "text": " it solves the original problem and makes daily life easier. Here, we would want to see whether students can discover routes that match practical interests. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "I would compare",
+                  "kind": "frame",
+                  "labelVi": "Đề xuất so sánh + cụm danh từ"
+                },
+                {
+                  "text": " people's experiences before and after a small trial rather than judge success by popularity alone.",
+                  "kind": "detail"
+                }
+              ]
             }
           ]
         }
       ],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 430,
       "mainWordCount": 302,
       "phrases": [
@@ -920,27 +2405,127 @@
         {
           "label": "Mở bài",
           "text": "I would like to talk about learning new skills as an adult. In my opinion, this topic is worth considering because it can affect ordinary decisions and experiences. I will look at a practical benefit, a possible difficulty and a way to make the approach work better.",
-          "noteVi": "Giới thiệu chủ đề và ba nhánh sẽ triển khai."
+          "noteVi": "Giới thiệu chủ đề và ba nhánh sẽ triển khai.",
+          "parts": [
+            {
+              "text": "I would like to talk about",
+              "kind": "frame",
+              "labelVi": "Giới thiệu chủ đề + cụm danh từ"
+            },
+            {
+              "text": " learning new skills as an adult. ",
+              "kind": "detail"
+            },
+            {
+              "text": "In my opinion,",
+              "kind": "frame",
+              "labelVi": "Nêu quan điểm cá nhân"
+            },
+            {
+              "text": " this topic is worth considering because it can affect ordinary decisions and experiences. I will look at a practical benefit, a possible difficulty and a way to make the approach work better.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Ý 1 — lợi ích thực tế",
           "text": "First, adults can update skills without returning to full-time study. This is possible because short local courses can fit around work and caring responsibilities. For example, a shop assistant can attend an evening computer class to learn how to manage simple spreadsheets. That example shows how an idea can be useful in a real situation. People are more likely to value an approach when they can see what it changes in their own lives.",
-          "noteVi": "Lớp học cho người lớn cần vừa túi tiền và phù hợp giờ làm, đi lại, chăm con."
+          "noteVi": "Lớp học cho người lớn cần vừa túi tiền và phù hợp giờ làm, đi lại, chăm con.",
+          "parts": [
+            {
+              "text": "First,",
+              "kind": "frame",
+              "labelVi": "Mở ý thứ nhất"
+            },
+            {
+              "text": " adults can update skills without returning to full-time study. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This is possible because",
+              "kind": "frame",
+              "labelVi": "Giải thích cơ chế + mệnh đề"
+            },
+            {
+              "text": " short local courses can fit around work and caring responsibilities. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a shop assistant can attend an evening computer class to learn how to manage simple spreadsheets. That example shows how an idea can be useful in a real situation. People are more likely to value an approach when they can see what it changes in their own lives.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Ý 2 — khó khăn",
           "text": "However, people with the greatest need may still be unable to attend. One reason is that transport, childcare and changing work hours can create barriers. For instance, a parent may miss an evening class because there is no one available to look after a child. I do not think this means we should reject the whole idea. It means that we need to understand the needs of the people involved before expecting the same result for everyone.",
-          "noteVi": "Một trở ngại → lý do → ví dụ; tránh khẳng định tuyệt đối."
+          "noteVi": "Một trở ngại → lý do → ví dụ; tránh khẳng định tuyệt đối.",
+          "parts": [
+            {
+              "text": "However,",
+              "kind": "frame",
+              "labelVi": "Nêu ý đối lập hoặc giới hạn"
+            },
+            {
+              "text": " people with the greatest need may still be unable to attend. One reason is that transport, childcare and changing work hours can create barriers. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For instance,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a parent may miss an evening class because there is no one available to look after a child. I do not think this means we should reject the whole idea. It means that we need to understand the needs of the people involved before expecting the same result for everyone.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Ý 3 — cách cải thiện",
           "text": "A useful step would be to offer flexible schedules and simple support for attendance. To be more specific, a centre could repeat the same lesson at two different times and provide materials for missed sessions. I would start with a small trial and ask the people involved what helped and what remained difficult. Their feedback could then guide the next step, so that effort goes towards a real need.",
-          "noteVi": "Giải pháp cụ thể → cách thực hiện → phản hồi."
+          "noteVi": "Giải pháp cụ thể → cách thực hiện → phản hồi.",
+          "parts": [
+            {
+              "text": "A useful step would be to",
+              "kind": "frame",
+              "labelVi": "Đề xuất một bước + động từ nguyên mẫu"
+            },
+            {
+              "text": " offer flexible schedules and simple support for attendance. ",
+              "kind": "detail"
+            },
+            {
+              "text": "To be more specific,",
+              "kind": "frame",
+              "labelVi": "Giải thích cụ thể hơn"
+            },
+            {
+              "text": " a centre could repeat the same lesson at two different times and provide materials for missed sessions. I would start with a small trial and ask the people involved what helped and what remained difficult. Their feedback could then guide the next step, so that effort goes towards a real need.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "To sum up, I think the potential benefit is valuable, but practical planning matters. We should keep the useful parts, recognise the difficulties and make changes when necessary. That would be more helpful than assuming that one approach suits everybody.",
-          "noteVi": "Chốt quan điểm, không thêm luận điểm mới."
+          "noteVi": "Chốt quan điểm, không thêm luận điểm mới.",
+          "parts": [
+            {
+              "text": "To sum up,",
+              "kind": "frame",
+              "labelVi": "Tóm tắt bài nói"
+            },
+            {
+              "text": " I think the potential benefit is valuable, but practical planning matters. We should keep the useful parts, recognise the difficulties and make changes when necessary. That would be more helpful than assuming that one approach suits everybody.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [
@@ -950,23 +2535,88 @@
             {
               "question": "Should everyone follow the same approach to learning new skills as an adult?",
               "answer": "No, I do not think so. People have different needs and resources. For example, a parent may miss an evening class because there is no one available to look after a child. A flexible approach would give that person a better chance to benefit.",
-              "noteVi": "Quan điểm → khác biệt nhu cầu → ví dụ."
+              "noteVi": "Quan điểm → khác biệt nhu cầu → ví dụ.",
+              "parts": [
+                {
+                  "text": "No, I do not think so.",
+                  "kind": "frame",
+                  "labelVi": "Trả lời câu hỏi Yes/No rồi giải thích"
+                },
+                {
+                  "text": " People have different needs and resources. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "For example,",
+                  "kind": "frame",
+                  "labelVi": "Đưa ví dụ + mệnh đề"
+                },
+                {
+                  "text": " a parent may miss an evening class because there is no one available to look after a child. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "A flexible approach would",
+                  "kind": "frame",
+                  "labelVi": "Đề xuất cách linh hoạt + động từ nguyên mẫu"
+                },
+                {
+                  "text": " give that person a better chance to benefit.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "Who should help address the difficulty you mentioned?",
               "answer": "The people organising the activity should listen to those taking part. They could offer flexible schedules and simple support for attendance. Participants should also explain what is difficult instead of assuming that organisers already know.",
-              "noteVi": "Nêu vai trò của cả người tổ chức và người tham gia."
+              "noteVi": "Nêu vai trò của cả người tổ chức và người tham gia.",
+              "parts": [
+                {
+                  "text": "The people organising the activity should listen to those taking part. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "They could",
+                  "kind": "frame",
+                  "labelVi": "Nêu hành động của đối tượng vừa nhắc"
+                },
+                {
+                  "text": " offer flexible schedules and simple support for attendance. Participants should also explain what is difficult instead of assuming that organisers already know.",
+                  "kind": "detail"
+                }
+              ]
             },
             {
               "question": "How could we tell whether a new approach is successful?",
               "answer": "We could ask whether it solves the original problem and makes daily life easier. Here, we would want to see whether adults can update skills without returning to full-time study. I would compare people's experiences before and after a small trial rather than judge success by popularity alone.",
-              "noteVi": "Tiêu chí đo → áp dụng chủ đề → cách so sánh."
+              "noteVi": "Tiêu chí đo → áp dụng chủ đề → cách so sánh.",
+              "parts": [
+                {
+                  "text": "We could ask whether",
+                  "kind": "frame",
+                  "labelVi": "Đưa cách kiểm tra / đánh giá"
+                },
+                {
+                  "text": " it solves the original problem and makes daily life easier. Here, we would want to see whether adults can update skills without returning to full-time study. ",
+                  "kind": "detail"
+                },
+                {
+                  "text": "I would compare",
+                  "kind": "frame",
+                  "labelVi": "Đề xuất so sánh + cụm danh từ"
+                },
+                {
+                  "text": " people's experiences before and after a small trial rather than judge success by popularity alone.",
+                  "kind": "detail"
+                }
+              ]
             }
           ]
         }
       ],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 434,
       "mainWordCount": 307,
       "phrases": [

@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-05-v1",
+  "version": "2026-11-05-v2-frames",
   "samples": [
     {
       "id": "writing-task1-invitation-work-01",
@@ -9,40 +9,146 @@
       "number": 1,
       "title": "Giờ làm linh hoạt",
       "focus": "flexible working hours",
-      "prompt": "Invite your friend to a flexible working discussion. Explain what will happen, why your friend might enjoy it, and what they should prepare.",
+      "prompt": "Invite your friend Alex to a flexible working discussion. Explain the arrangements and benefits, give preparation advice and ask for confirmation.",
       "requirementsVi": [
-        "Mời rõ sự kiện.",
-        "Nêu hoạt động, lý do, giờ và nơi.",
-        "Dặn chuẩn bị và xin xác nhận."
+        "Lời mời thân mật, hướng đến việc gặp bạn.",
+        "Sự kiện, lịch hẹn và lý do bạn thích.",
+        "Chuẩn bị và hỏi bạn có đến không."
       ],
       "summaryVi": "Giờ linh hoạt giúp cân bằng trách nhiệm; cần khoảng giờ chung và biết ai đang có mặt.",
       "paragraphs": [
         {
-          "label": "Lời mời",
-          "text": "Hi Alex,\n\nI hope you are well. I am writing to invite you to a flexible working discussion at the community centre on Saturday at nine in the morning. It has been a while since we did something together, and I think this would be a useful and enjoyable way to meet.",
-          "noteVi": "Nêu lời mời cùng thông tin chính."
+          "label": "Mở thư và lời mời",
+          "text": "Hi Alex,\n\nI hope you are well. I am writing to invite you to a flexible working discussion. It has been a while since we last met, and it would be lovely to spend some time together.",
+          "noteVi": "Lời mời thân mật, hướng đến việc gặp bạn.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nI hope you are well. I am writing to invite you to ",
+              "kind": "frame"
+            },
+            {
+              "text": "a flexible working discussion",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". It has been a while since we last met, and it would be lovely to spend some time together.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nI hope you are well. I am writing to invite you to [sự kiện / hoạt động]. It has been a while since we last met, and it would be lovely to spend some time together."
         },
         {
-          "label": "Lý do tham gia",
-          "text": "We will compare working schedules and plan shared team hours. The aim is to connect the topic with everyday life rather than only listen to a long talk. One useful point is that employees can organise work around practical personal needs. For example, a parent can start earlier on two days so that they can collect a child from school. There will also be time to ask questions and exchange ideas with the other people taking part.",
-          "noteVi": "Giờ linh hoạt giúp cân bằng trách nhiệm; cần khoảng giờ chung và biết ai đang có mặt."
+          "label": "Thông tin chính",
+          "text": "It will take place at the community centre on Saturday at nine in the morning. We will compare working schedules and plan shared team hours. I think you would enjoy it because employees can organise work around practical personal needs. For example, a parent can start earlier on two days so that they can collect a child from school.",
+          "noteVi": "Sự kiện, lịch hẹn và lý do bạn thích.",
+          "parts": [
+            {
+              "text": "It will take place at ",
+              "kind": "frame"
+            },
+            {
+              "text": "the community centre",
+              "kind": "detail",
+              "labelVi": "địa điểm"
+            },
+            {
+              "text": " on ",
+              "kind": "frame"
+            },
+            {
+              "text": "Saturday at nine in the morning",
+              "kind": "detail",
+              "labelVi": "ngày và giờ"
+            },
+            {
+              "text": ". We will ",
+              "kind": "frame"
+            },
+            {
+              "text": "compare working schedules and plan shared team hours",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". I think you would enjoy it because ",
+              "kind": "frame"
+            },
+            {
+              "text": "employees can organise work around practical personal needs",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". For example, ",
+              "kind": "frame"
+            },
+            {
+              "text": "a parent can start earlier on two days so that they can collect a child from school",
+              "kind": "detail",
+              "labelVi": "ví dụ — chủ ngữ + động từ"
+            },
+            {
+              "text": ".",
+              "kind": "frame"
+            }
+          ],
+          "template": "It will take place at [địa điểm] on [ngày và giờ]. We will [hoạt động — động từ nguyên mẫu]. I think you would enjoy it because [lợi ích — chủ ngữ + động từ]. For example, [ví dụ — chủ ngữ + động từ]."
         },
         {
-          "label": "Chuẩn bị",
-          "text": "Please bring a sample weekly schedule. We could meet outside the entrance ten minutes before the session starts. You do not need to be an expert; the organiser has said that beginners are welcome. Please tell me at least two days before the session whether you can come so that I can reserve two places.",
-          "noteVi": "Chuẩn bị, điểm hẹn và hạn phản hồi."
+          "label": "Chuẩn bị và xác nhận",
+          "text": "Please bring a sample weekly schedule. We can meet at the entrance before it starts. You do not need to be an expert, so there is no need to worry. Let me know whether you can come so that I can make the arrangements.",
+          "noteVi": "Chuẩn bị và hỏi bạn có đến không.",
+          "parts": [
+            {
+              "text": "Please bring ",
+              "kind": "frame"
+            },
+            {
+              "text": "a sample weekly schedule",
+              "kind": "detail",
+              "labelVi": "đồ cần mang"
+            },
+            {
+              "text": ". We can meet at the entrance before it starts. You do not need to be an expert, so there is no need to worry. Let me know whether you can come so that I can make the arrangements.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Please bring [đồ cần mang]. We can meet at the entrance before it starts. You do not need to be an expert, so there is no need to worry. Let me know whether you can come so that I can make the arrangements."
         },
         {
           "label": "Kết thư",
-          "text": "I really hope you can join me. I am looking forward to hearing what you think.\n\nBest wishes,\nMinh",
-          "noteVi": "Kết thân mật và mong gặp."
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 203,
-      "mainWordCount": 203,
+      "register": "informal",
+      "wordCount": 174,
+      "mainWordCount": 174,
       "phrases": [
         {
           "en": "flexible working hours",
@@ -79,40 +185,146 @@
       "number": 2,
       "title": "Lương và sự hài lòng",
       "focus": "choosing a satisfying job",
-      "prompt": "Invite your friend to a career choices workshop. Explain what will happen, why your friend might enjoy it, and what they should prepare.",
+      "prompt": "Invite your friend Alex to a career choices workshop. Explain the arrangements and benefits, give preparation advice and ask for confirmation.",
       "requirementsVi": [
-        "Mời rõ sự kiện.",
-        "Nêu hoạt động, lý do, giờ và nơi.",
-        "Dặn chuẩn bị và xin xác nhận."
+        "Lời mời thân mật, hướng đến việc gặp bạn.",
+        "Sự kiện, lịch hẹn và lý do bạn thích.",
+        "Chuẩn bị và hỏi bạn có đến không."
       ],
       "summaryVi": "Chọn việc cần cân nhắc cả nhu cầu tài chính và trải nghiệm làm việc hằng ngày.",
       "paragraphs": [
         {
-          "label": "Lời mời",
-          "text": "Hi Alex,\n\nI hope you are well. I am writing to invite you to a career choices workshop at the local library meeting room on Sunday at two in the afternoon. It has been a while since we did something together, and I think this would be a useful and enjoyable way to meet.",
-          "noteVi": "Nêu lời mời cùng thông tin chính."
+          "label": "Mở thư và lời mời",
+          "text": "Hi Alex,\n\nI hope you are well. I am writing to invite you to a career choices workshop. It has been a while since we last met, and it would be lovely to spend some time together.",
+          "noteVi": "Lời mời thân mật, hướng đến việc gặp bạn.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nI hope you are well. I am writing to invite you to ",
+              "kind": "frame"
+            },
+            {
+              "text": "a career choices workshop",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". It has been a while since we last met, and it would be lovely to spend some time together.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nI hope you are well. I am writing to invite you to [sự kiện / hoạt động]. It has been a while since we last met, and it would be lovely to spend some time together."
         },
         {
-          "label": "Lý do tham gia",
-          "text": "We will compare job offers and discuss salary alongside working conditions. The aim is to connect the topic with everyday life rather than only listen to a long talk. One useful point is that workers can think about the quality of their daily working life. For example, a teacher may value a school where colleagues share materials and help new staff solve classroom problems. There will also be time to ask questions and exchange ideas with the other people taking part.",
-          "noteVi": "Chọn việc cần cân nhắc cả nhu cầu tài chính và trải nghiệm làm việc hằng ngày."
+          "label": "Thông tin chính",
+          "text": "It will take place at the local library meeting room on Sunday at two in the afternoon. We will compare job offers and discuss salary alongside working conditions. I think you would enjoy it because workers can think about the quality of their daily working life. For example, a teacher may value a school where colleagues share materials and help new staff solve classroom problems.",
+          "noteVi": "Sự kiện, lịch hẹn và lý do bạn thích.",
+          "parts": [
+            {
+              "text": "It will take place at ",
+              "kind": "frame"
+            },
+            {
+              "text": "the local library meeting room",
+              "kind": "detail",
+              "labelVi": "địa điểm"
+            },
+            {
+              "text": " on ",
+              "kind": "frame"
+            },
+            {
+              "text": "Sunday at two in the afternoon",
+              "kind": "detail",
+              "labelVi": "ngày và giờ"
+            },
+            {
+              "text": ". We will ",
+              "kind": "frame"
+            },
+            {
+              "text": "compare job offers and discuss salary alongside working conditions",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". I think you would enjoy it because ",
+              "kind": "frame"
+            },
+            {
+              "text": "workers can think about the quality of their daily working life",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". For example, ",
+              "kind": "frame"
+            },
+            {
+              "text": "a teacher may value a school where colleagues share materials and help new staff solve classroom problems",
+              "kind": "detail",
+              "labelVi": "ví dụ — chủ ngữ + động từ"
+            },
+            {
+              "text": ".",
+              "kind": "frame"
+            }
+          ],
+          "template": "It will take place at [địa điểm] on [ngày và giờ]. We will [hoạt động — động từ nguyên mẫu]. I think you would enjoy it because [lợi ích — chủ ngữ + động từ]. For example, [ví dụ — chủ ngữ + động từ]."
         },
         {
-          "label": "Chuẩn bị",
-          "text": "Please bring a list of personal priorities. We could meet outside the entrance ten minutes before the session starts. You do not need to be an expert; the organiser has said that beginners are welcome. Please tell me at least two days before the session whether you can come so that I can reserve two places.",
-          "noteVi": "Chuẩn bị, điểm hẹn và hạn phản hồi."
+          "label": "Chuẩn bị và xác nhận",
+          "text": "Please bring a list of personal priorities. We can meet at the entrance before it starts. You do not need to be an expert, so there is no need to worry. Let me know whether you can come so that I can make the arrangements.",
+          "noteVi": "Chuẩn bị và hỏi bạn có đến không.",
+          "parts": [
+            {
+              "text": "Please bring ",
+              "kind": "frame"
+            },
+            {
+              "text": "a list of personal priorities",
+              "kind": "detail",
+              "labelVi": "đồ cần mang"
+            },
+            {
+              "text": ". We can meet at the entrance before it starts. You do not need to be an expert, so there is no need to worry. Let me know whether you can come so that I can make the arrangements.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Please bring [đồ cần mang]. We can meet at the entrance before it starts. You do not need to be an expert, so there is no need to worry. Let me know whether you can come so that I can make the arrangements."
         },
         {
           "label": "Kết thư",
-          "text": "I really hope you can join me. I am looking forward to hearing what you think.\n\nBest wishes,\nMinh",
-          "noteVi": "Kết thân mật và mong gặp."
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 210,
-      "mainWordCount": 210,
+      "register": "informal",
+      "wordCount": 181,
+      "mainWordCount": 181,
       "phrases": [
         {
           "en": "job satisfaction",
@@ -149,40 +361,146 @@
       "number": 3,
       "title": "Thực tập",
       "focus": "work placements for students",
-      "prompt": "Invite your friend to a work placement information event. Explain what will happen, why your friend might enjoy it, and what they should prepare.",
+      "prompt": "Invite your friend Alex to a work placement information event. Explain the arrangements and benefits, give preparation advice and ask for confirmation.",
       "requirementsVi": [
-        "Mời rõ sự kiện.",
-        "Nêu hoạt động, lý do, giờ và nơi.",
-        "Dặn chuẩn bị và xin xác nhận."
+        "Lời mời thân mật, hướng đến việc gặp bạn.",
+        "Sự kiện, lịch hẹn và lý do bạn thích.",
+        "Chuẩn bị và hỏi bạn có đến không."
       ],
       "summaryVi": "Thực tập cần nhiệm vụ có ý nghĩa, mục tiêu học và người hướng dẫn để không chỉ làm việc vặt.",
       "paragraphs": [
         {
-          "label": "Lời mời",
-          "text": "Hi Alex,\n\nI hope you are well. I am writing to invite you to a work placement information event at the school activity room on Friday at six in the evening. It has been a while since we did something together, and I think this would be a useful and enjoyable way to meet.",
-          "noteVi": "Nêu lời mời cùng thông tin chính."
+          "label": "Mở thư và lời mời",
+          "text": "Hi Alex,\n\nI hope you are well. I am writing to invite you to a work placement information event. It has been a while since we last met, and it would be lovely to spend some time together.",
+          "noteVi": "Lời mời thân mật, hướng đến việc gặp bạn.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nI hope you are well. I am writing to invite you to ",
+              "kind": "frame"
+            },
+            {
+              "text": "a work placement information event",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". It has been a while since we last met, and it would be lovely to spend some time together.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nI hope you are well. I am writing to invite you to [sự kiện / hoạt động]. It has been a while since we last met, and it would be lovely to spend some time together."
         },
         {
-          "label": "Lý do tham gia",
-          "text": "We will meet supervisors and compare useful placement goals. The aim is to connect the topic with everyday life rather than only listen to a long talk. One useful point is that students can connect classroom knowledge with workplace tasks. For example, a business student can help organise a small shop's stock records and see why accurate information matters. There will also be time to ask questions and exchange ideas with the other people taking part.",
-          "noteVi": "Thực tập cần nhiệm vụ có ý nghĩa, mục tiêu học và người hướng dẫn để không chỉ làm việc vặt."
+          "label": "Thông tin chính",
+          "text": "It will take place at the school activity room on Friday at six in the evening. We will meet supervisors and compare useful placement goals. I think you would enjoy it because students can connect classroom knowledge with workplace tasks. For example, a business student can help organise a small shop's stock records and see why accurate information matters.",
+          "noteVi": "Sự kiện, lịch hẹn và lý do bạn thích.",
+          "parts": [
+            {
+              "text": "It will take place at ",
+              "kind": "frame"
+            },
+            {
+              "text": "the school activity room",
+              "kind": "detail",
+              "labelVi": "địa điểm"
+            },
+            {
+              "text": " on ",
+              "kind": "frame"
+            },
+            {
+              "text": "Friday at six in the evening",
+              "kind": "detail",
+              "labelVi": "ngày và giờ"
+            },
+            {
+              "text": ". We will ",
+              "kind": "frame"
+            },
+            {
+              "text": "meet supervisors and compare useful placement goals",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". I think you would enjoy it because ",
+              "kind": "frame"
+            },
+            {
+              "text": "students can connect classroom knowledge with workplace tasks",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". For example, ",
+              "kind": "frame"
+            },
+            {
+              "text": "a business student can help organise a small shop's stock records and see why accurate information matters",
+              "kind": "detail",
+              "labelVi": "ví dụ — chủ ngữ + động từ"
+            },
+            {
+              "text": ".",
+              "kind": "frame"
+            }
+          ],
+          "template": "It will take place at [địa điểm] on [ngày và giờ]. We will [hoạt động — động từ nguyên mẫu]. I think you would enjoy it because [lợi ích — chủ ngữ + động từ]. For example, [ví dụ — chủ ngữ + động từ]."
         },
         {
-          "label": "Chuẩn bị",
-          "text": "Please bring a short CV. We could meet outside the entrance ten minutes before the session starts. You do not need to be an expert; the organiser has said that beginners are welcome. Please tell me at least two days before the session whether you can come so that I can reserve two places.",
-          "noteVi": "Chuẩn bị, điểm hẹn và hạn phản hồi."
+          "label": "Chuẩn bị và xác nhận",
+          "text": "Please bring a short CV. We can meet at the entrance before it starts. You do not need to be an expert, so there is no need to worry. Let me know whether you can come so that I can make the arrangements.",
+          "noteVi": "Chuẩn bị và hỏi bạn có đến không.",
+          "parts": [
+            {
+              "text": "Please bring ",
+              "kind": "frame"
+            },
+            {
+              "text": "a short CV",
+              "kind": "detail",
+              "labelVi": "đồ cần mang"
+            },
+            {
+              "text": ". We can meet at the entrance before it starts. You do not need to be an expert, so there is no need to worry. Let me know whether you can come so that I can make the arrangements.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Please bring [đồ cần mang]. We can meet at the entrance before it starts. You do not need to be an expert, so there is no need to worry. Let me know whether you can come so that I can make the arrangements."
         },
         {
           "label": "Kết thư",
-          "text": "I really hope you can join me. I am looking forward to hearing what you think.\n\nBest wishes,\nMinh",
-          "noteVi": "Kết thân mật và mong gặp."
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 203,
-      "mainWordCount": 203,
+      "register": "informal",
+      "wordCount": 174,
+      "mainWordCount": 174,
       "phrases": [
         {
           "en": "work placement",
@@ -219,40 +537,146 @@
       "number": 4,
       "title": "Họp nhóm",
       "focus": "team meetings",
-      "prompt": "Invite your friend to an effective meetings workshop. Explain what will happen, why your friend might enjoy it, and what they should prepare.",
+      "prompt": "Invite your friend Alex to an effective meetings workshop. Explain the arrangements and benefits, give preparation advice and ask for confirmation.",
       "requirementsVi": [
-        "Mời rõ sự kiện.",
-        "Nêu hoạt động, lý do, giờ và nơi.",
-        "Dặn chuẩn bị và xin xác nhận."
+        "Lời mời thân mật, hướng đến việc gặp bạn.",
+        "Sự kiện, lịch hẹn và lý do bạn thích.",
+        "Chuẩn bị và hỏi bạn có đến không."
       ],
       "summaryVi": "Họp có mục đích tiết kiệm thời gian; vẫn phải cho người ít nói cơ hội chuẩn bị và góp ý.",
       "paragraphs": [
         {
-          "label": "Lời mời",
-          "text": "Hi Alex,\n\nI hope you are well. I am writing to invite you to an effective meetings workshop at the neighbourhood hall on Saturday at ten in the morning. It has been a while since we did something together, and I think this would be a useful and enjoyable way to meet.",
-          "noteVi": "Nêu lời mời cùng thông tin chính."
+          "label": "Mở thư và lời mời",
+          "text": "Hi Alex,\n\nI hope you are well. I am writing to invite you to an effective meetings workshop. It has been a while since we last met, and it would be lovely to spend some time together.",
+          "noteVi": "Lời mời thân mật, hướng đến việc gặp bạn.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nI hope you are well. I am writing to invite you to ",
+              "kind": "frame"
+            },
+            {
+              "text": "an effective meetings workshop",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". It has been a while since we last met, and it would be lovely to spend some time together.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nI hope you are well. I am writing to invite you to [sự kiện / hoạt động]. It has been a while since we last met, and it would be lovely to spend some time together."
         },
         {
-          "label": "Lý do tham gia",
-          "text": "We will run a short meeting with an agenda and clear decisions. The aim is to connect the topic with everyday life rather than only listen to a long talk. One useful point is that staff can understand decisions without losing large amounts of working time. For example, a team can spend fifteen minutes agreeing on a delivery problem instead of listening to an hour of unrelated updates. There will also be time to ask questions and exchange ideas with the other people taking part.",
-          "noteVi": "Họp có mục đích tiết kiệm thời gian; vẫn phải cho người ít nói cơ hội chuẩn bị và góp ý."
+          "label": "Thông tin chính",
+          "text": "It will take place at the neighbourhood hall on Saturday at ten in the morning. We will run a short meeting with an agenda and clear decisions. I think you would enjoy it because staff can understand decisions without losing large amounts of working time. For example, a team can spend fifteen minutes agreeing on a delivery problem instead of listening to an hour of unrelated updates.",
+          "noteVi": "Sự kiện, lịch hẹn và lý do bạn thích.",
+          "parts": [
+            {
+              "text": "It will take place at ",
+              "kind": "frame"
+            },
+            {
+              "text": "the neighbourhood hall",
+              "kind": "detail",
+              "labelVi": "địa điểm"
+            },
+            {
+              "text": " on ",
+              "kind": "frame"
+            },
+            {
+              "text": "Saturday at ten in the morning",
+              "kind": "detail",
+              "labelVi": "ngày và giờ"
+            },
+            {
+              "text": ". We will ",
+              "kind": "frame"
+            },
+            {
+              "text": "run a short meeting with an agenda and clear decisions",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". I think you would enjoy it because ",
+              "kind": "frame"
+            },
+            {
+              "text": "staff can understand decisions without losing large amounts of working time",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". For example, ",
+              "kind": "frame"
+            },
+            {
+              "text": "a team can spend fifteen minutes agreeing on a delivery problem instead of listening to an hour of unrelated updates",
+              "kind": "detail",
+              "labelVi": "ví dụ — chủ ngữ + động từ"
+            },
+            {
+              "text": ".",
+              "kind": "frame"
+            }
+          ],
+          "template": "It will take place at [địa điểm] on [ngày và giờ]. We will [hoạt động — động từ nguyên mẫu]. I think you would enjoy it because [lợi ích — chủ ngữ + động từ]. For example, [ví dụ — chủ ngữ + động từ]."
         },
         {
-          "label": "Chuẩn bị",
-          "text": "Please bring a notebook. We could meet outside the entrance ten minutes before the session starts. You do not need to be an expert; the organiser has said that beginners are welcome. Please tell me at least two days before the session whether you can come so that I can reserve two places.",
-          "noteVi": "Chuẩn bị, điểm hẹn và hạn phản hồi."
+          "label": "Chuẩn bị và xác nhận",
+          "text": "Please bring a notebook. We can meet at the entrance before it starts. You do not need to be an expert, so there is no need to worry. Let me know whether you can come so that I can make the arrangements.",
+          "noteVi": "Chuẩn bị và hỏi bạn có đến không.",
+          "parts": [
+            {
+              "text": "Please bring ",
+              "kind": "frame"
+            },
+            {
+              "text": "a notebook",
+              "kind": "detail",
+              "labelVi": "đồ cần mang"
+            },
+            {
+              "text": ". We can meet at the entrance before it starts. You do not need to be an expert, so there is no need to worry. Let me know whether you can come so that I can make the arrangements.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Please bring [đồ cần mang]. We can meet at the entrance before it starts. You do not need to be an expert, so there is no need to worry. Let me know whether you can come so that I can make the arrangements."
         },
         {
           "label": "Kết thư",
-          "text": "I really hope you can join me. I am looking forward to hearing what you think.\n\nBest wishes,\nMinh",
-          "noteVi": "Kết thân mật và mong gặp."
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 209,
-      "mainWordCount": 209,
+      "register": "informal",
+      "wordCount": 180,
+      "mainWordCount": 180,
       "phrases": [
         {
           "en": "a clear agenda",
@@ -289,40 +713,146 @@
       "number": 5,
       "title": "Đổi nghề",
       "focus": "changing careers",
-      "prompt": "Invite your friend to a career change planning session. Explain what will happen, why your friend might enjoy it, and what they should prepare.",
+      "prompt": "Invite your friend Alex to a career change planning session. Explain the arrangements and benefits, give preparation advice and ask for confirmation.",
       "requirementsVi": [
-        "Mời rõ sự kiện.",
-        "Nêu hoạt động, lý do, giờ và nơi.",
-        "Dặn chuẩn bị và xin xác nhận."
+        "Lời mời thân mật, hướng đến việc gặp bạn.",
+        "Sự kiện, lịch hẹn và lý do bạn thích.",
+        "Chuẩn bị và hỏi bạn có đến không."
       ],
       "summaryVi": "Đổi nghề nên tận dụng kỹ năng có sẵn và có kế hoạch tài chính, học tập, tìm việc thực tế.",
       "paragraphs": [
         {
-          "label": "Lời mời",
-          "text": "Hi Alex,\n\nI hope you are well. I am writing to invite you to a career change planning session at the college workshop room on Sunday at three in the afternoon. It has been a while since we did something together, and I think this would be a useful and enjoyable way to meet.",
-          "noteVi": "Nêu lời mời cùng thông tin chính."
+          "label": "Mở thư và lời mời",
+          "text": "Hi Alex,\n\nI hope you are well. I am writing to invite you to a career change planning session. It has been a while since we last met, and it would be lovely to spend some time together.",
+          "noteVi": "Lời mời thân mật, hướng đến việc gặp bạn.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nI hope you are well. I am writing to invite you to ",
+              "kind": "frame"
+            },
+            {
+              "text": "a career change planning session",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". It has been a while since we last met, and it would be lovely to spend some time together.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nI hope you are well. I am writing to invite you to [sự kiện / hoạt động]. It has been a while since we last met, and it would be lovely to spend some time together."
         },
         {
-          "label": "Lý do tham gia",
-          "text": "We will identify transferable skills and compare training routes. The aim is to connect the topic with everyday life rather than only listen to a long talk. One useful point is that people can move towards work that better matches their skills or circumstances. For example, a shop worker with strong communication skills may prepare for a customer support role in another industry. There will also be time to ask questions and exchange ideas with the other people taking part.",
-          "noteVi": "Đổi nghề nên tận dụng kỹ năng có sẵn và có kế hoạch tài chính, học tập, tìm việc thực tế."
+          "label": "Thông tin chính",
+          "text": "It will take place at the college workshop room on Sunday at three in the afternoon. We will identify transferable skills and compare training routes. I think you would enjoy it because people can move towards work that better matches their skills or circumstances. For example, a shop worker with strong communication skills may prepare for a customer support role in another industry.",
+          "noteVi": "Sự kiện, lịch hẹn và lý do bạn thích.",
+          "parts": [
+            {
+              "text": "It will take place at ",
+              "kind": "frame"
+            },
+            {
+              "text": "the college workshop room",
+              "kind": "detail",
+              "labelVi": "địa điểm"
+            },
+            {
+              "text": " on ",
+              "kind": "frame"
+            },
+            {
+              "text": "Sunday at three in the afternoon",
+              "kind": "detail",
+              "labelVi": "ngày và giờ"
+            },
+            {
+              "text": ". We will ",
+              "kind": "frame"
+            },
+            {
+              "text": "identify transferable skills and compare training routes",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". I think you would enjoy it because ",
+              "kind": "frame"
+            },
+            {
+              "text": "people can move towards work that better matches their skills or circumstances",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". For example, ",
+              "kind": "frame"
+            },
+            {
+              "text": "a shop worker with strong communication skills may prepare for a customer support role in another industry",
+              "kind": "detail",
+              "labelVi": "ví dụ — chủ ngữ + động từ"
+            },
+            {
+              "text": ".",
+              "kind": "frame"
+            }
+          ],
+          "template": "It will take place at [địa điểm] on [ngày và giờ]. We will [hoạt động — động từ nguyên mẫu]. I think you would enjoy it because [lợi ích — chủ ngữ + động từ]. For example, [ví dụ — chủ ngữ + động từ]."
         },
         {
-          "label": "Chuẩn bị",
-          "text": "Please bring a brief employment history. We could meet outside the entrance ten minutes before the session starts. You do not need to be an expert; the organiser has said that beginners are welcome. Please tell me at least two days before the session whether you can come so that I can reserve two places.",
-          "noteVi": "Chuẩn bị, điểm hẹn và hạn phản hồi."
+          "label": "Chuẩn bị và xác nhận",
+          "text": "Please bring a brief employment history. We can meet at the entrance before it starts. You do not need to be an expert, so there is no need to worry. Let me know whether you can come so that I can make the arrangements.",
+          "noteVi": "Chuẩn bị và hỏi bạn có đến không.",
+          "parts": [
+            {
+              "text": "Please bring ",
+              "kind": "frame"
+            },
+            {
+              "text": "a brief employment history",
+              "kind": "detail",
+              "labelVi": "đồ cần mang"
+            },
+            {
+              "text": ". We can meet at the entrance before it starts. You do not need to be an expert, so there is no need to worry. Let me know whether you can come so that I can make the arrangements.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Please bring [đồ cần mang]. We can meet at the entrance before it starts. You do not need to be an expert, so there is no need to worry. Let me know whether you can come so that I can make the arrangements."
         },
         {
           "label": "Kết thư",
-          "text": "I really hope you can join me. I am looking forward to hearing what you think.\n\nBest wishes,\nMinh",
-          "noteVi": "Kết thân mật và mong gặp."
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 208,
-      "mainWordCount": 208,
+      "register": "informal",
+      "wordCount": 179,
+      "mainWordCount": 179,
       "phrases": [
         {
           "en": "transferable skills",
@@ -359,40 +889,146 @@
       "number": 6,
       "title": "Tình nguyện",
       "focus": "community volunteering",
-      "prompt": "Invite your friend to a community volunteer open day. Explain what will happen, why your friend might enjoy it, and what they should prepare.",
+      "prompt": "Invite your friend Alex to a community volunteer open day. Explain the arrangements and benefits, give preparation advice and ask for confirmation.",
       "requirementsVi": [
-        "Mời rõ sự kiện.",
-        "Nêu hoạt động, lý do, giờ và nơi.",
-        "Dặn chuẩn bị và xin xác nhận."
+        "Lời mời thân mật, hướng đến việc gặp bạn.",
+        "Sự kiện, lịch hẹn và lý do bạn thích.",
+        "Chuẩn bị và hỏi bạn có đến không."
       ],
       "summaryVi": "Tình nguyện tạo kết nối nhưng cần cam kết vừa sức và hỗ trợ rõ, không chỉ dựa vào thiện chí.",
       "paragraphs": [
         {
-          "label": "Lời mời",
-          "text": "Hi Alex,\n\nI hope you are well. I am writing to invite you to a community volunteer open day at the community centre on Wednesday at six in the evening. It has been a while since we did something together, and I think this would be a useful and enjoyable way to meet.",
-          "noteVi": "Nêu lời mời cùng thông tin chính."
+          "label": "Mở thư và lời mời",
+          "text": "Hi Alex,\n\nI hope you are well. I am writing to invite you to a community volunteer open day. It has been a while since we last met, and it would be lovely to spend some time together.",
+          "noteVi": "Lời mời thân mật, hướng đến việc gặp bạn.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nI hope you are well. I am writing to invite you to ",
+              "kind": "frame"
+            },
+            {
+              "text": "a community volunteer open day",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". It has been a while since we last met, and it would be lovely to spend some time together.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nI hope you are well. I am writing to invite you to [sự kiện / hoạt động]. It has been a while since we last met, and it would be lovely to spend some time together."
         },
         {
-          "label": "Lý do tham gia",
-          "text": "We will explore local projects and choose manageable volunteer roles. The aim is to connect the topic with everyday life rather than only listen to a long talk. One useful point is that residents can contribute useful skills and build local connections. For example, a retired office worker can help a neighbourhood group organise records for a food donation project. There will also be time to ask questions and exchange ideas with the other people taking part.",
-          "noteVi": "Tình nguyện tạo kết nối nhưng cần cam kết vừa sức và hỗ trợ rõ, không chỉ dựa vào thiện chí."
+          "label": "Thông tin chính",
+          "text": "It will take place at the community centre on Wednesday at six in the evening. We will explore local projects and choose manageable volunteer roles. I think you would enjoy it because residents can contribute useful skills and build local connections. For example, a retired office worker can help a neighbourhood group organise records for a food donation project.",
+          "noteVi": "Sự kiện, lịch hẹn và lý do bạn thích.",
+          "parts": [
+            {
+              "text": "It will take place at ",
+              "kind": "frame"
+            },
+            {
+              "text": "the community centre",
+              "kind": "detail",
+              "labelVi": "địa điểm"
+            },
+            {
+              "text": " on ",
+              "kind": "frame"
+            },
+            {
+              "text": "Wednesday at six in the evening",
+              "kind": "detail",
+              "labelVi": "ngày và giờ"
+            },
+            {
+              "text": ". We will ",
+              "kind": "frame"
+            },
+            {
+              "text": "explore local projects and choose manageable volunteer roles",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". I think you would enjoy it because ",
+              "kind": "frame"
+            },
+            {
+              "text": "residents can contribute useful skills and build local connections",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". For example, ",
+              "kind": "frame"
+            },
+            {
+              "text": "a retired office worker can help a neighbourhood group organise records for a food donation project",
+              "kind": "detail",
+              "labelVi": "ví dụ — chủ ngữ + động từ"
+            },
+            {
+              "text": ".",
+              "kind": "frame"
+            }
+          ],
+          "template": "It will take place at [địa điểm] on [ngày và giờ]. We will [hoạt động — động từ nguyên mẫu]. I think you would enjoy it because [lợi ích — chủ ngữ + động từ]. For example, [ví dụ — chủ ngữ + động từ]."
         },
         {
-          "label": "Chuẩn bị",
-          "text": "Please bring a list of available times. We could meet outside the entrance ten minutes before the session starts. You do not need to be an expert; the organiser has said that beginners are welcome. Please tell me at least two days before the session whether you can come so that I can reserve two places.",
-          "noteVi": "Chuẩn bị, điểm hẹn và hạn phản hồi."
+          "label": "Chuẩn bị và xác nhận",
+          "text": "Please bring a list of available times. We can meet at the entrance before it starts. You do not need to be an expert, so there is no need to worry. Let me know whether you can come so that I can make the arrangements.",
+          "noteVi": "Chuẩn bị và hỏi bạn có đến không.",
+          "parts": [
+            {
+              "text": "Please bring ",
+              "kind": "frame"
+            },
+            {
+              "text": "a list of available times",
+              "kind": "detail",
+              "labelVi": "đồ cần mang"
+            },
+            {
+              "text": ". We can meet at the entrance before it starts. You do not need to be an expert, so there is no need to worry. Let me know whether you can come so that I can make the arrangements.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Please bring [đồ cần mang]. We can meet at the entrance before it starts. You do not need to be an expert, so there is no need to worry. Let me know whether you can come so that I can make the arrangements."
         },
         {
           "label": "Kết thư",
-          "text": "I really hope you can join me. I am looking forward to hearing what you think.\n\nBest wishes,\nMinh",
-          "noteVi": "Kết thân mật và mong gặp."
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 205,
-      "mainWordCount": 205,
+      "register": "informal",
+      "wordCount": 176,
+      "mainWordCount": 176,
       "phrases": [
         {
           "en": "manageable commitments",
@@ -429,40 +1065,146 @@
       "number": 7,
       "title": "Làm thêm khi đi học",
       "focus": "part-time jobs for students",
-      "prompt": "Invite your friend to a student employment workshop. Explain what will happen, why your friend might enjoy it, and what they should prepare.",
+      "prompt": "Invite your friend Alex to a student employment workshop. Explain the arrangements and benefits, give preparation advice and ask for confirmation.",
       "requirementsVi": [
-        "Mời rõ sự kiện.",
-        "Nêu hoạt động, lý do, giờ và nơi.",
-        "Dặn chuẩn bị và xin xác nhận."
+        "Lời mời thân mật, hướng đến việc gặp bạn.",
+        "Sự kiện, lịch hẹn và lý do bạn thích.",
+        "Chuẩn bị và hỏi bạn có đến không."
       ],
       "summaryVi": "Việc làm thêm rèn kinh nghiệm; số giờ cần phù hợp việc học và được giảm khi thi.",
       "paragraphs": [
         {
-          "label": "Lời mời",
-          "text": "Hi Alex,\n\nI hope you are well. I am writing to invite you to a student employment workshop at the local library on Saturday at two in the afternoon. It has been a while since we did something together, and I think this would be a useful and enjoyable way to meet.",
-          "noteVi": "Nêu lời mời cùng thông tin chính."
+          "label": "Mở thư và lời mời",
+          "text": "Hi Alex,\n\nI hope you are well. I am writing to invite you to a student employment workshop. It has been a while since we last met, and it would be lovely to spend some time together.",
+          "noteVi": "Lời mời thân mật, hướng đến việc gặp bạn.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nI hope you are well. I am writing to invite you to ",
+              "kind": "frame"
+            },
+            {
+              "text": "a student employment workshop",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". It has been a while since we last met, and it would be lovely to spend some time together.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nI hope you are well. I am writing to invite you to [sự kiện / hoạt động]. It has been a while since we last met, and it would be lovely to spend some time together."
         },
         {
-          "label": "Lý do tham gia",
-          "text": "We will plan a study-friendly work schedule and practise customer conversations. The aim is to connect the topic with everyday life rather than only listen to a long talk. One useful point is that students can gain experience and contribute to their own expenses. For example, a student working one weekend shift in a cafe can practise dealing politely with customers. There will also be time to ask questions and exchange ideas with the other people taking part.",
-          "noteVi": "Việc làm thêm rèn kinh nghiệm; số giờ cần phù hợp việc học và được giảm khi thi."
+          "label": "Thông tin chính",
+          "text": "It will take place at the local library on Saturday at two in the afternoon. We will plan a study-friendly work schedule and practise customer conversations. I think you would enjoy it because students can gain experience and contribute to their own expenses. For example, a student working one weekend shift in a cafe can practise dealing politely with customers.",
+          "noteVi": "Sự kiện, lịch hẹn và lý do bạn thích.",
+          "parts": [
+            {
+              "text": "It will take place at ",
+              "kind": "frame"
+            },
+            {
+              "text": "the local library",
+              "kind": "detail",
+              "labelVi": "địa điểm"
+            },
+            {
+              "text": " on ",
+              "kind": "frame"
+            },
+            {
+              "text": "Saturday at two in the afternoon",
+              "kind": "detail",
+              "labelVi": "ngày và giờ"
+            },
+            {
+              "text": ". We will ",
+              "kind": "frame"
+            },
+            {
+              "text": "plan a study-friendly work schedule and practise customer conversations",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". I think you would enjoy it because ",
+              "kind": "frame"
+            },
+            {
+              "text": "students can gain experience and contribute to their own expenses",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". For example, ",
+              "kind": "frame"
+            },
+            {
+              "text": "a student working one weekend shift in a cafe can practise dealing politely with customers",
+              "kind": "detail",
+              "labelVi": "ví dụ — chủ ngữ + động từ"
+            },
+            {
+              "text": ".",
+              "kind": "frame"
+            }
+          ],
+          "template": "It will take place at [địa điểm] on [ngày và giờ]. We will [hoạt động — động từ nguyên mẫu]. I think you would enjoy it because [lợi ích — chủ ngữ + động từ]. For example, [ví dụ — chủ ngữ + động từ]."
         },
         {
-          "label": "Chuẩn bị",
-          "text": "Please bring a study timetable. We could meet outside the entrance ten minutes before the session starts. You do not need to be an expert; the organiser has said that beginners are welcome. Please tell me at least two days before the session whether you can come so that I can reserve two places.",
-          "noteVi": "Chuẩn bị, điểm hẹn và hạn phản hồi."
+          "label": "Chuẩn bị và xác nhận",
+          "text": "Please bring a study timetable. We can meet at the entrance before it starts. You do not need to be an expert, so there is no need to worry. Let me know whether you can come so that I can make the arrangements.",
+          "noteVi": "Chuẩn bị và hỏi bạn có đến không.",
+          "parts": [
+            {
+              "text": "Please bring ",
+              "kind": "frame"
+            },
+            {
+              "text": "a study timetable",
+              "kind": "detail",
+              "labelVi": "đồ cần mang"
+            },
+            {
+              "text": ". We can meet at the entrance before it starts. You do not need to be an expert, so there is no need to worry. Let me know whether you can come so that I can make the arrangements.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Please bring [đồ cần mang]. We can meet at the entrance before it starts. You do not need to be an expert, so there is no need to worry. Let me know whether you can come so that I can make the arrangements."
         },
         {
           "label": "Kết thư",
-          "text": "I really hope you can join me. I am looking forward to hearing what you think.\n\nBest wishes,\nMinh",
-          "noteVi": "Kết thân mật và mong gặp."
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 203,
-      "mainWordCount": 203,
+      "register": "informal",
+      "wordCount": 174,
+      "mainWordCount": 174,
       "phrases": [
         {
           "en": "part-time work",
@@ -499,40 +1241,146 @@
       "number": 8,
       "title": "Học kỹ năng mới ở công ty",
       "focus": "workplace training",
-      "prompt": "Invite your friend to a practical workplace skills session. Explain what will happen, why your friend might enjoy it, and what they should prepare.",
+      "prompt": "Invite your friend Alex to a practical workplace skills session. Explain the arrangements and benefits, give preparation advice and ask for confirmation.",
       "requirementsVi": [
-        "Mời rõ sự kiện.",
-        "Nêu hoạt động, lý do, giờ và nơi.",
-        "Dặn chuẩn bị và xin xác nhận."
+        "Lời mời thân mật, hướng đến việc gặp bạn.",
+        "Sự kiện, lịch hẹn và lý do bạn thích.",
+        "Chuẩn bị và hỏi bạn có đến không."
       ],
       "summaryVi": "Đào tạo nên dựa trên nhiệm vụ thật và cho thực hành, thay vì chỉ nghe bài giảng chung.",
       "paragraphs": [
         {
-          "label": "Lời mời",
-          "text": "Hi Alex,\n\nI hope you are well. I am writing to invite you to a practical workplace skills session at the school meeting room on Sunday at ten in the morning. It has been a while since we did something together, and I think this would be a useful and enjoyable way to meet.",
-          "noteVi": "Nêu lời mời cùng thông tin chính."
+          "label": "Mở thư và lời mời",
+          "text": "Hi Alex,\n\nI hope you are well. I am writing to invite you to a practical workplace skills session. It has been a while since we last met, and it would be lovely to spend some time together.",
+          "noteVi": "Lời mời thân mật, hướng đến việc gặp bạn.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nI hope you are well. I am writing to invite you to ",
+              "kind": "frame"
+            },
+            {
+              "text": "a practical workplace skills session",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". It has been a while since we last met, and it would be lovely to spend some time together.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nI hope you are well. I am writing to invite you to [sự kiện / hoạt động]. It has been a while since we last met, and it would be lovely to spend some time together."
         },
         {
-          "label": "Lý do tham gia",
-          "text": "We will try a new work process and discuss common difficulties. The aim is to connect the topic with everyday life rather than only listen to a long talk. One useful point is that workers can adapt when tasks or systems change. For example, a shop team can practise using a new ordering system before it is introduced during a busy weekend. There will also be time to ask questions and exchange ideas with the other people taking part.",
-          "noteVi": "Đào tạo nên dựa trên nhiệm vụ thật và cho thực hành, thay vì chỉ nghe bài giảng chung."
+          "label": "Thông tin chính",
+          "text": "It will take place at the school meeting room on Sunday at ten in the morning. We will try a new work process and discuss common difficulties. I think you would enjoy it because workers can adapt when tasks or systems change. For example, a shop team can practise using a new ordering system before it is introduced during a busy weekend.",
+          "noteVi": "Sự kiện, lịch hẹn và lý do bạn thích.",
+          "parts": [
+            {
+              "text": "It will take place at ",
+              "kind": "frame"
+            },
+            {
+              "text": "the school meeting room",
+              "kind": "detail",
+              "labelVi": "địa điểm"
+            },
+            {
+              "text": " on ",
+              "kind": "frame"
+            },
+            {
+              "text": "Sunday at ten in the morning",
+              "kind": "detail",
+              "labelVi": "ngày và giờ"
+            },
+            {
+              "text": ". We will ",
+              "kind": "frame"
+            },
+            {
+              "text": "try a new work process and discuss common difficulties",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". I think you would enjoy it because ",
+              "kind": "frame"
+            },
+            {
+              "text": "workers can adapt when tasks or systems change",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". For example, ",
+              "kind": "frame"
+            },
+            {
+              "text": "a shop team can practise using a new ordering system before it is introduced during a busy weekend",
+              "kind": "detail",
+              "labelVi": "ví dụ — chủ ngữ + động từ"
+            },
+            {
+              "text": ".",
+              "kind": "frame"
+            }
+          ],
+          "template": "It will take place at [địa điểm] on [ngày và giờ]. We will [hoạt động — động từ nguyên mẫu]. I think you would enjoy it because [lợi ích — chủ ngữ + động từ]. For example, [ví dụ — chủ ngữ + động từ]."
         },
         {
-          "label": "Chuẩn bị",
-          "text": "Please bring an example of a work task. We could meet outside the entrance ten minutes before the session starts. You do not need to be an expert; the organiser has said that beginners are welcome. Please tell me at least two days before the session whether you can come so that I can reserve two places.",
-          "noteVi": "Chuẩn bị, điểm hẹn và hạn phản hồi."
+          "label": "Chuẩn bị và xác nhận",
+          "text": "Please bring an example of a work task. We can meet at the entrance before it starts. You do not need to be an expert, so there is no need to worry. Let me know whether you can come so that I can make the arrangements.",
+          "noteVi": "Chuẩn bị và hỏi bạn có đến không.",
+          "parts": [
+            {
+              "text": "Please bring ",
+              "kind": "frame"
+            },
+            {
+              "text": "an example of a work task",
+              "kind": "detail",
+              "labelVi": "đồ cần mang"
+            },
+            {
+              "text": ". We can meet at the entrance before it starts. You do not need to be an expert, so there is no need to worry. Let me know whether you can come so that I can make the arrangements.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Please bring [đồ cần mang]. We can meet at the entrance before it starts. You do not need to be an expert, so there is no need to worry. Let me know whether you can come so that I can make the arrangements."
         },
         {
           "label": "Kết thư",
-          "text": "I really hope you can join me. I am looking forward to hearing what you think.\n\nBest wishes,\nMinh",
-          "noteVi": "Kết thân mật và mong gặp."
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 209,
-      "mainWordCount": 209,
+      "register": "informal",
+      "wordCount": 180,
+      "mainWordCount": 180,
       "phrases": [
         {
           "en": "practical training",
@@ -569,40 +1417,146 @@
       "number": 9,
       "title": "Đi chung xe đi làm",
       "focus": "sharing journeys to work",
-      "prompt": "Invite your friend to a shared commuting planning meeting. Explain what will happen, why your friend might enjoy it, and what they should prepare.",
+      "prompt": "Invite your friend Alex to a shared commuting planning meeting. Explain the arrangements and benefits, give preparation advice and ask for confirmation.",
       "requirementsVi": [
-        "Mời rõ sự kiện.",
-        "Nêu hoạt động, lý do, giờ và nơi.",
-        "Dặn chuẩn bị và xin xác nhận."
+        "Lời mời thân mật, hướng đến việc gặp bạn.",
+        "Sự kiện, lịch hẹn và lý do bạn thích.",
+        "Chuẩn bị và hỏi bạn có đến không."
       ],
       "summaryVi": "Đi chung xe giảm chuyến đi riêng và chia chi phí; cần phương án dự phòng khi lịch thay đổi.",
       "paragraphs": [
         {
-          "label": "Lời mời",
-          "text": "Hi Alex,\n\nI hope you are well. I am writing to invite you to a shared commuting planning meeting at the neighbourhood hall on Thursday at six in the evening. It has been a while since we did something together, and I think this would be a useful and enjoyable way to meet.",
-          "noteVi": "Nêu lời mời cùng thông tin chính."
+          "label": "Mở thư và lời mời",
+          "text": "Hi Alex,\n\nI hope you are well. I am writing to invite you to a shared commuting planning meeting. It has been a while since we last met, and it would be lovely to spend some time together.",
+          "noteVi": "Lời mời thân mật, hướng đến việc gặp bạn.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nI hope you are well. I am writing to invite you to ",
+              "kind": "frame"
+            },
+            {
+              "text": "a shared commuting planning meeting",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". It has been a while since we last met, and it would be lovely to spend some time together.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nI hope you are well. I am writing to invite you to [sự kiện / hoạt động]. It has been a while since we last met, and it would be lovely to spend some time together."
         },
         {
-          "label": "Lý do tham gia",
-          "text": "We will compare routes and agree on flexible travel arrangements. The aim is to connect the topic with everyday life rather than only listen to a long talk. One useful point is that employees can share travel costs and reduce the number of separate trips. For example, three colleagues living in the same area can arrange to travel together twice a week. There will also be time to ask questions and exchange ideas with the other people taking part.",
-          "noteVi": "Đi chung xe giảm chuyến đi riêng và chia chi phí; cần phương án dự phòng khi lịch thay đổi."
+          "label": "Thông tin chính",
+          "text": "It will take place at the neighbourhood hall on Thursday at six in the evening. We will compare routes and agree on flexible travel arrangements. I think you would enjoy it because employees can share travel costs and reduce the number of separate trips. For example, three colleagues living in the same area can arrange to travel together twice a week.",
+          "noteVi": "Sự kiện, lịch hẹn và lý do bạn thích.",
+          "parts": [
+            {
+              "text": "It will take place at ",
+              "kind": "frame"
+            },
+            {
+              "text": "the neighbourhood hall",
+              "kind": "detail",
+              "labelVi": "địa điểm"
+            },
+            {
+              "text": " on ",
+              "kind": "frame"
+            },
+            {
+              "text": "Thursday at six in the evening",
+              "kind": "detail",
+              "labelVi": "ngày và giờ"
+            },
+            {
+              "text": ". We will ",
+              "kind": "frame"
+            },
+            {
+              "text": "compare routes and agree on flexible travel arrangements",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". I think you would enjoy it because ",
+              "kind": "frame"
+            },
+            {
+              "text": "employees can share travel costs and reduce the number of separate trips",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". For example, ",
+              "kind": "frame"
+            },
+            {
+              "text": "three colleagues living in the same area can arrange to travel together twice a week",
+              "kind": "detail",
+              "labelVi": "ví dụ — chủ ngữ + động từ"
+            },
+            {
+              "text": ".",
+              "kind": "frame"
+            }
+          ],
+          "template": "It will take place at [địa điểm] on [ngày và giờ]. We will [hoạt động — động từ nguyên mẫu]. I think you would enjoy it because [lợi ích — chủ ngữ + động từ]. For example, [ví dụ — chủ ngữ + động từ]."
         },
         {
-          "label": "Chuẩn bị",
-          "text": "Please bring a simple map of your usual route. We could meet outside the entrance ten minutes before the session starts. You do not need to be an expert; the organiser has said that beginners are welcome. Please tell me at least two days before the session whether you can come so that I can reserve two places.",
-          "noteVi": "Chuẩn bị, điểm hẹn và hạn phản hồi."
+          "label": "Chuẩn bị và xác nhận",
+          "text": "Please bring a simple map of your usual route. We can meet at the entrance before it starts. You do not need to be an expert, so there is no need to worry. Let me know whether you can come so that I can make the arrangements.",
+          "noteVi": "Chuẩn bị và hỏi bạn có đến không.",
+          "parts": [
+            {
+              "text": "Please bring ",
+              "kind": "frame"
+            },
+            {
+              "text": "a simple map of your usual route",
+              "kind": "detail",
+              "labelVi": "đồ cần mang"
+            },
+            {
+              "text": ". We can meet at the entrance before it starts. You do not need to be an expert, so there is no need to worry. Let me know whether you can come so that I can make the arrangements.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Please bring [đồ cần mang]. We can meet at the entrance before it starts. You do not need to be an expert, so there is no need to worry. Let me know whether you can come so that I can make the arrangements."
         },
         {
           "label": "Kết thư",
-          "text": "I really hope you can join me. I am looking forward to hearing what you think.\n\nBest wishes,\nMinh",
-          "noteVi": "Kết thân mật và mong gặp."
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 209,
-      "mainWordCount": 209,
+      "register": "informal",
+      "wordCount": 180,
+      "mainWordCount": 180,
       "phrases": [
         {
           "en": "share travel costs",
@@ -639,40 +1593,146 @@
       "number": 10,
       "title": "Dịch vụ khách hàng",
       "focus": "customer service training",
-      "prompt": "Invite your friend to a customer communication workshop. Explain what will happen, why your friend might enjoy it, and what they should prepare.",
+      "prompt": "Invite your friend Alex to a customer communication workshop. Explain the arrangements and benefits, give preparation advice and ask for confirmation.",
       "requirementsVi": [
-        "Mời rõ sự kiện.",
-        "Nêu hoạt động, lý do, giờ và nơi.",
-        "Dặn chuẩn bị và xin xác nhận."
+        "Lời mời thân mật, hướng đến việc gặp bạn.",
+        "Sự kiện, lịch hẹn và lý do bạn thích.",
+        "Chuẩn bị và hỏi bạn có đến không."
       ],
       "summaryVi": "Giao tiếp lịch sự cần đi cùng quy trình và quyền xử lý để khách nhận được bước tiếp cụ thể.",
       "paragraphs": [
         {
-          "label": "Lời mời",
-          "text": "Hi Alex,\n\nI hope you are well. I am writing to invite you to a customer communication workshop at the college activity room on Saturday at three in the afternoon. It has been a while since we did something together, and I think this would be a useful and enjoyable way to meet.",
-          "noteVi": "Nêu lời mời cùng thông tin chính."
+          "label": "Mở thư và lời mời",
+          "text": "Hi Alex,\n\nI hope you are well. I am writing to invite you to a customer communication workshop. It has been a while since we last met, and it would be lovely to spend some time together.",
+          "noteVi": "Lời mời thân mật, hướng đến việc gặp bạn.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nI hope you are well. I am writing to invite you to ",
+              "kind": "frame"
+            },
+            {
+              "text": "a customer communication workshop",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". It has been a while since we last met, and it would be lovely to spend some time together.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nI hope you are well. I am writing to invite you to [sự kiện / hoạt động]. It has been a while since we last met, and it would be lovely to spend some time together."
         },
         {
-          "label": "Lý do tham gia",
-          "text": "We will practise handling a complaint and explaining a clear next step. The aim is to connect the topic with everyday life rather than only listen to a long talk. One useful point is that customers can understand what can be done about a problem. For example, a shop assistant can explain the return process and tell a customer when to expect a response. There will also be time to ask questions and exchange ideas with the other people taking part.",
-          "noteVi": "Giao tiếp lịch sự cần đi cùng quy trình và quyền xử lý để khách nhận được bước tiếp cụ thể."
+          "label": "Thông tin chính",
+          "text": "It will take place at the college activity room on Saturday at three in the afternoon. We will practise handling a complaint and explaining a clear next step. I think you would enjoy it because customers can understand what can be done about a problem. For example, a shop assistant can explain the return process and tell a customer when to expect a response.",
+          "noteVi": "Sự kiện, lịch hẹn và lý do bạn thích.",
+          "parts": [
+            {
+              "text": "It will take place at ",
+              "kind": "frame"
+            },
+            {
+              "text": "the college activity room",
+              "kind": "detail",
+              "labelVi": "địa điểm"
+            },
+            {
+              "text": " on ",
+              "kind": "frame"
+            },
+            {
+              "text": "Saturday at three in the afternoon",
+              "kind": "detail",
+              "labelVi": "ngày và giờ"
+            },
+            {
+              "text": ". We will ",
+              "kind": "frame"
+            },
+            {
+              "text": "practise handling a complaint and explaining a clear next step",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". I think you would enjoy it because ",
+              "kind": "frame"
+            },
+            {
+              "text": "customers can understand what can be done about a problem",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". For example, ",
+              "kind": "frame"
+            },
+            {
+              "text": "a shop assistant can explain the return process and tell a customer when to expect a response",
+              "kind": "detail",
+              "labelVi": "ví dụ — chủ ngữ + động từ"
+            },
+            {
+              "text": ".",
+              "kind": "frame"
+            }
+          ],
+          "template": "It will take place at [địa điểm] on [ngày và giờ]. We will [hoạt động — động từ nguyên mẫu]. I think you would enjoy it because [lợi ích — chủ ngữ + động từ]. For example, [ví dụ — chủ ngữ + động từ]."
         },
         {
-          "label": "Chuẩn bị",
-          "text": "Please bring a short example of a service problem. We could meet outside the entrance ten minutes before the session starts. You do not need to be an expert; the organiser has said that beginners are welcome. Please tell me at least two days before the session whether you can come so that I can reserve two places.",
-          "noteVi": "Chuẩn bị, điểm hẹn và hạn phản hồi."
+          "label": "Chuẩn bị và xác nhận",
+          "text": "Please bring a short example of a service problem. We can meet at the entrance before it starts. You do not need to be an expert, so there is no need to worry. Let me know whether you can come so that I can make the arrangements.",
+          "noteVi": "Chuẩn bị và hỏi bạn có đến không.",
+          "parts": [
+            {
+              "text": "Please bring ",
+              "kind": "frame"
+            },
+            {
+              "text": "a short example of a service problem",
+              "kind": "detail",
+              "labelVi": "đồ cần mang"
+            },
+            {
+              "text": ". We can meet at the entrance before it starts. You do not need to be an expert, so there is no need to worry. Let me know whether you can come so that I can make the arrangements.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Please bring [đồ cần mang]. We can meet at the entrance before it starts. You do not need to be an expert, so there is no need to worry. Let me know whether you can come so that I can make the arrangements."
         },
         {
           "label": "Kết thư",
-          "text": "I really hope you can join me. I am looking forward to hearing what you think.\n\nBest wishes,\nMinh",
-          "noteVi": "Kết thân mật và mong gặp."
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 211,
-      "mainWordCount": 211,
+      "register": "informal",
+      "wordCount": 182,
+      "mainWordCount": 182,
       "phrases": [
         {
           "en": "handle complaints",

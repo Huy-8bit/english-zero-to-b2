@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-05-v1",
+  "version": "2026-11-05-v2-frames",
   "samples": [
     {
       "id": "writing-task1-application-environment-01",
@@ -9,40 +9,155 @@
       "number": 1,
       "title": "Phân loại rác",
       "focus": "sorting household waste",
-      "prompt": "A local centre needs volunteers to help with a neighbourhood recycling workshop. Write to Ms Brown to apply, explain your relevant skills and motivation, and state when you are available.",
+      "prompt": "A local centre is recruiting a paid part-time Community Activities Assistant to help deliver a neighbourhood recycling workshop. Write to Ms Brown to apply. Explain your relevant experience and skills, your motivation and availability, and request an interview.",
       "requirementsVi": [
-        "Nêu vị trí ứng tuyển.",
-        "Giải thích động lực và kỹ năng liên quan.",
-        "Cho biết thời gian và đề nghị trao đổi."
+        "Nêu tên công việc được tuyển, không chỉ xin tham gia sự kiện.",
+        "Kinh nghiệm, kỹ năng phải là điều đúng với ứng viên.",
+        "Động lực, lịch làm việc và đề nghị phỏng vấn."
       ],
       "summaryVi": "Phân loại cần thùng và hướng dẫn rõ, đồng thời hệ thống thu gom phải thực hiện đúng.",
       "paragraphs": [
         {
-          "label": "Ứng tuyển",
-          "text": "Dear Ms Brown,\n\nI am writing to apply for the volunteer helper role at a neighbourhood recycling workshop. I saw your notice at the community centre and would welcome the opportunity to support a useful local activity.",
-          "noteVi": "Nêu vị trí và nguồn thông tin."
+          "label": "Mở thư và ứng tuyển",
+          "text": "Dear Ms Brown,\n\nI am writing to apply for the position of part-time Community Activities Assistant. I am interested in this opportunity because it would allow me to contribute to a neighbourhood recycling workshop while developing my skills in a practical working environment.",
+          "noteVi": "Nêu tên công việc được tuyển, không chỉ xin tham gia sự kiện.",
+          "parts": [
+            {
+              "text": "Dear ",
+              "kind": "frame"
+            },
+            {
+              "text": "Ms Brown",
+              "kind": "detail",
+              "labelVi": "danh xưng và họ người nhận"
+            },
+            {
+              "text": ",\n\nI am writing to apply for the position of ",
+              "kind": "frame"
+            },
+            {
+              "text": "part-time Community Activities Assistant",
+              "kind": "detail",
+              "labelVi": "vị trí ứng tuyển"
+            },
+            {
+              "text": ". I am interested in this opportunity because it would allow me to contribute to ",
+              "kind": "frame"
+            },
+            {
+              "text": "a neighbourhood recycling workshop",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": " while developing my skills in a practical working environment.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Dear [danh xưng và họ người nhận],\n\nI am writing to apply for the position of [vị trí ứng tuyển]. I am interested in this opportunity because it would allow me to contribute to [sự kiện / hoạt động] while developing my skills in a practical working environment."
         },
         {
-          "label": "Động lực",
-          "text": "I am interested in sorting household waste because more recyclable material can be collected separately. I would enjoy helping participants practise sorting common household items. I also understand that residents may stop sorting if collection is unreliable, so clear instructions and patient support are important.",
-          "noteVi": "Phân loại cần thùng và hướng dẫn rõ, đồng thời hệ thống thu gom phải thực hiện đúng."
+          "label": "Kinh nghiệm và kỹ năng",
+          "text": "I have experience in welcoming participants and preparing materials for activities at my college. This has helped me learn to explain simple instructions, organise tasks and respond politely to questions. I believe these skills would be useful when helping participants practise sorting common household items. I am willing to learn and would take care to follow the instructions given by my supervisor.",
+          "noteVi": "Kinh nghiệm, kỹ năng phải là điều đúng với ứng viên.",
+          "parts": [
+            {
+              "text": "I have experience in ",
+              "kind": "frame"
+            },
+            {
+              "text": "welcoming participants and preparing materials for activities at my college",
+              "kind": "detail",
+              "labelVi": "kinh nghiệm — V-ing"
+            },
+            {
+              "text": ". This has helped me learn to ",
+              "kind": "frame"
+            },
+            {
+              "text": "explain simple instructions, organise tasks and respond politely to questions",
+              "kind": "detail",
+              "labelVi": "kỹ năng — động từ nguyên mẫu"
+            },
+            {
+              "text": ". I believe these skills would be useful when helping participants ",
+              "kind": "frame"
+            },
+            {
+              "text": "practise sorting common household items",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". I am willing to learn and would take care to follow the instructions given by my supervisor.",
+              "kind": "frame"
+            }
+          ],
+          "template": "I have experience in [kinh nghiệm — V-ing]. This has helped me learn to [kỹ năng — động từ nguyên mẫu]. I believe these skills would be useful when helping participants [hoạt động — động từ nguyên mẫu]. I am willing to learn and would take care to follow the instructions given by my supervisor."
         },
         {
-          "label": "Kinh nghiệm",
-          "text": "I have helped organise small activities at my college, including welcoming participants and preparing materials. This taught me to explain simple instructions, keep a list of tasks and ask for help when necessary. I can check that participants have a few clean empty containers and help them find the right place before the session begins.",
-          "noteVi": "Kinh nghiệm mẫu phù hợp vai trò, không tự nhận chuyên gia."
+          "label": "Động lực và lịch làm việc",
+          "text": "I am particularly interested in sorting household waste because more recyclable material can be collected separately. I am available on weekday afternoons and at weekends. I would welcome the opportunity to discuss my application at an interview and provide any further information you may need.",
+          "noteVi": "Động lực, lịch làm việc và đề nghị phỏng vấn.",
+          "parts": [
+            {
+              "text": "I am particularly interested in ",
+              "kind": "frame"
+            },
+            {
+              "text": "sorting household waste",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": " because ",
+              "kind": "frame"
+            },
+            {
+              "text": "more recyclable material can be collected separately",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I am available ",
+              "kind": "frame"
+            },
+            {
+              "text": "on weekday afternoons and at weekends",
+              "kind": "detail",
+              "labelVi": "lịch có thể làm việc"
+            },
+            {
+              "text": ". I would welcome the opportunity to discuss my application at an interview and provide any further information you may need.",
+              "kind": "frame"
+            }
+          ],
+          "template": "I am particularly interested in [chủ đề] because [lợi ích — chủ ngữ + động từ]. I am available [lịch có thể làm việc]. I would welcome the opportunity to discuss my application at an interview and provide any further information you may need."
         },
         {
-          "label": "Thời gian và kết",
-          "text": "I am available on Saturday at nine in the morning, and I can arrive earlier to help with preparation. I would be happy to attend a short interview or training session if required.\n\nThank you for taking the time to read my letter. Please let me know if you need any further information. I look forward to your reply.\n\nYours sincerely,\nMinh Nguyen",
-          "noteVi": "Nêu lịch phù hợp và sẵn sàng trao đổi."
+          "label": "Kết thư",
+          "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\nMinh Nguyen",
+          "noteVi": "Biết tên người nhận: Dear Ms/Mr + họ → Yours sincerely. Chưa biết tên: Dear Sir or Madam → Yours faithfully.",
+          "parts": [
+            {
+              "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh Nguyen",
+              "kind": "detail",
+              "labelVi": "họ tên của bạn"
+            }
+          ],
+          "template": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n[họ tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 200,
-      "mainWordCount": 200,
+      "register": "formal",
+      "wordCount": 178,
+      "mainWordCount": 178,
       "phrases": [
         {
           "en": "sort household waste",
@@ -79,40 +194,155 @@
       "number": 2,
       "title": "Bình nước dùng lại",
       "focus": "reusable water bottles",
-      "prompt": "A local centre needs volunteers to help with a refill bottle campaign event. Write to Ms Brown to apply, explain your relevant skills and motivation, and state when you are available.",
+      "prompt": "A local centre is recruiting a paid part-time Community Activities Assistant to help deliver a refill bottle campaign event. Write to Ms Brown to apply. Explain your relevant experience and skills, your motivation and availability, and request an interview.",
       "requirementsVi": [
-        "Nêu vị trí ứng tuyển.",
-        "Giải thích động lực và kỹ năng liên quan.",
-        "Cho biết thời gian và đề nghị trao đổi."
+        "Nêu tên công việc được tuyển, không chỉ xin tham gia sự kiện.",
+        "Kinh nghiệm, kỹ năng phải là điều đúng với ứng viên.",
+        "Động lực, lịch làm việc và đề nghị phỏng vấn."
       ],
       "summaryVi": "Bình dùng lại giảm chai dùng một lần khi có chỗ lấy nước thuận tiện và được giữ sạch.",
       "paragraphs": [
         {
-          "label": "Ứng tuyển",
-          "text": "Dear Ms Brown,\n\nI am writing to apply for the volunteer helper role at a refill bottle campaign event. I saw your notice at the local library meeting room and would welcome the opportunity to support a useful local activity.",
-          "noteVi": "Nêu vị trí và nguồn thông tin."
+          "label": "Mở thư và ứng tuyển",
+          "text": "Dear Ms Brown,\n\nI am writing to apply for the position of part-time Community Activities Assistant. I am interested in this opportunity because it would allow me to contribute to a refill bottle campaign event while developing my skills in a practical working environment.",
+          "noteVi": "Nêu tên công việc được tuyển, không chỉ xin tham gia sự kiện.",
+          "parts": [
+            {
+              "text": "Dear ",
+              "kind": "frame"
+            },
+            {
+              "text": "Ms Brown",
+              "kind": "detail",
+              "labelVi": "danh xưng và họ người nhận"
+            },
+            {
+              "text": ",\n\nI am writing to apply for the position of ",
+              "kind": "frame"
+            },
+            {
+              "text": "part-time Community Activities Assistant",
+              "kind": "detail",
+              "labelVi": "vị trí ứng tuyển"
+            },
+            {
+              "text": ". I am interested in this opportunity because it would allow me to contribute to ",
+              "kind": "frame"
+            },
+            {
+              "text": "a refill bottle campaign event",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": " while developing my skills in a practical working environment.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Dear [danh xưng và họ người nhận],\n\nI am writing to apply for the position of [vị trí ứng tuyển]. I am interested in this opportunity because it would allow me to contribute to [sự kiện / hoạt động] while developing my skills in a practical working environment."
         },
         {
-          "label": "Động lực",
-          "text": "I am interested in reusable water bottles because people can avoid buying a new plastic bottle each time they need water. I would enjoy helping participants compare reusable bottles and plan convenient refill points. I also understand that the habit is difficult when refill points are missing, so clear instructions and patient support are important.",
-          "noteVi": "Bình dùng lại giảm chai dùng một lần khi có chỗ lấy nước thuận tiện và được giữ sạch."
+          "label": "Kinh nghiệm và kỹ năng",
+          "text": "I have experience in welcoming participants and preparing materials for activities at my college. This has helped me learn to explain simple instructions, organise tasks and respond politely to questions. I believe these skills would be useful when helping participants compare reusable bottles and plan convenient refill points. I am willing to learn and would take care to follow the instructions given by my supervisor.",
+          "noteVi": "Kinh nghiệm, kỹ năng phải là điều đúng với ứng viên.",
+          "parts": [
+            {
+              "text": "I have experience in ",
+              "kind": "frame"
+            },
+            {
+              "text": "welcoming participants and preparing materials for activities at my college",
+              "kind": "detail",
+              "labelVi": "kinh nghiệm — V-ing"
+            },
+            {
+              "text": ". This has helped me learn to ",
+              "kind": "frame"
+            },
+            {
+              "text": "explain simple instructions, organise tasks and respond politely to questions",
+              "kind": "detail",
+              "labelVi": "kỹ năng — động từ nguyên mẫu"
+            },
+            {
+              "text": ". I believe these skills would be useful when helping participants ",
+              "kind": "frame"
+            },
+            {
+              "text": "compare reusable bottles and plan convenient refill points",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". I am willing to learn and would take care to follow the instructions given by my supervisor.",
+              "kind": "frame"
+            }
+          ],
+          "template": "I have experience in [kinh nghiệm — V-ing]. This has helped me learn to [kỹ năng — động từ nguyên mẫu]. I believe these skills would be useful when helping participants [hoạt động — động từ nguyên mẫu]. I am willing to learn and would take care to follow the instructions given by my supervisor."
         },
         {
-          "label": "Kinh nghiệm",
-          "text": "I have helped organise small activities at my college, including welcoming participants and preparing materials. This taught me to explain simple instructions, keep a list of tasks and ask for help when necessary. I can check that participants have a reusable water bottle and help them find the right place before the session begins.",
-          "noteVi": "Kinh nghiệm mẫu phù hợp vai trò, không tự nhận chuyên gia."
+          "label": "Động lực và lịch làm việc",
+          "text": "I am particularly interested in reusable water bottles because people can avoid buying a new plastic bottle each time they need water. I am available on weekday afternoons and at weekends. I would welcome the opportunity to discuss my application at an interview and provide any further information you may need.",
+          "noteVi": "Động lực, lịch làm việc và đề nghị phỏng vấn.",
+          "parts": [
+            {
+              "text": "I am particularly interested in ",
+              "kind": "frame"
+            },
+            {
+              "text": "reusable water bottles",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": " because ",
+              "kind": "frame"
+            },
+            {
+              "text": "people can avoid buying a new plastic bottle each time they need water",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I am available ",
+              "kind": "frame"
+            },
+            {
+              "text": "on weekday afternoons and at weekends",
+              "kind": "detail",
+              "labelVi": "lịch có thể làm việc"
+            },
+            {
+              "text": ". I would welcome the opportunity to discuss my application at an interview and provide any further information you may need.",
+              "kind": "frame"
+            }
+          ],
+          "template": "I am particularly interested in [chủ đề] because [lợi ích — chủ ngữ + động từ]. I am available [lịch có thể làm việc]. I would welcome the opportunity to discuss my application at an interview and provide any further information you may need."
         },
         {
-          "label": "Thời gian và kết",
-          "text": "I am available on Sunday at two in the afternoon, and I can arrive earlier to help with preparation. I would be happy to attend a short interview or training session if required.\n\nThank you for taking the time to read my letter. Please let me know if you need any further information. I look forward to your reply.\n\nYours sincerely,\nMinh Nguyen",
-          "noteVi": "Nêu lịch phù hợp và sẵn sàng trao đổi."
+          "label": "Kết thư",
+          "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\nMinh Nguyen",
+          "noteVi": "Biết tên người nhận: Dear Ms/Mr + họ → Yours sincerely. Chưa biết tên: Dear Sir or Madam → Yours faithfully.",
+          "parts": [
+            {
+              "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh Nguyen",
+              "kind": "detail",
+              "labelVi": "họ tên của bạn"
+            }
+          ],
+          "template": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n[họ tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 212,
-      "mainWordCount": 212,
+      "register": "formal",
+      "wordCount": 188,
+      "mainWordCount": 188,
       "phrases": [
         {
           "en": "a refill point",
@@ -149,40 +379,155 @@
       "number": 3,
       "title": "Vườn cộng đồng",
       "focus": "community gardens",
-      "prompt": "A local centre needs volunteers to help with a community gardening morning. Write to Ms Brown to apply, explain your relevant skills and motivation, and state when you are available.",
+      "prompt": "A local centre is recruiting a paid part-time Community Activities Assistant to help deliver a community gardening morning. Write to Ms Brown to apply. Explain your relevant experience and skills, your motivation and availability, and request an interview.",
       "requirementsVi": [
-        "Nêu vị trí ứng tuyển.",
-        "Giải thích động lực và kỹ năng liên quan.",
-        "Cho biết thời gian và đề nghị trao đổi."
+        "Nêu tên công việc được tuyển, không chỉ xin tham gia sự kiện.",
+        "Kinh nghiệm, kỹ năng phải là điều đúng với ứng viên.",
+        "Động lực, lịch làm việc và đề nghị phỏng vấn."
       ],
       "summaryVi": "Vườn chung tạo cơ hội kết nối; cần phân công chăm cây lâu dài thay vì chỉ tổ chức ngày khai trương.",
       "paragraphs": [
         {
-          "label": "Ứng tuyển",
-          "text": "Dear Ms Brown,\n\nI am writing to apply for the volunteer helper role at a community gardening morning. I saw your notice at the community garden and would welcome the opportunity to support a useful local activity.",
-          "noteVi": "Nêu vị trí và nguồn thông tin."
+          "label": "Mở thư và ứng tuyển",
+          "text": "Dear Ms Brown,\n\nI am writing to apply for the position of part-time Community Activities Assistant. I am interested in this opportunity because it would allow me to contribute to a community gardening morning while developing my skills in a practical working environment.",
+          "noteVi": "Nêu tên công việc được tuyển, không chỉ xin tham gia sự kiện.",
+          "parts": [
+            {
+              "text": "Dear ",
+              "kind": "frame"
+            },
+            {
+              "text": "Ms Brown",
+              "kind": "detail",
+              "labelVi": "danh xưng và họ người nhận"
+            },
+            {
+              "text": ",\n\nI am writing to apply for the position of ",
+              "kind": "frame"
+            },
+            {
+              "text": "part-time Community Activities Assistant",
+              "kind": "detail",
+              "labelVi": "vị trí ứng tuyển"
+            },
+            {
+              "text": ". I am interested in this opportunity because it would allow me to contribute to ",
+              "kind": "frame"
+            },
+            {
+              "text": "a community gardening morning",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": " while developing my skills in a practical working environment.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Dear [danh xưng và họ người nhận],\n\nI am writing to apply for the position of [vị trí ứng tuyển]. I am interested in this opportunity because it would allow me to contribute to [sự kiện / hoạt động] while developing my skills in a practical working environment."
         },
         {
-          "label": "Động lực",
-          "text": "I am interested in community gardens because neighbours can work together and learn practical skills. I would enjoy helping participants plant herbs and organise a watering rota. I also understand that the garden may be neglected after the first few weeks, so clear instructions and patient support are important.",
-          "noteVi": "Vườn chung tạo cơ hội kết nối; cần phân công chăm cây lâu dài thay vì chỉ tổ chức ngày khai trương."
+          "label": "Kinh nghiệm và kỹ năng",
+          "text": "I have experience in welcoming participants and preparing materials for activities at my college. This has helped me learn to explain simple instructions, organise tasks and respond politely to questions. I believe these skills would be useful when helping participants plant herbs and organise a watering rota. I am willing to learn and would take care to follow the instructions given by my supervisor.",
+          "noteVi": "Kinh nghiệm, kỹ năng phải là điều đúng với ứng viên.",
+          "parts": [
+            {
+              "text": "I have experience in ",
+              "kind": "frame"
+            },
+            {
+              "text": "welcoming participants and preparing materials for activities at my college",
+              "kind": "detail",
+              "labelVi": "kinh nghiệm — V-ing"
+            },
+            {
+              "text": ". This has helped me learn to ",
+              "kind": "frame"
+            },
+            {
+              "text": "explain simple instructions, organise tasks and respond politely to questions",
+              "kind": "detail",
+              "labelVi": "kỹ năng — động từ nguyên mẫu"
+            },
+            {
+              "text": ". I believe these skills would be useful when helping participants ",
+              "kind": "frame"
+            },
+            {
+              "text": "plant herbs and organise a watering rota",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". I am willing to learn and would take care to follow the instructions given by my supervisor.",
+              "kind": "frame"
+            }
+          ],
+          "template": "I have experience in [kinh nghiệm — V-ing]. This has helped me learn to [kỹ năng — động từ nguyên mẫu]. I believe these skills would be useful when helping participants [hoạt động — động từ nguyên mẫu]. I am willing to learn and would take care to follow the instructions given by my supervisor."
         },
         {
-          "label": "Kinh nghiệm",
-          "text": "I have helped organise small activities at my college, including welcoming participants and preparing materials. This taught me to explain simple instructions, keep a list of tasks and ask for help when necessary. I can check that participants have gardening gloves and help them find the right place before the session begins.",
-          "noteVi": "Kinh nghiệm mẫu phù hợp vai trò, không tự nhận chuyên gia."
+          "label": "Động lực và lịch làm việc",
+          "text": "I am particularly interested in community gardens because neighbours can work together and learn practical skills. I am available on weekday afternoons and at weekends. I would welcome the opportunity to discuss my application at an interview and provide any further information you may need.",
+          "noteVi": "Động lực, lịch làm việc và đề nghị phỏng vấn.",
+          "parts": [
+            {
+              "text": "I am particularly interested in ",
+              "kind": "frame"
+            },
+            {
+              "text": "community gardens",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": " because ",
+              "kind": "frame"
+            },
+            {
+              "text": "neighbours can work together and learn practical skills",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I am available ",
+              "kind": "frame"
+            },
+            {
+              "text": "on weekday afternoons and at weekends",
+              "kind": "detail",
+              "labelVi": "lịch có thể làm việc"
+            },
+            {
+              "text": ". I would welcome the opportunity to discuss my application at an interview and provide any further information you may need.",
+              "kind": "frame"
+            }
+          ],
+          "template": "I am particularly interested in [chủ đề] because [lợi ích — chủ ngữ + động từ]. I am available [lịch có thể làm việc]. I would welcome the opportunity to discuss my application at an interview and provide any further information you may need."
         },
         {
-          "label": "Thời gian và kết",
-          "text": "I am available on Saturday at nine in the morning, and I can arrive earlier to help with preparation. I would be happy to attend a short interview or training session if required.\n\nThank you for taking the time to read my letter. Please let me know if you need any further information. I look forward to your reply.\n\nYours sincerely,\nMinh Nguyen",
-          "noteVi": "Nêu lịch phù hợp và sẵn sàng trao đổi."
+          "label": "Kết thư",
+          "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\nMinh Nguyen",
+          "noteVi": "Biết tên người nhận: Dear Ms/Mr + họ → Yours sincerely. Chưa biết tên: Dear Sir or Madam → Yours faithfully.",
+          "parts": [
+            {
+              "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh Nguyen",
+              "kind": "detail",
+              "labelVi": "họ tên của bạn"
+            }
+          ],
+          "template": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n[họ tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 201,
-      "mainWordCount": 201,
+      "register": "formal",
+      "wordCount": 180,
+      "mainWordCount": 180,
       "phrases": [
         {
           "en": "a community garden",
@@ -219,40 +564,155 @@
       "number": 4,
       "title": "Công viên trong thành phố",
       "focus": "urban parks",
-      "prompt": "A local centre needs volunteers to help with a local park planning meeting. Write to Ms Brown to apply, explain your relevant skills and motivation, and state when you are available.",
+      "prompt": "A local centre is recruiting a paid part-time Community Activities Assistant to help deliver a local park planning meeting. Write to Ms Brown to apply. Explain your relevant experience and skills, your motivation and availability, and request an interview.",
       "requirementsVi": [
-        "Nêu vị trí ứng tuyển.",
-        "Giải thích động lực và kỹ năng liên quan.",
-        "Cho biết thời gian và đề nghị trao đổi."
+        "Nêu tên công việc được tuyển, không chỉ xin tham gia sự kiện.",
+        "Kinh nghiệm, kỹ năng phải là điều đúng với ứng viên.",
+        "Động lực, lịch làm việc và đề nghị phỏng vấn."
       ],
       "summaryVi": "Công viên công cộng cần dễ tiếp cận và được bảo trì để người dân thực sự dùng được.",
       "paragraphs": [
         {
-          "label": "Ứng tuyển",
-          "text": "Dear Ms Brown,\n\nI am writing to apply for the volunteer helper role at a local park planning meeting. I saw your notice at the park entrance and would welcome the opportunity to support a useful local activity.",
-          "noteVi": "Nêu vị trí và nguồn thông tin."
+          "label": "Mở thư và ứng tuyển",
+          "text": "Dear Ms Brown,\n\nI am writing to apply for the position of part-time Community Activities Assistant. I am interested in this opportunity because it would allow me to contribute to a local park planning meeting while developing my skills in a practical working environment.",
+          "noteVi": "Nêu tên công việc được tuyển, không chỉ xin tham gia sự kiện.",
+          "parts": [
+            {
+              "text": "Dear ",
+              "kind": "frame"
+            },
+            {
+              "text": "Ms Brown",
+              "kind": "detail",
+              "labelVi": "danh xưng và họ người nhận"
+            },
+            {
+              "text": ",\n\nI am writing to apply for the position of ",
+              "kind": "frame"
+            },
+            {
+              "text": "part-time Community Activities Assistant",
+              "kind": "detail",
+              "labelVi": "vị trí ứng tuyển"
+            },
+            {
+              "text": ". I am interested in this opportunity because it would allow me to contribute to ",
+              "kind": "frame"
+            },
+            {
+              "text": "a local park planning meeting",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": " while developing my skills in a practical working environment.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Dear [danh xưng và họ người nhận],\n\nI am writing to apply for the position of [vị trí ứng tuyển]. I am interested in this opportunity because it would allow me to contribute to [sự kiện / hoạt động] while developing my skills in a practical working environment."
         },
         {
-          "label": "Động lực",
-          "text": "I am interested in urban parks because residents have places to walk, rest and meet other people. I would enjoy helping participants walk through the park and suggest useful improvements. I also understand that a poorly maintained park may not feel welcoming, so clear instructions and patient support are important.",
-          "noteVi": "Công viên công cộng cần dễ tiếp cận và được bảo trì để người dân thực sự dùng được."
+          "label": "Kinh nghiệm và kỹ năng",
+          "text": "I have experience in welcoming participants and preparing materials for activities at my college. This has helped me learn to explain simple instructions, organise tasks and respond politely to questions. I believe these skills would be useful when helping participants walk through the park and suggest useful improvements. I am willing to learn and would take care to follow the instructions given by my supervisor.",
+          "noteVi": "Kinh nghiệm, kỹ năng phải là điều đúng với ứng viên.",
+          "parts": [
+            {
+              "text": "I have experience in ",
+              "kind": "frame"
+            },
+            {
+              "text": "welcoming participants and preparing materials for activities at my college",
+              "kind": "detail",
+              "labelVi": "kinh nghiệm — V-ing"
+            },
+            {
+              "text": ". This has helped me learn to ",
+              "kind": "frame"
+            },
+            {
+              "text": "explain simple instructions, organise tasks and respond politely to questions",
+              "kind": "detail",
+              "labelVi": "kỹ năng — động từ nguyên mẫu"
+            },
+            {
+              "text": ". I believe these skills would be useful when helping participants ",
+              "kind": "frame"
+            },
+            {
+              "text": "walk through the park and suggest useful improvements",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". I am willing to learn and would take care to follow the instructions given by my supervisor.",
+              "kind": "frame"
+            }
+          ],
+          "template": "I have experience in [kinh nghiệm — V-ing]. This has helped me learn to [kỹ năng — động từ nguyên mẫu]. I believe these skills would be useful when helping participants [hoạt động — động từ nguyên mẫu]. I am willing to learn and would take care to follow the instructions given by my supervisor."
         },
         {
-          "label": "Kinh nghiệm",
-          "text": "I have helped organise small activities at my college, including welcoming participants and preparing materials. This taught me to explain simple instructions, keep a list of tasks and ask for help when necessary. I can check that participants have comfortable walking shoes and help them find the right place before the session begins.",
-          "noteVi": "Kinh nghiệm mẫu phù hợp vai trò, không tự nhận chuyên gia."
+          "label": "Động lực và lịch làm việc",
+          "text": "I am particularly interested in urban parks because residents have places to walk, rest and meet other people. I am available on weekday afternoons and at weekends. I would welcome the opportunity to discuss my application at an interview and provide any further information you may need.",
+          "noteVi": "Động lực, lịch làm việc và đề nghị phỏng vấn.",
+          "parts": [
+            {
+              "text": "I am particularly interested in ",
+              "kind": "frame"
+            },
+            {
+              "text": "urban parks",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": " because ",
+              "kind": "frame"
+            },
+            {
+              "text": "residents have places to walk, rest and meet other people",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I am available ",
+              "kind": "frame"
+            },
+            {
+              "text": "on weekday afternoons and at weekends",
+              "kind": "detail",
+              "labelVi": "lịch có thể làm việc"
+            },
+            {
+              "text": ". I would welcome the opportunity to discuss my application at an interview and provide any further information you may need.",
+              "kind": "frame"
+            }
+          ],
+          "template": "I am particularly interested in [chủ đề] because [lợi ích — chủ ngữ + động từ]. I am available [lịch có thể làm việc]. I would welcome the opportunity to discuss my application at an interview and provide any further information you may need."
         },
         {
-          "label": "Thời gian và kết",
-          "text": "I am available on Saturday at ten in the morning, and I can arrive earlier to help with preparation. I would be happy to attend a short interview or training session if required.\n\nThank you for taking the time to read my letter. Please let me know if you need any further information. I look forward to your reply.\n\nYours sincerely,\nMinh Nguyen",
-          "noteVi": "Nêu lịch phù hợp và sẵn sàng trao đổi."
+          "label": "Kết thư",
+          "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\nMinh Nguyen",
+          "noteVi": "Biết tên người nhận: Dear Ms/Mr + họ → Yours sincerely. Chưa biết tên: Dear Sir or Madam → Yours faithfully.",
+          "parts": [
+            {
+              "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh Nguyen",
+              "kind": "detail",
+              "labelVi": "họ tên của bạn"
+            }
+          ],
+          "template": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n[họ tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 204,
-      "mainWordCount": 204,
+      "register": "formal",
+      "wordCount": 184,
+      "mainWordCount": 184,
       "phrases": [
         {
           "en": "public green spaces",
@@ -289,40 +749,155 @@
       "number": 5,
       "title": "Đi xe đạp",
       "focus": "cycling for short journeys",
-      "prompt": "A local centre needs volunteers to help with a safe cycling information day. Write to Ms Brown to apply, explain your relevant skills and motivation, and state when you are available.",
+      "prompt": "A local centre is recruiting a paid part-time Community Activities Assistant to help deliver a safe cycling information day. Write to Ms Brown to apply. Explain your relevant experience and skills, your motivation and availability, and request an interview.",
       "requirementsVi": [
-        "Nêu vị trí ứng tuyển.",
-        "Giải thích động lực và kỹ năng liên quan.",
-        "Cho biết thời gian và đề nghị trao đổi."
+        "Nêu tên công việc được tuyển, không chỉ xin tham gia sự kiện.",
+        "Kinh nghiệm, kỹ năng phải là điều đúng với ứng viên.",
+        "Động lực, lịch làm việc và đề nghị phỏng vấn."
       ],
       "summaryVi": "Xe đạp phù hợp quãng ngắn khi đường đi liền mạch và các giao lộ được xử lý an toàn.",
       "paragraphs": [
         {
-          "label": "Ứng tuyển",
-          "text": "Dear Ms Brown,\n\nI am writing to apply for the volunteer helper role at a safe cycling information day. I saw your notice at the community centre courtyard and would welcome the opportunity to support a useful local activity.",
-          "noteVi": "Nêu vị trí và nguồn thông tin."
+          "label": "Mở thư và ứng tuyển",
+          "text": "Dear Ms Brown,\n\nI am writing to apply for the position of part-time Community Activities Assistant. I am interested in this opportunity because it would allow me to contribute to a safe cycling information day while developing my skills in a practical working environment.",
+          "noteVi": "Nêu tên công việc được tuyển, không chỉ xin tham gia sự kiện.",
+          "parts": [
+            {
+              "text": "Dear ",
+              "kind": "frame"
+            },
+            {
+              "text": "Ms Brown",
+              "kind": "detail",
+              "labelVi": "danh xưng và họ người nhận"
+            },
+            {
+              "text": ",\n\nI am writing to apply for the position of ",
+              "kind": "frame"
+            },
+            {
+              "text": "part-time Community Activities Assistant",
+              "kind": "detail",
+              "labelVi": "vị trí ứng tuyển"
+            },
+            {
+              "text": ". I am interested in this opportunity because it would allow me to contribute to ",
+              "kind": "frame"
+            },
+            {
+              "text": "a safe cycling information day",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": " while developing my skills in a practical working environment.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Dear [danh xưng và họ người nhận],\n\nI am writing to apply for the position of [vị trí ứng tuyển]. I am interested in this opportunity because it would allow me to contribute to [sự kiện / hoạt động] while developing my skills in a practical working environment."
         },
         {
-          "label": "Động lực",
-          "text": "I am interested in cycling for short journeys because people have another way to travel without using a car. I would enjoy helping participants plan short cycle routes and identify difficult junctions. I also understand that unsafe roads can discourage inexperienced riders, so clear instructions and patient support are important.",
-          "noteVi": "Xe đạp phù hợp quãng ngắn khi đường đi liền mạch và các giao lộ được xử lý an toàn."
+          "label": "Kinh nghiệm và kỹ năng",
+          "text": "I have experience in welcoming participants and preparing materials for activities at my college. This has helped me learn to explain simple instructions, organise tasks and respond politely to questions. I believe these skills would be useful when helping participants plan short cycle routes and identify difficult junctions. I am willing to learn and would take care to follow the instructions given by my supervisor.",
+          "noteVi": "Kinh nghiệm, kỹ năng phải là điều đúng với ứng viên.",
+          "parts": [
+            {
+              "text": "I have experience in ",
+              "kind": "frame"
+            },
+            {
+              "text": "welcoming participants and preparing materials for activities at my college",
+              "kind": "detail",
+              "labelVi": "kinh nghiệm — V-ing"
+            },
+            {
+              "text": ". This has helped me learn to ",
+              "kind": "frame"
+            },
+            {
+              "text": "explain simple instructions, organise tasks and respond politely to questions",
+              "kind": "detail",
+              "labelVi": "kỹ năng — động từ nguyên mẫu"
+            },
+            {
+              "text": ". I believe these skills would be useful when helping participants ",
+              "kind": "frame"
+            },
+            {
+              "text": "plan short cycle routes and identify difficult junctions",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". I am willing to learn and would take care to follow the instructions given by my supervisor.",
+              "kind": "frame"
+            }
+          ],
+          "template": "I have experience in [kinh nghiệm — V-ing]. This has helped me learn to [kỹ năng — động từ nguyên mẫu]. I believe these skills would be useful when helping participants [hoạt động — động từ nguyên mẫu]. I am willing to learn and would take care to follow the instructions given by my supervisor."
         },
         {
-          "label": "Kinh nghiệm",
-          "text": "I have helped organise small activities at my college, including welcoming participants and preparing materials. This taught me to explain simple instructions, keep a list of tasks and ask for help when necessary. I can check that participants have a bicycle helmet and help them find the right place before the session begins.",
-          "noteVi": "Kinh nghiệm mẫu phù hợp vai trò, không tự nhận chuyên gia."
+          "label": "Động lực và lịch làm việc",
+          "text": "I am particularly interested in cycling for short journeys because people have another way to travel without using a car. I am available on weekday afternoons and at weekends. I would welcome the opportunity to discuss my application at an interview and provide any further information you may need.",
+          "noteVi": "Động lực, lịch làm việc và đề nghị phỏng vấn.",
+          "parts": [
+            {
+              "text": "I am particularly interested in ",
+              "kind": "frame"
+            },
+            {
+              "text": "cycling for short journeys",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": " because ",
+              "kind": "frame"
+            },
+            {
+              "text": "people have another way to travel without using a car",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I am available ",
+              "kind": "frame"
+            },
+            {
+              "text": "on weekday afternoons and at weekends",
+              "kind": "detail",
+              "labelVi": "lịch có thể làm việc"
+            },
+            {
+              "text": ". I would welcome the opportunity to discuss my application at an interview and provide any further information you may need.",
+              "kind": "frame"
+            }
+          ],
+          "template": "I am particularly interested in [chủ đề] because [lợi ích — chủ ngữ + động từ]. I am available [lịch có thể làm việc]. I would welcome the opportunity to discuss my application at an interview and provide any further information you may need."
         },
         {
-          "label": "Thời gian và kết",
-          "text": "I am available on Sunday at three in the afternoon, and I can arrive earlier to help with preparation. I would be happy to attend a short interview or training session if required.\n\nThank you for taking the time to read my letter. Please let me know if you need any further information. I look forward to your reply.\n\nYours sincerely,\nMinh Nguyen",
-          "noteVi": "Nêu lịch phù hợp và sẵn sàng trao đổi."
+          "label": "Kết thư",
+          "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\nMinh Nguyen",
+          "noteVi": "Biết tên người nhận: Dear Ms/Mr + họ → Yours sincerely. Chưa biết tên: Dear Sir or Madam → Yours faithfully.",
+          "parts": [
+            {
+              "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh Nguyen",
+              "kind": "detail",
+              "labelVi": "họ tên của bạn"
+            }
+          ],
+          "template": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n[họ tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 205,
-      "mainWordCount": 205,
+      "register": "formal",
+      "wordCount": 186,
+      "mainWordCount": 186,
       "phrases": [
         {
           "en": "short everyday journeys",
@@ -359,40 +934,155 @@
       "number": 6,
       "title": "Tiết kiệm điện ở nhà",
       "focus": "saving electricity at home",
-      "prompt": "A local centre needs volunteers to help with a household energy workshop. Write to Ms Brown to apply, explain your relevant skills and motivation, and state when you are available.",
+      "prompt": "A local centre is recruiting a paid part-time Community Activities Assistant to help deliver a household energy workshop. Write to Ms Brown to apply. Explain your relevant experience and skills, your motivation and availability, and request an interview.",
       "requirementsVi": [
-        "Nêu vị trí ứng tuyển.",
-        "Giải thích động lực và kỹ năng liên quan.",
-        "Cho biết thời gian và đề nghị trao đổi."
+        "Nêu tên công việc được tuyển, không chỉ xin tham gia sự kiện.",
+        "Kinh nghiệm, kỹ năng phải là điều đúng với ứng viên.",
+        "Động lực, lịch làm việc và đề nghị phỏng vấn."
       ],
       "summaryVi": "Tiết kiệm điện nên bắt đầu từ việc dễ làm và phù hợp nhà thuê, thu nhập, thiết bị sẵn có.",
       "paragraphs": [
         {
-          "label": "Ứng tuyển",
-          "text": "Dear Ms Brown,\n\nI am writing to apply for the volunteer helper role at a household energy workshop. I saw your notice at the community centre and would welcome the opportunity to support a useful local activity.",
-          "noteVi": "Nêu vị trí và nguồn thông tin."
+          "label": "Mở thư và ứng tuyển",
+          "text": "Dear Ms Brown,\n\nI am writing to apply for the position of part-time Community Activities Assistant. I am interested in this opportunity because it would allow me to contribute to a household energy workshop while developing my skills in a practical working environment.",
+          "noteVi": "Nêu tên công việc được tuyển, không chỉ xin tham gia sự kiện.",
+          "parts": [
+            {
+              "text": "Dear ",
+              "kind": "frame"
+            },
+            {
+              "text": "Ms Brown",
+              "kind": "detail",
+              "labelVi": "danh xưng và họ người nhận"
+            },
+            {
+              "text": ",\n\nI am writing to apply for the position of ",
+              "kind": "frame"
+            },
+            {
+              "text": "part-time Community Activities Assistant",
+              "kind": "detail",
+              "labelVi": "vị trí ứng tuyển"
+            },
+            {
+              "text": ". I am interested in this opportunity because it would allow me to contribute to ",
+              "kind": "frame"
+            },
+            {
+              "text": "a household energy workshop",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": " while developing my skills in a practical working environment.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Dear [danh xưng và họ người nhận],\n\nI am writing to apply for the position of [vị trí ứng tuyển]. I am interested in this opportunity because it would allow me to contribute to [sự kiện / hoạt động] while developing my skills in a practical working environment."
         },
         {
-          "label": "Động lực",
-          "text": "I am interested in saving electricity at home because families can avoid paying for energy they do not need. I would enjoy helping participants review everyday habits and create a low-cost energy checklist. I also understand that advice may be unrealistic for some homes, so clear instructions and patient support are important.",
-          "noteVi": "Tiết kiệm điện nên bắt đầu từ việc dễ làm và phù hợp nhà thuê, thu nhập, thiết bị sẵn có."
+          "label": "Kinh nghiệm và kỹ năng",
+          "text": "I have experience in welcoming participants and preparing materials for activities at my college. This has helped me learn to explain simple instructions, organise tasks and respond politely to questions. I believe these skills would be useful when helping participants review everyday habits and create a low-cost energy checklist. I am willing to learn and would take care to follow the instructions given by my supervisor.",
+          "noteVi": "Kinh nghiệm, kỹ năng phải là điều đúng với ứng viên.",
+          "parts": [
+            {
+              "text": "I have experience in ",
+              "kind": "frame"
+            },
+            {
+              "text": "welcoming participants and preparing materials for activities at my college",
+              "kind": "detail",
+              "labelVi": "kinh nghiệm — V-ing"
+            },
+            {
+              "text": ". This has helped me learn to ",
+              "kind": "frame"
+            },
+            {
+              "text": "explain simple instructions, organise tasks and respond politely to questions",
+              "kind": "detail",
+              "labelVi": "kỹ năng — động từ nguyên mẫu"
+            },
+            {
+              "text": ". I believe these skills would be useful when helping participants ",
+              "kind": "frame"
+            },
+            {
+              "text": "review everyday habits and create a low-cost energy checklist",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". I am willing to learn and would take care to follow the instructions given by my supervisor.",
+              "kind": "frame"
+            }
+          ],
+          "template": "I have experience in [kinh nghiệm — V-ing]. This has helped me learn to [kỹ năng — động từ nguyên mẫu]. I believe these skills would be useful when helping participants [hoạt động — động từ nguyên mẫu]. I am willing to learn and would take care to follow the instructions given by my supervisor."
         },
         {
-          "label": "Kinh nghiệm",
-          "text": "I have helped organise small activities at my college, including welcoming participants and preparing materials. This taught me to explain simple instructions, keep a list of tasks and ask for help when necessary. I can check that participants have a recent electricity bill and help them find the right place before the session begins.",
-          "noteVi": "Kinh nghiệm mẫu phù hợp vai trò, không tự nhận chuyên gia."
+          "label": "Động lực và lịch làm việc",
+          "text": "I am particularly interested in saving electricity at home because families can avoid paying for energy they do not need. I am available on weekday afternoons and at weekends. I would welcome the opportunity to discuss my application at an interview and provide any further information you may need.",
+          "noteVi": "Động lực, lịch làm việc và đề nghị phỏng vấn.",
+          "parts": [
+            {
+              "text": "I am particularly interested in ",
+              "kind": "frame"
+            },
+            {
+              "text": "saving electricity at home",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": " because ",
+              "kind": "frame"
+            },
+            {
+              "text": "families can avoid paying for energy they do not need",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I am available ",
+              "kind": "frame"
+            },
+            {
+              "text": "on weekday afternoons and at weekends",
+              "kind": "detail",
+              "labelVi": "lịch có thể làm việc"
+            },
+            {
+              "text": ". I would welcome the opportunity to discuss my application at an interview and provide any further information you may need.",
+              "kind": "frame"
+            }
+          ],
+          "template": "I am particularly interested in [chủ đề] because [lợi ích — chủ ngữ + động từ]. I am available [lịch có thể làm việc]. I would welcome the opportunity to discuss my application at an interview and provide any further information you may need."
         },
         {
-          "label": "Thời gian và kết",
-          "text": "I am available on Wednesday at six in the evening, and I can arrive earlier to help with preparation. I would be happy to attend a short interview or training session if required.\n\nThank you for taking the time to read my letter. Please let me know if you need any further information. I look forward to your reply.\n\nYours sincerely,\nMinh Nguyen",
-          "noteVi": "Nêu lịch phù hợp và sẵn sàng trao đổi."
+          "label": "Kết thư",
+          "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\nMinh Nguyen",
+          "noteVi": "Biết tên người nhận: Dear Ms/Mr + họ → Yours sincerely. Chưa biết tên: Dear Sir or Madam → Yours faithfully.",
+          "parts": [
+            {
+              "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh Nguyen",
+              "kind": "detail",
+              "labelVi": "họ tên của bạn"
+            }
+          ],
+          "template": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n[họ tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 206,
-      "mainWordCount": 206,
+      "register": "formal",
+      "wordCount": 186,
+      "mainWordCount": 186,
       "phrases": [
         {
           "en": "unnecessary energy use",
@@ -429,40 +1119,155 @@
       "number": 7,
       "title": "Bảo vệ động vật hoang dã",
       "focus": "responsible wildlife tourism",
-      "prompt": "A local centre needs volunteers to help with a responsible wildlife travel talk. Write to Ms Brown to apply, explain your relevant skills and motivation, and state when you are available.",
+      "prompt": "A local centre is recruiting a paid part-time Community Activities Assistant to help deliver a responsible wildlife travel talk. Write to Ms Brown to apply. Explain your relevant experience and skills, your motivation and availability, and request an interview.",
       "requirementsVi": [
-        "Nêu vị trí ứng tuyển.",
-        "Giải thích động lực và kỹ năng liên quan.",
-        "Cho biết thời gian và đề nghị trao đổi."
+        "Nêu tên công việc được tuyển, không chỉ xin tham gia sự kiện.",
+        "Kinh nghiệm, kỹ năng phải là điều đúng với ứng viên.",
+        "Động lực, lịch làm việc và đề nghị phỏng vấn."
       ],
       "summaryVi": "Tham quan thiên nhiên cần quan sát có khoảng cách; nên hỏi cách chăm sóc động vật thay vì chỉ xem quảng cáo.",
       "paragraphs": [
         {
-          "label": "Ứng tuyển",
-          "text": "Dear Ms Brown,\n\nI am writing to apply for the volunteer helper role at a responsible wildlife travel talk. I saw your notice at the local library and would welcome the opportunity to support a useful local activity.",
-          "noteVi": "Nêu vị trí và nguồn thông tin."
+          "label": "Mở thư và ứng tuyển",
+          "text": "Dear Ms Brown,\n\nI am writing to apply for the position of part-time Community Activities Assistant. I am interested in this opportunity because it would allow me to contribute to a responsible wildlife travel talk while developing my skills in a practical working environment.",
+          "noteVi": "Nêu tên công việc được tuyển, không chỉ xin tham gia sự kiện.",
+          "parts": [
+            {
+              "text": "Dear ",
+              "kind": "frame"
+            },
+            {
+              "text": "Ms Brown",
+              "kind": "detail",
+              "labelVi": "danh xưng và họ người nhận"
+            },
+            {
+              "text": ",\n\nI am writing to apply for the position of ",
+              "kind": "frame"
+            },
+            {
+              "text": "part-time Community Activities Assistant",
+              "kind": "detail",
+              "labelVi": "vị trí ứng tuyển"
+            },
+            {
+              "text": ". I am interested in this opportunity because it would allow me to contribute to ",
+              "kind": "frame"
+            },
+            {
+              "text": "a responsible wildlife travel talk",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": " while developing my skills in a practical working environment.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Dear [danh xưng và họ người nhận],\n\nI am writing to apply for the position of [vị trí ứng tuyển]. I am interested in this opportunity because it would allow me to contribute to [sự kiện / hoạt động] while developing my skills in a practical working environment."
         },
         {
-          "label": "Động lực",
-          "text": "I am interested in responsible wildlife tourism because visitors can enjoy nature without treating animals as objects for entertainment. I would enjoy helping participants compare nature tours and discuss respectful observation. I also understand that visitors may not know which activities are responsible, so clear instructions and patient support are important.",
-          "noteVi": "Tham quan thiên nhiên cần quan sát có khoảng cách; nên hỏi cách chăm sóc động vật thay vì chỉ xem quảng cáo."
+          "label": "Kinh nghiệm và kỹ năng",
+          "text": "I have experience in welcoming participants and preparing materials for activities at my college. This has helped me learn to explain simple instructions, organise tasks and respond politely to questions. I believe these skills would be useful when helping participants compare nature tours and discuss respectful observation. I am willing to learn and would take care to follow the instructions given by my supervisor.",
+          "noteVi": "Kinh nghiệm, kỹ năng phải là điều đúng với ứng viên.",
+          "parts": [
+            {
+              "text": "I have experience in ",
+              "kind": "frame"
+            },
+            {
+              "text": "welcoming participants and preparing materials for activities at my college",
+              "kind": "detail",
+              "labelVi": "kinh nghiệm — V-ing"
+            },
+            {
+              "text": ". This has helped me learn to ",
+              "kind": "frame"
+            },
+            {
+              "text": "explain simple instructions, organise tasks and respond politely to questions",
+              "kind": "detail",
+              "labelVi": "kỹ năng — động từ nguyên mẫu"
+            },
+            {
+              "text": ". I believe these skills would be useful when helping participants ",
+              "kind": "frame"
+            },
+            {
+              "text": "compare nature tours and discuss respectful observation",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". I am willing to learn and would take care to follow the instructions given by my supervisor.",
+              "kind": "frame"
+            }
+          ],
+          "template": "I have experience in [kinh nghiệm — V-ing]. This has helped me learn to [kỹ năng — động từ nguyên mẫu]. I believe these skills would be useful when helping participants [hoạt động — động từ nguyên mẫu]. I am willing to learn and would take care to follow the instructions given by my supervisor."
         },
         {
-          "label": "Kinh nghiệm",
-          "text": "I have helped organise small activities at my college, including welcoming participants and preparing materials. This taught me to explain simple instructions, keep a list of tasks and ask for help when necessary. I can check that participants have a notebook for travel questions and help them find the right place before the session begins.",
-          "noteVi": "Kinh nghiệm mẫu phù hợp vai trò, không tự nhận chuyên gia."
+          "label": "Động lực và lịch làm việc",
+          "text": "I am particularly interested in responsible wildlife tourism because visitors can enjoy nature without treating animals as objects for entertainment. I am available on weekday afternoons and at weekends. I would welcome the opportunity to discuss my application at an interview and provide any further information you may need.",
+          "noteVi": "Động lực, lịch làm việc và đề nghị phỏng vấn.",
+          "parts": [
+            {
+              "text": "I am particularly interested in ",
+              "kind": "frame"
+            },
+            {
+              "text": "responsible wildlife tourism",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": " because ",
+              "kind": "frame"
+            },
+            {
+              "text": "visitors can enjoy nature without treating animals as objects for entertainment",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I am available ",
+              "kind": "frame"
+            },
+            {
+              "text": "on weekday afternoons and at weekends",
+              "kind": "detail",
+              "labelVi": "lịch có thể làm việc"
+            },
+            {
+              "text": ". I would welcome the opportunity to discuss my application at an interview and provide any further information you may need.",
+              "kind": "frame"
+            }
+          ],
+          "template": "I am particularly interested in [chủ đề] because [lợi ích — chủ ngữ + động từ]. I am available [lịch có thể làm việc]. I would welcome the opportunity to discuss my application at an interview and provide any further information you may need."
         },
         {
-          "label": "Thời gian và kết",
-          "text": "I am available on Saturday at two in the afternoon, and I can arrive earlier to help with preparation. I would be happy to attend a short interview or training session if required.\n\nThank you for taking the time to read my letter. Please let me know if you need any further information. I look forward to your reply.\n\nYours sincerely,\nMinh Nguyen",
-          "noteVi": "Nêu lịch phù hợp và sẵn sàng trao đổi."
+          "label": "Kết thư",
+          "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\nMinh Nguyen",
+          "noteVi": "Biết tên người nhận: Dear Ms/Mr + họ → Yours sincerely. Chưa biết tên: Dear Sir or Madam → Yours faithfully.",
+          "parts": [
+            {
+              "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh Nguyen",
+              "kind": "detail",
+              "labelVi": "họ tên của bạn"
+            }
+          ],
+          "template": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n[họ tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 207,
-      "mainWordCount": 207,
+      "register": "formal",
+      "wordCount": 185,
+      "mainWordCount": 185,
       "phrases": [
         {
           "en": "observe from a distance",
@@ -499,40 +1304,155 @@
       "number": 8,
       "title": "Giảm lãng phí thực phẩm",
       "focus": "food waste at home",
-      "prompt": "A local centre needs volunteers to help with a meal planning workshop. Write to Ms Brown to apply, explain your relevant skills and motivation, and state when you are available.",
+      "prompt": "A local centre is recruiting a paid part-time Community Activities Assistant to help deliver a meal planning workshop. Write to Ms Brown to apply. Explain your relevant experience and skills, your motivation and availability, and request an interview.",
       "requirementsVi": [
-        "Nêu vị trí ứng tuyển.",
-        "Giải thích động lực và kỹ năng liên quan.",
-        "Cho biết thời gian và đề nghị trao đổi."
+        "Nêu tên công việc được tuyển, không chỉ xin tham gia sự kiện.",
+        "Kinh nghiệm, kỹ năng phải là điều đúng với ứng viên.",
+        "Động lực, lịch làm việc và đề nghị phỏng vấn."
       ],
       "summaryVi": "Lên thực đơn giúp bớt mua thừa; kế hoạch cần linh hoạt để dùng được đồ còn lại khi lịch thay đổi.",
       "paragraphs": [
         {
-          "label": "Ứng tuyển",
-          "text": "Dear Ms Brown,\n\nI am writing to apply for the volunteer helper role at a meal planning workshop. I saw your notice at the school meeting room and would welcome the opportunity to support a useful local activity.",
-          "noteVi": "Nêu vị trí và nguồn thông tin."
+          "label": "Mở thư và ứng tuyển",
+          "text": "Dear Ms Brown,\n\nI am writing to apply for the position of part-time Community Activities Assistant. I am interested in this opportunity because it would allow me to contribute to a meal planning workshop while developing my skills in a practical working environment.",
+          "noteVi": "Nêu tên công việc được tuyển, không chỉ xin tham gia sự kiện.",
+          "parts": [
+            {
+              "text": "Dear ",
+              "kind": "frame"
+            },
+            {
+              "text": "Ms Brown",
+              "kind": "detail",
+              "labelVi": "danh xưng và họ người nhận"
+            },
+            {
+              "text": ",\n\nI am writing to apply for the position of ",
+              "kind": "frame"
+            },
+            {
+              "text": "part-time Community Activities Assistant",
+              "kind": "detail",
+              "labelVi": "vị trí ứng tuyển"
+            },
+            {
+              "text": ". I am interested in this opportunity because it would allow me to contribute to ",
+              "kind": "frame"
+            },
+            {
+              "text": "a meal planning workshop",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": " while developing my skills in a practical working environment.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Dear [danh xưng và họ người nhận],\n\nI am writing to apply for the position of [vị trí ứng tuyển]. I am interested in this opportunity because it would allow me to contribute to [sự kiện / hoạt động] while developing my skills in a practical working environment."
         },
         {
-          "label": "Động lực",
-          "text": "I am interested in food waste at home because households can use more of the food they buy. I would enjoy helping participants make a flexible menu and a practical shopping list. I also understand that a rigid plan may not fit a changing schedule, so clear instructions and patient support are important.",
-          "noteVi": "Lên thực đơn giúp bớt mua thừa; kế hoạch cần linh hoạt để dùng được đồ còn lại khi lịch thay đổi."
+          "label": "Kinh nghiệm và kỹ năng",
+          "text": "I have experience in welcoming participants and preparing materials for activities at my college. This has helped me learn to explain simple instructions, organise tasks and respond politely to questions. I believe these skills would be useful when helping participants make a flexible menu and a practical shopping list. I am willing to learn and would take care to follow the instructions given by my supervisor.",
+          "noteVi": "Kinh nghiệm, kỹ năng phải là điều đúng với ứng viên.",
+          "parts": [
+            {
+              "text": "I have experience in ",
+              "kind": "frame"
+            },
+            {
+              "text": "welcoming participants and preparing materials for activities at my college",
+              "kind": "detail",
+              "labelVi": "kinh nghiệm — V-ing"
+            },
+            {
+              "text": ". This has helped me learn to ",
+              "kind": "frame"
+            },
+            {
+              "text": "explain simple instructions, organise tasks and respond politely to questions",
+              "kind": "detail",
+              "labelVi": "kỹ năng — động từ nguyên mẫu"
+            },
+            {
+              "text": ". I believe these skills would be useful when helping participants ",
+              "kind": "frame"
+            },
+            {
+              "text": "make a flexible menu and a practical shopping list",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". I am willing to learn and would take care to follow the instructions given by my supervisor.",
+              "kind": "frame"
+            }
+          ],
+          "template": "I have experience in [kinh nghiệm — V-ing]. This has helped me learn to [kỹ năng — động từ nguyên mẫu]. I believe these skills would be useful when helping participants [hoạt động — động từ nguyên mẫu]. I am willing to learn and would take care to follow the instructions given by my supervisor."
         },
         {
-          "label": "Kinh nghiệm",
-          "text": "I have helped organise small activities at my college, including welcoming participants and preparing materials. This taught me to explain simple instructions, keep a list of tasks and ask for help when necessary. I can check that participants have a list of food already at home and help them find the right place before the session begins.",
-          "noteVi": "Kinh nghiệm mẫu phù hợp vai trò, không tự nhận chuyên gia."
+          "label": "Động lực và lịch làm việc",
+          "text": "I am particularly interested in food waste at home because households can use more of the food they buy. I am available on weekday afternoons and at weekends. I would welcome the opportunity to discuss my application at an interview and provide any further information you may need.",
+          "noteVi": "Động lực, lịch làm việc và đề nghị phỏng vấn.",
+          "parts": [
+            {
+              "text": "I am particularly interested in ",
+              "kind": "frame"
+            },
+            {
+              "text": "food waste at home",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": " because ",
+              "kind": "frame"
+            },
+            {
+              "text": "households can use more of the food they buy",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I am available ",
+              "kind": "frame"
+            },
+            {
+              "text": "on weekday afternoons and at weekends",
+              "kind": "detail",
+              "labelVi": "lịch có thể làm việc"
+            },
+            {
+              "text": ". I would welcome the opportunity to discuss my application at an interview and provide any further information you may need.",
+              "kind": "frame"
+            }
+          ],
+          "template": "I am particularly interested in [chủ đề] because [lợi ích — chủ ngữ + động từ]. I am available [lịch có thể làm việc]. I would welcome the opportunity to discuss my application at an interview and provide any further information you may need."
         },
         {
-          "label": "Thời gian và kết",
-          "text": "I am available on Sunday at ten in the morning, and I can arrive earlier to help with preparation. I would be happy to attend a short interview or training session if required.\n\nThank you for taking the time to read my letter. Please let me know if you need any further information. I look forward to your reply.\n\nYours sincerely,\nMinh Nguyen",
-          "noteVi": "Nêu lịch phù hợp và sẵn sàng trao đổi."
+          "label": "Kết thư",
+          "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\nMinh Nguyen",
+          "noteVi": "Biết tên người nhận: Dear Ms/Mr + họ → Yours sincerely. Chưa biết tên: Dear Sir or Madam → Yours faithfully.",
+          "parts": [
+            {
+              "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh Nguyen",
+              "kind": "detail",
+              "labelVi": "họ tên của bạn"
+            }
+          ],
+          "template": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n[họ tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 211,
-      "mainWordCount": 211,
+      "register": "formal",
+      "wordCount": 185,
+      "mainWordCount": 185,
       "phrases": [
         {
           "en": "plan meals",
@@ -569,40 +1489,155 @@
       "number": 9,
       "title": "Dọn rác bãi biển",
       "focus": "community beach clean-ups",
-      "prompt": "A local centre needs volunteers to help with a community beach clean-up. Write to Ms Brown to apply, explain your relevant skills and motivation, and state when you are available.",
+      "prompt": "A local centre is recruiting a paid part-time Community Activities Assistant to help deliver a community beach clean-up. Write to Ms Brown to apply. Explain your relevant experience and skills, your motivation and availability, and request an interview.",
       "requirementsVi": [
-        "Nêu vị trí ứng tuyển.",
-        "Giải thích động lực và kỹ năng liên quan.",
-        "Cho biết thời gian và đề nghị trao đổi."
+        "Nêu tên công việc được tuyển, không chỉ xin tham gia sự kiện.",
+        "Kinh nghiệm, kỹ năng phải là điều đúng với ứng viên.",
+        "Động lực, lịch làm việc và đề nghị phỏng vấn."
       ],
       "summaryVi": "Dọn rác giúp cải thiện trước mắt; cần dùng kết quả để ngăn rác mới xuất hiện.",
       "paragraphs": [
         {
-          "label": "Ứng tuyển",
-          "text": "Dear Ms Brown,\n\nI am writing to apply for the volunteer helper role at a community beach clean-up. I saw your notice at the beach entrance and would welcome the opportunity to support a useful local activity.",
-          "noteVi": "Nêu vị trí và nguồn thông tin."
+          "label": "Mở thư và ứng tuyển",
+          "text": "Dear Ms Brown,\n\nI am writing to apply for the position of part-time Community Activities Assistant. I am interested in this opportunity because it would allow me to contribute to a community beach clean-up while developing my skills in a practical working environment.",
+          "noteVi": "Nêu tên công việc được tuyển, không chỉ xin tham gia sự kiện.",
+          "parts": [
+            {
+              "text": "Dear ",
+              "kind": "frame"
+            },
+            {
+              "text": "Ms Brown",
+              "kind": "detail",
+              "labelVi": "danh xưng và họ người nhận"
+            },
+            {
+              "text": ",\n\nI am writing to apply for the position of ",
+              "kind": "frame"
+            },
+            {
+              "text": "part-time Community Activities Assistant",
+              "kind": "detail",
+              "labelVi": "vị trí ứng tuyển"
+            },
+            {
+              "text": ". I am interested in this opportunity because it would allow me to contribute to ",
+              "kind": "frame"
+            },
+            {
+              "text": "a community beach clean-up",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": " while developing my skills in a practical working environment.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Dear [danh xưng và họ người nhận],\n\nI am writing to apply for the position of [vị trí ứng tuyển]. I am interested in this opportunity because it would allow me to contribute to [sự kiện / hoạt động] while developing my skills in a practical working environment."
         },
         {
-          "label": "Động lực",
-          "text": "I am interested in community beach clean-ups because volunteers can improve a public place and understand the scale of the problem. I would enjoy helping participants collect litter in assigned areas and record the most common items. I also understand that the beach may quickly become dirty again, so clear instructions and patient support are important.",
-          "noteVi": "Dọn rác giúp cải thiện trước mắt; cần dùng kết quả để ngăn rác mới xuất hiện."
+          "label": "Kinh nghiệm và kỹ năng",
+          "text": "I have experience in welcoming participants and preparing materials for activities at my college. This has helped me learn to explain simple instructions, organise tasks and respond politely to questions. I believe these skills would be useful when helping participants collect litter in assigned areas and record the most common items. I am willing to learn and would take care to follow the instructions given by my supervisor.",
+          "noteVi": "Kinh nghiệm, kỹ năng phải là điều đúng với ứng viên.",
+          "parts": [
+            {
+              "text": "I have experience in ",
+              "kind": "frame"
+            },
+            {
+              "text": "welcoming participants and preparing materials for activities at my college",
+              "kind": "detail",
+              "labelVi": "kinh nghiệm — V-ing"
+            },
+            {
+              "text": ". This has helped me learn to ",
+              "kind": "frame"
+            },
+            {
+              "text": "explain simple instructions, organise tasks and respond politely to questions",
+              "kind": "detail",
+              "labelVi": "kỹ năng — động từ nguyên mẫu"
+            },
+            {
+              "text": ". I believe these skills would be useful when helping participants ",
+              "kind": "frame"
+            },
+            {
+              "text": "collect litter in assigned areas and record the most common items",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". I am willing to learn and would take care to follow the instructions given by my supervisor.",
+              "kind": "frame"
+            }
+          ],
+          "template": "I have experience in [kinh nghiệm — V-ing]. This has helped me learn to [kỹ năng — động từ nguyên mẫu]. I believe these skills would be useful when helping participants [hoạt động — động từ nguyên mẫu]. I am willing to learn and would take care to follow the instructions given by my supervisor."
         },
         {
-          "label": "Kinh nghiệm",
-          "text": "I have helped organise small activities at my college, including welcoming participants and preparing materials. This taught me to explain simple instructions, keep a list of tasks and ask for help when necessary. I can check that participants have reusable gloves and a hat and help them find the right place before the session begins.",
-          "noteVi": "Kinh nghiệm mẫu phù hợp vai trò, không tự nhận chuyên gia."
+          "label": "Động lực và lịch làm việc",
+          "text": "I am particularly interested in community beach clean-ups because volunteers can improve a public place and understand the scale of the problem. I am available on weekday afternoons and at weekends. I would welcome the opportunity to discuss my application at an interview and provide any further information you may need.",
+          "noteVi": "Động lực, lịch làm việc và đề nghị phỏng vấn.",
+          "parts": [
+            {
+              "text": "I am particularly interested in ",
+              "kind": "frame"
+            },
+            {
+              "text": "community beach clean-ups",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": " because ",
+              "kind": "frame"
+            },
+            {
+              "text": "volunteers can improve a public place and understand the scale of the problem",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I am available ",
+              "kind": "frame"
+            },
+            {
+              "text": "on weekday afternoons and at weekends",
+              "kind": "detail",
+              "labelVi": "lịch có thể làm việc"
+            },
+            {
+              "text": ". I would welcome the opportunity to discuss my application at an interview and provide any further information you may need.",
+              "kind": "frame"
+            }
+          ],
+          "template": "I am particularly interested in [chủ đề] because [lợi ích — chủ ngữ + động từ]. I am available [lịch có thể làm việc]. I would welcome the opportunity to discuss my application at an interview and provide any further information you may need."
         },
         {
-          "label": "Thời gian và kết",
-          "text": "I am available on Thursday at six in the evening, and I can arrive earlier to help with preparation. I would be happy to attend a short interview or training session if required.\n\nThank you for taking the time to read my letter. Please let me know if you need any further information. I look forward to your reply.\n\nYours sincerely,\nMinh Nguyen",
-          "noteVi": "Nêu lịch phù hợp và sẵn sàng trao đổi."
+          "label": "Kết thư",
+          "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\nMinh Nguyen",
+          "noteVi": "Biết tên người nhận: Dear Ms/Mr + họ → Yours sincerely. Chưa biết tên: Dear Sir or Madam → Yours faithfully.",
+          "parts": [
+            {
+              "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh Nguyen",
+              "kind": "detail",
+              "labelVi": "họ tên của bạn"
+            }
+          ],
+          "template": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n[họ tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 211,
-      "mainWordCount": 211,
+      "register": "formal",
+      "wordCount": 190,
+      "mainWordCount": 190,
       "phrases": [
         {
           "en": "a beach clean-up",
@@ -639,40 +1674,155 @@
       "number": 10,
       "title": "Tiết kiệm nước",
       "focus": "saving water in daily life",
-      "prompt": "A local centre needs volunteers to help with a community water-saving session. Write to Ms Brown to apply, explain your relevant skills and motivation, and state when you are available.",
+      "prompt": "A local centre is recruiting a paid part-time Community Activities Assistant to help deliver a community water-saving session. Write to Ms Brown to apply. Explain your relevant experience and skills, your motivation and availability, and request an interview.",
       "requirementsVi": [
-        "Nêu vị trí ứng tuyển.",
-        "Giải thích động lực và kỹ năng liên quan.",
-        "Cho biết thời gian và đề nghị trao đổi."
+        "Nêu tên công việc được tuyển, không chỉ xin tham gia sự kiện.",
+        "Kinh nghiệm, kỹ năng phải là điều đúng với ứng viên.",
+        "Động lực, lịch làm việc và đề nghị phỏng vấn."
       ],
       "summaryVi": "Thói quen tiết kiệm nước cần đi cùng cách báo và sửa rò rỉ rõ trách nhiệm.",
       "paragraphs": [
         {
-          "label": "Ứng tuyển",
-          "text": "Dear Ms Brown,\n\nI am writing to apply for the volunteer helper role at a community water-saving session. I saw your notice at the college activity room and would welcome the opportunity to support a useful local activity.",
-          "noteVi": "Nêu vị trí và nguồn thông tin."
+          "label": "Mở thư và ứng tuyển",
+          "text": "Dear Ms Brown,\n\nI am writing to apply for the position of part-time Community Activities Assistant. I am interested in this opportunity because it would allow me to contribute to a community water-saving session while developing my skills in a practical working environment.",
+          "noteVi": "Nêu tên công việc được tuyển, không chỉ xin tham gia sự kiện.",
+          "parts": [
+            {
+              "text": "Dear ",
+              "kind": "frame"
+            },
+            {
+              "text": "Ms Brown",
+              "kind": "detail",
+              "labelVi": "danh xưng và họ người nhận"
+            },
+            {
+              "text": ",\n\nI am writing to apply for the position of ",
+              "kind": "frame"
+            },
+            {
+              "text": "part-time Community Activities Assistant",
+              "kind": "detail",
+              "labelVi": "vị trí ứng tuyển"
+            },
+            {
+              "text": ". I am interested in this opportunity because it would allow me to contribute to ",
+              "kind": "frame"
+            },
+            {
+              "text": "a community water-saving session",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": " while developing my skills in a practical working environment.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Dear [danh xưng và họ người nhận],\n\nI am writing to apply for the position of [vị trí ứng tuyển]. I am interested in this opportunity because it would allow me to contribute to [sự kiện / hoạt động] while developing my skills in a practical working environment."
         },
         {
-          "label": "Động lực",
-          "text": "I am interested in saving water in daily life because people can avoid wasting treated water. I would enjoy helping participants identify common sources of waste and practise reporting leaks. I also understand that simple advice may overlook problems beyond a resident's control, so clear instructions and patient support are important.",
-          "noteVi": "Thói quen tiết kiệm nước cần đi cùng cách báo và sửa rò rỉ rõ trách nhiệm."
+          "label": "Kinh nghiệm và kỹ năng",
+          "text": "I have experience in welcoming participants and preparing materials for activities at my college. This has helped me learn to explain simple instructions, organise tasks and respond politely to questions. I believe these skills would be useful when helping participants identify common sources of waste and practise reporting leaks. I am willing to learn and would take care to follow the instructions given by my supervisor.",
+          "noteVi": "Kinh nghiệm, kỹ năng phải là điều đúng với ứng viên.",
+          "parts": [
+            {
+              "text": "I have experience in ",
+              "kind": "frame"
+            },
+            {
+              "text": "welcoming participants and preparing materials for activities at my college",
+              "kind": "detail",
+              "labelVi": "kinh nghiệm — V-ing"
+            },
+            {
+              "text": ". This has helped me learn to ",
+              "kind": "frame"
+            },
+            {
+              "text": "explain simple instructions, organise tasks and respond politely to questions",
+              "kind": "detail",
+              "labelVi": "kỹ năng — động từ nguyên mẫu"
+            },
+            {
+              "text": ". I believe these skills would be useful when helping participants ",
+              "kind": "frame"
+            },
+            {
+              "text": "identify common sources of waste and practise reporting leaks",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". I am willing to learn and would take care to follow the instructions given by my supervisor.",
+              "kind": "frame"
+            }
+          ],
+          "template": "I have experience in [kinh nghiệm — V-ing]. This has helped me learn to [kỹ năng — động từ nguyên mẫu]. I believe these skills would be useful when helping participants [hoạt động — động từ nguyên mẫu]. I am willing to learn and would take care to follow the instructions given by my supervisor."
         },
         {
-          "label": "Kinh nghiệm",
-          "text": "I have helped organise small activities at my college, including welcoming participants and preparing materials. This taught me to explain simple instructions, keep a list of tasks and ask for help when necessary. I can check that participants have a note of any water problems at home and help them find the right place before the session begins.",
-          "noteVi": "Kinh nghiệm mẫu phù hợp vai trò, không tự nhận chuyên gia."
+          "label": "Động lực và lịch làm việc",
+          "text": "I am particularly interested in saving water in daily life because people can avoid wasting treated water. I am available on weekday afternoons and at weekends. I would welcome the opportunity to discuss my application at an interview and provide any further information you may need.",
+          "noteVi": "Động lực, lịch làm việc và đề nghị phỏng vấn.",
+          "parts": [
+            {
+              "text": "I am particularly interested in ",
+              "kind": "frame"
+            },
+            {
+              "text": "saving water in daily life",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": " because ",
+              "kind": "frame"
+            },
+            {
+              "text": "people can avoid wasting treated water",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I am available ",
+              "kind": "frame"
+            },
+            {
+              "text": "on weekday afternoons and at weekends",
+              "kind": "detail",
+              "labelVi": "lịch có thể làm việc"
+            },
+            {
+              "text": ". I would welcome the opportunity to discuss my application at an interview and provide any further information you may need.",
+              "kind": "frame"
+            }
+          ],
+          "template": "I am particularly interested in [chủ đề] because [lợi ích — chủ ngữ + động từ]. I am available [lịch có thể làm việc]. I would welcome the opportunity to discuss my application at an interview and provide any further information you may need."
         },
         {
-          "label": "Thời gian và kết",
-          "text": "I am available on Saturday at three in the afternoon, and I can arrive earlier to help with preparation. I would be happy to attend a short interview or training session if required.\n\nThank you for taking the time to read my letter. Please let me know if you need any further information. I look forward to your reply.\n\nYours sincerely,\nMinh Nguyen",
-          "noteVi": "Nêu lịch phù hợp và sẵn sàng trao đổi."
+          "label": "Kết thư",
+          "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\nMinh Nguyen",
+          "noteVi": "Biết tên người nhận: Dear Ms/Mr + họ → Yours sincerely. Chưa biết tên: Dear Sir or Madam → Yours faithfully.",
+          "parts": [
+            {
+              "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh Nguyen",
+              "kind": "detail",
+              "labelVi": "họ tên của bạn"
+            }
+          ],
+          "template": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n[họ tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 210,
-      "mainWordCount": 210,
+      "register": "formal",
+      "wordCount": 183,
+      "mainWordCount": 183,
       "phrases": [
         {
           "en": "repair a leak",

@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-05-v1",
+  "version": "2026-11-05-v2-frames",
   "samples": [
     {
       "id": "writing-task2-cause-solution-environment-01",
@@ -20,32 +20,123 @@
         {
           "label": "Mở bài",
           "text": "Although there may be value in the proposal that neighbourhoods should make household waste sorting easier, a practical difficulty is that residents may stop sorting if collection is unreliable. Understanding why this happens is important before suggesting a solution. Otherwise, the same problem may return even after people have spent time and effort trying to improve the situation.",
-          "noteVi": "Giới thiệu đúng vấn đề được hỏi."
+          "noteVi": "Giới thiệu đúng vấn đề được hỏi.",
+          "parts": [
+            {
+              "text": "Although there may be value in ",
+              "kind": "detail"
+            },
+            {
+              "text": "the proposal that",
+              "kind": "frame",
+              "labelVi": "Giới thiệu đề xuất + mệnh đề"
+            },
+            {
+              "text": " neighbourhoods should make household waste sorting easier, a practical difficulty is that residents may stop sorting if collection is unreliable. Understanding why this happens is important before suggesting a solution. Otherwise, the same problem may return even after people have spent time and effort trying to improve the situation.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Nguyên nhân",
           "text": "One reason for the difficulty is that the instructions and collection system may not match. This can help explain why residents may stop sorting if collection is unreliable. Consider the following situation: a careful resident may see all bins emptied into one truck and decide not to separate waste again. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
-          "noteVi": "Nối điều kiện tổ chức với vấn đề."
+          "noteVi": "Nối điều kiện tổ chức với vấn đề.",
+          "parts": [
+            {
+              "text": "One reason for the difficulty is that",
+              "kind": "frame",
+              "labelVi": "Nêu nguyên nhân + mệnh đề"
+            },
+            {
+              "text": " the instructions and collection system may not match. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This can help explain why",
+              "kind": "frame",
+              "labelVi": "Nối nguyên nhân với hiện tượng"
+            },
+            {
+              "text": " residents may stop sorting if collection is unreliable. ",
+              "kind": "detail"
+            },
+            {
+              "text": "Consider the following situation:",
+              "kind": "frame",
+              "labelVi": "Dẫn một tình huống minh họa"
+            },
+            {
+              "text": " a careful resident may see all bins emptied into one truck and decide not to separate waste again. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Giải pháp",
           "text": "A practical response would be to provide simple labels and explain how each type of waste is collected. For example, a building manager could place picture labels above bins and publish a reliable collection schedule. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
-          "noteVi": "Hành động cụ thể có ví dụ thực hiện."
+          "noteVi": "Hành động cụ thể có ví dụ thực hiện.",
+          "parts": [
+            {
+              "text": "A practical response would be to",
+              "kind": "frame",
+              "labelVi": "Đưa giải pháp + động từ nguyên mẫu"
+            },
+            {
+              "text": " provide simple labels and explain how each type of waste is collected. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a building manager could place picture labels above bins and publish a reliable collection schedule. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Vì sao giải pháp đáng làm?",
           "text": "The aim is not to abandon the useful parts of the idea. It is to make them accessible in practice. For example, a family can keep a small box for clean bottles instead of putting them in the same bag as dinner leftovers. This illustrates the potential value of the fact that more recyclable material can be collected separately. Asking participants what prevents them from benefiting would help organisers choose changes that actually matter.",
-          "noteVi": "Phân loại cần thùng và hướng dẫn rõ, đồng thời hệ thống thu gom phải thực hiện đúng."
+          "noteVi": "Phân loại cần thùng và hướng dẫn rõ, đồng thời hệ thống thu gom phải thực hiện đúng.",
+          "parts": [
+            {
+              "text": "The aim is not to abandon the useful parts of the idea. It is to make them accessible in practice. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a family can keep a small box for clean bottles instead of putting them in the same bag as dinner leftovers. This illustrates the potential value of the fact that more recyclable material can be collected separately. Asking participants what prevents them from benefiting would help organisers choose changes that actually matter.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, the problem is linked to the fact that the instructions and collection system may not match. A practical response is to provide simple labels and explain how each type of waste is collected. Trying this carefully and listening to the people affected is more convincing than expecting a general instruction to solve the difficulty on its own.",
-          "noteVi": "Tóm tắt nguyên nhân–giải pháp tương ứng."
+          "noteVi": "Tóm tắt nguyên nhân–giải pháp tương ứng.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " the problem is linked to the fact that the instructions and collection system may not match. A practical response is to provide simple labels and explain how each type of waste is collected. Trying this carefully and listening to the people affected is more convincing than expecting a general instruction to solve the difficulty on its own.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 352,
       "mainWordCount": 352,
       "phrases": [
@@ -95,32 +186,123 @@
         {
           "label": "Mở bài",
           "text": "Although there may be value in the proposal that schools and workplaces should encourage people to use refillable bottles, a practical difficulty is that the habit is difficult when refill points are missing. Understanding why this happens is important before suggesting a solution. Otherwise, the same problem may return even after people have spent time and effort trying to improve the situation.",
-          "noteVi": "Giới thiệu đúng vấn đề được hỏi."
+          "noteVi": "Giới thiệu đúng vấn đề được hỏi.",
+          "parts": [
+            {
+              "text": "Although there may be value in ",
+              "kind": "detail"
+            },
+            {
+              "text": "the proposal that",
+              "kind": "frame",
+              "labelVi": "Giới thiệu đề xuất + mệnh đề"
+            },
+            {
+              "text": " schools and workplaces should encourage people to use refillable bottles, a practical difficulty is that the habit is difficult when refill points are missing. Understanding why this happens is important before suggesting a solution. Otherwise, the same problem may return even after people have spent time and effort trying to improve the situation.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Nguyên nhân",
           "text": "One reason for the difficulty is that campaigns may focus on individual behaviour without providing practical facilities. This can help explain why the habit is difficult when refill points are missing. Consider the following situation: a commuter may still buy bottled water when the only refill point is far from the station. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
-          "noteVi": "Nối điều kiện tổ chức với vấn đề."
+          "noteVi": "Nối điều kiện tổ chức với vấn đề.",
+          "parts": [
+            {
+              "text": "One reason for the difficulty is that",
+              "kind": "frame",
+              "labelVi": "Nêu nguyên nhân + mệnh đề"
+            },
+            {
+              "text": " campaigns may focus on individual behaviour without providing practical facilities. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This can help explain why",
+              "kind": "frame",
+              "labelVi": "Nối nguyên nhân với hiện tượng"
+            },
+            {
+              "text": " the habit is difficult when refill points are missing. ",
+              "kind": "detail"
+            },
+            {
+              "text": "Consider the following situation:",
+              "kind": "frame",
+              "labelVi": "Dẫn một tình huống minh họa"
+            },
+            {
+              "text": " a commuter may still buy bottled water when the only refill point is far from the station. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Giải pháp",
           "text": "A practical response would be to install convenient refill points and keep them clean. For example, a school could place a water station near classrooms and explain who checks it each day. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
-          "noteVi": "Hành động cụ thể có ví dụ thực hiện."
+          "noteVi": "Hành động cụ thể có ví dụ thực hiện.",
+          "parts": [
+            {
+              "text": "A practical response would be to",
+              "kind": "frame",
+              "labelVi": "Đưa giải pháp + động từ nguyên mẫu"
+            },
+            {
+              "text": " install convenient refill points and keep them clean. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a school could place a water station near classrooms and explain who checks it each day. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Vì sao giải pháp đáng làm?",
           "text": "The aim is not to abandon the useful parts of the idea. It is to make them accessible in practice. For example, a student can refill a bottle at school before an afternoon sports lesson. This illustrates the potential value of the fact that people can avoid buying a new plastic bottle each time they need water. Asking participants what prevents them from benefiting would help organisers choose changes that actually matter.",
-          "noteVi": "Bình dùng lại giảm chai dùng một lần khi có chỗ lấy nước thuận tiện và được giữ sạch."
+          "noteVi": "Bình dùng lại giảm chai dùng một lần khi có chỗ lấy nước thuận tiện và được giữ sạch.",
+          "parts": [
+            {
+              "text": "The aim is not to abandon the useful parts of the idea. It is to make them accessible in practice. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a student can refill a bottle at school before an afternoon sports lesson. This illustrates the potential value of the fact that people can avoid buying a new plastic bottle each time they need water. Asking participants what prevents them from benefiting would help organisers choose changes that actually matter.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, the problem is linked to the fact that campaigns may focus on individual behaviour without providing practical facilities. A practical response is to install convenient refill points and keep them clean. Trying this carefully and listening to the people affected is more convincing than expecting a general instruction to solve the difficulty on its own.",
-          "noteVi": "Tóm tắt nguyên nhân–giải pháp tương ứng."
+          "noteVi": "Tóm tắt nguyên nhân–giải pháp tương ứng.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " the problem is linked to the fact that campaigns may focus on individual behaviour without providing practical facilities. A practical response is to install convenient refill points and keep them clean. Trying this carefully and listening to the people affected is more convincing than expecting a general instruction to solve the difficulty on its own.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 351,
       "mainWordCount": 351,
       "phrases": [
@@ -170,32 +352,123 @@
         {
           "label": "Mở bài",
           "text": "Although there may be value in the proposal that residential areas should provide space for community gardens, a practical difficulty is that the garden may be neglected after the first few weeks. Understanding why this happens is important before suggesting a solution. Otherwise, the same problem may return even after people have spent time and effort trying to improve the situation.",
-          "noteVi": "Giới thiệu đúng vấn đề được hỏi."
+          "noteVi": "Giới thiệu đúng vấn đề được hỏi.",
+          "parts": [
+            {
+              "text": "Although there may be value in ",
+              "kind": "detail"
+            },
+            {
+              "text": "the proposal that",
+              "kind": "frame",
+              "labelVi": "Giới thiệu đề xuất + mệnh đề"
+            },
+            {
+              "text": " residential areas should provide space for community gardens, a practical difficulty is that the garden may be neglected after the first few weeks. Understanding why this happens is important before suggesting a solution. Otherwise, the same problem may return even after people have spent time and effort trying to improve the situation.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Nguyên nhân",
           "text": "One reason for the difficulty is that responsibilities may not be agreed before the garden opens. This can help explain why the garden may be neglected after the first few weeks. Consider the following situation: plants may dry out during a holiday because everyone assumes another person is looking after them. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
-          "noteVi": "Nối điều kiện tổ chức với vấn đề."
+          "noteVi": "Nối điều kiện tổ chức với vấn đề.",
+          "parts": [
+            {
+              "text": "One reason for the difficulty is that",
+              "kind": "frame",
+              "labelVi": "Nêu nguyên nhân + mệnh đề"
+            },
+            {
+              "text": " responsibilities may not be agreed before the garden opens. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This can help explain why",
+              "kind": "frame",
+              "labelVi": "Nối nguyên nhân với hiện tượng"
+            },
+            {
+              "text": " the garden may be neglected after the first few weeks. ",
+              "kind": "detail"
+            },
+            {
+              "text": "Consider the following situation:",
+              "kind": "frame",
+              "labelVi": "Dẫn một tình huống minh họa"
+            },
+            {
+              "text": " plants may dry out during a holiday because everyone assumes another person is looking after them. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Giải pháp",
           "text": "A practical response would be to create a simple rota and choose plants suited to the available space. For example, residents could take turns checking the garden and keep a shared list of tasks near the entrance. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
-          "noteVi": "Hành động cụ thể có ví dụ thực hiện."
+          "noteVi": "Hành động cụ thể có ví dụ thực hiện.",
+          "parts": [
+            {
+              "text": "A practical response would be to",
+              "kind": "frame",
+              "labelVi": "Đưa giải pháp + động từ nguyên mẫu"
+            },
+            {
+              "text": " create a simple rota and choose plants suited to the available space. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " residents could take turns checking the garden and keep a shared list of tasks near the entrance. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Vì sao giải pháp đáng làm?",
           "text": "The aim is not to abandon the useful parts of the idea. It is to make them accessible in practice. For example, an experienced gardener can show a family how to grow herbs in a small raised bed. This illustrates the potential value of the fact that neighbours can work together and learn practical skills. Asking participants what prevents them from benefiting would help organisers choose changes that actually matter.",
-          "noteVi": "Vườn chung tạo cơ hội kết nối; cần phân công chăm cây lâu dài thay vì chỉ tổ chức ngày khai trương."
+          "noteVi": "Vườn chung tạo cơ hội kết nối; cần phân công chăm cây lâu dài thay vì chỉ tổ chức ngày khai trương.",
+          "parts": [
+            {
+              "text": "The aim is not to abandon the useful parts of the idea. It is to make them accessible in practice. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " an experienced gardener can show a family how to grow herbs in a small raised bed. This illustrates the potential value of the fact that neighbours can work together and learn practical skills. Asking participants what prevents them from benefiting would help organisers choose changes that actually matter.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, the problem is linked to the fact that responsibilities may not be agreed before the garden opens. A practical response is to create a simple rota and choose plants suited to the available space. Trying this carefully and listening to the people affected is more convincing than expecting a general instruction to solve the difficulty on its own.",
-          "noteVi": "Tóm tắt nguyên nhân–giải pháp tương ứng."
+          "noteVi": "Tóm tắt nguyên nhân–giải pháp tương ứng.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " the problem is linked to the fact that responsibilities may not be agreed before the garden opens. A practical response is to create a simple rota and choose plants suited to the available space. Trying this carefully and listening to the people affected is more convincing than expecting a general instruction to solve the difficulty on its own.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 355,
       "mainWordCount": 355,
       "phrases": [
@@ -245,32 +518,123 @@
         {
           "label": "Mở bài",
           "text": "Although there may be value in the proposal that cities should protect accessible public green spaces, a practical difficulty is that a poorly maintained park may not feel welcoming. Understanding why this happens is important before suggesting a solution. Otherwise, the same problem may return even after people have spent time and effort trying to improve the situation.",
-          "noteVi": "Giới thiệu đúng vấn đề được hỏi."
+          "noteVi": "Giới thiệu đúng vấn đề được hỏi.",
+          "parts": [
+            {
+              "text": "Although there may be value in ",
+              "kind": "detail"
+            },
+            {
+              "text": "the proposal that",
+              "kind": "frame",
+              "labelVi": "Giới thiệu đề xuất + mệnh đề"
+            },
+            {
+              "text": " cities should protect accessible public green spaces, a practical difficulty is that a poorly maintained park may not feel welcoming. Understanding why this happens is important before suggesting a solution. Otherwise, the same problem may return even after people have spent time and effort trying to improve the situation.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Nguyên nhân",
           "text": "One reason for the difficulty is that funding may cover construction but not regular care. This can help explain why a poorly maintained park may not feel welcoming. Consider the following situation: a parent may avoid a playground when damaged equipment has not been repaired. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
-          "noteVi": "Nối điều kiện tổ chức với vấn đề."
+          "noteVi": "Nối điều kiện tổ chức với vấn đề.",
+          "parts": [
+            {
+              "text": "One reason for the difficulty is that",
+              "kind": "frame",
+              "labelVi": "Nêu nguyên nhân + mệnh đề"
+            },
+            {
+              "text": " funding may cover construction but not regular care. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This can help explain why",
+              "kind": "frame",
+              "labelVi": "Nối nguyên nhân với hiện tượng"
+            },
+            {
+              "text": " a poorly maintained park may not feel welcoming. ",
+              "kind": "detail"
+            },
+            {
+              "text": "Consider the following situation:",
+              "kind": "frame",
+              "labelVi": "Dẫn một tình huống minh họa"
+            },
+            {
+              "text": " a parent may avoid a playground when damaged equipment has not been repaired. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Giải pháp",
           "text": "A practical response would be to plan for maintenance as well as new facilities. For example, a local team could inspect paths and play equipment regularly and provide a clear way to report problems. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
-          "noteVi": "Hành động cụ thể có ví dụ thực hiện."
+          "noteVi": "Hành động cụ thể có ví dụ thực hiện.",
+          "parts": [
+            {
+              "text": "A practical response would be to",
+              "kind": "frame",
+              "labelVi": "Đưa giải pháp + động từ nguyên mẫu"
+            },
+            {
+              "text": " plan for maintenance as well as new facilities. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a local team could inspect paths and play equipment regularly and provide a clear way to report problems. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Vì sao giải pháp đáng làm?",
           "text": "The aim is not to abandon the useful parts of the idea. It is to make them accessible in practice. For example, an older resident can take a short walk and meet neighbours on a bench close to home. This illustrates the potential value of the fact that residents have places to walk, rest and meet other people. Asking participants what prevents them from benefiting would help organisers choose changes that actually matter.",
-          "noteVi": "Công viên công cộng cần dễ tiếp cận và được bảo trì để người dân thực sự dùng được."
+          "noteVi": "Công viên công cộng cần dễ tiếp cận và được bảo trì để người dân thực sự dùng được.",
+          "parts": [
+            {
+              "text": "The aim is not to abandon the useful parts of the idea. It is to make them accessible in practice. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " an older resident can take a short walk and meet neighbours on a bench close to home. This illustrates the potential value of the fact that residents have places to walk, rest and meet other people. Asking participants what prevents them from benefiting would help organisers choose changes that actually matter.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, the problem is linked to the fact that funding may cover construction but not regular care. A practical response is to plan for maintenance as well as new facilities. Trying this carefully and listening to the people affected is more convincing than expecting a general instruction to solve the difficulty on its own.",
-          "noteVi": "Tóm tắt nguyên nhân–giải pháp tương ứng."
+          "noteVi": "Tóm tắt nguyên nhân–giải pháp tương ứng.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " the problem is linked to the fact that funding may cover construction but not regular care. A practical response is to plan for maintenance as well as new facilities. Trying this carefully and listening to the people affected is more convincing than expecting a general instruction to solve the difficulty on its own.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 341,
       "mainWordCount": 341,
       "phrases": [
@@ -320,32 +684,123 @@
         {
           "label": "Mở bài",
           "text": "Although there may be value in the proposal that cities should make cycling safer for short everyday journeys, a practical difficulty is that unsafe roads can discourage inexperienced riders. Understanding why this happens is important before suggesting a solution. Otherwise, the same problem may return even after people have spent time and effort trying to improve the situation.",
-          "noteVi": "Giới thiệu đúng vấn đề được hỏi."
+          "noteVi": "Giới thiệu đúng vấn đề được hỏi.",
+          "parts": [
+            {
+              "text": "Although there may be value in ",
+              "kind": "detail"
+            },
+            {
+              "text": "the proposal that",
+              "kind": "frame",
+              "labelVi": "Giới thiệu đề xuất + mệnh đề"
+            },
+            {
+              "text": " cities should make cycling safer for short everyday journeys, a practical difficulty is that unsafe roads can discourage inexperienced riders. Understanding why this happens is important before suggesting a solution. Otherwise, the same problem may return even after people have spent time and effort trying to improve the situation.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Nguyên nhân",
           "text": "One reason for the difficulty is that cycling routes may be disconnected or planned without considering junctions. This can help explain why unsafe roads can discourage inexperienced riders. Consider the following situation: a new rider may stop cycling after being forced into fast traffic where a cycle lane suddenly ends. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
-          "noteVi": "Nối điều kiện tổ chức với vấn đề."
+          "noteVi": "Nối điều kiện tổ chức với vấn đề.",
+          "parts": [
+            {
+              "text": "One reason for the difficulty is that",
+              "kind": "frame",
+              "labelVi": "Nêu nguyên nhân + mệnh đề"
+            },
+            {
+              "text": " cycling routes may be disconnected or planned without considering junctions. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This can help explain why",
+              "kind": "frame",
+              "labelVi": "Nối nguyên nhân với hiện tượng"
+            },
+            {
+              "text": " unsafe roads can discourage inexperienced riders. ",
+              "kind": "detail"
+            },
+            {
+              "text": "Consider the following situation:",
+              "kind": "frame",
+              "labelVi": "Dẫn một tình huống minh họa"
+            },
+            {
+              "text": " a new rider may stop cycling after being forced into fast traffic where a cycle lane suddenly ends. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Giải pháp",
           "text": "A practical response would be to build connected routes and improve difficult crossings. For example, a city could link a housing area to a school with protected sections and clearly marked crossings. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
-          "noteVi": "Hành động cụ thể có ví dụ thực hiện."
+          "noteVi": "Hành động cụ thể có ví dụ thực hiện.",
+          "parts": [
+            {
+              "text": "A practical response would be to",
+              "kind": "frame",
+              "labelVi": "Đưa giải pháp + động từ nguyên mẫu"
+            },
+            {
+              "text": " build connected routes and improve difficult crossings. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a city could link a housing area to a school with protected sections and clearly marked crossings. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Vì sao giải pháp đáng làm?",
           "text": "The aim is not to abandon the useful parts of the idea. It is to make them accessible in practice. For example, a student can cycle from home to a nearby college if the route avoids fast traffic. This illustrates the potential value of the fact that people have another way to travel without using a car. Asking participants what prevents them from benefiting would help organisers choose changes that actually matter.",
-          "noteVi": "Xe đạp phù hợp quãng ngắn khi đường đi liền mạch và các giao lộ được xử lý an toàn."
+          "noteVi": "Xe đạp phù hợp quãng ngắn khi đường đi liền mạch và các giao lộ được xử lý an toàn.",
+          "parts": [
+            {
+              "text": "The aim is not to abandon the useful parts of the idea. It is to make them accessible in practice. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a student can cycle from home to a nearby college if the route avoids fast traffic. This illustrates the potential value of the fact that people have another way to travel without using a car. Asking participants what prevents them from benefiting would help organisers choose changes that actually matter.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, the problem is linked to the fact that cycling routes may be disconnected or planned without considering junctions. A practical response is to build connected routes and improve difficult crossings. Trying this carefully and listening to the people affected is more convincing than expecting a general instruction to solve the difficulty on its own.",
-          "noteVi": "Tóm tắt nguyên nhân–giải pháp tương ứng."
+          "noteVi": "Tóm tắt nguyên nhân–giải pháp tương ứng.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " the problem is linked to the fact that cycling routes may be disconnected or planned without considering junctions. A practical response is to build connected routes and improve difficult crossings. Trying this carefully and listening to the people affected is more convincing than expecting a general instruction to solve the difficulty on its own.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 344,
       "mainWordCount": 344,
       "phrases": [
@@ -395,32 +850,123 @@
         {
           "label": "Mở bài",
           "text": "Although there may be value in the proposal that households should be given practical advice on reducing unnecessary electricity use, a practical difficulty is that advice may be unrealistic for some homes. Understanding why this happens is important before suggesting a solution. Otherwise, the same problem may return even after people have spent time and effort trying to improve the situation.",
-          "noteVi": "Giới thiệu đúng vấn đề được hỏi."
+          "noteVi": "Giới thiệu đúng vấn đề được hỏi.",
+          "parts": [
+            {
+              "text": "Although there may be value in ",
+              "kind": "detail"
+            },
+            {
+              "text": "the proposal that",
+              "kind": "frame",
+              "labelVi": "Giới thiệu đề xuất + mệnh đề"
+            },
+            {
+              "text": " households should be given practical advice on reducing unnecessary electricity use, a practical difficulty is that advice may be unrealistic for some homes. Understanding why this happens is important before suggesting a solution. Otherwise, the same problem may return even after people have spent time and effort trying to improve the situation.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Nguyên nhân",
           "text": "One reason for the difficulty is that general campaigns may ignore differences in housing and income. This can help explain why advice may be unrealistic for some homes. Consider the following situation: a tenant may be told to buy an expensive new appliance even though the existing one belongs to the landlord. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
-          "noteVi": "Nối điều kiện tổ chức với vấn đề."
+          "noteVi": "Nối điều kiện tổ chức với vấn đề.",
+          "parts": [
+            {
+              "text": "One reason for the difficulty is that",
+              "kind": "frame",
+              "labelVi": "Nêu nguyên nhân + mệnh đề"
+            },
+            {
+              "text": " general campaigns may ignore differences in housing and income. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This can help explain why",
+              "kind": "frame",
+              "labelVi": "Nối nguyên nhân với hiện tượng"
+            },
+            {
+              "text": " advice may be unrealistic for some homes. ",
+              "kind": "detail"
+            },
+            {
+              "text": "Consider the following situation:",
+              "kind": "frame",
+              "labelVi": "Dẫn một tình huống minh họa"
+            },
+            {
+              "text": " a tenant may be told to buy an expensive new appliance even though the existing one belongs to the landlord. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Giải pháp",
           "text": "A practical response would be to offer low-cost suggestions and explain which changes require an owner's permission. For example, a community centre could provide a checklist that separates everyday habits from costly improvements. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
-          "noteVi": "Hành động cụ thể có ví dụ thực hiện."
+          "noteVi": "Hành động cụ thể có ví dụ thực hiện.",
+          "parts": [
+            {
+              "text": "A practical response would be to",
+              "kind": "frame",
+              "labelVi": "Đưa giải pháp + động từ nguyên mẫu"
+            },
+            {
+              "text": " offer low-cost suggestions and explain which changes require an owner's permission. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a community centre could provide a checklist that separates everyday habits from costly improvements. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Vì sao giải pháp đáng làm?",
           "text": "The aim is not to abandon the useful parts of the idea. It is to make them accessible in practice. For example, a family can switch off lights in empty rooms and use a timer for an appliance that is often forgotten. This illustrates the potential value of the fact that families can avoid paying for energy they do not need. Asking participants what prevents them from benefiting would help organisers choose changes that actually matter.",
-          "noteVi": "Tiết kiệm điện nên bắt đầu từ việc dễ làm và phù hợp nhà thuê, thu nhập, thiết bị sẵn có."
+          "noteVi": "Tiết kiệm điện nên bắt đầu từ việc dễ làm và phù hợp nhà thuê, thu nhập, thiết bị sẵn có.",
+          "parts": [
+            {
+              "text": "The aim is not to abandon the useful parts of the idea. It is to make them accessible in practice. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a family can switch off lights in empty rooms and use a timer for an appliance that is often forgotten. This illustrates the potential value of the fact that families can avoid paying for energy they do not need. Asking participants what prevents them from benefiting would help organisers choose changes that actually matter.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, the problem is linked to the fact that general campaigns may ignore differences in housing and income. A practical response is to offer low-cost suggestions and explain which changes require an owner's permission. Trying this carefully and listening to the people affected is more convincing than expecting a general instruction to solve the difficulty on its own.",
-          "noteVi": "Tóm tắt nguyên nhân–giải pháp tương ứng."
+          "noteVi": "Tóm tắt nguyên nhân–giải pháp tương ứng.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " the problem is linked to the fact that general campaigns may ignore differences in housing and income. A practical response is to offer low-cost suggestions and explain which changes require an owner's permission. Trying this carefully and listening to the people affected is more convincing than expecting a general instruction to solve the difficulty on its own.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 357,
       "mainWordCount": 357,
       "phrases": [
@@ -470,32 +1016,123 @@
         {
           "label": "Mở bài",
           "text": "Although there may be value in the proposal that tourists should choose wildlife activities that avoid disturbing animals, a practical difficulty is that visitors may not know which activities are responsible. Understanding why this happens is important before suggesting a solution. Otherwise, the same problem may return even after people have spent time and effort trying to improve the situation.",
-          "noteVi": "Giới thiệu đúng vấn đề được hỏi."
+          "noteVi": "Giới thiệu đúng vấn đề được hỏi.",
+          "parts": [
+            {
+              "text": "Although there may be value in ",
+              "kind": "detail"
+            },
+            {
+              "text": "the proposal that",
+              "kind": "frame",
+              "labelVi": "Giới thiệu đề xuất + mệnh đề"
+            },
+            {
+              "text": " tourists should choose wildlife activities that avoid disturbing animals, a practical difficulty is that visitors may not know which activities are responsible. Understanding why this happens is important before suggesting a solution. Otherwise, the same problem may return even after people have spent time and effort trying to improve the situation.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Nguyên nhân",
           "text": "One reason for the difficulty is that travellers may rely on attractive images rather than asking detailed questions. This can help explain why visitors may not know which activities are responsible. Consider the following situation: a tourist may book a close-contact experience because an advertisement describes it as educational. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
-          "noteVi": "Nối điều kiện tổ chức với vấn đề."
+          "noteVi": "Nối điều kiện tổ chức với vấn đề.",
+          "parts": [
+            {
+              "text": "One reason for the difficulty is that",
+              "kind": "frame",
+              "labelVi": "Nêu nguyên nhân + mệnh đề"
+            },
+            {
+              "text": " travellers may rely on attractive images rather than asking detailed questions. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This can help explain why",
+              "kind": "frame",
+              "labelVi": "Nối nguyên nhân với hiện tượng"
+            },
+            {
+              "text": " visitors may not know which activities are responsible. ",
+              "kind": "detail"
+            },
+            {
+              "text": "Consider the following situation:",
+              "kind": "frame",
+              "labelVi": "Dẫn một tình huống minh họa"
+            },
+            {
+              "text": " a tourist may book a close-contact experience because an advertisement describes it as educational. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Giải pháp",
           "text": "A practical response would be to provide clear information about visitor behaviour and animal care. For example, a tour guide could explain why touching and feeding wildlife are not included and offer observation from a suitable distance. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
-          "noteVi": "Hành động cụ thể có ví dụ thực hiện."
+          "noteVi": "Hành động cụ thể có ví dụ thực hiện.",
+          "parts": [
+            {
+              "text": "A practical response would be to",
+              "kind": "frame",
+              "labelVi": "Đưa giải pháp + động từ nguyên mẫu"
+            },
+            {
+              "text": " provide clear information about visitor behaviour and animal care. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a tour guide could explain why touching and feeding wildlife are not included and offer observation from a suitable distance. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Vì sao giải pháp đáng làm?",
           "text": "The aim is not to abandon the useful parts of the idea. It is to make them accessible in practice. For example, a guided birdwatching group can use binoculars instead of approaching a nesting area. This illustrates the potential value of the fact that visitors can enjoy nature without treating animals as objects for entertainment. Asking participants what prevents them from benefiting would help organisers choose changes that actually matter.",
-          "noteVi": "Tham quan thiên nhiên cần quan sát có khoảng cách; nên hỏi cách chăm sóc động vật thay vì chỉ xem quảng cáo."
+          "noteVi": "Tham quan thiên nhiên cần quan sát có khoảng cách; nên hỏi cách chăm sóc động vật thay vì chỉ xem quảng cáo.",
+          "parts": [
+            {
+              "text": "The aim is not to abandon the useful parts of the idea. It is to make them accessible in practice. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a guided birdwatching group can use binoculars instead of approaching a nesting area. This illustrates the potential value of the fact that visitors can enjoy nature without treating animals as objects for entertainment. Asking participants what prevents them from benefiting would help organisers choose changes that actually matter.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, the problem is linked to the fact that travellers may rely on attractive images rather than asking detailed questions. A practical response is to provide clear information about visitor behaviour and animal care. Trying this carefully and listening to the people affected is more convincing than expecting a general instruction to solve the difficulty on its own.",
-          "noteVi": "Tóm tắt nguyên nhân–giải pháp tương ứng."
+          "noteVi": "Tóm tắt nguyên nhân–giải pháp tương ứng.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " the problem is linked to the fact that travellers may rely on attractive images rather than asking detailed questions. A practical response is to provide clear information about visitor behaviour and animal care. Trying this carefully and listening to the people affected is more convincing than expecting a general instruction to solve the difficulty on its own.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 351,
       "mainWordCount": 351,
       "phrases": [
@@ -545,32 +1182,123 @@
         {
           "label": "Mở bài",
           "text": "Although there may be value in the proposal that families should plan meals before shopping for food, a practical difficulty is that a rigid plan may not fit a changing schedule. Understanding why this happens is important before suggesting a solution. Otherwise, the same problem may return even after people have spent time and effort trying to improve the situation.",
-          "noteVi": "Giới thiệu đúng vấn đề được hỏi."
+          "noteVi": "Giới thiệu đúng vấn đề được hỏi.",
+          "parts": [
+            {
+              "text": "Although there may be value in ",
+              "kind": "detail"
+            },
+            {
+              "text": "the proposal that",
+              "kind": "frame",
+              "labelVi": "Giới thiệu đề xuất + mệnh đề"
+            },
+            {
+              "text": " families should plan meals before shopping for food, a practical difficulty is that a rigid plan may not fit a changing schedule. Understanding why this happens is important before suggesting a solution. Otherwise, the same problem may return even after people have spent time and effort trying to improve the situation.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Nguyên nhân",
           "text": "One reason for the difficulty is that shopping plans may be too ambitious and leave no room for change. This can help explain why a rigid plan may not fit a changing schedule. Consider the following situation: a worker who comes home late may order food while ingredients for a complicated dinner remain in the fridge. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
-          "noteVi": "Nối điều kiện tổ chức với vấn đề."
+          "noteVi": "Nối điều kiện tổ chức với vấn đề.",
+          "parts": [
+            {
+              "text": "One reason for the difficulty is that",
+              "kind": "frame",
+              "labelVi": "Nêu nguyên nhân + mệnh đề"
+            },
+            {
+              "text": " shopping plans may be too ambitious and leave no room for change. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This can help explain why",
+              "kind": "frame",
+              "labelVi": "Nối nguyên nhân với hiện tượng"
+            },
+            {
+              "text": " a rigid plan may not fit a changing schedule. ",
+              "kind": "detail"
+            },
+            {
+              "text": "Consider the following situation:",
+              "kind": "frame",
+              "labelVi": "Dẫn một tình huống minh họa"
+            },
+            {
+              "text": " a worker who comes home late may order food while ingredients for a complicated dinner remain in the fridge. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Giải pháp",
           "text": "A practical response would be to choose flexible meals and check existing food before buying more. For example, someone could plan two simple dishes using similar ingredients and keep one evening free for leftovers. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
-          "noteVi": "Hành động cụ thể có ví dụ thực hiện."
+          "noteVi": "Hành động cụ thể có ví dụ thực hiện.",
+          "parts": [
+            {
+              "text": "A practical response would be to",
+              "kind": "frame",
+              "labelVi": "Đưa giải pháp + động từ nguyên mẫu"
+            },
+            {
+              "text": " choose flexible meals and check existing food before buying more. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " someone could plan two simple dishes using similar ingredients and keep one evening free for leftovers. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Vì sao giải pháp đáng làm?",
           "text": "The aim is not to abandon the useful parts of the idea. It is to make them accessible in practice. For example, a family can use the same vegetables in a soup and a rice dish instead of buying separate ingredients for every meal. This illustrates the potential value of the fact that households can use more of the food they buy. Asking participants what prevents them from benefiting would help organisers choose changes that actually matter.",
-          "noteVi": "Lên thực đơn giúp bớt mua thừa; kế hoạch cần linh hoạt để dùng được đồ còn lại khi lịch thay đổi."
+          "noteVi": "Lên thực đơn giúp bớt mua thừa; kế hoạch cần linh hoạt để dùng được đồ còn lại khi lịch thay đổi.",
+          "parts": [
+            {
+              "text": "The aim is not to abandon the useful parts of the idea. It is to make them accessible in practice. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a family can use the same vegetables in a soup and a rice dish instead of buying separate ingredients for every meal. This illustrates the potential value of the fact that households can use more of the food they buy. Asking participants what prevents them from benefiting would help organisers choose changes that actually matter.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, the problem is linked to the fact that shopping plans may be too ambitious and leave no room for change. A practical response is to choose flexible meals and check existing food before buying more. Trying this carefully and listening to the people affected is more convincing than expecting a general instruction to solve the difficulty on its own.",
-          "noteVi": "Tóm tắt nguyên nhân–giải pháp tương ứng."
+          "noteVi": "Tóm tắt nguyên nhân–giải pháp tương ứng.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " the problem is linked to the fact that shopping plans may be too ambitious and leave no room for change. A practical response is to choose flexible meals and check existing food before buying more. Trying this carefully and listening to the people affected is more convincing than expecting a general instruction to solve the difficulty on its own.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 364,
       "mainWordCount": 364,
       "phrases": [
@@ -620,32 +1348,123 @@
         {
           "label": "Mở bài",
           "text": "Although there may be value in the proposal that coastal communities should combine beach clean-ups with efforts to prevent litter, a practical difficulty is that the beach may quickly become dirty again. Understanding why this happens is important before suggesting a solution. Otherwise, the same problem may return even after people have spent time and effort trying to improve the situation.",
-          "noteVi": "Giới thiệu đúng vấn đề được hỏi."
+          "noteVi": "Giới thiệu đúng vấn đề được hỏi.",
+          "parts": [
+            {
+              "text": "Although there may be value in ",
+              "kind": "detail"
+            },
+            {
+              "text": "the proposal that",
+              "kind": "frame",
+              "labelVi": "Giới thiệu đề xuất + mệnh đề"
+            },
+            {
+              "text": " coastal communities should combine beach clean-ups with efforts to prevent litter, a practical difficulty is that the beach may quickly become dirty again. Understanding why this happens is important before suggesting a solution. Otherwise, the same problem may return even after people have spent time and effort trying to improve the situation.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Nguyên nhân",
           "text": "One reason for the difficulty is that there may be too few bins or little information about local waste rules. This can help explain why the beach may quickly become dirty again. Consider the following situation: volunteers may return a week later and find new drink cups near the same picnic area. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
-          "noteVi": "Nối điều kiện tổ chức với vấn đề."
+          "noteVi": "Nối điều kiện tổ chức với vấn đề.",
+          "parts": [
+            {
+              "text": "One reason for the difficulty is that",
+              "kind": "frame",
+              "labelVi": "Nêu nguyên nhân + mệnh đề"
+            },
+            {
+              "text": " there may be too few bins or little information about local waste rules. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This can help explain why",
+              "kind": "frame",
+              "labelVi": "Nối nguyên nhân với hiện tượng"
+            },
+            {
+              "text": " the beach may quickly become dirty again. ",
+              "kind": "detail"
+            },
+            {
+              "text": "Consider the following situation:",
+              "kind": "frame",
+              "labelVi": "Dẫn một tình huống minh họa"
+            },
+            {
+              "text": " volunteers may return a week later and find new drink cups near the same picnic area. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Giải pháp",
           "text": "A practical response would be to improve waste facilities and explain how visitors can avoid leaving rubbish. For example, organisers could use the clean-up record to decide where covered bins and clear signs are most needed. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
-          "noteVi": "Hành động cụ thể có ví dụ thực hiện."
+          "noteVi": "Hành động cụ thể có ví dụ thực hiện.",
+          "parts": [
+            {
+              "text": "A practical response would be to",
+              "kind": "frame",
+              "labelVi": "Đưa giải pháp + động từ nguyên mẫu"
+            },
+            {
+              "text": " improve waste facilities and explain how visitors can avoid leaving rubbish. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " organisers could use the clean-up record to decide where covered bins and clear signs are most needed. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Vì sao giải pháp đáng làm?",
           "text": "The aim is not to abandon the useful parts of the idea. It is to make them accessible in practice. For example, a family can help record the kinds of packaging found on one section of beach. This illustrates the potential value of the fact that volunteers can improve a public place and understand the scale of the problem. Asking participants what prevents them from benefiting would help organisers choose changes that actually matter.",
-          "noteVi": "Dọn rác giúp cải thiện trước mắt; cần dùng kết quả để ngăn rác mới xuất hiện."
+          "noteVi": "Dọn rác giúp cải thiện trước mắt; cần dùng kết quả để ngăn rác mới xuất hiện.",
+          "parts": [
+            {
+              "text": "The aim is not to abandon the useful parts of the idea. It is to make them accessible in practice. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a family can help record the kinds of packaging found on one section of beach. This illustrates the potential value of the fact that volunteers can improve a public place and understand the scale of the problem. Asking participants what prevents them from benefiting would help organisers choose changes that actually matter.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, the problem is linked to the fact that there may be too few bins or little information about local waste rules. A practical response is to improve waste facilities and explain how visitors can avoid leaving rubbish. Trying this carefully and listening to the people affected is more convincing than expecting a general instruction to solve the difficulty on its own.",
-          "noteVi": "Tóm tắt nguyên nhân–giải pháp tương ứng."
+          "noteVi": "Tóm tắt nguyên nhân–giải pháp tương ứng.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " the problem is linked to the fact that there may be too few bins or little information about local waste rules. A practical response is to improve waste facilities and explain how visitors can avoid leaving rubbish. Trying this carefully and listening to the people affected is more convincing than expecting a general instruction to solve the difficulty on its own.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 362,
       "mainWordCount": 362,
       "phrases": [
@@ -695,32 +1514,123 @@
         {
           "label": "Mở bài",
           "text": "Although there may be value in the proposal that communities should encourage practical water-saving habits, a practical difficulty is that simple advice may overlook problems beyond a resident's control. Understanding why this happens is important before suggesting a solution. Otherwise, the same problem may return even after people have spent time and effort trying to improve the situation.",
-          "noteVi": "Giới thiệu đúng vấn đề được hỏi."
+          "noteVi": "Giới thiệu đúng vấn đề được hỏi.",
+          "parts": [
+            {
+              "text": "Although there may be value in ",
+              "kind": "detail"
+            },
+            {
+              "text": "the proposal that",
+              "kind": "frame",
+              "labelVi": "Giới thiệu đề xuất + mệnh đề"
+            },
+            {
+              "text": " communities should encourage practical water-saving habits, a practical difficulty is that simple advice may overlook problems beyond a resident's control. Understanding why this happens is important before suggesting a solution. Otherwise, the same problem may return even after people have spent time and effort trying to improve the situation.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Nguyên nhân",
           "text": "One reason for the difficulty is that responsibility for repairs may be unclear. This can help explain why simple advice may overlook problems beyond a resident's control. Consider the following situation: a tenant may report a leak repeatedly but be unable to access the damaged pipe. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
-          "noteVi": "Nối điều kiện tổ chức với vấn đề."
+          "noteVi": "Nối điều kiện tổ chức với vấn đề.",
+          "parts": [
+            {
+              "text": "One reason for the difficulty is that",
+              "kind": "frame",
+              "labelVi": "Nêu nguyên nhân + mệnh đề"
+            },
+            {
+              "text": " responsibility for repairs may be unclear. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This can help explain why",
+              "kind": "frame",
+              "labelVi": "Nối nguyên nhân với hiện tượng"
+            },
+            {
+              "text": " simple advice may overlook problems beyond a resident's control. ",
+              "kind": "detail"
+            },
+            {
+              "text": "Consider the following situation:",
+              "kind": "frame",
+              "labelVi": "Dẫn một tình huống minh họa"
+            },
+            {
+              "text": " a tenant may report a leak repeatedly but be unable to access the damaged pipe. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Giải pháp",
           "text": "A practical response would be to give residents an easy way to report leaks and explain who should respond. For example, a building manager could keep a repair log and confirm when each report has been checked. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
-          "noteVi": "Hành động cụ thể có ví dụ thực hiện."
+          "noteVi": "Hành động cụ thể có ví dụ thực hiện.",
+          "parts": [
+            {
+              "text": "A practical response would be to",
+              "kind": "frame",
+              "labelVi": "Đưa giải pháp + động từ nguyên mẫu"
+            },
+            {
+              "text": " give residents an easy way to report leaks and explain who should respond. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a building manager could keep a repair log and confirm when each report has been checked. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Vì sao giải pháp đáng làm?",
           "text": "The aim is not to abandon the useful parts of the idea. It is to make them accessible in practice. For example, a household can repair a dripping tap and use a bowl when washing a small amount of produce. This illustrates the potential value of the fact that people can avoid wasting treated water. Asking participants what prevents them from benefiting would help organisers choose changes that actually matter.",
-          "noteVi": "Thói quen tiết kiệm nước cần đi cùng cách báo và sửa rò rỉ rõ trách nhiệm."
+          "noteVi": "Thói quen tiết kiệm nước cần đi cùng cách báo và sửa rò rỉ rõ trách nhiệm.",
+          "parts": [
+            {
+              "text": "The aim is not to abandon the useful parts of the idea. It is to make them accessible in practice. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a household can repair a dripping tap and use a bowl when washing a small amount of produce. This illustrates the potential value of the fact that people can avoid wasting treated water. Asking participants what prevents them from benefiting would help organisers choose changes that actually matter.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, the problem is linked to the fact that responsibility for repairs may be unclear. A practical response is to give residents an easy way to report leaks and explain who should respond. Trying this carefully and listening to the people affected is more convincing than expecting a general instruction to solve the difficulty on its own.",
-          "noteVi": "Tóm tắt nguyên nhân–giải pháp tương ứng."
+          "noteVi": "Tóm tắt nguyên nhân–giải pháp tương ứng.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " the problem is linked to the fact that responsibility for repairs may be unclear. A practical response is to give residents an easy way to report leaks and explain who should respond. Trying this carefully and listening to the people affected is more convincing than expecting a general instruction to solve the difficulty on its own.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 345,
       "mainWordCount": 345,
       "phrases": [

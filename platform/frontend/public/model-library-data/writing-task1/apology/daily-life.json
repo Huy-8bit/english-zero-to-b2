@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-05-v1",
+  "version": "2026-11-05-v2-frames",
   "samples": [
     {
       "id": "writing-task1-apology-daily-life-01",
@@ -9,40 +9,128 @@
       "number": 1,
       "title": "Thói quen đi bộ",
       "focus": "walking as a daily habit",
-      "prompt": "You let a friend down while preparing for a neighbourhood walking event. Apologise, explain what happened, and offer a specific way to put things right.",
+      "prompt": "You let your friend Alex down while preparing for a neighbourhood walking event. Apologise, explain what happened, and propose a specific way to put things right.",
       "requirementsVi": [
-        "Xin lỗi trực tiếp về việc đã làm.",
-        "Giải thích và nhận trách nhiệm.",
-        "Đề xuất cách bù lại và tránh lặp lại."
+        "Sorry for + danh từ / V-ing; nhận trách nhiệm.",
+        "Giải thích không thay cho việc nhận lỗi.",
+        "Bù lại bằng hành động cụ thể và tránh lặp lại."
       ],
       "summaryVi": "Đi bộ dễ thành thói quen khi đường tới nơi cần đến thuận tiện và không bị cản trở.",
       "paragraphs": [
         {
-          "label": "Xin lỗi",
-          "text": "Hi Alex,\n\nI am very sorry for missing our planning meeting while we were preparing for a neighbourhood walking event. I know you were counting on me, and I understand that my mistake made your day more difficult.",
-          "noteVi": "Nêu chính xác lỗi, không xin lỗi chung chung."
+          "label": "Mở thư và xin lỗi",
+          "text": "Hi Alex,\n\nI am really sorry for missing our planning meeting while we were preparing for a neighbourhood walking event. I know you were counting on me, and I understand that my mistake made things more difficult for you.",
+          "noteVi": "Sorry for + danh từ / V-ing; nhận trách nhiệm.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nI am really sorry for ",
+              "kind": "frame"
+            },
+            {
+              "text": "missing our planning meeting",
+              "kind": "detail",
+              "labelVi": "lỗi cần xin lỗi — V-ing"
+            },
+            {
+              "text": " while we were preparing for ",
+              "kind": "frame"
+            },
+            {
+              "text": "a neighbourhood walking event",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". I know you were counting on me, and I understand that my mistake made things more difficult for you.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nI am really sorry for [lỗi cần xin lỗi — V-ing] while we were preparing for [sự kiện / hoạt động]. I know you were counting on me, and I understand that my mistake made things more difficult for you."
         },
         {
           "label": "Giải thích",
-          "text": "The reason was that my train was cancelled. However, I should still have contacted you earlier. I realise that you had to change the arrangements without much notice, and I do not want you to think that I took your help for granted.",
-          "noteVi": "Giải thích không thay cho nhận trách nhiệm."
+          "text": "The reason was that my train was cancelled. However, I should have contacted you earlier. I do not want you to think that I took your help for granted. I understand why you were disappointed, and I will try to be more careful.",
+          "noteVi": "Giải thích không thay cho việc nhận lỗi.",
+          "parts": [
+            {
+              "text": "The reason was that ",
+              "kind": "frame"
+            },
+            {
+              "text": "my train was cancelled",
+              "kind": "detail",
+              "labelVi": "lý do — chủ ngữ + động từ"
+            },
+            {
+              "text": ". However, I should have contacted you earlier. I do not want you to think that I took your help for granted. I understand why you were disappointed, and I will try to be more careful.",
+              "kind": "frame"
+            }
+          ],
+          "template": "The reason was that [lý do — chủ ngữ + động từ]. However, I should have contacted you earlier. I do not want you to think that I took your help for granted. I understand why you were disappointed, and I will try to be more careful."
         },
         {
-          "label": "Khắc phục",
-          "text": "To make up for this, I can come to the park entrance early before the next session and help prepare everything. I will bring comfortable walking shoes and check the plan with you in advance. I would also like to help participants explore a short local route and note useful improvements, so that you do not have to manage the activity alone.",
-          "noteVi": "Việc sửa sai phù hợp cùng hoạt động."
+          "label": "Bù lại",
+          "text": "To make up for this, I can arrive early at the next session and help prepare the materials. I will bring comfortable walking shoes and check the arrangements with you in advance. Next time, I will let you know straight away if there is a problem. Please tell me if this would help.",
+          "noteVi": "Bù lại bằng hành động cụ thể và tránh lặp lại.",
+          "parts": [
+            {
+              "text": "To make up for this, I can ",
+              "kind": "frame"
+            },
+            {
+              "text": "arrive early at the next session and help prepare the materials",
+              "kind": "detail",
+              "labelVi": "cách sửa — động từ nguyên mẫu"
+            },
+            {
+              "text": ". I will bring ",
+              "kind": "frame"
+            },
+            {
+              "text": "comfortable walking shoes",
+              "kind": "detail",
+              "labelVi": "đồ cần mang"
+            },
+            {
+              "text": " and check the arrangements with you in advance. Next time, I will let you know straight away if there is a problem. Please tell me if this would help.",
+              "kind": "frame"
+            }
+          ],
+          "template": "To make up for this, I can [cách sửa — động từ nguyên mẫu]. I will bring [đồ cần mang] and check the arrangements with you in advance. Next time, I will let you know straight away if there is a problem. Please tell me if this would help."
         },
         {
-          "label": "Cam kết và kết",
-          "text": "Next time, I will confirm the details in writing and let you know immediately if there is a problem. Please tell me if my suggestion would help. Once again, I am sorry for letting you down.\n\nBest wishes,\nMinh",
-          "noteVi": "Cam kết cụ thể và hỏi cách sửa có phù hợp không."
+          "label": "Kết thư",
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 182,
-      "mainWordCount": 182,
+      "register": "informal",
+      "wordCount": 169,
+      "mainWordCount": 169,
       "phrases": [
         {
           "en": "everyday walking",
@@ -70,45 +158,133 @@
       "number": 2,
       "title": "Nấu ăn ở nhà",
       "focus": "cooking simple meals at home",
-      "prompt": "You let a friend down while preparing for a simple home cooking class. Apologise, explain what happened, and offer a specific way to put things right.",
+      "prompt": "You let your friend Alex down while preparing for a simple home cooking class. Apologise, explain what happened, and propose a specific way to put things right.",
       "requirementsVi": [
-        "Xin lỗi trực tiếp về việc đã làm.",
-        "Giải thích và nhận trách nhiệm.",
-        "Đề xuất cách bù lại và tránh lặp lại."
+        "Sorry for + danh từ / V-ing; nhận trách nhiệm.",
+        "Giải thích không thay cho việc nhận lỗi.",
+        "Bù lại bằng hành động cụ thể và tránh lặp lại."
       ],
       "summaryVi": "Biết vài món đơn giản giúp tự chủ ăn uống; công thức nên phù hợp bếp và thời gian thực tế.",
       "paragraphs": [
         {
-          "label": "Xin lỗi",
-          "text": "Hi Alex,\n\nI am very sorry for replying to your message so late while we were preparing for a simple home cooking class. I know you were counting on me, and I understand that my mistake made your day more difficult.",
-          "noteVi": "Nêu chính xác lỗi, không xin lỗi chung chung."
+          "label": "Mở thư và xin lỗi",
+          "text": "Hi Alex,\n\nI am really sorry for replying to your message so late while we were preparing for a simple home cooking class. I know you were counting on me, and I understand that my mistake made things more difficult for you.",
+          "noteVi": "Sorry for + danh từ / V-ing; nhận trách nhiệm.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nI am really sorry for ",
+              "kind": "frame"
+            },
+            {
+              "text": "replying to your message so late",
+              "kind": "detail",
+              "labelVi": "lỗi cần xin lỗi — V-ing"
+            },
+            {
+              "text": " while we were preparing for ",
+              "kind": "frame"
+            },
+            {
+              "text": "a simple home cooking class",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". I know you were counting on me, and I understand that my mistake made things more difficult for you.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nI am really sorry for [lỗi cần xin lỗi — V-ing] while we were preparing for [sự kiện / hoạt động]. I know you were counting on me, and I understand that my mistake made things more difficult for you."
         },
         {
           "label": "Giải thích",
-          "text": "The reason was that I had saved your message in the wrong folder. However, I should still have contacted you earlier. I realise that you had to change the arrangements without much notice, and I do not want you to think that I took your help for granted.",
-          "noteVi": "Giải thích không thay cho nhận trách nhiệm."
+          "text": "The reason was that I had saved your message in the wrong folder. However, I should have contacted you earlier. I do not want you to think that I took your help for granted. I understand why you were disappointed, and I will try to be more careful.",
+          "noteVi": "Giải thích không thay cho việc nhận lỗi.",
+          "parts": [
+            {
+              "text": "The reason was that ",
+              "kind": "frame"
+            },
+            {
+              "text": "I had saved your message in the wrong folder",
+              "kind": "detail",
+              "labelVi": "lý do — chủ ngữ + động từ"
+            },
+            {
+              "text": ". However, I should have contacted you earlier. I do not want you to think that I took your help for granted. I understand why you were disappointed, and I will try to be more careful.",
+              "kind": "frame"
+            }
+          ],
+          "template": "The reason was that [lý do — chủ ngữ + động từ]. However, I should have contacted you earlier. I do not want you to think that I took your help for granted. I understand why you were disappointed, and I will try to be more careful."
         },
         {
-          "label": "Khắc phục",
-          "text": "To make up for this, I can come to the community centre kitchen early before the next session and help prepare everything. I will bring a food container and check the plan with you in advance. I would also like to help participants prepare an affordable meal using basic equipment, so that you do not have to manage the activity alone.",
-          "noteVi": "Việc sửa sai phù hợp cùng hoạt động."
+          "label": "Bù lại",
+          "text": "To make up for this, I can arrive early at the next session and help prepare the materials. I will bring a food container and check the arrangements with you in advance. Next time, I will let you know straight away if there is a problem. Please tell me if this would help.",
+          "noteVi": "Bù lại bằng hành động cụ thể và tránh lặp lại.",
+          "parts": [
+            {
+              "text": "To make up for this, I can ",
+              "kind": "frame"
+            },
+            {
+              "text": "arrive early at the next session and help prepare the materials",
+              "kind": "detail",
+              "labelVi": "cách sửa — động từ nguyên mẫu"
+            },
+            {
+              "text": ". I will bring ",
+              "kind": "frame"
+            },
+            {
+              "text": "a food container",
+              "kind": "detail",
+              "labelVi": "đồ cần mang"
+            },
+            {
+              "text": " and check the arrangements with you in advance. Next time, I will let you know straight away if there is a problem. Please tell me if this would help.",
+              "kind": "frame"
+            }
+          ],
+          "template": "To make up for this, I can [cách sửa — động từ nguyên mẫu]. I will bring [đồ cần mang] and check the arrangements with you in advance. Next time, I will let you know straight away if there is a problem. Please tell me if this would help."
         },
         {
-          "label": "Cam kết và kết",
-          "text": "Next time, I will confirm the details in writing and let you know immediately if there is a problem. Please tell me if my suggestion would help. Once again, I am sorry for letting you down.\n\nBest wishes,\nMinh",
-          "noteVi": "Cam kết cụ thể và hỏi cách sửa có phù hợp không."
+          "label": "Kết thư",
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 189,
-      "mainWordCount": 189,
+      "register": "informal",
+      "wordCount": 177,
+      "mainWordCount": 177,
       "phrases": [
         {
           "en": "basic equipment",
           "vi": "dụng cụ cơ bản",
-          "inAnswer": true
+          "inAnswer": false
         },
         {
           "en": "simple recipes",
@@ -131,40 +307,128 @@
       "number": 3,
       "title": "Thể thao đồng đội",
       "focus": "team sports in the community",
-      "prompt": "You let a friend down while preparing for a beginner community sports session. Apologise, explain what happened, and offer a specific way to put things right.",
+      "prompt": "You let your friend Alex down while preparing for a beginner community sports session. Apologise, explain what happened, and propose a specific way to put things right.",
       "requirementsVi": [
-        "Xin lỗi trực tiếp về việc đã làm.",
-        "Giải thích và nhận trách nhiệm.",
-        "Đề xuất cách bù lại và tránh lặp lại."
+        "Sorry for + danh từ / V-ing; nhận trách nhiệm.",
+        "Giải thích không thay cho việc nhận lỗi.",
+        "Bù lại bằng hành động cụ thể và tránh lặp lại."
       ],
       "summaryVi": "Thể thao nhóm tạo kết nối; buổi dành cho người mới cần thân thiện và cho mọi người tham gia.",
       "paragraphs": [
         {
-          "label": "Xin lỗi",
-          "text": "Hi Alex,\n\nI am very sorry for forgetting to bring the materials I promised while we were preparing for a beginner community sports session. I know you were counting on me, and I understand that my mistake made your day more difficult.",
-          "noteVi": "Nêu chính xác lỗi, không xin lỗi chung chung."
+          "label": "Mở thư và xin lỗi",
+          "text": "Hi Alex,\n\nI am really sorry for forgetting to bring the materials I promised while we were preparing for a beginner community sports session. I know you were counting on me, and I understand that my mistake made things more difficult for you.",
+          "noteVi": "Sorry for + danh từ / V-ing; nhận trách nhiệm.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nI am really sorry for ",
+              "kind": "frame"
+            },
+            {
+              "text": "forgetting to bring the materials I promised",
+              "kind": "detail",
+              "labelVi": "lỗi cần xin lỗi — V-ing"
+            },
+            {
+              "text": " while we were preparing for ",
+              "kind": "frame"
+            },
+            {
+              "text": "a beginner community sports session",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". I know you were counting on me, and I understand that my mistake made things more difficult for you.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nI am really sorry for [lỗi cần xin lỗi — V-ing] while we were preparing for [sự kiện / hoạt động]. I know you were counting on me, and I understand that my mistake made things more difficult for you."
         },
         {
           "label": "Giải thích",
-          "text": "The reason was that I left the bag at home while rushing to catch a bus. However, I should still have contacted you earlier. I realise that you had to change the arrangements without much notice, and I do not want you to think that I took your help for granted.",
-          "noteVi": "Giải thích không thay cho nhận trách nhiệm."
+          "text": "The reason was that I left the bag at home while rushing to catch a bus. However, I should have contacted you earlier. I do not want you to think that I took your help for granted. I understand why you were disappointed, and I will try to be more careful.",
+          "noteVi": "Giải thích không thay cho việc nhận lỗi.",
+          "parts": [
+            {
+              "text": "The reason was that ",
+              "kind": "frame"
+            },
+            {
+              "text": "I left the bag at home while rushing to catch a bus",
+              "kind": "detail",
+              "labelVi": "lý do — chủ ngữ + động từ"
+            },
+            {
+              "text": ". However, I should have contacted you earlier. I do not want you to think that I took your help for granted. I understand why you were disappointed, and I will try to be more careful.",
+              "kind": "frame"
+            }
+          ],
+          "template": "The reason was that [lý do — chủ ngữ + động từ]. However, I should have contacted you earlier. I do not want you to think that I took your help for granted. I understand why you were disappointed, and I will try to be more careful."
         },
         {
-          "label": "Khắc phục",
-          "text": "To make up for this, I can come to the local sports centre early before the next session and help prepare everything. I will bring sports shoes and water and check the plan with you in advance. I would also like to help participants try simple team games in a friendly group, so that you do not have to manage the activity alone.",
-          "noteVi": "Việc sửa sai phù hợp cùng hoạt động."
+          "label": "Bù lại",
+          "text": "To make up for this, I can arrive early at the next session and help prepare the materials. I will bring sports shoes and water and check the arrangements with you in advance. Next time, I will let you know straight away if there is a problem. Please tell me if this would help.",
+          "noteVi": "Bù lại bằng hành động cụ thể và tránh lặp lại.",
+          "parts": [
+            {
+              "text": "To make up for this, I can ",
+              "kind": "frame"
+            },
+            {
+              "text": "arrive early at the next session and help prepare the materials",
+              "kind": "detail",
+              "labelVi": "cách sửa — động từ nguyên mẫu"
+            },
+            {
+              "text": ". I will bring ",
+              "kind": "frame"
+            },
+            {
+              "text": "sports shoes and water",
+              "kind": "detail",
+              "labelVi": "đồ cần mang"
+            },
+            {
+              "text": " and check the arrangements with you in advance. Next time, I will let you know straight away if there is a problem. Please tell me if this would help.",
+              "kind": "frame"
+            }
+          ],
+          "template": "To make up for this, I can [cách sửa — động từ nguyên mẫu]. I will bring [đồ cần mang] and check the arrangements with you in advance. Next time, I will let you know straight away if there is a problem. Please tell me if this would help."
         },
         {
-          "label": "Cam kết và kết",
-          "text": "Next time, I will confirm the details in writing and let you know immediately if there is a problem. Please tell me if my suggestion would help. Once again, I am sorry for letting you down.\n\nBest wishes,\nMinh",
-          "noteVi": "Cam kết cụ thể và hỏi cách sửa có phù hợp không."
+          "label": "Kết thư",
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 195,
-      "mainWordCount": 195,
+      "register": "informal",
+      "wordCount": 182,
+      "mainWordCount": 182,
       "phrases": [
         {
           "en": "a beginner session",
@@ -192,40 +456,128 @@
       "number": 4,
       "title": "Ngủ và dùng điện thoại",
       "focus": "phone use before bedtime",
-      "prompt": "You let a friend down while preparing for an evening routine discussion. Apologise, explain what happened, and offer a specific way to put things right.",
+      "prompt": "You let your friend Alex down while preparing for an evening routine discussion. Apologise, explain what happened, and propose a specific way to put things right.",
       "requirementsVi": [
-        "Xin lỗi trực tiếp về việc đã làm.",
-        "Giải thích và nhận trách nhiệm.",
-        "Đề xuất cách bù lại và tránh lặp lại."
+        "Sorry for + danh từ / V-ing; nhận trách nhiệm.",
+        "Giải thích không thay cho việc nhận lỗi.",
+        "Bù lại bằng hành động cụ thể và tránh lặp lại."
       ],
       "summaryVi": "Giảm lướt điện thoại giúp giữ giờ nghỉ; vẫn có thể giữ các liên lạc thực sự cần thiết.",
       "paragraphs": [
         {
-          "label": "Xin lỗi",
-          "text": "Hi Alex,\n\nI am very sorry for arriving late and keeping you waiting while we were preparing for an evening routine discussion. I know you were counting on me, and I understand that my mistake made your day more difficult.",
-          "noteVi": "Nêu chính xác lỗi, không xin lỗi chung chung."
+          "label": "Mở thư và xin lỗi",
+          "text": "Hi Alex,\n\nI am really sorry for arriving late and keeping you waiting while we were preparing for an evening routine discussion. I know you were counting on me, and I understand that my mistake made things more difficult for you.",
+          "noteVi": "Sorry for + danh từ / V-ing; nhận trách nhiệm.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nI am really sorry for ",
+              "kind": "frame"
+            },
+            {
+              "text": "arriving late and keeping you waiting",
+              "kind": "detail",
+              "labelVi": "lỗi cần xin lỗi — V-ing"
+            },
+            {
+              "text": " while we were preparing for ",
+              "kind": "frame"
+            },
+            {
+              "text": "an evening routine discussion",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". I know you were counting on me, and I understand that my mistake made things more difficult for you.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nI am really sorry for [lỗi cần xin lỗi — V-ing] while we were preparing for [sự kiện / hoạt động]. I know you were counting on me, and I understand that my mistake made things more difficult for you."
         },
         {
           "label": "Giải thích",
-          "text": "The reason was that the bus broke down on the way. However, I should still have contacted you earlier. I realise that you had to change the arrangements without much notice, and I do not want you to think that I took your help for granted.",
-          "noteVi": "Giải thích không thay cho nhận trách nhiệm."
+          "text": "The reason was that the bus broke down on the way. However, I should have contacted you earlier. I do not want you to think that I took your help for granted. I understand why you were disappointed, and I will try to be more careful.",
+          "noteVi": "Giải thích không thay cho việc nhận lỗi.",
+          "parts": [
+            {
+              "text": "The reason was that ",
+              "kind": "frame"
+            },
+            {
+              "text": "the bus broke down on the way",
+              "kind": "detail",
+              "labelVi": "lý do — chủ ngữ + động từ"
+            },
+            {
+              "text": ". However, I should have contacted you earlier. I do not want you to think that I took your help for granted. I understand why you were disappointed, and I will try to be more careful.",
+              "kind": "frame"
+            }
+          ],
+          "template": "The reason was that [lý do — chủ ngữ + động từ]. However, I should have contacted you earlier. I do not want you to think that I took your help for granted. I understand why you were disappointed, and I will try to be more careful."
         },
         {
-          "label": "Khắc phục",
-          "text": "To make up for this, I can come to the neighbourhood hall early before the next session and help prepare everything. I will bring a list of evening activities and check the plan with you in advance. I would also like to help participants plan a realistic routine that protects time for rest, so that you do not have to manage the activity alone.",
-          "noteVi": "Việc sửa sai phù hợp cùng hoạt động."
+          "label": "Bù lại",
+          "text": "To make up for this, I can arrive early at the next session and help prepare the materials. I will bring a list of evening activities and check the arrangements with you in advance. Next time, I will let you know straight away if there is a problem. Please tell me if this would help.",
+          "noteVi": "Bù lại bằng hành động cụ thể và tránh lặp lại.",
+          "parts": [
+            {
+              "text": "To make up for this, I can ",
+              "kind": "frame"
+            },
+            {
+              "text": "arrive early at the next session and help prepare the materials",
+              "kind": "detail",
+              "labelVi": "cách sửa — động từ nguyên mẫu"
+            },
+            {
+              "text": ". I will bring ",
+              "kind": "frame"
+            },
+            {
+              "text": "a list of evening activities",
+              "kind": "detail",
+              "labelVi": "đồ cần mang"
+            },
+            {
+              "text": " and check the arrangements with you in advance. Next time, I will let you know straight away if there is a problem. Please tell me if this would help.",
+              "kind": "frame"
+            }
+          ],
+          "template": "To make up for this, I can [cách sửa — động từ nguyên mẫu]. I will bring [đồ cần mang] and check the arrangements with you in advance. Next time, I will let you know straight away if there is a problem. Please tell me if this would help."
         },
         {
-          "label": "Cam kết và kết",
-          "text": "Next time, I will confirm the details in writing and let you know immediately if there is a problem. Please tell me if my suggestion would help. Once again, I am sorry for letting you down.\n\nBest wishes,\nMinh",
-          "noteVi": "Cam kết cụ thể và hỏi cách sửa có phù hợp không."
+          "label": "Kết thư",
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 189,
-      "mainWordCount": 189,
+      "register": "informal",
+      "wordCount": 176,
+      "mainWordCount": 176,
       "phrases": [
         {
           "en": "a calmer routine",
@@ -253,40 +605,128 @@
       "number": 5,
       "title": "Chuyến đi cuối tuần",
       "focus": "short local trips",
-      "prompt": "You let a friend down while preparing for a local travel planning evening. Apologise, explain what happened, and offer a specific way to put things right.",
+      "prompt": "You let your friend Alex down while preparing for a local travel planning evening. Apologise, explain what happened, and propose a specific way to put things right.",
       "requirementsVi": [
-        "Xin lỗi trực tiếp về việc đã làm.",
-        "Giải thích và nhận trách nhiệm.",
-        "Đề xuất cách bù lại và tránh lặp lại."
+        "Sorry for + danh từ / V-ing; nhận trách nhiệm.",
+        "Giải thích không thay cho việc nhận lỗi.",
+        "Bù lại bằng hành động cụ thể và tránh lặp lại."
       ],
       "summaryVi": "Đi gần tận dụng thời gian nghỉ; nên tìm giờ ít đông và điểm đến đa dạng hơn.",
       "paragraphs": [
         {
-          "label": "Xin lỗi",
-          "text": "Hi Alex,\n\nI am very sorry for sending you the wrong meeting time while we were preparing for a local travel planning evening. I know you were counting on me, and I understand that my mistake made your day more difficult.",
-          "noteVi": "Nêu chính xác lỗi, không xin lỗi chung chung."
+          "label": "Mở thư và xin lỗi",
+          "text": "Hi Alex,\n\nI am really sorry for sending you the wrong meeting time while we were preparing for a local travel planning evening. I know you were counting on me, and I understand that my mistake made things more difficult for you.",
+          "noteVi": "Sorry for + danh từ / V-ing; nhận trách nhiệm.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nI am really sorry for ",
+              "kind": "frame"
+            },
+            {
+              "text": "sending you the wrong meeting time",
+              "kind": "detail",
+              "labelVi": "lỗi cần xin lỗi — V-ing"
+            },
+            {
+              "text": " while we were preparing for ",
+              "kind": "frame"
+            },
+            {
+              "text": "a local travel planning evening",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". I know you were counting on me, and I understand that my mistake made things more difficult for you.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nI am really sorry for [lỗi cần xin lỗi — V-ing] while we were preparing for [sự kiện / hoạt động]. I know you were counting on me, and I understand that my mistake made things more difficult for you."
         },
         {
           "label": "Giải thích",
-          "text": "The reason was that I copied the time from an earlier version of the plan. However, I should still have contacted you earlier. I realise that you had to change the arrangements without much notice, and I do not want you to think that I took your help for granted.",
-          "noteVi": "Giải thích không thay cho nhận trách nhiệm."
+          "text": "The reason was that I copied the time from an earlier version of the plan. However, I should have contacted you earlier. I do not want you to think that I took your help for granted. I understand why you were disappointed, and I will try to be more careful.",
+          "noteVi": "Giải thích không thay cho việc nhận lỗi.",
+          "parts": [
+            {
+              "text": "The reason was that ",
+              "kind": "frame"
+            },
+            {
+              "text": "I copied the time from an earlier version of the plan",
+              "kind": "detail",
+              "labelVi": "lý do — chủ ngữ + động từ"
+            },
+            {
+              "text": ". However, I should have contacted you earlier. I do not want you to think that I took your help for granted. I understand why you were disappointed, and I will try to be more careful.",
+              "kind": "frame"
+            }
+          ],
+          "template": "The reason was that [lý do — chủ ngữ + động từ]. However, I should have contacted you earlier. I do not want you to think that I took your help for granted. I understand why you were disappointed, and I will try to be more careful."
         },
         {
-          "label": "Khắc phục",
-          "text": "To make up for this, I can come to the college workshop room early before the next session and help prepare everything. I will bring a local map and check the plan with you in advance. I would also like to help participants design a relaxed day trip using nearby attractions, so that you do not have to manage the activity alone.",
-          "noteVi": "Việc sửa sai phù hợp cùng hoạt động."
+          "label": "Bù lại",
+          "text": "To make up for this, I can arrive early at the next session and help prepare the materials. I will bring a local map and check the arrangements with you in advance. Next time, I will let you know straight away if there is a problem. Please tell me if this would help.",
+          "noteVi": "Bù lại bằng hành động cụ thể và tránh lặp lại.",
+          "parts": [
+            {
+              "text": "To make up for this, I can ",
+              "kind": "frame"
+            },
+            {
+              "text": "arrive early at the next session and help prepare the materials",
+              "kind": "detail",
+              "labelVi": "cách sửa — động từ nguyên mẫu"
+            },
+            {
+              "text": ". I will bring ",
+              "kind": "frame"
+            },
+            {
+              "text": "a local map",
+              "kind": "detail",
+              "labelVi": "đồ cần mang"
+            },
+            {
+              "text": " and check the arrangements with you in advance. Next time, I will let you know straight away if there is a problem. Please tell me if this would help.",
+              "kind": "frame"
+            }
+          ],
+          "template": "To make up for this, I can [cách sửa — động từ nguyên mẫu]. I will bring [đồ cần mang] and check the arrangements with you in advance. Next time, I will let you know straight away if there is a problem. Please tell me if this would help."
         },
         {
-          "label": "Cam kết và kết",
-          "text": "Next time, I will confirm the details in writing and let you know immediately if there is a problem. Please tell me if my suggestion would help. Once again, I am sorry for letting you down.\n\nBest wishes,\nMinh",
-          "noteVi": "Cam kết cụ thể và hỏi cách sửa có phù hợp không."
+          "label": "Kết thư",
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 192,
-      "mainWordCount": 192,
+      "register": "informal",
+      "wordCount": 179,
+      "mainWordCount": 179,
       "phrases": [
         {
           "en": "nearby destinations",
@@ -301,7 +741,7 @@
         {
           "en": "a relaxed day trip",
           "vi": "chuyến đi trong ngày thong thả",
-          "inAnswer": true
+          "inAnswer": false
         }
       ],
       "framePhrases": []
@@ -314,40 +754,128 @@
       "number": 6,
       "title": "Du lịch cùng gia đình",
       "focus": "planning family holidays",
-      "prompt": "You let a friend down while preparing for a family travel planning session. Apologise, explain what happened, and offer a specific way to put things right.",
+      "prompt": "You let your friend Alex down while preparing for a family travel planning session. Apologise, explain what happened, and propose a specific way to put things right.",
       "requirementsVi": [
-        "Xin lỗi trực tiếp về việc đã làm.",
-        "Giải thích và nhận trách nhiệm.",
-        "Đề xuất cách bù lại và tránh lặp lại."
+        "Sorry for + danh từ / V-ing; nhận trách nhiệm.",
+        "Giải thích không thay cho việc nhận lỗi.",
+        "Bù lại bằng hành động cụ thể và tránh lặp lại."
       ],
       "summaryVi": "Cùng bàn giúp tôn trọng nhu cầu từng người; lịch đi cần có ưu tiên và giờ nghỉ.",
       "paragraphs": [
         {
-          "label": "Xin lỗi",
-          "text": "Hi Alex,\n\nI am very sorry for not returning your notes when I said I would while we were preparing for a family travel planning session. I know you were counting on me, and I understand that my mistake made your day more difficult.",
-          "noteVi": "Nêu chính xác lỗi, không xin lỗi chung chung."
+          "label": "Mở thư và xin lỗi",
+          "text": "Hi Alex,\n\nI am really sorry for not returning your notes when I said I would while we were preparing for a family travel planning session. I know you were counting on me, and I understand that my mistake made things more difficult for you.",
+          "noteVi": "Sorry for + danh từ / V-ing; nhận trách nhiệm.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nI am really sorry for ",
+              "kind": "frame"
+            },
+            {
+              "text": "not returning your notes when I said I would",
+              "kind": "detail",
+              "labelVi": "lỗi cần xin lỗi — V-ing"
+            },
+            {
+              "text": " while we were preparing for ",
+              "kind": "frame"
+            },
+            {
+              "text": "a family travel planning session",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". I know you were counting on me, and I understand that my mistake made things more difficult for you.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nI am really sorry for [lỗi cần xin lỗi — V-ing] while we were preparing for [sự kiện / hoạt động]. I know you were counting on me, and I understand that my mistake made things more difficult for you."
         },
         {
           "label": "Giải thích",
-          "text": "The reason was that I left the notes at my parents' house. However, I should still have contacted you earlier. I realise that you had to change the arrangements without much notice, and I do not want you to think that I took your help for granted.",
-          "noteVi": "Giải thích không thay cho nhận trách nhiệm."
+          "text": "The reason was that I left the notes at my parents' house. However, I should have contacted you earlier. I do not want you to think that I took your help for granted. I understand why you were disappointed, and I will try to be more careful.",
+          "noteVi": "Giải thích không thay cho việc nhận lỗi.",
+          "parts": [
+            {
+              "text": "The reason was that ",
+              "kind": "frame"
+            },
+            {
+              "text": "I left the notes at my parents' house",
+              "kind": "detail",
+              "labelVi": "lý do — chủ ngữ + động từ"
+            },
+            {
+              "text": ". However, I should have contacted you earlier. I do not want you to think that I took your help for granted. I understand why you were disappointed, and I will try to be more careful.",
+              "kind": "frame"
+            }
+          ],
+          "template": "The reason was that [lý do — chủ ngữ + động từ]. However, I should have contacted you earlier. I do not want you to think that I took your help for granted. I understand why you were disappointed, and I will try to be more careful."
         },
         {
-          "label": "Khắc phục",
-          "text": "To make up for this, I can come to the community centre early before the next session and help prepare everything. I will bring a list of family travel preferences and check the plan with you in advance. I would also like to help participants compare interests and build a realistic holiday schedule, so that you do not have to manage the activity alone.",
-          "noteVi": "Việc sửa sai phù hợp cùng hoạt động."
+          "label": "Bù lại",
+          "text": "To make up for this, I can arrive early at the next session and help prepare the materials. I will bring a list of family travel preferences and check the arrangements with you in advance. Next time, I will let you know straight away if there is a problem. Please tell me if this would help.",
+          "noteVi": "Bù lại bằng hành động cụ thể và tránh lặp lại.",
+          "parts": [
+            {
+              "text": "To make up for this, I can ",
+              "kind": "frame"
+            },
+            {
+              "text": "arrive early at the next session and help prepare the materials",
+              "kind": "detail",
+              "labelVi": "cách sửa — động từ nguyên mẫu"
+            },
+            {
+              "text": ". I will bring ",
+              "kind": "frame"
+            },
+            {
+              "text": "a list of family travel preferences",
+              "kind": "detail",
+              "labelVi": "đồ cần mang"
+            },
+            {
+              "text": " and check the arrangements with you in advance. Next time, I will let you know straight away if there is a problem. Please tell me if this would help.",
+              "kind": "frame"
+            }
+          ],
+          "template": "To make up for this, I can [cách sửa — động từ nguyên mẫu]. I will bring [đồ cần mang] and check the arrangements with you in advance. Next time, I will let you know straight away if there is a problem. Please tell me if this would help."
         },
         {
-          "label": "Cam kết và kết",
-          "text": "Next time, I will confirm the details in writing and let you know immediately if there is a problem. Please tell me if my suggestion would help. Once again, I am sorry for letting you down.\n\nBest wishes,\nMinh",
-          "noteVi": "Cam kết cụ thể và hỏi cách sửa có phù hợp không."
+          "label": "Kết thư",
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 194,
-      "mainWordCount": 194,
+      "register": "informal",
+      "wordCount": 182,
+      "mainWordCount": 182,
       "phrases": [
         {
           "en": "a realistic schedule",
@@ -375,40 +903,128 @@
       "number": 7,
       "title": "Giữ quan hệ hàng xóm",
       "focus": "getting to know neighbours",
-      "prompt": "You let a friend down while preparing for a neighbours' coffee morning. Apologise, explain what happened, and offer a specific way to put things right.",
+      "prompt": "You let your friend Alex down while preparing for a neighbours' coffee morning. Apologise, explain what happened, and propose a specific way to put things right.",
       "requirementsVi": [
-        "Xin lỗi trực tiếp về việc đã làm.",
-        "Giải thích và nhận trách nhiệm.",
-        "Đề xuất cách bù lại và tránh lặp lại."
+        "Sorry for + danh từ / V-ing; nhận trách nhiệm.",
+        "Giải thích không thay cho việc nhận lỗi.",
+        "Bù lại bằng hành động cụ thể và tránh lặp lại."
       ],
       "summaryVi": "Gặp hàng xóm tạo hỗ trợ gần gũi; hoạt động nên tự nguyện và tôn trọng lịch, sự riêng tư.",
       "paragraphs": [
         {
-          "label": "Xin lỗi",
-          "text": "Hi Alex,\n\nI am very sorry for forgetting to confirm my attendance while we were preparing for a neighbours' coffee morning. I know you were counting on me, and I understand that my mistake made your day more difficult.",
-          "noteVi": "Nêu chính xác lỗi, không xin lỗi chung chung."
+          "label": "Mở thư và xin lỗi",
+          "text": "Hi Alex,\n\nI am really sorry for forgetting to confirm my attendance while we were preparing for a neighbours' coffee morning. I know you were counting on me, and I understand that my mistake made things more difficult for you.",
+          "noteVi": "Sorry for + danh từ / V-ing; nhận trách nhiệm.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nI am really sorry for ",
+              "kind": "frame"
+            },
+            {
+              "text": "forgetting to confirm my attendance",
+              "kind": "detail",
+              "labelVi": "lỗi cần xin lỗi — V-ing"
+            },
+            {
+              "text": " while we were preparing for ",
+              "kind": "frame"
+            },
+            {
+              "text": "a neighbours' coffee morning",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". I know you were counting on me, and I understand that my mistake made things more difficult for you.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nI am really sorry for [lỗi cần xin lỗi — V-ing] while we were preparing for [sự kiện / hoạt động]. I know you were counting on me, and I understand that my mistake made things more difficult for you."
         },
         {
           "label": "Giải thích",
-          "text": "The reason was that I mistakenly thought my reply had been sent. However, I should still have contacted you earlier. I realise that you had to change the arrangements without much notice, and I do not want you to think that I took your help for granted.",
-          "noteVi": "Giải thích không thay cho nhận trách nhiệm."
+          "text": "The reason was that I mistakenly thought my reply had been sent. However, I should have contacted you earlier. I do not want you to think that I took your help for granted. I understand why you were disappointed, and I will try to be more careful.",
+          "noteVi": "Giải thích không thay cho việc nhận lỗi.",
+          "parts": [
+            {
+              "text": "The reason was that ",
+              "kind": "frame"
+            },
+            {
+              "text": "I mistakenly thought my reply had been sent",
+              "kind": "detail",
+              "labelVi": "lý do — chủ ngữ + động từ"
+            },
+            {
+              "text": ". However, I should have contacted you earlier. I do not want you to think that I took your help for granted. I understand why you were disappointed, and I will try to be more careful.",
+              "kind": "frame"
+            }
+          ],
+          "template": "The reason was that [lý do — chủ ngữ + động từ]. However, I should have contacted you earlier. I do not want you to think that I took your help for granted. I understand why you were disappointed, and I will try to be more careful."
         },
         {
-          "label": "Khắc phục",
-          "text": "To make up for this, I can come to the local library early before the next session and help prepare everything. I will bring a small snack to share and check the plan with you in advance. I would also like to help participants meet local residents and exchange practical information, so that you do not have to manage the activity alone.",
-          "noteVi": "Việc sửa sai phù hợp cùng hoạt động."
+          "label": "Bù lại",
+          "text": "To make up for this, I can arrive early at the next session and help prepare the materials. I will bring a small snack to share and check the arrangements with you in advance. Next time, I will let you know straight away if there is a problem. Please tell me if this would help.",
+          "noteVi": "Bù lại bằng hành động cụ thể và tránh lặp lại.",
+          "parts": [
+            {
+              "text": "To make up for this, I can ",
+              "kind": "frame"
+            },
+            {
+              "text": "arrive early at the next session and help prepare the materials",
+              "kind": "detail",
+              "labelVi": "cách sửa — động từ nguyên mẫu"
+            },
+            {
+              "text": ". I will bring ",
+              "kind": "frame"
+            },
+            {
+              "text": "a small snack to share",
+              "kind": "detail",
+              "labelVi": "đồ cần mang"
+            },
+            {
+              "text": " and check the arrangements with you in advance. Next time, I will let you know straight away if there is a problem. Please tell me if this would help.",
+              "kind": "frame"
+            }
+          ],
+          "template": "To make up for this, I can [cách sửa — động từ nguyên mẫu]. I will bring [đồ cần mang] and check the arrangements with you in advance. Next time, I will let you know straight away if there is a problem. Please tell me if this would help."
         },
         {
-          "label": "Cam kết và kết",
-          "text": "Next time, I will confirm the details in writing and let you know immediately if there is a problem. Please tell me if my suggestion would help. Once again, I am sorry for letting you down.\n\nBest wishes,\nMinh",
-          "noteVi": "Cam kết cụ thể và hỏi cách sửa có phù hợp không."
+          "label": "Kết thư",
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 187,
-      "mainWordCount": 187,
+      "register": "informal",
+      "wordCount": 176,
+      "mainWordCount": 176,
       "phrases": [
         {
           "en": "a support network",
@@ -436,40 +1052,128 @@
       "number": 8,
       "title": "Đọc sách giải trí",
       "focus": "reading for pleasure",
-      "prompt": "You let a friend down while preparing for an informal book club meeting. Apologise, explain what happened, and offer a specific way to put things right.",
+      "prompt": "You let your friend Alex down while preparing for an informal book club meeting. Apologise, explain what happened, and propose a specific way to put things right.",
       "requirementsVi": [
-        "Xin lỗi trực tiếp về việc đã làm.",
-        "Giải thích và nhận trách nhiệm.",
-        "Đề xuất cách bù lại và tránh lặp lại."
+        "Sorry for + danh từ / V-ing; nhận trách nhiệm.",
+        "Giải thích không thay cho việc nhận lỗi.",
+        "Bù lại bằng hành động cụ thể và tránh lặp lại."
       ],
       "summaryVi": "Đọc giải trí cần lựa chọn phù hợp và tham gia linh hoạt để không biến thành áp lực hoàn thành chỉ tiêu.",
       "paragraphs": [
         {
-          "label": "Xin lỗi",
-          "text": "Hi Alex,\n\nI am very sorry for changing my plans at the last minute while we were preparing for an informal book club meeting. I know you were counting on me, and I understand that my mistake made your day more difficult.",
-          "noteVi": "Nêu chính xác lỗi, không xin lỗi chung chung."
+          "label": "Mở thư và xin lỗi",
+          "text": "Hi Alex,\n\nI am really sorry for changing my plans at the last minute while we were preparing for an informal book club meeting. I know you were counting on me, and I understand that my mistake made things more difficult for you.",
+          "noteVi": "Sorry for + danh từ / V-ing; nhận trách nhiệm.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nI am really sorry for ",
+              "kind": "frame"
+            },
+            {
+              "text": "changing my plans at the last minute",
+              "kind": "detail",
+              "labelVi": "lỗi cần xin lỗi — V-ing"
+            },
+            {
+              "text": " while we were preparing for ",
+              "kind": "frame"
+            },
+            {
+              "text": "an informal book club meeting",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". I know you were counting on me, and I understand that my mistake made things more difficult for you.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nI am really sorry for [lỗi cần xin lỗi — V-ing] while we were preparing for [sự kiện / hoạt động]. I know you were counting on me, and I understand that my mistake made things more difficult for you."
         },
         {
           "label": "Giải thích",
-          "text": "The reason was that my work schedule changed unexpectedly. However, I should still have contacted you earlier. I realise that you had to change the arrangements without much notice, and I do not want you to think that I took your help for granted.",
-          "noteVi": "Giải thích không thay cho nhận trách nhiệm."
+          "text": "The reason was that my work schedule changed unexpectedly. However, I should have contacted you earlier. I do not want you to think that I took your help for granted. I understand why you were disappointed, and I will try to be more careful.",
+          "noteVi": "Giải thích không thay cho việc nhận lỗi.",
+          "parts": [
+            {
+              "text": "The reason was that ",
+              "kind": "frame"
+            },
+            {
+              "text": "my work schedule changed unexpectedly",
+              "kind": "detail",
+              "labelVi": "lý do — chủ ngữ + động từ"
+            },
+            {
+              "text": ". However, I should have contacted you earlier. I do not want you to think that I took your help for granted. I understand why you were disappointed, and I will try to be more careful.",
+              "kind": "frame"
+            }
+          ],
+          "template": "The reason was that [lý do — chủ ngữ + động từ]. However, I should have contacted you earlier. I do not want you to think that I took your help for granted. I understand why you were disappointed, and I will try to be more careful."
         },
         {
-          "label": "Khắc phục",
-          "text": "To make up for this, I can come to the school meeting room early before the next session and help prepare everything. I will bring a book or short story you enjoy and check the plan with you in advance. I would also like to help participants share a favourite short story and exchange reading suggestions, so that you do not have to manage the activity alone.",
-          "noteVi": "Việc sửa sai phù hợp cùng hoạt động."
+          "label": "Bù lại",
+          "text": "To make up for this, I can arrive early at the next session and help prepare the materials. I will bring a book or short story you enjoy and check the arrangements with you in advance. Next time, I will let you know straight away if there is a problem. Please tell me if this would help.",
+          "noteVi": "Bù lại bằng hành động cụ thể và tránh lặp lại.",
+          "parts": [
+            {
+              "text": "To make up for this, I can ",
+              "kind": "frame"
+            },
+            {
+              "text": "arrive early at the next session and help prepare the materials",
+              "kind": "detail",
+              "labelVi": "cách sửa — động từ nguyên mẫu"
+            },
+            {
+              "text": ". I will bring ",
+              "kind": "frame"
+            },
+            {
+              "text": "a book or short story you enjoy",
+              "kind": "detail",
+              "labelVi": "đồ cần mang"
+            },
+            {
+              "text": " and check the arrangements with you in advance. Next time, I will let you know straight away if there is a problem. Please tell me if this would help.",
+              "kind": "frame"
+            }
+          ],
+          "template": "To make up for this, I can [cách sửa — động từ nguyên mẫu]. I will bring [đồ cần mang] and check the arrangements with you in advance. Next time, I will let you know straight away if there is a problem. Please tell me if this would help."
         },
         {
-          "label": "Cam kết và kết",
-          "text": "Next time, I will confirm the details in writing and let you know immediately if there is a problem. Please tell me if my suggestion would help. Once again, I am sorry for letting you down.\n\nBest wishes,\nMinh",
-          "noteVi": "Cam kết cụ thể và hỏi cách sửa có phù hợp không."
+          "label": "Kết thư",
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 192,
-      "mainWordCount": 192,
+      "register": "informal",
+      "wordCount": 178,
+      "mainWordCount": 178,
       "phrases": [
         {
           "en": "reading for pleasure",
@@ -497,40 +1201,128 @@
       "number": 9,
       "title": "Quản lý chi tiêu",
       "focus": "planning everyday spending",
-      "prompt": "You let a friend down while preparing for an everyday budgeting workshop. Apologise, explain what happened, and offer a specific way to put things right.",
+      "prompt": "You let your friend Alex down while preparing for an everyday budgeting workshop. Apologise, explain what happened, and propose a specific way to put things right.",
       "requirementsVi": [
-        "Xin lỗi trực tiếp về việc đã làm.",
-        "Giải thích và nhận trách nhiệm.",
-        "Đề xuất cách bù lại và tránh lặp lại."
+        "Sorry for + danh từ / V-ing; nhận trách nhiệm.",
+        "Giải thích không thay cho việc nhận lỗi.",
+        "Bù lại bằng hành động cụ thể và tránh lặp lại."
       ],
       "summaryVi": "Theo dõi chi tiêu giúp thấy nhu cầu thiết yếu; kế hoạch phải có khoảng linh hoạt cho việc phát sinh.",
       "paragraphs": [
         {
-          "label": "Xin lỗi",
-          "text": "Hi Alex,\n\nI am very sorry for missing your call about the arrangements while we were preparing for an everyday budgeting workshop. I know you were counting on me, and I understand that my mistake made your day more difficult.",
-          "noteVi": "Nêu chính xác lỗi, không xin lỗi chung chung."
+          "label": "Mở thư và xin lỗi",
+          "text": "Hi Alex,\n\nI am really sorry for missing your call about the arrangements while we were preparing for an everyday budgeting workshop. I know you were counting on me, and I understand that my mistake made things more difficult for you.",
+          "noteVi": "Sorry for + danh từ / V-ing; nhận trách nhiệm.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nI am really sorry for ",
+              "kind": "frame"
+            },
+            {
+              "text": "missing your call about the arrangements",
+              "kind": "detail",
+              "labelVi": "lỗi cần xin lỗi — V-ing"
+            },
+            {
+              "text": " while we were preparing for ",
+              "kind": "frame"
+            },
+            {
+              "text": "an everyday budgeting workshop",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". I know you were counting on me, and I understand that my mistake made things more difficult for you.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nI am really sorry for [lỗi cần xin lỗi — V-ing] while we were preparing for [sự kiện / hoạt động]. I know you were counting on me, and I understand that my mistake made things more difficult for you."
         },
         {
           "label": "Giải thích",
-          "text": "The reason was that my phone battery ran out. However, I should still have contacted you earlier. I realise that you had to change the arrangements without much notice, and I do not want you to think that I took your help for granted.",
-          "noteVi": "Giải thích không thay cho nhận trách nhiệm."
+          "text": "The reason was that my phone battery ran out. However, I should have contacted you earlier. I do not want you to think that I took your help for granted. I understand why you were disappointed, and I will try to be more careful.",
+          "noteVi": "Giải thích không thay cho việc nhận lỗi.",
+          "parts": [
+            {
+              "text": "The reason was that ",
+              "kind": "frame"
+            },
+            {
+              "text": "my phone battery ran out",
+              "kind": "detail",
+              "labelVi": "lý do — chủ ngữ + động từ"
+            },
+            {
+              "text": ". However, I should have contacted you earlier. I do not want you to think that I took your help for granted. I understand why you were disappointed, and I will try to be more careful.",
+              "kind": "frame"
+            }
+          ],
+          "template": "The reason was that [lý do — chủ ngữ + động từ]. However, I should have contacted you earlier. I do not want you to think that I took your help for granted. I understand why you were disappointed, and I will try to be more careful."
         },
         {
-          "label": "Khắc phục",
-          "text": "To make up for this, I can come to the neighbourhood hall early before the next session and help prepare everything. I will bring an example list of weekly expenses and check the plan with you in advance. I would also like to help participants build a simple spending plan and practise adjusting it, so that you do not have to manage the activity alone.",
-          "noteVi": "Việc sửa sai phù hợp cùng hoạt động."
+          "label": "Bù lại",
+          "text": "To make up for this, I can arrive early at the next session and help prepare the materials. I will bring an example list of weekly expenses and check the arrangements with you in advance. Next time, I will let you know straight away if there is a problem. Please tell me if this would help.",
+          "noteVi": "Bù lại bằng hành động cụ thể và tránh lặp lại.",
+          "parts": [
+            {
+              "text": "To make up for this, I can ",
+              "kind": "frame"
+            },
+            {
+              "text": "arrive early at the next session and help prepare the materials",
+              "kind": "detail",
+              "labelVi": "cách sửa — động từ nguyên mẫu"
+            },
+            {
+              "text": ". I will bring ",
+              "kind": "frame"
+            },
+            {
+              "text": "an example list of weekly expenses",
+              "kind": "detail",
+              "labelVi": "đồ cần mang"
+            },
+            {
+              "text": " and check the arrangements with you in advance. Next time, I will let you know straight away if there is a problem. Please tell me if this would help.",
+              "kind": "frame"
+            }
+          ],
+          "template": "To make up for this, I can [cách sửa — động từ nguyên mẫu]. I will bring [đồ cần mang] and check the arrangements with you in advance. Next time, I will let you know straight away if there is a problem. Please tell me if this would help."
         },
         {
-          "label": "Cam kết và kết",
-          "text": "Next time, I will confirm the details in writing and let you know immediately if there is a problem. Please tell me if my suggestion would help. Once again, I am sorry for letting you down.\n\nBest wishes,\nMinh",
-          "noteVi": "Cam kết cụ thể và hỏi cách sửa có phù hợp không."
+          "label": "Kết thư",
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 188,
-      "mainWordCount": 188,
+      "register": "informal",
+      "wordCount": 175,
+      "mainWordCount": 175,
       "phrases": [
         {
           "en": "essential expenses",
@@ -558,40 +1350,128 @@
       "number": 10,
       "title": "Dành thời gian cho sở thích",
       "focus": "making time for hobbies",
-      "prompt": "You let a friend down while preparing for a beginner hobbies open day. Apologise, explain what happened, and offer a specific way to put things right.",
+      "prompt": "You let your friend Alex down while preparing for a beginner hobbies open day. Apologise, explain what happened, and propose a specific way to put things right.",
       "requirementsVi": [
-        "Xin lỗi trực tiếp về việc đã làm.",
-        "Giải thích và nhận trách nhiệm.",
-        "Đề xuất cách bù lại và tránh lặp lại."
+        "Sorry for + danh từ / V-ing; nhận trách nhiệm.",
+        "Giải thích không thay cho việc nhận lỗi.",
+        "Bù lại bằng hành động cụ thể và tránh lặp lại."
       ],
       "summaryVi": "Sở thích giúp đổi nhịp sống; nên bắt đầu nhỏ, vừa túi tiền và không so mình với người đã giỏi.",
       "paragraphs": [
         {
-          "label": "Xin lỗi",
-          "text": "Hi Alex,\n\nI am very sorry for not completing my part of the preparation on time while we were preparing for a beginner hobbies open day. I know you were counting on me, and I understand that my mistake made your day more difficult.",
-          "noteVi": "Nêu chính xác lỗi, không xin lỗi chung chung."
+          "label": "Mở thư và xin lỗi",
+          "text": "Hi Alex,\n\nI am really sorry for not completing my part of the preparation on time while we were preparing for a beginner hobbies open day. I know you were counting on me, and I understand that my mistake made things more difficult for you.",
+          "noteVi": "Sorry for + danh từ / V-ing; nhận trách nhiệm.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nI am really sorry for ",
+              "kind": "frame"
+            },
+            {
+              "text": "not completing my part of the preparation on time",
+              "kind": "detail",
+              "labelVi": "lỗi cần xin lỗi — V-ing"
+            },
+            {
+              "text": " while we were preparing for ",
+              "kind": "frame"
+            },
+            {
+              "text": "a beginner hobbies open day",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". I know you were counting on me, and I understand that my mistake made things more difficult for you.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nI am really sorry for [lỗi cần xin lỗi — V-ing] while we were preparing for [sự kiện / hoạt động]. I know you were counting on me, and I understand that my mistake made things more difficult for you."
         },
         {
           "label": "Giải thích",
-          "text": "The reason was that I underestimated how long another task would take. However, I should still have contacted you earlier. I realise that you had to change the arrangements without much notice, and I do not want you to think that I took your help for granted.",
-          "noteVi": "Giải thích không thay cho nhận trách nhiệm."
+          "text": "The reason was that I underestimated how long another task would take. However, I should have contacted you earlier. I do not want you to think that I took your help for granted. I understand why you were disappointed, and I will try to be more careful.",
+          "noteVi": "Giải thích không thay cho việc nhận lỗi.",
+          "parts": [
+            {
+              "text": "The reason was that ",
+              "kind": "frame"
+            },
+            {
+              "text": "I underestimated how long another task would take",
+              "kind": "detail",
+              "labelVi": "lý do — chủ ngữ + động từ"
+            },
+            {
+              "text": ". However, I should have contacted you earlier. I do not want you to think that I took your help for granted. I understand why you were disappointed, and I will try to be more careful.",
+              "kind": "frame"
+            }
+          ],
+          "template": "The reason was that [lý do — chủ ngữ + động từ]. However, I should have contacted you earlier. I do not want you to think that I took your help for granted. I understand why you were disappointed, and I will try to be more careful."
         },
         {
-          "label": "Khắc phục",
-          "text": "To make up for this, I can come to the college activity room early before the next session and help prepare everything. I will bring a notebook for ideas and check the plan with you in advance. I would also like to help participants try simple creative activities and choose a manageable first goal, so that you do not have to manage the activity alone.",
-          "noteVi": "Việc sửa sai phù hợp cùng hoạt động."
+          "label": "Bù lại",
+          "text": "To make up for this, I can arrive early at the next session and help prepare the materials. I will bring a notebook for ideas and check the arrangements with you in advance. Next time, I will let you know straight away if there is a problem. Please tell me if this would help.",
+          "noteVi": "Bù lại bằng hành động cụ thể và tránh lặp lại.",
+          "parts": [
+            {
+              "text": "To make up for this, I can ",
+              "kind": "frame"
+            },
+            {
+              "text": "arrive early at the next session and help prepare the materials",
+              "kind": "detail",
+              "labelVi": "cách sửa — động từ nguyên mẫu"
+            },
+            {
+              "text": ". I will bring ",
+              "kind": "frame"
+            },
+            {
+              "text": "a notebook for ideas",
+              "kind": "detail",
+              "labelVi": "đồ cần mang"
+            },
+            {
+              "text": " and check the arrangements with you in advance. Next time, I will let you know straight away if there is a problem. Please tell me if this would help.",
+              "kind": "frame"
+            }
+          ],
+          "template": "To make up for this, I can [cách sửa — động từ nguyên mẫu]. I will bring [đồ cần mang] and check the arrangements with you in advance. Next time, I will let you know straight away if there is a problem. Please tell me if this would help."
         },
         {
-          "label": "Cam kết và kết",
-          "text": "Next time, I will confirm the details in writing and let you know immediately if there is a problem. Please tell me if my suggestion would help. Once again, I am sorry for letting you down.\n\nBest wishes,\nMinh",
-          "noteVi": "Cam kết cụ thể và hỏi cách sửa có phù hợp không."
+          "label": "Kết thư",
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 195,
-      "mainWordCount": 195,
+      "register": "informal",
+      "wordCount": 180,
+      "mainWordCount": 180,
       "phrases": [
         {
           "en": "make time for hobbies",

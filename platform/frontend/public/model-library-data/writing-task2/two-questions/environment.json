@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-05-v1",
+  "version": "2026-11-05-v2-frames",
   "samples": [
     {
       "id": "writing-task2-two-questions-environment-01",
@@ -20,32 +20,146 @@
         {
           "label": "Mở bài",
           "text": "There are understandable reasons why people may support the proposal that neighbourhoods should make household waste sorting easier. I consider this a mainly positive development when it is organised with practical needs in mind. Its value comes from the help it can offer in daily life, rather than from the idea simply sounding modern or attractive.",
-          "noteVi": "Trả lời ngắn cả hai câu hỏi."
+          "noteVi": "Trả lời ngắn cả hai câu hỏi.",
+          "parts": [
+            {
+              "text": "There are understandable reasons why people may support ",
+              "kind": "detail"
+            },
+            {
+              "text": "the proposal that",
+              "kind": "frame",
+              "labelVi": "Giới thiệu đề xuất + mệnh đề"
+            },
+            {
+              "text": " neighbourhoods should make household waste sorting easier. ",
+              "kind": "detail"
+            },
+            {
+              "text": "I consider this a mainly positive development",
+              "kind": "frame",
+              "labelVi": "Đánh giá tích cực; chỉ dùng khi đúng lập trường"
+            },
+            {
+              "text": " when it is organised with practical needs in mind. Its value comes from the help it can offer in daily life, rather than from the idea simply sounding modern or attractive.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Câu hỏi 1 — vì sao?",
           "text": "One important point in favour of the proposal is that more recyclable material can be collected separately. This is possible because clear containers reduce the chance that paper and plastic become mixed with food waste. For example, a family can keep a small box for clean bottles instead of putting them in the same bag as dinner leftovers. The value of this example is that the benefit is connected with a real everyday need. It is easier for people to see the purpose of an approach when they can relate it to their own situation.",
-          "noteVi": "Phân loại cần thùng và hướng dẫn rõ, đồng thời hệ thống thu gom phải thực hiện đúng."
+          "noteVi": "Phân loại cần thùng và hướng dẫn rõ, đồng thời hệ thống thu gom phải thực hiện đúng.",
+          "parts": [
+            {
+              "text": "One important point in favour of the proposal is that",
+              "kind": "frame",
+              "labelVi": "Lợi ích / lý do ủng hộ + mệnh đề"
+            },
+            {
+              "text": " more recyclable material can be collected separately. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This is possible because",
+              "kind": "frame",
+              "labelVi": "Giải thích cơ chế + mệnh đề"
+            },
+            {
+              "text": " clear containers reduce the chance that paper and plastic become mixed with food waste. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a family can keep a small box for clean bottles instead of putting them in the same bag as dinner leftovers. The value of this example is that the benefit is connected with a real everyday need. It is easier for people to see the purpose of an approach when they can relate it to their own situation.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Câu hỏi 2 — đánh giá",
           "text": "I see the development as positive because it gives people a useful option, provided that the main obstacles are recognised. One concern is that residents may stop sorting if collection is unreliable. This is connected with the fact that the instructions and collection system may not match. Ignoring that concern would weaken the case for the proposal, so support should include an effort to improve how it works.",
-          "noteVi": "Đánh giá có lý do và giới hạn."
+          "noteVi": "Đánh giá có lý do và giới hạn.",
+          "parts": [
+            {
+              "text": "I see the development as positive because",
+              "kind": "frame",
+              "labelVi": "Đánh giá và đưa lý do; đổi positive nếu đánh giá tiêu cực"
+            },
+            {
+              "text": " it gives people a useful option, provided that the main obstacles are recognised. ",
+              "kind": "detail"
+            },
+            {
+              "text": "One concern is that",
+              "kind": "frame",
+              "labelVi": "Nêu mối lo + mệnh đề"
+            },
+            {
+              "text": " residents may stop sorting if collection is unreliable. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This is connected with the fact that",
+              "kind": "frame",
+              "labelVi": "Nối với nguyên nhân / thực tế"
+            },
+            {
+              "text": " the instructions and collection system may not match. Ignoring that concern would weaken the case for the proposal, so support should include an effort to improve how it works.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Ví dụ về điều kiện",
           "text": "A practical response would be to provide simple labels and explain how each type of waste is collected. For example, a building manager could place picture labels above bins and publish a reliable collection schedule. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
-          "noteVi": "Minh họa cách giữ lợi ích và giảm trở ngại."
+          "noteVi": "Minh họa cách giữ lợi ích và giảm trở ngại.",
+          "parts": [
+            {
+              "text": "A practical response would be to",
+              "kind": "frame",
+              "labelVi": "Đưa giải pháp + động từ nguyên mẫu"
+            },
+            {
+              "text": " provide simple labels and explain how each type of waste is collected. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a building manager could place picture labels above bins and publish a reliable collection schedule. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, people have good reason to support this approach because more recyclable material can be collected separately. I regard it as mainly positive, but the result depends on practical planning. A flexible approach that listens to the people involved is more likely to deliver the intended value.",
-          "noteVi": "Chốt cả lý do và đánh giá."
+          "noteVi": "Chốt cả lý do và đánh giá.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " people have good reason to support this approach because more recyclable material can be collected separately. I regard it as mainly positive, but the result depends on practical planning. A flexible approach that listens to the people involved is more likely to deliver the intended value.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 344,
       "mainWordCount": 344,
       "phrases": [
@@ -95,32 +209,146 @@
         {
           "label": "Mở bài",
           "text": "There are understandable reasons why people may support the proposal that schools and workplaces should encourage people to use refillable bottles. I consider this a mainly positive development when it is organised with practical needs in mind. Its value comes from the help it can offer in daily life, rather than from the idea simply sounding modern or attractive.",
-          "noteVi": "Trả lời ngắn cả hai câu hỏi."
+          "noteVi": "Trả lời ngắn cả hai câu hỏi.",
+          "parts": [
+            {
+              "text": "There are understandable reasons why people may support ",
+              "kind": "detail"
+            },
+            {
+              "text": "the proposal that",
+              "kind": "frame",
+              "labelVi": "Giới thiệu đề xuất + mệnh đề"
+            },
+            {
+              "text": " schools and workplaces should encourage people to use refillable bottles. ",
+              "kind": "detail"
+            },
+            {
+              "text": "I consider this a mainly positive development",
+              "kind": "frame",
+              "labelVi": "Đánh giá tích cực; chỉ dùng khi đúng lập trường"
+            },
+            {
+              "text": " when it is organised with practical needs in mind. Its value comes from the help it can offer in daily life, rather than from the idea simply sounding modern or attractive.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Câu hỏi 1 — vì sao?",
           "text": "One important point in favour of the proposal is that people can avoid buying a new plastic bottle each time they need water. This is possible because one suitable container can be used repeatedly when safe drinking water is available. For example, a student can refill a bottle at school before an afternoon sports lesson. The value of this example is that the benefit is connected with a real everyday need. It is easier for people to see the purpose of an approach when they can relate it to their own situation.",
-          "noteVi": "Bình dùng lại giảm chai dùng một lần khi có chỗ lấy nước thuận tiện và được giữ sạch."
+          "noteVi": "Bình dùng lại giảm chai dùng một lần khi có chỗ lấy nước thuận tiện và được giữ sạch.",
+          "parts": [
+            {
+              "text": "One important point in favour of the proposal is that",
+              "kind": "frame",
+              "labelVi": "Lợi ích / lý do ủng hộ + mệnh đề"
+            },
+            {
+              "text": " people can avoid buying a new plastic bottle each time they need water. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This is possible because",
+              "kind": "frame",
+              "labelVi": "Giải thích cơ chế + mệnh đề"
+            },
+            {
+              "text": " one suitable container can be used repeatedly when safe drinking water is available. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a student can refill a bottle at school before an afternoon sports lesson. The value of this example is that the benefit is connected with a real everyday need. It is easier for people to see the purpose of an approach when they can relate it to their own situation.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Câu hỏi 2 — đánh giá",
           "text": "I see the development as positive because it gives people a useful option, provided that the main obstacles are recognised. One concern is that the habit is difficult when refill points are missing. This is connected with the fact that campaigns may focus on individual behaviour without providing practical facilities. Ignoring that concern would weaken the case for the proposal, so support should include an effort to improve how it works.",
-          "noteVi": "Đánh giá có lý do và giới hạn."
+          "noteVi": "Đánh giá có lý do và giới hạn.",
+          "parts": [
+            {
+              "text": "I see the development as positive because",
+              "kind": "frame",
+              "labelVi": "Đánh giá và đưa lý do; đổi positive nếu đánh giá tiêu cực"
+            },
+            {
+              "text": " it gives people a useful option, provided that the main obstacles are recognised. ",
+              "kind": "detail"
+            },
+            {
+              "text": "One concern is that",
+              "kind": "frame",
+              "labelVi": "Nêu mối lo + mệnh đề"
+            },
+            {
+              "text": " the habit is difficult when refill points are missing. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This is connected with the fact that",
+              "kind": "frame",
+              "labelVi": "Nối với nguyên nhân / thực tế"
+            },
+            {
+              "text": " campaigns may focus on individual behaviour without providing practical facilities. Ignoring that concern would weaken the case for the proposal, so support should include an effort to improve how it works.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Ví dụ về điều kiện",
           "text": "A practical response would be to install convenient refill points and keep them clean. For example, a school could place a water station near classrooms and explain who checks it each day. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
-          "noteVi": "Minh họa cách giữ lợi ích và giảm trở ngại."
+          "noteVi": "Minh họa cách giữ lợi ích và giảm trở ngại.",
+          "parts": [
+            {
+              "text": "A practical response would be to",
+              "kind": "frame",
+              "labelVi": "Đưa giải pháp + động từ nguyên mẫu"
+            },
+            {
+              "text": " install convenient refill points and keep them clean. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a school could place a water station near classrooms and explain who checks it each day. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, people have good reason to support this approach because people can avoid buying a new plastic bottle each time they need water. I regard it as mainly positive, but the result depends on practical planning. A flexible approach that listens to the people involved is more likely to deliver the intended value.",
-          "noteVi": "Chốt cả lý do và đánh giá."
+          "noteVi": "Chốt cả lý do và đánh giá.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " people have good reason to support this approach because people can avoid buying a new plastic bottle each time they need water. I regard it as mainly positive, but the result depends on practical planning. A flexible approach that listens to the people involved is more likely to deliver the intended value.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 350,
       "mainWordCount": 350,
       "phrases": [
@@ -170,32 +398,146 @@
         {
           "label": "Mở bài",
           "text": "There are understandable reasons why people may support the proposal that residential areas should provide space for community gardens. I consider this a mainly positive development when it is organised with practical needs in mind. Its value comes from the help it can offer in daily life, rather than from the idea simply sounding modern or attractive.",
-          "noteVi": "Trả lời ngắn cả hai câu hỏi."
+          "noteVi": "Trả lời ngắn cả hai câu hỏi.",
+          "parts": [
+            {
+              "text": "There are understandable reasons why people may support ",
+              "kind": "detail"
+            },
+            {
+              "text": "the proposal that",
+              "kind": "frame",
+              "labelVi": "Giới thiệu đề xuất + mệnh đề"
+            },
+            {
+              "text": " residential areas should provide space for community gardens. ",
+              "kind": "detail"
+            },
+            {
+              "text": "I consider this a mainly positive development",
+              "kind": "frame",
+              "labelVi": "Đánh giá tích cực; chỉ dùng khi đúng lập trường"
+            },
+            {
+              "text": " when it is organised with practical needs in mind. Its value comes from the help it can offer in daily life, rather than from the idea simply sounding modern or attractive.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Câu hỏi 1 — vì sao?",
           "text": "One important point in favour of the proposal is that neighbours can work together and learn practical skills. This is possible because a shared task gives people a reason to meet regularly and exchange knowledge. For example, an experienced gardener can show a family how to grow herbs in a small raised bed. The value of this example is that the benefit is connected with a real everyday need. It is easier for people to see the purpose of an approach when they can relate it to their own situation.",
-          "noteVi": "Vườn chung tạo cơ hội kết nối; cần phân công chăm cây lâu dài thay vì chỉ tổ chức ngày khai trương."
+          "noteVi": "Vườn chung tạo cơ hội kết nối; cần phân công chăm cây lâu dài thay vì chỉ tổ chức ngày khai trương.",
+          "parts": [
+            {
+              "text": "One important point in favour of the proposal is that",
+              "kind": "frame",
+              "labelVi": "Lợi ích / lý do ủng hộ + mệnh đề"
+            },
+            {
+              "text": " neighbours can work together and learn practical skills. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This is possible because",
+              "kind": "frame",
+              "labelVi": "Giải thích cơ chế + mệnh đề"
+            },
+            {
+              "text": " a shared task gives people a reason to meet regularly and exchange knowledge. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " an experienced gardener can show a family how to grow herbs in a small raised bed. The value of this example is that the benefit is connected with a real everyday need. It is easier for people to see the purpose of an approach when they can relate it to their own situation.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Câu hỏi 2 — đánh giá",
           "text": "I see the development as positive because it gives people a useful option, provided that the main obstacles are recognised. One concern is that the garden may be neglected after the first few weeks. This is connected with the fact that responsibilities may not be agreed before the garden opens. Ignoring that concern would weaken the case for the proposal, so support should include an effort to improve how it works.",
-          "noteVi": "Đánh giá có lý do và giới hạn."
+          "noteVi": "Đánh giá có lý do và giới hạn.",
+          "parts": [
+            {
+              "text": "I see the development as positive because",
+              "kind": "frame",
+              "labelVi": "Đánh giá và đưa lý do; đổi positive nếu đánh giá tiêu cực"
+            },
+            {
+              "text": " it gives people a useful option, provided that the main obstacles are recognised. ",
+              "kind": "detail"
+            },
+            {
+              "text": "One concern is that",
+              "kind": "frame",
+              "labelVi": "Nêu mối lo + mệnh đề"
+            },
+            {
+              "text": " the garden may be neglected after the first few weeks. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This is connected with the fact that",
+              "kind": "frame",
+              "labelVi": "Nối với nguyên nhân / thực tế"
+            },
+            {
+              "text": " responsibilities may not be agreed before the garden opens. Ignoring that concern would weaken the case for the proposal, so support should include an effort to improve how it works.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Ví dụ về điều kiện",
           "text": "A practical response would be to create a simple rota and choose plants suited to the available space. For example, residents could take turns checking the garden and keep a shared list of tasks near the entrance. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
-          "noteVi": "Minh họa cách giữ lợi ích và giảm trở ngại."
+          "noteVi": "Minh họa cách giữ lợi ích và giảm trở ngại.",
+          "parts": [
+            {
+              "text": "A practical response would be to",
+              "kind": "frame",
+              "labelVi": "Đưa giải pháp + động từ nguyên mẫu"
+            },
+            {
+              "text": " create a simple rota and choose plants suited to the available space. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " residents could take turns checking the garden and keep a shared list of tasks near the entrance. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, people have good reason to support this approach because neighbours can work together and learn practical skills. I regard it as mainly positive, but the result depends on practical planning. A flexible approach that listens to the people involved is more likely to deliver the intended value.",
-          "noteVi": "Chốt cả lý do và đánh giá."
+          "noteVi": "Chốt cả lý do và đánh giá.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " people have good reason to support this approach because neighbours can work together and learn practical skills. I regard it as mainly positive, but the result depends on practical planning. A flexible approach that listens to the people involved is more likely to deliver the intended value.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 346,
       "mainWordCount": 346,
       "phrases": [
@@ -245,32 +587,146 @@
         {
           "label": "Mở bài",
           "text": "There are understandable reasons why people may support the proposal that cities should protect accessible public green spaces. I consider this a mainly positive development when it is organised with practical needs in mind. Its value comes from the help it can offer in daily life, rather than from the idea simply sounding modern or attractive.",
-          "noteVi": "Trả lời ngắn cả hai câu hỏi."
+          "noteVi": "Trả lời ngắn cả hai câu hỏi.",
+          "parts": [
+            {
+              "text": "There are understandable reasons why people may support ",
+              "kind": "detail"
+            },
+            {
+              "text": "the proposal that",
+              "kind": "frame",
+              "labelVi": "Giới thiệu đề xuất + mệnh đề"
+            },
+            {
+              "text": " cities should protect accessible public green spaces. ",
+              "kind": "detail"
+            },
+            {
+              "text": "I consider this a mainly positive development",
+              "kind": "frame",
+              "labelVi": "Đánh giá tích cực; chỉ dùng khi đúng lập trường"
+            },
+            {
+              "text": " when it is organised with practical needs in mind. Its value comes from the help it can offer in daily life, rather than from the idea simply sounding modern or attractive.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Câu hỏi 1 — vì sao?",
           "text": "One important point in favour of the proposal is that residents have places to walk, rest and meet other people. This is possible because a nearby park can be used without paying for a private leisure facility. For example, an older resident can take a short walk and meet neighbours on a bench close to home. The value of this example is that the benefit is connected with a real everyday need. It is easier for people to see the purpose of an approach when they can relate it to their own situation.",
-          "noteVi": "Công viên công cộng cần dễ tiếp cận và được bảo trì để người dân thực sự dùng được."
+          "noteVi": "Công viên công cộng cần dễ tiếp cận và được bảo trì để người dân thực sự dùng được.",
+          "parts": [
+            {
+              "text": "One important point in favour of the proposal is that",
+              "kind": "frame",
+              "labelVi": "Lợi ích / lý do ủng hộ + mệnh đề"
+            },
+            {
+              "text": " residents have places to walk, rest and meet other people. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This is possible because",
+              "kind": "frame",
+              "labelVi": "Giải thích cơ chế + mệnh đề"
+            },
+            {
+              "text": " a nearby park can be used without paying for a private leisure facility. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " an older resident can take a short walk and meet neighbours on a bench close to home. The value of this example is that the benefit is connected with a real everyday need. It is easier for people to see the purpose of an approach when they can relate it to their own situation.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Câu hỏi 2 — đánh giá",
           "text": "I see the development as positive because it gives people a useful option, provided that the main obstacles are recognised. One concern is that a poorly maintained park may not feel welcoming. This is connected with the fact that funding may cover construction but not regular care. Ignoring that concern would weaken the case for the proposal, so support should include an effort to improve how it works.",
-          "noteVi": "Đánh giá có lý do và giới hạn."
+          "noteVi": "Đánh giá có lý do và giới hạn.",
+          "parts": [
+            {
+              "text": "I see the development as positive because",
+              "kind": "frame",
+              "labelVi": "Đánh giá và đưa lý do; đổi positive nếu đánh giá tiêu cực"
+            },
+            {
+              "text": " it gives people a useful option, provided that the main obstacles are recognised. ",
+              "kind": "detail"
+            },
+            {
+              "text": "One concern is that",
+              "kind": "frame",
+              "labelVi": "Nêu mối lo + mệnh đề"
+            },
+            {
+              "text": " a poorly maintained park may not feel welcoming. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This is connected with the fact that",
+              "kind": "frame",
+              "labelVi": "Nối với nguyên nhân / thực tế"
+            },
+            {
+              "text": " funding may cover construction but not regular care. Ignoring that concern would weaken the case for the proposal, so support should include an effort to improve how it works.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Ví dụ về điều kiện",
           "text": "A practical response would be to plan for maintenance as well as new facilities. For example, a local team could inspect paths and play equipment regularly and provide a clear way to report problems. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
-          "noteVi": "Minh họa cách giữ lợi ích và giảm trở ngại."
+          "noteVi": "Minh họa cách giữ lợi ích và giảm trở ngại.",
+          "parts": [
+            {
+              "text": "A practical response would be to",
+              "kind": "frame",
+              "labelVi": "Đưa giải pháp + động từ nguyên mẫu"
+            },
+            {
+              "text": " plan for maintenance as well as new facilities. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a local team could inspect paths and play equipment regularly and provide a clear way to report problems. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, people have good reason to support this approach because residents have places to walk, rest and meet other people. I regard it as mainly positive, but the result depends on practical planning. A flexible approach that listens to the people involved is more likely to deliver the intended value.",
-          "noteVi": "Chốt cả lý do và đánh giá."
+          "noteVi": "Chốt cả lý do và đánh giá.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " people have good reason to support this approach because residents have places to walk, rest and meet other people. I regard it as mainly positive, but the result depends on practical planning. A flexible approach that listens to the people involved is more likely to deliver the intended value.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 344,
       "mainWordCount": 344,
       "phrases": [
@@ -320,32 +776,146 @@
         {
           "label": "Mở bài",
           "text": "There are understandable reasons why people may support the proposal that cities should make cycling safer for short everyday journeys. I consider this a mainly positive development when it is organised with practical needs in mind. Its value comes from the help it can offer in daily life, rather than from the idea simply sounding modern or attractive.",
-          "noteVi": "Trả lời ngắn cả hai câu hỏi."
+          "noteVi": "Trả lời ngắn cả hai câu hỏi.",
+          "parts": [
+            {
+              "text": "There are understandable reasons why people may support ",
+              "kind": "detail"
+            },
+            {
+              "text": "the proposal that",
+              "kind": "frame",
+              "labelVi": "Giới thiệu đề xuất + mệnh đề"
+            },
+            {
+              "text": " cities should make cycling safer for short everyday journeys. ",
+              "kind": "detail"
+            },
+            {
+              "text": "I consider this a mainly positive development",
+              "kind": "frame",
+              "labelVi": "Đánh giá tích cực; chỉ dùng khi đúng lập trường"
+            },
+            {
+              "text": " when it is organised with practical needs in mind. Its value comes from the help it can offer in daily life, rather than from the idea simply sounding modern or attractive.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Câu hỏi 1 — vì sao?",
           "text": "One important point in favour of the proposal is that people have another way to travel without using a car. This is possible because short trips can be practical by bicycle when routes connect useful places. For example, a student can cycle from home to a nearby college if the route avoids fast traffic. The value of this example is that the benefit is connected with a real everyday need. It is easier for people to see the purpose of an approach when they can relate it to their own situation.",
-          "noteVi": "Xe đạp phù hợp quãng ngắn khi đường đi liền mạch và các giao lộ được xử lý an toàn."
+          "noteVi": "Xe đạp phù hợp quãng ngắn khi đường đi liền mạch và các giao lộ được xử lý an toàn.",
+          "parts": [
+            {
+              "text": "One important point in favour of the proposal is that",
+              "kind": "frame",
+              "labelVi": "Lợi ích / lý do ủng hộ + mệnh đề"
+            },
+            {
+              "text": " people have another way to travel without using a car. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This is possible because",
+              "kind": "frame",
+              "labelVi": "Giải thích cơ chế + mệnh đề"
+            },
+            {
+              "text": " short trips can be practical by bicycle when routes connect useful places. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a student can cycle from home to a nearby college if the route avoids fast traffic. The value of this example is that the benefit is connected with a real everyday need. It is easier for people to see the purpose of an approach when they can relate it to their own situation.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Câu hỏi 2 — đánh giá",
           "text": "I see the development as positive because it gives people a useful option, provided that the main obstacles are recognised. One concern is that unsafe roads can discourage inexperienced riders. This is connected with the fact that cycling routes may be disconnected or planned without considering junctions. Ignoring that concern would weaken the case for the proposal, so support should include an effort to improve how it works.",
-          "noteVi": "Đánh giá có lý do và giới hạn."
+          "noteVi": "Đánh giá có lý do và giới hạn.",
+          "parts": [
+            {
+              "text": "I see the development as positive because",
+              "kind": "frame",
+              "labelVi": "Đánh giá và đưa lý do; đổi positive nếu đánh giá tiêu cực"
+            },
+            {
+              "text": " it gives people a useful option, provided that the main obstacles are recognised. ",
+              "kind": "detail"
+            },
+            {
+              "text": "One concern is that",
+              "kind": "frame",
+              "labelVi": "Nêu mối lo + mệnh đề"
+            },
+            {
+              "text": " unsafe roads can discourage inexperienced riders. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This is connected with the fact that",
+              "kind": "frame",
+              "labelVi": "Nối với nguyên nhân / thực tế"
+            },
+            {
+              "text": " cycling routes may be disconnected or planned without considering junctions. Ignoring that concern would weaken the case for the proposal, so support should include an effort to improve how it works.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Ví dụ về điều kiện",
           "text": "A practical response would be to build connected routes and improve difficult crossings. For example, a city could link a housing area to a school with protected sections and clearly marked crossings. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
-          "noteVi": "Minh họa cách giữ lợi ích và giảm trở ngại."
+          "noteVi": "Minh họa cách giữ lợi ích và giảm trở ngại.",
+          "parts": [
+            {
+              "text": "A practical response would be to",
+              "kind": "frame",
+              "labelVi": "Đưa giải pháp + động từ nguyên mẫu"
+            },
+            {
+              "text": " build connected routes and improve difficult crossings. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a city could link a housing area to a school with protected sections and clearly marked crossings. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, people have good reason to support this approach because people have another way to travel without using a car. I regard it as mainly positive, but the result depends on practical planning. A flexible approach that listens to the people involved is more likely to deliver the intended value.",
-          "noteVi": "Chốt cả lý do và đánh giá."
+          "noteVi": "Chốt cả lý do và đánh giá.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " people have good reason to support this approach because people have another way to travel without using a car. I regard it as mainly positive, but the result depends on practical planning. A flexible approach that listens to the people involved is more likely to deliver the intended value.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 342,
       "mainWordCount": 342,
       "phrases": [
@@ -395,32 +965,146 @@
         {
           "label": "Mở bài",
           "text": "There are understandable reasons why people may support the proposal that households should be given practical advice on reducing unnecessary electricity use. I consider this a mainly positive development when it is organised with practical needs in mind. Its value comes from the help it can offer in daily life, rather than from the idea simply sounding modern or attractive.",
-          "noteVi": "Trả lời ngắn cả hai câu hỏi."
+          "noteVi": "Trả lời ngắn cả hai câu hỏi.",
+          "parts": [
+            {
+              "text": "There are understandable reasons why people may support ",
+              "kind": "detail"
+            },
+            {
+              "text": "the proposal that",
+              "kind": "frame",
+              "labelVi": "Giới thiệu đề xuất + mệnh đề"
+            },
+            {
+              "text": " households should be given practical advice on reducing unnecessary electricity use. ",
+              "kind": "detail"
+            },
+            {
+              "text": "I consider this a mainly positive development",
+              "kind": "frame",
+              "labelVi": "Đánh giá tích cực; chỉ dùng khi đúng lập trường"
+            },
+            {
+              "text": " when it is organised with practical needs in mind. Its value comes from the help it can offer in daily life, rather than from the idea simply sounding modern or attractive.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Câu hỏi 1 — vì sao?",
           "text": "One important point in favour of the proposal is that families can avoid paying for energy they do not need. This is possible because small changes are easier to maintain when people understand which habits cause waste. For example, a family can switch off lights in empty rooms and use a timer for an appliance that is often forgotten. The value of this example is that the benefit is connected with a real everyday need. It is easier for people to see the purpose of an approach when they can relate it to their own situation.",
-          "noteVi": "Tiết kiệm điện nên bắt đầu từ việc dễ làm và phù hợp nhà thuê, thu nhập, thiết bị sẵn có."
+          "noteVi": "Tiết kiệm điện nên bắt đầu từ việc dễ làm và phù hợp nhà thuê, thu nhập, thiết bị sẵn có.",
+          "parts": [
+            {
+              "text": "One important point in favour of the proposal is that",
+              "kind": "frame",
+              "labelVi": "Lợi ích / lý do ủng hộ + mệnh đề"
+            },
+            {
+              "text": " families can avoid paying for energy they do not need. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This is possible because",
+              "kind": "frame",
+              "labelVi": "Giải thích cơ chế + mệnh đề"
+            },
+            {
+              "text": " small changes are easier to maintain when people understand which habits cause waste. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a family can switch off lights in empty rooms and use a timer for an appliance that is often forgotten. The value of this example is that the benefit is connected with a real everyday need. It is easier for people to see the purpose of an approach when they can relate it to their own situation.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Câu hỏi 2 — đánh giá",
           "text": "I see the development as positive because it gives people a useful option, provided that the main obstacles are recognised. One concern is that advice may be unrealistic for some homes. This is connected with the fact that general campaigns may ignore differences in housing and income. Ignoring that concern would weaken the case for the proposal, so support should include an effort to improve how it works.",
-          "noteVi": "Đánh giá có lý do và giới hạn."
+          "noteVi": "Đánh giá có lý do và giới hạn.",
+          "parts": [
+            {
+              "text": "I see the development as positive because",
+              "kind": "frame",
+              "labelVi": "Đánh giá và đưa lý do; đổi positive nếu đánh giá tiêu cực"
+            },
+            {
+              "text": " it gives people a useful option, provided that the main obstacles are recognised. ",
+              "kind": "detail"
+            },
+            {
+              "text": "One concern is that",
+              "kind": "frame",
+              "labelVi": "Nêu mối lo + mệnh đề"
+            },
+            {
+              "text": " advice may be unrealistic for some homes. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This is connected with the fact that",
+              "kind": "frame",
+              "labelVi": "Nối với nguyên nhân / thực tế"
+            },
+            {
+              "text": " general campaigns may ignore differences in housing and income. Ignoring that concern would weaken the case for the proposal, so support should include an effort to improve how it works.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Ví dụ về điều kiện",
           "text": "A practical response would be to offer low-cost suggestions and explain which changes require an owner's permission. For example, a community centre could provide a checklist that separates everyday habits from costly improvements. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
-          "noteVi": "Minh họa cách giữ lợi ích và giảm trở ngại."
+          "noteVi": "Minh họa cách giữ lợi ích và giảm trở ngại.",
+          "parts": [
+            {
+              "text": "A practical response would be to",
+              "kind": "frame",
+              "labelVi": "Đưa giải pháp + động từ nguyên mẫu"
+            },
+            {
+              "text": " offer low-cost suggestions and explain which changes require an owner's permission. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a community centre could provide a checklist that separates everyday habits from costly improvements. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, people have good reason to support this approach because families can avoid paying for energy they do not need. I regard it as mainly positive, but the result depends on practical planning. A flexible approach that listens to the people involved is more likely to deliver the intended value.",
-          "noteVi": "Chốt cả lý do và đánh giá."
+          "noteVi": "Chốt cả lý do và đánh giá.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " people have good reason to support this approach because families can avoid paying for energy they do not need. I regard it as mainly positive, but the result depends on practical planning. A flexible approach that listens to the people involved is more likely to deliver the intended value.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 350,
       "mainWordCount": 350,
       "phrases": [
@@ -470,32 +1154,146 @@
         {
           "label": "Mở bài",
           "text": "There are understandable reasons why people may support the proposal that tourists should choose wildlife activities that avoid disturbing animals. I consider this a mainly positive development when it is organised with practical needs in mind. Its value comes from the help it can offer in daily life, rather than from the idea simply sounding modern or attractive.",
-          "noteVi": "Trả lời ngắn cả hai câu hỏi."
+          "noteVi": "Trả lời ngắn cả hai câu hỏi.",
+          "parts": [
+            {
+              "text": "There are understandable reasons why people may support ",
+              "kind": "detail"
+            },
+            {
+              "text": "the proposal that",
+              "kind": "frame",
+              "labelVi": "Giới thiệu đề xuất + mệnh đề"
+            },
+            {
+              "text": " tourists should choose wildlife activities that avoid disturbing animals. ",
+              "kind": "detail"
+            },
+            {
+              "text": "I consider this a mainly positive development",
+              "kind": "frame",
+              "labelVi": "Đánh giá tích cực; chỉ dùng khi đúng lập trường"
+            },
+            {
+              "text": " when it is organised with practical needs in mind. Its value comes from the help it can offer in daily life, rather than from the idea simply sounding modern or attractive.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Câu hỏi 1 — vì sao?",
           "text": "One important point in favour of the proposal is that visitors can enjoy nature without treating animals as objects for entertainment. This is possible because keeping a suitable distance allows people to observe behaviour with less interference. For example, a guided birdwatching group can use binoculars instead of approaching a nesting area. The value of this example is that the benefit is connected with a real everyday need. It is easier for people to see the purpose of an approach when they can relate it to their own situation.",
-          "noteVi": "Tham quan thiên nhiên cần quan sát có khoảng cách; nên hỏi cách chăm sóc động vật thay vì chỉ xem quảng cáo."
+          "noteVi": "Tham quan thiên nhiên cần quan sát có khoảng cách; nên hỏi cách chăm sóc động vật thay vì chỉ xem quảng cáo.",
+          "parts": [
+            {
+              "text": "One important point in favour of the proposal is that",
+              "kind": "frame",
+              "labelVi": "Lợi ích / lý do ủng hộ + mệnh đề"
+            },
+            {
+              "text": " visitors can enjoy nature without treating animals as objects for entertainment. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This is possible because",
+              "kind": "frame",
+              "labelVi": "Giải thích cơ chế + mệnh đề"
+            },
+            {
+              "text": " keeping a suitable distance allows people to observe behaviour with less interference. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a guided birdwatching group can use binoculars instead of approaching a nesting area. The value of this example is that the benefit is connected with a real everyday need. It is easier for people to see the purpose of an approach when they can relate it to their own situation.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Câu hỏi 2 — đánh giá",
           "text": "I see the development as positive because it gives people a useful option, provided that the main obstacles are recognised. One concern is that visitors may not know which activities are responsible. This is connected with the fact that travellers may rely on attractive images rather than asking detailed questions. Ignoring that concern would weaken the case for the proposal, so support should include an effort to improve how it works.",
-          "noteVi": "Đánh giá có lý do và giới hạn."
+          "noteVi": "Đánh giá có lý do và giới hạn.",
+          "parts": [
+            {
+              "text": "I see the development as positive because",
+              "kind": "frame",
+              "labelVi": "Đánh giá và đưa lý do; đổi positive nếu đánh giá tiêu cực"
+            },
+            {
+              "text": " it gives people a useful option, provided that the main obstacles are recognised. ",
+              "kind": "detail"
+            },
+            {
+              "text": "One concern is that",
+              "kind": "frame",
+              "labelVi": "Nêu mối lo + mệnh đề"
+            },
+            {
+              "text": " visitors may not know which activities are responsible. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This is connected with the fact that",
+              "kind": "frame",
+              "labelVi": "Nối với nguyên nhân / thực tế"
+            },
+            {
+              "text": " travellers may rely on attractive images rather than asking detailed questions. Ignoring that concern would weaken the case for the proposal, so support should include an effort to improve how it works.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Ví dụ về điều kiện",
           "text": "A practical response would be to provide clear information about visitor behaviour and animal care. For example, a tour guide could explain why touching and feeding wildlife are not included and offer observation from a suitable distance. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
-          "noteVi": "Minh họa cách giữ lợi ích và giảm trở ngại."
+          "noteVi": "Minh họa cách giữ lợi ích và giảm trở ngại.",
+          "parts": [
+            {
+              "text": "A practical response would be to",
+              "kind": "frame",
+              "labelVi": "Đưa giải pháp + động từ nguyên mẫu"
+            },
+            {
+              "text": " provide clear information about visitor behaviour and animal care. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a tour guide could explain why touching and feeding wildlife are not included and offer observation from a suitable distance. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, people have good reason to support this approach because visitors can enjoy nature without treating animals as objects for entertainment. I regard it as mainly positive, but the result depends on practical planning. A flexible approach that listens to the people involved is more likely to deliver the intended value.",
-          "noteVi": "Chốt cả lý do và đánh giá."
+          "noteVi": "Chốt cả lý do và đánh giá.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " people have good reason to support this approach because visitors can enjoy nature without treating animals as objects for entertainment. I regard it as mainly positive, but the result depends on practical planning. A flexible approach that listens to the people involved is more likely to deliver the intended value.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 349,
       "mainWordCount": 349,
       "phrases": [
@@ -545,32 +1343,146 @@
         {
           "label": "Mở bài",
           "text": "There are understandable reasons why people may support the proposal that families should plan meals before shopping for food. I consider this a mainly positive development when it is organised with practical needs in mind. Its value comes from the help it can offer in daily life, rather than from the idea simply sounding modern or attractive.",
-          "noteVi": "Trả lời ngắn cả hai câu hỏi."
+          "noteVi": "Trả lời ngắn cả hai câu hỏi.",
+          "parts": [
+            {
+              "text": "There are understandable reasons why people may support ",
+              "kind": "detail"
+            },
+            {
+              "text": "the proposal that",
+              "kind": "frame",
+              "labelVi": "Giới thiệu đề xuất + mệnh đề"
+            },
+            {
+              "text": " families should plan meals before shopping for food. ",
+              "kind": "detail"
+            },
+            {
+              "text": "I consider this a mainly positive development",
+              "kind": "frame",
+              "labelVi": "Đánh giá tích cực; chỉ dùng khi đúng lập trường"
+            },
+            {
+              "text": " when it is organised with practical needs in mind. Its value comes from the help it can offer in daily life, rather than from the idea simply sounding modern or attractive.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Câu hỏi 1 — vì sao?",
           "text": "One important point in favour of the proposal is that households can use more of the food they buy. This is possible because a plan makes it easier to match quantities with the number of meals needed. For example, a family can use the same vegetables in a soup and a rice dish instead of buying separate ingredients for every meal. The value of this example is that the benefit is connected with a real everyday need. It is easier for people to see the purpose of an approach when they can relate it to their own situation.",
-          "noteVi": "Lên thực đơn giúp bớt mua thừa; kế hoạch cần linh hoạt để dùng được đồ còn lại khi lịch thay đổi."
+          "noteVi": "Lên thực đơn giúp bớt mua thừa; kế hoạch cần linh hoạt để dùng được đồ còn lại khi lịch thay đổi.",
+          "parts": [
+            {
+              "text": "One important point in favour of the proposal is that",
+              "kind": "frame",
+              "labelVi": "Lợi ích / lý do ủng hộ + mệnh đề"
+            },
+            {
+              "text": " households can use more of the food they buy. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This is possible because",
+              "kind": "frame",
+              "labelVi": "Giải thích cơ chế + mệnh đề"
+            },
+            {
+              "text": " a plan makes it easier to match quantities with the number of meals needed. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a family can use the same vegetables in a soup and a rice dish instead of buying separate ingredients for every meal. The value of this example is that the benefit is connected with a real everyday need. It is easier for people to see the purpose of an approach when they can relate it to their own situation.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Câu hỏi 2 — đánh giá",
           "text": "I see the development as positive because it gives people a useful option, provided that the main obstacles are recognised. One concern is that a rigid plan may not fit a changing schedule. This is connected with the fact that shopping plans may be too ambitious and leave no room for change. Ignoring that concern would weaken the case for the proposal, so support should include an effort to improve how it works.",
-          "noteVi": "Đánh giá có lý do và giới hạn."
+          "noteVi": "Đánh giá có lý do và giới hạn.",
+          "parts": [
+            {
+              "text": "I see the development as positive because",
+              "kind": "frame",
+              "labelVi": "Đánh giá và đưa lý do; đổi positive nếu đánh giá tiêu cực"
+            },
+            {
+              "text": " it gives people a useful option, provided that the main obstacles are recognised. ",
+              "kind": "detail"
+            },
+            {
+              "text": "One concern is that",
+              "kind": "frame",
+              "labelVi": "Nêu mối lo + mệnh đề"
+            },
+            {
+              "text": " a rigid plan may not fit a changing schedule. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This is connected with the fact that",
+              "kind": "frame",
+              "labelVi": "Nối với nguyên nhân / thực tế"
+            },
+            {
+              "text": " shopping plans may be too ambitious and leave no room for change. Ignoring that concern would weaken the case for the proposal, so support should include an effort to improve how it works.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Ví dụ về điều kiện",
           "text": "A practical response would be to choose flexible meals and check existing food before buying more. For example, someone could plan two simple dishes using similar ingredients and keep one evening free for leftovers. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
-          "noteVi": "Minh họa cách giữ lợi ích và giảm trở ngại."
+          "noteVi": "Minh họa cách giữ lợi ích và giảm trở ngại.",
+          "parts": [
+            {
+              "text": "A practical response would be to",
+              "kind": "frame",
+              "labelVi": "Đưa giải pháp + động từ nguyên mẫu"
+            },
+            {
+              "text": " choose flexible meals and check existing food before buying more. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " someone could plan two simple dishes using similar ingredients and keep one evening free for leftovers. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, people have good reason to support this approach because households can use more of the food they buy. I regard it as mainly positive, but the result depends on practical planning. A flexible approach that listens to the people involved is more likely to deliver the intended value.",
-          "noteVi": "Chốt cả lý do và đánh giá."
+          "noteVi": "Chốt cả lý do và đánh giá.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " people have good reason to support this approach because households can use more of the food they buy. I regard it as mainly positive, but the result depends on practical planning. A flexible approach that listens to the people involved is more likely to deliver the intended value.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 354,
       "mainWordCount": 354,
       "phrases": [
@@ -620,32 +1532,146 @@
         {
           "label": "Mở bài",
           "text": "There are understandable reasons why people may support the proposal that coastal communities should combine beach clean-ups with efforts to prevent litter. I consider this a mainly positive development when it is organised with practical needs in mind. Its value comes from the help it can offer in daily life, rather than from the idea simply sounding modern or attractive.",
-          "noteVi": "Trả lời ngắn cả hai câu hỏi."
+          "noteVi": "Trả lời ngắn cả hai câu hỏi.",
+          "parts": [
+            {
+              "text": "There are understandable reasons why people may support ",
+              "kind": "detail"
+            },
+            {
+              "text": "the proposal that",
+              "kind": "frame",
+              "labelVi": "Giới thiệu đề xuất + mệnh đề"
+            },
+            {
+              "text": " coastal communities should combine beach clean-ups with efforts to prevent litter. ",
+              "kind": "detail"
+            },
+            {
+              "text": "I consider this a mainly positive development",
+              "kind": "frame",
+              "labelVi": "Đánh giá tích cực; chỉ dùng khi đúng lập trường"
+            },
+            {
+              "text": " when it is organised with practical needs in mind. Its value comes from the help it can offer in daily life, rather than from the idea simply sounding modern or attractive.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Câu hỏi 1 — vì sao?",
           "text": "One important point in favour of the proposal is that volunteers can improve a public place and understand the scale of the problem. This is possible because collecting visible waste makes an environmental issue concrete rather than distant. For example, a family can help record the kinds of packaging found on one section of beach. The value of this example is that the benefit is connected with a real everyday need. It is easier for people to see the purpose of an approach when they can relate it to their own situation.",
-          "noteVi": "Dọn rác giúp cải thiện trước mắt; cần dùng kết quả để ngăn rác mới xuất hiện."
+          "noteVi": "Dọn rác giúp cải thiện trước mắt; cần dùng kết quả để ngăn rác mới xuất hiện.",
+          "parts": [
+            {
+              "text": "One important point in favour of the proposal is that",
+              "kind": "frame",
+              "labelVi": "Lợi ích / lý do ủng hộ + mệnh đề"
+            },
+            {
+              "text": " volunteers can improve a public place and understand the scale of the problem. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This is possible because",
+              "kind": "frame",
+              "labelVi": "Giải thích cơ chế + mệnh đề"
+            },
+            {
+              "text": " collecting visible waste makes an environmental issue concrete rather than distant. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a family can help record the kinds of packaging found on one section of beach. The value of this example is that the benefit is connected with a real everyday need. It is easier for people to see the purpose of an approach when they can relate it to their own situation.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Câu hỏi 2 — đánh giá",
           "text": "I see the development as positive because it gives people a useful option, provided that the main obstacles are recognised. One concern is that the beach may quickly become dirty again. This is connected with the fact that there may be too few bins or little information about local waste rules. Ignoring that concern would weaken the case for the proposal, so support should include an effort to improve how it works.",
-          "noteVi": "Đánh giá có lý do và giới hạn."
+          "noteVi": "Đánh giá có lý do và giới hạn.",
+          "parts": [
+            {
+              "text": "I see the development as positive because",
+              "kind": "frame",
+              "labelVi": "Đánh giá và đưa lý do; đổi positive nếu đánh giá tiêu cực"
+            },
+            {
+              "text": " it gives people a useful option, provided that the main obstacles are recognised. ",
+              "kind": "detail"
+            },
+            {
+              "text": "One concern is that",
+              "kind": "frame",
+              "labelVi": "Nêu mối lo + mệnh đề"
+            },
+            {
+              "text": " the beach may quickly become dirty again. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This is connected with the fact that",
+              "kind": "frame",
+              "labelVi": "Nối với nguyên nhân / thực tế"
+            },
+            {
+              "text": " there may be too few bins or little information about local waste rules. Ignoring that concern would weaken the case for the proposal, so support should include an effort to improve how it works.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Ví dụ về điều kiện",
           "text": "A practical response would be to improve waste facilities and explain how visitors can avoid leaving rubbish. For example, organisers could use the clean-up record to decide where covered bins and clear signs are most needed. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
-          "noteVi": "Minh họa cách giữ lợi ích và giảm trở ngại."
+          "noteVi": "Minh họa cách giữ lợi ích và giảm trở ngại.",
+          "parts": [
+            {
+              "text": "A practical response would be to",
+              "kind": "frame",
+              "labelVi": "Đưa giải pháp + động từ nguyên mẫu"
+            },
+            {
+              "text": " improve waste facilities and explain how visitors can avoid leaving rubbish. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " organisers could use the clean-up record to decide where covered bins and clear signs are most needed. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, people have good reason to support this approach because volunteers can improve a public place and understand the scale of the problem. I regard it as mainly positive, but the result depends on practical planning. A flexible approach that listens to the people involved is more likely to deliver the intended value.",
-          "noteVi": "Chốt cả lý do và đánh giá."
+          "noteVi": "Chốt cả lý do và đánh giá.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " people have good reason to support this approach because volunteers can improve a public place and understand the scale of the problem. I regard it as mainly positive, but the result depends on practical planning. A flexible approach that listens to the people involved is more likely to deliver the intended value.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 356,
       "mainWordCount": 356,
       "phrases": [
@@ -695,32 +1721,146 @@
         {
           "label": "Mở bài",
           "text": "There are understandable reasons why people may support the proposal that communities should encourage practical water-saving habits. I consider this a mainly positive development when it is organised with practical needs in mind. Its value comes from the help it can offer in daily life, rather than from the idea simply sounding modern or attractive.",
-          "noteVi": "Trả lời ngắn cả hai câu hỏi."
+          "noteVi": "Trả lời ngắn cả hai câu hỏi.",
+          "parts": [
+            {
+              "text": "There are understandable reasons why people may support ",
+              "kind": "detail"
+            },
+            {
+              "text": "the proposal that",
+              "kind": "frame",
+              "labelVi": "Giới thiệu đề xuất + mệnh đề"
+            },
+            {
+              "text": " communities should encourage practical water-saving habits. ",
+              "kind": "detail"
+            },
+            {
+              "text": "I consider this a mainly positive development",
+              "kind": "frame",
+              "labelVi": "Đánh giá tích cực; chỉ dùng khi đúng lập trường"
+            },
+            {
+              "text": " when it is organised with practical needs in mind. Its value comes from the help it can offer in daily life, rather than from the idea simply sounding modern or attractive.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Câu hỏi 1 — vì sao?",
           "text": "One important point in favour of the proposal is that people can avoid wasting treated water. This is possible because noticing leaks and unnecessary running taps can reduce waste without removing essential uses. For example, a household can repair a dripping tap and use a bowl when washing a small amount of produce. The value of this example is that the benefit is connected with a real everyday need. It is easier for people to see the purpose of an approach when they can relate it to their own situation.",
-          "noteVi": "Thói quen tiết kiệm nước cần đi cùng cách báo và sửa rò rỉ rõ trách nhiệm."
+          "noteVi": "Thói quen tiết kiệm nước cần đi cùng cách báo và sửa rò rỉ rõ trách nhiệm.",
+          "parts": [
+            {
+              "text": "One important point in favour of the proposal is that",
+              "kind": "frame",
+              "labelVi": "Lợi ích / lý do ủng hộ + mệnh đề"
+            },
+            {
+              "text": " people can avoid wasting treated water. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This is possible because",
+              "kind": "frame",
+              "labelVi": "Giải thích cơ chế + mệnh đề"
+            },
+            {
+              "text": " noticing leaks and unnecessary running taps can reduce waste without removing essential uses. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a household can repair a dripping tap and use a bowl when washing a small amount of produce. The value of this example is that the benefit is connected with a real everyday need. It is easier for people to see the purpose of an approach when they can relate it to their own situation.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Câu hỏi 2 — đánh giá",
           "text": "I see the development as positive because it gives people a useful option, provided that the main obstacles are recognised. One concern is that simple advice may overlook problems beyond a resident's control. This is connected with the fact that responsibility for repairs may be unclear. Ignoring that concern would weaken the case for the proposal, so support should include an effort to improve how it works.",
-          "noteVi": "Đánh giá có lý do và giới hạn."
+          "noteVi": "Đánh giá có lý do và giới hạn.",
+          "parts": [
+            {
+              "text": "I see the development as positive because",
+              "kind": "frame",
+              "labelVi": "Đánh giá và đưa lý do; đổi positive nếu đánh giá tiêu cực"
+            },
+            {
+              "text": " it gives people a useful option, provided that the main obstacles are recognised. ",
+              "kind": "detail"
+            },
+            {
+              "text": "One concern is that",
+              "kind": "frame",
+              "labelVi": "Nêu mối lo + mệnh đề"
+            },
+            {
+              "text": " simple advice may overlook problems beyond a resident's control. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This is connected with the fact that",
+              "kind": "frame",
+              "labelVi": "Nối với nguyên nhân / thực tế"
+            },
+            {
+              "text": " responsibility for repairs may be unclear. Ignoring that concern would weaken the case for the proposal, so support should include an effort to improve how it works.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Ví dụ về điều kiện",
           "text": "A practical response would be to give residents an easy way to report leaks and explain who should respond. For example, a building manager could keep a repair log and confirm when each report has been checked. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
-          "noteVi": "Minh họa cách giữ lợi ích và giảm trở ngại."
+          "noteVi": "Minh họa cách giữ lợi ích và giảm trở ngại.",
+          "parts": [
+            {
+              "text": "A practical response would be to",
+              "kind": "frame",
+              "labelVi": "Đưa giải pháp + động từ nguyên mẫu"
+            },
+            {
+              "text": " give residents an easy way to report leaks and explain who should respond. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a building manager could keep a repair log and confirm when each report has been checked. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, people have good reason to support this approach because people can avoid wasting treated water. I regard it as mainly positive, but the result depends on practical planning. A flexible approach that listens to the people involved is more likely to deliver the intended value.",
-          "noteVi": "Chốt cả lý do và đánh giá."
+          "noteVi": "Chốt cả lý do và đánh giá.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " people have good reason to support this approach because people can avoid wasting treated water. I regard it as mainly positive, but the result depends on practical planning. A flexible approach that listens to the people involved is more likely to deliver the intended value.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 338,
       "mainWordCount": 338,
       "phrases": [

@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-05-v1",
+  "version": "2026-11-05-v2-frames",
   "samples": [
     {
       "id": "writing-task1-decline-technology-01",
@@ -9,40 +9,137 @@
       "number": 1,
       "title": "Điện thoại trong lớp",
       "focus": "smartphones in the classroom",
-      "prompt": "Your friend invited you to a digital learning workshop, but you cannot attend. Write to apologise, explain your reason, and suggest another way to meet or learn about the topic.",
+      "prompt": "Your friend Alex has invited you to a digital learning workshop, but you cannot attend. Apologise, give a reason and suggest a suitable alternative.",
       "requirementsVi": [
-        "Cảm ơn và từ chối lịch sự.",
-        "Nêu lý do cụ thể.",
-        "Đề nghị dịp khác hoặc cách tìm hiểu thay thế."
+        "Cảm ơn và nói rõ không đến được.",
+        "Nêu việc bận cụ thể, không cần xin lỗi quá dài.",
+        "Giữ kết nối với bạn bằng phương án khác."
       ],
       "summaryVi": "Điện thoại có ích khi có nhiệm vụ rõ; thông báo và luật dùng không rõ dễ gây xao nhãng.",
       "paragraphs": [
         {
-          "label": "Từ chối",
-          "text": "Hi Alex,\n\nThank you very much for inviting me to a digital learning workshop. It sounds interesting, especially because students can quickly access useful learning material. Unfortunately, I will not be able to join you on Saturday at nine in the morning.",
-          "noteVi": "Lời cảm ơn rồi báo không tham gia được."
+          "label": "Mở thư và từ chối",
+          "text": "Hi Alex,\n\nThanks for inviting me to a digital learning workshop. It sounds interesting, and I would have liked to join you. Unfortunately, I cannot come on Saturday at nine in the morning. I am really sorry to miss it.",
+          "noteVi": "Cảm ơn và nói rõ không đến được.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nThanks for inviting me to ",
+              "kind": "frame"
+            },
+            {
+              "text": "a digital learning workshop",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". It sounds interesting, and I would have liked to join you. Unfortunately, I cannot come on ",
+              "kind": "frame"
+            },
+            {
+              "text": "Saturday at nine in the morning",
+              "kind": "detail",
+              "labelVi": "ngày và giờ"
+            },
+            {
+              "text": ". I am really sorry to miss it.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nThanks for inviting me to [sự kiện / hoạt động]. It sounds interesting, and I would have liked to join you. Unfortunately, I cannot come on [ngày và giờ]. I am really sorry to miss it."
         },
         {
           "label": "Lý do",
-          "text": "I have to attend a family appointment that was arranged earlier. This was arranged earlier, and I cannot change it now. I realise that you may already have made plans, so I wanted to tell you as soon as possible rather than leave you waiting for an answer.",
-          "noteVi": "Lý do cụ thể và tôn trọng sắp xếp của bạn."
+          "text": "The reason is that I have to attend a family appointment that was arranged earlier. This was arranged earlier, and I cannot change it now. I wanted to let you know as soon as possible so that you would not be left waiting for an answer.",
+          "noteVi": "Nêu việc bận cụ thể, không cần xin lỗi quá dài.",
+          "parts": [
+            {
+              "text": "The reason is that I have to ",
+              "kind": "frame"
+            },
+            {
+              "text": "attend a family appointment that was arranged earlier",
+              "kind": "detail",
+              "labelVi": "việc bận — động từ nguyên mẫu"
+            },
+            {
+              "text": ". This was arranged earlier, and I cannot change it now. I wanted to let you know as soon as possible so that you would not be left waiting for an answer.",
+              "kind": "frame"
+            }
+          ],
+          "template": "The reason is that I have to [việc bận — động từ nguyên mẫu]. This was arranged earlier, and I cannot change it now. I wanted to let you know as soon as possible so that you would not be left waiting for an answer."
         },
         {
-          "label": "Phương án khác",
-          "text": "Could we meet at a cafe the following weekend instead? You could tell me what you learned when you tried to try a phone-based research task and discuss classroom rules. I would be particularly interested in the idea that students can quickly access useful learning material. If there are notes or a short recording from the session, I would be happy to read or watch them first.",
-          "noteVi": "Đề nghị thời điểm khác và giữ kết nối với chủ đề."
+          "label": "Hẹn dịp khác",
+          "text": "Could we meet for lunch the following weekend instead? I would still like to hear what you learn about smartphones in the classroom. I am especially interested because students can quickly access useful learning material. Please tell me whether the new plan suits you, or suggest another time that works better.",
+          "noteVi": "Giữ kết nối với bạn bằng phương án khác.",
+          "parts": [
+            {
+              "text": "Could we ",
+              "kind": "frame"
+            },
+            {
+              "text": "meet for lunch the following weekend",
+              "kind": "detail",
+              "labelVi": "đề xuất khác — động từ nguyên mẫu"
+            },
+            {
+              "text": " instead? I would still like to hear what you learn about ",
+              "kind": "frame"
+            },
+            {
+              "text": "smartphones in the classroom",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": ". I am especially interested because ",
+              "kind": "frame"
+            },
+            {
+              "text": "students can quickly access useful learning material",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". Please tell me whether the new plan suits you, or suggest another time that works better.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Could we [đề xuất khác — động từ nguyên mẫu] instead? I would still like to hear what you learn about [chủ đề]. I am especially interested because [lợi ích — chủ ngữ + động từ]. Please tell me whether the new plan suits you, or suggest another time that works better."
         },
         {
           "label": "Kết thư",
-          "text": "I am sorry to miss this opportunity, but I hope you have a great time. Please let me know whether the new plan suits you.\n\nBest wishes,\nMinh",
-          "noteVi": "Xin lỗi, chúc vui và xin phản hồi."
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 185,
-      "mainWordCount": 185,
+      "register": "informal",
+      "wordCount": 171,
+      "mainWordCount": 171,
       "phrases": [
         {
           "en": "a planned activity",
@@ -60,12 +157,7 @@
           "inAnswer": false
         }
       ],
-      "framePhrases": [
-        {
-          "en": "Please let me know",
-          "vi": "Hãy cho tôi biết…"
-        }
-      ]
+      "framePhrases": []
     },
     {
       "id": "writing-task1-decline-technology-02",
@@ -75,40 +167,137 @@
       "number": 2,
       "title": "Mạng xã hội",
       "focus": "social media use",
-      "prompt": "Your friend invited you to a balanced social media workshop, but you cannot attend. Write to apologise, explain your reason, and suggest another way to meet or learn about the topic.",
+      "prompt": "Your friend Alex has invited you to a balanced social media workshop, but you cannot attend. Apologise, give a reason and suggest a suitable alternative.",
       "requirementsVi": [
-        "Cảm ơn và từ chối lịch sự.",
-        "Nêu lý do cụ thể.",
-        "Đề nghị dịp khác hoặc cách tìm hiểu thay thế."
+        "Cảm ơn và nói rõ không đến được.",
+        "Nêu việc bận cụ thể, không cần xin lỗi quá dài.",
+        "Giữ kết nối với bạn bằng phương án khác."
       ],
       "summaryVi": "Giới hạn thời gian giúp bảo vệ việc học và nghỉ ngơi; nên tách tin nhắn cần thiết khỏi lướt vô thức.",
       "paragraphs": [
         {
-          "label": "Từ chối",
-          "text": "Hi Alex,\n\nThank you very much for inviting me to a balanced social media workshop. It sounds interesting, especially because people can protect time for study, work and sleep. Unfortunately, I will not be able to join you on Sunday at two in the afternoon.",
-          "noteVi": "Lời cảm ơn rồi báo không tham gia được."
+          "label": "Mở thư và từ chối",
+          "text": "Hi Alex,\n\nThanks for inviting me to a balanced social media workshop. It sounds interesting, and I would have liked to join you. Unfortunately, I cannot come on Sunday at two in the afternoon. I am really sorry to miss it.",
+          "noteVi": "Cảm ơn và nói rõ không đến được.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nThanks for inviting me to ",
+              "kind": "frame"
+            },
+            {
+              "text": "a balanced social media workshop",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". It sounds interesting, and I would have liked to join you. Unfortunately, I cannot come on ",
+              "kind": "frame"
+            },
+            {
+              "text": "Sunday at two in the afternoon",
+              "kind": "detail",
+              "labelVi": "ngày và giờ"
+            },
+            {
+              "text": ". I am really sorry to miss it.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nThanks for inviting me to [sự kiện / hoạt động]. It sounds interesting, and I would have liked to join you. Unfortunately, I cannot come on [ngày và giờ]. I am really sorry to miss it."
         },
         {
           "label": "Lý do",
-          "text": "I have to cover an extra shift at work. This was arranged earlier, and I cannot change it now. I realise that you may already have made plans, so I wanted to tell you as soon as possible rather than leave you waiting for an answer.",
-          "noteVi": "Lý do cụ thể và tôn trọng sắp xếp của bạn."
+          "text": "The reason is that I have to cover an extra shift at work. This was arranged earlier, and I cannot change it now. I wanted to let you know as soon as possible so that you would not be left waiting for an answer.",
+          "noteVi": "Nêu việc bận cụ thể, không cần xin lỗi quá dài.",
+          "parts": [
+            {
+              "text": "The reason is that I have to ",
+              "kind": "frame"
+            },
+            {
+              "text": "cover an extra shift at work",
+              "kind": "detail",
+              "labelVi": "việc bận — động từ nguyên mẫu"
+            },
+            {
+              "text": ". This was arranged earlier, and I cannot change it now. I wanted to let you know as soon as possible so that you would not be left waiting for an answer.",
+              "kind": "frame"
+            }
+          ],
+          "template": "The reason is that I have to [việc bận — động từ nguyên mẫu]. This was arranged earlier, and I cannot change it now. I wanted to let you know as soon as possible so that you would not be left waiting for an answer."
         },
         {
-          "label": "Phương án khác",
-          "text": "Could we meet at a cafe the following weekend instead? You could tell me what you learned when you tried to review phone habits and plan useful limits. I would be particularly interested in the idea that people can protect time for study, work and sleep. If there are notes or a short recording from the session, I would be happy to read or watch them first.",
-          "noteVi": "Đề nghị thời điểm khác và giữ kết nối với chủ đề."
+          "label": "Hẹn dịp khác",
+          "text": "Could we meet for lunch the following weekend instead? I would still like to hear what you learn about social media use. I am especially interested because people can protect time for study, work and sleep. Please tell me whether the new plan suits you, or suggest another time that works better.",
+          "noteVi": "Giữ kết nối với bạn bằng phương án khác.",
+          "parts": [
+            {
+              "text": "Could we ",
+              "kind": "frame"
+            },
+            {
+              "text": "meet for lunch the following weekend",
+              "kind": "detail",
+              "labelVi": "đề xuất khác — động từ nguyên mẫu"
+            },
+            {
+              "text": " instead? I would still like to hear what you learn about ",
+              "kind": "frame"
+            },
+            {
+              "text": "social media use",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": ". I am especially interested because ",
+              "kind": "frame"
+            },
+            {
+              "text": "people can protect time for study, work and sleep",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". Please tell me whether the new plan suits you, or suggest another time that works better.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Could we [đề xuất khác — động từ nguyên mẫu] instead? I would still like to hear what you learn about [chủ đề]. I am especially interested because [lợi ích — chủ ngữ + động từ]. Please tell me whether the new plan suits you, or suggest another time that works better."
         },
         {
           "label": "Kết thư",
-          "text": "I am sorry to miss this opportunity, but I hope you have a great time. Please let me know whether the new plan suits you.\n\nBest wishes,\nMinh",
-          "noteVi": "Xin lỗi, chúc vui và xin phản hồi."
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 186,
-      "mainWordCount": 186,
+      "register": "informal",
+      "wordCount": 171,
+      "mainWordCount": 171,
       "phrases": [
         {
           "en": "set clear limits",
@@ -126,12 +315,7 @@
           "inAnswer": false
         }
       ],
-      "framePhrases": [
-        {
-          "en": "Please let me know",
-          "vi": "Hãy cho tôi biết…"
-        }
-      ]
+      "framePhrases": []
     },
     {
       "id": "writing-task1-decline-technology-03",
@@ -141,40 +325,137 @@
       "number": 3,
       "title": "Mua sắm online",
       "focus": "online shopping",
-      "prompt": "Your friend invited you to an online shopping skills session, but you cannot attend. Write to apologise, explain your reason, and suggest another way to meet or learn about the topic.",
+      "prompt": "Your friend Alex has invited you to an online shopping skills session, but you cannot attend. Apologise, give a reason and suggest a suitable alternative.",
       "requirementsVi": [
-        "Cảm ơn và từ chối lịch sự.",
-        "Nêu lý do cụ thể.",
-        "Đề nghị dịp khác hoặc cách tìm hiểu thay thế."
+        "Cảm ơn và nói rõ không đến được.",
+        "Nêu việc bận cụ thể, không cần xin lỗi quá dài.",
+        "Giữ kết nối với bạn bằng phương án khác."
       ],
       "summaryVi": "Mua online tiết kiệm công đi lại; kiểm tra kích thước và điều kiện trả hàng giúp giảm rủi ro.",
       "paragraphs": [
         {
-          "label": "Từ chối",
-          "text": "Hi Alex,\n\nThank you very much for inviting me to an online shopping skills session. It sounds interesting, especially because customers can compare products without visiting several shops. Unfortunately, I will not be able to join you on Friday at six in the evening.",
-          "noteVi": "Lời cảm ơn rồi báo không tham gia được."
+          "label": "Mở thư và từ chối",
+          "text": "Hi Alex,\n\nThanks for inviting me to an online shopping skills session. It sounds interesting, and I would have liked to join you. Unfortunately, I cannot come on Friday at six in the evening. I am really sorry to miss it.",
+          "noteVi": "Cảm ơn và nói rõ không đến được.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nThanks for inviting me to ",
+              "kind": "frame"
+            },
+            {
+              "text": "an online shopping skills session",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". It sounds interesting, and I would have liked to join you. Unfortunately, I cannot come on ",
+              "kind": "frame"
+            },
+            {
+              "text": "Friday at six in the evening",
+              "kind": "detail",
+              "labelVi": "ngày và giờ"
+            },
+            {
+              "text": ". I am really sorry to miss it.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nThanks for inviting me to [sự kiện / hoạt động]. It sounds interesting, and I would have liked to join you. Unfortunately, I cannot come on [ngày và giờ]. I am really sorry to miss it."
         },
         {
           "label": "Lý do",
-          "text": "I have to help my parents move some furniture. This was arranged earlier, and I cannot change it now. I realise that you may already have made plans, so I wanted to tell you as soon as possible rather than leave you waiting for an answer.",
-          "noteVi": "Lý do cụ thể và tôn trọng sắp xếp của bạn."
+          "text": "The reason is that I have to help my parents move some furniture. This was arranged earlier, and I cannot change it now. I wanted to let you know as soon as possible so that you would not be left waiting for an answer.",
+          "noteVi": "Nêu việc bận cụ thể, không cần xin lỗi quá dài.",
+          "parts": [
+            {
+              "text": "The reason is that I have to ",
+              "kind": "frame"
+            },
+            {
+              "text": "help my parents move some furniture",
+              "kind": "detail",
+              "labelVi": "việc bận — động từ nguyên mẫu"
+            },
+            {
+              "text": ". This was arranged earlier, and I cannot change it now. I wanted to let you know as soon as possible so that you would not be left waiting for an answer.",
+              "kind": "frame"
+            }
+          ],
+          "template": "The reason is that I have to [việc bận — động từ nguyên mẫu]. This was arranged earlier, and I cannot change it now. I wanted to let you know as soon as possible so that you would not be left waiting for an answer."
         },
         {
-          "label": "Phương án khác",
-          "text": "Could we meet at a cafe the following weekend instead? You could tell me what you learned when you tried to compare product pages and practise checking return policies. I would be particularly interested in the idea that customers can compare products without visiting several shops. If there are notes or a short recording from the session, I would be happy to read or watch them first.",
-          "noteVi": "Đề nghị thời điểm khác và giữ kết nối với chủ đề."
+          "label": "Hẹn dịp khác",
+          "text": "Could we meet for lunch the following weekend instead? I would still like to hear what you learn about online shopping. I am especially interested because customers can compare products without visiting several shops. Please tell me whether the new plan suits you, or suggest another time that works better.",
+          "noteVi": "Giữ kết nối với bạn bằng phương án khác.",
+          "parts": [
+            {
+              "text": "Could we ",
+              "kind": "frame"
+            },
+            {
+              "text": "meet for lunch the following weekend",
+              "kind": "detail",
+              "labelVi": "đề xuất khác — động từ nguyên mẫu"
+            },
+            {
+              "text": " instead? I would still like to hear what you learn about ",
+              "kind": "frame"
+            },
+            {
+              "text": "online shopping",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": ". I am especially interested because ",
+              "kind": "frame"
+            },
+            {
+              "text": "customers can compare products without visiting several shops",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". Please tell me whether the new plan suits you, or suggest another time that works better.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Could we [đề xuất khác — động từ nguyên mẫu] instead? I would still like to hear what you learn about [chủ đề]. I am especially interested because [lợi ích — chủ ngữ + động từ]. Please tell me whether the new plan suits you, or suggest another time that works better."
         },
         {
           "label": "Kết thư",
-          "text": "I am sorry to miss this opportunity, but I hope you have a great time. Please let me know whether the new plan suits you.\n\nBest wishes,\nMinh",
-          "noteVi": "Xin lỗi, chúc vui và xin phản hồi."
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 185,
-      "mainWordCount": 185,
+      "register": "informal",
+      "wordCount": 169,
+      "mainWordCount": 169,
       "phrases": [
         {
           "en": "compare products",
@@ -192,12 +473,7 @@
           "inAnswer": false
         }
       ],
-      "framePhrases": [
-        {
-          "en": "Please let me know",
-          "vi": "Hãy cho tôi biết…"
-        }
-      ]
+      "framePhrases": []
     },
     {
       "id": "writing-task1-decline-technology-04",
@@ -207,40 +483,137 @@
       "number": 4,
       "title": "AI trong học tập",
       "focus": "AI tools for study",
-      "prompt": "Your friend invited you to a responsible AI study session, but you cannot attend. Write to apologise, explain your reason, and suggest another way to meet or learn about the topic.",
+      "prompt": "Your friend Alex has invited you to a responsible AI study session, but you cannot attend. Apologise, give a reason and suggest a suitable alternative.",
       "requirementsVi": [
-        "Cảm ơn và từ chối lịch sự.",
-        "Nêu lý do cụ thể.",
-        "Đề nghị dịp khác hoặc cách tìm hiểu thay thế."
+        "Cảm ơn và nói rõ không đến được.",
+        "Nêu việc bận cụ thể, không cần xin lỗi quá dài.",
+        "Giữ kết nối với bạn bằng phương án khác."
       ],
       "summaryVi": "AI hỗ trợ giải thích và luyện tập; cần kiểm tra thông tin và tự làm phần suy nghĩ chính.",
       "paragraphs": [
         {
-          "label": "Từ chối",
-          "text": "Hi Alex,\n\nThank you very much for inviting me to a responsible AI study session. It sounds interesting, especially because learners can get additional explanations and practice ideas. Unfortunately, I will not be able to join you on Saturday at ten in the morning.",
-          "noteVi": "Lời cảm ơn rồi báo không tham gia được."
+          "label": "Mở thư và từ chối",
+          "text": "Hi Alex,\n\nThanks for inviting me to a responsible AI study session. It sounds interesting, and I would have liked to join you. Unfortunately, I cannot come on Saturday at ten in the morning. I am really sorry to miss it.",
+          "noteVi": "Cảm ơn và nói rõ không đến được.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nThanks for inviting me to ",
+              "kind": "frame"
+            },
+            {
+              "text": "a responsible AI study session",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". It sounds interesting, and I would have liked to join you. Unfortunately, I cannot come on ",
+              "kind": "frame"
+            },
+            {
+              "text": "Saturday at ten in the morning",
+              "kind": "detail",
+              "labelVi": "ngày và giờ"
+            },
+            {
+              "text": ". I am really sorry to miss it.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nThanks for inviting me to [sự kiện / hoạt động]. It sounds interesting, and I would have liked to join you. Unfortunately, I cannot come on [ngày và giờ]. I am really sorry to miss it."
         },
         {
           "label": "Lý do",
-          "text": "I have to take my younger brother to an important school event. This was arranged earlier, and I cannot change it now. I realise that you may already have made plans, so I wanted to tell you as soon as possible rather than leave you waiting for an answer.",
-          "noteVi": "Lý do cụ thể và tôn trọng sắp xếp của bạn."
+          "text": "The reason is that I have to take my younger brother to an important school event. This was arranged earlier, and I cannot change it now. I wanted to let you know as soon as possible so that you would not be left waiting for an answer.",
+          "noteVi": "Nêu việc bận cụ thể, không cần xin lỗi quá dài.",
+          "parts": [
+            {
+              "text": "The reason is that I have to ",
+              "kind": "frame"
+            },
+            {
+              "text": "take my younger brother to an important school event",
+              "kind": "detail",
+              "labelVi": "việc bận — động từ nguyên mẫu"
+            },
+            {
+              "text": ". This was arranged earlier, and I cannot change it now. I wanted to let you know as soon as possible so that you would not be left waiting for an answer.",
+              "kind": "frame"
+            }
+          ],
+          "template": "The reason is that I have to [việc bận — động từ nguyên mẫu]. This was arranged earlier, and I cannot change it now. I wanted to let you know as soon as possible so that you would not be left waiting for an answer."
         },
         {
-          "label": "Phương án khác",
-          "text": "Could we meet at a cafe the following weekend instead? You could tell me what you learned when you tried to compare an AI explanation with checked learning materials. I would be particularly interested in the idea that learners can get additional explanations and practice ideas. If there are notes or a short recording from the session, I would be happy to read or watch them first.",
-          "noteVi": "Đề nghị thời điểm khác và giữ kết nối với chủ đề."
+          "label": "Hẹn dịp khác",
+          "text": "Could we meet for lunch the following weekend instead? I would still like to hear what you learn about AI tools for study. I am especially interested because learners can get additional explanations and practice ideas. Please tell me whether the new plan suits you, or suggest another time that works better.",
+          "noteVi": "Giữ kết nối với bạn bằng phương án khác.",
+          "parts": [
+            {
+              "text": "Could we ",
+              "kind": "frame"
+            },
+            {
+              "text": "meet for lunch the following weekend",
+              "kind": "detail",
+              "labelVi": "đề xuất khác — động từ nguyên mẫu"
+            },
+            {
+              "text": " instead? I would still like to hear what you learn about ",
+              "kind": "frame"
+            },
+            {
+              "text": "AI tools for study",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": ". I am especially interested because ",
+              "kind": "frame"
+            },
+            {
+              "text": "learners can get additional explanations and practice ideas",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". Please tell me whether the new plan suits you, or suggest another time that works better.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Could we [đề xuất khác — động từ nguyên mẫu] instead? I would still like to hear what you learn about [chủ đề]. I am especially interested because [lợi ích — chủ ngữ + động từ]. Please tell me whether the new plan suits you, or suggest another time that works better."
         },
         {
           "label": "Kết thư",
-          "text": "I am sorry to miss this opportunity, but I hope you have a great time. Please let me know whether the new plan suits you.\n\nBest wishes,\nMinh",
-          "noteVi": "Xin lỗi, chúc vui và xin phản hồi."
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 188,
-      "mainWordCount": 188,
+      "register": "informal",
+      "wordCount": 174,
+      "mainWordCount": 174,
       "phrases": [
         {
           "en": "a study aid",
@@ -258,12 +631,7 @@
           "inAnswer": false
         }
       ],
-      "framePhrases": [
-        {
-          "en": "Please let me know",
-          "vi": "Hãy cho tôi biết…"
-        }
-      ]
+      "framePhrases": []
     },
     {
       "id": "writing-task1-decline-technology-05",
@@ -273,45 +641,142 @@
       "number": 5,
       "title": "Dữ liệu cá nhân",
       "focus": "personal information online",
-      "prompt": "Your friend invited you to a digital privacy workshop, but you cannot attend. Write to apologise, explain your reason, and suggest another way to meet or learn about the topic.",
+      "prompt": "Your friend Alex has invited you to a digital privacy workshop, but you cannot attend. Apologise, give a reason and suggest a suitable alternative.",
       "requirementsVi": [
-        "Cảm ơn và từ chối lịch sự.",
-        "Nêu lý do cụ thể.",
-        "Đề nghị dịp khác hoặc cách tìm hiểu thay thế."
+        "Cảm ơn và nói rõ không đến được.",
+        "Nêu việc bận cụ thể, không cần xin lỗi quá dài.",
+        "Giữ kết nối với bạn bằng phương án khác."
       ],
       "summaryVi": "Dạy bảo vệ thông tin cần thao tác dễ làm và ví dụ cụ thể, không chỉ liệt kê rủi ro.",
       "paragraphs": [
         {
-          "label": "Từ chối",
-          "text": "Hi Alex,\n\nThank you very much for inviting me to a digital privacy workshop. It sounds interesting, especially because young people can make more careful choices about what they share. Unfortunately, I will not be able to join you on Sunday at three in the afternoon.",
-          "noteVi": "Lời cảm ơn rồi báo không tham gia được."
+          "label": "Mở thư và từ chối",
+          "text": "Hi Alex,\n\nThanks for inviting me to a digital privacy workshop. It sounds interesting, and I would have liked to join you. Unfortunately, I cannot come on Sunday at three in the afternoon. I am really sorry to miss it.",
+          "noteVi": "Cảm ơn và nói rõ không đến được.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nThanks for inviting me to ",
+              "kind": "frame"
+            },
+            {
+              "text": "a digital privacy workshop",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". It sounds interesting, and I would have liked to join you. Unfortunately, I cannot come on ",
+              "kind": "frame"
+            },
+            {
+              "text": "Sunday at three in the afternoon",
+              "kind": "detail",
+              "labelVi": "ngày và giờ"
+            },
+            {
+              "text": ". I am really sorry to miss it.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nThanks for inviting me to [sự kiện / hoạt động]. It sounds interesting, and I would have liked to join you. Unfortunately, I cannot come on [ngày và giờ]. I am really sorry to miss it."
         },
         {
           "label": "Lý do",
-          "text": "I have to finish a group project with a deadline that evening. This was arranged earlier, and I cannot change it now. I realise that you may already have made plans, so I wanted to tell you as soon as possible rather than leave you waiting for an answer.",
-          "noteVi": "Lý do cụ thể và tôn trọng sắp xếp của bạn."
+          "text": "The reason is that I have to finish a group project with a deadline that evening. This was arranged earlier, and I cannot change it now. I wanted to let you know as soon as possible so that you would not be left waiting for an answer.",
+          "noteVi": "Nêu việc bận cụ thể, không cần xin lỗi quá dài.",
+          "parts": [
+            {
+              "text": "The reason is that I have to ",
+              "kind": "frame"
+            },
+            {
+              "text": "finish a group project with a deadline that evening",
+              "kind": "detail",
+              "labelVi": "việc bận — động từ nguyên mẫu"
+            },
+            {
+              "text": ". This was arranged earlier, and I cannot change it now. I wanted to let you know as soon as possible so that you would not be left waiting for an answer.",
+              "kind": "frame"
+            }
+          ],
+          "template": "The reason is that I have to [việc bận — động từ nguyên mẫu]. This was arranged earlier, and I cannot change it now. I wanted to let you know as soon as possible so that you would not be left waiting for an answer."
         },
         {
-          "label": "Phương án khác",
-          "text": "Could we meet at a cafe the following weekend instead? You could tell me what you learned when you tried to review a fictional profile and practise simple privacy checks. I would be particularly interested in the idea that young people can make more careful choices about what they share. If there are notes or a short recording from the session, I would be happy to read or watch them first.",
-          "noteVi": "Đề nghị thời điểm khác và giữ kết nối với chủ đề."
+          "label": "Hẹn dịp khác",
+          "text": "Could we meet for lunch the following weekend instead? I would still like to hear what you learn about personal information online. I am especially interested because young people can make more careful choices about what they share. Please tell me whether the new plan suits you, or suggest another time that works better.",
+          "noteVi": "Giữ kết nối với bạn bằng phương án khác.",
+          "parts": [
+            {
+              "text": "Could we ",
+              "kind": "frame"
+            },
+            {
+              "text": "meet for lunch the following weekend",
+              "kind": "detail",
+              "labelVi": "đề xuất khác — động từ nguyên mẫu"
+            },
+            {
+              "text": " instead? I would still like to hear what you learn about ",
+              "kind": "frame"
+            },
+            {
+              "text": "personal information online",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": ". I am especially interested because ",
+              "kind": "frame"
+            },
+            {
+              "text": "young people can make more careful choices about what they share",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". Please tell me whether the new plan suits you, or suggest another time that works better.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Could we [đề xuất khác — động từ nguyên mẫu] instead? I would still like to hear what you learn about [chủ đề]. I am especially interested because [lợi ích — chủ ngữ + động từ]. Please tell me whether the new plan suits you, or suggest another time that works better."
         },
         {
           "label": "Kết thư",
-          "text": "I am sorry to miss this opportunity, but I hope you have a great time. Please let me know whether the new plan suits you.\n\nBest wishes,\nMinh",
-          "noteVi": "Xin lỗi, chúc vui và xin phản hồi."
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 194,
-      "mainWordCount": 194,
+      "register": "informal",
+      "wordCount": 175,
+      "mainWordCount": 175,
       "phrases": [
         {
           "en": "personal information",
           "vi": "thông tin cá nhân",
-          "inAnswer": false
+          "inAnswer": true
         },
         {
           "en": "privacy settings",
@@ -324,12 +789,7 @@
           "inAnswer": false
         }
       ],
-      "framePhrases": [
-        {
-          "en": "Please let me know",
-          "vi": "Hãy cho tôi biết…"
-        }
-      ]
+      "framePhrases": []
     },
     {
       "id": "writing-task1-decline-technology-06",
@@ -339,40 +799,137 @@
       "number": 6,
       "title": "Làm việc từ xa",
       "focus": "remote work",
-      "prompt": "Your friend invited you to a remote teamwork session, but you cannot attend. Write to apologise, explain your reason, and suggest another way to meet or learn about the topic.",
+      "prompt": "Your friend Alex has invited you to a remote teamwork session, but you cannot attend. Apologise, give a reason and suggest a suitable alternative.",
       "requirementsVi": [
-        "Cảm ơn và từ chối lịch sự.",
-        "Nêu lý do cụ thể.",
-        "Đề nghị dịp khác hoặc cách tìm hiểu thay thế."
+        "Cảm ơn và nói rõ không đến được.",
+        "Nêu việc bận cụ thể, không cần xin lỗi quá dài.",
+        "Giữ kết nối với bạn bằng phương án khác."
       ],
       "summaryVi": "Làm từ xa tiết kiệm đi lại; đội nhóm cần cách trao đổi và hỗ trợ nhân viên mới rõ ràng.",
       "paragraphs": [
         {
-          "label": "Từ chối",
-          "text": "Hi Alex,\n\nThank you very much for inviting me to a remote teamwork session. It sounds interesting, especially because employees can save time spent travelling. Unfortunately, I will not be able to join you on Wednesday at six in the evening.",
-          "noteVi": "Lời cảm ơn rồi báo không tham gia được."
+          "label": "Mở thư và từ chối",
+          "text": "Hi Alex,\n\nThanks for inviting me to a remote teamwork session. It sounds interesting, and I would have liked to join you. Unfortunately, I cannot come on Wednesday at six in the evening. I am really sorry to miss it.",
+          "noteVi": "Cảm ơn và nói rõ không đến được.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nThanks for inviting me to ",
+              "kind": "frame"
+            },
+            {
+              "text": "a remote teamwork session",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". It sounds interesting, and I would have liked to join you. Unfortunately, I cannot come on ",
+              "kind": "frame"
+            },
+            {
+              "text": "Wednesday at six in the evening",
+              "kind": "detail",
+              "labelVi": "ngày và giờ"
+            },
+            {
+              "text": ". I am really sorry to miss it.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nThanks for inviting me to [sự kiện / hoạt động]. It sounds interesting, and I would have liked to join you. Unfortunately, I cannot come on [ngày và giờ]. I am really sorry to miss it."
         },
         {
           "label": "Lý do",
-          "text": "I have to attend a training session required by my employer. This was arranged earlier, and I cannot change it now. I realise that you may already have made plans, so I wanted to tell you as soon as possible rather than leave you waiting for an answer.",
-          "noteVi": "Lý do cụ thể và tôn trọng sắp xếp của bạn."
+          "text": "The reason is that I have to attend a training session required by my employer. This was arranged earlier, and I cannot change it now. I wanted to let you know as soon as possible so that you would not be left waiting for an answer.",
+          "noteVi": "Nêu việc bận cụ thể, không cần xin lỗi quá dài.",
+          "parts": [
+            {
+              "text": "The reason is that I have to ",
+              "kind": "frame"
+            },
+            {
+              "text": "attend a training session required by my employer",
+              "kind": "detail",
+              "labelVi": "việc bận — động từ nguyên mẫu"
+            },
+            {
+              "text": ". This was arranged earlier, and I cannot change it now. I wanted to let you know as soon as possible so that you would not be left waiting for an answer.",
+              "kind": "frame"
+            }
+          ],
+          "template": "The reason is that I have to [việc bận — động từ nguyên mẫu]. This was arranged earlier, and I cannot change it now. I wanted to let you know as soon as possible so that you would not be left waiting for an answer."
         },
         {
-          "label": "Phương án khác",
-          "text": "Could we meet at a cafe the following weekend instead? You could tell me what you learned when you tried to practise sharing tasks and asking for help online. I would be particularly interested in the idea that employees can save time spent travelling. If there are notes or a short recording from the session, I would be happy to read or watch them first.",
-          "noteVi": "Đề nghị thời điểm khác và giữ kết nối với chủ đề."
+          "label": "Hẹn dịp khác",
+          "text": "Could we meet for lunch the following weekend instead? I would still like to hear what you learn about remote work. I am especially interested because employees can save time spent travelling. Please tell me whether the new plan suits you, or suggest another time that works better.",
+          "noteVi": "Giữ kết nối với bạn bằng phương án khác.",
+          "parts": [
+            {
+              "text": "Could we ",
+              "kind": "frame"
+            },
+            {
+              "text": "meet for lunch the following weekend",
+              "kind": "detail",
+              "labelVi": "đề xuất khác — động từ nguyên mẫu"
+            },
+            {
+              "text": " instead? I would still like to hear what you learn about ",
+              "kind": "frame"
+            },
+            {
+              "text": "remote work",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": ". I am especially interested because ",
+              "kind": "frame"
+            },
+            {
+              "text": "employees can save time spent travelling",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". Please tell me whether the new plan suits you, or suggest another time that works better.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Could we [đề xuất khác — động từ nguyên mẫu] instead? I would still like to hear what you learn about [chủ đề]. I am especially interested because [lợi ích — chủ ngữ + động từ]. Please tell me whether the new plan suits you, or suggest another time that works better."
         },
         {
           "label": "Kết thư",
-          "text": "I am sorry to miss this opportunity, but I hope you have a great time. Please let me know whether the new plan suits you.\n\nBest wishes,\nMinh",
-          "noteVi": "Xin lỗi, chúc vui và xin phản hồi."
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 182,
-      "mainWordCount": 182,
+      "register": "informal",
+      "wordCount": 168,
+      "mainWordCount": 168,
       "phrases": [
         {
           "en": "save commuting time",
@@ -390,12 +947,7 @@
           "inAnswer": false
         }
       ],
-      "framePhrases": [
-        {
-          "en": "Please let me know",
-          "vi": "Hãy cho tôi biết…"
-        }
-      ]
+      "framePhrases": []
     },
     {
       "id": "writing-task1-decline-technology-07",
@@ -405,40 +957,137 @@
       "number": 7,
       "title": "Học máy tính cho người lớn tuổi",
       "focus": "computer lessons for older adults",
-      "prompt": "Your friend invited you to a beginner computer class, but you cannot attend. Write to apologise, explain your reason, and suggest another way to meet or learn about the topic.",
+      "prompt": "Your friend Alex has invited you to a beginner computer class, but you cannot attend. Apologise, give a reason and suggest a suitable alternative.",
       "requirementsVi": [
-        "Cảm ơn và từ chối lịch sự.",
-        "Nêu lý do cụ thể.",
-        "Đề nghị dịp khác hoặc cách tìm hiểu thay thế."
+        "Cảm ơn và nói rõ không đến được.",
+        "Nêu việc bận cụ thể, không cần xin lỗi quá dài.",
+        "Giữ kết nối với bạn bằng phương án khác."
       ],
       "summaryVi": "Lớp công nghệ cho người lớn tuổi cần chậm, nhóm nhỏ và cho lặp lại thao tác.",
       "paragraphs": [
         {
-          "label": "Từ chối",
-          "text": "Hi Alex,\n\nThank you very much for inviting me to a beginner computer class. It sounds interesting, especially because older people can use useful online services more independently. Unfortunately, I will not be able to join you on Saturday at two in the afternoon.",
-          "noteVi": "Lời cảm ơn rồi báo không tham gia được."
+          "label": "Mở thư và từ chối",
+          "text": "Hi Alex,\n\nThanks for inviting me to a beginner computer class. It sounds interesting, and I would have liked to join you. Unfortunately, I cannot come on Saturday at two in the afternoon. I am really sorry to miss it.",
+          "noteVi": "Cảm ơn và nói rõ không đến được.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nThanks for inviting me to ",
+              "kind": "frame"
+            },
+            {
+              "text": "a beginner computer class",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". It sounds interesting, and I would have liked to join you. Unfortunately, I cannot come on ",
+              "kind": "frame"
+            },
+            {
+              "text": "Saturday at two in the afternoon",
+              "kind": "detail",
+              "labelVi": "ngày và giờ"
+            },
+            {
+              "text": ". I am really sorry to miss it.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nThanks for inviting me to [sự kiện / hoạt động]. It sounds interesting, and I would have liked to join you. Unfortunately, I cannot come on [ngày và giờ]. I am really sorry to miss it."
         },
         {
           "label": "Lý do",
-          "text": "I have to collect a relative arriving from another town. This was arranged earlier, and I cannot change it now. I realise that you may already have made plans, so I wanted to tell you as soon as possible rather than leave you waiting for an answer.",
-          "noteVi": "Lý do cụ thể và tôn trọng sắp xếp của bạn."
+          "text": "The reason is that I have to collect a relative arriving from another town. This was arranged earlier, and I cannot change it now. I wanted to let you know as soon as possible so that you would not be left waiting for an answer.",
+          "noteVi": "Nêu việc bận cụ thể, không cần xin lỗi quá dài.",
+          "parts": [
+            {
+              "text": "The reason is that I have to ",
+              "kind": "frame"
+            },
+            {
+              "text": "collect a relative arriving from another town",
+              "kind": "detail",
+              "labelVi": "việc bận — động từ nguyên mẫu"
+            },
+            {
+              "text": ". This was arranged earlier, and I cannot change it now. I wanted to let you know as soon as possible so that you would not be left waiting for an answer.",
+              "kind": "frame"
+            }
+          ],
+          "template": "The reason is that I have to [việc bận — động từ nguyên mẫu]. This was arranged earlier, and I cannot change it now. I wanted to let you know as soon as possible so that you would not be left waiting for an answer."
         },
         {
-          "label": "Phương án khác",
-          "text": "Could we meet at a cafe the following weekend instead? You could tell me what you learned when you tried to practise sending messages and joining a video call. I would be particularly interested in the idea that older people can use useful online services more independently. If there are notes or a short recording from the session, I would be happy to read or watch them first.",
-          "noteVi": "Đề nghị thời điểm khác và giữ kết nối với chủ đề."
+          "label": "Hẹn dịp khác",
+          "text": "Could we meet for lunch the following weekend instead? I would still like to hear what you learn about computer lessons for older adults. I am especially interested because older people can use useful online services more independently. Please tell me whether the new plan suits you, or suggest another time that works better.",
+          "noteVi": "Giữ kết nối với bạn bằng phương án khác.",
+          "parts": [
+            {
+              "text": "Could we ",
+              "kind": "frame"
+            },
+            {
+              "text": "meet for lunch the following weekend",
+              "kind": "detail",
+              "labelVi": "đề xuất khác — động từ nguyên mẫu"
+            },
+            {
+              "text": " instead? I would still like to hear what you learn about ",
+              "kind": "frame"
+            },
+            {
+              "text": "computer lessons for older adults",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": ". I am especially interested because ",
+              "kind": "frame"
+            },
+            {
+              "text": "older people can use useful online services more independently",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". Please tell me whether the new plan suits you, or suggest another time that works better.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Could we [đề xuất khác — động từ nguyên mẫu] instead? I would still like to hear what you learn about [chủ đề]. I am especially interested because [lợi ích — chủ ngữ + động từ]. Please tell me whether the new plan suits you, or suggest another time that works better."
         },
         {
           "label": "Kết thư",
-          "text": "I am sorry to miss this opportunity, but I hope you have a great time. Please let me know whether the new plan suits you.\n\nBest wishes,\nMinh",
-          "noteVi": "Xin lỗi, chúc vui và xin phản hồi."
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 187,
-      "mainWordCount": 187,
+      "register": "informal",
+      "wordCount": 173,
+      "mainWordCount": 173,
       "phrases": [
         {
           "en": "step-by-step practice",
@@ -456,12 +1105,7 @@
           "inAnswer": false
         }
       ],
-      "framePhrases": [
-        {
-          "en": "Please let me know",
-          "vi": "Hãy cho tôi biết…"
-        }
-      ]
+      "framePhrases": []
     },
     {
       "id": "writing-task1-decline-technology-08",
@@ -471,40 +1115,137 @@
       "number": 8,
       "title": "Đọc tin trên mạng",
       "focus": "online news",
-      "prompt": "Your friend invited you to a news reading workshop, but you cannot attend. Write to apologise, explain your reason, and suggest another way to meet or learn about the topic.",
+      "prompt": "Your friend Alex has invited you to a news reading workshop, but you cannot attend. Apologise, give a reason and suggest a suitable alternative.",
       "requirementsVi": [
-        "Cảm ơn và từ chối lịch sự.",
-        "Nêu lý do cụ thể.",
-        "Đề nghị dịp khác hoặc cách tìm hiểu thay thế."
+        "Cảm ơn và nói rõ không đến được.",
+        "Nêu việc bận cụ thể, không cần xin lỗi quá dài.",
+        "Giữ kết nối với bạn bằng phương án khác."
       ],
       "summaryVi": "Đọc nguồn gốc và ngữ cảnh giúp tránh chia sẻ tin sai; đừng phản ứng chỉ theo tiêu đề.",
       "paragraphs": [
         {
-          "label": "Từ chối",
-          "text": "Hi Alex,\n\nThank you very much for inviting me to a news reading workshop. It sounds interesting, especially because readers can avoid spreading misleading information. Unfortunately, I will not be able to join you on Sunday at ten in the morning.",
-          "noteVi": "Lời cảm ơn rồi báo không tham gia được."
+          "label": "Mở thư và từ chối",
+          "text": "Hi Alex,\n\nThanks for inviting me to a news reading workshop. It sounds interesting, and I would have liked to join you. Unfortunately, I cannot come on Sunday at ten in the morning. I am really sorry to miss it.",
+          "noteVi": "Cảm ơn và nói rõ không đến được.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nThanks for inviting me to ",
+              "kind": "frame"
+            },
+            {
+              "text": "a news reading workshop",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". It sounds interesting, and I would have liked to join you. Unfortunately, I cannot come on ",
+              "kind": "frame"
+            },
+            {
+              "text": "Sunday at ten in the morning",
+              "kind": "detail",
+              "labelVi": "ngày và giờ"
+            },
+            {
+              "text": ". I am really sorry to miss it.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nThanks for inviting me to [sự kiện / hoạt động]. It sounds interesting, and I would have liked to join you. Unfortunately, I cannot come on [ngày và giờ]. I am really sorry to miss it."
         },
         {
           "label": "Lý do",
-          "text": "I have to take an exam that cannot be moved. This was arranged earlier, and I cannot change it now. I realise that you may already have made plans, so I wanted to tell you as soon as possible rather than leave you waiting for an answer.",
-          "noteVi": "Lý do cụ thể và tôn trọng sắp xếp của bạn."
+          "text": "The reason is that I have to take an exam that cannot be moved. This was arranged earlier, and I cannot change it now. I wanted to let you know as soon as possible so that you would not be left waiting for an answer.",
+          "noteVi": "Nêu việc bận cụ thể, không cần xin lỗi quá dài.",
+          "parts": [
+            {
+              "text": "The reason is that I have to ",
+              "kind": "frame"
+            },
+            {
+              "text": "take an exam that cannot be moved",
+              "kind": "detail",
+              "labelVi": "việc bận — động từ nguyên mẫu"
+            },
+            {
+              "text": ". This was arranged earlier, and I cannot change it now. I wanted to let you know as soon as possible so that you would not be left waiting for an answer.",
+              "kind": "frame"
+            }
+          ],
+          "template": "The reason is that I have to [việc bận — động từ nguyên mẫu]. This was arranged earlier, and I cannot change it now. I wanted to let you know as soon as possible so that you would not be left waiting for an answer."
         },
         {
-          "label": "Phương án khác",
-          "text": "Could we meet at a cafe the following weekend instead? You could tell me what you learned when you tried to compare headlines with full articles and check their sources. I would be particularly interested in the idea that readers can avoid spreading misleading information. If there are notes or a short recording from the session, I would be happy to read or watch them first.",
-          "noteVi": "Đề nghị thời điểm khác và giữ kết nối với chủ đề."
+          "label": "Hẹn dịp khác",
+          "text": "Could we meet for lunch the following weekend instead? I would still like to hear what you learn about online news. I am especially interested because readers can avoid spreading misleading information. Please tell me whether the new plan suits you, or suggest another time that works better.",
+          "noteVi": "Giữ kết nối với bạn bằng phương án khác.",
+          "parts": [
+            {
+              "text": "Could we ",
+              "kind": "frame"
+            },
+            {
+              "text": "meet for lunch the following weekend",
+              "kind": "detail",
+              "labelVi": "đề xuất khác — động từ nguyên mẫu"
+            },
+            {
+              "text": " instead? I would still like to hear what you learn about ",
+              "kind": "frame"
+            },
+            {
+              "text": "online news",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": ". I am especially interested because ",
+              "kind": "frame"
+            },
+            {
+              "text": "readers can avoid spreading misleading information",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". Please tell me whether the new plan suits you, or suggest another time that works better.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Could we [đề xuất khác — động từ nguyên mẫu] instead? I would still like to hear what you learn about [chủ đề]. I am especially interested because [lợi ích — chủ ngữ + động từ]. Please tell me whether the new plan suits you, or suggest another time that works better."
         },
         {
           "label": "Kết thư",
-          "text": "I am sorry to miss this opportunity, but I hope you have a great time. Please let me know whether the new plan suits you.\n\nBest wishes,\nMinh",
-          "noteVi": "Xin lỗi, chúc vui và xin phản hồi."
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 182,
-      "mainWordCount": 182,
+      "register": "informal",
+      "wordCount": 167,
+      "mainWordCount": 167,
       "phrases": [
         {
           "en": "check the source",
@@ -522,12 +1263,7 @@
           "inAnswer": true
         }
       ],
-      "framePhrases": [
-        {
-          "en": "Please let me know",
-          "vi": "Hãy cho tôi biết…"
-        }
-      ]
+      "framePhrases": []
     },
     {
       "id": "writing-task1-decline-technology-09",
@@ -537,40 +1273,137 @@
       "number": 9,
       "title": "Sửa thiết bị thay vì bỏ",
       "focus": "repairing electronic devices",
-      "prompt": "Your friend invited you to a community electronics repair event, but you cannot attend. Write to apologise, explain your reason, and suggest another way to meet or learn about the topic.",
+      "prompt": "Your friend Alex has invited you to a community electronics repair event, but you cannot attend. Apologise, give a reason and suggest a suitable alternative.",
       "requirementsVi": [
-        "Cảm ơn và từ chối lịch sự.",
-        "Nêu lý do cụ thể.",
-        "Đề nghị dịp khác hoặc cách tìm hiểu thay thế."
+        "Cảm ơn và nói rõ không đến được.",
+        "Nêu việc bận cụ thể, không cần xin lỗi quá dài.",
+        "Giữ kết nối với bạn bằng phương án khác."
       ],
       "summaryVi": "Sửa giúp kéo dài tuổi thọ đồ điện tử; cần biết chi phí và tính khả thi trước khi quyết định.",
       "paragraphs": [
         {
-          "label": "Từ chối",
-          "text": "Hi Alex,\n\nThank you very much for inviting me to a community electronics repair event. It sounds interesting, especially because a repair can extend the useful life of a product. Unfortunately, I will not be able to join you on Thursday at six in the evening.",
-          "noteVi": "Lời cảm ơn rồi báo không tham gia được."
+          "label": "Mở thư và từ chối",
+          "text": "Hi Alex,\n\nThanks for inviting me to a community electronics repair event. It sounds interesting, and I would have liked to join you. Unfortunately, I cannot come on Thursday at six in the evening. I am really sorry to miss it.",
+          "noteVi": "Cảm ơn và nói rõ không đến được.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nThanks for inviting me to ",
+              "kind": "frame"
+            },
+            {
+              "text": "a community electronics repair event",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". It sounds interesting, and I would have liked to join you. Unfortunately, I cannot come on ",
+              "kind": "frame"
+            },
+            {
+              "text": "Thursday at six in the evening",
+              "kind": "detail",
+              "labelVi": "ngày và giờ"
+            },
+            {
+              "text": ". I am really sorry to miss it.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nThanks for inviting me to [sự kiện / hoạt động]. It sounds interesting, and I would have liked to join you. Unfortunately, I cannot come on [ngày và giờ]. I am really sorry to miss it."
         },
         {
           "label": "Lý do",
-          "text": "I have to help my family prepare for a gathering. This was arranged earlier, and I cannot change it now. I realise that you may already have made plans, so I wanted to tell you as soon as possible rather than leave you waiting for an answer.",
-          "noteVi": "Lý do cụ thể và tôn trọng sắp xếp của bạn."
+          "text": "The reason is that I have to help my family prepare for a gathering. This was arranged earlier, and I cannot change it now. I wanted to let you know as soon as possible so that you would not be left waiting for an answer.",
+          "noteVi": "Nêu việc bận cụ thể, không cần xin lỗi quá dài.",
+          "parts": [
+            {
+              "text": "The reason is that I have to ",
+              "kind": "frame"
+            },
+            {
+              "text": "help my family prepare for a gathering",
+              "kind": "detail",
+              "labelVi": "việc bận — động từ nguyên mẫu"
+            },
+            {
+              "text": ". This was arranged earlier, and I cannot change it now. I wanted to let you know as soon as possible so that you would not be left waiting for an answer.",
+              "kind": "frame"
+            }
+          ],
+          "template": "The reason is that I have to [việc bận — động từ nguyên mẫu]. This was arranged earlier, and I cannot change it now. I wanted to let you know as soon as possible so that you would not be left waiting for an answer."
         },
         {
-          "label": "Phương án khác",
-          "text": "Could we meet at a cafe the following weekend instead? You could tell me what you learned when you tried to learn how to compare repair and replacement options. I would be particularly interested in the idea that a repair can extend the useful life of a product. If there are notes or a short recording from the session, I would be happy to read or watch them first.",
-          "noteVi": "Đề nghị thời điểm khác và giữ kết nối với chủ đề."
+          "label": "Hẹn dịp khác",
+          "text": "Could we meet for lunch the following weekend instead? I would still like to hear what you learn about repairing electronic devices. I am especially interested because a repair can extend the useful life of a product. Please tell me whether the new plan suits you, or suggest another time that works better.",
+          "noteVi": "Giữ kết nối với bạn bằng phương án khác.",
+          "parts": [
+            {
+              "text": "Could we ",
+              "kind": "frame"
+            },
+            {
+              "text": "meet for lunch the following weekend",
+              "kind": "detail",
+              "labelVi": "đề xuất khác — động từ nguyên mẫu"
+            },
+            {
+              "text": " instead? I would still like to hear what you learn about ",
+              "kind": "frame"
+            },
+            {
+              "text": "repairing electronic devices",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": ". I am especially interested because ",
+              "kind": "frame"
+            },
+            {
+              "text": "a repair can extend the useful life of a product",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". Please tell me whether the new plan suits you, or suggest another time that works better.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Could we [đề xuất khác — động từ nguyên mẫu] instead? I would still like to hear what you learn about [chủ đề]. I am especially interested because [lợi ích — chủ ngữ + động từ]. Please tell me whether the new plan suits you, or suggest another time that works better."
         },
         {
           "label": "Kết thư",
-          "text": "I am sorry to miss this opportunity, but I hope you have a great time. Please let me know whether the new plan suits you.\n\nBest wishes,\nMinh",
-          "noteVi": "Xin lỗi, chúc vui và xin phản hồi."
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 190,
-      "mainWordCount": 190,
+      "register": "informal",
+      "wordCount": 173,
+      "mainWordCount": 173,
       "phrases": [
         {
           "en": "extend the useful life",
@@ -588,12 +1421,7 @@
           "inAnswer": false
         }
       ],
-      "framePhrases": [
-        {
-          "en": "Please let me know",
-          "vi": "Hãy cho tôi biết…"
-        }
-      ]
+      "framePhrases": []
     },
     {
       "id": "writing-task1-decline-technology-10",
@@ -603,40 +1431,137 @@
       "number": 10,
       "title": "Trò chơi điện tử",
       "focus": "video games in free time",
-      "prompt": "Your friend invited you to a balanced gaming discussion, but you cannot attend. Write to apologise, explain your reason, and suggest another way to meet or learn about the topic.",
+      "prompt": "Your friend Alex has invited you to a balanced gaming discussion, but you cannot attend. Apologise, give a reason and suggest a suitable alternative.",
       "requirementsVi": [
-        "Cảm ơn và từ chối lịch sự.",
-        "Nêu lý do cụ thể.",
-        "Đề nghị dịp khác hoặc cách tìm hiểu thay thế."
+        "Cảm ơn và nói rõ không đến được.",
+        "Nêu việc bận cụ thể, không cần xin lỗi quá dài.",
+        "Giữ kết nối với bạn bằng phương án khác."
       ],
       "summaryVi": "Cân bằng chơi game cần thỏa thuận thời gian thực tế và giữ trách nhiệm học, ngủ, vận động.",
       "paragraphs": [
         {
-          "label": "Từ chối",
-          "text": "Hi Alex,\n\nThank you very much for inviting me to a balanced gaming discussion. It sounds interesting, especially because players can enjoy a hobby while still making time for other needs. Unfortunately, I will not be able to join you on Saturday at three in the afternoon.",
-          "noteVi": "Lời cảm ơn rồi báo không tham gia được."
+          "label": "Mở thư và từ chối",
+          "text": "Hi Alex,\n\nThanks for inviting me to a balanced gaming discussion. It sounds interesting, and I would have liked to join you. Unfortunately, I cannot come on Saturday at three in the afternoon. I am really sorry to miss it.",
+          "noteVi": "Cảm ơn và nói rõ không đến được.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nThanks for inviting me to ",
+              "kind": "frame"
+            },
+            {
+              "text": "a balanced gaming discussion",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". It sounds interesting, and I would have liked to join you. Unfortunately, I cannot come on ",
+              "kind": "frame"
+            },
+            {
+              "text": "Saturday at three in the afternoon",
+              "kind": "detail",
+              "labelVi": "ngày và giờ"
+            },
+            {
+              "text": ". I am really sorry to miss it.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nThanks for inviting me to [sự kiện / hoạt động]. It sounds interesting, and I would have liked to join you. Unfortunately, I cannot come on [ngày và giờ]. I am really sorry to miss it."
         },
         {
           "label": "Lý do",
-          "text": "I have to travel to my hometown for a family commitment. This was arranged earlier, and I cannot change it now. I realise that you may already have made plans, so I wanted to tell you as soon as possible rather than leave you waiting for an answer.",
-          "noteVi": "Lý do cụ thể và tôn trọng sắp xếp của bạn."
+          "text": "The reason is that I have to travel to my hometown for a family commitment. This was arranged earlier, and I cannot change it now. I wanted to let you know as soon as possible so that you would not be left waiting for an answer.",
+          "noteVi": "Nêu việc bận cụ thể, không cần xin lỗi quá dài.",
+          "parts": [
+            {
+              "text": "The reason is that I have to ",
+              "kind": "frame"
+            },
+            {
+              "text": "travel to my hometown for a family commitment",
+              "kind": "detail",
+              "labelVi": "việc bận — động từ nguyên mẫu"
+            },
+            {
+              "text": ". This was arranged earlier, and I cannot change it now. I wanted to let you know as soon as possible so that you would not be left waiting for an answer.",
+              "kind": "frame"
+            }
+          ],
+          "template": "The reason is that I have to [việc bận — động từ nguyên mẫu]. This was arranged earlier, and I cannot change it now. I wanted to let you know as soon as possible so that you would not be left waiting for an answer."
         },
         {
-          "label": "Phương án khác",
-          "text": "Could we meet at a cafe the following weekend instead? You could tell me what you learned when you tried to plan a weekly routine that includes games and other activities. I would be particularly interested in the idea that players can enjoy a hobby while still making time for other needs. If there are notes or a short recording from the session, I would be happy to read or watch them first.",
-          "noteVi": "Đề nghị thời điểm khác và giữ kết nối với chủ đề."
+          "label": "Hẹn dịp khác",
+          "text": "Could we meet for lunch the following weekend instead? I would still like to hear what you learn about video games in free time. I am especially interested because players can enjoy a hobby while still making time for other needs. Please tell me whether the new plan suits you, or suggest another time that works better.",
+          "noteVi": "Giữ kết nối với bạn bằng phương án khác.",
+          "parts": [
+            {
+              "text": "Could we ",
+              "kind": "frame"
+            },
+            {
+              "text": "meet for lunch the following weekend",
+              "kind": "detail",
+              "labelVi": "đề xuất khác — động từ nguyên mẫu"
+            },
+            {
+              "text": " instead? I would still like to hear what you learn about ",
+              "kind": "frame"
+            },
+            {
+              "text": "video games in free time",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": ". I am especially interested because ",
+              "kind": "frame"
+            },
+            {
+              "text": "players can enjoy a hobby while still making time for other needs",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". Please tell me whether the new plan suits you, or suggest another time that works better.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Could we [đề xuất khác — động từ nguyên mẫu] instead? I would still like to hear what you learn about [chủ đề]. I am especially interested because [lợi ích — chủ ngữ + động từ]. Please tell me whether the new plan suits you, or suggest another time that works better."
         },
         {
           "label": "Kết thư",
-          "text": "I am sorry to miss this opportunity, but I hope you have a great time. Please let me know whether the new plan suits you.\n\nBest wishes,\nMinh",
-          "noteVi": "Xin lỗi, chúc vui và xin phản hồi."
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 196,
-      "mainWordCount": 196,
+      "register": "informal",
+      "wordCount": 177,
+      "mainWordCount": 177,
       "phrases": [
         {
           "en": "a balanced routine",
@@ -654,12 +1579,7 @@
           "inAnswer": false
         }
       ],
-      "framePhrases": [
-        {
-          "en": "Please let me know",
-          "vi": "Hãy cho tôi biết…"
-        }
-      ]
+      "framePhrases": []
     }
   ]
 }

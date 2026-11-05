@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-05-v1",
+  "version": "2026-11-05-v2-frames",
   "samples": [
     {
       "id": "writing-task2-cause-solution-work-01",
@@ -20,32 +20,123 @@
         {
           "label": "Mở bài",
           "text": "Although there may be value in the proposal that employers should offer flexible hours when the work allows it, a practical difficulty is that team members may not be available at the same time. Understanding why this happens is important before suggesting a solution. Otherwise, the same problem may return even after people have spent time and effort trying to improve the situation.",
-          "noteVi": "Giới thiệu đúng vấn đề được hỏi."
+          "noteVi": "Giới thiệu đúng vấn đề được hỏi.",
+          "parts": [
+            {
+              "text": "Although there may be value in ",
+              "kind": "detail"
+            },
+            {
+              "text": "the proposal that",
+              "kind": "frame",
+              "labelVi": "Giới thiệu đề xuất + mệnh đề"
+            },
+            {
+              "text": " employers should offer flexible hours when the work allows it, a practical difficulty is that team members may not be available at the same time. Understanding why this happens is important before suggesting a solution. Otherwise, the same problem may return even after people have spent time and effort trying to improve the situation.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Nguyên nhân",
           "text": "One reason for the difficulty is that flexible schedules may be introduced without agreed shared hours. This can help explain why team members may not be available at the same time. Consider the following situation: a customer question may remain unanswered because the person with the information has already finished work. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
-          "noteVi": "Nối điều kiện tổ chức với vấn đề."
+          "noteVi": "Nối điều kiện tổ chức với vấn đề.",
+          "parts": [
+            {
+              "text": "One reason for the difficulty is that",
+              "kind": "frame",
+              "labelVi": "Nêu nguyên nhân + mệnh đề"
+            },
+            {
+              "text": " flexible schedules may be introduced without agreed shared hours. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This can help explain why",
+              "kind": "frame",
+              "labelVi": "Nối nguyên nhân với hiện tượng"
+            },
+            {
+              "text": " team members may not be available at the same time. ",
+              "kind": "detail"
+            },
+            {
+              "text": "Consider the following situation:",
+              "kind": "frame",
+              "labelVi": "Dẫn một tình huống minh họa"
+            },
+            {
+              "text": " a customer question may remain unanswered because the person with the information has already finished work. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Giải pháp",
           "text": "A practical response would be to set core hours and make availability clear to the team. For example, a department could agree that everyone is reachable between ten and three while allowing choice outside that period. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
-          "noteVi": "Hành động cụ thể có ví dụ thực hiện."
+          "noteVi": "Hành động cụ thể có ví dụ thực hiện.",
+          "parts": [
+            {
+              "text": "A practical response would be to",
+              "kind": "frame",
+              "labelVi": "Đưa giải pháp + động từ nguyên mẫu"
+            },
+            {
+              "text": " set core hours and make availability clear to the team. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a department could agree that everyone is reachable between ten and three while allowing choice outside that period. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Vì sao giải pháp đáng làm?",
           "text": "The aim is not to abandon the useful parts of the idea. It is to make them accessible in practice. For example, a parent can start earlier on two days so that they can collect a child from school. This illustrates the potential value of the fact that employees can organise work around practical personal needs. Asking participants what prevents them from benefiting would help organisers choose changes that actually matter.",
-          "noteVi": "Giờ linh hoạt giúp cân bằng trách nhiệm; cần khoảng giờ chung và biết ai đang có mặt."
+          "noteVi": "Giờ linh hoạt giúp cân bằng trách nhiệm; cần khoảng giờ chung và biết ai đang có mặt.",
+          "parts": [
+            {
+              "text": "The aim is not to abandon the useful parts of the idea. It is to make them accessible in practice. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a parent can start earlier on two days so that they can collect a child from school. This illustrates the potential value of the fact that employees can organise work around practical personal needs. Asking participants what prevents them from benefiting would help organisers choose changes that actually matter.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, the problem is linked to the fact that flexible schedules may be introduced without agreed shared hours. A practical response is to set core hours and make availability clear to the team. Trying this carefully and listening to the people affected is more convincing than expecting a general instruction to solve the difficulty on its own.",
-          "noteVi": "Tóm tắt nguyên nhân–giải pháp tương ứng."
+          "noteVi": "Tóm tắt nguyên nhân–giải pháp tương ứng.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " the problem is linked to the fact that flexible schedules may be introduced without agreed shared hours. A practical response is to set core hours and make availability clear to the team. Trying this carefully and listening to the people affected is more convincing than expecting a general instruction to solve the difficulty on its own.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 355,
       "mainWordCount": 355,
       "phrases": [
@@ -95,32 +186,123 @@
         {
           "label": "Mở bài",
           "text": "Although there may be value in the proposal that people should consider job satisfaction as well as salary, a practical difficulty is that personal interest alone may not cover essential living costs. Understanding why this happens is important before suggesting a solution. Otherwise, the same problem may return even after people have spent time and effort trying to improve the situation.",
-          "noteVi": "Giới thiệu đúng vấn đề được hỏi."
+          "noteVi": "Giới thiệu đúng vấn đề được hỏi.",
+          "parts": [
+            {
+              "text": "Although there may be value in ",
+              "kind": "detail"
+            },
+            {
+              "text": "the proposal that",
+              "kind": "frame",
+              "labelVi": "Giới thiệu đề xuất + mệnh đề"
+            },
+            {
+              "text": " people should consider job satisfaction as well as salary, a practical difficulty is that personal interest alone may not cover essential living costs. Understanding why this happens is important before suggesting a solution. Otherwise, the same problem may return even after people have spent time and effort trying to improve the situation.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Nguyên nhân",
           "text": "One reason for the difficulty is that career advice may present money and happiness as if only one can matter. This can help explain why personal interest alone may not cover essential living costs. Consider the following situation: a graduate may enjoy an unpaid position but be unable to continue without financial support. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
-          "noteVi": "Nối điều kiện tổ chức với vấn đề."
+          "noteVi": "Nối điều kiện tổ chức với vấn đề.",
+          "parts": [
+            {
+              "text": "One reason for the difficulty is that",
+              "kind": "frame",
+              "labelVi": "Nêu nguyên nhân + mệnh đề"
+            },
+            {
+              "text": " career advice may present money and happiness as if only one can matter. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This can help explain why",
+              "kind": "frame",
+              "labelVi": "Nối nguyên nhân với hiện tượng"
+            },
+            {
+              "text": " personal interest alone may not cover essential living costs. ",
+              "kind": "detail"
+            },
+            {
+              "text": "Consider the following situation:",
+              "kind": "frame",
+              "labelVi": "Dẫn một tình huống minh họa"
+            },
+            {
+              "text": " a graduate may enjoy an unpaid position but be unable to continue without financial support. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Giải pháp",
           "text": "A practical response would be to compare basic financial needs with working conditions and opportunities to develop. For example, a job seeker could list minimum living costs before comparing two offers with different responsibilities. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
-          "noteVi": "Hành động cụ thể có ví dụ thực hiện."
+          "noteVi": "Hành động cụ thể có ví dụ thực hiện.",
+          "parts": [
+            {
+              "text": "A practical response would be to",
+              "kind": "frame",
+              "labelVi": "Đưa giải pháp + động từ nguyên mẫu"
+            },
+            {
+              "text": " compare basic financial needs with working conditions and opportunities to develop. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a job seeker could list minimum living costs before comparing two offers with different responsibilities. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Vì sao giải pháp đáng làm?",
           "text": "The aim is not to abandon the useful parts of the idea. It is to make them accessible in practice. For example, a teacher may value a school where colleagues share materials and help new staff solve classroom problems. This illustrates the potential value of the fact that workers can think about the quality of their daily working life. Asking participants what prevents them from benefiting would help organisers choose changes that actually matter.",
-          "noteVi": "Chọn việc cần cân nhắc cả nhu cầu tài chính và trải nghiệm làm việc hằng ngày."
+          "noteVi": "Chọn việc cần cân nhắc cả nhu cầu tài chính và trải nghiệm làm việc hằng ngày.",
+          "parts": [
+            {
+              "text": "The aim is not to abandon the useful parts of the idea. It is to make them accessible in practice. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a teacher may value a school where colleagues share materials and help new staff solve classroom problems. This illustrates the potential value of the fact that workers can think about the quality of their daily working life. Asking participants what prevents them from benefiting would help organisers choose changes that actually matter.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, the problem is linked to the fact that career advice may present money and happiness as if only one can matter. A practical response is to compare basic financial needs with working conditions and opportunities to develop. Trying this carefully and listening to the people affected is more convincing than expecting a general instruction to solve the difficulty on its own.",
-          "noteVi": "Tóm tắt nguyên nhân–giải pháp tương ứng."
+          "noteVi": "Tóm tắt nguyên nhân–giải pháp tương ứng.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " the problem is linked to the fact that career advice may present money and happiness as if only one can matter. A practical response is to compare basic financial needs with working conditions and opportunities to develop. Trying this carefully and listening to the people affected is more convincing than expecting a general instruction to solve the difficulty on its own.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 361,
       "mainWordCount": 361,
       "phrases": [
@@ -170,32 +352,123 @@
         {
           "label": "Mở bài",
           "text": "Although there may be value in the proposal that colleges should help students find well-supported work placements, a practical difficulty is that a placement may offer little useful learning. Understanding why this happens is important before suggesting a solution. Otherwise, the same problem may return even after people have spent time and effort trying to improve the situation.",
-          "noteVi": "Giới thiệu đúng vấn đề được hỏi."
+          "noteVi": "Giới thiệu đúng vấn đề được hỏi.",
+          "parts": [
+            {
+              "text": "Although there may be value in ",
+              "kind": "detail"
+            },
+            {
+              "text": "the proposal that",
+              "kind": "frame",
+              "labelVi": "Giới thiệu đề xuất + mệnh đề"
+            },
+            {
+              "text": " colleges should help students find well-supported work placements, a practical difficulty is that a placement may offer little useful learning. Understanding why this happens is important before suggesting a solution. Otherwise, the same problem may return even after people have spent time and effort trying to improve the situation.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Nguyên nhân",
           "text": "One reason for the difficulty is that the college and employer may not agree on clear learning goals. This can help explain why a placement may offer little useful learning. Consider the following situation: an intern may spend every day carrying documents and never learn about the department's main work. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
-          "noteVi": "Nối điều kiện tổ chức với vấn đề."
+          "noteVi": "Nối điều kiện tổ chức với vấn đề.",
+          "parts": [
+            {
+              "text": "One reason for the difficulty is that",
+              "kind": "frame",
+              "labelVi": "Nêu nguyên nhân + mệnh đề"
+            },
+            {
+              "text": " the college and employer may not agree on clear learning goals. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This can help explain why",
+              "kind": "frame",
+              "labelVi": "Nối nguyên nhân với hiện tượng"
+            },
+            {
+              "text": " a placement may offer little useful learning. ",
+              "kind": "detail"
+            },
+            {
+              "text": "Consider the following situation:",
+              "kind": "frame",
+              "labelVi": "Dẫn một tình huống minh họa"
+            },
+            {
+              "text": " an intern may spend every day carrying documents and never learn about the department's main work. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Giải pháp",
           "text": "A practical response would be to set realistic learning objectives and appoint a workplace supervisor. For example, a supervisor could review one task with the student each week and explain how it contributes to the business. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
-          "noteVi": "Hành động cụ thể có ví dụ thực hiện."
+          "noteVi": "Hành động cụ thể có ví dụ thực hiện.",
+          "parts": [
+            {
+              "text": "A practical response would be to",
+              "kind": "frame",
+              "labelVi": "Đưa giải pháp + động từ nguyên mẫu"
+            },
+            {
+              "text": " set realistic learning objectives and appoint a workplace supervisor. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a supervisor could review one task with the student each week and explain how it contributes to the business. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Vì sao giải pháp đáng làm?",
           "text": "The aim is not to abandon the useful parts of the idea. It is to make them accessible in practice. For example, a business student can help organise a small shop's stock records and see why accurate information matters. This illustrates the potential value of the fact that students can connect classroom knowledge with workplace tasks. Asking participants what prevents them from benefiting would help organisers choose changes that actually matter.",
-          "noteVi": "Thực tập cần nhiệm vụ có ý nghĩa, mục tiêu học và người hướng dẫn để không chỉ làm việc vặt."
+          "noteVi": "Thực tập cần nhiệm vụ có ý nghĩa, mục tiêu học và người hướng dẫn để không chỉ làm việc vặt.",
+          "parts": [
+            {
+              "text": "The aim is not to abandon the useful parts of the idea. It is to make them accessible in practice. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a business student can help organise a small shop's stock records and see why accurate information matters. This illustrates the potential value of the fact that students can connect classroom knowledge with workplace tasks. Asking participants what prevents them from benefiting would help organisers choose changes that actually matter.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, the problem is linked to the fact that the college and employer may not agree on clear learning goals. A practical response is to set realistic learning objectives and appoint a workplace supervisor. Trying this carefully and listening to the people affected is more convincing than expecting a general instruction to solve the difficulty on its own.",
-          "noteVi": "Tóm tắt nguyên nhân–giải pháp tương ứng."
+          "noteVi": "Tóm tắt nguyên nhân–giải pháp tương ứng.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " the problem is linked to the fact that the college and employer may not agree on clear learning goals. A practical response is to set realistic learning objectives and appoint a workplace supervisor. Trying this carefully and listening to the people affected is more convincing than expecting a general instruction to solve the difficulty on its own.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 350,
       "mainWordCount": 350,
       "phrases": [
@@ -245,32 +518,123 @@
         {
           "label": "Mở bài",
           "text": "Although there may be value in the proposal that workplaces should keep meetings focused and purposeful, a practical difficulty is that very short meetings may leave some voices unheard. Understanding why this happens is important before suggesting a solution. Otherwise, the same problem may return even after people have spent time and effort trying to improve the situation.",
-          "noteVi": "Giới thiệu đúng vấn đề được hỏi."
+          "noteVi": "Giới thiệu đúng vấn đề được hỏi.",
+          "parts": [
+            {
+              "text": "Although there may be value in ",
+              "kind": "detail"
+            },
+            {
+              "text": "the proposal that",
+              "kind": "frame",
+              "labelVi": "Giới thiệu đề xuất + mệnh đề"
+            },
+            {
+              "text": " workplaces should keep meetings focused and purposeful, a practical difficulty is that very short meetings may leave some voices unheard. Understanding why this happens is important before suggesting a solution. Otherwise, the same problem may return even after people have spent time and effort trying to improve the situation.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Nguyên nhân",
           "text": "One reason for the difficulty is that meeting time may be controlled by the most confident speakers. This can help explain why very short meetings may leave some voices unheard. Consider the following situation: a new employee may not mention an important concern before the chair moves to the next item. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
-          "noteVi": "Nối điều kiện tổ chức với vấn đề."
+          "noteVi": "Nối điều kiện tổ chức với vấn đề.",
+          "parts": [
+            {
+              "text": "One reason for the difficulty is that",
+              "kind": "frame",
+              "labelVi": "Nêu nguyên nhân + mệnh đề"
+            },
+            {
+              "text": " meeting time may be controlled by the most confident speakers. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This can help explain why",
+              "kind": "frame",
+              "labelVi": "Nối nguyên nhân với hiện tượng"
+            },
+            {
+              "text": " very short meetings may leave some voices unheard. ",
+              "kind": "detail"
+            },
+            {
+              "text": "Consider the following situation:",
+              "kind": "frame",
+              "labelVi": "Dẫn một tình huống minh họa"
+            },
+            {
+              "text": " a new employee may not mention an important concern before the chair moves to the next item. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Giải pháp",
           "text": "A practical response would be to share questions in advance and invite contributions from everyone. For example, a manager could send a short agenda the day before and collect written comments after the meeting. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
-          "noteVi": "Hành động cụ thể có ví dụ thực hiện."
+          "noteVi": "Hành động cụ thể có ví dụ thực hiện.",
+          "parts": [
+            {
+              "text": "A practical response would be to",
+              "kind": "frame",
+              "labelVi": "Đưa giải pháp + động từ nguyên mẫu"
+            },
+            {
+              "text": " share questions in advance and invite contributions from everyone. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a manager could send a short agenda the day before and collect written comments after the meeting. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Vì sao giải pháp đáng làm?",
           "text": "The aim is not to abandon the useful parts of the idea. It is to make them accessible in practice. For example, a team can spend fifteen minutes agreeing on a delivery problem instead of listening to an hour of unrelated updates. This illustrates the potential value of the fact that staff can understand decisions without losing large amounts of working time. Asking participants what prevents them from benefiting would help organisers choose changes that actually matter.",
-          "noteVi": "Họp có mục đích tiết kiệm thời gian; vẫn phải cho người ít nói cơ hội chuẩn bị và góp ý."
+          "noteVi": "Họp có mục đích tiết kiệm thời gian; vẫn phải cho người ít nói cơ hội chuẩn bị và góp ý.",
+          "parts": [
+            {
+              "text": "The aim is not to abandon the useful parts of the idea. It is to make them accessible in practice. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a team can spend fifteen minutes agreeing on a delivery problem instead of listening to an hour of unrelated updates. This illustrates the potential value of the fact that staff can understand decisions without losing large amounts of working time. Asking participants what prevents them from benefiting would help organisers choose changes that actually matter.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, the problem is linked to the fact that meeting time may be controlled by the most confident speakers. A practical response is to share questions in advance and invite contributions from everyone. Trying this carefully and listening to the people affected is more convincing than expecting a general instruction to solve the difficulty on its own.",
-          "noteVi": "Tóm tắt nguyên nhân–giải pháp tương ứng."
+          "noteVi": "Tóm tắt nguyên nhân–giải pháp tương ứng.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " the problem is linked to the fact that meeting time may be controlled by the most confident speakers. A practical response is to share questions in advance and invite contributions from everyone. Trying this carefully and listening to the people affected is more convincing than expecting a general instruction to solve the difficulty on its own.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 354,
       "mainWordCount": 354,
       "phrases": [
@@ -320,32 +684,123 @@
         {
           "label": "Mở bài",
           "text": "Although there may be value in the proposal that adults should have access to support when changing careers, a practical difficulty is that a sudden change can create financial pressure. Understanding why this happens is important before suggesting a solution. Otherwise, the same problem may return even after people have spent time and effort trying to improve the situation.",
-          "noteVi": "Giới thiệu đúng vấn đề được hỏi."
+          "noteVi": "Giới thiệu đúng vấn đề được hỏi.",
+          "parts": [
+            {
+              "text": "Although there may be value in ",
+              "kind": "detail"
+            },
+            {
+              "text": "the proposal that",
+              "kind": "frame",
+              "labelVi": "Giới thiệu đề xuất + mệnh đề"
+            },
+            {
+              "text": " adults should have access to support when changing careers, a practical difficulty is that a sudden change can create financial pressure. Understanding why this happens is important before suggesting a solution. Otherwise, the same problem may return even after people have spent time and effort trying to improve the situation.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Nguyên nhân",
           "text": "One reason for the difficulty is that people may focus on the attraction of a new role without planning the transition. This can help explain why a sudden change can create financial pressure. Consider the following situation: someone may leave a job before checking the cost and duration of the course needed for a new occupation. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
-          "noteVi": "Nối điều kiện tổ chức với vấn đề."
+          "noteVi": "Nối điều kiện tổ chức với vấn đề.",
+          "parts": [
+            {
+              "text": "One reason for the difficulty is that",
+              "kind": "frame",
+              "labelVi": "Nêu nguyên nhân + mệnh đề"
+            },
+            {
+              "text": " people may focus on the attraction of a new role without planning the transition. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This can help explain why",
+              "kind": "frame",
+              "labelVi": "Nối nguyên nhân với hiện tượng"
+            },
+            {
+              "text": " a sudden change can create financial pressure. ",
+              "kind": "detail"
+            },
+            {
+              "text": "Consider the following situation:",
+              "kind": "frame",
+              "labelVi": "Dẫn một tình huống minh họa"
+            },
+            {
+              "text": " someone may leave a job before checking the cost and duration of the course needed for a new occupation. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Giải pháp",
           "text": "A practical response would be to build a gradual plan that includes costs, training and realistic job research. For example, a worker could take an evening course and speak to people in the target field before resigning. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
-          "noteVi": "Hành động cụ thể có ví dụ thực hiện."
+          "noteVi": "Hành động cụ thể có ví dụ thực hiện.",
+          "parts": [
+            {
+              "text": "A practical response would be to",
+              "kind": "frame",
+              "labelVi": "Đưa giải pháp + động từ nguyên mẫu"
+            },
+            {
+              "text": " build a gradual plan that includes costs, training and realistic job research. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a worker could take an evening course and speak to people in the target field before resigning. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Vì sao giải pháp đáng làm?",
           "text": "The aim is not to abandon the useful parts of the idea. It is to make them accessible in practice. For example, a shop worker with strong communication skills may prepare for a customer support role in another industry. This illustrates the potential value of the fact that people can move towards work that better matches their skills or circumstances. Asking participants what prevents them from benefiting would help organisers choose changes that actually matter.",
-          "noteVi": "Đổi nghề nên tận dụng kỹ năng có sẵn và có kế hoạch tài chính, học tập, tìm việc thực tế."
+          "noteVi": "Đổi nghề nên tận dụng kỹ năng có sẵn và có kế hoạch tài chính, học tập, tìm việc thực tế.",
+          "parts": [
+            {
+              "text": "The aim is not to abandon the useful parts of the idea. It is to make them accessible in practice. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a shop worker with strong communication skills may prepare for a customer support role in another industry. This illustrates the potential value of the fact that people can move towards work that better matches their skills or circumstances. Asking participants what prevents them from benefiting would help organisers choose changes that actually matter.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, the problem is linked to the fact that people may focus on the attraction of a new role without planning the transition. A practical response is to build a gradual plan that includes costs, training and realistic job research. Trying this carefully and listening to the people affected is more convincing than expecting a general instruction to solve the difficulty on its own.",
-          "noteVi": "Tóm tắt nguyên nhân–giải pháp tương ứng."
+          "noteVi": "Tóm tắt nguyên nhân–giải pháp tương ứng.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " the problem is linked to the fact that people may focus on the attraction of a new role without planning the transition. A practical response is to build a gradual plan that includes costs, training and realistic job research. Trying this carefully and listening to the people affected is more convincing than expecting a general instruction to solve the difficulty on its own.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 368,
       "mainWordCount": 368,
       "phrases": [
@@ -395,32 +850,123 @@
         {
           "label": "Mở bài",
           "text": "Although there may be value in the proposal that local organisations should make volunteering accessible to more people, a practical difficulty is that volunteers may become tired or stop attending. Understanding why this happens is important before suggesting a solution. Otherwise, the same problem may return even after people have spent time and effort trying to improve the situation.",
-          "noteVi": "Giới thiệu đúng vấn đề được hỏi."
+          "noteVi": "Giới thiệu đúng vấn đề được hỏi.",
+          "parts": [
+            {
+              "text": "Although there may be value in ",
+              "kind": "detail"
+            },
+            {
+              "text": "the proposal that",
+              "kind": "frame",
+              "labelVi": "Giới thiệu đề xuất + mệnh đề"
+            },
+            {
+              "text": " local organisations should make volunteering accessible to more people, a practical difficulty is that volunteers may become tired or stop attending. Understanding why this happens is important before suggesting a solution. Otherwise, the same problem may return even after people have spent time and effort trying to improve the situation.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Nguyên nhân",
           "text": "One reason for the difficulty is that organisations may rely on goodwill without checking what people can realistically offer. This can help explain why volunteers may become tired or stop attending. Consider the following situation: a volunteer may leave a project after being asked to cover extra shifts every weekend. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
-          "noteVi": "Nối điều kiện tổ chức với vấn đề."
+          "noteVi": "Nối điều kiện tổ chức với vấn đề.",
+          "parts": [
+            {
+              "text": "One reason for the difficulty is that",
+              "kind": "frame",
+              "labelVi": "Nêu nguyên nhân + mệnh đề"
+            },
+            {
+              "text": " organisations may rely on goodwill without checking what people can realistically offer. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This can help explain why",
+              "kind": "frame",
+              "labelVi": "Nối nguyên nhân với hiện tượng"
+            },
+            {
+              "text": " volunteers may become tired or stop attending. ",
+              "kind": "detail"
+            },
+            {
+              "text": "Consider the following situation:",
+              "kind": "frame",
+              "labelVi": "Dẫn một tình huống minh họa"
+            },
+            {
+              "text": " a volunteer may leave a project after being asked to cover extra shifts every weekend. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Giải pháp",
           "text": "A practical response would be to agree on manageable commitments and provide clear support. For example, a coordinator could offer two-hour shifts and ask volunteers which tasks fit their skills and schedules. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
-          "noteVi": "Hành động cụ thể có ví dụ thực hiện."
+          "noteVi": "Hành động cụ thể có ví dụ thực hiện.",
+          "parts": [
+            {
+              "text": "A practical response would be to",
+              "kind": "frame",
+              "labelVi": "Đưa giải pháp + động từ nguyên mẫu"
+            },
+            {
+              "text": " agree on manageable commitments and provide clear support. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a coordinator could offer two-hour shifts and ask volunteers which tasks fit their skills and schedules. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Vì sao giải pháp đáng làm?",
           "text": "The aim is not to abandon the useful parts of the idea. It is to make them accessible in practice. For example, a retired office worker can help a neighbourhood group organise records for a food donation project. This illustrates the potential value of the fact that residents can contribute useful skills and build local connections. Asking participants what prevents them from benefiting would help organisers choose changes that actually matter.",
-          "noteVi": "Tình nguyện tạo kết nối nhưng cần cam kết vừa sức và hỗ trợ rõ, không chỉ dựa vào thiện chí."
+          "noteVi": "Tình nguyện tạo kết nối nhưng cần cam kết vừa sức và hỗ trợ rõ, không chỉ dựa vào thiện chí.",
+          "parts": [
+            {
+              "text": "The aim is not to abandon the useful parts of the idea. It is to make them accessible in practice. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a retired office worker can help a neighbourhood group organise records for a food donation project. This illustrates the potential value of the fact that residents can contribute useful skills and build local connections. Asking participants what prevents them from benefiting would help organisers choose changes that actually matter.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, the problem is linked to the fact that organisations may rely on goodwill without checking what people can realistically offer. A practical response is to agree on manageable commitments and provide clear support. Trying this carefully and listening to the people affected is more convincing than expecting a general instruction to solve the difficulty on its own.",
-          "noteVi": "Tóm tắt nguyên nhân–giải pháp tương ứng."
+          "noteVi": "Tóm tắt nguyên nhân–giải pháp tương ứng.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " the problem is linked to the fact that organisations may rely on goodwill without checking what people can realistically offer. A practical response is to agree on manageable commitments and provide clear support. Trying this carefully and listening to the people affected is more convincing than expecting a general instruction to solve the difficulty on its own.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 347,
       "mainWordCount": 347,
       "phrases": [
@@ -470,32 +1016,123 @@
         {
           "label": "Mở bài",
           "text": "Although there may be value in the proposal that students should be allowed to take manageable part-time jobs, a practical difficulty is that too many working hours can interfere with study. Understanding why this happens is important before suggesting a solution. Otherwise, the same problem may return even after people have spent time and effort trying to improve the situation.",
-          "noteVi": "Giới thiệu đúng vấn đề được hỏi."
+          "noteVi": "Giới thiệu đúng vấn đề được hỏi.",
+          "parts": [
+            {
+              "text": "Although there may be value in ",
+              "kind": "detail"
+            },
+            {
+              "text": "the proposal that",
+              "kind": "frame",
+              "labelVi": "Giới thiệu đề xuất + mệnh đề"
+            },
+            {
+              "text": " students should be allowed to take manageable part-time jobs, a practical difficulty is that too many working hours can interfere with study. Understanding why this happens is important before suggesting a solution. Otherwise, the same problem may return even after people have spent time and effort trying to improve the situation.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Nguyên nhân",
           "text": "One reason for the difficulty is that students may feel pressure to earn more without considering their full timetable. This can help explain why too many working hours can interfere with study. Consider the following situation: a student may accept late shifts before an exam and arrive too tired to concentrate. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
-          "noteVi": "Nối điều kiện tổ chức với vấn đề."
+          "noteVi": "Nối điều kiện tổ chức với vấn đề.",
+          "parts": [
+            {
+              "text": "One reason for the difficulty is that",
+              "kind": "frame",
+              "labelVi": "Nêu nguyên nhân + mệnh đề"
+            },
+            {
+              "text": " students may feel pressure to earn more without considering their full timetable. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This can help explain why",
+              "kind": "frame",
+              "labelVi": "Nối nguyên nhân với hiện tượng"
+            },
+            {
+              "text": " too many working hours can interfere with study. ",
+              "kind": "detail"
+            },
+            {
+              "text": "Consider the following situation:",
+              "kind": "frame",
+              "labelVi": "Dẫn một tình huống minh họa"
+            },
+            {
+              "text": " a student may accept late shifts before an exam and arrive too tired to concentrate. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Giải pháp",
           "text": "A practical response would be to limit working hours and plan around important study periods. For example, a student could agree with an employer to reduce shifts during exam weeks. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
-          "noteVi": "Hành động cụ thể có ví dụ thực hiện."
+          "noteVi": "Hành động cụ thể có ví dụ thực hiện.",
+          "parts": [
+            {
+              "text": "A practical response would be to",
+              "kind": "frame",
+              "labelVi": "Đưa giải pháp + động từ nguyên mẫu"
+            },
+            {
+              "text": " limit working hours and plan around important study periods. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a student could agree with an employer to reduce shifts during exam weeks. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Vì sao giải pháp đáng làm?",
           "text": "The aim is not to abandon the useful parts of the idea. It is to make them accessible in practice. For example, a student working one weekend shift in a cafe can practise dealing politely with customers. This illustrates the potential value of the fact that students can gain experience and contribute to their own expenses. Asking participants what prevents them from benefiting would help organisers choose changes that actually matter.",
-          "noteVi": "Việc làm thêm rèn kinh nghiệm; số giờ cần phù hợp việc học và được giảm khi thi."
+          "noteVi": "Việc làm thêm rèn kinh nghiệm; số giờ cần phù hợp việc học và được giảm khi thi.",
+          "parts": [
+            {
+              "text": "The aim is not to abandon the useful parts of the idea. It is to make them accessible in practice. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a student working one weekend shift in a cafe can practise dealing politely with customers. This illustrates the potential value of the fact that students can gain experience and contribute to their own expenses. Asking participants what prevents them from benefiting would help organisers choose changes that actually matter.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, the problem is linked to the fact that students may feel pressure to earn more without considering their full timetable. A practical response is to limit working hours and plan around important study periods. Trying this carefully and listening to the people affected is more convincing than expecting a general instruction to solve the difficulty on its own.",
-          "noteVi": "Tóm tắt nguyên nhân–giải pháp tương ứng."
+          "noteVi": "Tóm tắt nguyên nhân–giải pháp tương ứng.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " the problem is linked to the fact that students may feel pressure to earn more without considering their full timetable. A practical response is to limit working hours and plan around important study periods. Trying this carefully and listening to the people affected is more convincing than expecting a general instruction to solve the difficulty on its own.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 348,
       "mainWordCount": 348,
       "phrases": [
@@ -545,32 +1182,123 @@
         {
           "label": "Mở bài",
           "text": "Although there may be value in the proposal that employers should provide regular practical training for staff, a practical difficulty is that training can feel irrelevant when it is too general. Understanding why this happens is important before suggesting a solution. Otherwise, the same problem may return even after people have spent time and effort trying to improve the situation.",
-          "noteVi": "Giới thiệu đúng vấn đề được hỏi."
+          "noteVi": "Giới thiệu đúng vấn đề được hỏi.",
+          "parts": [
+            {
+              "text": "Although there may be value in ",
+              "kind": "detail"
+            },
+            {
+              "text": "the proposal that",
+              "kind": "frame",
+              "labelVi": "Giới thiệu đề xuất + mệnh đề"
+            },
+            {
+              "text": " employers should provide regular practical training for staff, a practical difficulty is that training can feel irrelevant when it is too general. Understanding why this happens is important before suggesting a solution. Otherwise, the same problem may return even after people have spent time and effort trying to improve the situation.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Nguyên nhân",
           "text": "One reason for the difficulty is that training needs may be decided without asking the people who do the work. This can help explain why training can feel irrelevant when it is too general. Consider the following situation: an experienced worker may attend a long presentation but still not know how to complete one essential new task. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
-          "noteVi": "Nối điều kiện tổ chức với vấn đề."
+          "noteVi": "Nối điều kiện tổ chức với vấn đề.",
+          "parts": [
+            {
+              "text": "One reason for the difficulty is that",
+              "kind": "frame",
+              "labelVi": "Nêu nguyên nhân + mệnh đề"
+            },
+            {
+              "text": " training needs may be decided without asking the people who do the work. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This can help explain why",
+              "kind": "frame",
+              "labelVi": "Nối nguyên nhân với hiện tượng"
+            },
+            {
+              "text": " training can feel irrelevant when it is too general. ",
+              "kind": "detail"
+            },
+            {
+              "text": "Consider the following situation:",
+              "kind": "frame",
+              "labelVi": "Dẫn một tình huống minh họa"
+            },
+            {
+              "text": " an experienced worker may attend a long presentation but still not know how to complete one essential new task. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Giải pháp",
           "text": "A practical response would be to base sessions on real tasks and allow time for practice. For example, a trainer could collect common questions beforehand and ask staff to complete a realistic example during the session. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
-          "noteVi": "Hành động cụ thể có ví dụ thực hiện."
+          "noteVi": "Hành động cụ thể có ví dụ thực hiện.",
+          "parts": [
+            {
+              "text": "A practical response would be to",
+              "kind": "frame",
+              "labelVi": "Đưa giải pháp + động từ nguyên mẫu"
+            },
+            {
+              "text": " base sessions on real tasks and allow time for practice. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a trainer could collect common questions beforehand and ask staff to complete a realistic example during the session. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Vì sao giải pháp đáng làm?",
           "text": "The aim is not to abandon the useful parts of the idea. It is to make them accessible in practice. For example, a shop team can practise using a new ordering system before it is introduced during a busy weekend. This illustrates the potential value of the fact that workers can adapt when tasks or systems change. Asking participants what prevents them from benefiting would help organisers choose changes that actually matter.",
-          "noteVi": "Đào tạo nên dựa trên nhiệm vụ thật và cho thực hành, thay vì chỉ nghe bài giảng chung."
+          "noteVi": "Đào tạo nên dựa trên nhiệm vụ thật và cho thực hành, thay vì chỉ nghe bài giảng chung.",
+          "parts": [
+            {
+              "text": "The aim is not to abandon the useful parts of the idea. It is to make them accessible in practice. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a shop team can practise using a new ordering system before it is introduced during a busy weekend. This illustrates the potential value of the fact that workers can adapt when tasks or systems change. Asking participants what prevents them from benefiting would help organisers choose changes that actually matter.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, the problem is linked to the fact that training needs may be decided without asking the people who do the work. A practical response is to base sessions on real tasks and allow time for practice. Trying this carefully and listening to the people affected is more convincing than expecting a general instruction to solve the difficulty on its own.",
-          "noteVi": "Tóm tắt nguyên nhân–giải pháp tương ứng."
+          "noteVi": "Tóm tắt nguyên nhân–giải pháp tương ứng.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " the problem is linked to the fact that training needs may be decided without asking the people who do the work. A practical response is to base sessions on real tasks and allow time for practice. Trying this carefully and listening to the people affected is more convincing than expecting a general instruction to solve the difficulty on its own.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 363,
       "mainWordCount": 363,
       "phrases": [
@@ -620,32 +1348,123 @@
         {
           "label": "Mở bài",
           "text": "Although there may be value in the proposal that workplaces should help interested staff share suitable commuting journeys, a practical difficulty is that different schedules can make the arrangement unreliable. Understanding why this happens is important before suggesting a solution. Otherwise, the same problem may return even after people have spent time and effort trying to improve the situation.",
-          "noteVi": "Giới thiệu đúng vấn đề được hỏi."
+          "noteVi": "Giới thiệu đúng vấn đề được hỏi.",
+          "parts": [
+            {
+              "text": "Although there may be value in ",
+              "kind": "detail"
+            },
+            {
+              "text": "the proposal that",
+              "kind": "frame",
+              "labelVi": "Giới thiệu đề xuất + mệnh đề"
+            },
+            {
+              "text": " workplaces should help interested staff share suitable commuting journeys, a practical difficulty is that different schedules can make the arrangement unreliable. Understanding why this happens is important before suggesting a solution. Otherwise, the same problem may return even after people have spent time and effort trying to improve the situation.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Nguyên nhân",
           "text": "One reason for the difficulty is that participants may not discuss backup plans before starting. This can help explain why different schedules can make the arrangement unreliable. Consider the following situation: a colleague may need to leave early while the driver has to stay for an unexpected task. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
-          "noteVi": "Nối điều kiện tổ chức với vấn đề."
+          "noteVi": "Nối điều kiện tổ chức với vấn đề.",
+          "parts": [
+            {
+              "text": "One reason for the difficulty is that",
+              "kind": "frame",
+              "labelVi": "Nêu nguyên nhân + mệnh đề"
+            },
+            {
+              "text": " participants may not discuss backup plans before starting. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This can help explain why",
+              "kind": "frame",
+              "labelVi": "Nối nguyên nhân với hiện tượng"
+            },
+            {
+              "text": " different schedules can make the arrangement unreliable. ",
+              "kind": "detail"
+            },
+            {
+              "text": "Consider the following situation:",
+              "kind": "frame",
+              "labelVi": "Dẫn một tình huống minh họa"
+            },
+            {
+              "text": " a colleague may need to leave early while the driver has to stay for an unexpected task. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Giải pháp",
           "text": "A practical response would be to agree on practical arrangements and allow flexibility. For example, a small group could share a timetable, decide how costs are divided and keep an alternative way to travel home. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
-          "noteVi": "Hành động cụ thể có ví dụ thực hiện."
+          "noteVi": "Hành động cụ thể có ví dụ thực hiện.",
+          "parts": [
+            {
+              "text": "A practical response would be to",
+              "kind": "frame",
+              "labelVi": "Đưa giải pháp + động từ nguyên mẫu"
+            },
+            {
+              "text": " agree on practical arrangements and allow flexibility. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a small group could share a timetable, decide how costs are divided and keep an alternative way to travel home. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Vì sao giải pháp đáng làm?",
           "text": "The aim is not to abandon the useful parts of the idea. It is to make them accessible in practice. For example, three colleagues living in the same area can arrange to travel together twice a week. This illustrates the potential value of the fact that employees can share travel costs and reduce the number of separate trips. Asking participants what prevents them from benefiting would help organisers choose changes that actually matter.",
-          "noteVi": "Đi chung xe giảm chuyến đi riêng và chia chi phí; cần phương án dự phòng khi lịch thay đổi."
+          "noteVi": "Đi chung xe giảm chuyến đi riêng và chia chi phí; cần phương án dự phòng khi lịch thay đổi.",
+          "parts": [
+            {
+              "text": "The aim is not to abandon the useful parts of the idea. It is to make them accessible in practice. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " three colleagues living in the same area can arrange to travel together twice a week. This illustrates the potential value of the fact that employees can share travel costs and reduce the number of separate trips. Asking participants what prevents them from benefiting would help organisers choose changes that actually matter.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, the problem is linked to the fact that participants may not discuss backup plans before starting. A practical response is to agree on practical arrangements and allow flexibility. Trying this carefully and listening to the people affected is more convincing than expecting a general instruction to solve the difficulty on its own.",
-          "noteVi": "Tóm tắt nguyên nhân–giải pháp tương ứng."
+          "noteVi": "Tóm tắt nguyên nhân–giải pháp tương ứng.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " the problem is linked to the fact that participants may not discuss backup plans before starting. A practical response is to agree on practical arrangements and allow flexibility. Trying this carefully and listening to the people affected is more convincing than expecting a general instruction to solve the difficulty on its own.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 345,
       "mainWordCount": 345,
       "phrases": [
@@ -695,32 +1514,123 @@
         {
           "label": "Mở bài",
           "text": "Although there may be value in the proposal that businesses should train staff to handle complaints clearly and respectfully, a practical difficulty is that staff may be unable to solve problems without authority. Understanding why this happens is important before suggesting a solution. Otherwise, the same problem may return even after people have spent time and effort trying to improve the situation.",
-          "noteVi": "Giới thiệu đúng vấn đề được hỏi."
+          "noteVi": "Giới thiệu đúng vấn đề được hỏi.",
+          "parts": [
+            {
+              "text": "Although there may be value in ",
+              "kind": "detail"
+            },
+            {
+              "text": "the proposal that",
+              "kind": "frame",
+              "labelVi": "Giới thiệu đề xuất + mệnh đề"
+            },
+            {
+              "text": " businesses should train staff to handle complaints clearly and respectfully, a practical difficulty is that staff may be unable to solve problems without authority. Understanding why this happens is important before suggesting a solution. Otherwise, the same problem may return even after people have spent time and effort trying to improve the situation.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Nguyên nhân",
           "text": "One reason for the difficulty is that businesses may train communication skills without improving internal procedures. This can help explain why staff may be unable to solve problems without authority. Consider the following situation: an employee may apologise repeatedly but be unable to offer any answer about a delayed refund. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
-          "noteVi": "Nối điều kiện tổ chức với vấn đề."
+          "noteVi": "Nối điều kiện tổ chức với vấn đề.",
+          "parts": [
+            {
+              "text": "One reason for the difficulty is that",
+              "kind": "frame",
+              "labelVi": "Nêu nguyên nhân + mệnh đề"
+            },
+            {
+              "text": " businesses may train communication skills without improving internal procedures. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This can help explain why",
+              "kind": "frame",
+              "labelVi": "Nối nguyên nhân với hiện tượng"
+            },
+            {
+              "text": " staff may be unable to solve problems without authority. ",
+              "kind": "detail"
+            },
+            {
+              "text": "Consider the following situation:",
+              "kind": "frame",
+              "labelVi": "Dẫn một tình huống minh họa"
+            },
+            {
+              "text": " an employee may apologise repeatedly but be unable to offer any answer about a delayed refund. It shows that the problem is connected with the way the activity is organised, not only with an individual's attitude. Unless that underlying condition changes, asking people to try harder may have little effect.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Giải pháp",
           "text": "A practical response would be to give staff clear guidance and a reliable route for difficult cases. For example, a manager could provide a simple decision guide and make sure complex complaints reach the right person. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
-          "noteVi": "Hành động cụ thể có ví dụ thực hiện."
+          "noteVi": "Hành động cụ thể có ví dụ thực hiện.",
+          "parts": [
+            {
+              "text": "A practical response would be to",
+              "kind": "frame",
+              "labelVi": "Đưa giải pháp + động từ nguyên mẫu"
+            },
+            {
+              "text": " give staff clear guidance and a reliable route for difficult cases. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a manager could provide a simple decision guide and make sure complex complaints reach the right person. This approach is useful because it deals with a specific obstacle instead of simply repeating a general message. It could first be tried on a small scale, with feedback from the people involved, and then adjusted if some needs have been overlooked.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Vì sao giải pháp đáng làm?",
           "text": "The aim is not to abandon the useful parts of the idea. It is to make them accessible in practice. For example, a shop assistant can explain the return process and tell a customer when to expect a response. This illustrates the potential value of the fact that customers can understand what can be done about a problem. Asking participants what prevents them from benefiting would help organisers choose changes that actually matter.",
-          "noteVi": "Giao tiếp lịch sự cần đi cùng quy trình và quyền xử lý để khách nhận được bước tiếp cụ thể."
+          "noteVi": "Giao tiếp lịch sự cần đi cùng quy trình và quyền xử lý để khách nhận được bước tiếp cụ thể.",
+          "parts": [
+            {
+              "text": "The aim is not to abandon the useful parts of the idea. It is to make them accessible in practice. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a shop assistant can explain the return process and tell a customer when to expect a response. This illustrates the potential value of the fact that customers can understand what can be done about a problem. Asking participants what prevents them from benefiting would help organisers choose changes that actually matter.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, the problem is linked to the fact that businesses may train communication skills without improving internal procedures. A practical response is to give staff clear guidance and a reliable route for difficult cases. Trying this carefully and listening to the people affected is more convincing than expecting a general instruction to solve the difficulty on its own.",
-          "noteVi": "Tóm tắt nguyên nhân–giải pháp tương ứng."
+          "noteVi": "Tóm tắt nguyên nhân–giải pháp tương ứng.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " the problem is linked to the fact that businesses may train communication skills without improving internal procedures. A practical response is to give staff clear guidance and a reliable route for difficult cases. Trying this carefully and listening to the people affected is more convincing than expecting a general instruction to solve the difficulty on its own.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 356,
       "mainWordCount": 356,
       "phrases": [

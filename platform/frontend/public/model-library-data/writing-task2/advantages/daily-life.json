@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-05-v1",
+  "version": "2026-11-05-v2-frames",
   "samples": [
     {
       "id": "writing-task2-advantages-daily-life-01",
@@ -20,32 +20,155 @@
         {
           "label": "Mở bài",
           "text": "The proposal that communities should make everyday walking more convenient could affect everyday life in several ways. It is useful to consider both the opportunities it creates and the difficulties it may bring. Neither side should be judged only from a slogan, because the practical details can make a substantial difference.",
-          "noteVi": "Nêu nhiệm vụ so sánh hai mặt."
+          "noteVi": "Nêu nhiệm vụ so sánh hai mặt.",
+          "parts": [
+            {
+              "text": "The proposal that",
+              "kind": "frame",
+              "labelVi": "Giới thiệu đề xuất + mệnh đề"
+            },
+            {
+              "text": " communities should make everyday walking more convenient could affect everyday life in several ways. It is useful to consider both the opportunities it creates and the difficulties it may bring. Neither side should be judged only from a slogan, because the practical details can make a substantial difference.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Lợi ích",
           "text": "One important point in favour of the proposal is that people can include gentle movement in ordinary routines. This is possible because a useful route to a shop or bus stop can make walking part of a journey rather than an extra task. For example, a resident can walk to a nearby market instead of taking a motorbike for a very short trip. The value of this example is that the benefit is connected with a real everyday need. It is easier for people to see the purpose of an approach when they can relate it to their own situation.",
-          "noteVi": "Đi bộ dễ thành thói quen khi đường tới nơi cần đến thuận tiện và không bị cản trở."
+          "noteVi": "Đi bộ dễ thành thói quen khi đường tới nơi cần đến thuận tiện và không bị cản trở.",
+          "parts": [
+            {
+              "text": "One important point in favour of the proposal is that",
+              "kind": "frame",
+              "labelVi": "Lợi ích / lý do ủng hộ + mệnh đề"
+            },
+            {
+              "text": " people can include gentle movement in ordinary routines. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This is possible because",
+              "kind": "frame",
+              "labelVi": "Giải thích cơ chế + mệnh đề"
+            },
+            {
+              "text": " a useful route to a shop or bus stop can make walking part of a journey rather than an extra task. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a resident can walk to a nearby market instead of taking a motorbike for a very short trip. The value of this example is that the benefit is connected with a real everyday need. It is easier for people to see the purpose of an approach when they can relate it to their own situation.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Bất lợi",
           "text": "A difficulty that should not be ignored is that some routes are difficult to use. This matters because uneven paths, missing crossings and parked vehicles can create barriers. For instance, a parent with a pushchair may have to step into the road because the pavement is blocked. The result may be frustration or a decision to stop taking part. This is not simply a question of people refusing to make an effort; practical conditions can prevent a reasonable idea from working as intended.",
-          "noteVi": "Phân tích bất lợi bằng tình huống cụ thể."
+          "noteVi": "Phân tích bất lợi bằng tình huống cụ thể.",
+          "parts": [
+            {
+              "text": "A difficulty that should not be ignored is that",
+              "kind": "frame",
+              "labelVi": "Nêu một khó khăn + mệnh đề"
+            },
+            {
+              "text": " some routes are difficult to use. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This matters because",
+              "kind": "frame",
+              "labelVi": "Giải thích vì sao điều đó quan trọng"
+            },
+            {
+              "text": " uneven paths, missing crossings and parked vehicles can create barriers. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For instance,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a parent with a pushchair may have to step into the road because the pavement is blocked. The result may be frustration or a decision to stop taking part. This is not simply a question of people refusing to make an effort; practical conditions can prevent a reasonable idea from working as intended.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Điều gì làm thay đổi tác động?",
           "text": "The balance between these effects depends partly on organisation. For example, street design may give little attention to people travelling on foot. A way to reduce this difficulty would be to keep pavements clear and improve practical walking routes. A local group could identify one important route to the market and report the barriers along it. This would not remove every disadvantage, but it could make the approach more suitable for a wider range of people.",
-          "noteVi": "Giải thích yếu tố làm lợi–hại thay đổi, không phủ nhận bất lợi."
+          "noteVi": "Giải thích yếu tố làm lợi–hại thay đổi, không phủ nhận bất lợi.",
+          "parts": [
+            {
+              "text": "The balance between these effects depends partly on organisation. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " street design may give little attention to people travelling on foot. ",
+              "kind": "detail"
+            },
+            {
+              "text": "A way to reduce this difficulty would be to",
+              "kind": "frame",
+              "labelVi": "Giải pháp giảm khó khăn + động từ nguyên mẫu"
+            },
+            {
+              "text": " keep pavements clear and improve practical walking routes. A local group could identify one important route to the market and report the barriers along it. This would not remove every disadvantage, but it could make the approach more suitable for a wider range of people.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, an important advantage is that people can include gentle movement in ordinary routines, whereas a notable disadvantage is that some routes are difficult to use. Both should be considered before a decision is made, with attention to the resources and circumstances of the people affected.",
-          "noteVi": "Tóm tắt đúng hai mặt đã phân tích."
+          "noteVi": "Tóm tắt đúng hai mặt đã phân tích.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " ",
+              "kind": "detail"
+            },
+            {
+              "text": "an important advantage is that",
+              "kind": "frame",
+              "labelVi": "Tóm tắt lợi ích + mệnh đề"
+            },
+            {
+              "text": " people can include gentle movement in ordinary routines, whereas ",
+              "kind": "detail"
+            },
+            {
+              "text": "a notable disadvantage is that",
+              "kind": "frame",
+              "labelVi": "Tóm tắt bất lợi + mệnh đề"
+            },
+            {
+              "text": " some routes are difficult to use. Both should be considered before a decision is made, with attention to the resources and circumstances of the people affected.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 357,
       "mainWordCount": 357,
       "phrases": [
@@ -95,32 +218,155 @@
         {
           "label": "Mở bài",
           "text": "The proposal that young adults should learn how to prepare a few simple meals could affect everyday life in several ways. It is useful to consider both the opportunities it creates and the difficulties it may bring. Neither side should be judged only from a slogan, because the practical details can make a substantial difference.",
-          "noteVi": "Nêu nhiệm vụ so sánh hai mặt."
+          "noteVi": "Nêu nhiệm vụ so sánh hai mặt.",
+          "parts": [
+            {
+              "text": "The proposal that",
+              "kind": "frame",
+              "labelVi": "Giới thiệu đề xuất + mệnh đề"
+            },
+            {
+              "text": " young adults should learn how to prepare a few simple meals could affect everyday life in several ways. It is useful to consider both the opportunities it creates and the difficulties it may bring. Neither side should be judged only from a slogan, because the practical details can make a substantial difference.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Lợi ích",
           "text": "One important point in favour of the proposal is that people have more control over their meals and spending. This is possible because a small set of reliable recipes can make home cooking less time-consuming. For example, a student can prepare rice, vegetables and eggs instead of ordering food every evening. The value of this example is that the benefit is connected with a real everyday need. It is easier for people to see the purpose of an approach when they can relate it to their own situation.",
-          "noteVi": "Biết vài món đơn giản giúp tự chủ ăn uống; công thức nên phù hợp bếp và thời gian thực tế."
+          "noteVi": "Biết vài món đơn giản giúp tự chủ ăn uống; công thức nên phù hợp bếp và thời gian thực tế.",
+          "parts": [
+            {
+              "text": "One important point in favour of the proposal is that",
+              "kind": "frame",
+              "labelVi": "Lợi ích / lý do ủng hộ + mệnh đề"
+            },
+            {
+              "text": " people have more control over their meals and spending. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This is possible because",
+              "kind": "frame",
+              "labelVi": "Giải thích cơ chế + mệnh đề"
+            },
+            {
+              "text": " a small set of reliable recipes can make home cooking less time-consuming. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a student can prepare rice, vegetables and eggs instead of ordering food every evening. The value of this example is that the benefit is connected with a real everyday need. It is easier for people to see the purpose of an approach when they can relate it to their own situation.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Bất lợi",
           "text": "A difficulty that should not be ignored is that cooking may feel difficult in shared or poorly equipped housing. This matters because limited space and equipment can make even simple recipes inconvenient. For instance, someone sharing one small cooker with several housemates may struggle to prepare a meal at a busy time. The result may be frustration or a decision to stop taking part. This is not simply a question of people refusing to make an effort; practical conditions can prevent a reasonable idea from working as intended.",
-          "noteVi": "Phân tích bất lợi bằng tình huống cụ thể."
+          "noteVi": "Phân tích bất lợi bằng tình huống cụ thể.",
+          "parts": [
+            {
+              "text": "A difficulty that should not be ignored is that",
+              "kind": "frame",
+              "labelVi": "Nêu một khó khăn + mệnh đề"
+            },
+            {
+              "text": " cooking may feel difficult in shared or poorly equipped housing. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This matters because",
+              "kind": "frame",
+              "labelVi": "Giải thích vì sao điều đó quan trọng"
+            },
+            {
+              "text": " limited space and equipment can make even simple recipes inconvenient. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For instance,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " someone sharing one small cooker with several housemates may struggle to prepare a meal at a busy time. The result may be frustration or a decision to stop taking part. This is not simply a question of people refusing to make an effort; practical conditions can prevent a reasonable idea from working as intended.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Điều gì làm thay đổi tác động?",
           "text": "The balance between these effects depends partly on organisation. For example, advice may assume that everyone has a large kitchen and plenty of free time. A way to reduce this difficulty would be to teach flexible recipes that use basic equipment. A class could show how to prepare two meals with one pan and ingredients that can be used again the next day. This would not remove every disadvantage, but it could make the approach more suitable for a wider range of people.",
-          "noteVi": "Giải thích yếu tố làm lợi–hại thay đổi, không phủ nhận bất lợi."
+          "noteVi": "Giải thích yếu tố làm lợi–hại thay đổi, không phủ nhận bất lợi.",
+          "parts": [
+            {
+              "text": "The balance between these effects depends partly on organisation. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " advice may assume that everyone has a large kitchen and plenty of free time. ",
+              "kind": "detail"
+            },
+            {
+              "text": "A way to reduce this difficulty would be to",
+              "kind": "frame",
+              "labelVi": "Giải pháp giảm khó khăn + động từ nguyên mẫu"
+            },
+            {
+              "text": " teach flexible recipes that use basic equipment. A class could show how to prepare two meals with one pan and ingredients that can be used again the next day. This would not remove every disadvantage, but it could make the approach more suitable for a wider range of people.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, an important advantage is that people have more control over their meals and spending, whereas a notable disadvantage is that cooking may feel difficult in shared or poorly equipped housing. Both should be considered before a decision is made, with attention to the resources and circumstances of the people affected.",
-          "noteVi": "Tóm tắt đúng hai mặt đã phân tích."
+          "noteVi": "Tóm tắt đúng hai mặt đã phân tích.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " ",
+              "kind": "detail"
+            },
+            {
+              "text": "an important advantage is that",
+              "kind": "frame",
+              "labelVi": "Tóm tắt lợi ích + mệnh đề"
+            },
+            {
+              "text": " people have more control over their meals and spending, whereas ",
+              "kind": "detail"
+            },
+            {
+              "text": "a notable disadvantage is that",
+              "kind": "frame",
+              "labelVi": "Tóm tắt bất lợi + mệnh đề"
+            },
+            {
+              "text": " cooking may feel difficult in shared or poorly equipped housing. Both should be considered before a decision is made, with attention to the resources and circumstances of the people affected.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 366,
       "mainWordCount": 366,
       "phrases": [
@@ -170,32 +416,155 @@
         {
           "label": "Mở bài",
           "text": "The proposal that local areas should provide affordable opportunities for team sports could affect everyday life in several ways. It is useful to consider both the opportunities it creates and the difficulties it may bring. Neither side should be judged only from a slogan, because the practical details can make a substantial difference.",
-          "noteVi": "Nêu nhiệm vụ so sánh hai mặt."
+          "noteVi": "Nêu nhiệm vụ so sánh hai mặt.",
+          "parts": [
+            {
+              "text": "The proposal that",
+              "kind": "frame",
+              "labelVi": "Giới thiệu đề xuất + mệnh đề"
+            },
+            {
+              "text": " local areas should provide affordable opportunities for team sports could affect everyday life in several ways. It is useful to consider both the opportunities it creates and the difficulties it may bring. Neither side should be judged only from a slogan, because the practical details can make a substantial difference.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Lợi ích",
           "text": "One important point in favour of the proposal is that residents can exercise while meeting other people. This is possible because a shared activity gives newcomers a clear role and a reason to return. For example, a student new to a neighbourhood can join a weekend volleyball group and gradually get to know other players. The value of this example is that the benefit is connected with a real everyday need. It is easier for people to see the purpose of an approach when they can relate it to their own situation.",
-          "noteVi": "Thể thao nhóm tạo kết nối; buổi dành cho người mới cần thân thiện và cho mọi người tham gia."
+          "noteVi": "Thể thao nhóm tạo kết nối; buổi dành cho người mới cần thân thiện và cho mọi người tham gia.",
+          "parts": [
+            {
+              "text": "One important point in favour of the proposal is that",
+              "kind": "frame",
+              "labelVi": "Lợi ích / lý do ủng hộ + mệnh đề"
+            },
+            {
+              "text": " residents can exercise while meeting other people. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This is possible because",
+              "kind": "frame",
+              "labelVi": "Giải thích cơ chế + mệnh đề"
+            },
+            {
+              "text": " a shared activity gives newcomers a clear role and a reason to return. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a student new to a neighbourhood can join a weekend volleyball group and gradually get to know other players. The value of this example is that the benefit is connected with a real everyday need. It is easier for people to see the purpose of an approach when they can relate it to their own situation.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Bất lợi",
           "text": "A difficulty that should not be ignored is that beginners may feel excluded by competitive groups. This matters because experienced players may focus on winning rather than helping new members learn. For instance, a new player may stop attending after rarely being passed the ball during a match. The result may be frustration or a decision to stop taking part. This is not simply a question of people refusing to make an effort; practical conditions can prevent a reasonable idea from working as intended.",
-          "noteVi": "Phân tích bất lợi bằng tình huống cụ thể."
+          "noteVi": "Phân tích bất lợi bằng tình huống cụ thể.",
+          "parts": [
+            {
+              "text": "A difficulty that should not be ignored is that",
+              "kind": "frame",
+              "labelVi": "Nêu một khó khăn + mệnh đề"
+            },
+            {
+              "text": " beginners may feel excluded by competitive groups. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This matters because",
+              "kind": "frame",
+              "labelVi": "Giải thích vì sao điều đó quan trọng"
+            },
+            {
+              "text": " experienced players may focus on winning rather than helping new members learn. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For instance,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a new player may stop attending after rarely being passed the ball during a match. The result may be frustration or a decision to stop taking part. This is not simply a question of people refusing to make an effort; practical conditions can prevent a reasonable idea from working as intended.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Điều gì làm thay đổi tác động?",
           "text": "The balance between these effects depends partly on organisation. For example, sessions may not distinguish between beginner practice and serious competition. A way to reduce this difficulty would be to offer welcoming beginner sessions with clear expectations. An organiser could start with simple drills and rotate teams so that everyone has a chance to take part. This would not remove every disadvantage, but it could make the approach more suitable for a wider range of people.",
-          "noteVi": "Giải thích yếu tố làm lợi–hại thay đổi, không phủ nhận bất lợi."
+          "noteVi": "Giải thích yếu tố làm lợi–hại thay đổi, không phủ nhận bất lợi.",
+          "parts": [
+            {
+              "text": "The balance between these effects depends partly on organisation. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " sessions may not distinguish between beginner practice and serious competition. ",
+              "kind": "detail"
+            },
+            {
+              "text": "A way to reduce this difficulty would be to",
+              "kind": "frame",
+              "labelVi": "Giải pháp giảm khó khăn + động từ nguyên mẫu"
+            },
+            {
+              "text": " offer welcoming beginner sessions with clear expectations. An organiser could start with simple drills and rotate teams so that everyone has a chance to take part. This would not remove every disadvantage, but it could make the approach more suitable for a wider range of people.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, an important advantage is that residents can exercise while meeting other people, whereas a notable disadvantage is that beginners may feel excluded by competitive groups. Both should be considered before a decision is made, with attention to the resources and circumstances of the people affected.",
-          "noteVi": "Tóm tắt đúng hai mặt đã phân tích."
+          "noteVi": "Tóm tắt đúng hai mặt đã phân tích.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " ",
+              "kind": "detail"
+            },
+            {
+              "text": "an important advantage is that",
+              "kind": "frame",
+              "labelVi": "Tóm tắt lợi ích + mệnh đề"
+            },
+            {
+              "text": " residents can exercise while meeting other people, whereas ",
+              "kind": "detail"
+            },
+            {
+              "text": "a notable disadvantage is that",
+              "kind": "frame",
+              "labelVi": "Tóm tắt bất lợi + mệnh đề"
+            },
+            {
+              "text": " beginners may feel excluded by competitive groups. Both should be considered before a decision is made, with attention to the resources and circumstances of the people affected.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 352,
       "mainWordCount": 352,
       "phrases": [
@@ -245,32 +614,155 @@
         {
           "label": "Mở bài",
           "text": "The proposal that people should create a calmer routine before going to bed could affect everyday life in several ways. It is useful to consider both the opportunities it creates and the difficulties it may bring. Neither side should be judged only from a slogan, because the practical details can make a substantial difference.",
-          "noteVi": "Nêu nhiệm vụ so sánh hai mặt."
+          "noteVi": "Nêu nhiệm vụ so sánh hai mặt.",
+          "parts": [
+            {
+              "text": "The proposal that",
+              "kind": "frame",
+              "labelVi": "Giới thiệu đề xuất + mệnh đề"
+            },
+            {
+              "text": " people should create a calmer routine before going to bed could affect everyday life in several ways. It is useful to consider both the opportunities it creates and the difficulties it may bring. Neither side should be judged only from a slogan, because the practical details can make a substantial difference.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Lợi ích",
           "text": "One important point in favour of the proposal is that people can protect time intended for rest. This is possible because putting the phone aside can stop a short check from turning into a much later bedtime. For example, a student can finish necessary messages before reading a few pages of a book and going to bed at the planned time. The value of this example is that the benefit is connected with a real everyday need. It is easier for people to see the purpose of an approach when they can relate it to their own situation.",
-          "noteVi": "Giảm lướt điện thoại giúp giữ giờ nghỉ; vẫn có thể giữ các liên lạc thực sự cần thiết."
+          "noteVi": "Giảm lướt điện thoại giúp giữ giờ nghỉ; vẫn có thể giữ các liên lạc thực sự cần thiết.",
+          "parts": [
+            {
+              "text": "One important point in favour of the proposal is that",
+              "kind": "frame",
+              "labelVi": "Lợi ích / lý do ủng hộ + mệnh đề"
+            },
+            {
+              "text": " people can protect time intended for rest. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This is possible because",
+              "kind": "frame",
+              "labelVi": "Giải thích cơ chế + mệnh đề"
+            },
+            {
+              "text": " putting the phone aside can stop a short check from turning into a much later bedtime. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a student can finish necessary messages before reading a few pages of a book and going to bed at the planned time. The value of this example is that the benefit is connected with a real everyday need. It is easier for people to see the purpose of an approach when they can relate it to their own situation.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Bất lợi",
           "text": "A difficulty that should not be ignored is that one strict rule may not suit everyone's responsibilities. This matters because some people need to remain reachable for work or family reasons. For instance, a person caring for a relative may need to keep important calls available overnight. The result may be frustration or a decision to stop taking part. This is not simply a question of people refusing to make an effort; practical conditions can prevent a reasonable idea from working as intended.",
-          "noteVi": "Phân tích bất lợi bằng tình huống cụ thể."
+          "noteVi": "Phân tích bất lợi bằng tình huống cụ thể.",
+          "parts": [
+            {
+              "text": "A difficulty that should not be ignored is that",
+              "kind": "frame",
+              "labelVi": "Nêu một khó khăn + mệnh đề"
+            },
+            {
+              "text": " one strict rule may not suit everyone's responsibilities. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This matters because",
+              "kind": "frame",
+              "labelVi": "Giải thích vì sao điều đó quan trọng"
+            },
+            {
+              "text": " some people need to remain reachable for work or family reasons. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For instance,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a person caring for a relative may need to keep important calls available overnight. The result may be frustration or a decision to stop taking part. This is not simply a question of people refusing to make an effort; practical conditions can prevent a reasonable idea from working as intended.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Điều gì làm thay đổi tác động?",
           "text": "The balance between these effects depends partly on organisation. For example, people may treat all phone activity as if it serves the same purpose. A way to reduce this difficulty would be to reduce optional scrolling while keeping essential contact available. Someone could silence unnecessary applications but allow calls from close family members. This would not remove every disadvantage, but it could make the approach more suitable for a wider range of people.",
-          "noteVi": "Giải thích yếu tố làm lợi–hại thay đổi, không phủ nhận bất lợi."
+          "noteVi": "Giải thích yếu tố làm lợi–hại thay đổi, không phủ nhận bất lợi.",
+          "parts": [
+            {
+              "text": "The balance between these effects depends partly on organisation. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " people may treat all phone activity as if it serves the same purpose. ",
+              "kind": "detail"
+            },
+            {
+              "text": "A way to reduce this difficulty would be to",
+              "kind": "frame",
+              "labelVi": "Giải pháp giảm khó khăn + động từ nguyên mẫu"
+            },
+            {
+              "text": " reduce optional scrolling while keeping essential contact available. Someone could silence unnecessary applications but allow calls from close family members. This would not remove every disadvantage, but it could make the approach more suitable for a wider range of people.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, an important advantage is that people can protect time intended for rest, whereas a notable disadvantage is that one strict rule may not suit everyone's responsibilities. Both should be considered before a decision is made, with attention to the resources and circumstances of the people affected.",
-          "noteVi": "Tóm tắt đúng hai mặt đã phân tích."
+          "noteVi": "Tóm tắt đúng hai mặt đã phân tích.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " ",
+              "kind": "detail"
+            },
+            {
+              "text": "an important advantage is that",
+              "kind": "frame",
+              "labelVi": "Tóm tắt lợi ích + mệnh đề"
+            },
+            {
+              "text": " people can protect time intended for rest, whereas ",
+              "kind": "detail"
+            },
+            {
+              "text": "a notable disadvantage is that",
+              "kind": "frame",
+              "labelVi": "Tóm tắt bất lợi + mệnh đề"
+            },
+            {
+              "text": " one strict rule may not suit everyone's responsibilities. Both should be considered before a decision is made, with attention to the resources and circumstances of the people affected.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 356,
       "mainWordCount": 356,
       "phrases": [
@@ -320,32 +812,155 @@
         {
           "label": "Mở bài",
           "text": "The proposal that people should consider nearby destinations for short holidays could affect everyday life in several ways. It is useful to consider both the opportunities it creates and the difficulties it may bring. Neither side should be judged only from a slogan, because the practical details can make a substantial difference.",
-          "noteVi": "Nêu nhiệm vụ so sánh hai mặt."
+          "noteVi": "Nêu nhiệm vụ so sánh hai mặt.",
+          "parts": [
+            {
+              "text": "The proposal that",
+              "kind": "frame",
+              "labelVi": "Giới thiệu đề xuất + mệnh đề"
+            },
+            {
+              "text": " people should consider nearby destinations for short holidays could affect everyday life in several ways. It is useful to consider both the opportunities it creates and the difficulties it may bring. Neither side should be judged only from a slogan, because the practical details can make a substantial difference.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Lợi ích",
           "text": "One important point in favour of the proposal is that travellers can spend less of a short break on transport. This is possible because a nearby destination leaves more time for rest and activities at the place itself. For example, a family can take a morning bus to a nearby town and still have most of the day to explore. The value of this example is that the benefit is connected with a real everyday need. It is easier for people to see the purpose of an approach when they can relate it to their own situation.",
-          "noteVi": "Đi gần tận dụng thời gian nghỉ; nên tìm giờ ít đông và điểm đến đa dạng hơn."
+          "noteVi": "Đi gần tận dụng thời gian nghỉ; nên tìm giờ ít đông và điểm đến đa dạng hơn.",
+          "parts": [
+            {
+              "text": "One important point in favour of the proposal is that",
+              "kind": "frame",
+              "labelVi": "Lợi ích / lý do ủng hộ + mệnh đề"
+            },
+            {
+              "text": " travellers can spend less of a short break on transport. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This is possible because",
+              "kind": "frame",
+              "labelVi": "Giải thích cơ chế + mệnh đề"
+            },
+            {
+              "text": " a nearby destination leaves more time for rest and activities at the place itself. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a family can take a morning bus to a nearby town and still have most of the day to explore. The value of this example is that the benefit is connected with a real everyday need. It is easier for people to see the purpose of an approach when they can relate it to their own situation.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Bất lợi",
           "text": "A difficulty that should not be ignored is that popular local places may become crowded at the same time. This matters because many visitors may choose the same convenient destination on weekends. For instance, a small cafe near a famous viewpoint may have a long queue while quieter streets nearby receive few visitors. The result may be frustration or a decision to stop taking part. This is not simply a question of people refusing to make an effort; practical conditions can prevent a reasonable idea from working as intended.",
-          "noteVi": "Phân tích bất lợi bằng tình huống cụ thể."
+          "noteVi": "Phân tích bất lợi bằng tình huống cụ thể.",
+          "parts": [
+            {
+              "text": "A difficulty that should not be ignored is that",
+              "kind": "frame",
+              "labelVi": "Nêu một khó khăn + mệnh đề"
+            },
+            {
+              "text": " popular local places may become crowded at the same time. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This matters because",
+              "kind": "frame",
+              "labelVi": "Giải thích vì sao điều đó quan trọng"
+            },
+            {
+              "text": " many visitors may choose the same convenient destination on weekends. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For instance,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a small cafe near a famous viewpoint may have a long queue while quieter streets nearby receive few visitors. The result may be frustration or a decision to stop taking part. This is not simply a question of people refusing to make an effort; practical conditions can prevent a reasonable idea from working as intended.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Điều gì làm thay đổi tác động?",
           "text": "The balance between these effects depends partly on organisation. For example, travel plans often follow the same photographs and recommendations. A way to reduce this difficulty would be to research less busy times and a wider range of local places. A visitor could arrive earlier and include a small museum or walking route away from the busiest attraction. This would not remove every disadvantage, but it could make the approach more suitable for a wider range of people.",
-          "noteVi": "Giải thích yếu tố làm lợi–hại thay đổi, không phủ nhận bất lợi."
+          "noteVi": "Giải thích yếu tố làm lợi–hại thay đổi, không phủ nhận bất lợi.",
+          "parts": [
+            {
+              "text": "The balance between these effects depends partly on organisation. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " travel plans often follow the same photographs and recommendations. ",
+              "kind": "detail"
+            },
+            {
+              "text": "A way to reduce this difficulty would be to",
+              "kind": "frame",
+              "labelVi": "Giải pháp giảm khó khăn + động từ nguyên mẫu"
+            },
+            {
+              "text": " research less busy times and a wider range of local places. A visitor could arrive earlier and include a small museum or walking route away from the busiest attraction. This would not remove every disadvantage, but it could make the approach more suitable for a wider range of people.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, an important advantage is that travellers can spend less of a short break on transport, whereas a notable disadvantage is that popular local places may become crowded at the same time. Both should be considered before a decision is made, with attention to the resources and circumstances of the people affected.",
-          "noteVi": "Tóm tắt đúng hai mặt đã phân tích."
+          "noteVi": "Tóm tắt đúng hai mặt đã phân tích.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " ",
+              "kind": "detail"
+            },
+            {
+              "text": "an important advantage is that",
+              "kind": "frame",
+              "labelVi": "Tóm tắt lợi ích + mệnh đề"
+            },
+            {
+              "text": " travellers can spend less of a short break on transport, whereas ",
+              "kind": "detail"
+            },
+            {
+              "text": "a notable disadvantage is that",
+              "kind": "frame",
+              "labelVi": "Tóm tắt bất lợi + mệnh đề"
+            },
+            {
+              "text": " popular local places may become crowded at the same time. Both should be considered before a decision is made, with attention to the resources and circumstances of the people affected.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 369,
       "mainWordCount": 369,
       "phrases": [
@@ -395,32 +1010,155 @@
         {
           "label": "Mở bài",
           "text": "The proposal that families should involve different members when planning a holiday could affect everyday life in several ways. It is useful to consider both the opportunities it creates and the difficulties it may bring. Neither side should be judged only from a slogan, because the practical details can make a substantial difference.",
-          "noteVi": "Nêu nhiệm vụ so sánh hai mặt."
+          "noteVi": "Nêu nhiệm vụ so sánh hai mặt.",
+          "parts": [
+            {
+              "text": "The proposal that",
+              "kind": "frame",
+              "labelVi": "Giới thiệu đề xuất + mệnh đề"
+            },
+            {
+              "text": " families should involve different members when planning a holiday could affect everyday life in several ways. It is useful to consider both the opportunities it creates and the difficulties it may bring. Neither side should be judged only from a slogan, because the practical details can make a substantial difference.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Lợi ích",
           "text": "One important point in favour of the proposal is that the plan can reflect more than one person's interests. This is possible because discussing needs beforehand can reduce disagreements during the trip. For example, a family can combine a short museum visit with time in a park so that both adults and children enjoy the day. The value of this example is that the benefit is connected with a real everyday need. It is easier for people to see the purpose of an approach when they can relate it to their own situation.",
-          "noteVi": "Cùng bàn giúp tôn trọng nhu cầu từng người; lịch đi cần có ưu tiên và giờ nghỉ."
+          "noteVi": "Cùng bàn giúp tôn trọng nhu cầu từng người; lịch đi cần có ưu tiên và giờ nghỉ.",
+          "parts": [
+            {
+              "text": "One important point in favour of the proposal is that",
+              "kind": "frame",
+              "labelVi": "Lợi ích / lý do ủng hộ + mệnh đề"
+            },
+            {
+              "text": " the plan can reflect more than one person's interests. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This is possible because",
+              "kind": "frame",
+              "labelVi": "Giải thích cơ chế + mệnh đề"
+            },
+            {
+              "text": " discussing needs beforehand can reduce disagreements during the trip. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a family can combine a short museum visit with time in a park so that both adults and children enjoy the day. The value of this example is that the benefit is connected with a real everyday need. It is easier for people to see the purpose of an approach when they can relate it to their own situation.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Bất lợi",
           "text": "A difficulty that should not be ignored is that trying to satisfy everyone can make the schedule too busy. This matters because adding every suggested activity may leave little time for travel, meals or rest. For instance, a family may rush between several attractions and finish the day tired rather than pleased. The result may be frustration or a decision to stop taking part. This is not simply a question of people refusing to make an effort; practical conditions can prevent a reasonable idea from working as intended.",
-          "noteVi": "Phân tích bất lợi bằng tình huống cụ thể."
+          "noteVi": "Phân tích bất lợi bằng tình huống cụ thể.",
+          "parts": [
+            {
+              "text": "A difficulty that should not be ignored is that",
+              "kind": "frame",
+              "labelVi": "Nêu một khó khăn + mệnh đề"
+            },
+            {
+              "text": " trying to satisfy everyone can make the schedule too busy. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This matters because",
+              "kind": "frame",
+              "labelVi": "Giải thích vì sao điều đó quan trọng"
+            },
+            {
+              "text": " adding every suggested activity may leave little time for travel, meals or rest. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For instance,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a family may rush between several attractions and finish the day tired rather than pleased. The result may be frustration or a decision to stop taking part. This is not simply a question of people refusing to make an effort; practical conditions can prevent a reasonable idea from working as intended.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Điều gì làm thay đổi tác động?",
           "text": "The balance between these effects depends partly on organisation. For example, planners may count activities without considering the time each one requires. A way to reduce this difficulty would be to choose a small number of priorities and leave room for breaks. Family members could each suggest one activity and then agree on a realistic plan with free time. This would not remove every disadvantage, but it could make the approach more suitable for a wider range of people.",
-          "noteVi": "Giải thích yếu tố làm lợi–hại thay đổi, không phủ nhận bất lợi."
+          "noteVi": "Giải thích yếu tố làm lợi–hại thay đổi, không phủ nhận bất lợi.",
+          "parts": [
+            {
+              "text": "The balance between these effects depends partly on organisation. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " planners may count activities without considering the time each one requires. ",
+              "kind": "detail"
+            },
+            {
+              "text": "A way to reduce this difficulty would be to",
+              "kind": "frame",
+              "labelVi": "Giải pháp giảm khó khăn + động từ nguyên mẫu"
+            },
+            {
+              "text": " choose a small number of priorities and leave room for breaks. Family members could each suggest one activity and then agree on a realistic plan with free time. This would not remove every disadvantage, but it could make the approach more suitable for a wider range of people.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, an important advantage is that the plan can reflect more than one person's interests, whereas a notable disadvantage is that trying to satisfy everyone can make the schedule too busy. Both should be considered before a decision is made, with attention to the resources and circumstances of the people affected.",
-          "noteVi": "Tóm tắt đúng hai mặt đã phân tích."
+          "noteVi": "Tóm tắt đúng hai mặt đã phân tích.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " ",
+              "kind": "detail"
+            },
+            {
+              "text": "an important advantage is that",
+              "kind": "frame",
+              "labelVi": "Tóm tắt lợi ích + mệnh đề"
+            },
+            {
+              "text": " the plan can reflect more than one person's interests, whereas ",
+              "kind": "detail"
+            },
+            {
+              "text": "a notable disadvantage is that",
+              "kind": "frame",
+              "labelVi": "Tóm tắt bất lợi + mệnh đề"
+            },
+            {
+              "text": " trying to satisfy everyone can make the schedule too busy. Both should be considered before a decision is made, with attention to the resources and circumstances of the people affected.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 365,
       "mainWordCount": 365,
       "phrases": [
@@ -470,32 +1208,155 @@
         {
           "label": "Mở bài",
           "text": "The proposal that neighbourhoods should create simple opportunities for residents to meet could affect everyday life in several ways. It is useful to consider both the opportunities it creates and the difficulties it may bring. Neither side should be judged only from a slogan, because the practical details can make a substantial difference.",
-          "noteVi": "Nêu nhiệm vụ so sánh hai mặt."
+          "noteVi": "Nêu nhiệm vụ so sánh hai mặt.",
+          "parts": [
+            {
+              "text": "The proposal that",
+              "kind": "frame",
+              "labelVi": "Giới thiệu đề xuất + mệnh đề"
+            },
+            {
+              "text": " neighbourhoods should create simple opportunities for residents to meet could affect everyday life in several ways. It is useful to consider both the opportunities it creates and the difficulties it may bring. Neither side should be judged only from a slogan, because the practical details can make a substantial difference.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Lợi ích",
           "text": "One important point in favour of the proposal is that people can build a small local support network. This is possible because recognising familiar faces can make it easier to ask for practical help or share information. For example, a resident can ask a neighbour to receive a parcel after meeting them at a building event. The value of this example is that the benefit is connected with a real everyday need. It is easier for people to see the purpose of an approach when they can relate it to their own situation.",
-          "noteVi": "Gặp hàng xóm tạo hỗ trợ gần gũi; hoạt động nên tự nguyện và tôn trọng lịch, sự riêng tư."
+          "noteVi": "Gặp hàng xóm tạo hỗ trợ gần gũi; hoạt động nên tự nguyện và tôn trọng lịch, sự riêng tư.",
+          "parts": [
+            {
+              "text": "One important point in favour of the proposal is that",
+              "kind": "frame",
+              "labelVi": "Lợi ích / lý do ủng hộ + mệnh đề"
+            },
+            {
+              "text": " people can build a small local support network. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This is possible because",
+              "kind": "frame",
+              "labelVi": "Giải thích cơ chế + mệnh đề"
+            },
+            {
+              "text": " recognising familiar faces can make it easier to ask for practical help or share information. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a resident can ask a neighbour to receive a parcel after meeting them at a building event. The value of this example is that the benefit is connected with a real everyday need. It is easier for people to see the purpose of an approach when they can relate it to their own situation.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Bất lợi",
           "text": "A difficulty that should not be ignored is that some people may feel pressured to join activities. This matters because residents have different schedules and preferences about privacy. For instance, a person who works night shifts may not want to attend a loud weekend gathering. The result may be frustration or a decision to stop taking part. This is not simply a question of people refusing to make an effort; practical conditions can prevent a reasonable idea from working as intended.",
-          "noteVi": "Phân tích bất lợi bằng tình huống cụ thể."
+          "noteVi": "Phân tích bất lợi bằng tình huống cụ thể.",
+          "parts": [
+            {
+              "text": "A difficulty that should not be ignored is that",
+              "kind": "frame",
+              "labelVi": "Nêu một khó khăn + mệnh đề"
+            },
+            {
+              "text": " some people may feel pressured to join activities. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This matters because",
+              "kind": "frame",
+              "labelVi": "Giải thích vì sao điều đó quan trọng"
+            },
+            {
+              "text": " residents have different schedules and preferences about privacy. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For instance,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a person who works night shifts may not want to attend a loud weekend gathering. The result may be frustration or a decision to stop taking part. This is not simply a question of people refusing to make an effort; practical conditions can prevent a reasonable idea from working as intended.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Điều gì làm thay đổi tác động?",
           "text": "The balance between these effects depends partly on organisation. For example, organisers may assume that one type of social event suits everyone. A way to reduce this difficulty would be to offer quiet optional activities at different times. A building could combine a short coffee morning with a noticeboard where residents can exchange useful information. This would not remove every disadvantage, but it could make the approach more suitable for a wider range of people.",
-          "noteVi": "Giải thích yếu tố làm lợi–hại thay đổi, không phủ nhận bất lợi."
+          "noteVi": "Giải thích yếu tố làm lợi–hại thay đổi, không phủ nhận bất lợi.",
+          "parts": [
+            {
+              "text": "The balance between these effects depends partly on organisation. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " organisers may assume that one type of social event suits everyone. ",
+              "kind": "detail"
+            },
+            {
+              "text": "A way to reduce this difficulty would be to",
+              "kind": "frame",
+              "labelVi": "Giải pháp giảm khó khăn + động từ nguyên mẫu"
+            },
+            {
+              "text": " offer quiet optional activities at different times. A building could combine a short coffee morning with a noticeboard where residents can exchange useful information. This would not remove every disadvantage, but it could make the approach more suitable for a wider range of people.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, an important advantage is that people can build a small local support network, whereas a notable disadvantage is that some people may feel pressured to join activities. Both should be considered before a decision is made, with attention to the resources and circumstances of the people affected.",
-          "noteVi": "Tóm tắt đúng hai mặt đã phân tích."
+          "noteVi": "Tóm tắt đúng hai mặt đã phân tích.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " ",
+              "kind": "detail"
+            },
+            {
+              "text": "an important advantage is that",
+              "kind": "frame",
+              "labelVi": "Tóm tắt lợi ích + mệnh đề"
+            },
+            {
+              "text": " people can build a small local support network, whereas ",
+              "kind": "detail"
+            },
+            {
+              "text": "a notable disadvantage is that",
+              "kind": "frame",
+              "labelVi": "Tóm tắt bất lợi + mệnh đề"
+            },
+            {
+              "text": " some people may feel pressured to join activities. Both should be considered before a decision is made, with attention to the resources and circumstances of the people affected.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 351,
       "mainWordCount": 351,
       "phrases": [
@@ -545,32 +1406,155 @@
         {
           "label": "Mở bài",
           "text": "The proposal that community centres should encourage reading through informal activities could affect everyday life in several ways. It is useful to consider both the opportunities it creates and the difficulties it may bring. Neither side should be judged only from a slogan, because the practical details can make a substantial difference.",
-          "noteVi": "Nêu nhiệm vụ so sánh hai mặt."
+          "noteVi": "Nêu nhiệm vụ so sánh hai mặt.",
+          "parts": [
+            {
+              "text": "The proposal that",
+              "kind": "frame",
+              "labelVi": "Giới thiệu đề xuất + mệnh đề"
+            },
+            {
+              "text": " community centres should encourage reading through informal activities could affect everyday life in several ways. It is useful to consider both the opportunities it creates and the difficulties it may bring. Neither side should be judged only from a slogan, because the practical details can make a substantial difference.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Lợi ích",
           "text": "One important point in favour of the proposal is that people can discover ideas and enjoy quiet time away from daily pressure. This is possible because a shared recommendation can help someone find a book they would not choose alone. For example, a reader can try a short story suggested by a neighbour and later discuss a favourite character. The value of this example is that the benefit is connected with a real everyday need. It is easier for people to see the purpose of an approach when they can relate it to their own situation.",
-          "noteVi": "Đọc giải trí cần lựa chọn phù hợp và tham gia linh hoạt để không biến thành áp lực hoàn thành chỉ tiêu."
+          "noteVi": "Đọc giải trí cần lựa chọn phù hợp và tham gia linh hoạt để không biến thành áp lực hoàn thành chỉ tiêu.",
+          "parts": [
+            {
+              "text": "One important point in favour of the proposal is that",
+              "kind": "frame",
+              "labelVi": "Lợi ích / lý do ủng hộ + mệnh đề"
+            },
+            {
+              "text": " people can discover ideas and enjoy quiet time away from daily pressure. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This is possible because",
+              "kind": "frame",
+              "labelVi": "Giải thích cơ chế + mệnh đề"
+            },
+            {
+              "text": " a shared recommendation can help someone find a book they would not choose alone. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a reader can try a short story suggested by a neighbour and later discuss a favourite character. The value of this example is that the benefit is connected with a real everyday need. It is easier for people to see the purpose of an approach when they can relate it to their own situation.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Bất lợi",
           "text": "A difficulty that should not be ignored is that a formal reading target may remove the enjoyment. This matters because people read at different speeds and have different amounts of free time. For instance, a busy worker may leave a book group because finishing a long novel every week feels like homework. The result may be frustration or a decision to stop taking part. This is not simply a question of people refusing to make an effort; practical conditions can prevent a reasonable idea from working as intended.",
-          "noteVi": "Phân tích bất lợi bằng tình huống cụ thể."
+          "noteVi": "Phân tích bất lợi bằng tình huống cụ thể.",
+          "parts": [
+            {
+              "text": "A difficulty that should not be ignored is that",
+              "kind": "frame",
+              "labelVi": "Nêu một khó khăn + mệnh đề"
+            },
+            {
+              "text": " a formal reading target may remove the enjoyment. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This matters because",
+              "kind": "frame",
+              "labelVi": "Giải thích vì sao điều đó quan trọng"
+            },
+            {
+              "text": " people read at different speeds and have different amounts of free time. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For instance,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a busy worker may leave a book group because finishing a long novel every week feels like homework. The result may be frustration or a decision to stop taking part. This is not simply a question of people refusing to make an effort; practical conditions can prevent a reasonable idea from working as intended.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Điều gì làm thay đổi tác động?",
           "text": "The balance between these effects depends partly on organisation. For example, organisers may focus on the number of books rather than the experience of reading. A way to reduce this difficulty would be to offer short varied choices and let members participate flexibly. A group could discuss one short story while allowing members to bring another book they enjoyed. This would not remove every disadvantage, but it could make the approach more suitable for a wider range of people.",
-          "noteVi": "Giải thích yếu tố làm lợi–hại thay đổi, không phủ nhận bất lợi."
+          "noteVi": "Giải thích yếu tố làm lợi–hại thay đổi, không phủ nhận bất lợi.",
+          "parts": [
+            {
+              "text": "The balance between these effects depends partly on organisation. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " organisers may focus on the number of books rather than the experience of reading. ",
+              "kind": "detail"
+            },
+            {
+              "text": "A way to reduce this difficulty would be to",
+              "kind": "frame",
+              "labelVi": "Giải pháp giảm khó khăn + động từ nguyên mẫu"
+            },
+            {
+              "text": " offer short varied choices and let members participate flexibly. A group could discuss one short story while allowing members to bring another book they enjoyed. This would not remove every disadvantage, but it could make the approach more suitable for a wider range of people.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, an important advantage is that people can discover ideas and enjoy quiet time away from daily pressure, whereas a notable disadvantage is that a formal reading target may remove the enjoyment. Both should be considered before a decision is made, with attention to the resources and circumstances of the people affected.",
-          "noteVi": "Tóm tắt đúng hai mặt đã phân tích."
+          "noteVi": "Tóm tắt đúng hai mặt đã phân tích.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " ",
+              "kind": "detail"
+            },
+            {
+              "text": "an important advantage is that",
+              "kind": "frame",
+              "labelVi": "Tóm tắt lợi ích + mệnh đề"
+            },
+            {
+              "text": " people can discover ideas and enjoy quiet time away from daily pressure, whereas ",
+              "kind": "detail"
+            },
+            {
+              "text": "a notable disadvantage is that",
+              "kind": "frame",
+              "labelVi": "Tóm tắt bất lợi + mệnh đề"
+            },
+            {
+              "text": " a formal reading target may remove the enjoyment. Both should be considered before a decision is made, with attention to the resources and circumstances of the people affected.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 368,
       "mainWordCount": 368,
       "phrases": [
@@ -620,32 +1604,155 @@
         {
           "label": "Mở bài",
           "text": "The proposal that young adults should learn to plan their regular spending could affect everyday life in several ways. It is useful to consider both the opportunities it creates and the difficulties it may bring. Neither side should be judged only from a slogan, because the practical details can make a substantial difference.",
-          "noteVi": "Nêu nhiệm vụ so sánh hai mặt."
+          "noteVi": "Nêu nhiệm vụ so sánh hai mặt.",
+          "parts": [
+            {
+              "text": "The proposal that",
+              "kind": "frame",
+              "labelVi": "Giới thiệu đề xuất + mệnh đề"
+            },
+            {
+              "text": " young adults should learn to plan their regular spending could affect everyday life in several ways. It is useful to consider both the opportunities it creates and the difficulties it may bring. Neither side should be judged only from a slogan, because the practical details can make a substantial difference.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Lợi ích",
           "text": "One important point in favour of the proposal is that people can see whether their income covers essential needs. This is possible because a simple record makes small repeated purchases easier to notice. For example, a student can compare spending on transport, food and online orders before deciding where to cut back. The value of this example is that the benefit is connected with a real everyday need. It is easier for people to see the purpose of an approach when they can relate it to their own situation.",
-          "noteVi": "Theo dõi chi tiêu giúp thấy nhu cầu thiết yếu; kế hoạch phải có khoảng linh hoạt cho việc phát sinh."
+          "noteVi": "Theo dõi chi tiêu giúp thấy nhu cầu thiết yếu; kế hoạch phải có khoảng linh hoạt cho việc phát sinh.",
+          "parts": [
+            {
+              "text": "One important point in favour of the proposal is that",
+              "kind": "frame",
+              "labelVi": "Lợi ích / lý do ủng hộ + mệnh đề"
+            },
+            {
+              "text": " people can see whether their income covers essential needs. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This is possible because",
+              "kind": "frame",
+              "labelVi": "Giải thích cơ chế + mệnh đề"
+            },
+            {
+              "text": " a simple record makes small repeated purchases easier to notice. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " a student can compare spending on transport, food and online orders before deciding where to cut back. The value of this example is that the benefit is connected with a real everyday need. It is easier for people to see the purpose of an approach when they can relate it to their own situation.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Bất lợi",
           "text": "A difficulty that should not be ignored is that a strict plan can fail when unexpected costs appear. This matters because real life includes repairs, travel changes and other expenses that are hard to predict. For instance, someone may abandon a whole spending plan after paying for an urgent bicycle repair. The result may be frustration or a decision to stop taking part. This is not simply a question of people refusing to make an effort; practical conditions can prevent a reasonable idea from working as intended.",
-          "noteVi": "Phân tích bất lợi bằng tình huống cụ thể."
+          "noteVi": "Phân tích bất lợi bằng tình huống cụ thể.",
+          "parts": [
+            {
+              "text": "A difficulty that should not be ignored is that",
+              "kind": "frame",
+              "labelVi": "Nêu một khó khăn + mệnh đề"
+            },
+            {
+              "text": " a strict plan can fail when unexpected costs appear. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This matters because",
+              "kind": "frame",
+              "labelVi": "Giải thích vì sao điều đó quan trọng"
+            },
+            {
+              "text": " real life includes repairs, travel changes and other expenses that are hard to predict. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For instance,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " someone may abandon a whole spending plan after paying for an urgent bicycle repair. The result may be frustration or a decision to stop taking part. This is not simply a question of people refusing to make an effort; practical conditions can prevent a reasonable idea from working as intended.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Điều gì làm thay đổi tác động?",
           "text": "The balance between these effects depends partly on organisation. For example, people may create budgets with no allowance for change. A way to reduce this difficulty would be to use a flexible plan and review it regularly. A learner could separate essential costs from optional purchases and leave a small amount for unexpected needs. This would not remove every disadvantage, but it could make the approach more suitable for a wider range of people.",
-          "noteVi": "Giải thích yếu tố làm lợi–hại thay đổi, không phủ nhận bất lợi."
+          "noteVi": "Giải thích yếu tố làm lợi–hại thay đổi, không phủ nhận bất lợi.",
+          "parts": [
+            {
+              "text": "The balance between these effects depends partly on organisation. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " people may create budgets with no allowance for change. ",
+              "kind": "detail"
+            },
+            {
+              "text": "A way to reduce this difficulty would be to",
+              "kind": "frame",
+              "labelVi": "Giải pháp giảm khó khăn + động từ nguyên mẫu"
+            },
+            {
+              "text": " use a flexible plan and review it regularly. A learner could separate essential costs from optional purchases and leave a small amount for unexpected needs. This would not remove every disadvantage, but it could make the approach more suitable for a wider range of people.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, an important advantage is that people can see whether their income covers essential needs, whereas a notable disadvantage is that a strict plan can fail when unexpected costs appear. Both should be considered before a decision is made, with attention to the resources and circumstances of the people affected.",
-          "noteVi": "Tóm tắt đúng hai mặt đã phân tích."
+          "noteVi": "Tóm tắt đúng hai mặt đã phân tích.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " ",
+              "kind": "detail"
+            },
+            {
+              "text": "an important advantage is that",
+              "kind": "frame",
+              "labelVi": "Tóm tắt lợi ích + mệnh đề"
+            },
+            {
+              "text": " people can see whether their income covers essential needs, whereas ",
+              "kind": "detail"
+            },
+            {
+              "text": "a notable disadvantage is that",
+              "kind": "frame",
+              "labelVi": "Tóm tắt bất lợi + mệnh đề"
+            },
+            {
+              "text": " a strict plan can fail when unexpected costs appear. Both should be considered before a decision is made, with attention to the resources and circumstances of the people affected.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 354,
       "mainWordCount": 354,
       "phrases": [
@@ -695,32 +1802,155 @@
         {
           "label": "Mở bài",
           "text": "The proposal that people should protect some regular time for enjoyable hobbies could affect everyday life in several ways. It is useful to consider both the opportunities it creates and the difficulties it may bring. Neither side should be judged only from a slogan, because the practical details can make a substantial difference.",
-          "noteVi": "Nêu nhiệm vụ so sánh hai mặt."
+          "noteVi": "Nêu nhiệm vụ so sánh hai mặt.",
+          "parts": [
+            {
+              "text": "The proposal that",
+              "kind": "frame",
+              "labelVi": "Giới thiệu đề xuất + mệnh đề"
+            },
+            {
+              "text": " people should protect some regular time for enjoyable hobbies could affect everyday life in several ways. It is useful to consider both the opportunities it creates and the difficulties it may bring. Neither side should be judged only from a slogan, because the practical details can make a substantial difference.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Lợi ích",
           "text": "One important point in favour of the proposal is that a hobby can provide a break from work and routine responsibilities. This is possible because an activity chosen for enjoyment gives people something to look forward to. For example, an office worker can spend one evening each week learning to draw with a small local group. The value of this example is that the benefit is connected with a real everyday need. It is easier for people to see the purpose of an approach when they can relate it to their own situation.",
-          "noteVi": "Sở thích giúp đổi nhịp sống; nên bắt đầu nhỏ, vừa túi tiền và không so mình với người đã giỏi."
+          "noteVi": "Sở thích giúp đổi nhịp sống; nên bắt đầu nhỏ, vừa túi tiền và không so mình với người đã giỏi.",
+          "parts": [
+            {
+              "text": "One important point in favour of the proposal is that",
+              "kind": "frame",
+              "labelVi": "Lợi ích / lý do ủng hộ + mệnh đề"
+            },
+            {
+              "text": " a hobby can provide a break from work and routine responsibilities. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This is possible because",
+              "kind": "frame",
+              "labelVi": "Giải thích cơ chế + mệnh đề"
+            },
+            {
+              "text": " an activity chosen for enjoyment gives people something to look forward to. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " an office worker can spend one evening each week learning to draw with a small local group. The value of this example is that the benefit is connected with a real everyday need. It is easier for people to see the purpose of an approach when they can relate it to their own situation.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Bất lợi",
           "text": "A difficulty that should not be ignored is that an ambitious hobby plan can become another source of pressure. This matters because expensive equipment and demanding goals may make a beginner feel unsuccessful. For instance, someone may stop practising music after trying to learn several difficult pieces in the first week. The result may be frustration or a decision to stop taking part. This is not simply a question of people refusing to make an effort; practical conditions can prevent a reasonable idea from working as intended.",
-          "noteVi": "Phân tích bất lợi bằng tình huống cụ thể."
+          "noteVi": "Phân tích bất lợi bằng tình huống cụ thể.",
+          "parts": [
+            {
+              "text": "A difficulty that should not be ignored is that",
+              "kind": "frame",
+              "labelVi": "Nêu một khó khăn + mệnh đề"
+            },
+            {
+              "text": " an ambitious hobby plan can become another source of pressure. ",
+              "kind": "detail"
+            },
+            {
+              "text": "This matters because",
+              "kind": "frame",
+              "labelVi": "Giải thích vì sao điều đó quan trọng"
+            },
+            {
+              "text": " expensive equipment and demanding goals may make a beginner feel unsuccessful. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For instance,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " someone may stop practising music after trying to learn several difficult pieces in the first week. The result may be frustration or a decision to stop taking part. This is not simply a question of people refusing to make an effort; practical conditions can prevent a reasonable idea from working as intended.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Điều gì làm thay đổi tác động?",
           "text": "The balance between these effects depends partly on organisation. For example, people may compare their starting point with experienced hobbyists. A way to reduce this difficulty would be to begin with small goals and choose an affordable way to practise. A beginner could borrow equipment and practise one simple skill for a short time each week. This would not remove every disadvantage, but it could make the approach more suitable for a wider range of people.",
-          "noteVi": "Giải thích yếu tố làm lợi–hại thay đổi, không phủ nhận bất lợi."
+          "noteVi": "Giải thích yếu tố làm lợi–hại thay đổi, không phủ nhận bất lợi.",
+          "parts": [
+            {
+              "text": "The balance between these effects depends partly on organisation. ",
+              "kind": "detail"
+            },
+            {
+              "text": "For example,",
+              "kind": "frame",
+              "labelVi": "Đưa ví dụ + mệnh đề"
+            },
+            {
+              "text": " people may compare their starting point with experienced hobbyists. ",
+              "kind": "detail"
+            },
+            {
+              "text": "A way to reduce this difficulty would be to",
+              "kind": "frame",
+              "labelVi": "Giải pháp giảm khó khăn + động từ nguyên mẫu"
+            },
+            {
+              "text": " begin with small goals and choose an affordable way to practise. A beginner could borrow equipment and practise one simple skill for a short time each week. This would not remove every disadvantage, but it could make the approach more suitable for a wider range of people.",
+              "kind": "detail"
+            }
+          ]
         },
         {
           "label": "Kết bài",
           "text": "In conclusion, an important advantage is that a hobby can provide a break from work and routine responsibilities, whereas a notable disadvantage is that an ambitious hobby plan can become another source of pressure. Both should be considered before a decision is made, with attention to the resources and circumstances of the people affected.",
-          "noteVi": "Tóm tắt đúng hai mặt đã phân tích."
+          "noteVi": "Tóm tắt đúng hai mặt đã phân tích.",
+          "parts": [
+            {
+              "text": "In conclusion,",
+              "kind": "frame",
+              "labelVi": "Mở kết luận"
+            },
+            {
+              "text": " ",
+              "kind": "detail"
+            },
+            {
+              "text": "an important advantage is that",
+              "kind": "frame",
+              "labelVi": "Tóm tắt lợi ích + mệnh đề"
+            },
+            {
+              "text": " a hobby can provide a break from work and routine responsibilities, whereas ",
+              "kind": "detail"
+            },
+            {
+              "text": "a notable disadvantage is that",
+              "kind": "frame",
+              "labelVi": "Tóm tắt bất lợi + mệnh đề"
+            },
+            {
+              "text": " an ambitious hobby plan can become another source of pressure. Both should be considered before a decision is made, with attention to the resources and circumstances of the people affected.",
+              "kind": "detail"
+            }
+          ]
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
+      "register": null,
       "wordCount": 363,
       "mainWordCount": 363,
       "phrases": [

@@ -1,0 +1,1895 @@
+{
+  "version": "2026-11-05-v2-frames",
+  "samples": [
+    {
+      "id": "writing-task1-formal-advice-environment-01",
+      "group": "writing-task1",
+      "type": "formal-advice",
+      "topic": "environment",
+      "number": 1,
+      "title": "Phân loại rác",
+      "focus": "sorting household waste",
+      "prompt": "Ms Brown has contacted you for professional advice about sorting household waste. Suggest a practical first step, explain a possible difficulty and recommend a way to address it.",
+      "requirementsVi": [
+        "Lời khuyên lịch sự, không dùng giọng trò chuyện với bạn thân.",
+        "Gợi ý một việc và giải thích giá trị.",
+        "Một giới hạn và cách xử lý tương ứng."
+      ],
+      "summaryVi": "Phân loại cần thùng và hướng dẫn rõ, đồng thời hệ thống thu gom phải thực hiện đúng.",
+      "paragraphs": [
+        {
+          "label": "Mở thư và mục đích",
+          "text": "Dear Ms Brown,\n\nThank you for contacting me about sorting household waste. I am writing to offer some suggestions in response to your request. I understand that you would like a practical starting point, and I hope the following advice will be useful.",
+          "noteVi": "Lời khuyên lịch sự, không dùng giọng trò chuyện với bạn thân.",
+          "parts": [
+            {
+              "text": "Dear ",
+              "kind": "frame"
+            },
+            {
+              "text": "Ms Brown",
+              "kind": "detail",
+              "labelVi": "danh xưng và họ người nhận"
+            },
+            {
+              "text": ",\n\nThank you for contacting me about ",
+              "kind": "frame"
+            },
+            {
+              "text": "sorting household waste",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": ". I am writing to offer some suggestions in response to your request. I understand that you would like a practical starting point, and I hope the following advice will be useful.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Dear [danh xưng và họ người nhận],\n\nThank you for contacting me about [chủ đề]. I am writing to offer some suggestions in response to your request. I understand that you would like a practical starting point, and I hope the following advice will be useful."
+        },
+        {
+          "label": "Đề xuất đầu",
+          "text": "I would recommend attending a neighbourhood recycling workshop. This would give you an opportunity to practise sorting common household items. One potential benefit is that more recyclable material can be collected separately. For example, a family can keep a small box for clean bottles instead of putting them in the same bag as dinner leftovers.",
+          "noteVi": "Gợi ý một việc và giải thích giá trị.",
+          "parts": [
+            {
+              "text": "I would recommend attending ",
+              "kind": "frame"
+            },
+            {
+              "text": "a neighbourhood recycling workshop",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". This would give you an opportunity to ",
+              "kind": "frame"
+            },
+            {
+              "text": "practise sorting common household items",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". One potential benefit is that ",
+              "kind": "frame"
+            },
+            {
+              "text": "more recyclable material can be collected separately",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". For example, ",
+              "kind": "frame"
+            },
+            {
+              "text": "a family can keep a small box for clean bottles instead of putting them in the same bag as dinner leftovers",
+              "kind": "detail",
+              "labelVi": "ví dụ — chủ ngữ + động từ"
+            },
+            {
+              "text": ".",
+              "kind": "frame"
+            }
+          ],
+          "template": "I would recommend attending [sự kiện / hoạt động]. This would give you an opportunity to [hoạt động — động từ nguyên mẫu]. One potential benefit is that [lợi ích — chủ ngữ + động từ]. For example, [ví dụ — chủ ngữ + động từ]."
+        },
+        {
+          "label": "Khó khăn và giải pháp",
+          "text": "It is also worth considering that residents may stop sorting if collection is unreliable. A practical response would be to provide simple labels and explain how each type of waste is collected. For instance, a building manager could place picture labels above bins and publish a reliable collection schedule. I would suggest trying this on a small scale before making a longer-term commitment.",
+          "noteVi": "Một giới hạn và cách xử lý tương ứng.",
+          "parts": [
+            {
+              "text": "It is also worth considering that ",
+              "kind": "frame"
+            },
+            {
+              "text": "residents may stop sorting if collection is unreliable",
+              "kind": "detail",
+              "labelVi": "khó khăn — chủ ngữ + động từ"
+            },
+            {
+              "text": ". A practical response would be to ",
+              "kind": "frame"
+            },
+            {
+              "text": "provide simple labels and explain how each type of waste is collected",
+              "kind": "detail",
+              "labelVi": "giải pháp — động từ nguyên mẫu"
+            },
+            {
+              "text": ". For instance, ",
+              "kind": "frame"
+            },
+            {
+              "text": "a building manager could place picture labels above bins and publish a reliable collection schedule",
+              "kind": "detail",
+              "labelVi": "cách làm — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I would suggest trying this on a small scale before making a longer-term commitment.",
+              "kind": "frame"
+            }
+          ],
+          "template": "It is also worth considering that [khó khăn — chủ ngữ + động từ]. A practical response would be to [giải pháp — động từ nguyên mẫu]. For instance, [cách làm — chủ ngữ + động từ]. I would suggest trying this on a small scale before making a longer-term commitment."
+        },
+        {
+          "label": "Kết thư",
+          "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\nMinh Nguyen",
+          "noteVi": "Biết tên người nhận: Dear Ms/Mr + họ → Yours sincerely. Chưa biết tên: Dear Sir or Madam → Yours faithfully.",
+          "parts": [
+            {
+              "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh Nguyen",
+              "kind": "detail",
+              "labelVi": "họ tên của bạn"
+            }
+          ],
+          "template": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n[họ tên của bạn]"
+        }
+      ],
+      "sections": [],
+      "options": [],
+      "selectedOption": null,
+      "register": "formal",
+      "wordCount": 189,
+      "mainWordCount": 189,
+      "phrases": [
+        {
+          "en": "sort household waste",
+          "vi": "phân loại rác gia đình",
+          "inAnswer": false
+        },
+        {
+          "en": "collection schedule",
+          "vi": "lịch thu gom",
+          "inAnswer": true
+        },
+        {
+          "en": "recyclable material",
+          "vi": "vật liệu có thể tái chế",
+          "inAnswer": true
+        }
+      ],
+      "framePhrases": [
+        {
+          "en": "I am writing to",
+          "vi": "Tôi viết để…"
+        },
+        {
+          "en": "For example",
+          "vi": "Ví dụ…"
+        },
+        {
+          "en": "Please let me know",
+          "vi": "Hãy cho tôi biết…"
+        }
+      ]
+    },
+    {
+      "id": "writing-task1-formal-advice-environment-02",
+      "group": "writing-task1",
+      "type": "formal-advice",
+      "topic": "environment",
+      "number": 2,
+      "title": "Bình nước dùng lại",
+      "focus": "reusable water bottles",
+      "prompt": "Ms Brown has contacted you for professional advice about reusable water bottles. Suggest a practical first step, explain a possible difficulty and recommend a way to address it.",
+      "requirementsVi": [
+        "Lời khuyên lịch sự, không dùng giọng trò chuyện với bạn thân.",
+        "Gợi ý một việc và giải thích giá trị.",
+        "Một giới hạn và cách xử lý tương ứng."
+      ],
+      "summaryVi": "Bình dùng lại giảm chai dùng một lần khi có chỗ lấy nước thuận tiện và được giữ sạch.",
+      "paragraphs": [
+        {
+          "label": "Mở thư và mục đích",
+          "text": "Dear Ms Brown,\n\nThank you for contacting me about reusable water bottles. I am writing to offer some suggestions in response to your request. I understand that you would like a practical starting point, and I hope the following advice will be useful.",
+          "noteVi": "Lời khuyên lịch sự, không dùng giọng trò chuyện với bạn thân.",
+          "parts": [
+            {
+              "text": "Dear ",
+              "kind": "frame"
+            },
+            {
+              "text": "Ms Brown",
+              "kind": "detail",
+              "labelVi": "danh xưng và họ người nhận"
+            },
+            {
+              "text": ",\n\nThank you for contacting me about ",
+              "kind": "frame"
+            },
+            {
+              "text": "reusable water bottles",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": ". I am writing to offer some suggestions in response to your request. I understand that you would like a practical starting point, and I hope the following advice will be useful.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Dear [danh xưng và họ người nhận],\n\nThank you for contacting me about [chủ đề]. I am writing to offer some suggestions in response to your request. I understand that you would like a practical starting point, and I hope the following advice will be useful."
+        },
+        {
+          "label": "Đề xuất đầu",
+          "text": "I would recommend attending a refill bottle campaign event. This would give you an opportunity to compare reusable bottles and plan convenient refill points. One potential benefit is that people can avoid buying a new plastic bottle each time they need water. For example, a student can refill a bottle at school before an afternoon sports lesson.",
+          "noteVi": "Gợi ý một việc và giải thích giá trị.",
+          "parts": [
+            {
+              "text": "I would recommend attending ",
+              "kind": "frame"
+            },
+            {
+              "text": "a refill bottle campaign event",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". This would give you an opportunity to ",
+              "kind": "frame"
+            },
+            {
+              "text": "compare reusable bottles and plan convenient refill points",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". One potential benefit is that ",
+              "kind": "frame"
+            },
+            {
+              "text": "people can avoid buying a new plastic bottle each time they need water",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". For example, ",
+              "kind": "frame"
+            },
+            {
+              "text": "a student can refill a bottle at school before an afternoon sports lesson",
+              "kind": "detail",
+              "labelVi": "ví dụ — chủ ngữ + động từ"
+            },
+            {
+              "text": ".",
+              "kind": "frame"
+            }
+          ],
+          "template": "I would recommend attending [sự kiện / hoạt động]. This would give you an opportunity to [hoạt động — động từ nguyên mẫu]. One potential benefit is that [lợi ích — chủ ngữ + động từ]. For example, [ví dụ — chủ ngữ + động từ]."
+        },
+        {
+          "label": "Khó khăn và giải pháp",
+          "text": "It is also worth considering that the habit is difficult when refill points are missing. A practical response would be to install convenient refill points and keep them clean. For instance, a school could place a water station near classrooms and explain who checks it each day. I would suggest trying this on a small scale before making a longer-term commitment.",
+          "noteVi": "Một giới hạn và cách xử lý tương ứng.",
+          "parts": [
+            {
+              "text": "It is also worth considering that ",
+              "kind": "frame"
+            },
+            {
+              "text": "the habit is difficult when refill points are missing",
+              "kind": "detail",
+              "labelVi": "khó khăn — chủ ngữ + động từ"
+            },
+            {
+              "text": ". A practical response would be to ",
+              "kind": "frame"
+            },
+            {
+              "text": "install convenient refill points and keep them clean",
+              "kind": "detail",
+              "labelVi": "giải pháp — động từ nguyên mẫu"
+            },
+            {
+              "text": ". For instance, ",
+              "kind": "frame"
+            },
+            {
+              "text": "a school could place a water station near classrooms and explain who checks it each day",
+              "kind": "detail",
+              "labelVi": "cách làm — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I would suggest trying this on a small scale before making a longer-term commitment.",
+              "kind": "frame"
+            }
+          ],
+          "template": "It is also worth considering that [khó khăn — chủ ngữ + động từ]. A practical response would be to [giải pháp — động từ nguyên mẫu]. For instance, [cách làm — chủ ngữ + động từ]. I would suggest trying this on a small scale before making a longer-term commitment."
+        },
+        {
+          "label": "Kết thư",
+          "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\nMinh Nguyen",
+          "noteVi": "Biết tên người nhận: Dear Ms/Mr + họ → Yours sincerely. Chưa biết tên: Dear Sir or Madam → Yours faithfully.",
+          "parts": [
+            {
+              "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh Nguyen",
+              "kind": "detail",
+              "labelVi": "họ tên của bạn"
+            }
+          ],
+          "template": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n[họ tên của bạn]"
+        }
+      ],
+      "sections": [],
+      "options": [],
+      "selectedOption": null,
+      "register": "formal",
+      "wordCount": 189,
+      "mainWordCount": 189,
+      "phrases": [
+        {
+          "en": "a refill point",
+          "vi": "điểm lấy thêm nước",
+          "inAnswer": false
+        },
+        {
+          "en": "single-use bottles",
+          "vi": "chai dùng một lần",
+          "inAnswer": false
+        },
+        {
+          "en": "a practical facility",
+          "vi": "tiện ích thiết thực",
+          "inAnswer": false
+        }
+      ],
+      "framePhrases": [
+        {
+          "en": "I am writing to",
+          "vi": "Tôi viết để…"
+        },
+        {
+          "en": "For example",
+          "vi": "Ví dụ…"
+        },
+        {
+          "en": "Please let me know",
+          "vi": "Hãy cho tôi biết…"
+        }
+      ]
+    },
+    {
+      "id": "writing-task1-formal-advice-environment-03",
+      "group": "writing-task1",
+      "type": "formal-advice",
+      "topic": "environment",
+      "number": 3,
+      "title": "Vườn cộng đồng",
+      "focus": "community gardens",
+      "prompt": "Ms Brown has contacted you for professional advice about community gardens. Suggest a practical first step, explain a possible difficulty and recommend a way to address it.",
+      "requirementsVi": [
+        "Lời khuyên lịch sự, không dùng giọng trò chuyện với bạn thân.",
+        "Gợi ý một việc và giải thích giá trị.",
+        "Một giới hạn và cách xử lý tương ứng."
+      ],
+      "summaryVi": "Vườn chung tạo cơ hội kết nối; cần phân công chăm cây lâu dài thay vì chỉ tổ chức ngày khai trương.",
+      "paragraphs": [
+        {
+          "label": "Mở thư và mục đích",
+          "text": "Dear Ms Brown,\n\nThank you for contacting me about community gardens. I am writing to offer some suggestions in response to your request. I understand that you would like a practical starting point, and I hope the following advice will be useful.",
+          "noteVi": "Lời khuyên lịch sự, không dùng giọng trò chuyện với bạn thân.",
+          "parts": [
+            {
+              "text": "Dear ",
+              "kind": "frame"
+            },
+            {
+              "text": "Ms Brown",
+              "kind": "detail",
+              "labelVi": "danh xưng và họ người nhận"
+            },
+            {
+              "text": ",\n\nThank you for contacting me about ",
+              "kind": "frame"
+            },
+            {
+              "text": "community gardens",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": ". I am writing to offer some suggestions in response to your request. I understand that you would like a practical starting point, and I hope the following advice will be useful.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Dear [danh xưng và họ người nhận],\n\nThank you for contacting me about [chủ đề]. I am writing to offer some suggestions in response to your request. I understand that you would like a practical starting point, and I hope the following advice will be useful."
+        },
+        {
+          "label": "Đề xuất đầu",
+          "text": "I would recommend attending a community gardening morning. This would give you an opportunity to plant herbs and organise a watering rota. One potential benefit is that neighbours can work together and learn practical skills. For example, an experienced gardener can show a family how to grow herbs in a small raised bed.",
+          "noteVi": "Gợi ý một việc và giải thích giá trị.",
+          "parts": [
+            {
+              "text": "I would recommend attending ",
+              "kind": "frame"
+            },
+            {
+              "text": "a community gardening morning",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". This would give you an opportunity to ",
+              "kind": "frame"
+            },
+            {
+              "text": "plant herbs and organise a watering rota",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". One potential benefit is that ",
+              "kind": "frame"
+            },
+            {
+              "text": "neighbours can work together and learn practical skills",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". For example, ",
+              "kind": "frame"
+            },
+            {
+              "text": "an experienced gardener can show a family how to grow herbs in a small raised bed",
+              "kind": "detail",
+              "labelVi": "ví dụ — chủ ngữ + động từ"
+            },
+            {
+              "text": ".",
+              "kind": "frame"
+            }
+          ],
+          "template": "I would recommend attending [sự kiện / hoạt động]. This would give you an opportunity to [hoạt động — động từ nguyên mẫu]. One potential benefit is that [lợi ích — chủ ngữ + động từ]. For example, [ví dụ — chủ ngữ + động từ]."
+        },
+        {
+          "label": "Khó khăn và giải pháp",
+          "text": "It is also worth considering that the garden may be neglected after the first few weeks. A practical response would be to create a simple rota and choose plants suited to the available space. For instance, residents could take turns checking the garden and keep a shared list of tasks near the entrance. I would suggest trying this on a small scale before making a longer-term commitment.",
+          "noteVi": "Một giới hạn và cách xử lý tương ứng.",
+          "parts": [
+            {
+              "text": "It is also worth considering that ",
+              "kind": "frame"
+            },
+            {
+              "text": "the garden may be neglected after the first few weeks",
+              "kind": "detail",
+              "labelVi": "khó khăn — chủ ngữ + động từ"
+            },
+            {
+              "text": ". A practical response would be to ",
+              "kind": "frame"
+            },
+            {
+              "text": "create a simple rota and choose plants suited to the available space",
+              "kind": "detail",
+              "labelVi": "giải pháp — động từ nguyên mẫu"
+            },
+            {
+              "text": ". For instance, ",
+              "kind": "frame"
+            },
+            {
+              "text": "residents could take turns checking the garden and keep a shared list of tasks near the entrance",
+              "kind": "detail",
+              "labelVi": "cách làm — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I would suggest trying this on a small scale before making a longer-term commitment.",
+              "kind": "frame"
+            }
+          ],
+          "template": "It is also worth considering that [khó khăn — chủ ngữ + động từ]. A practical response would be to [giải pháp — động từ nguyên mẫu]. For instance, [cách làm — chủ ngữ + động từ]. I would suggest trying this on a small scale before making a longer-term commitment."
+        },
+        {
+          "label": "Kết thư",
+          "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\nMinh Nguyen",
+          "noteVi": "Biết tên người nhận: Dear Ms/Mr + họ → Yours sincerely. Chưa biết tên: Dear Sir or Madam → Yours faithfully.",
+          "parts": [
+            {
+              "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh Nguyen",
+              "kind": "detail",
+              "labelVi": "họ tên của bạn"
+            }
+          ],
+          "template": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n[họ tên của bạn]"
+        }
+      ],
+      "sections": [],
+      "options": [],
+      "selectedOption": null,
+      "register": "formal",
+      "wordCount": 190,
+      "mainWordCount": 190,
+      "phrases": [
+        {
+          "en": "a community garden",
+          "vi": "vườn cộng đồng",
+          "inAnswer": true
+        },
+        {
+          "en": "a watering rota",
+          "vi": "lịch luân phiên tưới cây",
+          "inAnswer": true
+        },
+        {
+          "en": "share practical skills",
+          "vi": "chia sẻ kỹ năng thực tế",
+          "inAnswer": false
+        }
+      ],
+      "framePhrases": [
+        {
+          "en": "I am writing to",
+          "vi": "Tôi viết để…"
+        },
+        {
+          "en": "For example",
+          "vi": "Ví dụ…"
+        },
+        {
+          "en": "Please let me know",
+          "vi": "Hãy cho tôi biết…"
+        }
+      ]
+    },
+    {
+      "id": "writing-task1-formal-advice-environment-04",
+      "group": "writing-task1",
+      "type": "formal-advice",
+      "topic": "environment",
+      "number": 4,
+      "title": "Công viên trong thành phố",
+      "focus": "urban parks",
+      "prompt": "Ms Brown has contacted you for professional advice about urban parks. Suggest a practical first step, explain a possible difficulty and recommend a way to address it.",
+      "requirementsVi": [
+        "Lời khuyên lịch sự, không dùng giọng trò chuyện với bạn thân.",
+        "Gợi ý một việc và giải thích giá trị.",
+        "Một giới hạn và cách xử lý tương ứng."
+      ],
+      "summaryVi": "Công viên công cộng cần dễ tiếp cận và được bảo trì để người dân thực sự dùng được.",
+      "paragraphs": [
+        {
+          "label": "Mở thư và mục đích",
+          "text": "Dear Ms Brown,\n\nThank you for contacting me about urban parks. I am writing to offer some suggestions in response to your request. I understand that you would like a practical starting point, and I hope the following advice will be useful.",
+          "noteVi": "Lời khuyên lịch sự, không dùng giọng trò chuyện với bạn thân.",
+          "parts": [
+            {
+              "text": "Dear ",
+              "kind": "frame"
+            },
+            {
+              "text": "Ms Brown",
+              "kind": "detail",
+              "labelVi": "danh xưng và họ người nhận"
+            },
+            {
+              "text": ",\n\nThank you for contacting me about ",
+              "kind": "frame"
+            },
+            {
+              "text": "urban parks",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": ". I am writing to offer some suggestions in response to your request. I understand that you would like a practical starting point, and I hope the following advice will be useful.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Dear [danh xưng và họ người nhận],\n\nThank you for contacting me about [chủ đề]. I am writing to offer some suggestions in response to your request. I understand that you would like a practical starting point, and I hope the following advice will be useful."
+        },
+        {
+          "label": "Đề xuất đầu",
+          "text": "I would recommend attending a local park planning meeting. This would give you an opportunity to walk through the park and suggest useful improvements. One potential benefit is that residents have places to walk, rest and meet other people. For example, an older resident can take a short walk and meet neighbours on a bench close to home.",
+          "noteVi": "Gợi ý một việc và giải thích giá trị.",
+          "parts": [
+            {
+              "text": "I would recommend attending ",
+              "kind": "frame"
+            },
+            {
+              "text": "a local park planning meeting",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". This would give you an opportunity to ",
+              "kind": "frame"
+            },
+            {
+              "text": "walk through the park and suggest useful improvements",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". One potential benefit is that ",
+              "kind": "frame"
+            },
+            {
+              "text": "residents have places to walk, rest and meet other people",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". For example, ",
+              "kind": "frame"
+            },
+            {
+              "text": "an older resident can take a short walk and meet neighbours on a bench close to home",
+              "kind": "detail",
+              "labelVi": "ví dụ — chủ ngữ + động từ"
+            },
+            {
+              "text": ".",
+              "kind": "frame"
+            }
+          ],
+          "template": "I would recommend attending [sự kiện / hoạt động]. This would give you an opportunity to [hoạt động — động từ nguyên mẫu]. One potential benefit is that [lợi ích — chủ ngữ + động từ]. For example, [ví dụ — chủ ngữ + động từ]."
+        },
+        {
+          "label": "Khó khăn và giải pháp",
+          "text": "It is also worth considering that a poorly maintained park may not feel welcoming. A practical response would be to plan for maintenance as well as new facilities. For instance, a local team could inspect paths and play equipment regularly and provide a clear way to report problems. I would suggest trying this on a small scale before making a longer-term commitment.",
+          "noteVi": "Một giới hạn và cách xử lý tương ứng.",
+          "parts": [
+            {
+              "text": "It is also worth considering that ",
+              "kind": "frame"
+            },
+            {
+              "text": "a poorly maintained park may not feel welcoming",
+              "kind": "detail",
+              "labelVi": "khó khăn — chủ ngữ + động từ"
+            },
+            {
+              "text": ". A practical response would be to ",
+              "kind": "frame"
+            },
+            {
+              "text": "plan for maintenance as well as new facilities",
+              "kind": "detail",
+              "labelVi": "giải pháp — động từ nguyên mẫu"
+            },
+            {
+              "text": ". For instance, ",
+              "kind": "frame"
+            },
+            {
+              "text": "a local team could inspect paths and play equipment regularly and provide a clear way to report problems",
+              "kind": "detail",
+              "labelVi": "cách làm — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I would suggest trying this on a small scale before making a longer-term commitment.",
+              "kind": "frame"
+            }
+          ],
+          "template": "It is also worth considering that [khó khăn — chủ ngữ + động từ]. A practical response would be to [giải pháp — động từ nguyên mẫu]. For instance, [cách làm — chủ ngữ + động từ]. I would suggest trying this on a small scale before making a longer-term commitment."
+        },
+        {
+          "label": "Kết thư",
+          "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\nMinh Nguyen",
+          "noteVi": "Biết tên người nhận: Dear Ms/Mr + họ → Yours sincerely. Chưa biết tên: Dear Sir or Madam → Yours faithfully.",
+          "parts": [
+            {
+              "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh Nguyen",
+              "kind": "detail",
+              "labelVi": "họ tên của bạn"
+            }
+          ],
+          "template": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n[họ tên của bạn]"
+        }
+      ],
+      "sections": [],
+      "options": [],
+      "selectedOption": null,
+      "register": "formal",
+      "wordCount": 190,
+      "mainWordCount": 190,
+      "phrases": [
+        {
+          "en": "public green spaces",
+          "vi": "không gian xanh công cộng",
+          "inAnswer": false
+        },
+        {
+          "en": "regular maintenance",
+          "vi": "bảo trì thường xuyên",
+          "inAnswer": false
+        },
+        {
+          "en": "report a problem",
+          "vi": "báo sự cố",
+          "inAnswer": false
+        }
+      ],
+      "framePhrases": [
+        {
+          "en": "I am writing to",
+          "vi": "Tôi viết để…"
+        },
+        {
+          "en": "For example",
+          "vi": "Ví dụ…"
+        },
+        {
+          "en": "Please let me know",
+          "vi": "Hãy cho tôi biết…"
+        }
+      ]
+    },
+    {
+      "id": "writing-task1-formal-advice-environment-05",
+      "group": "writing-task1",
+      "type": "formal-advice",
+      "topic": "environment",
+      "number": 5,
+      "title": "Đi xe đạp",
+      "focus": "cycling for short journeys",
+      "prompt": "Ms Brown has contacted you for professional advice about cycling for short journeys. Suggest a practical first step, explain a possible difficulty and recommend a way to address it.",
+      "requirementsVi": [
+        "Lời khuyên lịch sự, không dùng giọng trò chuyện với bạn thân.",
+        "Gợi ý một việc và giải thích giá trị.",
+        "Một giới hạn và cách xử lý tương ứng."
+      ],
+      "summaryVi": "Xe đạp phù hợp quãng ngắn khi đường đi liền mạch và các giao lộ được xử lý an toàn.",
+      "paragraphs": [
+        {
+          "label": "Mở thư và mục đích",
+          "text": "Dear Ms Brown,\n\nThank you for contacting me about cycling for short journeys. I am writing to offer some suggestions in response to your request. I understand that you would like a practical starting point, and I hope the following advice will be useful.",
+          "noteVi": "Lời khuyên lịch sự, không dùng giọng trò chuyện với bạn thân.",
+          "parts": [
+            {
+              "text": "Dear ",
+              "kind": "frame"
+            },
+            {
+              "text": "Ms Brown",
+              "kind": "detail",
+              "labelVi": "danh xưng và họ người nhận"
+            },
+            {
+              "text": ",\n\nThank you for contacting me about ",
+              "kind": "frame"
+            },
+            {
+              "text": "cycling for short journeys",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": ". I am writing to offer some suggestions in response to your request. I understand that you would like a practical starting point, and I hope the following advice will be useful.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Dear [danh xưng và họ người nhận],\n\nThank you for contacting me about [chủ đề]. I am writing to offer some suggestions in response to your request. I understand that you would like a practical starting point, and I hope the following advice will be useful."
+        },
+        {
+          "label": "Đề xuất đầu",
+          "text": "I would recommend attending a safe cycling information day. This would give you an opportunity to plan short cycle routes and identify difficult junctions. One potential benefit is that people have another way to travel without using a car. For example, a student can cycle from home to a nearby college if the route avoids fast traffic.",
+          "noteVi": "Gợi ý một việc và giải thích giá trị.",
+          "parts": [
+            {
+              "text": "I would recommend attending ",
+              "kind": "frame"
+            },
+            {
+              "text": "a safe cycling information day",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". This would give you an opportunity to ",
+              "kind": "frame"
+            },
+            {
+              "text": "plan short cycle routes and identify difficult junctions",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". One potential benefit is that ",
+              "kind": "frame"
+            },
+            {
+              "text": "people have another way to travel without using a car",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". For example, ",
+              "kind": "frame"
+            },
+            {
+              "text": "a student can cycle from home to a nearby college if the route avoids fast traffic",
+              "kind": "detail",
+              "labelVi": "ví dụ — chủ ngữ + động từ"
+            },
+            {
+              "text": ".",
+              "kind": "frame"
+            }
+          ],
+          "template": "I would recommend attending [sự kiện / hoạt động]. This would give you an opportunity to [hoạt động — động từ nguyên mẫu]. One potential benefit is that [lợi ích — chủ ngữ + động từ]. For example, [ví dụ — chủ ngữ + động từ]."
+        },
+        {
+          "label": "Khó khăn và giải pháp",
+          "text": "It is also worth considering that unsafe roads can discourage inexperienced riders. A practical response would be to build connected routes and improve difficult crossings. For instance, a city could link a housing area to a school with protected sections and clearly marked crossings. I would suggest trying this on a small scale before making a longer-term commitment.",
+          "noteVi": "Một giới hạn và cách xử lý tương ứng.",
+          "parts": [
+            {
+              "text": "It is also worth considering that ",
+              "kind": "frame"
+            },
+            {
+              "text": "unsafe roads can discourage inexperienced riders",
+              "kind": "detail",
+              "labelVi": "khó khăn — chủ ngữ + động từ"
+            },
+            {
+              "text": ". A practical response would be to ",
+              "kind": "frame"
+            },
+            {
+              "text": "build connected routes and improve difficult crossings",
+              "kind": "detail",
+              "labelVi": "giải pháp — động từ nguyên mẫu"
+            },
+            {
+              "text": ". For instance, ",
+              "kind": "frame"
+            },
+            {
+              "text": "a city could link a housing area to a school with protected sections and clearly marked crossings",
+              "kind": "detail",
+              "labelVi": "cách làm — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I would suggest trying this on a small scale before making a longer-term commitment.",
+              "kind": "frame"
+            }
+          ],
+          "template": "It is also worth considering that [khó khăn — chủ ngữ + động từ]. A practical response would be to [giải pháp — động từ nguyên mẫu]. For instance, [cách làm — chủ ngữ + động từ]. I would suggest trying this on a small scale before making a longer-term commitment."
+        },
+        {
+          "label": "Kết thư",
+          "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\nMinh Nguyen",
+          "noteVi": "Biết tên người nhận: Dear Ms/Mr + họ → Yours sincerely. Chưa biết tên: Dear Sir or Madam → Yours faithfully.",
+          "parts": [
+            {
+              "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh Nguyen",
+              "kind": "detail",
+              "labelVi": "họ tên của bạn"
+            }
+          ],
+          "template": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n[họ tên của bạn]"
+        }
+      ],
+      "sections": [],
+      "options": [],
+      "selectedOption": null,
+      "register": "formal",
+      "wordCount": 187,
+      "mainWordCount": 187,
+      "phrases": [
+        {
+          "en": "short everyday journeys",
+          "vi": "chuyến đi ngắn hằng ngày",
+          "inAnswer": false
+        },
+        {
+          "en": "connected routes",
+          "vi": "tuyến đường nối liền",
+          "inAnswer": true
+        },
+        {
+          "en": "a busy junction",
+          "vi": "giao lộ đông xe",
+          "inAnswer": false
+        }
+      ],
+      "framePhrases": [
+        {
+          "en": "I am writing to",
+          "vi": "Tôi viết để…"
+        },
+        {
+          "en": "For example",
+          "vi": "Ví dụ…"
+        },
+        {
+          "en": "Please let me know",
+          "vi": "Hãy cho tôi biết…"
+        }
+      ]
+    },
+    {
+      "id": "writing-task1-formal-advice-environment-06",
+      "group": "writing-task1",
+      "type": "formal-advice",
+      "topic": "environment",
+      "number": 6,
+      "title": "Tiết kiệm điện ở nhà",
+      "focus": "saving electricity at home",
+      "prompt": "Ms Brown has contacted you for professional advice about saving electricity at home. Suggest a practical first step, explain a possible difficulty and recommend a way to address it.",
+      "requirementsVi": [
+        "Lời khuyên lịch sự, không dùng giọng trò chuyện với bạn thân.",
+        "Gợi ý một việc và giải thích giá trị.",
+        "Một giới hạn và cách xử lý tương ứng."
+      ],
+      "summaryVi": "Tiết kiệm điện nên bắt đầu từ việc dễ làm và phù hợp nhà thuê, thu nhập, thiết bị sẵn có.",
+      "paragraphs": [
+        {
+          "label": "Mở thư và mục đích",
+          "text": "Dear Ms Brown,\n\nThank you for contacting me about saving electricity at home. I am writing to offer some suggestions in response to your request. I understand that you would like a practical starting point, and I hope the following advice will be useful.",
+          "noteVi": "Lời khuyên lịch sự, không dùng giọng trò chuyện với bạn thân.",
+          "parts": [
+            {
+              "text": "Dear ",
+              "kind": "frame"
+            },
+            {
+              "text": "Ms Brown",
+              "kind": "detail",
+              "labelVi": "danh xưng và họ người nhận"
+            },
+            {
+              "text": ",\n\nThank you for contacting me about ",
+              "kind": "frame"
+            },
+            {
+              "text": "saving electricity at home",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": ". I am writing to offer some suggestions in response to your request. I understand that you would like a practical starting point, and I hope the following advice will be useful.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Dear [danh xưng và họ người nhận],\n\nThank you for contacting me about [chủ đề]. I am writing to offer some suggestions in response to your request. I understand that you would like a practical starting point, and I hope the following advice will be useful."
+        },
+        {
+          "label": "Đề xuất đầu",
+          "text": "I would recommend attending a household energy workshop. This would give you an opportunity to review everyday habits and create a low-cost energy checklist. One potential benefit is that families can avoid paying for energy they do not need. For example, a family can switch off lights in empty rooms and use a timer for an appliance that is often forgotten.",
+          "noteVi": "Gợi ý một việc và giải thích giá trị.",
+          "parts": [
+            {
+              "text": "I would recommend attending ",
+              "kind": "frame"
+            },
+            {
+              "text": "a household energy workshop",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". This would give you an opportunity to ",
+              "kind": "frame"
+            },
+            {
+              "text": "review everyday habits and create a low-cost energy checklist",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". One potential benefit is that ",
+              "kind": "frame"
+            },
+            {
+              "text": "families can avoid paying for energy they do not need",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". For example, ",
+              "kind": "frame"
+            },
+            {
+              "text": "a family can switch off lights in empty rooms and use a timer for an appliance that is often forgotten",
+              "kind": "detail",
+              "labelVi": "ví dụ — chủ ngữ + động từ"
+            },
+            {
+              "text": ".",
+              "kind": "frame"
+            }
+          ],
+          "template": "I would recommend attending [sự kiện / hoạt động]. This would give you an opportunity to [hoạt động — động từ nguyên mẫu]. One potential benefit is that [lợi ích — chủ ngữ + động từ]. For example, [ví dụ — chủ ngữ + động từ]."
+        },
+        {
+          "label": "Khó khăn và giải pháp",
+          "text": "It is also worth considering that advice may be unrealistic for some homes. A practical response would be to offer low-cost suggestions and explain which changes require an owner's permission. For instance, a community centre could provide a checklist that separates everyday habits from costly improvements. I would suggest trying this on a small scale before making a longer-term commitment.",
+          "noteVi": "Một giới hạn và cách xử lý tương ứng.",
+          "parts": [
+            {
+              "text": "It is also worth considering that ",
+              "kind": "frame"
+            },
+            {
+              "text": "advice may be unrealistic for some homes",
+              "kind": "detail",
+              "labelVi": "khó khăn — chủ ngữ + động từ"
+            },
+            {
+              "text": ". A practical response would be to ",
+              "kind": "frame"
+            },
+            {
+              "text": "offer low-cost suggestions and explain which changes require an owner's permission",
+              "kind": "detail",
+              "labelVi": "giải pháp — động từ nguyên mẫu"
+            },
+            {
+              "text": ". For instance, ",
+              "kind": "frame"
+            },
+            {
+              "text": "a community centre could provide a checklist that separates everyday habits from costly improvements",
+              "kind": "detail",
+              "labelVi": "cách làm — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I would suggest trying this on a small scale before making a longer-term commitment.",
+              "kind": "frame"
+            }
+          ],
+          "template": "It is also worth considering that [khó khăn — chủ ngữ + động từ]. A practical response would be to [giải pháp — động từ nguyên mẫu]. For instance, [cách làm — chủ ngữ + động từ]. I would suggest trying this on a small scale before making a longer-term commitment."
+        },
+        {
+          "label": "Kết thư",
+          "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\nMinh Nguyen",
+          "noteVi": "Biết tên người nhận: Dear Ms/Mr + họ → Yours sincerely. Chưa biết tên: Dear Sir or Madam → Yours faithfully.",
+          "parts": [
+            {
+              "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh Nguyen",
+              "kind": "detail",
+              "labelVi": "họ tên của bạn"
+            }
+          ],
+          "template": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n[họ tên của bạn]"
+        }
+      ],
+      "sections": [],
+      "options": [],
+      "selectedOption": null,
+      "register": "formal",
+      "wordCount": 193,
+      "mainWordCount": 193,
+      "phrases": [
+        {
+          "en": "unnecessary energy use",
+          "vi": "dùng năng lượng không cần thiết",
+          "inAnswer": false
+        },
+        {
+          "en": "low-cost changes",
+          "vi": "thay đổi ít tốn kém",
+          "inAnswer": false
+        },
+        {
+          "en": "everyday habits",
+          "vi": "thói quen hằng ngày",
+          "inAnswer": true
+        }
+      ],
+      "framePhrases": [
+        {
+          "en": "I am writing to",
+          "vi": "Tôi viết để…"
+        },
+        {
+          "en": "For example",
+          "vi": "Ví dụ…"
+        },
+        {
+          "en": "Please let me know",
+          "vi": "Hãy cho tôi biết…"
+        }
+      ]
+    },
+    {
+      "id": "writing-task1-formal-advice-environment-07",
+      "group": "writing-task1",
+      "type": "formal-advice",
+      "topic": "environment",
+      "number": 7,
+      "title": "Bảo vệ động vật hoang dã",
+      "focus": "responsible wildlife tourism",
+      "prompt": "Ms Brown has contacted you for professional advice about responsible wildlife tourism. Suggest a practical first step, explain a possible difficulty and recommend a way to address it.",
+      "requirementsVi": [
+        "Lời khuyên lịch sự, không dùng giọng trò chuyện với bạn thân.",
+        "Gợi ý một việc và giải thích giá trị.",
+        "Một giới hạn và cách xử lý tương ứng."
+      ],
+      "summaryVi": "Tham quan thiên nhiên cần quan sát có khoảng cách; nên hỏi cách chăm sóc động vật thay vì chỉ xem quảng cáo.",
+      "paragraphs": [
+        {
+          "label": "Mở thư và mục đích",
+          "text": "Dear Ms Brown,\n\nThank you for contacting me about responsible wildlife tourism. I am writing to offer some suggestions in response to your request. I understand that you would like a practical starting point, and I hope the following advice will be useful.",
+          "noteVi": "Lời khuyên lịch sự, không dùng giọng trò chuyện với bạn thân.",
+          "parts": [
+            {
+              "text": "Dear ",
+              "kind": "frame"
+            },
+            {
+              "text": "Ms Brown",
+              "kind": "detail",
+              "labelVi": "danh xưng và họ người nhận"
+            },
+            {
+              "text": ",\n\nThank you for contacting me about ",
+              "kind": "frame"
+            },
+            {
+              "text": "responsible wildlife tourism",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": ". I am writing to offer some suggestions in response to your request. I understand that you would like a practical starting point, and I hope the following advice will be useful.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Dear [danh xưng và họ người nhận],\n\nThank you for contacting me about [chủ đề]. I am writing to offer some suggestions in response to your request. I understand that you would like a practical starting point, and I hope the following advice will be useful."
+        },
+        {
+          "label": "Đề xuất đầu",
+          "text": "I would recommend attending a responsible wildlife travel talk. This would give you an opportunity to compare nature tours and discuss respectful observation. One potential benefit is that visitors can enjoy nature without treating animals as objects for entertainment. For example, a guided birdwatching group can use binoculars instead of approaching a nesting area.",
+          "noteVi": "Gợi ý một việc và giải thích giá trị.",
+          "parts": [
+            {
+              "text": "I would recommend attending ",
+              "kind": "frame"
+            },
+            {
+              "text": "a responsible wildlife travel talk",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". This would give you an opportunity to ",
+              "kind": "frame"
+            },
+            {
+              "text": "compare nature tours and discuss respectful observation",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". One potential benefit is that ",
+              "kind": "frame"
+            },
+            {
+              "text": "visitors can enjoy nature without treating animals as objects for entertainment",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". For example, ",
+              "kind": "frame"
+            },
+            {
+              "text": "a guided birdwatching group can use binoculars instead of approaching a nesting area",
+              "kind": "detail",
+              "labelVi": "ví dụ — chủ ngữ + động từ"
+            },
+            {
+              "text": ".",
+              "kind": "frame"
+            }
+          ],
+          "template": "I would recommend attending [sự kiện / hoạt động]. This would give you an opportunity to [hoạt động — động từ nguyên mẫu]. One potential benefit is that [lợi ích — chủ ngữ + động từ]. For example, [ví dụ — chủ ngữ + động từ]."
+        },
+        {
+          "label": "Khó khăn và giải pháp",
+          "text": "It is also worth considering that visitors may not know which activities are responsible. A practical response would be to provide clear information about visitor behaviour and animal care. For instance, a tour guide could explain why touching and feeding wildlife are not included and offer observation from a suitable distance. I would suggest trying this on a small scale before making a longer-term commitment.",
+          "noteVi": "Một giới hạn và cách xử lý tương ứng.",
+          "parts": [
+            {
+              "text": "It is also worth considering that ",
+              "kind": "frame"
+            },
+            {
+              "text": "visitors may not know which activities are responsible",
+              "kind": "detail",
+              "labelVi": "khó khăn — chủ ngữ + động từ"
+            },
+            {
+              "text": ". A practical response would be to ",
+              "kind": "frame"
+            },
+            {
+              "text": "provide clear information about visitor behaviour and animal care",
+              "kind": "detail",
+              "labelVi": "giải pháp — động từ nguyên mẫu"
+            },
+            {
+              "text": ". For instance, ",
+              "kind": "frame"
+            },
+            {
+              "text": "a tour guide could explain why touching and feeding wildlife are not included and offer observation from a suitable distance",
+              "kind": "detail",
+              "labelVi": "cách làm — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I would suggest trying this on a small scale before making a longer-term commitment.",
+              "kind": "frame"
+            }
+          ],
+          "template": "It is also worth considering that [khó khăn — chủ ngữ + động từ]. A practical response would be to [giải pháp — động từ nguyên mẫu]. For instance, [cách làm — chủ ngữ + động từ]. I would suggest trying this on a small scale before making a longer-term commitment."
+        },
+        {
+          "label": "Kết thư",
+          "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\nMinh Nguyen",
+          "noteVi": "Biết tên người nhận: Dear Ms/Mr + họ → Yours sincerely. Chưa biết tên: Dear Sir or Madam → Yours faithfully.",
+          "parts": [
+            {
+              "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh Nguyen",
+              "kind": "detail",
+              "labelVi": "họ tên của bạn"
+            }
+          ],
+          "template": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n[họ tên của bạn]"
+        }
+      ],
+      "sections": [],
+      "options": [],
+      "selectedOption": null,
+      "register": "formal",
+      "wordCount": 190,
+      "mainWordCount": 190,
+      "phrases": [
+        {
+          "en": "observe from a distance",
+          "vi": "quan sát từ xa",
+          "inAnswer": false
+        },
+        {
+          "en": "wildlife tourism",
+          "vi": "du lịch động vật hoang dã",
+          "inAnswer": true
+        },
+        {
+          "en": "visitor behaviour",
+          "vi": "hành vi du khách",
+          "inAnswer": true
+        }
+      ],
+      "framePhrases": [
+        {
+          "en": "I am writing to",
+          "vi": "Tôi viết để…"
+        },
+        {
+          "en": "For example",
+          "vi": "Ví dụ…"
+        },
+        {
+          "en": "Please let me know",
+          "vi": "Hãy cho tôi biết…"
+        }
+      ]
+    },
+    {
+      "id": "writing-task1-formal-advice-environment-08",
+      "group": "writing-task1",
+      "type": "formal-advice",
+      "topic": "environment",
+      "number": 8,
+      "title": "Giảm lãng phí thực phẩm",
+      "focus": "food waste at home",
+      "prompt": "Ms Brown has contacted you for professional advice about food waste at home. Suggest a practical first step, explain a possible difficulty and recommend a way to address it.",
+      "requirementsVi": [
+        "Lời khuyên lịch sự, không dùng giọng trò chuyện với bạn thân.",
+        "Gợi ý một việc và giải thích giá trị.",
+        "Một giới hạn và cách xử lý tương ứng."
+      ],
+      "summaryVi": "Lên thực đơn giúp bớt mua thừa; kế hoạch cần linh hoạt để dùng được đồ còn lại khi lịch thay đổi.",
+      "paragraphs": [
+        {
+          "label": "Mở thư và mục đích",
+          "text": "Dear Ms Brown,\n\nThank you for contacting me about food waste at home. I am writing to offer some suggestions in response to your request. I understand that you would like a practical starting point, and I hope the following advice will be useful.",
+          "noteVi": "Lời khuyên lịch sự, không dùng giọng trò chuyện với bạn thân.",
+          "parts": [
+            {
+              "text": "Dear ",
+              "kind": "frame"
+            },
+            {
+              "text": "Ms Brown",
+              "kind": "detail",
+              "labelVi": "danh xưng và họ người nhận"
+            },
+            {
+              "text": ",\n\nThank you for contacting me about ",
+              "kind": "frame"
+            },
+            {
+              "text": "food waste at home",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": ". I am writing to offer some suggestions in response to your request. I understand that you would like a practical starting point, and I hope the following advice will be useful.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Dear [danh xưng và họ người nhận],\n\nThank you for contacting me about [chủ đề]. I am writing to offer some suggestions in response to your request. I understand that you would like a practical starting point, and I hope the following advice will be useful."
+        },
+        {
+          "label": "Đề xuất đầu",
+          "text": "I would recommend attending a meal planning workshop. This would give you an opportunity to make a flexible menu and a practical shopping list. One potential benefit is that households can use more of the food they buy. For example, a family can use the same vegetables in a soup and a rice dish instead of buying separate ingredients for every meal.",
+          "noteVi": "Gợi ý một việc và giải thích giá trị.",
+          "parts": [
+            {
+              "text": "I would recommend attending ",
+              "kind": "frame"
+            },
+            {
+              "text": "a meal planning workshop",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". This would give you an opportunity to ",
+              "kind": "frame"
+            },
+            {
+              "text": "make a flexible menu and a practical shopping list",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". One potential benefit is that ",
+              "kind": "frame"
+            },
+            {
+              "text": "households can use more of the food they buy",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". For example, ",
+              "kind": "frame"
+            },
+            {
+              "text": "a family can use the same vegetables in a soup and a rice dish instead of buying separate ingredients for every meal",
+              "kind": "detail",
+              "labelVi": "ví dụ — chủ ngữ + động từ"
+            },
+            {
+              "text": ".",
+              "kind": "frame"
+            }
+          ],
+          "template": "I would recommend attending [sự kiện / hoạt động]. This would give you an opportunity to [hoạt động — động từ nguyên mẫu]. One potential benefit is that [lợi ích — chủ ngữ + động từ]. For example, [ví dụ — chủ ngữ + động từ]."
+        },
+        {
+          "label": "Khó khăn và giải pháp",
+          "text": "It is also worth considering that a rigid plan may not fit a changing schedule. A practical response would be to choose flexible meals and check existing food before buying more. For instance, someone could plan two simple dishes using similar ingredients and keep one evening free for leftovers. I would suggest trying this on a small scale before making a longer-term commitment.",
+          "noteVi": "Một giới hạn và cách xử lý tương ứng.",
+          "parts": [
+            {
+              "text": "It is also worth considering that ",
+              "kind": "frame"
+            },
+            {
+              "text": "a rigid plan may not fit a changing schedule",
+              "kind": "detail",
+              "labelVi": "khó khăn — chủ ngữ + động từ"
+            },
+            {
+              "text": ". A practical response would be to ",
+              "kind": "frame"
+            },
+            {
+              "text": "choose flexible meals and check existing food before buying more",
+              "kind": "detail",
+              "labelVi": "giải pháp — động từ nguyên mẫu"
+            },
+            {
+              "text": ". For instance, ",
+              "kind": "frame"
+            },
+            {
+              "text": "someone could plan two simple dishes using similar ingredients and keep one evening free for leftovers",
+              "kind": "detail",
+              "labelVi": "cách làm — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I would suggest trying this on a small scale before making a longer-term commitment.",
+              "kind": "frame"
+            }
+          ],
+          "template": "It is also worth considering that [khó khăn — chủ ngữ + động từ]. A practical response would be to [giải pháp — động từ nguyên mẫu]. For instance, [cách làm — chủ ngữ + động từ]. I would suggest trying this on a small scale before making a longer-term commitment."
+        },
+        {
+          "label": "Kết thư",
+          "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\nMinh Nguyen",
+          "noteVi": "Biết tên người nhận: Dear Ms/Mr + họ → Yours sincerely. Chưa biết tên: Dear Sir or Madam → Yours faithfully.",
+          "parts": [
+            {
+              "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh Nguyen",
+              "kind": "detail",
+              "labelVi": "họ tên của bạn"
+            }
+          ],
+          "template": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n[họ tên của bạn]"
+        }
+      ],
+      "sections": [],
+      "options": [],
+      "selectedOption": null,
+      "register": "formal",
+      "wordCount": 197,
+      "mainWordCount": 197,
+      "phrases": [
+        {
+          "en": "plan meals",
+          "vi": "lên kế hoạch bữa ăn",
+          "inAnswer": false
+        },
+        {
+          "en": "use leftovers",
+          "vi": "dùng thức ăn còn lại",
+          "inAnswer": false
+        },
+        {
+          "en": "a flexible menu",
+          "vi": "thực đơn linh hoạt",
+          "inAnswer": true
+        }
+      ],
+      "framePhrases": [
+        {
+          "en": "I am writing to",
+          "vi": "Tôi viết để…"
+        },
+        {
+          "en": "For example",
+          "vi": "Ví dụ…"
+        },
+        {
+          "en": "Please let me know",
+          "vi": "Hãy cho tôi biết…"
+        }
+      ]
+    },
+    {
+      "id": "writing-task1-formal-advice-environment-09",
+      "group": "writing-task1",
+      "type": "formal-advice",
+      "topic": "environment",
+      "number": 9,
+      "title": "Dọn rác bãi biển",
+      "focus": "community beach clean-ups",
+      "prompt": "Ms Brown has contacted you for professional advice about community beach clean-ups. Suggest a practical first step, explain a possible difficulty and recommend a way to address it.",
+      "requirementsVi": [
+        "Lời khuyên lịch sự, không dùng giọng trò chuyện với bạn thân.",
+        "Gợi ý một việc và giải thích giá trị.",
+        "Một giới hạn và cách xử lý tương ứng."
+      ],
+      "summaryVi": "Dọn rác giúp cải thiện trước mắt; cần dùng kết quả để ngăn rác mới xuất hiện.",
+      "paragraphs": [
+        {
+          "label": "Mở thư và mục đích",
+          "text": "Dear Ms Brown,\n\nThank you for contacting me about community beach clean-ups. I am writing to offer some suggestions in response to your request. I understand that you would like a practical starting point, and I hope the following advice will be useful.",
+          "noteVi": "Lời khuyên lịch sự, không dùng giọng trò chuyện với bạn thân.",
+          "parts": [
+            {
+              "text": "Dear ",
+              "kind": "frame"
+            },
+            {
+              "text": "Ms Brown",
+              "kind": "detail",
+              "labelVi": "danh xưng và họ người nhận"
+            },
+            {
+              "text": ",\n\nThank you for contacting me about ",
+              "kind": "frame"
+            },
+            {
+              "text": "community beach clean-ups",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": ". I am writing to offer some suggestions in response to your request. I understand that you would like a practical starting point, and I hope the following advice will be useful.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Dear [danh xưng và họ người nhận],\n\nThank you for contacting me about [chủ đề]. I am writing to offer some suggestions in response to your request. I understand that you would like a practical starting point, and I hope the following advice will be useful."
+        },
+        {
+          "label": "Đề xuất đầu",
+          "text": "I would recommend attending a community beach clean-up. This would give you an opportunity to collect litter in assigned areas and record the most common items. One potential benefit is that volunteers can improve a public place and understand the scale of the problem. For example, a family can help record the kinds of packaging found on one section of beach.",
+          "noteVi": "Gợi ý một việc và giải thích giá trị.",
+          "parts": [
+            {
+              "text": "I would recommend attending ",
+              "kind": "frame"
+            },
+            {
+              "text": "a community beach clean-up",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". This would give you an opportunity to ",
+              "kind": "frame"
+            },
+            {
+              "text": "collect litter in assigned areas and record the most common items",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". One potential benefit is that ",
+              "kind": "frame"
+            },
+            {
+              "text": "volunteers can improve a public place and understand the scale of the problem",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". For example, ",
+              "kind": "frame"
+            },
+            {
+              "text": "a family can help record the kinds of packaging found on one section of beach",
+              "kind": "detail",
+              "labelVi": "ví dụ — chủ ngữ + động từ"
+            },
+            {
+              "text": ".",
+              "kind": "frame"
+            }
+          ],
+          "template": "I would recommend attending [sự kiện / hoạt động]. This would give you an opportunity to [hoạt động — động từ nguyên mẫu]. One potential benefit is that [lợi ích — chủ ngữ + động từ]. For example, [ví dụ — chủ ngữ + động từ]."
+        },
+        {
+          "label": "Khó khăn và giải pháp",
+          "text": "It is also worth considering that the beach may quickly become dirty again. A practical response would be to improve waste facilities and explain how visitors can avoid leaving rubbish. For instance, organisers could use the clean-up record to decide where covered bins and clear signs are most needed. I would suggest trying this on a small scale before making a longer-term commitment.",
+          "noteVi": "Một giới hạn và cách xử lý tương ứng.",
+          "parts": [
+            {
+              "text": "It is also worth considering that ",
+              "kind": "frame"
+            },
+            {
+              "text": "the beach may quickly become dirty again",
+              "kind": "detail",
+              "labelVi": "khó khăn — chủ ngữ + động từ"
+            },
+            {
+              "text": ". A practical response would be to ",
+              "kind": "frame"
+            },
+            {
+              "text": "improve waste facilities and explain how visitors can avoid leaving rubbish",
+              "kind": "detail",
+              "labelVi": "giải pháp — động từ nguyên mẫu"
+            },
+            {
+              "text": ". For instance, ",
+              "kind": "frame"
+            },
+            {
+              "text": "organisers could use the clean-up record to decide where covered bins and clear signs are most needed",
+              "kind": "detail",
+              "labelVi": "cách làm — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I would suggest trying this on a small scale before making a longer-term commitment.",
+              "kind": "frame"
+            }
+          ],
+          "template": "It is also worth considering that [khó khăn — chủ ngữ + động từ]. A practical response would be to [giải pháp — động từ nguyên mẫu]. For instance, [cách làm — chủ ngữ + động từ]. I would suggest trying this on a small scale before making a longer-term commitment."
+        },
+        {
+          "label": "Kết thư",
+          "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\nMinh Nguyen",
+          "noteVi": "Biết tên người nhận: Dear Ms/Mr + họ → Yours sincerely. Chưa biết tên: Dear Sir or Madam → Yours faithfully.",
+          "parts": [
+            {
+              "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh Nguyen",
+              "kind": "detail",
+              "labelVi": "họ tên của bạn"
+            }
+          ],
+          "template": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n[họ tên của bạn]"
+        }
+      ],
+      "sections": [],
+      "options": [],
+      "selectedOption": null,
+      "register": "formal",
+      "wordCount": 195,
+      "mainWordCount": 195,
+      "phrases": [
+        {
+          "en": "a beach clean-up",
+          "vi": "buổi dọn rác bãi biển",
+          "inAnswer": false
+        },
+        {
+          "en": "prevent litter",
+          "vi": "ngăn xả rác",
+          "inAnswer": false
+        },
+        {
+          "en": "waste facilities",
+          "vi": "cơ sở thu gom rác",
+          "inAnswer": true
+        }
+      ],
+      "framePhrases": [
+        {
+          "en": "I am writing to",
+          "vi": "Tôi viết để…"
+        },
+        {
+          "en": "For example",
+          "vi": "Ví dụ…"
+        },
+        {
+          "en": "Please let me know",
+          "vi": "Hãy cho tôi biết…"
+        }
+      ]
+    },
+    {
+      "id": "writing-task1-formal-advice-environment-10",
+      "group": "writing-task1",
+      "type": "formal-advice",
+      "topic": "environment",
+      "number": 10,
+      "title": "Tiết kiệm nước",
+      "focus": "saving water in daily life",
+      "prompt": "Ms Brown has contacted you for professional advice about saving water in daily life. Suggest a practical first step, explain a possible difficulty and recommend a way to address it.",
+      "requirementsVi": [
+        "Lời khuyên lịch sự, không dùng giọng trò chuyện với bạn thân.",
+        "Gợi ý một việc và giải thích giá trị.",
+        "Một giới hạn và cách xử lý tương ứng."
+      ],
+      "summaryVi": "Thói quen tiết kiệm nước cần đi cùng cách báo và sửa rò rỉ rõ trách nhiệm.",
+      "paragraphs": [
+        {
+          "label": "Mở thư và mục đích",
+          "text": "Dear Ms Brown,\n\nThank you for contacting me about saving water in daily life. I am writing to offer some suggestions in response to your request. I understand that you would like a practical starting point, and I hope the following advice will be useful.",
+          "noteVi": "Lời khuyên lịch sự, không dùng giọng trò chuyện với bạn thân.",
+          "parts": [
+            {
+              "text": "Dear ",
+              "kind": "frame"
+            },
+            {
+              "text": "Ms Brown",
+              "kind": "detail",
+              "labelVi": "danh xưng và họ người nhận"
+            },
+            {
+              "text": ",\n\nThank you for contacting me about ",
+              "kind": "frame"
+            },
+            {
+              "text": "saving water in daily life",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": ". I am writing to offer some suggestions in response to your request. I understand that you would like a practical starting point, and I hope the following advice will be useful.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Dear [danh xưng và họ người nhận],\n\nThank you for contacting me about [chủ đề]. I am writing to offer some suggestions in response to your request. I understand that you would like a practical starting point, and I hope the following advice will be useful."
+        },
+        {
+          "label": "Đề xuất đầu",
+          "text": "I would recommend attending a community water-saving session. This would give you an opportunity to identify common sources of waste and practise reporting leaks. One potential benefit is that people can avoid wasting treated water. For example, a household can repair a dripping tap and use a bowl when washing a small amount of produce.",
+          "noteVi": "Gợi ý một việc và giải thích giá trị.",
+          "parts": [
+            {
+              "text": "I would recommend attending ",
+              "kind": "frame"
+            },
+            {
+              "text": "a community water-saving session",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ". This would give you an opportunity to ",
+              "kind": "frame"
+            },
+            {
+              "text": "identify common sources of waste and practise reporting leaks",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". One potential benefit is that ",
+              "kind": "frame"
+            },
+            {
+              "text": "people can avoid wasting treated water",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". For example, ",
+              "kind": "frame"
+            },
+            {
+              "text": "a household can repair a dripping tap and use a bowl when washing a small amount of produce",
+              "kind": "detail",
+              "labelVi": "ví dụ — chủ ngữ + động từ"
+            },
+            {
+              "text": ".",
+              "kind": "frame"
+            }
+          ],
+          "template": "I would recommend attending [sự kiện / hoạt động]. This would give you an opportunity to [hoạt động — động từ nguyên mẫu]. One potential benefit is that [lợi ích — chủ ngữ + động từ]. For example, [ví dụ — chủ ngữ + động từ]."
+        },
+        {
+          "label": "Khó khăn và giải pháp",
+          "text": "It is also worth considering that simple advice may overlook problems beyond a resident's control. A practical response would be to give residents an easy way to report leaks and explain who should respond. For instance, a building manager could keep a repair log and confirm when each report has been checked. I would suggest trying this on a small scale before making a longer-term commitment.",
+          "noteVi": "Một giới hạn và cách xử lý tương ứng.",
+          "parts": [
+            {
+              "text": "It is also worth considering that ",
+              "kind": "frame"
+            },
+            {
+              "text": "simple advice may overlook problems beyond a resident's control",
+              "kind": "detail",
+              "labelVi": "khó khăn — chủ ngữ + động từ"
+            },
+            {
+              "text": ". A practical response would be to ",
+              "kind": "frame"
+            },
+            {
+              "text": "give residents an easy way to report leaks and explain who should respond",
+              "kind": "detail",
+              "labelVi": "giải pháp — động từ nguyên mẫu"
+            },
+            {
+              "text": ". For instance, ",
+              "kind": "frame"
+            },
+            {
+              "text": "a building manager could keep a repair log and confirm when each report has been checked",
+              "kind": "detail",
+              "labelVi": "cách làm — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I would suggest trying this on a small scale before making a longer-term commitment.",
+              "kind": "frame"
+            }
+          ],
+          "template": "It is also worth considering that [khó khăn — chủ ngữ + động từ]. A practical response would be to [giải pháp — động từ nguyên mẫu]. For instance, [cách làm — chủ ngữ + động từ]. I would suggest trying this on a small scale before making a longer-term commitment."
+        },
+        {
+          "label": "Kết thư",
+          "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\nMinh Nguyen",
+          "noteVi": "Biết tên người nhận: Dear Ms/Mr + họ → Yours sincerely. Chưa biết tên: Dear Sir or Madam → Yours faithfully.",
+          "parts": [
+            {
+              "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh Nguyen",
+              "kind": "detail",
+              "labelVi": "họ tên của bạn"
+            }
+          ],
+          "template": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n[họ tên của bạn]"
+        }
+      ],
+      "sections": [],
+      "options": [],
+      "selectedOption": null,
+      "register": "formal",
+      "wordCount": 194,
+      "mainWordCount": 194,
+      "phrases": [
+        {
+          "en": "repair a leak",
+          "vi": "sửa rò rỉ",
+          "inAnswer": false
+        },
+        {
+          "en": "essential uses",
+          "vi": "nhu cầu sử dụng thiết yếu",
+          "inAnswer": false
+        },
+        {
+          "en": "a repair log",
+          "vi": "sổ theo dõi sửa chữa",
+          "inAnswer": true
+        }
+      ],
+      "framePhrases": [
+        {
+          "en": "I am writing to",
+          "vi": "Tôi viết để…"
+        },
+        {
+          "en": "For example",
+          "vi": "Ví dụ…"
+        },
+        {
+          "en": "Please let me know",
+          "vi": "Hãy cho tôi biết…"
+        }
+      ]
+    }
+  ]
+}

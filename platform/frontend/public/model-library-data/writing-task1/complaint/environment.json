@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-05-v1",
+  "version": "2026-11-05-v2-frames",
   "samples": [
     {
       "id": "writing-task1-complaint-environment-01",
@@ -9,40 +9,146 @@
       "number": 1,
       "title": "Phân loại rác",
       "focus": "sorting household waste",
-      "prompt": "You paid to attend a neighbourhood recycling workshop, but the activity did not match the notice. Write to Mr Green, the centre manager, describing two problems, their effects, and the solution you want.",
+      "prompt": "You paid to attend a neighbourhood recycling workshop, but the activity did not match the notice. Write to Ms Brown, the centre manager, describing two problems, their effects, and the solution you want.",
       "requirementsVi": [
-        "Nêu dịch vụ và hai vấn đề.",
-        "Giải thích ảnh hưởng cụ thể.",
-        "Yêu cầu cách giải quyết hợp lý."
+        "Dịch vụ, nơi và mục đích phàn nàn.",
+        "Phải thay bằng các vấn đề thực sự trong đề.",
+        "Tác động cụ thể, yêu cầu tương xứng và hỏi bước xử lý."
       ],
       "summaryVi": "Phân loại cần thùng và hướng dẫn rõ, đồng thời hệ thống thu gom phải thực hiện đúng.",
       "paragraphs": [
         {
-          "label": "Mục đích",
-          "text": "Dear Mr Green,\n\nI am writing to complain about a neighbourhood recycling workshop, which I attended at the community centre last week. I had expected a practical session about sorting household waste, but several parts of the advertised programme were not provided.",
-          "noteVi": "Nêu dịch vụ, thời điểm và sự không hài lòng."
+          "label": "Mở thư và mục đích",
+          "text": "Dear Ms Brown,\n\nI am writing to complain about a neighbourhood recycling workshop, which I attended at the community centre. Unfortunately, the service did not meet the expectations set out in the information provided before I booked.",
+          "noteVi": "Dịch vụ, nơi và mục đích phàn nàn.",
+          "parts": [
+            {
+              "text": "Dear ",
+              "kind": "frame"
+            },
+            {
+              "text": "Ms Brown",
+              "kind": "detail",
+              "labelVi": "danh xưng và họ người nhận"
+            },
+            {
+              "text": ",\n\nI am writing to complain about ",
+              "kind": "frame"
+            },
+            {
+              "text": "a neighbourhood recycling workshop",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ", which I attended at ",
+              "kind": "frame"
+            },
+            {
+              "text": "the community centre",
+              "kind": "detail",
+              "labelVi": "địa điểm"
+            },
+            {
+              "text": ". Unfortunately, the service did not meet the expectations set out in the information provided before I booked.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Dear [danh xưng và họ người nhận],\n\nI am writing to complain about [sự kiện / hoạt động], which I attended at [địa điểm]. Unfortunately, the service did not meet the expectations set out in the information provided before I booked."
         },
         {
-          "label": "Vấn đề đầu",
-          "text": "The notice stated that we would practise sorting common household items. However, most of the session was a general presentation, and there was almost no time for practice. This was disappointing because I had joined specifically to understand how clear containers reduce the chance that paper and plastic become mixed with food waste.",
-          "noteVi": "So sánh điều quảng cáo và trải nghiệm thực tế."
+          "label": "Hai vấn đề",
+          "text": "The first problem was that there was almost no time for the advertised practical activity. In addition, the session started forty minutes late without an explanation. I had expected a practical opportunity to practise sorting common household items, so these problems were particularly disappointing.",
+          "noteVi": "Phải thay bằng các vấn đề thực sự trong đề.",
+          "parts": [
+            {
+              "text": "The first problem was that ",
+              "kind": "frame"
+            },
+            {
+              "text": "there was almost no time for the advertised practical activity",
+              "kind": "detail",
+              "labelVi": "vấn đề thứ nhất — chủ ngữ + động từ"
+            },
+            {
+              "text": ". In addition, ",
+              "kind": "frame"
+            },
+            {
+              "text": "the session started forty minutes late without an explanation",
+              "kind": "detail",
+              "labelVi": "vấn đề thứ hai — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I had expected a practical opportunity to ",
+              "kind": "frame"
+            },
+            {
+              "text": "practise sorting common household items",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ", so these problems were particularly disappointing.",
+              "kind": "frame"
+            }
+          ],
+          "template": "The first problem was that [vấn đề thứ nhất — chủ ngữ + động từ]. In addition, [vấn đề thứ hai — chủ ngữ + động từ]. I had expected a practical opportunity to [hoạt động — động từ nguyên mẫu], so these problems were particularly disappointing."
         },
         {
-          "label": "Vấn đề tiếp",
-          "text": "In addition, the session began forty minutes late without any explanation. I had brought a few clean empty containers and arranged my day around the advertised starting time, so the delay caused unnecessary inconvenience. Several questions also remained unanswered when the centre closed.",
-          "noteVi": "Chi tiết có thể xử lý, không công kích người nhận."
+          "label": "Ảnh hưởng và yêu cầu",
+          "text": "As a result, I could not complete the practical task or ask all my questions. I would be grateful if you could offer a replacement practical session or a partial refund. Please explain how you intend to resolve the matter and when I can expect a response. I believe this is a reasonable request in view of the difficulties described above.",
+          "noteVi": "Tác động cụ thể, yêu cầu tương xứng và hỏi bước xử lý.",
+          "parts": [
+            {
+              "text": "As a result, ",
+              "kind": "frame"
+            },
+            {
+              "text": "I could not complete the practical task or ask all my questions",
+              "kind": "detail",
+              "labelVi": "ảnh hưởng — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I would be grateful if you could ",
+              "kind": "frame"
+            },
+            {
+              "text": "offer a replacement practical session or a partial refund",
+              "kind": "detail",
+              "labelVi": "yêu cầu giải quyết — động từ nguyên mẫu"
+            },
+            {
+              "text": ". Please explain how you intend to resolve the matter and when I can expect a response. I believe this is a reasonable request in view of the difficulties described above.",
+              "kind": "frame"
+            }
+          ],
+          "template": "As a result, [ảnh hưởng — chủ ngữ + động từ]. I would be grateful if you could [yêu cầu giải quyết — động từ nguyên mẫu]. Please explain how you intend to resolve the matter and when I can expect a response. I believe this is a reasonable request in view of the difficulties described above."
         },
         {
-          "label": "Yêu cầu và kết",
-          "text": "I would like you to offer a replacement practical session at no additional cost, or a partial refund if this is not possible. Please explain how you intend to resolve the matter.\n\nThank you for taking the time to read my letter. Please let me know if you need any further information. I look forward to your reply.\n\nYours sincerely,\nMinh Nguyen",
-          "noteVi": "Yêu cầu tương xứng và chờ phản hồi."
+          "label": "Kết thư",
+          "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\nMinh Nguyen",
+          "noteVi": "Biết tên người nhận: Dear Ms/Mr + họ → Yours sincerely. Chưa biết tên: Dear Sir or Madam → Yours faithfully.",
+          "parts": [
+            {
+              "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh Nguyen",
+              "kind": "detail",
+              "labelVi": "họ tên của bạn"
+            }
+          ],
+          "template": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n[họ tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 200,
-      "mainWordCount": 200,
+      "register": "formal",
+      "wordCount": 170,
+      "mainWordCount": 170,
       "phrases": [
         {
           "en": "sort household waste",
@@ -79,40 +185,146 @@
       "number": 2,
       "title": "Bình nước dùng lại",
       "focus": "reusable water bottles",
-      "prompt": "You paid to attend a refill bottle campaign event, but the activity did not match the notice. Write to Mr Green, the centre manager, describing two problems, their effects, and the solution you want.",
+      "prompt": "You paid to attend a refill bottle campaign event, but the activity did not match the notice. Write to Ms Brown, the centre manager, describing two problems, their effects, and the solution you want.",
       "requirementsVi": [
-        "Nêu dịch vụ và hai vấn đề.",
-        "Giải thích ảnh hưởng cụ thể.",
-        "Yêu cầu cách giải quyết hợp lý."
+        "Dịch vụ, nơi và mục đích phàn nàn.",
+        "Phải thay bằng các vấn đề thực sự trong đề.",
+        "Tác động cụ thể, yêu cầu tương xứng và hỏi bước xử lý."
       ],
       "summaryVi": "Bình dùng lại giảm chai dùng một lần khi có chỗ lấy nước thuận tiện và được giữ sạch.",
       "paragraphs": [
         {
-          "label": "Mục đích",
-          "text": "Dear Mr Green,\n\nI am writing to complain about a refill bottle campaign event, which I attended at the local library meeting room last week. I had expected a practical session about reusable water bottles, but several parts of the advertised programme were not provided.",
-          "noteVi": "Nêu dịch vụ, thời điểm và sự không hài lòng."
+          "label": "Mở thư và mục đích",
+          "text": "Dear Ms Brown,\n\nI am writing to complain about a refill bottle campaign event, which I attended at the local library meeting room. Unfortunately, the service did not meet the expectations set out in the information provided before I booked.",
+          "noteVi": "Dịch vụ, nơi và mục đích phàn nàn.",
+          "parts": [
+            {
+              "text": "Dear ",
+              "kind": "frame"
+            },
+            {
+              "text": "Ms Brown",
+              "kind": "detail",
+              "labelVi": "danh xưng và họ người nhận"
+            },
+            {
+              "text": ",\n\nI am writing to complain about ",
+              "kind": "frame"
+            },
+            {
+              "text": "a refill bottle campaign event",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ", which I attended at ",
+              "kind": "frame"
+            },
+            {
+              "text": "the local library meeting room",
+              "kind": "detail",
+              "labelVi": "địa điểm"
+            },
+            {
+              "text": ". Unfortunately, the service did not meet the expectations set out in the information provided before I booked.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Dear [danh xưng và họ người nhận],\n\nI am writing to complain about [sự kiện / hoạt động], which I attended at [địa điểm]. Unfortunately, the service did not meet the expectations set out in the information provided before I booked."
         },
         {
-          "label": "Vấn đề đầu",
-          "text": "The notice stated that we would compare reusable bottles and plan convenient refill points. However, most of the session was a general presentation, and there was almost no time for practice. This was disappointing because I had joined specifically to understand how one suitable container can be used repeatedly when safe drinking water is available.",
-          "noteVi": "So sánh điều quảng cáo và trải nghiệm thực tế."
+          "label": "Hai vấn đề",
+          "text": "The first problem was that there was almost no time for the advertised practical activity. In addition, the session started forty minutes late without an explanation. I had expected a practical opportunity to compare reusable bottles and plan convenient refill points, so these problems were particularly disappointing.",
+          "noteVi": "Phải thay bằng các vấn đề thực sự trong đề.",
+          "parts": [
+            {
+              "text": "The first problem was that ",
+              "kind": "frame"
+            },
+            {
+              "text": "there was almost no time for the advertised practical activity",
+              "kind": "detail",
+              "labelVi": "vấn đề thứ nhất — chủ ngữ + động từ"
+            },
+            {
+              "text": ". In addition, ",
+              "kind": "frame"
+            },
+            {
+              "text": "the session started forty minutes late without an explanation",
+              "kind": "detail",
+              "labelVi": "vấn đề thứ hai — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I had expected a practical opportunity to ",
+              "kind": "frame"
+            },
+            {
+              "text": "compare reusable bottles and plan convenient refill points",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ", so these problems were particularly disappointing.",
+              "kind": "frame"
+            }
+          ],
+          "template": "The first problem was that [vấn đề thứ nhất — chủ ngữ + động từ]. In addition, [vấn đề thứ hai — chủ ngữ + động từ]. I had expected a practical opportunity to [hoạt động — động từ nguyên mẫu], so these problems were particularly disappointing."
         },
         {
-          "label": "Vấn đề tiếp",
-          "text": "In addition, the session began forty minutes late without any explanation. I had brought a reusable water bottle and arranged my day around the advertised starting time, so the delay caused unnecessary inconvenience. Several questions also remained unanswered when the centre closed.",
-          "noteVi": "Chi tiết có thể xử lý, không công kích người nhận."
+          "label": "Ảnh hưởng và yêu cầu",
+          "text": "As a result, I could not complete the practical task or ask all my questions. I would be grateful if you could offer a replacement practical session or a partial refund. Please explain how you intend to resolve the matter and when I can expect a response. I believe this is a reasonable request in view of the difficulties described above.",
+          "noteVi": "Tác động cụ thể, yêu cầu tương xứng và hỏi bước xử lý.",
+          "parts": [
+            {
+              "text": "As a result, ",
+              "kind": "frame"
+            },
+            {
+              "text": "I could not complete the practical task or ask all my questions",
+              "kind": "detail",
+              "labelVi": "ảnh hưởng — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I would be grateful if you could ",
+              "kind": "frame"
+            },
+            {
+              "text": "offer a replacement practical session or a partial refund",
+              "kind": "detail",
+              "labelVi": "yêu cầu giải quyết — động từ nguyên mẫu"
+            },
+            {
+              "text": ". Please explain how you intend to resolve the matter and when I can expect a response. I believe this is a reasonable request in view of the difficulties described above.",
+              "kind": "frame"
+            }
+          ],
+          "template": "As a result, [ảnh hưởng — chủ ngữ + động từ]. I would be grateful if you could [yêu cầu giải quyết — động từ nguyên mẫu]. Please explain how you intend to resolve the matter and when I can expect a response. I believe this is a reasonable request in view of the difficulties described above."
         },
         {
-          "label": "Yêu cầu và kết",
-          "text": "I would like you to offer a replacement practical session at no additional cost, or a partial refund if this is not possible. Please explain how you intend to resolve the matter.\n\nThank you for taking the time to read my letter. Please let me know if you need any further information. I look forward to your reply.\n\nYours sincerely,\nMinh Nguyen",
-          "noteVi": "Yêu cầu tương xứng và chờ phản hồi."
+          "label": "Kết thư",
+          "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\nMinh Nguyen",
+          "noteVi": "Biết tên người nhận: Dear Ms/Mr + họ → Yours sincerely. Chưa biết tên: Dear Sir or Madam → Yours faithfully.",
+          "parts": [
+            {
+              "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh Nguyen",
+              "kind": "detail",
+              "labelVi": "họ tên của bạn"
+            }
+          ],
+          "template": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n[họ tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 204,
-      "mainWordCount": 204,
+      "register": "formal",
+      "wordCount": 176,
+      "mainWordCount": 176,
       "phrases": [
         {
           "en": "a refill point",
@@ -149,40 +361,146 @@
       "number": 3,
       "title": "Vườn cộng đồng",
       "focus": "community gardens",
-      "prompt": "You paid to attend a community gardening morning, but the activity did not match the notice. Write to Mr Green, the centre manager, describing two problems, their effects, and the solution you want.",
+      "prompt": "You paid to attend a community gardening morning, but the activity did not match the notice. Write to Ms Brown, the centre manager, describing two problems, their effects, and the solution you want.",
       "requirementsVi": [
-        "Nêu dịch vụ và hai vấn đề.",
-        "Giải thích ảnh hưởng cụ thể.",
-        "Yêu cầu cách giải quyết hợp lý."
+        "Dịch vụ, nơi và mục đích phàn nàn.",
+        "Phải thay bằng các vấn đề thực sự trong đề.",
+        "Tác động cụ thể, yêu cầu tương xứng và hỏi bước xử lý."
       ],
       "summaryVi": "Vườn chung tạo cơ hội kết nối; cần phân công chăm cây lâu dài thay vì chỉ tổ chức ngày khai trương.",
       "paragraphs": [
         {
-          "label": "Mục đích",
-          "text": "Dear Mr Green,\n\nI am writing to complain about a community gardening morning, which I attended at the community garden last week. I had expected a practical session about community gardens, but several parts of the advertised programme were not provided.",
-          "noteVi": "Nêu dịch vụ, thời điểm và sự không hài lòng."
+          "label": "Mở thư và mục đích",
+          "text": "Dear Ms Brown,\n\nI am writing to complain about a community gardening morning, which I attended at the community garden. Unfortunately, the service did not meet the expectations set out in the information provided before I booked.",
+          "noteVi": "Dịch vụ, nơi và mục đích phàn nàn.",
+          "parts": [
+            {
+              "text": "Dear ",
+              "kind": "frame"
+            },
+            {
+              "text": "Ms Brown",
+              "kind": "detail",
+              "labelVi": "danh xưng và họ người nhận"
+            },
+            {
+              "text": ",\n\nI am writing to complain about ",
+              "kind": "frame"
+            },
+            {
+              "text": "a community gardening morning",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ", which I attended at ",
+              "kind": "frame"
+            },
+            {
+              "text": "the community garden",
+              "kind": "detail",
+              "labelVi": "địa điểm"
+            },
+            {
+              "text": ". Unfortunately, the service did not meet the expectations set out in the information provided before I booked.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Dear [danh xưng và họ người nhận],\n\nI am writing to complain about [sự kiện / hoạt động], which I attended at [địa điểm]. Unfortunately, the service did not meet the expectations set out in the information provided before I booked."
         },
         {
-          "label": "Vấn đề đầu",
-          "text": "The notice stated that we would plant herbs and organise a watering rota. However, most of the session was a general presentation, and there was almost no time for practice. This was disappointing because I had joined specifically to understand how a shared task gives people a reason to meet regularly and exchange knowledge.",
-          "noteVi": "So sánh điều quảng cáo và trải nghiệm thực tế."
+          "label": "Hai vấn đề",
+          "text": "The first problem was that there was almost no time for the advertised practical activity. In addition, the session started forty minutes late without an explanation. I had expected a practical opportunity to plant herbs and organise a watering rota, so these problems were particularly disappointing.",
+          "noteVi": "Phải thay bằng các vấn đề thực sự trong đề.",
+          "parts": [
+            {
+              "text": "The first problem was that ",
+              "kind": "frame"
+            },
+            {
+              "text": "there was almost no time for the advertised practical activity",
+              "kind": "detail",
+              "labelVi": "vấn đề thứ nhất — chủ ngữ + động từ"
+            },
+            {
+              "text": ". In addition, ",
+              "kind": "frame"
+            },
+            {
+              "text": "the session started forty minutes late without an explanation",
+              "kind": "detail",
+              "labelVi": "vấn đề thứ hai — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I had expected a practical opportunity to ",
+              "kind": "frame"
+            },
+            {
+              "text": "plant herbs and organise a watering rota",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ", so these problems were particularly disappointing.",
+              "kind": "frame"
+            }
+          ],
+          "template": "The first problem was that [vấn đề thứ nhất — chủ ngữ + động từ]. In addition, [vấn đề thứ hai — chủ ngữ + động từ]. I had expected a practical opportunity to [hoạt động — động từ nguyên mẫu], so these problems were particularly disappointing."
         },
         {
-          "label": "Vấn đề tiếp",
-          "text": "In addition, the session began forty minutes late without any explanation. I had brought gardening gloves and arranged my day around the advertised starting time, so the delay caused unnecessary inconvenience. Several questions also remained unanswered when the centre closed.",
-          "noteVi": "Chi tiết có thể xử lý, không công kích người nhận."
+          "label": "Ảnh hưởng và yêu cầu",
+          "text": "As a result, I could not complete the practical task or ask all my questions. I would be grateful if you could offer a replacement practical session or a partial refund. Please explain how you intend to resolve the matter and when I can expect a response. I believe this is a reasonable request in view of the difficulties described above.",
+          "noteVi": "Tác động cụ thể, yêu cầu tương xứng và hỏi bước xử lý.",
+          "parts": [
+            {
+              "text": "As a result, ",
+              "kind": "frame"
+            },
+            {
+              "text": "I could not complete the practical task or ask all my questions",
+              "kind": "detail",
+              "labelVi": "ảnh hưởng — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I would be grateful if you could ",
+              "kind": "frame"
+            },
+            {
+              "text": "offer a replacement practical session or a partial refund",
+              "kind": "detail",
+              "labelVi": "yêu cầu giải quyết — động từ nguyên mẫu"
+            },
+            {
+              "text": ". Please explain how you intend to resolve the matter and when I can expect a response. I believe this is a reasonable request in view of the difficulties described above.",
+              "kind": "frame"
+            }
+          ],
+          "template": "As a result, [ảnh hưởng — chủ ngữ + động từ]. I would be grateful if you could [yêu cầu giải quyết — động từ nguyên mẫu]. Please explain how you intend to resolve the matter and when I can expect a response. I believe this is a reasonable request in view of the difficulties described above."
         },
         {
-          "label": "Yêu cầu và kết",
-          "text": "I would like you to offer a replacement practical session at no additional cost, or a partial refund if this is not possible. Please explain how you intend to resolve the matter.\n\nThank you for taking the time to read my letter. Please let me know if you need any further information. I look forward to your reply.\n\nYours sincerely,\nMinh Nguyen",
-          "noteVi": "Yêu cầu tương xứng và chờ phản hồi."
+          "label": "Kết thư",
+          "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\nMinh Nguyen",
+          "noteVi": "Biết tên người nhận: Dear Ms/Mr + họ → Yours sincerely. Chưa biết tên: Dear Sir or Madam → Yours faithfully.",
+          "parts": [
+            {
+              "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh Nguyen",
+              "kind": "detail",
+              "labelVi": "họ tên của bạn"
+            }
+          ],
+          "template": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n[họ tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 197,
-      "mainWordCount": 197,
+      "register": "formal",
+      "wordCount": 172,
+      "mainWordCount": 172,
       "phrases": [
         {
           "en": "a community garden",
@@ -219,40 +537,146 @@
       "number": 4,
       "title": "Công viên trong thành phố",
       "focus": "urban parks",
-      "prompt": "You paid to attend a local park planning meeting, but the activity did not match the notice. Write to Mr Green, the centre manager, describing two problems, their effects, and the solution you want.",
+      "prompt": "You paid to attend a local park planning meeting, but the activity did not match the notice. Write to Ms Brown, the centre manager, describing two problems, their effects, and the solution you want.",
       "requirementsVi": [
-        "Nêu dịch vụ và hai vấn đề.",
-        "Giải thích ảnh hưởng cụ thể.",
-        "Yêu cầu cách giải quyết hợp lý."
+        "Dịch vụ, nơi và mục đích phàn nàn.",
+        "Phải thay bằng các vấn đề thực sự trong đề.",
+        "Tác động cụ thể, yêu cầu tương xứng và hỏi bước xử lý."
       ],
       "summaryVi": "Công viên công cộng cần dễ tiếp cận và được bảo trì để người dân thực sự dùng được.",
       "paragraphs": [
         {
-          "label": "Mục đích",
-          "text": "Dear Mr Green,\n\nI am writing to complain about a local park planning meeting, which I attended at the park entrance last week. I had expected a practical session about urban parks, but several parts of the advertised programme were not provided.",
-          "noteVi": "Nêu dịch vụ, thời điểm và sự không hài lòng."
+          "label": "Mở thư và mục đích",
+          "text": "Dear Ms Brown,\n\nI am writing to complain about a local park planning meeting, which I attended at the park entrance. Unfortunately, the service did not meet the expectations set out in the information provided before I booked.",
+          "noteVi": "Dịch vụ, nơi và mục đích phàn nàn.",
+          "parts": [
+            {
+              "text": "Dear ",
+              "kind": "frame"
+            },
+            {
+              "text": "Ms Brown",
+              "kind": "detail",
+              "labelVi": "danh xưng và họ người nhận"
+            },
+            {
+              "text": ",\n\nI am writing to complain about ",
+              "kind": "frame"
+            },
+            {
+              "text": "a local park planning meeting",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ", which I attended at ",
+              "kind": "frame"
+            },
+            {
+              "text": "the park entrance",
+              "kind": "detail",
+              "labelVi": "địa điểm"
+            },
+            {
+              "text": ". Unfortunately, the service did not meet the expectations set out in the information provided before I booked.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Dear [danh xưng và họ người nhận],\n\nI am writing to complain about [sự kiện / hoạt động], which I attended at [địa điểm]. Unfortunately, the service did not meet the expectations set out in the information provided before I booked."
         },
         {
-          "label": "Vấn đề đầu",
-          "text": "The notice stated that we would walk through the park and suggest useful improvements. However, most of the session was a general presentation, and there was almost no time for practice. This was disappointing because I had joined specifically to understand how a nearby park can be used without paying for a private leisure facility.",
-          "noteVi": "So sánh điều quảng cáo và trải nghiệm thực tế."
+          "label": "Hai vấn đề",
+          "text": "The first problem was that there was almost no time for the advertised practical activity. In addition, the session started forty minutes late without an explanation. I had expected a practical opportunity to walk through the park and suggest useful improvements, so these problems were particularly disappointing.",
+          "noteVi": "Phải thay bằng các vấn đề thực sự trong đề.",
+          "parts": [
+            {
+              "text": "The first problem was that ",
+              "kind": "frame"
+            },
+            {
+              "text": "there was almost no time for the advertised practical activity",
+              "kind": "detail",
+              "labelVi": "vấn đề thứ nhất — chủ ngữ + động từ"
+            },
+            {
+              "text": ". In addition, ",
+              "kind": "frame"
+            },
+            {
+              "text": "the session started forty minutes late without an explanation",
+              "kind": "detail",
+              "labelVi": "vấn đề thứ hai — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I had expected a practical opportunity to ",
+              "kind": "frame"
+            },
+            {
+              "text": "walk through the park and suggest useful improvements",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ", so these problems were particularly disappointing.",
+              "kind": "frame"
+            }
+          ],
+          "template": "The first problem was that [vấn đề thứ nhất — chủ ngữ + động từ]. In addition, [vấn đề thứ hai — chủ ngữ + động từ]. I had expected a practical opportunity to [hoạt động — động từ nguyên mẫu], so these problems were particularly disappointing."
         },
         {
-          "label": "Vấn đề tiếp",
-          "text": "In addition, the session began forty minutes late without any explanation. I had brought comfortable walking shoes and arranged my day around the advertised starting time, so the delay caused unnecessary inconvenience. Several questions also remained unanswered when the centre closed.",
-          "noteVi": "Chi tiết có thể xử lý, không công kích người nhận."
+          "label": "Ảnh hưởng và yêu cầu",
+          "text": "As a result, I could not complete the practical task or ask all my questions. I would be grateful if you could offer a replacement practical session or a partial refund. Please explain how you intend to resolve the matter and when I can expect a response. I believe this is a reasonable request in view of the difficulties described above.",
+          "noteVi": "Tác động cụ thể, yêu cầu tương xứng và hỏi bước xử lý.",
+          "parts": [
+            {
+              "text": "As a result, ",
+              "kind": "frame"
+            },
+            {
+              "text": "I could not complete the practical task or ask all my questions",
+              "kind": "detail",
+              "labelVi": "ảnh hưởng — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I would be grateful if you could ",
+              "kind": "frame"
+            },
+            {
+              "text": "offer a replacement practical session or a partial refund",
+              "kind": "detail",
+              "labelVi": "yêu cầu giải quyết — động từ nguyên mẫu"
+            },
+            {
+              "text": ". Please explain how you intend to resolve the matter and when I can expect a response. I believe this is a reasonable request in view of the difficulties described above.",
+              "kind": "frame"
+            }
+          ],
+          "template": "As a result, [ảnh hưởng — chủ ngữ + động từ]. I would be grateful if you could [yêu cầu giải quyết — động từ nguyên mẫu]. Please explain how you intend to resolve the matter and when I can expect a response. I believe this is a reasonable request in view of the difficulties described above."
         },
         {
-          "label": "Yêu cầu và kết",
-          "text": "I would like you to offer a replacement practical session at no additional cost, or a partial refund if this is not possible. Please explain how you intend to resolve the matter.\n\nThank you for taking the time to read my letter. Please let me know if you need any further information. I look forward to your reply.\n\nYours sincerely,\nMinh Nguyen",
-          "noteVi": "Yêu cầu tương xứng và chờ phản hồi."
+          "label": "Kết thư",
+          "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\nMinh Nguyen",
+          "noteVi": "Biết tên người nhận: Dear Ms/Mr + họ → Yours sincerely. Chưa biết tên: Dear Sir or Madam → Yours faithfully.",
+          "parts": [
+            {
+              "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh Nguyen",
+              "kind": "detail",
+              "labelVi": "họ tên của bạn"
+            }
+          ],
+          "template": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n[họ tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 200,
-      "mainWordCount": 200,
+      "register": "formal",
+      "wordCount": 174,
+      "mainWordCount": 174,
       "phrases": [
         {
           "en": "public green spaces",
@@ -289,40 +713,146 @@
       "number": 5,
       "title": "Đi xe đạp",
       "focus": "cycling for short journeys",
-      "prompt": "You paid to attend a safe cycling information day, but the activity did not match the notice. Write to Mr Green, the centre manager, describing two problems, their effects, and the solution you want.",
+      "prompt": "You paid to attend a safe cycling information day, but the activity did not match the notice. Write to Ms Brown, the centre manager, describing two problems, their effects, and the solution you want.",
       "requirementsVi": [
-        "Nêu dịch vụ và hai vấn đề.",
-        "Giải thích ảnh hưởng cụ thể.",
-        "Yêu cầu cách giải quyết hợp lý."
+        "Dịch vụ, nơi và mục đích phàn nàn.",
+        "Phải thay bằng các vấn đề thực sự trong đề.",
+        "Tác động cụ thể, yêu cầu tương xứng và hỏi bước xử lý."
       ],
       "summaryVi": "Xe đạp phù hợp quãng ngắn khi đường đi liền mạch và các giao lộ được xử lý an toàn.",
       "paragraphs": [
         {
-          "label": "Mục đích",
-          "text": "Dear Mr Green,\n\nI am writing to complain about a safe cycling information day, which I attended at the community centre courtyard last week. I had expected a practical session about cycling for short journeys, but several parts of the advertised programme were not provided.",
-          "noteVi": "Nêu dịch vụ, thời điểm và sự không hài lòng."
+          "label": "Mở thư và mục đích",
+          "text": "Dear Ms Brown,\n\nI am writing to complain about a safe cycling information day, which I attended at the community centre courtyard. Unfortunately, the service did not meet the expectations set out in the information provided before I booked.",
+          "noteVi": "Dịch vụ, nơi và mục đích phàn nàn.",
+          "parts": [
+            {
+              "text": "Dear ",
+              "kind": "frame"
+            },
+            {
+              "text": "Ms Brown",
+              "kind": "detail",
+              "labelVi": "danh xưng và họ người nhận"
+            },
+            {
+              "text": ",\n\nI am writing to complain about ",
+              "kind": "frame"
+            },
+            {
+              "text": "a safe cycling information day",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ", which I attended at ",
+              "kind": "frame"
+            },
+            {
+              "text": "the community centre courtyard",
+              "kind": "detail",
+              "labelVi": "địa điểm"
+            },
+            {
+              "text": ". Unfortunately, the service did not meet the expectations set out in the information provided before I booked.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Dear [danh xưng và họ người nhận],\n\nI am writing to complain about [sự kiện / hoạt động], which I attended at [địa điểm]. Unfortunately, the service did not meet the expectations set out in the information provided before I booked."
         },
         {
-          "label": "Vấn đề đầu",
-          "text": "The notice stated that we would plan short cycle routes and identify difficult junctions. However, most of the session was a general presentation, and there was almost no time for practice. This was disappointing because I had joined specifically to understand how short trips can be practical by bicycle when routes connect useful places.",
-          "noteVi": "So sánh điều quảng cáo và trải nghiệm thực tế."
+          "label": "Hai vấn đề",
+          "text": "The first problem was that there was almost no time for the advertised practical activity. In addition, the session started forty minutes late without an explanation. I had expected a practical opportunity to plan short cycle routes and identify difficult junctions, so these problems were particularly disappointing.",
+          "noteVi": "Phải thay bằng các vấn đề thực sự trong đề.",
+          "parts": [
+            {
+              "text": "The first problem was that ",
+              "kind": "frame"
+            },
+            {
+              "text": "there was almost no time for the advertised practical activity",
+              "kind": "detail",
+              "labelVi": "vấn đề thứ nhất — chủ ngữ + động từ"
+            },
+            {
+              "text": ". In addition, ",
+              "kind": "frame"
+            },
+            {
+              "text": "the session started forty minutes late without an explanation",
+              "kind": "detail",
+              "labelVi": "vấn đề thứ hai — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I had expected a practical opportunity to ",
+              "kind": "frame"
+            },
+            {
+              "text": "plan short cycle routes and identify difficult junctions",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ", so these problems were particularly disappointing.",
+              "kind": "frame"
+            }
+          ],
+          "template": "The first problem was that [vấn đề thứ nhất — chủ ngữ + động từ]. In addition, [vấn đề thứ hai — chủ ngữ + động từ]. I had expected a practical opportunity to [hoạt động — động từ nguyên mẫu], so these problems were particularly disappointing."
         },
         {
-          "label": "Vấn đề tiếp",
-          "text": "In addition, the session began forty minutes late without any explanation. I had brought a bicycle helmet and arranged my day around the advertised starting time, so the delay caused unnecessary inconvenience. Several questions also remained unanswered when the centre closed.",
-          "noteVi": "Chi tiết có thể xử lý, không công kích người nhận."
+          "label": "Ảnh hưởng và yêu cầu",
+          "text": "As a result, I could not complete the practical task or ask all my questions. I would be grateful if you could offer a replacement practical session or a partial refund. Please explain how you intend to resolve the matter and when I can expect a response. I believe this is a reasonable request in view of the difficulties described above.",
+          "noteVi": "Tác động cụ thể, yêu cầu tương xứng và hỏi bước xử lý.",
+          "parts": [
+            {
+              "text": "As a result, ",
+              "kind": "frame"
+            },
+            {
+              "text": "I could not complete the practical task or ask all my questions",
+              "kind": "detail",
+              "labelVi": "ảnh hưởng — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I would be grateful if you could ",
+              "kind": "frame"
+            },
+            {
+              "text": "offer a replacement practical session or a partial refund",
+              "kind": "detail",
+              "labelVi": "yêu cầu giải quyết — động từ nguyên mẫu"
+            },
+            {
+              "text": ". Please explain how you intend to resolve the matter and when I can expect a response. I believe this is a reasonable request in view of the difficulties described above.",
+              "kind": "frame"
+            }
+          ],
+          "template": "As a result, [ảnh hưởng — chủ ngữ + động từ]. I would be grateful if you could [yêu cầu giải quyết — động từ nguyên mẫu]. Please explain how you intend to resolve the matter and when I can expect a response. I believe this is a reasonable request in view of the difficulties described above."
         },
         {
-          "label": "Yêu cầu và kết",
-          "text": "I would like you to offer a replacement practical session at no additional cost, or a partial refund if this is not possible. Please explain how you intend to resolve the matter.\n\nThank you for taking the time to read my letter. Please let me know if you need any further information. I look forward to your reply.\n\nYours sincerely,\nMinh Nguyen",
-          "noteVi": "Yêu cầu tương xứng và chờ phản hồi."
+          "label": "Kết thư",
+          "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\nMinh Nguyen",
+          "noteVi": "Biết tên người nhận: Dear Ms/Mr + họ → Yours sincerely. Chưa biết tên: Dear Sir or Madam → Yours faithfully.",
+          "parts": [
+            {
+              "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh Nguyen",
+              "kind": "detail",
+              "labelVi": "họ tên của bạn"
+            }
+          ],
+          "template": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n[họ tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 202,
-      "mainWordCount": 202,
+      "register": "formal",
+      "wordCount": 175,
+      "mainWordCount": 175,
       "phrases": [
         {
           "en": "short everyday journeys",
@@ -359,40 +889,146 @@
       "number": 6,
       "title": "Tiết kiệm điện ở nhà",
       "focus": "saving electricity at home",
-      "prompt": "You paid to attend a household energy workshop, but the activity did not match the notice. Write to Mr Green, the centre manager, describing two problems, their effects, and the solution you want.",
+      "prompt": "You paid to attend a household energy workshop, but the activity did not match the notice. Write to Ms Brown, the centre manager, describing two problems, their effects, and the solution you want.",
       "requirementsVi": [
-        "Nêu dịch vụ và hai vấn đề.",
-        "Giải thích ảnh hưởng cụ thể.",
-        "Yêu cầu cách giải quyết hợp lý."
+        "Dịch vụ, nơi và mục đích phàn nàn.",
+        "Phải thay bằng các vấn đề thực sự trong đề.",
+        "Tác động cụ thể, yêu cầu tương xứng và hỏi bước xử lý."
       ],
       "summaryVi": "Tiết kiệm điện nên bắt đầu từ việc dễ làm và phù hợp nhà thuê, thu nhập, thiết bị sẵn có.",
       "paragraphs": [
         {
-          "label": "Mục đích",
-          "text": "Dear Mr Green,\n\nI am writing to complain about a household energy workshop, which I attended at the community centre last week. I had expected a practical session about saving electricity at home, but several parts of the advertised programme were not provided.",
-          "noteVi": "Nêu dịch vụ, thời điểm và sự không hài lòng."
+          "label": "Mở thư và mục đích",
+          "text": "Dear Ms Brown,\n\nI am writing to complain about a household energy workshop, which I attended at the community centre. Unfortunately, the service did not meet the expectations set out in the information provided before I booked.",
+          "noteVi": "Dịch vụ, nơi và mục đích phàn nàn.",
+          "parts": [
+            {
+              "text": "Dear ",
+              "kind": "frame"
+            },
+            {
+              "text": "Ms Brown",
+              "kind": "detail",
+              "labelVi": "danh xưng và họ người nhận"
+            },
+            {
+              "text": ",\n\nI am writing to complain about ",
+              "kind": "frame"
+            },
+            {
+              "text": "a household energy workshop",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ", which I attended at ",
+              "kind": "frame"
+            },
+            {
+              "text": "the community centre",
+              "kind": "detail",
+              "labelVi": "địa điểm"
+            },
+            {
+              "text": ". Unfortunately, the service did not meet the expectations set out in the information provided before I booked.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Dear [danh xưng và họ người nhận],\n\nI am writing to complain about [sự kiện / hoạt động], which I attended at [địa điểm]. Unfortunately, the service did not meet the expectations set out in the information provided before I booked."
         },
         {
-          "label": "Vấn đề đầu",
-          "text": "The notice stated that we would review everyday habits and create a low-cost energy checklist. However, most of the session was a general presentation, and there was almost no time for practice. This was disappointing because I had joined specifically to understand how small changes are easier to maintain when people understand which habits cause waste.",
-          "noteVi": "So sánh điều quảng cáo và trải nghiệm thực tế."
+          "label": "Hai vấn đề",
+          "text": "The first problem was that there was almost no time for the advertised practical activity. In addition, the session started forty minutes late without an explanation. I had expected a practical opportunity to review everyday habits and create a low-cost energy checklist, so these problems were particularly disappointing.",
+          "noteVi": "Phải thay bằng các vấn đề thực sự trong đề.",
+          "parts": [
+            {
+              "text": "The first problem was that ",
+              "kind": "frame"
+            },
+            {
+              "text": "there was almost no time for the advertised practical activity",
+              "kind": "detail",
+              "labelVi": "vấn đề thứ nhất — chủ ngữ + động từ"
+            },
+            {
+              "text": ". In addition, ",
+              "kind": "frame"
+            },
+            {
+              "text": "the session started forty minutes late without an explanation",
+              "kind": "detail",
+              "labelVi": "vấn đề thứ hai — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I had expected a practical opportunity to ",
+              "kind": "frame"
+            },
+            {
+              "text": "review everyday habits and create a low-cost energy checklist",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ", so these problems were particularly disappointing.",
+              "kind": "frame"
+            }
+          ],
+          "template": "The first problem was that [vấn đề thứ nhất — chủ ngữ + động từ]. In addition, [vấn đề thứ hai — chủ ngữ + động từ]. I had expected a practical opportunity to [hoạt động — động từ nguyên mẫu], so these problems were particularly disappointing."
         },
         {
-          "label": "Vấn đề tiếp",
-          "text": "In addition, the session began forty minutes late without any explanation. I had brought a recent electricity bill and arranged my day around the advertised starting time, so the delay caused unnecessary inconvenience. Several questions also remained unanswered when the centre closed.",
-          "noteVi": "Chi tiết có thể xử lý, không công kích người nhận."
+          "label": "Ảnh hưởng và yêu cầu",
+          "text": "As a result, I could not complete the practical task or ask all my questions. I would be grateful if you could offer a replacement practical session or a partial refund. Please explain how you intend to resolve the matter and when I can expect a response. I believe this is a reasonable request in view of the difficulties described above.",
+          "noteVi": "Tác động cụ thể, yêu cầu tương xứng và hỏi bước xử lý.",
+          "parts": [
+            {
+              "text": "As a result, ",
+              "kind": "frame"
+            },
+            {
+              "text": "I could not complete the practical task or ask all my questions",
+              "kind": "detail",
+              "labelVi": "ảnh hưởng — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I would be grateful if you could ",
+              "kind": "frame"
+            },
+            {
+              "text": "offer a replacement practical session or a partial refund",
+              "kind": "detail",
+              "labelVi": "yêu cầu giải quyết — động từ nguyên mẫu"
+            },
+            {
+              "text": ". Please explain how you intend to resolve the matter and when I can expect a response. I believe this is a reasonable request in view of the difficulties described above.",
+              "kind": "frame"
+            }
+          ],
+          "template": "As a result, [ảnh hưởng — chủ ngữ + động từ]. I would be grateful if you could [yêu cầu giải quyết — động từ nguyên mẫu]. Please explain how you intend to resolve the matter and when I can expect a response. I believe this is a reasonable request in view of the difficulties described above."
         },
         {
-          "label": "Yêu cầu và kết",
-          "text": "I would like you to offer a replacement practical session at no additional cost, or a partial refund if this is not possible. Please explain how you intend to resolve the matter.\n\nThank you for taking the time to read my letter. Please let me know if you need any further information. I look forward to your reply.\n\nYours sincerely,\nMinh Nguyen",
-          "noteVi": "Yêu cầu tương xứng và chờ phản hồi."
+          "label": "Kết thư",
+          "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\nMinh Nguyen",
+          "noteVi": "Biết tên người nhận: Dear Ms/Mr + họ → Yours sincerely. Chưa biết tên: Dear Sir or Madam → Yours faithfully.",
+          "parts": [
+            {
+              "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh Nguyen",
+              "kind": "detail",
+              "labelVi": "họ tên của bạn"
+            }
+          ],
+          "template": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n[họ tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 203,
-      "mainWordCount": 203,
+      "register": "formal",
+      "wordCount": 174,
+      "mainWordCount": 174,
       "phrases": [
         {
           "en": "unnecessary energy use",
@@ -429,40 +1065,146 @@
       "number": 7,
       "title": "Bảo vệ động vật hoang dã",
       "focus": "responsible wildlife tourism",
-      "prompt": "You paid to attend a responsible wildlife travel talk, but the activity did not match the notice. Write to Mr Green, the centre manager, describing two problems, their effects, and the solution you want.",
+      "prompt": "You paid to attend a responsible wildlife travel talk, but the activity did not match the notice. Write to Ms Brown, the centre manager, describing two problems, their effects, and the solution you want.",
       "requirementsVi": [
-        "Nêu dịch vụ và hai vấn đề.",
-        "Giải thích ảnh hưởng cụ thể.",
-        "Yêu cầu cách giải quyết hợp lý."
+        "Dịch vụ, nơi và mục đích phàn nàn.",
+        "Phải thay bằng các vấn đề thực sự trong đề.",
+        "Tác động cụ thể, yêu cầu tương xứng và hỏi bước xử lý."
       ],
       "summaryVi": "Tham quan thiên nhiên cần quan sát có khoảng cách; nên hỏi cách chăm sóc động vật thay vì chỉ xem quảng cáo.",
       "paragraphs": [
         {
-          "label": "Mục đích",
-          "text": "Dear Mr Green,\n\nI am writing to complain about a responsible wildlife travel talk, which I attended at the local library last week. I had expected a practical session about responsible wildlife tourism, but several parts of the advertised programme were not provided.",
-          "noteVi": "Nêu dịch vụ, thời điểm và sự không hài lòng."
+          "label": "Mở thư và mục đích",
+          "text": "Dear Ms Brown,\n\nI am writing to complain about a responsible wildlife travel talk, which I attended at the local library. Unfortunately, the service did not meet the expectations set out in the information provided before I booked.",
+          "noteVi": "Dịch vụ, nơi và mục đích phàn nàn.",
+          "parts": [
+            {
+              "text": "Dear ",
+              "kind": "frame"
+            },
+            {
+              "text": "Ms Brown",
+              "kind": "detail",
+              "labelVi": "danh xưng và họ người nhận"
+            },
+            {
+              "text": ",\n\nI am writing to complain about ",
+              "kind": "frame"
+            },
+            {
+              "text": "a responsible wildlife travel talk",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ", which I attended at ",
+              "kind": "frame"
+            },
+            {
+              "text": "the local library",
+              "kind": "detail",
+              "labelVi": "địa điểm"
+            },
+            {
+              "text": ". Unfortunately, the service did not meet the expectations set out in the information provided before I booked.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Dear [danh xưng và họ người nhận],\n\nI am writing to complain about [sự kiện / hoạt động], which I attended at [địa điểm]. Unfortunately, the service did not meet the expectations set out in the information provided before I booked."
         },
         {
-          "label": "Vấn đề đầu",
-          "text": "The notice stated that we would compare nature tours and discuss respectful observation. However, most of the session was a general presentation, and there was almost no time for practice. This was disappointing because I had joined specifically to understand how keeping a suitable distance allows people to observe behaviour with less interference.",
-          "noteVi": "So sánh điều quảng cáo và trải nghiệm thực tế."
+          "label": "Hai vấn đề",
+          "text": "The first problem was that there was almost no time for the advertised practical activity. In addition, the session started forty minutes late without an explanation. I had expected a practical opportunity to compare nature tours and discuss respectful observation, so these problems were particularly disappointing.",
+          "noteVi": "Phải thay bằng các vấn đề thực sự trong đề.",
+          "parts": [
+            {
+              "text": "The first problem was that ",
+              "kind": "frame"
+            },
+            {
+              "text": "there was almost no time for the advertised practical activity",
+              "kind": "detail",
+              "labelVi": "vấn đề thứ nhất — chủ ngữ + động từ"
+            },
+            {
+              "text": ". In addition, ",
+              "kind": "frame"
+            },
+            {
+              "text": "the session started forty minutes late without an explanation",
+              "kind": "detail",
+              "labelVi": "vấn đề thứ hai — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I had expected a practical opportunity to ",
+              "kind": "frame"
+            },
+            {
+              "text": "compare nature tours and discuss respectful observation",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ", so these problems were particularly disappointing.",
+              "kind": "frame"
+            }
+          ],
+          "template": "The first problem was that [vấn đề thứ nhất — chủ ngữ + động từ]. In addition, [vấn đề thứ hai — chủ ngữ + động từ]. I had expected a practical opportunity to [hoạt động — động từ nguyên mẫu], so these problems were particularly disappointing."
         },
         {
-          "label": "Vấn đề tiếp",
-          "text": "In addition, the session began forty minutes late without any explanation. I had brought a notebook for travel questions and arranged my day around the advertised starting time, so the delay caused unnecessary inconvenience. Several questions also remained unanswered when the centre closed.",
-          "noteVi": "Chi tiết có thể xử lý, không công kích người nhận."
+          "label": "Ảnh hưởng và yêu cầu",
+          "text": "As a result, I could not complete the practical task or ask all my questions. I would be grateful if you could offer a replacement practical session or a partial refund. Please explain how you intend to resolve the matter and when I can expect a response. I believe this is a reasonable request in view of the difficulties described above.",
+          "noteVi": "Tác động cụ thể, yêu cầu tương xứng và hỏi bước xử lý.",
+          "parts": [
+            {
+              "text": "As a result, ",
+              "kind": "frame"
+            },
+            {
+              "text": "I could not complete the practical task or ask all my questions",
+              "kind": "detail",
+              "labelVi": "ảnh hưởng — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I would be grateful if you could ",
+              "kind": "frame"
+            },
+            {
+              "text": "offer a replacement practical session or a partial refund",
+              "kind": "detail",
+              "labelVi": "yêu cầu giải quyết — động từ nguyên mẫu"
+            },
+            {
+              "text": ". Please explain how you intend to resolve the matter and when I can expect a response. I believe this is a reasonable request in view of the difficulties described above.",
+              "kind": "frame"
+            }
+          ],
+          "template": "As a result, [ảnh hưởng — chủ ngữ + động từ]. I would be grateful if you could [yêu cầu giải quyết — động từ nguyên mẫu]. Please explain how you intend to resolve the matter and when I can expect a response. I believe this is a reasonable request in view of the difficulties described above."
         },
         {
-          "label": "Yêu cầu và kết",
-          "text": "I would like you to offer a replacement practical session at no additional cost, or a partial refund if this is not possible. Please explain how you intend to resolve the matter.\n\nThank you for taking the time to read my letter. Please let me know if you need any further information. I look forward to your reply.\n\nYours sincerely,\nMinh Nguyen",
-          "noteVi": "Yêu cầu tương xứng và chờ phản hồi."
+          "label": "Kết thư",
+          "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\nMinh Nguyen",
+          "noteVi": "Biết tên người nhận: Dear Ms/Mr + họ → Yours sincerely. Chưa biết tên: Dear Sir or Madam → Yours faithfully.",
+          "parts": [
+            {
+              "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh Nguyen",
+              "kind": "detail",
+              "labelVi": "họ tên của bạn"
+            }
+          ],
+          "template": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n[họ tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 201,
-      "mainWordCount": 201,
+      "register": "formal",
+      "wordCount": 173,
+      "mainWordCount": 173,
       "phrases": [
         {
           "en": "observe from a distance",
@@ -472,7 +1214,7 @@
         {
           "en": "wildlife tourism",
           "vi": "du lịch động vật hoang dã",
-          "inAnswer": true
+          "inAnswer": false
         },
         {
           "en": "visitor behaviour",
@@ -499,40 +1241,146 @@
       "number": 8,
       "title": "Giảm lãng phí thực phẩm",
       "focus": "food waste at home",
-      "prompt": "You paid to attend a meal planning workshop, but the activity did not match the notice. Write to Mr Green, the centre manager, describing two problems, their effects, and the solution you want.",
+      "prompt": "You paid to attend a meal planning workshop, but the activity did not match the notice. Write to Ms Brown, the centre manager, describing two problems, their effects, and the solution you want.",
       "requirementsVi": [
-        "Nêu dịch vụ và hai vấn đề.",
-        "Giải thích ảnh hưởng cụ thể.",
-        "Yêu cầu cách giải quyết hợp lý."
+        "Dịch vụ, nơi và mục đích phàn nàn.",
+        "Phải thay bằng các vấn đề thực sự trong đề.",
+        "Tác động cụ thể, yêu cầu tương xứng và hỏi bước xử lý."
       ],
       "summaryVi": "Lên thực đơn giúp bớt mua thừa; kế hoạch cần linh hoạt để dùng được đồ còn lại khi lịch thay đổi.",
       "paragraphs": [
         {
-          "label": "Mục đích",
-          "text": "Dear Mr Green,\n\nI am writing to complain about a meal planning workshop, which I attended at the school meeting room last week. I had expected a practical session about food waste at home, but several parts of the advertised programme were not provided.",
-          "noteVi": "Nêu dịch vụ, thời điểm và sự không hài lòng."
+          "label": "Mở thư và mục đích",
+          "text": "Dear Ms Brown,\n\nI am writing to complain about a meal planning workshop, which I attended at the school meeting room. Unfortunately, the service did not meet the expectations set out in the information provided before I booked.",
+          "noteVi": "Dịch vụ, nơi và mục đích phàn nàn.",
+          "parts": [
+            {
+              "text": "Dear ",
+              "kind": "frame"
+            },
+            {
+              "text": "Ms Brown",
+              "kind": "detail",
+              "labelVi": "danh xưng và họ người nhận"
+            },
+            {
+              "text": ",\n\nI am writing to complain about ",
+              "kind": "frame"
+            },
+            {
+              "text": "a meal planning workshop",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ", which I attended at ",
+              "kind": "frame"
+            },
+            {
+              "text": "the school meeting room",
+              "kind": "detail",
+              "labelVi": "địa điểm"
+            },
+            {
+              "text": ". Unfortunately, the service did not meet the expectations set out in the information provided before I booked.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Dear [danh xưng và họ người nhận],\n\nI am writing to complain about [sự kiện / hoạt động], which I attended at [địa điểm]. Unfortunately, the service did not meet the expectations set out in the information provided before I booked."
         },
         {
-          "label": "Vấn đề đầu",
-          "text": "The notice stated that we would make a flexible menu and a practical shopping list. However, most of the session was a general presentation, and there was almost no time for practice. This was disappointing because I had joined specifically to understand how a plan makes it easier to match quantities with the number of meals needed.",
-          "noteVi": "So sánh điều quảng cáo và trải nghiệm thực tế."
+          "label": "Hai vấn đề",
+          "text": "The first problem was that there was almost no time for the advertised practical activity. In addition, the session started forty minutes late without an explanation. I had expected a practical opportunity to make a flexible menu and a practical shopping list, so these problems were particularly disappointing.",
+          "noteVi": "Phải thay bằng các vấn đề thực sự trong đề.",
+          "parts": [
+            {
+              "text": "The first problem was that ",
+              "kind": "frame"
+            },
+            {
+              "text": "there was almost no time for the advertised practical activity",
+              "kind": "detail",
+              "labelVi": "vấn đề thứ nhất — chủ ngữ + động từ"
+            },
+            {
+              "text": ". In addition, ",
+              "kind": "frame"
+            },
+            {
+              "text": "the session started forty minutes late without an explanation",
+              "kind": "detail",
+              "labelVi": "vấn đề thứ hai — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I had expected a practical opportunity to ",
+              "kind": "frame"
+            },
+            {
+              "text": "make a flexible menu and a practical shopping list",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ", so these problems were particularly disappointing.",
+              "kind": "frame"
+            }
+          ],
+          "template": "The first problem was that [vấn đề thứ nhất — chủ ngữ + động từ]. In addition, [vấn đề thứ hai — chủ ngữ + động từ]. I had expected a practical opportunity to [hoạt động — động từ nguyên mẫu], so these problems were particularly disappointing."
         },
         {
-          "label": "Vấn đề tiếp",
-          "text": "In addition, the session began forty minutes late without any explanation. I had brought a list of food already at home and arranged my day around the advertised starting time, so the delay caused unnecessary inconvenience. Several questions also remained unanswered when the centre closed.",
-          "noteVi": "Chi tiết có thể xử lý, không công kích người nhận."
+          "label": "Ảnh hưởng và yêu cầu",
+          "text": "As a result, I could not complete the practical task or ask all my questions. I would be grateful if you could offer a replacement practical session or a partial refund. Please explain how you intend to resolve the matter and when I can expect a response. I believe this is a reasonable request in view of the difficulties described above.",
+          "noteVi": "Tác động cụ thể, yêu cầu tương xứng và hỏi bước xử lý.",
+          "parts": [
+            {
+              "text": "As a result, ",
+              "kind": "frame"
+            },
+            {
+              "text": "I could not complete the practical task or ask all my questions",
+              "kind": "detail",
+              "labelVi": "ảnh hưởng — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I would be grateful if you could ",
+              "kind": "frame"
+            },
+            {
+              "text": "offer a replacement practical session or a partial refund",
+              "kind": "detail",
+              "labelVi": "yêu cầu giải quyết — động từ nguyên mẫu"
+            },
+            {
+              "text": ". Please explain how you intend to resolve the matter and when I can expect a response. I believe this is a reasonable request in view of the difficulties described above.",
+              "kind": "frame"
+            }
+          ],
+          "template": "As a result, [ảnh hưởng — chủ ngữ + động từ]. I would be grateful if you could [yêu cầu giải quyết — động từ nguyên mẫu]. Please explain how you intend to resolve the matter and when I can expect a response. I believe this is a reasonable request in view of the difficulties described above."
         },
         {
-          "label": "Yêu cầu và kết",
-          "text": "I would like you to offer a replacement practical session at no additional cost, or a partial refund if this is not possible. Please explain how you intend to resolve the matter.\n\nThank you for taking the time to read my letter. Please let me know if you need any further information. I look forward to your reply.\n\nYours sincerely,\nMinh Nguyen",
-          "noteVi": "Yêu cầu tương xứng và chờ phản hồi."
+          "label": "Kết thư",
+          "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\nMinh Nguyen",
+          "noteVi": "Biết tên người nhận: Dear Ms/Mr + họ → Yours sincerely. Chưa biết tên: Dear Sir or Madam → Yours faithfully.",
+          "parts": [
+            {
+              "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh Nguyen",
+              "kind": "detail",
+              "labelVi": "họ tên của bạn"
+            }
+          ],
+          "template": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n[họ tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 208,
-      "mainWordCount": 208,
+      "register": "formal",
+      "wordCount": 175,
+      "mainWordCount": 175,
       "phrases": [
         {
           "en": "plan meals",
@@ -569,40 +1417,146 @@
       "number": 9,
       "title": "Dọn rác bãi biển",
       "focus": "community beach clean-ups",
-      "prompt": "You paid to attend a community beach clean-up, but the activity did not match the notice. Write to Mr Green, the centre manager, describing two problems, their effects, and the solution you want.",
+      "prompt": "You paid to attend a community beach clean-up, but the activity did not match the notice. Write to Ms Brown, the centre manager, describing two problems, their effects, and the solution you want.",
       "requirementsVi": [
-        "Nêu dịch vụ và hai vấn đề.",
-        "Giải thích ảnh hưởng cụ thể.",
-        "Yêu cầu cách giải quyết hợp lý."
+        "Dịch vụ, nơi và mục đích phàn nàn.",
+        "Phải thay bằng các vấn đề thực sự trong đề.",
+        "Tác động cụ thể, yêu cầu tương xứng và hỏi bước xử lý."
       ],
       "summaryVi": "Dọn rác giúp cải thiện trước mắt; cần dùng kết quả để ngăn rác mới xuất hiện.",
       "paragraphs": [
         {
-          "label": "Mục đích",
-          "text": "Dear Mr Green,\n\nI am writing to complain about a community beach clean-up, which I attended at the beach entrance last week. I had expected a practical session about community beach clean-ups, but several parts of the advertised programme were not provided.",
-          "noteVi": "Nêu dịch vụ, thời điểm và sự không hài lòng."
+          "label": "Mở thư và mục đích",
+          "text": "Dear Ms Brown,\n\nI am writing to complain about a community beach clean-up, which I attended at the beach entrance. Unfortunately, the service did not meet the expectations set out in the information provided before I booked.",
+          "noteVi": "Dịch vụ, nơi và mục đích phàn nàn.",
+          "parts": [
+            {
+              "text": "Dear ",
+              "kind": "frame"
+            },
+            {
+              "text": "Ms Brown",
+              "kind": "detail",
+              "labelVi": "danh xưng và họ người nhận"
+            },
+            {
+              "text": ",\n\nI am writing to complain about ",
+              "kind": "frame"
+            },
+            {
+              "text": "a community beach clean-up",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ", which I attended at ",
+              "kind": "frame"
+            },
+            {
+              "text": "the beach entrance",
+              "kind": "detail",
+              "labelVi": "địa điểm"
+            },
+            {
+              "text": ". Unfortunately, the service did not meet the expectations set out in the information provided before I booked.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Dear [danh xưng và họ người nhận],\n\nI am writing to complain about [sự kiện / hoạt động], which I attended at [địa điểm]. Unfortunately, the service did not meet the expectations set out in the information provided before I booked."
         },
         {
-          "label": "Vấn đề đầu",
-          "text": "The notice stated that we would collect litter in assigned areas and record the most common items. However, most of the session was a general presentation, and there was almost no time for practice. This was disappointing because I had joined specifically to understand how collecting visible waste makes an environmental issue concrete rather than distant.",
-          "noteVi": "So sánh điều quảng cáo và trải nghiệm thực tế."
+          "label": "Hai vấn đề",
+          "text": "The first problem was that there was almost no time for the advertised practical activity. In addition, the session started forty minutes late without an explanation. I had expected a practical opportunity to collect litter in assigned areas and record the most common items, so these problems were particularly disappointing.",
+          "noteVi": "Phải thay bằng các vấn đề thực sự trong đề.",
+          "parts": [
+            {
+              "text": "The first problem was that ",
+              "kind": "frame"
+            },
+            {
+              "text": "there was almost no time for the advertised practical activity",
+              "kind": "detail",
+              "labelVi": "vấn đề thứ nhất — chủ ngữ + động từ"
+            },
+            {
+              "text": ". In addition, ",
+              "kind": "frame"
+            },
+            {
+              "text": "the session started forty minutes late without an explanation",
+              "kind": "detail",
+              "labelVi": "vấn đề thứ hai — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I had expected a practical opportunity to ",
+              "kind": "frame"
+            },
+            {
+              "text": "collect litter in assigned areas and record the most common items",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ", so these problems were particularly disappointing.",
+              "kind": "frame"
+            }
+          ],
+          "template": "The first problem was that [vấn đề thứ nhất — chủ ngữ + động từ]. In addition, [vấn đề thứ hai — chủ ngữ + động từ]. I had expected a practical opportunity to [hoạt động — động từ nguyên mẫu], so these problems were particularly disappointing."
         },
         {
-          "label": "Vấn đề tiếp",
-          "text": "In addition, the session began forty minutes late without any explanation. I had brought reusable gloves and a hat and arranged my day around the advertised starting time, so the delay caused unnecessary inconvenience. Several questions also remained unanswered when the centre closed.",
-          "noteVi": "Chi tiết có thể xử lý, không công kích người nhận."
+          "label": "Ảnh hưởng và yêu cầu",
+          "text": "As a result, I could not complete the practical task or ask all my questions. I would be grateful if you could offer a replacement practical session or a partial refund. Please explain how you intend to resolve the matter and when I can expect a response. I believe this is a reasonable request in view of the difficulties described above.",
+          "noteVi": "Tác động cụ thể, yêu cầu tương xứng và hỏi bước xử lý.",
+          "parts": [
+            {
+              "text": "As a result, ",
+              "kind": "frame"
+            },
+            {
+              "text": "I could not complete the practical task or ask all my questions",
+              "kind": "detail",
+              "labelVi": "ảnh hưởng — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I would be grateful if you could ",
+              "kind": "frame"
+            },
+            {
+              "text": "offer a replacement practical session or a partial refund",
+              "kind": "detail",
+              "labelVi": "yêu cầu giải quyết — động từ nguyên mẫu"
+            },
+            {
+              "text": ". Please explain how you intend to resolve the matter and when I can expect a response. I believe this is a reasonable request in view of the difficulties described above.",
+              "kind": "frame"
+            }
+          ],
+          "template": "As a result, [ảnh hưởng — chủ ngữ + động từ]. I would be grateful if you could [yêu cầu giải quyết — động từ nguyên mẫu]. Please explain how you intend to resolve the matter and when I can expect a response. I believe this is a reasonable request in view of the difficulties described above."
         },
         {
-          "label": "Yêu cầu và kết",
-          "text": "I would like you to offer a replacement practical session at no additional cost, or a partial refund if this is not possible. Please explain how you intend to resolve the matter.\n\nThank you for taking the time to read my letter. Please let me know if you need any further information. I look forward to your reply.\n\nYours sincerely,\nMinh Nguyen",
-          "noteVi": "Yêu cầu tương xứng và chờ phản hồi."
+          "label": "Kết thư",
+          "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\nMinh Nguyen",
+          "noteVi": "Biết tên người nhận: Dear Ms/Mr + họ → Yours sincerely. Chưa biết tên: Dear Sir or Madam → Yours faithfully.",
+          "parts": [
+            {
+              "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh Nguyen",
+              "kind": "detail",
+              "labelVi": "họ tên của bạn"
+            }
+          ],
+          "template": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n[họ tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 203,
-      "mainWordCount": 203,
+      "register": "formal",
+      "wordCount": 176,
+      "mainWordCount": 176,
       "phrases": [
         {
           "en": "a beach clean-up",
@@ -639,40 +1593,146 @@
       "number": 10,
       "title": "Tiết kiệm nước",
       "focus": "saving water in daily life",
-      "prompt": "You paid to attend a community water-saving session, but the activity did not match the notice. Write to Mr Green, the centre manager, describing two problems, their effects, and the solution you want.",
+      "prompt": "You paid to attend a community water-saving session, but the activity did not match the notice. Write to Ms Brown, the centre manager, describing two problems, their effects, and the solution you want.",
       "requirementsVi": [
-        "Nêu dịch vụ và hai vấn đề.",
-        "Giải thích ảnh hưởng cụ thể.",
-        "Yêu cầu cách giải quyết hợp lý."
+        "Dịch vụ, nơi và mục đích phàn nàn.",
+        "Phải thay bằng các vấn đề thực sự trong đề.",
+        "Tác động cụ thể, yêu cầu tương xứng và hỏi bước xử lý."
       ],
       "summaryVi": "Thói quen tiết kiệm nước cần đi cùng cách báo và sửa rò rỉ rõ trách nhiệm.",
       "paragraphs": [
         {
-          "label": "Mục đích",
-          "text": "Dear Mr Green,\n\nI am writing to complain about a community water-saving session, which I attended at the college activity room last week. I had expected a practical session about saving water in daily life, but several parts of the advertised programme were not provided.",
-          "noteVi": "Nêu dịch vụ, thời điểm và sự không hài lòng."
+          "label": "Mở thư và mục đích",
+          "text": "Dear Ms Brown,\n\nI am writing to complain about a community water-saving session, which I attended at the college activity room. Unfortunately, the service did not meet the expectations set out in the information provided before I booked.",
+          "noteVi": "Dịch vụ, nơi và mục đích phàn nàn.",
+          "parts": [
+            {
+              "text": "Dear ",
+              "kind": "frame"
+            },
+            {
+              "text": "Ms Brown",
+              "kind": "detail",
+              "labelVi": "danh xưng và họ người nhận"
+            },
+            {
+              "text": ",\n\nI am writing to complain about ",
+              "kind": "frame"
+            },
+            {
+              "text": "a community water-saving session",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ", which I attended at ",
+              "kind": "frame"
+            },
+            {
+              "text": "the college activity room",
+              "kind": "detail",
+              "labelVi": "địa điểm"
+            },
+            {
+              "text": ". Unfortunately, the service did not meet the expectations set out in the information provided before I booked.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Dear [danh xưng và họ người nhận],\n\nI am writing to complain about [sự kiện / hoạt động], which I attended at [địa điểm]. Unfortunately, the service did not meet the expectations set out in the information provided before I booked."
         },
         {
-          "label": "Vấn đề đầu",
-          "text": "The notice stated that we would identify common sources of waste and practise reporting leaks. However, most of the session was a general presentation, and there was almost no time for practice. This was disappointing because I had joined specifically to understand how noticing leaks and unnecessary running taps can reduce waste without removing essential uses.",
-          "noteVi": "So sánh điều quảng cáo và trải nghiệm thực tế."
+          "label": "Hai vấn đề",
+          "text": "The first problem was that there was almost no time for the advertised practical activity. In addition, the session started forty minutes late without an explanation. I had expected a practical opportunity to identify common sources of waste and practise reporting leaks, so these problems were particularly disappointing.",
+          "noteVi": "Phải thay bằng các vấn đề thực sự trong đề.",
+          "parts": [
+            {
+              "text": "The first problem was that ",
+              "kind": "frame"
+            },
+            {
+              "text": "there was almost no time for the advertised practical activity",
+              "kind": "detail",
+              "labelVi": "vấn đề thứ nhất — chủ ngữ + động từ"
+            },
+            {
+              "text": ". In addition, ",
+              "kind": "frame"
+            },
+            {
+              "text": "the session started forty minutes late without an explanation",
+              "kind": "detail",
+              "labelVi": "vấn đề thứ hai — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I had expected a practical opportunity to ",
+              "kind": "frame"
+            },
+            {
+              "text": "identify common sources of waste and practise reporting leaks",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ", so these problems were particularly disappointing.",
+              "kind": "frame"
+            }
+          ],
+          "template": "The first problem was that [vấn đề thứ nhất — chủ ngữ + động từ]. In addition, [vấn đề thứ hai — chủ ngữ + động từ]. I had expected a practical opportunity to [hoạt động — động từ nguyên mẫu], so these problems were particularly disappointing."
         },
         {
-          "label": "Vấn đề tiếp",
-          "text": "In addition, the session began forty minutes late without any explanation. I had brought a note of any water problems at home and arranged my day around the advertised starting time, so the delay caused unnecessary inconvenience. Several questions also remained unanswered when the centre closed.",
-          "noteVi": "Chi tiết có thể xử lý, không công kích người nhận."
+          "label": "Ảnh hưởng và yêu cầu",
+          "text": "As a result, I could not complete the practical task or ask all my questions. I would be grateful if you could offer a replacement practical session or a partial refund. Please explain how you intend to resolve the matter and when I can expect a response. I believe this is a reasonable request in view of the difficulties described above.",
+          "noteVi": "Tác động cụ thể, yêu cầu tương xứng và hỏi bước xử lý.",
+          "parts": [
+            {
+              "text": "As a result, ",
+              "kind": "frame"
+            },
+            {
+              "text": "I could not complete the practical task or ask all my questions",
+              "kind": "detail",
+              "labelVi": "ảnh hưởng — chủ ngữ + động từ"
+            },
+            {
+              "text": ". I would be grateful if you could ",
+              "kind": "frame"
+            },
+            {
+              "text": "offer a replacement practical session or a partial refund",
+              "kind": "detail",
+              "labelVi": "yêu cầu giải quyết — động từ nguyên mẫu"
+            },
+            {
+              "text": ". Please explain how you intend to resolve the matter and when I can expect a response. I believe this is a reasonable request in view of the difficulties described above.",
+              "kind": "frame"
+            }
+          ],
+          "template": "As a result, [ảnh hưởng — chủ ngữ + động từ]. I would be grateful if you could [yêu cầu giải quyết — động từ nguyên mẫu]. Please explain how you intend to resolve the matter and when I can expect a response. I believe this is a reasonable request in view of the difficulties described above."
         },
         {
-          "label": "Yêu cầu và kết",
-          "text": "I would like you to offer a replacement practical session at no additional cost, or a partial refund if this is not possible. Please explain how you intend to resolve the matter.\n\nThank you for taking the time to read my letter. Please let me know if you need any further information. I look forward to your reply.\n\nYours sincerely,\nMinh Nguyen",
-          "noteVi": "Yêu cầu tương xứng và chờ phản hồi."
+          "label": "Kết thư",
+          "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\nMinh Nguyen",
+          "noteVi": "Biết tên người nhận: Dear Ms/Mr + họ → Yours sincerely. Chưa biết tên: Dear Sir or Madam → Yours faithfully.",
+          "parts": [
+            {
+              "text": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh Nguyen",
+              "kind": "detail",
+              "labelVi": "họ tên của bạn"
+            }
+          ],
+          "template": "Thank you for your time and consideration. Please let me know if you require any further information. I look forward to hearing from you.\n\nYours sincerely,\n[họ tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 209,
-      "mainWordCount": 209,
+      "register": "formal",
+      "wordCount": 175,
+      "mainWordCount": 175,
       "phrases": [
         {
           "en": "repair a leak",
@@ -682,7 +1742,7 @@
         {
           "en": "essential uses",
           "vi": "nhu cầu sử dụng thiết yếu",
-          "inAnswer": true
+          "inAnswer": false
         },
         {
           "en": "a repair log",

@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-05-v1",
+  "version": "2026-11-05-v2-frames",
   "samples": [
     {
       "id": "writing-task1-reply-technology-01",
@@ -9,40 +9,155 @@
       "number": 1,
       "title": "Điện thoại trong lớp",
       "focus": "smartphones in the classroom",
-      "prompt": "Your friend Alex wants to know about a digital learning workshop. Write an email describing the activity, explaining the arrangements, and offering practical advice.",
+      "prompt": "Your friend Alex has asked for information about a digital learning workshop. Reply with details about the programme, the time and place, and what to bring.",
       "requirementsVi": [
-        "Giới thiệu hoạt động và lợi ích.",
-        "Nêu giờ, nơi và thứ cần mang.",
-        "Cho lời khuyên cụ thể và đề nghị hỗ trợ."
+        "Mở lời thân mật và nhắc đúng câu hỏi của bạn.",
+        "Trả lời các ý theo đề, dùng ví dụ cụ thể.",
+        "Chuẩn bị và mời hỏi thêm."
       ],
       "summaryVi": "Điện thoại có ích khi có nhiệm vụ rõ; thông báo và luật dùng không rõ dễ gây xao nhãng.",
       "paragraphs": [
         {
-          "label": "Mở thư",
-          "text": "Hi Alex,\n\nThanks for your email. You asked about a digital learning workshop, so I am happy to share the details. I thought of you when I saw the programme because you enjoy learning useful things with other people.",
-          "noteVi": "Cảm ơn, nhắc đúng câu hỏi của bạn."
+          "label": "Mở thư và mục đích",
+          "text": "Hi Alex,\n\nThanks for your email. It was lovely to hear from you. You asked me about a digital learning workshop, so I am happy to share some information. I hope it helps you decide what to do.",
+          "noteVi": "Mở lời thân mật và nhắc đúng câu hỏi của bạn.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nThanks for your email. It was lovely to hear from you. You asked me about ",
+              "kind": "frame"
+            },
+            {
+              "text": "a digital learning workshop",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ", so I am happy to share some information. I hope it helps you decide what to do.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nThanks for your email. It was lovely to hear from you. You asked me about [sự kiện / hoạt động], so I am happy to share some information. I hope it helps you decide what to do."
         },
         {
-          "label": "Hoạt động",
-          "text": "We will try a phone-based research task and discuss classroom rules. The aim is to connect the topic with everyday life rather than only listen to a long talk. One useful point is that students can quickly access useful learning material. For example, a class can compare two digital maps to explain how a neighbourhood has changed.",
-          "noteVi": "Điện thoại có ích khi có nhiệm vụ rõ; thông báo và luật dùng không rõ dễ gây xao nhãng."
+          "label": "Thông tin chính",
+          "text": "First of all, it will take place at the community centre on Saturday at nine in the morning. We will try a phone-based research task and discuss classroom rules. One useful point is that students can quickly access useful learning material. For example, a class can compare two digital maps to explain how a neighbourhood has changed.",
+          "noteVi": "Trả lời các ý theo đề, dùng ví dụ cụ thể.",
+          "parts": [
+            {
+              "text": "First of all, it will take place at ",
+              "kind": "frame"
+            },
+            {
+              "text": "the community centre",
+              "kind": "detail",
+              "labelVi": "địa điểm"
+            },
+            {
+              "text": " on ",
+              "kind": "frame"
+            },
+            {
+              "text": "Saturday at nine in the morning",
+              "kind": "detail",
+              "labelVi": "ngày và giờ"
+            },
+            {
+              "text": ". We will ",
+              "kind": "frame"
+            },
+            {
+              "text": "try a phone-based research task and discuss classroom rules",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". One useful point is that ",
+              "kind": "frame"
+            },
+            {
+              "text": "students can quickly access useful learning material",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". For example, ",
+              "kind": "frame"
+            },
+            {
+              "text": "a class can compare two digital maps to explain how a neighbourhood has changed",
+              "kind": "detail",
+              "labelVi": "ví dụ — chủ ngữ + động từ"
+            },
+            {
+              "text": ".",
+              "kind": "frame"
+            }
+          ],
+          "template": "First of all, it will take place at [địa điểm] on [ngày và giờ]. We will [hoạt động — động từ nguyên mẫu]. One useful point is that [lợi ích — chủ ngữ + động từ]. For example, [ví dụ — chủ ngữ + động từ]."
         },
         {
-          "label": "Sắp xếp và gợi ý",
-          "text": "The session is at the community centre on Saturday at nine in the morning. Please bring a charged phone and arrive about ten minutes early. If you want to prepare, think of one question about smartphones in the classroom. We can compare our notes afterwards and decide which ideas would be useful in our own lives.",
-          "noteVi": "Trả lời đủ thời gian, địa điểm, chuẩn bị."
+          "label": "Thông tin thêm",
+          "text": "One more thing to remember is to bring a charged phone. If you want to prepare, think of a question about smartphones in the classroom. We can compare our ideas afterwards. Let me know if there is anything else you would like to know.",
+          "noteVi": "Chuẩn bị và mời hỏi thêm.",
+          "parts": [
+            {
+              "text": "One more thing to remember is to bring ",
+              "kind": "frame"
+            },
+            {
+              "text": "a charged phone",
+              "kind": "detail",
+              "labelVi": "đồ cần mang"
+            },
+            {
+              "text": ". If you want to prepare, think of a question about ",
+              "kind": "frame"
+            },
+            {
+              "text": "smartphones in the classroom",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": ". We can compare our ideas afterwards. Let me know if there is anything else you would like to know.",
+              "kind": "frame"
+            }
+          ],
+          "template": "One more thing to remember is to bring [đồ cần mang]. If you want to prepare, think of a question about [chủ đề]. We can compare our ideas afterwards. Let me know if there is anything else you would like to know."
         },
         {
           "label": "Kết thư",
-          "text": "Please let me know what you think when you have a moment. I would be happy to answer any other questions.\n\nBest wishes,\nMinh",
-          "noteVi": "Mời hỏi thêm và ký tên thân mật."
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 176,
-      "mainWordCount": 176,
+      "register": "informal",
+      "wordCount": 173,
+      "mainWordCount": 173,
       "phrases": [
         {
           "en": "a planned activity",
@@ -64,10 +179,6 @@
         {
           "en": "For example",
           "vi": "Ví dụ…"
-        },
-        {
-          "en": "Please let me know",
-          "vi": "Hãy cho tôi biết…"
         }
       ]
     },
@@ -79,40 +190,155 @@
       "number": 2,
       "title": "Mạng xã hội",
       "focus": "social media use",
-      "prompt": "Your friend Alex wants to know about a balanced social media workshop. Write an email describing the activity, explaining the arrangements, and offering practical advice.",
+      "prompt": "Your friend Alex has asked for information about a balanced social media workshop. Reply with details about the programme, the time and place, and what to bring.",
       "requirementsVi": [
-        "Giới thiệu hoạt động và lợi ích.",
-        "Nêu giờ, nơi và thứ cần mang.",
-        "Cho lời khuyên cụ thể và đề nghị hỗ trợ."
+        "Mở lời thân mật và nhắc đúng câu hỏi của bạn.",
+        "Trả lời các ý theo đề, dùng ví dụ cụ thể.",
+        "Chuẩn bị và mời hỏi thêm."
       ],
       "summaryVi": "Giới hạn thời gian giúp bảo vệ việc học và nghỉ ngơi; nên tách tin nhắn cần thiết khỏi lướt vô thức.",
       "paragraphs": [
         {
-          "label": "Mở thư",
-          "text": "Hi Alex,\n\nThanks for your email. You asked about a balanced social media workshop, so I am happy to share the details. I thought of you when I saw the programme because you enjoy learning useful things with other people.",
-          "noteVi": "Cảm ơn, nhắc đúng câu hỏi của bạn."
+          "label": "Mở thư và mục đích",
+          "text": "Hi Alex,\n\nThanks for your email. It was lovely to hear from you. You asked me about a balanced social media workshop, so I am happy to share some information. I hope it helps you decide what to do.",
+          "noteVi": "Mở lời thân mật và nhắc đúng câu hỏi của bạn.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nThanks for your email. It was lovely to hear from you. You asked me about ",
+              "kind": "frame"
+            },
+            {
+              "text": "a balanced social media workshop",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ", so I am happy to share some information. I hope it helps you decide what to do.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nThanks for your email. It was lovely to hear from you. You asked me about [sự kiện / hoạt động], so I am happy to share some information. I hope it helps you decide what to do."
         },
         {
-          "label": "Hoạt động",
-          "text": "We will review phone habits and plan useful limits. The aim is to connect the topic with everyday life rather than only listen to a long talk. One useful point is that people can protect time for study, work and sleep. For example, a student can put the phone away after answering messages and spend the next hour preparing for a test.",
-          "noteVi": "Giới hạn thời gian giúp bảo vệ việc học và nghỉ ngơi; nên tách tin nhắn cần thiết khỏi lướt vô thức."
+          "label": "Thông tin chính",
+          "text": "First of all, it will take place at the local library meeting room on Sunday at two in the afternoon. We will review phone habits and plan useful limits. One useful point is that people can protect time for study, work and sleep. For example, a student can put the phone away after answering messages and spend the next hour preparing for a test.",
+          "noteVi": "Trả lời các ý theo đề, dùng ví dụ cụ thể.",
+          "parts": [
+            {
+              "text": "First of all, it will take place at ",
+              "kind": "frame"
+            },
+            {
+              "text": "the local library meeting room",
+              "kind": "detail",
+              "labelVi": "địa điểm"
+            },
+            {
+              "text": " on ",
+              "kind": "frame"
+            },
+            {
+              "text": "Sunday at two in the afternoon",
+              "kind": "detail",
+              "labelVi": "ngày và giờ"
+            },
+            {
+              "text": ". We will ",
+              "kind": "frame"
+            },
+            {
+              "text": "review phone habits and plan useful limits",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". One useful point is that ",
+              "kind": "frame"
+            },
+            {
+              "text": "people can protect time for study, work and sleep",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". For example, ",
+              "kind": "frame"
+            },
+            {
+              "text": "a student can put the phone away after answering messages and spend the next hour preparing for a test",
+              "kind": "detail",
+              "labelVi": "ví dụ — chủ ngữ + động từ"
+            },
+            {
+              "text": ".",
+              "kind": "frame"
+            }
+          ],
+          "template": "First of all, it will take place at [địa điểm] on [ngày và giờ]. We will [hoạt động — động từ nguyên mẫu]. One useful point is that [lợi ích — chủ ngữ + động từ]. For example, [ví dụ — chủ ngữ + động từ]."
         },
         {
-          "label": "Sắp xếp và gợi ý",
-          "text": "The session is at the local library meeting room on Sunday at two in the afternoon. Please bring a record of recent screen time and arrive about ten minutes early. If you want to prepare, think of one question about social media use. We can compare our notes afterwards and decide which ideas would be useful in our own lives.",
-          "noteVi": "Trả lời đủ thời gian, địa điểm, chuẩn bị."
+          "label": "Thông tin thêm",
+          "text": "One more thing to remember is to bring a record of recent screen time. If you want to prepare, think of a question about social media use. We can compare our ideas afterwards. Let me know if there is anything else you would like to know.",
+          "noteVi": "Chuẩn bị và mời hỏi thêm.",
+          "parts": [
+            {
+              "text": "One more thing to remember is to bring ",
+              "kind": "frame"
+            },
+            {
+              "text": "a record of recent screen time",
+              "kind": "detail",
+              "labelVi": "đồ cần mang"
+            },
+            {
+              "text": ". If you want to prepare, think of a question about ",
+              "kind": "frame"
+            },
+            {
+              "text": "social media use",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": ". We can compare our ideas afterwards. Let me know if there is anything else you would like to know.",
+              "kind": "frame"
+            }
+          ],
+          "template": "One more thing to remember is to bring [đồ cần mang]. If you want to prepare, think of a question about [chủ đề]. We can compare our ideas afterwards. Let me know if there is anything else you would like to know."
         },
         {
           "label": "Kết thư",
-          "text": "Please let me know what you think when you have a moment. I would be happy to answer any other questions.\n\nBest wishes,\nMinh",
-          "noteVi": "Mời hỏi thêm và ký tên thân mật."
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 186,
-      "mainWordCount": 186,
+      "register": "informal",
+      "wordCount": 183,
+      "mainWordCount": 183,
       "phrases": [
         {
           "en": "set clear limits",
@@ -134,10 +360,6 @@
         {
           "en": "For example",
           "vi": "Ví dụ…"
-        },
-        {
-          "en": "Please let me know",
-          "vi": "Hãy cho tôi biết…"
         }
       ]
     },
@@ -149,40 +371,155 @@
       "number": 3,
       "title": "Mua sắm online",
       "focus": "online shopping",
-      "prompt": "Your friend Alex wants to know about an online shopping skills session. Write an email describing the activity, explaining the arrangements, and offering practical advice.",
+      "prompt": "Your friend Alex has asked for information about an online shopping skills session. Reply with details about the programme, the time and place, and what to bring.",
       "requirementsVi": [
-        "Giới thiệu hoạt động và lợi ích.",
-        "Nêu giờ, nơi và thứ cần mang.",
-        "Cho lời khuyên cụ thể và đề nghị hỗ trợ."
+        "Mở lời thân mật và nhắc đúng câu hỏi của bạn.",
+        "Trả lời các ý theo đề, dùng ví dụ cụ thể.",
+        "Chuẩn bị và mời hỏi thêm."
       ],
       "summaryVi": "Mua online tiết kiệm công đi lại; kiểm tra kích thước và điều kiện trả hàng giúp giảm rủi ro.",
       "paragraphs": [
         {
-          "label": "Mở thư",
-          "text": "Hi Alex,\n\nThanks for your email. You asked about an online shopping skills session, so I am happy to share the details. I thought of you when I saw the programme because you enjoy learning useful things with other people.",
-          "noteVi": "Cảm ơn, nhắc đúng câu hỏi của bạn."
+          "label": "Mở thư và mục đích",
+          "text": "Hi Alex,\n\nThanks for your email. It was lovely to hear from you. You asked me about an online shopping skills session, so I am happy to share some information. I hope it helps you decide what to do.",
+          "noteVi": "Mở lời thân mật và nhắc đúng câu hỏi của bạn.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nThanks for your email. It was lovely to hear from you. You asked me about ",
+              "kind": "frame"
+            },
+            {
+              "text": "an online shopping skills session",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ", so I am happy to share some information. I hope it helps you decide what to do.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nThanks for your email. It was lovely to hear from you. You asked me about [sự kiện / hoạt động], so I am happy to share some information. I hope it helps you decide what to do."
         },
         {
-          "label": "Hoạt động",
-          "text": "We will compare product pages and practise checking return policies. The aim is to connect the topic with everyday life rather than only listen to a long talk. One useful point is that customers can compare products without visiting several shops. For example, a parent can compare the size and price of school bags after the children have gone to bed.",
-          "noteVi": "Mua online tiết kiệm công đi lại; kiểm tra kích thước và điều kiện trả hàng giúp giảm rủi ro."
+          "label": "Thông tin chính",
+          "text": "First of all, it will take place at the school activity room on Friday at six in the evening. We will compare product pages and practise checking return policies. One useful point is that customers can compare products without visiting several shops. For example, a parent can compare the size and price of school bags after the children have gone to bed.",
+          "noteVi": "Trả lời các ý theo đề, dùng ví dụ cụ thể.",
+          "parts": [
+            {
+              "text": "First of all, it will take place at ",
+              "kind": "frame"
+            },
+            {
+              "text": "the school activity room",
+              "kind": "detail",
+              "labelVi": "địa điểm"
+            },
+            {
+              "text": " on ",
+              "kind": "frame"
+            },
+            {
+              "text": "Friday at six in the evening",
+              "kind": "detail",
+              "labelVi": "ngày và giờ"
+            },
+            {
+              "text": ". We will ",
+              "kind": "frame"
+            },
+            {
+              "text": "compare product pages and practise checking return policies",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". One useful point is that ",
+              "kind": "frame"
+            },
+            {
+              "text": "customers can compare products without visiting several shops",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". For example, ",
+              "kind": "frame"
+            },
+            {
+              "text": "a parent can compare the size and price of school bags after the children have gone to bed",
+              "kind": "detail",
+              "labelVi": "ví dụ — chủ ngữ + động từ"
+            },
+            {
+              "text": ".",
+              "kind": "frame"
+            }
+          ],
+          "template": "First of all, it will take place at [địa điểm] on [ngày và giờ]. We will [hoạt động — động từ nguyên mẫu]. One useful point is that [lợi ích — chủ ngữ + động từ]. For example, [ví dụ — chủ ngữ + động từ]."
         },
         {
-          "label": "Sắp xếp và gợi ý",
-          "text": "The session is at the school activity room on Friday at six in the evening. Please bring a sample product page and arrive about ten minutes early. If you want to prepare, think of one question about online shopping. We can compare our notes afterwards and decide which ideas would be useful in our own lives.",
-          "noteVi": "Trả lời đủ thời gian, địa điểm, chuẩn bị."
+          "label": "Thông tin thêm",
+          "text": "One more thing to remember is to bring a sample product page. If you want to prepare, think of a question about online shopping. We can compare our ideas afterwards. Let me know if there is anything else you would like to know.",
+          "noteVi": "Chuẩn bị và mời hỏi thêm.",
+          "parts": [
+            {
+              "text": "One more thing to remember is to bring ",
+              "kind": "frame"
+            },
+            {
+              "text": "a sample product page",
+              "kind": "detail",
+              "labelVi": "đồ cần mang"
+            },
+            {
+              "text": ". If you want to prepare, think of a question about ",
+              "kind": "frame"
+            },
+            {
+              "text": "online shopping",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": ". We can compare our ideas afterwards. Let me know if there is anything else you would like to know.",
+              "kind": "frame"
+            }
+          ],
+          "template": "One more thing to remember is to bring [đồ cần mang]. If you want to prepare, think of a question about [chủ đề]. We can compare our ideas afterwards. Let me know if there is anything else you would like to know."
         },
         {
           "label": "Kết thư",
-          "text": "Please let me know what you think when you have a moment. I would be happy to answer any other questions.\n\nBest wishes,\nMinh",
-          "noteVi": "Mời hỏi thêm và ký tên thân mật."
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 181,
-      "mainWordCount": 181,
+      "register": "informal",
+      "wordCount": 178,
+      "mainWordCount": 178,
       "phrases": [
         {
           "en": "compare products",
@@ -204,10 +541,6 @@
         {
           "en": "For example",
           "vi": "Ví dụ…"
-        },
-        {
-          "en": "Please let me know",
-          "vi": "Hãy cho tôi biết…"
         }
       ]
     },
@@ -219,40 +552,155 @@
       "number": 4,
       "title": "AI trong học tập",
       "focus": "AI tools for study",
-      "prompt": "Your friend Alex wants to know about a responsible AI study session. Write an email describing the activity, explaining the arrangements, and offering practical advice.",
+      "prompt": "Your friend Alex has asked for information about a responsible AI study session. Reply with details about the programme, the time and place, and what to bring.",
       "requirementsVi": [
-        "Giới thiệu hoạt động và lợi ích.",
-        "Nêu giờ, nơi và thứ cần mang.",
-        "Cho lời khuyên cụ thể và đề nghị hỗ trợ."
+        "Mở lời thân mật và nhắc đúng câu hỏi của bạn.",
+        "Trả lời các ý theo đề, dùng ví dụ cụ thể.",
+        "Chuẩn bị và mời hỏi thêm."
       ],
       "summaryVi": "AI hỗ trợ giải thích và luyện tập; cần kiểm tra thông tin và tự làm phần suy nghĩ chính.",
       "paragraphs": [
         {
-          "label": "Mở thư",
-          "text": "Hi Alex,\n\nThanks for your email. You asked about a responsible AI study session, so I am happy to share the details. I thought of you when I saw the programme because you enjoy learning useful things with other people.",
-          "noteVi": "Cảm ơn, nhắc đúng câu hỏi của bạn."
+          "label": "Mở thư và mục đích",
+          "text": "Hi Alex,\n\nThanks for your email. It was lovely to hear from you. You asked me about a responsible AI study session, so I am happy to share some information. I hope it helps you decide what to do.",
+          "noteVi": "Mở lời thân mật và nhắc đúng câu hỏi của bạn.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nThanks for your email. It was lovely to hear from you. You asked me about ",
+              "kind": "frame"
+            },
+            {
+              "text": "a responsible AI study session",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ", so I am happy to share some information. I hope it helps you decide what to do.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nThanks for your email. It was lovely to hear from you. You asked me about [sự kiện / hoạt động], so I am happy to share some information. I hope it helps you decide what to do."
         },
         {
-          "label": "Hoạt động",
-          "text": "We will compare an AI explanation with checked learning materials. The aim is to connect the topic with everyday life rather than only listen to a long talk. One useful point is that learners can get additional explanations and practice ideas. For example, a learner can ask for two simple examples of a grammar pattern and then write an original sentence.",
-          "noteVi": "AI hỗ trợ giải thích và luyện tập; cần kiểm tra thông tin và tự làm phần suy nghĩ chính."
+          "label": "Thông tin chính",
+          "text": "First of all, it will take place at the neighbourhood hall on Saturday at ten in the morning. We will compare an AI explanation with checked learning materials. One useful point is that learners can get additional explanations and practice ideas. For example, a learner can ask for two simple examples of a grammar pattern and then write an original sentence.",
+          "noteVi": "Trả lời các ý theo đề, dùng ví dụ cụ thể.",
+          "parts": [
+            {
+              "text": "First of all, it will take place at ",
+              "kind": "frame"
+            },
+            {
+              "text": "the neighbourhood hall",
+              "kind": "detail",
+              "labelVi": "địa điểm"
+            },
+            {
+              "text": " on ",
+              "kind": "frame"
+            },
+            {
+              "text": "Saturday at ten in the morning",
+              "kind": "detail",
+              "labelVi": "ngày và giờ"
+            },
+            {
+              "text": ". We will ",
+              "kind": "frame"
+            },
+            {
+              "text": "compare an AI explanation with checked learning materials",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". One useful point is that ",
+              "kind": "frame"
+            },
+            {
+              "text": "learners can get additional explanations and practice ideas",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". For example, ",
+              "kind": "frame"
+            },
+            {
+              "text": "a learner can ask for two simple examples of a grammar pattern and then write an original sentence",
+              "kind": "detail",
+              "labelVi": "ví dụ — chủ ngữ + động từ"
+            },
+            {
+              "text": ".",
+              "kind": "frame"
+            }
+          ],
+          "template": "First of all, it will take place at [địa điểm] on [ngày và giờ]. We will [hoạt động — động từ nguyên mẫu]. One useful point is that [lợi ích — chủ ngữ + động từ]. For example, [ví dụ — chủ ngữ + động từ]."
         },
         {
-          "label": "Sắp xếp và gợi ý",
-          "text": "The session is at the neighbourhood hall on Saturday at ten in the morning. Please bring a short study question and arrive about ten minutes early. If you want to prepare, think of one question about AI tools for study. We can compare our notes afterwards and decide which ideas would be useful in our own lives.",
-          "noteVi": "Trả lời đủ thời gian, địa điểm, chuẩn bị."
+          "label": "Thông tin thêm",
+          "text": "One more thing to remember is to bring a short study question. If you want to prepare, think of a question about AI tools for study. We can compare our ideas afterwards. Let me know if there is anything else you would like to know.",
+          "noteVi": "Chuẩn bị và mời hỏi thêm.",
+          "parts": [
+            {
+              "text": "One more thing to remember is to bring ",
+              "kind": "frame"
+            },
+            {
+              "text": "a short study question",
+              "kind": "detail",
+              "labelVi": "đồ cần mang"
+            },
+            {
+              "text": ". If you want to prepare, think of a question about ",
+              "kind": "frame"
+            },
+            {
+              "text": "AI tools for study",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": ". We can compare our ideas afterwards. Let me know if there is anything else you would like to know.",
+              "kind": "frame"
+            }
+          ],
+          "template": "One more thing to remember is to bring [đồ cần mang]. If you want to prepare, think of a question about [chủ đề]. We can compare our ideas afterwards. Let me know if there is anything else you would like to know."
         },
         {
           "label": "Kết thư",
-          "text": "Please let me know what you think when you have a moment. I would be happy to answer any other questions.\n\nBest wishes,\nMinh",
-          "noteVi": "Mời hỏi thêm và ký tên thân mật."
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 182,
-      "mainWordCount": 182,
+      "register": "informal",
+      "wordCount": 179,
+      "mainWordCount": 179,
       "phrases": [
         {
           "en": "a study aid",
@@ -274,10 +722,6 @@
         {
           "en": "For example",
           "vi": "Ví dụ…"
-        },
-        {
-          "en": "Please let me know",
-          "vi": "Hãy cho tôi biết…"
         }
       ]
     },
@@ -289,40 +733,155 @@
       "number": 5,
       "title": "Dữ liệu cá nhân",
       "focus": "personal information online",
-      "prompt": "Your friend Alex wants to know about a digital privacy workshop. Write an email describing the activity, explaining the arrangements, and offering practical advice.",
+      "prompt": "Your friend Alex has asked for information about a digital privacy workshop. Reply with details about the programme, the time and place, and what to bring.",
       "requirementsVi": [
-        "Giới thiệu hoạt động và lợi ích.",
-        "Nêu giờ, nơi và thứ cần mang.",
-        "Cho lời khuyên cụ thể và đề nghị hỗ trợ."
+        "Mở lời thân mật và nhắc đúng câu hỏi của bạn.",
+        "Trả lời các ý theo đề, dùng ví dụ cụ thể.",
+        "Chuẩn bị và mời hỏi thêm."
       ],
       "summaryVi": "Dạy bảo vệ thông tin cần thao tác dễ làm và ví dụ cụ thể, không chỉ liệt kê rủi ro.",
       "paragraphs": [
         {
-          "label": "Mở thư",
-          "text": "Hi Alex,\n\nThanks for your email. You asked about a digital privacy workshop, so I am happy to share the details. I thought of you when I saw the programme because you enjoy learning useful things with other people.",
-          "noteVi": "Cảm ơn, nhắc đúng câu hỏi của bạn."
+          "label": "Mở thư và mục đích",
+          "text": "Hi Alex,\n\nThanks for your email. It was lovely to hear from you. You asked me about a digital privacy workshop, so I am happy to share some information. I hope it helps you decide what to do.",
+          "noteVi": "Mở lời thân mật và nhắc đúng câu hỏi của bạn.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nThanks for your email. It was lovely to hear from you. You asked me about ",
+              "kind": "frame"
+            },
+            {
+              "text": "a digital privacy workshop",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ", so I am happy to share some information. I hope it helps you decide what to do.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nThanks for your email. It was lovely to hear from you. You asked me about [sự kiện / hoạt động], so I am happy to share some information. I hope it helps you decide what to do."
         },
         {
-          "label": "Hoạt động",
-          "text": "We will review a fictional profile and practise simple privacy checks. The aim is to connect the topic with everyday life rather than only listen to a long talk. One useful point is that young people can make more careful choices about what they share. For example, a pupil can remove a home address from a public profile and restrict who can see photographs.",
-          "noteVi": "Dạy bảo vệ thông tin cần thao tác dễ làm và ví dụ cụ thể, không chỉ liệt kê rủi ro."
+          "label": "Thông tin chính",
+          "text": "First of all, it will take place at the college workshop room on Sunday at three in the afternoon. We will review a fictional profile and practise simple privacy checks. One useful point is that young people can make more careful choices about what they share. For example, a pupil can remove a home address from a public profile and restrict who can see photographs.",
+          "noteVi": "Trả lời các ý theo đề, dùng ví dụ cụ thể.",
+          "parts": [
+            {
+              "text": "First of all, it will take place at ",
+              "kind": "frame"
+            },
+            {
+              "text": "the college workshop room",
+              "kind": "detail",
+              "labelVi": "địa điểm"
+            },
+            {
+              "text": " on ",
+              "kind": "frame"
+            },
+            {
+              "text": "Sunday at three in the afternoon",
+              "kind": "detail",
+              "labelVi": "ngày và giờ"
+            },
+            {
+              "text": ". We will ",
+              "kind": "frame"
+            },
+            {
+              "text": "review a fictional profile and practise simple privacy checks",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". One useful point is that ",
+              "kind": "frame"
+            },
+            {
+              "text": "young people can make more careful choices about what they share",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". For example, ",
+              "kind": "frame"
+            },
+            {
+              "text": "a pupil can remove a home address from a public profile and restrict who can see photographs",
+              "kind": "detail",
+              "labelVi": "ví dụ — chủ ngữ + động từ"
+            },
+            {
+              "text": ".",
+              "kind": "frame"
+            }
+          ],
+          "template": "First of all, it will take place at [địa điểm] on [ngày và giờ]. We will [hoạt động — động từ nguyên mẫu]. One useful point is that [lợi ích — chủ ngữ + động từ]. For example, [ví dụ — chủ ngữ + động từ]."
         },
         {
-          "label": "Sắp xếp và gợi ý",
-          "text": "The session is at the college workshop room on Sunday at three in the afternoon. Please bring a device with internet access and arrive about ten minutes early. If you want to prepare, think of one question about personal information online. We can compare our notes afterwards and decide which ideas would be useful in our own lives.",
-          "noteVi": "Trả lời đủ thời gian, địa điểm, chuẩn bị."
+          "label": "Thông tin thêm",
+          "text": "One more thing to remember is to bring a device with internet access. If you want to prepare, think of a question about personal information online. We can compare our ideas afterwards. Let me know if there is anything else you would like to know.",
+          "noteVi": "Chuẩn bị và mời hỏi thêm.",
+          "parts": [
+            {
+              "text": "One more thing to remember is to bring ",
+              "kind": "frame"
+            },
+            {
+              "text": "a device with internet access",
+              "kind": "detail",
+              "labelVi": "đồ cần mang"
+            },
+            {
+              "text": ". If you want to prepare, think of a question about ",
+              "kind": "frame"
+            },
+            {
+              "text": "personal information online",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": ". We can compare our ideas afterwards. Let me know if there is anything else you would like to know.",
+              "kind": "frame"
+            }
+          ],
+          "template": "One more thing to remember is to bring [đồ cần mang]. If you want to prepare, think of a question about [chủ đề]. We can compare our ideas afterwards. Let me know if there is anything else you would like to know."
         },
         {
           "label": "Kết thư",
-          "text": "Please let me know what you think when you have a moment. I would be happy to answer any other questions.\n\nBest wishes,\nMinh",
-          "noteVi": "Mời hỏi thêm và ký tên thân mật."
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 185,
-      "mainWordCount": 185,
+      "register": "informal",
+      "wordCount": 182,
+      "mainWordCount": 182,
       "phrases": [
         {
           "en": "personal information",
@@ -344,10 +903,6 @@
         {
           "en": "For example",
           "vi": "Ví dụ…"
-        },
-        {
-          "en": "Please let me know",
-          "vi": "Hãy cho tôi biết…"
         }
       ]
     },
@@ -359,40 +914,155 @@
       "number": 6,
       "title": "Làm việc từ xa",
       "focus": "remote work",
-      "prompt": "Your friend Alex wants to know about a remote teamwork session. Write an email describing the activity, explaining the arrangements, and offering practical advice.",
+      "prompt": "Your friend Alex has asked for information about a remote teamwork session. Reply with details about the programme, the time and place, and what to bring.",
       "requirementsVi": [
-        "Giới thiệu hoạt động và lợi ích.",
-        "Nêu giờ, nơi và thứ cần mang.",
-        "Cho lời khuyên cụ thể và đề nghị hỗ trợ."
+        "Mở lời thân mật và nhắc đúng câu hỏi của bạn.",
+        "Trả lời các ý theo đề, dùng ví dụ cụ thể.",
+        "Chuẩn bị và mời hỏi thêm."
       ],
       "summaryVi": "Làm từ xa tiết kiệm đi lại; đội nhóm cần cách trao đổi và hỗ trợ nhân viên mới rõ ràng.",
       "paragraphs": [
         {
-          "label": "Mở thư",
-          "text": "Hi Alex,\n\nThanks for your email. You asked about a remote teamwork session, so I am happy to share the details. I thought of you when I saw the programme because you enjoy learning useful things with other people.",
-          "noteVi": "Cảm ơn, nhắc đúng câu hỏi của bạn."
+          "label": "Mở thư và mục đích",
+          "text": "Hi Alex,\n\nThanks for your email. It was lovely to hear from you. You asked me about a remote teamwork session, so I am happy to share some information. I hope it helps you decide what to do.",
+          "noteVi": "Mở lời thân mật và nhắc đúng câu hỏi của bạn.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nThanks for your email. It was lovely to hear from you. You asked me about ",
+              "kind": "frame"
+            },
+            {
+              "text": "a remote teamwork session",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ", so I am happy to share some information. I hope it helps you decide what to do.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nThanks for your email. It was lovely to hear from you. You asked me about [sự kiện / hoạt động], so I am happy to share some information. I hope it helps you decide what to do."
         },
         {
-          "label": "Hoạt động",
-          "text": "We will practise sharing tasks and asking for help online. The aim is to connect the topic with everyday life rather than only listen to a long talk. One useful point is that employees can save time spent travelling. For example, a parent can finish a report at home and still collect a child from school on time.",
-          "noteVi": "Làm từ xa tiết kiệm đi lại; đội nhóm cần cách trao đổi và hỗ trợ nhân viên mới rõ ràng."
+          "label": "Thông tin chính",
+          "text": "First of all, it will take place at the community centre on Wednesday at six in the evening. We will practise sharing tasks and asking for help online. One useful point is that employees can save time spent travelling. For example, a parent can finish a report at home and still collect a child from school on time.",
+          "noteVi": "Trả lời các ý theo đề, dùng ví dụ cụ thể.",
+          "parts": [
+            {
+              "text": "First of all, it will take place at ",
+              "kind": "frame"
+            },
+            {
+              "text": "the community centre",
+              "kind": "detail",
+              "labelVi": "địa điểm"
+            },
+            {
+              "text": " on ",
+              "kind": "frame"
+            },
+            {
+              "text": "Wednesday at six in the evening",
+              "kind": "detail",
+              "labelVi": "ngày và giờ"
+            },
+            {
+              "text": ". We will ",
+              "kind": "frame"
+            },
+            {
+              "text": "practise sharing tasks and asking for help online",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". One useful point is that ",
+              "kind": "frame"
+            },
+            {
+              "text": "employees can save time spent travelling",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". For example, ",
+              "kind": "frame"
+            },
+            {
+              "text": "a parent can finish a report at home and still collect a child from school on time",
+              "kind": "detail",
+              "labelVi": "ví dụ — chủ ngữ + động từ"
+            },
+            {
+              "text": ".",
+              "kind": "frame"
+            }
+          ],
+          "template": "First of all, it will take place at [địa điểm] on [ngày và giờ]. We will [hoạt động — động từ nguyên mẫu]. One useful point is that [lợi ích — chủ ngữ + động từ]. For example, [ví dụ — chủ ngữ + động từ]."
         },
         {
-          "label": "Sắp xếp và gợi ý",
-          "text": "The session is at the community centre on Wednesday at six in the evening. Please bring headphones and a laptop and arrive about ten minutes early. If you want to prepare, think of one question about remote work. We can compare our notes afterwards and decide which ideas would be useful in our own lives.",
-          "noteVi": "Trả lời đủ thời gian, địa điểm, chuẩn bị."
+          "label": "Thông tin thêm",
+          "text": "One more thing to remember is to bring headphones and a laptop. If you want to prepare, think of a question about remote work. We can compare our ideas afterwards. Let me know if there is anything else you would like to know.",
+          "noteVi": "Chuẩn bị và mời hỏi thêm.",
+          "parts": [
+            {
+              "text": "One more thing to remember is to bring ",
+              "kind": "frame"
+            },
+            {
+              "text": "headphones and a laptop",
+              "kind": "detail",
+              "labelVi": "đồ cần mang"
+            },
+            {
+              "text": ". If you want to prepare, think of a question about ",
+              "kind": "frame"
+            },
+            {
+              "text": "remote work",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": ". We can compare our ideas afterwards. Let me know if there is anything else you would like to know.",
+              "kind": "frame"
+            }
+          ],
+          "template": "One more thing to remember is to bring [đồ cần mang]. If you want to prepare, think of a question about [chủ đề]. We can compare our ideas afterwards. Let me know if there is anything else you would like to know."
         },
         {
           "label": "Kết thư",
-          "text": "Please let me know what you think when you have a moment. I would be happy to answer any other questions.\n\nBest wishes,\nMinh",
-          "noteVi": "Mời hỏi thêm và ký tên thân mật."
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 176,
-      "mainWordCount": 176,
+      "register": "informal",
+      "wordCount": 173,
+      "mainWordCount": 173,
       "phrases": [
         {
           "en": "save commuting time",
@@ -414,10 +1084,6 @@
         {
           "en": "For example",
           "vi": "Ví dụ…"
-        },
-        {
-          "en": "Please let me know",
-          "vi": "Hãy cho tôi biết…"
         }
       ]
     },
@@ -429,40 +1095,155 @@
       "number": 7,
       "title": "Học máy tính cho người lớn tuổi",
       "focus": "computer lessons for older adults",
-      "prompt": "Your friend Alex wants to know about a beginner computer class. Write an email describing the activity, explaining the arrangements, and offering practical advice.",
+      "prompt": "Your friend Alex has asked for information about a beginner computer class. Reply with details about the programme, the time and place, and what to bring.",
       "requirementsVi": [
-        "Giới thiệu hoạt động và lợi ích.",
-        "Nêu giờ, nơi và thứ cần mang.",
-        "Cho lời khuyên cụ thể và đề nghị hỗ trợ."
+        "Mở lời thân mật và nhắc đúng câu hỏi của bạn.",
+        "Trả lời các ý theo đề, dùng ví dụ cụ thể.",
+        "Chuẩn bị và mời hỏi thêm."
       ],
       "summaryVi": "Lớp công nghệ cho người lớn tuổi cần chậm, nhóm nhỏ và cho lặp lại thao tác.",
       "paragraphs": [
         {
-          "label": "Mở thư",
-          "text": "Hi Alex,\n\nThanks for your email. You asked about a beginner computer class, so I am happy to share the details. I thought of you when I saw the programme because you enjoy learning useful things with other people.",
-          "noteVi": "Cảm ơn, nhắc đúng câu hỏi của bạn."
+          "label": "Mở thư và mục đích",
+          "text": "Hi Alex,\n\nThanks for your email. It was lovely to hear from you. You asked me about a beginner computer class, so I am happy to share some information. I hope it helps you decide what to do.",
+          "noteVi": "Mở lời thân mật và nhắc đúng câu hỏi của bạn.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nThanks for your email. It was lovely to hear from you. You asked me about ",
+              "kind": "frame"
+            },
+            {
+              "text": "a beginner computer class",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ", so I am happy to share some information. I hope it helps you decide what to do.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nThanks for your email. It was lovely to hear from you. You asked me about [sự kiện / hoạt động], so I am happy to share some information. I hope it helps you decide what to do."
         },
         {
-          "label": "Hoạt động",
-          "text": "We will practise sending messages and joining a video call. The aim is to connect the topic with everyday life rather than only listen to a long talk. One useful point is that older people can use useful online services more independently. For example, an older learner can practise joining a video call and later speak to family members who live far away.",
-          "noteVi": "Lớp công nghệ cho người lớn tuổi cần chậm, nhóm nhỏ và cho lặp lại thao tác."
+          "label": "Thông tin chính",
+          "text": "First of all, it will take place at the local library on Saturday at two in the afternoon. We will practise sending messages and joining a video call. One useful point is that older people can use useful online services more independently. For example, an older learner can practise joining a video call and later speak to family members who live far away.",
+          "noteVi": "Trả lời các ý theo đề, dùng ví dụ cụ thể.",
+          "parts": [
+            {
+              "text": "First of all, it will take place at ",
+              "kind": "frame"
+            },
+            {
+              "text": "the local library",
+              "kind": "detail",
+              "labelVi": "địa điểm"
+            },
+            {
+              "text": " on ",
+              "kind": "frame"
+            },
+            {
+              "text": "Saturday at two in the afternoon",
+              "kind": "detail",
+              "labelVi": "ngày và giờ"
+            },
+            {
+              "text": ". We will ",
+              "kind": "frame"
+            },
+            {
+              "text": "practise sending messages and joining a video call",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". One useful point is that ",
+              "kind": "frame"
+            },
+            {
+              "text": "older people can use useful online services more independently",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". For example, ",
+              "kind": "frame"
+            },
+            {
+              "text": "an older learner can practise joining a video call and later speak to family members who live far away",
+              "kind": "detail",
+              "labelVi": "ví dụ — chủ ngữ + động từ"
+            },
+            {
+              "text": ".",
+              "kind": "frame"
+            }
+          ],
+          "template": "First of all, it will take place at [địa điểm] on [ngày và giờ]. We will [hoạt động — động từ nguyên mẫu]. One useful point is that [lợi ích — chủ ngữ + động từ]. For example, [ví dụ — chủ ngữ + động từ]."
         },
         {
-          "label": "Sắp xếp và gợi ý",
-          "text": "The session is at the local library on Saturday at two in the afternoon. Please bring a phone or tablet and arrive about ten minutes early. If you want to prepare, think of one question about computer lessons for older adults. We can compare our notes afterwards and decide which ideas would be useful in our own lives.",
-          "noteVi": "Trả lời đủ thời gian, địa điểm, chuẩn bị."
+          "label": "Thông tin thêm",
+          "text": "One more thing to remember is to bring a phone or tablet. If you want to prepare, think of a question about computer lessons for older adults. We can compare our ideas afterwards. Let me know if there is anything else you would like to know.",
+          "noteVi": "Chuẩn bị và mời hỏi thêm.",
+          "parts": [
+            {
+              "text": "One more thing to remember is to bring ",
+              "kind": "frame"
+            },
+            {
+              "text": "a phone or tablet",
+              "kind": "detail",
+              "labelVi": "đồ cần mang"
+            },
+            {
+              "text": ". If you want to prepare, think of a question about ",
+              "kind": "frame"
+            },
+            {
+              "text": "computer lessons for older adults",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": ". We can compare our ideas afterwards. Let me know if there is anything else you would like to know.",
+              "kind": "frame"
+            }
+          ],
+          "template": "One more thing to remember is to bring [đồ cần mang]. If you want to prepare, think of a question about [chủ đề]. We can compare our ideas afterwards. Let me know if there is anything else you would like to know."
         },
         {
           "label": "Kết thư",
-          "text": "Please let me know what you think when you have a moment. I would be happy to answer any other questions.\n\nBest wishes,\nMinh",
-          "noteVi": "Mời hỏi thêm và ký tên thân mật."
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 184,
-      "mainWordCount": 184,
+      "register": "informal",
+      "wordCount": 181,
+      "mainWordCount": 181,
       "phrases": [
         {
           "en": "step-by-step practice",
@@ -484,10 +1265,6 @@
         {
           "en": "For example",
           "vi": "Ví dụ…"
-        },
-        {
-          "en": "Please let me know",
-          "vi": "Hãy cho tôi biết…"
         }
       ]
     },
@@ -499,40 +1276,155 @@
       "number": 8,
       "title": "Đọc tin trên mạng",
       "focus": "online news",
-      "prompt": "Your friend Alex wants to know about a news reading workshop. Write an email describing the activity, explaining the arrangements, and offering practical advice.",
+      "prompt": "Your friend Alex has asked for information about a news reading workshop. Reply with details about the programme, the time and place, and what to bring.",
       "requirementsVi": [
-        "Giới thiệu hoạt động và lợi ích.",
-        "Nêu giờ, nơi và thứ cần mang.",
-        "Cho lời khuyên cụ thể và đề nghị hỗ trợ."
+        "Mở lời thân mật và nhắc đúng câu hỏi của bạn.",
+        "Trả lời các ý theo đề, dùng ví dụ cụ thể.",
+        "Chuẩn bị và mời hỏi thêm."
       ],
       "summaryVi": "Đọc nguồn gốc và ngữ cảnh giúp tránh chia sẻ tin sai; đừng phản ứng chỉ theo tiêu đề.",
       "paragraphs": [
         {
-          "label": "Mở thư",
-          "text": "Hi Alex,\n\nThanks for your email. You asked about a news reading workshop, so I am happy to share the details. I thought of you when I saw the programme because you enjoy learning useful things with other people.",
-          "noteVi": "Cảm ơn, nhắc đúng câu hỏi của bạn."
+          "label": "Mở thư và mục đích",
+          "text": "Hi Alex,\n\nThanks for your email. It was lovely to hear from you. You asked me about a news reading workshop, so I am happy to share some information. I hope it helps you decide what to do.",
+          "noteVi": "Mở lời thân mật và nhắc đúng câu hỏi của bạn.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nThanks for your email. It was lovely to hear from you. You asked me about ",
+              "kind": "frame"
+            },
+            {
+              "text": "a news reading workshop",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ", so I am happy to share some information. I hope it helps you decide what to do.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nThanks for your email. It was lovely to hear from you. You asked me about [sự kiện / hoạt động], so I am happy to share some information. I hope it helps you decide what to do."
         },
         {
-          "label": "Hoạt động",
-          "text": "We will compare headlines with full articles and check their sources. The aim is to connect the topic with everyday life rather than only listen to a long talk. One useful point is that readers can avoid spreading misleading information. For example, a reader can discover that an alarming photograph was taken years earlier in a different place.",
-          "noteVi": "Đọc nguồn gốc và ngữ cảnh giúp tránh chia sẻ tin sai; đừng phản ứng chỉ theo tiêu đề."
+          "label": "Thông tin chính",
+          "text": "First of all, it will take place at the school meeting room on Sunday at ten in the morning. We will compare headlines with full articles and check their sources. One useful point is that readers can avoid spreading misleading information. For example, a reader can discover that an alarming photograph was taken years earlier in a different place.",
+          "noteVi": "Trả lời các ý theo đề, dùng ví dụ cụ thể.",
+          "parts": [
+            {
+              "text": "First of all, it will take place at ",
+              "kind": "frame"
+            },
+            {
+              "text": "the school meeting room",
+              "kind": "detail",
+              "labelVi": "địa điểm"
+            },
+            {
+              "text": " on ",
+              "kind": "frame"
+            },
+            {
+              "text": "Sunday at ten in the morning",
+              "kind": "detail",
+              "labelVi": "ngày và giờ"
+            },
+            {
+              "text": ". We will ",
+              "kind": "frame"
+            },
+            {
+              "text": "compare headlines with full articles and check their sources",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". One useful point is that ",
+              "kind": "frame"
+            },
+            {
+              "text": "readers can avoid spreading misleading information",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". For example, ",
+              "kind": "frame"
+            },
+            {
+              "text": "a reader can discover that an alarming photograph was taken years earlier in a different place",
+              "kind": "detail",
+              "labelVi": "ví dụ — chủ ngữ + động từ"
+            },
+            {
+              "text": ".",
+              "kind": "frame"
+            }
+          ],
+          "template": "First of all, it will take place at [địa điểm] on [ngày và giờ]. We will [hoạt động — động từ nguyên mẫu]. One useful point is that [lợi ích — chủ ngữ + động từ]. For example, [ví dụ — chủ ngữ + động từ]."
         },
         {
-          "label": "Sắp xếp và gợi ý",
-          "text": "The session is at the school meeting room on Sunday at ten in the morning. Please bring a news article to discuss and arrive about ten minutes early. If you want to prepare, think of one question about online news. We can compare our notes afterwards and decide which ideas would be useful in our own lives.",
-          "noteVi": "Trả lời đủ thời gian, địa điểm, chuẩn bị."
+          "label": "Thông tin thêm",
+          "text": "One more thing to remember is to bring a news article to discuss. If you want to prepare, think of a question about online news. We can compare our ideas afterwards. Let me know if there is anything else you would like to know.",
+          "noteVi": "Chuẩn bị và mời hỏi thêm.",
+          "parts": [
+            {
+              "text": "One more thing to remember is to bring ",
+              "kind": "frame"
+            },
+            {
+              "text": "a news article to discuss",
+              "kind": "detail",
+              "labelVi": "đồ cần mang"
+            },
+            {
+              "text": ". If you want to prepare, think of a question about ",
+              "kind": "frame"
+            },
+            {
+              "text": "online news",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": ". We can compare our ideas afterwards. Let me know if there is anything else you would like to know.",
+              "kind": "frame"
+            }
+          ],
+          "template": "One more thing to remember is to bring [đồ cần mang]. If you want to prepare, think of a question about [chủ đề]. We can compare our ideas afterwards. Let me know if there is anything else you would like to know."
         },
         {
           "label": "Kết thư",
-          "text": "Please let me know what you think when you have a moment. I would be happy to answer any other questions.\n\nBest wishes,\nMinh",
-          "noteVi": "Mời hỏi thêm và ký tên thân mật."
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 178,
-      "mainWordCount": 178,
+      "register": "informal",
+      "wordCount": 175,
+      "mainWordCount": 175,
       "phrases": [
         {
           "en": "check the source",
@@ -554,10 +1446,6 @@
         {
           "en": "For example",
           "vi": "Ví dụ…"
-        },
-        {
-          "en": "Please let me know",
-          "vi": "Hãy cho tôi biết…"
         }
       ]
     },
@@ -569,40 +1457,155 @@
       "number": 9,
       "title": "Sửa thiết bị thay vì bỏ",
       "focus": "repairing electronic devices",
-      "prompt": "Your friend Alex wants to know about a community electronics repair event. Write an email describing the activity, explaining the arrangements, and offering practical advice.",
+      "prompt": "Your friend Alex has asked for information about a community electronics repair event. Reply with details about the programme, the time and place, and what to bring.",
       "requirementsVi": [
-        "Giới thiệu hoạt động và lợi ích.",
-        "Nêu giờ, nơi và thứ cần mang.",
-        "Cho lời khuyên cụ thể và đề nghị hỗ trợ."
+        "Mở lời thân mật và nhắc đúng câu hỏi của bạn.",
+        "Trả lời các ý theo đề, dùng ví dụ cụ thể.",
+        "Chuẩn bị và mời hỏi thêm."
       ],
       "summaryVi": "Sửa giúp kéo dài tuổi thọ đồ điện tử; cần biết chi phí và tính khả thi trước khi quyết định.",
       "paragraphs": [
         {
-          "label": "Mở thư",
-          "text": "Hi Alex,\n\nThanks for your email. You asked about a community electronics repair event, so I am happy to share the details. I thought of you when I saw the programme because you enjoy learning useful things with other people.",
-          "noteVi": "Cảm ơn, nhắc đúng câu hỏi của bạn."
+          "label": "Mở thư và mục đích",
+          "text": "Hi Alex,\n\nThanks for your email. It was lovely to hear from you. You asked me about a community electronics repair event, so I am happy to share some information. I hope it helps you decide what to do.",
+          "noteVi": "Mở lời thân mật và nhắc đúng câu hỏi của bạn.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nThanks for your email. It was lovely to hear from you. You asked me about ",
+              "kind": "frame"
+            },
+            {
+              "text": "a community electronics repair event",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ", so I am happy to share some information. I hope it helps you decide what to do.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nThanks for your email. It was lovely to hear from you. You asked me about [sự kiện / hoạt động], so I am happy to share some information. I hope it helps you decide what to do."
         },
         {
-          "label": "Hoạt động",
-          "text": "We will learn how to compare repair and replacement options. The aim is to connect the topic with everyday life rather than only listen to a long talk. One useful point is that a repair can extend the useful life of a product. For example, a laptop with a worn battery may still be useful for schoolwork after the battery is replaced.",
-          "noteVi": "Sửa giúp kéo dài tuổi thọ đồ điện tử; cần biết chi phí và tính khả thi trước khi quyết định."
+          "label": "Thông tin chính",
+          "text": "First of all, it will take place at the neighbourhood hall on Thursday at six in the evening. We will learn how to compare repair and replacement options. One useful point is that a repair can extend the useful life of a product. For example, a laptop with a worn battery may still be useful for schoolwork after the battery is replaced.",
+          "noteVi": "Trả lời các ý theo đề, dùng ví dụ cụ thể.",
+          "parts": [
+            {
+              "text": "First of all, it will take place at ",
+              "kind": "frame"
+            },
+            {
+              "text": "the neighbourhood hall",
+              "kind": "detail",
+              "labelVi": "địa điểm"
+            },
+            {
+              "text": " on ",
+              "kind": "frame"
+            },
+            {
+              "text": "Thursday at six in the evening",
+              "kind": "detail",
+              "labelVi": "ngày và giờ"
+            },
+            {
+              "text": ". We will ",
+              "kind": "frame"
+            },
+            {
+              "text": "learn how to compare repair and replacement options",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". One useful point is that ",
+              "kind": "frame"
+            },
+            {
+              "text": "a repair can extend the useful life of a product",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". For example, ",
+              "kind": "frame"
+            },
+            {
+              "text": "a laptop with a worn battery may still be useful for schoolwork after the battery is replaced",
+              "kind": "detail",
+              "labelVi": "ví dụ — chủ ngữ + động từ"
+            },
+            {
+              "text": ".",
+              "kind": "frame"
+            }
+          ],
+          "template": "First of all, it will take place at [địa điểm] on [ngày và giờ]. We will [hoạt động — động từ nguyên mẫu]. One useful point is that [lợi ích — chủ ngữ + động từ]. For example, [ví dụ — chủ ngữ + động từ]."
         },
         {
-          "label": "Sắp xếp và gợi ý",
-          "text": "The session is at the neighbourhood hall on Thursday at six in the evening. Please bring a description of a device problem and arrive about ten minutes early. If you want to prepare, think of one question about repairing electronic devices. We can compare our notes afterwards and decide which ideas would be useful in our own lives.",
-          "noteVi": "Trả lời đủ thời gian, địa điểm, chuẩn bị."
+          "label": "Thông tin thêm",
+          "text": "One more thing to remember is to bring a description of a device problem. If you want to prepare, think of a question about repairing electronic devices. We can compare our ideas afterwards. Let me know if there is anything else you would like to know.",
+          "noteVi": "Chuẩn bị và mời hỏi thêm.",
+          "parts": [
+            {
+              "text": "One more thing to remember is to bring ",
+              "kind": "frame"
+            },
+            {
+              "text": "a description of a device problem",
+              "kind": "detail",
+              "labelVi": "đồ cần mang"
+            },
+            {
+              "text": ". If you want to prepare, think of a question about ",
+              "kind": "frame"
+            },
+            {
+              "text": "repairing electronic devices",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": ". We can compare our ideas afterwards. Let me know if there is anything else you would like to know.",
+              "kind": "frame"
+            }
+          ],
+          "template": "One more thing to remember is to bring [đồ cần mang]. If you want to prepare, think of a question about [chủ đề]. We can compare our ideas afterwards. Let me know if there is anything else you would like to know."
         },
         {
           "label": "Kết thư",
-          "text": "Please let me know what you think when you have a moment. I would be happy to answer any other questions.\n\nBest wishes,\nMinh",
-          "noteVi": "Mời hỏi thêm và ký tên thân mật."
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 184,
-      "mainWordCount": 184,
+      "register": "informal",
+      "wordCount": 181,
+      "mainWordCount": 181,
       "phrases": [
         {
           "en": "extend the useful life",
@@ -624,10 +1627,6 @@
         {
           "en": "For example",
           "vi": "Ví dụ…"
-        },
-        {
-          "en": "Please let me know",
-          "vi": "Hãy cho tôi biết…"
         }
       ]
     },
@@ -639,40 +1638,155 @@
       "number": 10,
       "title": "Trò chơi điện tử",
       "focus": "video games in free time",
-      "prompt": "Your friend Alex wants to know about a balanced gaming discussion. Write an email describing the activity, explaining the arrangements, and offering practical advice.",
+      "prompt": "Your friend Alex has asked for information about a balanced gaming discussion. Reply with details about the programme, the time and place, and what to bring.",
       "requirementsVi": [
-        "Giới thiệu hoạt động và lợi ích.",
-        "Nêu giờ, nơi và thứ cần mang.",
-        "Cho lời khuyên cụ thể và đề nghị hỗ trợ."
+        "Mở lời thân mật và nhắc đúng câu hỏi của bạn.",
+        "Trả lời các ý theo đề, dùng ví dụ cụ thể.",
+        "Chuẩn bị và mời hỏi thêm."
       ],
       "summaryVi": "Cân bằng chơi game cần thỏa thuận thời gian thực tế và giữ trách nhiệm học, ngủ, vận động.",
       "paragraphs": [
         {
-          "label": "Mở thư",
-          "text": "Hi Alex,\n\nThanks for your email. You asked about a balanced gaming discussion, so I am happy to share the details. I thought of you when I saw the programme because you enjoy learning useful things with other people.",
-          "noteVi": "Cảm ơn, nhắc đúng câu hỏi của bạn."
+          "label": "Mở thư và mục đích",
+          "text": "Hi Alex,\n\nThanks for your email. It was lovely to hear from you. You asked me about a balanced gaming discussion, so I am happy to share some information. I hope it helps you decide what to do.",
+          "noteVi": "Mở lời thân mật và nhắc đúng câu hỏi của bạn.",
+          "parts": [
+            {
+              "text": "Hi ",
+              "kind": "frame"
+            },
+            {
+              "text": "Alex",
+              "kind": "detail",
+              "labelVi": "tên người bạn"
+            },
+            {
+              "text": ",\n\nThanks for your email. It was lovely to hear from you. You asked me about ",
+              "kind": "frame"
+            },
+            {
+              "text": "a balanced gaming discussion",
+              "kind": "detail",
+              "labelVi": "sự kiện / hoạt động"
+            },
+            {
+              "text": ", so I am happy to share some information. I hope it helps you decide what to do.",
+              "kind": "frame"
+            }
+          ],
+          "template": "Hi [tên người bạn],\n\nThanks for your email. It was lovely to hear from you. You asked me about [sự kiện / hoạt động], so I am happy to share some information. I hope it helps you decide what to do."
         },
         {
-          "label": "Hoạt động",
-          "text": "We will plan a weekly routine that includes games and other activities. The aim is to connect the topic with everyday life rather than only listen to a long talk. One useful point is that players can enjoy a hobby while still making time for other needs. For example, a teenager can play with friends after finishing homework and still join a weekend football match.",
-          "noteVi": "Cân bằng chơi game cần thỏa thuận thời gian thực tế và giữ trách nhiệm học, ngủ, vận động."
+          "label": "Thông tin chính",
+          "text": "First of all, it will take place at the college activity room on Saturday at three in the afternoon. We will plan a weekly routine that includes games and other activities. One useful point is that players can enjoy a hobby while still making time for other needs. For example, a teenager can play with friends after finishing homework and still join a weekend football match.",
+          "noteVi": "Trả lời các ý theo đề, dùng ví dụ cụ thể.",
+          "parts": [
+            {
+              "text": "First of all, it will take place at ",
+              "kind": "frame"
+            },
+            {
+              "text": "the college activity room",
+              "kind": "detail",
+              "labelVi": "địa điểm"
+            },
+            {
+              "text": " on ",
+              "kind": "frame"
+            },
+            {
+              "text": "Saturday at three in the afternoon",
+              "kind": "detail",
+              "labelVi": "ngày và giờ"
+            },
+            {
+              "text": ". We will ",
+              "kind": "frame"
+            },
+            {
+              "text": "plan a weekly routine that includes games and other activities",
+              "kind": "detail",
+              "labelVi": "hoạt động — động từ nguyên mẫu"
+            },
+            {
+              "text": ". One useful point is that ",
+              "kind": "frame"
+            },
+            {
+              "text": "players can enjoy a hobby while still making time for other needs",
+              "kind": "detail",
+              "labelVi": "lợi ích — chủ ngữ + động từ"
+            },
+            {
+              "text": ". For example, ",
+              "kind": "frame"
+            },
+            {
+              "text": "a teenager can play with friends after finishing homework and still join a weekend football match",
+              "kind": "detail",
+              "labelVi": "ví dụ — chủ ngữ + động từ"
+            },
+            {
+              "text": ".",
+              "kind": "frame"
+            }
+          ],
+          "template": "First of all, it will take place at [địa điểm] on [ngày và giờ]. We will [hoạt động — động từ nguyên mẫu]. One useful point is that [lợi ích — chủ ngữ + động từ]. For example, [ví dụ — chủ ngữ + động từ]."
         },
         {
-          "label": "Sắp xếp và gợi ý",
-          "text": "The session is at the college activity room on Saturday at three in the afternoon. Please bring a weekly timetable and arrive about ten minutes early. If you want to prepare, think of one question about video games in free time. We can compare our notes afterwards and decide which ideas would be useful in our own lives.",
-          "noteVi": "Trả lời đủ thời gian, địa điểm, chuẩn bị."
+          "label": "Thông tin thêm",
+          "text": "One more thing to remember is to bring a weekly timetable. If you want to prepare, think of a question about video games in free time. We can compare our ideas afterwards. Let me know if there is anything else you would like to know.",
+          "noteVi": "Chuẩn bị và mời hỏi thêm.",
+          "parts": [
+            {
+              "text": "One more thing to remember is to bring ",
+              "kind": "frame"
+            },
+            {
+              "text": "a weekly timetable",
+              "kind": "detail",
+              "labelVi": "đồ cần mang"
+            },
+            {
+              "text": ". If you want to prepare, think of a question about ",
+              "kind": "frame"
+            },
+            {
+              "text": "video games in free time",
+              "kind": "detail",
+              "labelVi": "chủ đề"
+            },
+            {
+              "text": ". We can compare our ideas afterwards. Let me know if there is anything else you would like to know.",
+              "kind": "frame"
+            }
+          ],
+          "template": "One more thing to remember is to bring [đồ cần mang]. If you want to prepare, think of a question about [chủ đề]. We can compare our ideas afterwards. Let me know if there is anything else you would like to know."
         },
         {
           "label": "Kết thư",
-          "text": "Please let me know what you think when you have a moment. I would be happy to answer any other questions.\n\nBest wishes,\nMinh",
-          "noteVi": "Mời hỏi thêm và ký tên thân mật."
+          "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\nMinh",
+          "noteVi": "Kết thân mật bằng Best wishes / All the best và tên riêng.",
+          "parts": [
+            {
+              "text": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n",
+              "kind": "frame"
+            },
+            {
+              "text": "Minh",
+              "kind": "detail",
+              "labelVi": "tên của bạn"
+            }
+          ],
+          "template": "Thanks again for taking the time to read my email. Write back when you have a moment and let me know what you think. I hope to hear from you soon.\n\nBest wishes,\n[tên của bạn]"
         }
       ],
       "sections": [],
       "options": [],
       "selectedOption": null,
-      "wordCount": 186,
-      "mainWordCount": 186,
+      "register": "informal",
+      "wordCount": 183,
+      "mainWordCount": 183,
       "phrases": [
         {
           "en": "a balanced routine",
@@ -694,10 +1808,6 @@
         {
           "en": "For example",
           "vi": "Ví dụ…"
-        },
-        {
-          "en": "Please let me know",
-          "vi": "Hãy cho tôi biết…"
         }
       ]
     }
