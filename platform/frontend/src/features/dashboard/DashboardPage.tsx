@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import { ErrorBox, Skeleton } from "@/components/ui/misc";
+import { StatTile } from "@/components/ui/stat";
 import { formatMinutes, KIND_LABELS } from "@/lib/utils";
 import { DailyPlan, WeakTopics } from "./AIPlan";
 
@@ -92,10 +93,10 @@ export default function DashboardPage() {
       </div>
 
       <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
-        <Stat icon={<GraduationCap size={18} />} label="Trình độ hiện tại" value={r.current_level} sub={r.current_level_name + (r.placement ? (r.placement.score != null ? ` · xếp lớp ${r.placement.score}/80` : " · theo bài xếp lớp") : "")} />
-        <Stat icon={<Trophy size={18} />} label="Bài đã hoàn thành" value={`${d.lessons.completed}/${d.lessons.total}`} sub={`Ngữ pháp ${d.lessons.grammar_completed}/${d.lessons.grammar_total}`} />
-        <Stat icon={<Clock size={18} />} label="Thời gian học" value={formatMinutes(d.time.total_minutes)} sub={`Tuần này ${formatMinutes(d.time.week_minutes)}`} />
-        <Stat icon={<Brain size={18} />} label="Cần ôn hôm nay" value={String(d.vocabulary.due + d.lessons.review)} sub={`${d.vocabulary.due} thẻ từ · ${d.lessons.review} bài`} />
+        <StatTile icon={<GraduationCap size={18} />} label="Trình độ hiện tại" value={r.current_level} hint={r.current_level_name + (r.placement ? (r.placement.score != null ? ` · xếp lớp ${r.placement.score}/80` : " · theo bài xếp lớp") : "")} />
+        <StatTile icon={<Trophy size={18} />} label="Bài đã hoàn thành" value={`${d.lessons.completed}/${d.lessons.total}`} hint={`Ngữ pháp ${d.lessons.grammar_completed}/${d.lessons.grammar_total}`} />
+        <StatTile icon={<Clock size={18} />} label="Thời gian học" value={formatMinutes(d.time.total_minutes)} hint={`Tuần này ${formatMinutes(d.time.week_minutes)}`} />
+        <StatTile icon={<Brain size={18} />} label="Cần ôn hôm nay" value={String(d.vocabulary.due + d.lessons.review)} hint={`${d.vocabulary.due} thẻ từ · ${d.lessons.review} bài`} />
       </div>
 
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
@@ -170,15 +171,6 @@ export default function DashboardPage() {
   );
 }
 
-function Stat({ icon, label, value, sub }: { icon: React.ReactNode; label: string; value: string; sub?: string }) {
-  return (
-    <Card className="p-4">
-      <p className="flex items-center gap-2 text-xs text-muted">{icon}{label}</p>
-      <p className="mt-1 text-xl font-bold">{value}</p>
-      {sub && <p className="text-xs text-muted">{sub}</p>}
-    </Card>
-  );
-}
 
 function Rec({ to, tag, title, tone = "primary" }: { to: string; tag: string; title: string; tone?: "primary" | "danger" | "success" }) {
   return (

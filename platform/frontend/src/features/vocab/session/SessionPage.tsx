@@ -9,6 +9,9 @@ import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import { ErrorBox, Skeleton } from "@/components/ui/misc";
 import { toast } from "@/components/ui/toast";
+import { Kbd } from "@/components/ui/kbd";
+import { StatTile } from "@/components/ui/stat";
+import { TypeToLearn } from "@/components/TypeToLearn";
 import { AIRequestError } from "@/services/ai";
 import { VERDICT_LABELS, vocab, type AnswerResult, type Session, type SessionKind, type Summary } from "@/services/vocab";
 import { Ipa, relDue } from "../components";
@@ -42,6 +45,10 @@ function Player({ initial }: { initial: Session }) {
   const it = s.items[idx];
   const result = it ? s.results[it.id] : undefined;
   const done = idx >= s.items.length;
+  // a missed (or misspelt) typed word is typed in again, letter by letter, before going on
+  const needsRetype = !!result?.expected && (result.type === "type_word" || result.type === "dictation") && (!result.correct || result.verdict === "spelling");
+  const [retyped, setRetyped] = useState<string | null>(null);
+  const retypeDone = !needsRetype || retyped === it?.id;
 
   const finish = useCallback(async () => {
     setBusy(true);
@@ -107,11 +114,11 @@ function Player({ initial }: { initial: Session }) {
   }, [it, busy, s, qc]);
 
   useEffect(() => {
-    if (!result || result.verdict === "mismatch") return; // a translation waiting for self-assessment
+    if (!result || result.verdict === "mismatch" || !retypeDone) return; // waiting for self-assessment / the retype
     const k = (e: KeyboardEvent) => { if (e.key === "Enter" && !(e.target instanceof HTMLTextAreaElement)) { e.preventDefault(); setIdx((i) => i + 1); } };
     const t = setTimeout(() => window.addEventListener("keydown", k), 150);
     return () => { clearTimeout(t); window.removeEventListener("keydown", k); };
-  }, [result]);
+  }, [result, retypeDone]);
 
   if (!s.items.length) return <EmptySession kind={s.kind} />;
   if (summary) return <SummaryView s={s} summary={summary} backTo={backTo} />;
@@ -140,7 +147,8 @@ function Player({ initial }: { initial: Session }) {
             {!it.scheduled && it.type !== "learn" && <Badge>Luyện thêm — không đổi lịch ôn</Badge>}
           </div>
           <div data-testid={`item-${it.type}`}><ItemView key={it.id} it={it} sid={s.id} submit={submit} busy={busy || !!result} aiDown={aiDown} /></div>
-          {result && <Feedback r={result} onNext={() => setIdx((i) => i + 1)} last={idx + 1 >= s.items.length} onSelf={selfAssess} busy={busy} />}
+          {result && <Feedback r={result} onNext={() => setIdx((i) => i + 1)} last={idx + 1 >= s.items.length} onSelf={selfAssess} busy={busy}
+            retype={needsRetype ? { done: retypeDone, onDone: () => setRetyped(it.id) } : undefined} />}
         </CardContent>
       </Card>
     </div>
@@ -156,7 +164,11 @@ function Timer() {
   return <span className="inline-flex items-center gap-1 text-sm text-muted" title="Chỉ là nhịp gợi ý, không bị tính sai khi hết giờ"><Clock size={14} />{t}s</span>;
 }
 
-export function Feedback({ r, onNext, last, onSelf, busy }: { r: AnswerResult; onNext: () => void; last: boolean; onSelf?: (ok: boolean) => void; busy?: boolean }) {
+export function Feedback({ r, onNext, last, onSelf, busy, retype }: {
+  r: AnswerResult; onNext: () => void; last: boolean; onSelf?: (ok: boolean) => void; busy?: boolean;
+  /** A typed word that was missed: type it in again before going on. */
+  retype?: { done: boolean; onDone: () => void };
+}) {
   const ok = !!r.correct;
   const pending = r.verdict === "mismatch";
   const near = ["spelling", "wrong_form", "minor_issues", "hard", "self_partly"].includes(r.verdict);
@@ -206,7 +218,8 @@ export function Feedback({ r, onNext, last, onSelf, busy }: { r: AnswerResult; o
       {r.type === "use_it" && r.verdict === "missing_word" && <p className="text-sm">{r.explanation_vi}</p>}
       {r.schedule && <p className="text-xs text-muted">Lịch ôn tiếp: {relDue(r.schedule.due)} (FSRS · {VERDICT_LABELS[r.schedule.rating_name]})</p>}
       {r.retry_added && <p className="text-xs text-muted">Từ này sẽ được hỏi lại ở cuối phiên.</p>}
-      <div className="text-right"><Button onClick={onNext} disabled={pending && !!onSelf}>{last ? "Xem tổng kết" : "Tiếp tục"} <ArrowRight size={16} /> <kbd className="text-xs opacity-70">Enter</kbd></Button></div>
+      {retype && r.expected && <TypeToLearn key={r.entry_id + r.expected} target={String(r.expected)} onDone={retype.onDone} label="Gõ lại từ đúng để nhớ (bắt buộc)" />}
+      <div className="text-right"><Button onClick={onNext} disabled={(pending && !!onSelf) || (!!retype && !retype.done)}>{last ? "Xem tổng kết" : "Tiếp tục"} <ArrowRight size={16} /> <Kbd>Enter</Kbd></Button></div>
     </div>
   );
 }
@@ -244,10 +257,10 @@ function SummaryView({ s, summary, backTo }: { s: Session; summary: Summary; bac
         <CardHeader><CardTitle data-testid="summary-title">Tổng kết: {s.title_vi}</CardTitle></CardHeader>
         <CardContent className="space-y-4">
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
-            <Stat n={summary.correct} of={summary.answered} label="Câu đúng" />
-            <Stat n={summary.learned.length} label="Từ đã học (nhớ lại được)" />
-            <Stat n={summary.recalled.length} label="Nhớ lại đúng" />
-            <Stat n={summary.difficult.length} label="Còn khó" />
+            <StatTile className="text-center" label="Câu đúng" value={<>{summary.correct}<span className="text-base font-normal text-muted">/{summary.answered}</span></>} />
+            <StatTile className="text-center" label="Từ đã học (nhớ lại được)" value={<>{summary.learned.length}</>} />
+            <StatTile className="text-center" label="Nhớ lại đúng" value={<>{summary.recalled.length}</>} />
+            <StatTile className="text-center" label="Còn khó" value={<>{summary.difficult.length}</>} />
           </div>
           {summary.next_review && <p className="text-sm">Lần ôn tiếp theo gần nhất: <b>{relDue(summary.next_review)}</b> · {summary.scheduled} từ đã được xếp lịch (FSRS).</p>}
           {summary.difficult.length > 0 && (
@@ -272,14 +285,6 @@ function SummaryView({ s, summary, backTo }: { s: Session; summary: Summary; bac
   );
 }
 
-function Stat({ n, of, label }: { n: number; of?: number; label: string }) {
-  return (
-    <div className="rounded-2xl bg-surface-2 p-3 text-center">
-      <p className="text-2xl font-bold tabular-nums">{n}{of !== undefined && <span className="text-base text-muted">/{of}</span>}</p>
-      <p className="text-xs text-muted">{label}</p>
-    </div>
-  );
-}
 
 /** Only same-app paths are allowed as a return target. */
 function safeReturn(v: string | null): string {

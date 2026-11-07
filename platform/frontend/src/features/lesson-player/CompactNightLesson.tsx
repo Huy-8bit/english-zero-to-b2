@@ -1,12 +1,11 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { ArrowLeft, ArrowRight, BookOpenText, Coffee, Moon, X } from "lucide-react";
+import { ArrowLeft, ArrowRight, BookOpenText, Coffee, Moon } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Progress } from "@/components/ui/progress";
 import { ErrorBox, Skeleton } from "@/components/ui/misc";
 import { Markdown } from "@/components/Markdown";
 import { NoExampleVi } from "@/components/ExampleVi";
+import { SessionHeader } from "@/components/ui/session-header";
 import type { GrammarBrief } from "./compactGrammar";
 import { breakDue, clock, hideBriefQuiz, hoursMin, loadNight, nextNight, nightPace, recordBrief, startBriefQuiz, tookBreak } from "./nightPlan";
 import { useNightSession } from "./useNightSession";
@@ -60,17 +59,17 @@ export function CompactNightLesson({ brief, onFull }: { brief: GrammarBrief; onF
   return (
     <NoExampleVi>
       <div className="min-h-screen">
-        <header className="sticky top-0 z-30 border-b border-border bg-surface/95 backdrop-blur">
-          <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-3 px-4 py-3">
-            <Button variant="ghost" size="icon" onClick={() => nav("/grammar-night")} aria-label="Thoát về trang đêm học"><X size={18} /></Button>
-            <Badge tone="primary"><Moon size={12} />Ngữ pháp 1 đêm · Bản gọn</Badge>
-            <span className="text-sm text-muted">{p.covered}/{p.total} chủ điểm · còn {hoursMin(p.msLeft)}</span>
-            <span className="ml-auto font-mono text-sm" title="Thời gian đọc chủ điểm này">{clock((now - started) / 1000)}</span>
+        <SessionHeader onExit={() => nav("/grammar-night")} exitLabel="Thoát về trang đêm học" mode={{ label: "Ngữ pháp 1 đêm · Bản gọn", icon: Moon }}
+          title={brief.title} width="lg"
+          meta={<>
+            <span>{p.covered}/{p.total} chủ điểm · còn {hoursMin(p.msLeft)}</span>
+            <span className="font-mono" title="Thời gian đọc chủ điểm này">{clock((now - started) / 1000)}</span>
+          </>}
+          actions={<>
             <ReaderControls />
             {onFull && <Button size="sm" variant="ghost" onClick={onFull}><BookOpenText size={15} />Học đầy đủ bài này</Button>}
-          </div>
-          <Progress value={100 * p.covered / Math.max(1, p.total)} label={`Đã học/đọc ${p.covered}/${p.total} chủ điểm`} className="h-1 rounded-none" />
-        </header>
+          </>}
+          progress={{ value: (100 * p.covered) / Math.max(1, p.total), label: `Đã học/đọc ${p.covered}/${p.total} chủ điểm` }} />
         <main className="reader-page mx-auto max-w-4xl space-y-5 px-4 py-7 sm:px-8" data-testid="night-brief">
           <div className="space-y-2">
             <p className="text-xs font-semibold uppercase tracking-wider text-primary">Chủ điểm {pos + 1}/{p.total} · {brief.level} · gộp {brief.sources.length} bài</p>

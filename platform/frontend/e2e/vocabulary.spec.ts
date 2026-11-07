@@ -40,6 +40,16 @@ async function answerCurrent(page: Page, opts: { wrongWord?: string } = {}) {
     const word = [...seen].find(([, m]) => m === meaning)![0];
     await page.getByLabel("Câu trả lời tiếng Anh").fill(opts.wrongWord === word ? "zzzz" : word.replace(/\s*\(.*\)/, ""));
     await page.getByRole("button", { name: "Kiểm tra" }).click();
+    await expect(page.getByTestId("feedback")).toBeVisible();
+    const retype = page.getByTestId("type-to-learn");
+    if (await retype.count()) {
+      // a missed word is typed in again, letter by letter, before going on
+      const next = page.getByRole("button", { name: /Tiếp tục|Xem tổng kết/ });
+      await expect(next).toBeDisabled();
+      await retype.getByRole("textbox").fill(word.replace(/\s*\(.*\)/, ""));
+      await expect(retype.getByText(/Hoàn hảo|Xong!/)).toBeVisible();
+      await expect(next).toBeEnabled();
+    }
   } else if (kind === "flashcard") {
     await page.keyboard.press("Space");
     await page.getByRole("button", { name: /^Nhớ/ }).click();

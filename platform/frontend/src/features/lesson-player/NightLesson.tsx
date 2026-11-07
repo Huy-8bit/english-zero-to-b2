@@ -2,7 +2,7 @@ import { useEffect, useLayoutEffect, useMemo, useState } from "react";
 import { Link, Navigate, useNavigate } from "react-router-dom";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { motion } from "motion/react";
-import { ArrowLeft, ArrowRight, BookOpenText, Check, Coffee, Moon, Timer, X } from "lucide-react";
+import { ArrowLeft, ArrowRight, BookOpenText, Check, Coffee, Moon, Timer } from "lucide-react";
 import { NoExampleVi, ViToggle } from "@/components/ExampleVi";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -10,6 +10,8 @@ import { Progress } from "@/components/ui/progress";
 import { toast } from "@/components/ui/toast";
 import { InlineMd, Markdown } from "@/components/Markdown";
 import { SpeakButton } from "@/components/SpeakButton";
+import { Kbd } from "@/components/ui/kbd";
+import { SessionHeader } from "@/components/ui/session-header";
 import { cn } from "@/lib/utils";
 import { api } from "@/services/api";
 import { ReaderControls } from "@/features/reader/ReaderControls";
@@ -97,7 +99,7 @@ function RestOverlay({ until, onDone }: { until: number; onDone: () => void }) {
         <p className="text-2xl font-bold">{left > 0 ? "Nghỉ 5 phút" : "Hết giờ nghỉ"}</p>
         <p className="font-mono text-5xl tabular-nums">{clock(left)}</p>
         <p className="text-muted">Rời màn hình, uống nước, nhìn ra xa hoặc nhắm mắt. Lúc nghỉ yên, não đang sắp xếp lại những gì vừa học — đừng lướt điện thoại.</p>
-        <Button size="lg" onClick={onDone}>Học tiếp <kbd className="ml-1 text-xs opacity-70">Enter</kbd></Button>
+        <Button size="lg" onClick={onDone}>Học tiếp <Kbd>Enter</Kbd></Button>
       </div>
     </div>
   );
@@ -155,7 +157,7 @@ function OneClick({ unitId, docPath, q, hide, onResult, onNext, nextLabel }: {
       )}
       <div className="flex justify-end gap-2">
         {hide && !result && <Button variant="ghost" onClick={onNext}>Chưa biết — vào học</Button>}
-        {result && <Button onClick={onNext}>{nextLabel}<ArrowRight size={16} /><kbd className="ml-1 text-xs opacity-70">Enter</kbd></Button>}
+        {result && <Button onClick={onNext}>{nextLabel}<ArrowRight size={16} /><Kbd>Enter</Kbd></Button>}
       </div>
     </div>
   );
@@ -289,7 +291,7 @@ function LearnCards({ cards, docPath, hook, hookOk, onDone }: { cards: LearnCard
         <Button variant="ghost" onClick={() => go(at - 1)} disabled={at === 0}><ArrowLeft size={16} />Trước</Button>
         <Button size="lg" className="ml-auto" onClick={forward}>
           {hidden >= 0 ? "Lật câu đúng" : at + 1 < cards.length ? <>Tiếp: {cards[at + 1].icon} {cards[at + 1].label}</> : "Nhớ lại — kiểm tra"}<ArrowRight size={18} />
-          <kbd className="ml-1 text-xs opacity-70">Enter</kbd>
+          <Kbd>Enter</Kbd>
         </Button>
       </div>
       <p className="text-right text-xs text-muted">Enter / → tiếp · ← quay lại</p>
@@ -400,22 +402,19 @@ function FullNightLesson({ unitId, data, onFull }: { unitId: string; data: Steps
   const breakPicks = () => reviewPicks(session, 5, session.lastBreak);
   return (
     <div className="min-h-screen">
-      <header className="sticky top-0 z-30 border-b border-border bg-surface/95 backdrop-blur">
-        <div className="mx-auto flex max-w-[90rem] flex-wrap items-center gap-3 px-4 py-2.5 sm:px-8">
-          <Button variant="ghost" size="icon" onClick={() => nav("/grammar-night")} aria-label="Thoát về trang đêm học"><X size={18} /></Button>
-          <Badge tone="primary"><Moon size={12} />Ngữ pháp 1 đêm</Badge>
-          <h1 className="min-w-0 truncate font-semibold">{data.unit.id} · {data.unit.title}</h1>
-          <span className="ml-auto flex flex-wrap items-center gap-3 text-sm">
-            <LessonClock start={start} budget={budget} />
-            <PaceBadge session={session} />
-            <span className="tabular-nums text-muted" title="Tiến độ lộ trình và bài đã đọc trong đêm">Đã học/đọc <b className="text-fg">{covered}</b>/{session.units.length}</span>
-            <ViToggle />
-            <ReaderControls />
-            {onFull && <Button size="sm" variant="ghost" onClick={onFull} title="Thoát chế độ đêm: bài ngữ pháp mở ở chế độ học đầy đủ"><BookOpenText size={15} />Học đầy đủ</Button>}
-          </span>
-        </div>
-        <Progress className="h-1 rounded-none" value={(100 * covered) / Math.max(1, session.units.length)} label={`Đã học/đọc ${covered}/${session.units.length} bài`} />
-      </header>
+      <SessionHeader onExit={() => nav("/grammar-night")} exitLabel="Thoát về trang đêm học" mode={{ label: "Ngữ pháp 1 đêm", icon: Moon }}
+        title={`${data.unit.id} · ${data.unit.title}`}
+        meta={<>
+          <LessonClock start={start} budget={budget} />
+          <PaceBadge session={session} />
+          <span title="Tiến độ lộ trình và bài đã đọc trong đêm">Đã học/đọc <b className="text-fg">{covered}</b>/{session.units.length}</span>
+        </>}
+        actions={<>
+          <ViToggle />
+          <ReaderControls />
+          {onFull && <Button size="sm" variant="ghost" onClick={onFull} title="Thoát chế độ đêm: bài ngữ pháp mở ở chế độ học đầy đủ"><BookOpenText size={15} />Học đầy đủ</Button>}
+        </>}
+        progress={{ value: (100 * covered) / Math.max(1, session.units.length), label: `Đã học/đọc ${covered}/${session.units.length} bài` }} />
 
       <main className="reader-page lesson-big mx-auto max-w-[90rem] px-4 pb-16 pt-6 sm:px-8">
         <div className="mx-auto mb-5 flex max-w-5xl flex-wrap items-end gap-x-6 gap-y-3">
@@ -497,7 +496,7 @@ function FullNightLesson({ unitId, data, onFull }: { unitId: string; data: Steps
             )}
             <Button size="lg" className="h-auto whitespace-normal py-2.5" onClick={goNext}>
               {next ? <>Bài tiếp: {next.id} · {next.title}<ArrowRight size={18} className="shrink-0" /></> : "Xem tổng kết đêm học"}
-              <kbd className="ml-1 text-xs opacity-70">Enter</kbd>
+              <Kbd>Enter</Kbd>
             </Button>
             {missed > 1 && <p><Link to={`/learn/${unitId}?mode=journey`} className="text-sm text-primary underline-offset-2 hover:underline">Học kỹ bài này ngay</Link></p>}
           </motion.div>

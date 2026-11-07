@@ -12,7 +12,8 @@ test.beforeEach(async ({ page }) => {
 test("mobile layout: menu, lesson player usable", async ({ page }) => {
   await page.goto("/");
   await page.getByRole("button", { name: "Mở menu" }).click();
-  await page.getByRole("link", { name: "Ngữ pháp", exact: true }).click();
+  await page.getByRole("button", { name: "Ngữ pháp", exact: true }).click(); // open the menu group
+  await page.getByRole("link", { name: "Bài ngữ pháp", exact: true }).click();
   await expect(page).toHaveURL(/\/grammar$/);
   await expect(page.getByRole("heading", { name: "Ngữ pháp", exact: true })).toBeVisible();
   await page.goto("/learn/A0-G001");

@@ -6,7 +6,9 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import { ErrorBox, PageHeader, Skeleton } from "@/components/ui/misc";
-import { Ring } from "@/features/plan/TodayPlanPage";
+import { Kbd } from "@/components/ui/kbd";
+import { ProgressRing } from "@/components/ui/stat";
+import { StatTile } from "@/components/ui/stat";
 import {
   BREAK_EVERY_MIN, BREAK_MIN, clock, coveredNight, endNight, hhmm, hoursMin, loadNight, needsReview, nextNight, nightPace, reviewPicks, startNight,
   studyMinutes, syncNight, nightUnits, replanNight, briefMisses, briefReview, startBriefQuiz, markBriefs, briefsUpTo,
@@ -87,10 +89,10 @@ function Setup({ units: pathUnits, onStart }: { units: NightPathUnit[]; onStart:
           )}
           <p className="text-sm text-muted">Tiếp tục theo lộ trình học, bao gồm tiến độ bạn đã đánh dấu thủ công. {plan === "compact" && "Chỉ bỏ qua một chủ điểm khi mọi bài gốc trong đó đã học; chủ điểm học dở được giữ lại."}</p>
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
-            <Stat label={plan === "compact" ? "Chủ điểm cần đọc" : "Bài cần đọc"} value={String(units.length)} />
-            <Stat label="Mỗi bài" value={`≈${clock(per)}`} hint="phút:giây" />
-            <Stat label="Nghỉ" value={`${breaks} × ${BREAK_MIN}′`} hint={`mỗi ${BREAK_EVERY_MIN} phút`} />
-            <Stat label="Xong lúc" value={hhmm(Date.now() + hours * 3_600_000)} hint="nếu bắt đầu ngay" />
+            <StatTile label={plan === "compact" ? "Chủ điểm cần đọc" : "Bài cần đọc"} value={String(units.length)} />
+            <StatTile label="Mỗi bài" value={`≈${clock(per)}`} hint="phút:giây" />
+            <StatTile label="Nghỉ" value={`${breaks} × ${BREAK_MIN}′`} hint={`mỗi ${BREAK_EVERY_MIN} phút`} />
+            <StatTile label="Xong lúc" value={hhmm(Date.now() + hours * 3_600_000)} hint="nếu bắt đầu ngay" />
           </div>
           {per > 0 && per < 150 && <p className="rounded-xl bg-warning-soft px-3 py-2 text-sm text-warning">Dưới 2,5 phút mỗi bài là rất gấp — cân nhắc thêm giờ hoặc chỉ đọc bài chưa qua.</p>}
           <Loop compact={plan === "compact"} />
@@ -120,15 +122,6 @@ function MarkStudied({ session, onChange }: { session: NightSession; onChange: (
   );
 }
 
-function Stat({ label, value, hint }: { label: string; value: string; hint?: string }) {
-  return (
-    <div className="rounded-2xl border border-border p-3">
-      <p className="text-xs text-muted">{label}</p>
-      <p className="text-xl font-bold tabular-nums">{value}</p>
-      {hint && <p className="text-xs text-muted">{hint}</p>}
-    </div>
-  );
-}
 
 function Night({ session, onChange, onEnd }: { session: NightSession; onChange: () => void; onEnd: () => void }) {
   const nav = useNavigate();
@@ -184,7 +177,7 @@ function Night({ session, onChange, onEnd }: { session: NightSession; onChange: 
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
         <Card className="lg:col-span-2">
           <CardContent className="flex flex-wrap items-center gap-6 pt-5">
-            <Ring percent={Math.round((100 * p.covered) / Math.max(1, p.total))} label={`Đã học hoặc đọc ${p.covered} trên ${p.total} bài`} size={132} />
+            <ProgressRing percent={Math.round((100 * p.covered) / Math.max(1, p.total))} label={`Đã học hoặc đọc ${p.covered} trên ${p.total} bài`} size={132} />
             <div className="min-w-0 flex-1 space-y-3">
               <p className="text-2xl font-bold">{p.covered}/{p.total} <span className="text-base font-normal text-muted">{compact ? "chủ điểm" : "bài"} · còn {p.left}</span></p>
               <p className="text-sm text-muted">{session.scope === "all" ? "Đang ôn lại tất cả bài" : `Đã hoàn thành theo lộ trình ${p.completed} ${compact ? "chủ điểm" : "bài"}`} · đã đọc đêm nay {p.read} {compact ? "chủ điểm" : "bài"}</p>
@@ -205,7 +198,7 @@ function Night({ session, onChange, onEnd }: { session: NightSession; onChange: 
               </div>
               {next ? (
                 <Button size="lg" className="h-auto whitespace-normal py-2.5 text-left" onClick={go}>
-                  <Play size={18} className="shrink-0" />{p.covered ? "Học tiếp" : "Bắt đầu"}: {next.id} · {next.title}<kbd className="ml-1 text-xs opacity-70">Enter</kbd></Button>
+                  <Play size={18} className="shrink-0" />{p.covered ? "Học tiếp" : "Bắt đầu"}: {next.id} · {next.title}<Kbd>Enter</Kbd></Button>
               ) : <div className="space-y-3"><p className="font-semibold text-success">Đã đọc hết lộ trình ngữ pháp trong {hoursMin(p.elapsed)} 🎉 Tiếp theo, dùng các cấu trúc vừa đọc khi nói và viết.</p>
                 <div className="flex flex-wrap gap-2"><Link to="/speaking"><Button>Luyện nói</Button></Link><Link to="/writing"><Button variant="outline">Luyện viết</Button></Link></div></div>}
               <div className="flex flex-wrap gap-2">

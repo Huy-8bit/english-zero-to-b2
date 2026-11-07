@@ -7,7 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import { ErrorBox, PageHeader, Skeleton } from "@/components/ui/misc";
-import { Ring } from "@/features/plan/TodayPlanPage";
+import { ProgressRing } from "@/components/ui/stat";
 import { api } from "@/services/api";
 import { safeStorage } from "@/lib/utils";
 import { dailyTarget, getCombo, loadPlan, savePlan } from "./sprintPlan";
@@ -36,7 +36,7 @@ export default function SprintPage() {
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
         <Card className="lg:col-span-2">
           <CardContent className="flex flex-wrap items-center gap-6 pt-5">
-            <Ring percent={Math.round((100 * s.done) / s.total)} label={`Đã qua ${s.done} trên ${s.total} bài ngữ pháp`} size={132} />
+            <ProgressRing percent={Math.round((100 * s.done) / s.total)} label={`Đã qua ${s.done} trên ${s.total} bài ngữ pháp`} size={132} />
             <div className="min-w-0 flex-1 space-y-3">
               <p className="text-2xl font-bold">{s.done}/{s.total} <span className="text-base font-normal text-muted">bài ngữ pháp · còn {s.remaining}</span></p>
               <div className="flex flex-wrap items-center gap-2 text-sm">

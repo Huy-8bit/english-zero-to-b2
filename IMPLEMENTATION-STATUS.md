@@ -1,3 +1,15 @@
+# UI structure and a typing game for missed words — 2026-11-05
+
+Request: make the UI consistent and structured; when a vocabulary word is typed wrong, the right word bounces as a hint and the learner still has to type it, like a game.
+
+| Change | Files | Evidence |
+|---|---|---|
+| Menu in 6 groups (Hôm nay · Ngữ pháp · Từ vựng & kỹ năng · Luyện thi · Luyện với AI · Theo dõi & công cụ) instead of a 30-item list. Groups collapse; the group of the current page stays open; open groups are a device preference. | `app/Layout.tsx` | E2E mobile menu |
+| Shared UI primitives replace per-page copies: `SessionHeader` for the 6 full-screen learning screens (lesson, journey, sprint, one night, compact night, VSTEP rush); `StatTile` for 4 local `Stat` components; `ProgressRing` (was imported from a page); `Kbd` for 16 shortcut hints (fixes low-contrast hints) | `components/ui/session-header.tsx`, `stat.tsx`, `kbd.tsx` | typecheck, lint, full E2E |
+| `TypeToLearn`: after a missed (or misspelt) typed word, the answer is shown as letter tiles to type in. A right letter pops green; a wrong key shakes the row and bounces the expected letter; Continue/Enter stay locked until it is typed. Combo counter; respects reduced motion; works with on-screen keyboards. Used in vocabulary "Gõ đáp án"/"Chính tả" and the VSTEP irregular-verb drill (all three forms). Grading still counts the first answer. | `components/TypeToLearn.tsx`, `features/vocab/session/SessionPage.tsx`, `features/vstep/RushSession.tsx` | vitest `TypeToLearn.test.tsx`; E2E vocabulary (Continue locked → retyped → unlocked) |
+
+Known, not from this change: `e2e/writing-exam.spec.ts` (2 tests) also fails on HEAD (eeb0ecf). The Writing Studio exam steps changed in this morning's commits and the spec was not updated.
+
 # Writing frames with explicit fixed-word budgets — 2026-11-05
 
 Request: Task 1 frames should supply 70–80 words and Task 2 frames 150–170 words, reducing the amount of English the learner has to invent.

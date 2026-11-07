@@ -6,7 +6,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import { PageHeader } from "@/components/ui/misc";
-import { Ring } from "@/features/plan/TodayPlanPage";
+import { Kbd } from "@/components/ui/kbd";
+import { ProgressRing } from "@/components/ui/stat";
 import { cn } from "@/lib/utils";
 import { DECK_ITEMS, DECK_TITLE, loadRush, masteredCount, planProgress, PLAN_HOURS, weakIds } from "./store";
 
@@ -36,7 +37,7 @@ export default function RushPage() {
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
         <Card className="lg:col-span-2">
           <CardContent className="flex flex-wrap items-center gap-6 pt-5">
-            <Ring percent={Math.round((100 * p.learnt) / p.total)} label={`Đã thuộc ${p.learnt} trên ${p.total} mục`} size={132} />
+            <ProgressRing percent={Math.round((100 * p.learnt) / p.total)} label={`Đã thuộc ${p.learnt} trên ${p.total} mục`} size={132} />
             <div className="min-w-0 flex-1 space-y-3">
               <p className="text-2xl font-bold">{p.learnt}/{p.total} <span className="text-base font-normal text-muted">mục đã thuộc</span></p>
               <div className="space-y-1 text-sm">
@@ -48,7 +49,7 @@ export default function RushPage() {
                 <p className="font-semibold">{p.current.title}</p>
                 {p.current.total > 0 && <Progress className="mt-2" value={(100 * p.current.done) / p.current.total} label={`Khối ${p.current.n}: ${p.current.done}/${p.current.total}`} />}
                 <Button size="lg" className="mt-3 h-auto whitespace-normal py-2.5 text-left" onClick={() => go(firstDeck(p.current.decks))}>
-                  <Play size={18} className="shrink-0" />Học: {DECK_TITLE[firstDeck(p.current.decks)]}<kbd className="ml-1 text-xs">Enter</kbd>
+                  <Play size={18} className="shrink-0" />Học: {DECK_TITLE[firstDeck(p.current.decks)]}<Kbd>Enter</Kbd>
                 </Button>
               </div>
             </div>

@@ -7,6 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { useUI } from "@/stores/ui";
 import { vocab, type SessionItem } from "@/services/vocab";
 import { Markdown } from "@/components/Markdown";
+import { Kbd } from "@/components/ui/kbd";
 import { Ipa, WordAudio, useAudio } from "../components";
 
 export type Submit = (body: Record<string, unknown>) => void;
@@ -63,7 +64,7 @@ export function LearnItem({ it, submit, busy }: P) {
           {it.confused && <p className="rounded-xl bg-surface-2 px-3 py-2"><b>Dễ nhầm với:</b> {it.confused.words.join(", ")} — {it.confused.note_vi}</p>}
         </motion.div>
       )}
-      <Button size="lg" onClick={next} disabled={busy}>{step + 1 < steps ? ["Xem nghĩa", "Xem ví dụ", "Xem cách dùng"][step] : "Tiếp tục"} <kbd className="ml-1 text-xs opacity-70">Enter</kbd></Button>
+      <Button size="lg" onClick={next} disabled={busy}>{step + 1 < steps ? ["Xem nghĩa", "Xem ví dụ", "Xem cách dùng"][step] : "Tiếp tục"} <Kbd>Enter</Kbd></Button>
     </div>
   );
 }
@@ -121,12 +122,12 @@ export function FlashcardItem({ it, submit, busy }: P) {
         </motion.div>
       </div>
       {!flipped ? (
-        <div className="text-center"><Button size="lg" onClick={() => setFlipped(true)}><Eye size={18} />Lật thẻ <kbd className="ml-1 text-xs opacity-70">Space</kbd></Button></div>
+        <div className="text-center"><Button size="lg" onClick={() => setFlipped(true)}><Eye size={18} />Lật thẻ <Kbd>Space</Kbd></Button></div>
       ) : (
         <div className="grid grid-cols-2 gap-2 sm:grid-cols-4" role="group" aria-label="Bạn nhớ từ này thế nào?">
           {ratings.map((x) => (
             <Button key={x.r} variant={x.v} disabled={busy} onClick={() => submit({ rating: x.r })} className="h-auto flex-col py-2">
-              <span>{x.label} <kbd className="text-xs opacity-70">{x.r}</kbd></span><span className="text-[11px] font-normal opacity-80">{x.hint}</span>
+              <span>{x.label} <Kbd>{x.r}</Kbd></span><span className="text-[11px] font-normal opacity-80">{x.hint}</span>
             </Button>
           ))}
         </div>

@@ -12,7 +12,7 @@ import type { ItemResult, Step } from "@/types/content";
 import { ExampleViProvider, ViToggle } from "@/components/ExampleVi";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Progress } from "@/components/ui/progress";
+
 import { Dialog, Sheet } from "@/components/ui/dialog";
 import { ErrorBox, Skeleton } from "@/components/ui/misc";
 import { toast } from "@/components/ui/toast";
@@ -32,6 +32,7 @@ import { NotesPanel } from "./NotesPanel";
 import { TutorPanel } from "@/features/tutor/TutorPanel";
 import { GeneratorForm } from "@/features/ai-practice/GeneratorForm";
 import { useAIStatus } from "@/components/ai/AIStatus";
+import { SessionHeader } from "@/components/ui/session-header";
 import {
   ConceptSlide, DialogueSlide, ExamplesSlide, FlashcardsSlide, FormulaSlide, MistakesSlide, PassageSlide, RecapSlide, VocabSlide,
 } from "./slides";
@@ -234,25 +235,14 @@ function LessonSession({ unitId, onJourney, onSprint }: { unitId: string; onJour
 
   return (
     <div className={cn("min-h-screen bg-bg transition-[padding] duration-200 motion-reduce:transition-none", tutorOpen && "md:pr-[22rem] xl:pr-[26rem]")}>
-      <header className="sticky top-0 z-30 border-b border-border bg-bg/90 backdrop-blur">
-        <div className="reader-toolbar mx-auto flex max-w-[90rem] items-center gap-2 px-3 py-2 sm:px-8">
-          <Button variant="ghost" size="icon" onClick={() => nav(lessonExitPath())} aria-label="Thoát bài học"><X size={18} /></Button>
-          <div className="reader-title min-w-0 flex-1">
-            <div className="flex items-center gap-2">
-              <h1 className="truncate text-sm font-semibold sm:text-base">{unit.id} · {unit.title}</h1>
-              {unit.level && <Badge tone="primary">{unit.level}</Badge>}
-              <FocusBadge />
-              <BlockTimerChip />
-              {!focusMode && <Badge className="hidden sm:inline-flex">{KIND_LABELS[unit.kind]}</Badge>}
-            </div>
-            <div className="mt-1.5 flex items-center gap-3">
-              <Progress value={pct} label="Tiến độ bài học" />
-              <span className="shrink-0 text-xs tabular-nums text-muted">{ps.step + 1}/{total}</span>
-              {isExam && ps.state.examStartedAt && !examSubmitted && <ExamClock since={ps.state.examStartedAt} />}
-            </div>
-          </div>
-          <div className="reader-actions flex items-center">
-            {!focusMode && <Button variant="ghost" size="icon" onClick={() => setOutline(true)} aria-label="Danh sách slide" className={readerFocus ? undefined : tutorOpen ? "2xl:hidden" : "lg:hidden"}><List size={18} /></Button>}
+      <SessionHeader onExit={() => nav(lessonExitPath())} exitLabel="Thoát bài học" title={`${unit.id} · ${unit.title}`} level={unit.level}
+        badges={<><FocusBadge /><BlockTimerChip />{!focusMode && <Badge className="hidden sm:inline-flex">{KIND_LABELS[unit.kind]}</Badge>}</>}
+        meta={<>
+          <span title="Màn hiện tại / tổng số màn">{ps.step + 1}/{total}</span>
+          {isExam && ps.state.examStartedAt && !examSubmitted && <ExamClock since={ps.state.examStartedAt} />}
+        </>}
+        actions={<>
+          {!focusMode && <Button variant="ghost" size="icon" onClick={() => setOutline(true)} aria-label="Danh sách slide" className={readerFocus ? undefined : tutorOpen ? "2xl:hidden" : "lg:hidden"}><List size={18} /></Button>}
             {onSprint && <Button variant="ghost" size="sm" onClick={onSprint} aria-label="Sprint ≈8 phút" title="Sprint ≈8 phút: cốt lõi trên một màn hình + 6 câu kiểm tra"><Zap size={18} /><span className="hidden md:inline">Sprint</span></Button>}
             {onJourney && <Button variant="ghost" size="sm" onClick={onJourney} aria-label="Chế độ hành trình" title="Chế độ hành trình: từng bước, có kiểm tra xen kẽ"><Route size={18} /><span className="hidden md:inline">Hành trình</span></Button>}
             <ViToggle />
@@ -262,14 +252,13 @@ function LessonSession({ unitId, onJourney, onSprint }: { unitId: string; onJour
             <Link to={`/reference?path=${encodeURIComponent(unit.path)}`} className="hidden rounded-xl p-2 text-muted hover:bg-surface-2 sm:block" aria-label="Xem toàn bộ bài (chế độ tra cứu)" title="Xem toàn bộ bài (chế độ tra cứu)"><BookOpenText size={18} /></Link>
             <Button variant={focusMode ? "secondary" : "ghost"} size="icon" onClick={() => setFocusMode(!focusMode)} aria-pressed={focusMode} aria-label="Chế độ tập trung" title="Chế độ tập trung (Esc để thoát)"><Focus size={18} /></Button>
             {!focusMode && <ThemeToggle />}
-          </div>
-        </div>
-        {ps.saveError && (
+        </>}
+        progress={{ value: pct, label: "Tiến độ bài học" }}
+        notice={ps.saveError && (
           <div className="bg-warning-soft px-4 py-1 text-center text-xs text-warning">
             Chưa lưu được lên máy chủ — tiến độ đang được giữ trong trình duyệt. <button className="underline" onClick={() => ps.retrySave()}>Thử lại</button>
           </div>
-        )}
-      </header>
+        )} />
 
       <div className={cn("reader-lesson-shell lesson-big mx-auto flex max-w-[90rem] gap-8 px-3 sm:px-8", focusMode && "max-w-5xl")}>
         {!focusMode && (

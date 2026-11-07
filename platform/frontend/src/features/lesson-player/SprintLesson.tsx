@@ -2,10 +2,9 @@ import { useEffect, useMemo, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { motion } from "motion/react";
-import { ArrowRight, BookOpenText, Flame, Rocket, Timer, Trophy, X, Zap } from "lucide-react";
+import { ArrowRight, BookOpenText, Flame, Rocket, Timer, Trophy, Zap } from "lucide-react";
 import { ViToggle } from "@/components/ExampleVi";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import { useCelebrate } from "@/components/Celebrate";
 import { cn } from "@/lib/utils";
@@ -13,6 +12,8 @@ import { lessonExitPath } from "@/lib/lessonExit";
 import { api, type GrammarSprint, type SprintUnit } from "@/services/api";
 import type { LessonDetail, Step, StepsPayload } from "@/types/content";
 import { Markdown } from "@/components/Markdown";
+import { Kbd } from "@/components/ui/kbd";
+import { SessionHeader } from "@/components/ui/session-header";
 import { ConceptSlide, FormulaSlide, MistakesSlide } from "./slides";
 import { TestOut, type TestOutResult } from "./TestOut";
 import { dailyTarget, getCombo, loadPlan, setCombo } from "./sprintPlan";
@@ -103,24 +104,20 @@ export function SprintLesson({ unitId, data, lesson, onFull }: { unitId: string;
 
   return (
     <div className="min-h-screen">
-      <header className="sticky top-0 z-30 border-b border-border bg-surface/95 backdrop-blur">
-        <div className="mx-auto flex max-w-[90rem] flex-wrap items-center gap-3 px-4 py-2.5 sm:px-8">
-          <Button variant="ghost" size="icon" onClick={() => nav(lessonExitPath())} aria-label="Thoát bài học"><X size={18} /></Button>
-          <Badge tone="primary"><Zap size={12} />Sprint ngữ pháp</Badge>
-          <h1 className="min-w-0 truncate font-semibold">{data.unit.id} · {data.unit.title}</h1>
-          <Badge>{data.unit.level}</Badge>
-          <span className="ml-auto flex flex-wrap items-center gap-3 text-sm">
-            <Clock start={start} />
-            {combo > 0 && <span className="inline-flex items-center gap-1 font-semibold text-warning" title="Số bài qua liên tiếp"><Flame size={15} />{combo}</span>}
-            {s && day && <span className="tabular-nums text-muted" title="Bài ngữ pháp đã qua hôm nay / mục tiêu hôm nay">Hôm nay <b className="text-fg">{s.today}</b>/{day.target}</span>}
-            {s && <span className="hidden tabular-nums text-muted md:inline">Tổng {s.done}/{s.total}</span>}
-            <ViToggle />
-            <ReaderControls />
-            {onFull && <Button size="sm" variant="ghost" onClick={onFull} title="Bài ngữ pháp sẽ mở ở chế độ học đầy đủ (Hành trình)"><BookOpenText size={15} />Học đầy đủ</Button>}
-          </span>
-        </div>
-        {s && <Progress className="h-1 rounded-none" value={(100 * s.done) / s.total} label={`Đã qua ${s.done}/${s.total} bài ngữ pháp`} />}
-      </header>
+      <SessionHeader onExit={() => nav(lessonExitPath())} exitLabel="Thoát bài học" mode={{ label: "Sprint ngữ pháp", icon: Zap }}
+        title={`${data.unit.id} · ${data.unit.title}`} level={data.unit.level}
+        meta={<>
+          <Clock start={start} />
+          {combo > 0 && <span className="inline-flex items-center gap-1 font-semibold text-warning" title="Số bài qua liên tiếp"><Flame size={15} />{combo}</span>}
+          {s && day && <span title="Bài ngữ pháp đã qua hôm nay / mục tiêu hôm nay">Hôm nay <b className="text-fg">{s.today}</b>/{day.target}</span>}
+          {s && <span className="hidden md:inline">Tổng {s.done}/{s.total}</span>}
+        </>}
+        actions={<>
+          <ViToggle />
+          <ReaderControls />
+          {onFull && <Button size="sm" variant="ghost" onClick={onFull} title="Bài ngữ pháp sẽ mở ở chế độ học đầy đủ (Hành trình)"><BookOpenText size={15} />Học đầy đủ</Button>}
+        </>}
+        progress={s ? { value: (100 * s.done) / s.total, label: `Đã qua ${s.done}/${s.total} bài ngữ pháp` } : undefined} />
 
       <main className="reader-page lesson-big mx-auto max-w-[90rem] px-4 pb-16 pt-6 sm:px-8">
         <ol className="mb-5 flex flex-wrap gap-2 text-sm" aria-label="Các bước">
@@ -184,7 +181,7 @@ export function SprintLesson({ unitId, data, lesson, onFull }: { unitId: string;
               </div>
             </div>
             <div className="flex flex-wrap items-center gap-3">
-              <Button size="lg" onClick={() => setPhase("check")}><Rocket size={18} />Đã nắm — kiểm tra 6 câu <kbd className="ml-1 text-xs opacity-70">Enter</kbd></Button>
+              <Button size="lg" onClick={() => setPhase("check")}><Rocket size={18} />Đã nắm — kiểm tra 6 câu <Kbd>Enter</Kbd></Button>
               <Link to={`/learn/${unitId}?mode=journey`}><Button size="lg" variant="outline"><BookOpenText size={18} />Học đầy đủ bài này</Button></Link>
               {next && <button type="button" onClick={goNext} className="text-sm text-muted underline-offset-2 hover:underline">Bỏ qua, sang {next.id}</button>}
             </div>
@@ -208,7 +205,7 @@ export function SprintLesson({ unitId, data, lesson, onFull }: { unitId: string;
             {s && day && <DayProgress s={s} target={day.target} dayN={day.dayN} />}
             {!result.passed && <p className="text-sm text-muted">Không sao — bài này nằm trong danh sách “cần học kỹ” ở trang Sprint. Đi tiếp để giữ nhịp, quay lại học đầy đủ sau.</p>}
             <div className="flex flex-wrap justify-center gap-2">
-              <Button size="lg" onClick={goNext}>{next ? <>Bài tiếp: {next.id}<ArrowRight size={18} /></> : "Về trang Sprint"} <kbd className="ml-1 text-xs opacity-70">Enter</kbd></Button>
+              <Button size="lg" onClick={goNext}>{next ? <>Bài tiếp: {next.id}<ArrowRight size={18} /></> : "Về trang Sprint"} <Kbd>Enter</Kbd></Button>
               {!result.passed && <Link to={`/learn/${unitId}?mode=journey`}><Button size="lg" variant="outline">Học kỹ bài này ngay</Button></Link>}
             </div>
             {next && <p className="text-sm text-muted">Tiếp theo: {next.title} ({next.level})</p>}

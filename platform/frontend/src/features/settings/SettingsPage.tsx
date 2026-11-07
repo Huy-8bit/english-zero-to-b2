@@ -11,6 +11,7 @@ import { Progress } from "@/components/ui/progress";
 import { Input, PageHeader } from "@/components/ui/misc";
 import { toast } from "@/components/ui/toast";
 import { AIErrorBox, useAIStatus } from "@/components/ai/AIStatus";
+import { StatTile } from "@/components/ui/stat";
 
 const FEATURE_LABELS: Record<string, string> = {
   exercise_generate: "Tạo bài tập", exercise_verify: "Kiểm tra câu hỏi", exercise_grade: "Chấm bài", curriculum_grade: "Chấm câu mở (bài học)",
@@ -82,10 +83,10 @@ export default function SettingsPage() {
           {u && (
             <>
               <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
-                <Stat label="Yêu cầu hôm nay" value={`${u.summary.today_requests} / ${u.limits.daily_request_limit}`} />
-                <Stat label="Chi phí tháng này" value={`$${u.summary.month_cost.toFixed(4)}`} sub={budget != null ? `ngân sách $${budget}` : undefined} />
-                <Stat label="Token vào / ra" value={`${u.totals.input_tokens.toLocaleString()} / ${u.totals.output_tokens.toLocaleString()}`} />
-                <Stat label="Yêu cầu (30 ngày)" value={String(u.totals.requests)} sub={`$${u.totals.cost_usd.toFixed(4)}`} />
+                <StatTile label="Yêu cầu hôm nay" value={`${u.summary.today_requests} / ${u.limits.daily_request_limit}`} />
+                <StatTile label="Chi phí tháng này" value={`$${u.summary.month_cost.toFixed(4)}`} hint={budget != null ? `ngân sách $${budget}` : undefined} />
+                <StatTile label="Token vào / ra" value={`${u.totals.input_tokens.toLocaleString()} / ${u.totals.output_tokens.toLocaleString()}`} />
+                <StatTile label="Yêu cầu (30 ngày)" value={String(u.totals.requests)} hint={`$${u.totals.cost_usd.toFixed(4)}`} />
               </div>
               {budget != null && budget > 0 && <Progress value={(u.summary.month_cost / budget) * 100} label="Ngân sách tháng" />}
               {u.by_day.length > 0 && (
@@ -110,6 +111,3 @@ export default function SettingsPage() {
   );
 }
 
-function Stat({ label, value, sub }: { label: string; value: string; sub?: string }) {
-  return <div className="rounded-xl border border-border p-3"><p className="text-xs text-muted">{label}</p><p className="text-lg font-bold">{value}</p>{sub && <p className="text-xs text-muted">{sub}</p>}</div>;
-}

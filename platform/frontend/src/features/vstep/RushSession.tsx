@@ -1,11 +1,12 @@
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
-import { ArrowRight, Check, RotateCcw, Timer, X } from "lucide-react";
+import { ArrowRight, Check, RotateCcw, Timer } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Progress } from "@/components/ui/progress";
 import { Input } from "@/components/ui/misc";
 import { SpeakButton } from "@/components/SpeakButton";
+import { Kbd } from "@/components/ui/kbd";
+import { SessionHeader } from "@/components/ui/session-header";
+import { TypeToLearn } from "@/components/TypeToLearn";
 import { cn } from "@/lib/utils";
 import { lessonExitPath } from "@/lib/lessonExit";
 import { formMatches, PATTERNS, type Verb } from "./verbs";
@@ -95,19 +96,13 @@ function Session({ deckId, onAgain }: { deckId: string; onAgain: () => void }) {
 
   return (
     <div className="min-h-screen">
-      <header className="sticky top-0 z-30 border-b border-border bg-surface/95 backdrop-blur">
-        <div className="mx-auto flex max-w-5xl flex-wrap items-center gap-3 px-4 py-2.5">
-          <Button variant="ghost" size="icon" onClick={exit} aria-label="Thoát"><X size={18} /></Button>
-          <Badge tone="primary">VSTEP B2 cấp tốc</Badge>
-          <h1 className="min-w-0 truncate font-semibold">{DECK_TITLE[deckId] ?? deckId}</h1>
-          <span className="ml-auto flex items-center gap-3 text-sm text-muted">
-            {!done && batches.length > 0 && <span>Lô {b + 1}/{batches.length}</span>}
-            <span className="tabular-nums" title="Đã học hôm nay"><Timer size={14} className="mr-1 inline" />{Math.floor(today / 3600)}h{String(Math.floor((today % 3600) / 60)).padStart(2, "0")}</span>
-            <span className="tabular-nums" title="Đã thuộc trong bộ này">✓ {masteredCount(loadRush(), deckIds)}/{deckIds.length}</span>
-          </span>
-        </div>
-        <Progress className="h-1 rounded-none" value={done ? 100 : (100 * pos) / Math.max(1, tasks.length)} label="Tiến độ lô" />
-      </header>
+      <SessionHeader onExit={exit} mode={{ label: "VSTEP B2 cấp tốc" }} title={DECK_TITLE[deckId] ?? deckId} width="md"
+        meta={<>
+          {!done && batches.length > 0 && <span>Lô {b + 1}/{batches.length}</span>}
+          <span title="Đã học hôm nay"><Timer size={14} className="mr-1 inline" />{Math.floor(today / 3600)}h{String(Math.floor((today % 3600) / 60)).padStart(2, "0")}</span>
+          <span title="Đã thuộc trong bộ này">✓ {masteredCount(loadRush(), deckIds)}/{deckIds.length}</span>
+        </>}
+        progress={{ value: done ? 100 : (100 * pos) / Math.max(1, tasks.length), label: "Tiến độ lô" }} />
       <main className="mx-auto max-w-3xl px-4 pb-16 pt-8">
         {ids.length === 0 ? (
           <div className="space-y-3 text-center">
@@ -146,8 +141,8 @@ function Step({ label, children }: { label: string; children: React.ReactNode })
   );
 }
 
-function NextButton({ onNext, label = "Tiếp" }: { onNext: () => void; label?: string }) {
-  return <Button size="lg" onClick={onNext}>{label}<ArrowRight size={18} /><kbd className="ml-1 text-xs opacity-70">Enter</kbd></Button>;
+function NextButton({ onNext, label = "Tiếp", disabled }: { onNext: () => void; label?: string; disabled?: boolean }) {
+  return <Button size="lg" onClick={onNext} disabled={disabled}>{label}<ArrowRight size={18} /><Kbd>Enter</Kbd></Button>;
 }
 
 function LearnCard({ id, onNext }: { id: string; onNext: () => void }) {
@@ -244,7 +239,7 @@ function Recall({ id, onResult, onNext }: { id: string; onResult: (ok: boolean) 
       <p className="text-2xl font-semibold" data-testid="rush-recall">{it.vi}</p>
       <Input ref={input} autoFocus value={text} disabled={shown} onChange={(e) => setText(e.target.value)} placeholder="Gõ (không bắt buộc), rồi Enter để xem đáp án"
         onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); reveal(); } }} aria-label="Câu tiếng Anh" />
-      {!shown && <Button variant="outline" onClick={reveal}>Xem đáp án <kbd className="ml-1 text-xs opacity-70">Enter</kbd></Button>}
+      {!shown && <Button variant="outline" onClick={reveal}>Xem đáp án <Kbd>Enter</Kbd></Button>}
       {shown && (
         <div className="space-y-3">
           <div className="rounded-2xl border border-border bg-surface p-4">
@@ -253,8 +248,8 @@ function Recall({ id, onResult, onNext }: { id: string; onResult: (ok: boolean) 
           </div>
           {verdict === null ? (
             <div className="flex flex-wrap gap-2">
-              <Button onClick={() => settle(true)}><Check size={16} />Nhớ được <kbd className="ml-1 text-xs opacity-70">1</kbd></Button>
-              <Button variant="outline" onClick={() => settle(false)}>Chưa nhớ <kbd className="ml-1 text-xs opacity-70">2</kbd></Button>
+              <Button onClick={() => settle(true)}><Check size={16} />Nhớ được <Kbd>1</Kbd></Button>
+              <Button variant="outline" onClick={() => settle(false)}>Chưa nhớ <Kbd>2</Kbd></Button>
             </div>
           ) : (
             <>
@@ -272,16 +267,19 @@ function VerbDrill({ verb, onResult, onNext }: { verb: Verb; onResult: (ok: bool
   const [past, setPast] = useState("");
   const [pp, setPp] = useState("");
   const [checked, setChecked] = useState(false);
+  const [retyped, setRetyped] = useState(false);
   const ppRef = useRef<HTMLInputElement>(null);
   const okPast = formMatches(past, verb.past);
   const okPp = formMatches(pp, verb.pp);
+  const ok = okPast && okPp;
+  const canGo = checked && (ok || retyped); // a miss is typed in again (all three forms) before going on
   const check = () => {
     if (checked) return;
     setChecked(true);
     (document.activeElement as HTMLElement | null)?.blur();
     onResult(okPast && okPp);
   };
-  useKeys((e) => { if (checked && e.key === "Enter") { e.preventDefault(); onNext(); } });
+  useKeys((e) => { if (canGo && e.key === "Enter") { e.preventDefault(); onNext(); } });
   const field = (ok: boolean) => checked && (ok ? "border-success bg-success-soft" : "border-danger bg-danger-soft");
   return (
     <Step label="✍️ Gõ quá khứ và quá khứ phân từ">
@@ -296,15 +294,17 @@ function VerbDrill({ verb, onResult, onNext }: { verb: Verb; onResult: (ok: bool
             onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); check(); } }} />
         </label>
       </div>
-      {!checked ? <Button onClick={check}>Kiểm tra <kbd className="ml-1 text-xs opacity-70">Enter</kbd></Button> : (
+      {!checked ? <Button onClick={check}>Kiểm tra <Kbd>Enter</Kbd></Button> : (
         <div className="space-y-3">
           <p className="flex flex-wrap items-center gap-2 text-xl">
             <span className={okPast && okPp ? "font-semibold text-success" : "font-semibold text-warning"}>{okPast && okPp ? "✓" : "✗"} {verbLine(verb)}</span>
             <SpeakButton text={`${verb.base}, ${verb.past.replace("/", ", ")}, ${verb.pp.replace("/", ", ")}`} />
           </p>
           <p className="text-sm text-muted">{PATTERNS[verb.pattern].title} · {PATTERNS[verb.pattern].hint}{verb.note ? ` · ${verb.note}` : ""}</p>
-          {!(okPast && okPp) && <p className="text-sm text-warning">Sẽ hỏi lại ở cuối lô này.</p>}
-          <NextButton onNext={onNext} />
+          {!ok && <p className="text-sm text-warning">Sẽ hỏi lại ở cuối lô này.</p>}
+          {!ok && <TypeToLearn target={`${verb.base} ${verb.past.split("/")[0]} ${verb.pp.split("/")[0]}`} onDone={() => setRetyped(true)}
+            label="Gõ lại cả 3 dạng để nhớ (bắt buộc)" />}
+          <NextButton onNext={onNext} disabled={!canGo} />
         </div>
       )}
     </Step>

@@ -9,6 +9,7 @@ import { Progress } from "@/components/ui/progress";
 import { ErrorBox, PageHeader, Skeleton } from "@/components/ui/misc";
 import { toast } from "@/components/ui/toast";
 import { useCelebrate } from "@/components/Celebrate";
+import { ProgressRing } from "@/components/ui/stat";
 import { cn } from "@/lib/utils";
 import { focus } from "@/services/focus";
 import { plan, type DayPlan, type PlanBlock } from "@/services/plan";
@@ -16,19 +17,6 @@ import { vocab, type SessionKind } from "@/services/vocab";
 import { mmss, useBlockTimer } from "./timerStore";
 
 const GOALS = [60, 120, 180, 240];
-
-export function Ring({ percent, label, size = 120 }: { percent: number; label: string; size?: number }) {
-  const r = (size - 14) / 2;
-  const c = 2 * Math.PI * r;
-  return (
-    <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} role="img" aria-label={label}>
-      <circle cx={size / 2} cy={size / 2} r={r} fill="none" stroke="var(--surface-2)" strokeWidth={12} />
-      <circle cx={size / 2} cy={size / 2} r={r} fill="none" stroke="var(--primary)" strokeWidth={12} strokeLinecap="round"
-        strokeDasharray={c} strokeDashoffset={c * (1 - Math.min(1, percent / 100))} transform={`rotate(-90 ${size / 2} ${size / 2})`} />
-      <text x="50%" y="50%" dominantBaseline="middle" textAnchor="middle" className="fill-current text-xl font-bold">{percent}%</text>
-    </svg>
-  );
-}
 
 export function useStartBlock() {
   const nav = useNavigate();
@@ -85,7 +73,7 @@ export default function TodayPlanPage() {
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
         <Card className="lg:col-span-2">
           <CardContent className="flex flex-wrap items-center gap-6 pt-5">
-            <Ring percent={p.percent} label={`Đã học ${p.minutes_today} trên ${p.target_minutes} phút`} />
+            <ProgressRing percent={p.percent} label={`Đã học ${p.minutes_today} trên ${p.target_minutes} phút`} />
             <div className="min-w-0 flex-1 space-y-2">
               <p className="text-2xl font-bold">{Math.floor(p.minutes_today / 60)}h{String(p.minutes_today % 60).padStart(2, "0")} <span className="text-base font-normal text-muted">/ {p.target_minutes / 60} giờ</span></p>
               <p className="text-sm text-muted">{p.blocks_done}/{p.blocks_total} khối xong · streak {p.streak} ngày</p>

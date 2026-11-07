@@ -3,8 +3,8 @@ import { useEffect, useRef, useState, type FormEvent } from "react";
 import {
   BookOpen, BookText, Brain, ClipboardCheck, Ear, FlaskConical, GraduationCap, Headphones, Home, Library, LineChart,
   Map, Menu, Mic, Moon, PenLine, Search, Sun, X, Layers, Sparkles, PenSquare, AudioLines, Headset, BookOpenCheck, Target,
-  NotebookPen, PencilLine, Settings, CalendarDays, Lock, CalendarClock, Zap, MoonStar, Flame, ListOrdered } from "lucide-react";
-import { cn } from "@/lib/utils";
+  NotebookPen, PencilLine, Settings, CalendarDays, Lock, CalendarClock, Zap, MoonStar, Flame, ListOrdered, ChevronDown } from "lucide-react";
+import { cn, safeStorage } from "@/lib/utils";
 import { useUI } from "@/stores/ui";
 import { AssistantButton, AssistantHost } from "@/features/assistant/AssistantPanel";
 import { useModuleHeartbeat } from "@/features/journal/useModuleHeartbeat";
@@ -14,24 +14,33 @@ import { BlockTimerChip } from "@/features/plan/BlockTimer";
 import { ReaderControls } from "@/features/reader/ReaderControls";
 import { isReadingRoute } from "@/features/reader/readerSettings";
 
+/** The menu, grouped by what the learner is doing. A group opens when it holds the current page. */
 export const NAV_GROUPS = [
-  { title: "Học", items: [
+  { title: "Hôm nay", items: [
     { to: "/", label: "Dashboard", icon: Home },
     { to: "/today", label: "Lịch học hôm nay", icon: CalendarClock },
     { to: "/path", label: "Lộ trình học", icon: Map },
+    { to: "/review", label: "Ôn tập thông minh", icon: Brain },
+  ] },
+  { title: "Ngữ pháp", items: [
+    { to: "/grammar", label: "Bài ngữ pháp", icon: BookText },
     { to: "/grammar-sprint", label: "Sprint ngữ pháp", icon: Zap },
     { to: "/grammar-night", label: "Ngữ pháp 1 đêm", icon: MoonStar },
-    { to: "/vstep-rush", label: "Cấp tốc VSTEP B2", icon: Flame },
     { to: "/irregular-verbs", label: "Động từ bất quy tắc", icon: ListOrdered },
-    { to: "/grammar", label: "Ngữ pháp", icon: BookText },
+  ] },
+  { title: "Từ vựng & kỹ năng", items: [
     { to: "/vocabulary", label: "Từ vựng", icon: Layers },
     { to: "/pronunciation", label: "Phát âm", icon: Ear },
     { to: "/listening", label: "Nghe", icon: Headphones },
     { to: "/speaking", label: "Nói", icon: Mic },
     { to: "/reading", label: "Đọc", icon: BookOpen },
     { to: "/writing", label: "Viết", icon: PenLine },
-    { to: "/practice", label: "Luyện tập", icon: FlaskConical },
-    { to: "/exams", label: "Kiểm tra", icon: ClipboardCheck },
+  ] },
+  { title: "Luyện thi", items: [
+    { to: "/vstep-rush", label: "Cấp tốc VSTEP B2", icon: Flame },
+    { to: "/exams", label: "Đề kiểm tra", icon: ClipboardCheck },
+    { to: "/practice", label: "Luyện tập tổng hợp", icon: FlaskConical },
+    { to: "/placement", label: "Kiểm tra xếp lớp", icon: Target },
   ] },
   { title: "Luyện với AI", items: [
     { to: "/ai-practice", label: "Tạo bài tập AI", icon: Sparkles },
@@ -40,38 +49,52 @@ export const NAV_GROUPS = [
     { to: "/speaking-studio", label: "Speaking Studio", icon: AudioLines },
     { to: "/listening-studio", label: "Listening Studio", icon: Headset },
     { to: "/reading-studio", label: "Reading Studio", icon: BookOpenCheck },
-    { to: "/placement", label: "Kiểm tra xếp lớp", icon: Target },
   ] },
-  { title: "Theo dõi", items: [
+  { title: "Theo dõi & công cụ", items: [
     { to: "/progress", label: "Tiến độ & phân tích", icon: LineChart },
     { to: "/journal", label: "Nhật ký học tập", icon: CalendarDays },
-    { to: "/focus", label: "Học tập trung", icon: Lock },
     { to: "/mistakes", label: "Sổ lỗi sai", icon: NotebookPen },
-    { to: "/review", label: "Ôn tập thông minh", icon: Brain },
+    { to: "/focus", label: "Học tập trung", icon: Lock },
     { to: "/library", label: "Tra cứu", icon: Library },
     { to: "/settings", label: "Cài đặt", icon: Settings },
   ] },
 ];
 export const NAV = NAV_GROUPS.flatMap((g) => g.items);
 
+const NAV_OPEN = "em-nav-open"; // device preference: which menu groups are open
+
 function SideNav({ onNavigate }: { onNavigate?: () => void }) {
+  const { pathname } = useLocation();
+  const current = NAV_GROUPS.find((g) => g.items.some(({ to }) => (to === "/" ? pathname === "/" : pathname === to || pathname.startsWith(`${to}/`))))?.title;
+  const [open, setOpen] = useState<Record<string, boolean>>(() => safeStorage().get(NAV_OPEN, { "Hôm nay": true }));
+  const toggle = (title: string) => setOpen((o) => { const n = { ...o, [title]: !isOpen(o, title) }; safeStorage().set(NAV_OPEN, n); return n; });
+  const isOpen = (o: Record<string, boolean>, title: string) => title === current || !!o[title];
   return (
-    <nav aria-label="Điều hướng chính" className="flex flex-col gap-3">
-      {NAV_GROUPS.map((g) => (
-        <div key={g.title}>
-          <p className="px-3 pb-1 text-[11px] font-semibold uppercase tracking-wider text-muted">{g.title}</p>
-          <div className="flex flex-col gap-0.5">
-            {g.items.map(({ to, label, icon: Icon }) => (
-              <NavLink key={to} to={to} end={to === "/"} onClick={onNavigate}
-                className={({ isActive }) => cn("flex items-center gap-3 rounded-xl px-3 py-1.5 text-sm transition",
-                  isActive ? "bg-primary-soft text-primary font-semibold" : "text-muted hover:bg-surface-2 hover:text-fg")}>
-                <Icon size={17} aria-hidden />
-                {label}
-              </NavLink>
-            ))}
+    <nav aria-label="Điều hướng chính" className="flex flex-col gap-1">
+      {NAV_GROUPS.map((g) => {
+        const shown = isOpen(open, g.title);
+        const id = `nav-${g.title.replace(/\W+/g, "-")}`;
+        return (
+          <div key={g.title}>
+            <button type="button" onClick={() => toggle(g.title)} aria-expanded={shown} aria-controls={id} disabled={g.title === current}
+              className="flex w-full items-center justify-between rounded-lg px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-muted hover:text-fg disabled:cursor-default disabled:hover:text-muted">
+              {g.title}<ChevronDown size={14} className={cn("transition-transform", !shown && "-rotate-90")} aria-hidden />
+            </button>
+            {shown && (
+              <div id={id} className="flex flex-col gap-0.5 pb-1">
+                {g.items.map(({ to, label, icon: Icon }) => (
+                  <NavLink key={to} to={to} end={to === "/"} onClick={onNavigate}
+                    className={({ isActive }) => cn("flex items-center gap-3 rounded-xl px-3 py-1.5 text-sm transition",
+                      isActive ? "bg-primary-soft font-semibold text-primary" : "text-muted hover:bg-surface-2 hover:text-fg")}>
+                    <Icon size={17} aria-hidden />
+                    {label}
+                  </NavLink>
+                ))}
+              </div>
+            )}
           </div>
-        </div>
-      ))}
+        );
+      })}
     </nav>
   );
 }

@@ -14,6 +14,7 @@ import { toast } from "@/components/ui/toast";
 import { useCelebrate } from "@/components/Celebrate";
 import { cn } from "@/lib/utils";
 import { Markdown } from "@/components/Markdown";
+import { SessionHeader } from "@/components/ui/session-header";
 import { ItemCard } from "@/features/quizzes/ItemCard";
 import { TestOut } from "./TestOut";
 import { isAnswered, toResponse, type Draft } from "@/features/quizzes/draft";
@@ -209,15 +210,20 @@ export function JourneySession({ unitId, data, lesson, onClassic, onSprint }: { 
 
   return (
     <div className={cn("min-h-screen bg-bg", tutorOpen && "md:pr-[22rem] xl:pr-[26rem]")}>
-      <header className="sticky top-0 z-30 border-b border-border bg-bg/90 backdrop-blur">
-        <div className="reader-toolbar mx-auto flex max-w-4xl items-center gap-2 px-3 py-2 sm:px-6">
-          <Button variant="ghost" size="icon" onClick={() => nav(lessonExitPath())} aria-label="Thoát bài học"><X size={18} /></Button>
-          <div className="reader-title min-w-0 flex-1">
-            <div className="flex items-center gap-2">
-              <h1 className="truncate text-sm font-semibold sm:text-base">{data.unit.id} · {data.unit.title}</h1>
-              <FocusBadge /><BlockTimerChip />
-            </div>
-            <div className="mt-1 flex gap-1" aria-label={`Chặng ${stage + 1}/3: ${j.stages[stage]}`}>
+      <SessionHeader onExit={() => nav(lessonExitPath())} exitLabel="Thoát bài học" title={`${data.unit.id} · ${data.unit.title}`} width="md"
+        badges={<><FocusBadge /><BlockTimerChip /></>}
+        meta={<>
+          {combo >= 3 && <Badge tone="warning"><Flame size={12} />{combo}</Badge>}
+          <Badge tone="primary" title="XP trong bài này">+{js.xp} XP</Badge>
+        </>}
+        actions={<>
+          <Button variant={tutorOpen ? "secondary" : "ghost"} size="sm" onClick={() => setTutorOpen((o) => !o)} aria-label="Hỏi AI về bài này" aria-expanded={tutorOpen}><Bot size={18} /><span className="hidden md:inline">Hỏi AI</span></Button>
+          {onSprint && <Button variant="ghost" size="sm" onClick={onSprint} aria-label="Sprint ≈8 phút" title="Sprint ≈8 phút: cốt lõi trên một màn hình + 6 câu kiểm tra"><Zap size={16} /><span className="hidden md:inline">Sprint</span></Button>}
+          <ViToggle />
+          <ReaderControls />
+          <Button variant="ghost" size="icon" onClick={onClassic} aria-label="Xem đầy đủ (cách học cũ)" title="Xem đầy đủ (cách học cũ)"><BookOpenText size={18} /></Button>
+        </>}
+        below={<div className="flex gap-1" aria-label={`Chặng ${stage + 1}/3: ${j.stages[stage]}`}>
               {j.stages.map((name, i) => (
                 <div key={name} className="flex-1" title={`Chặng ${i + 1}: ${name}`}>
                   <div className="h-1.5 overflow-hidden rounded-full bg-surface-2">
@@ -226,17 +232,7 @@ export function JourneySession({ unitId, data, lesson, onClassic, onSprint }: { 
                   <p className={cn("mt-0.5 hidden text-[10px] sm:block", i === stage ? "font-semibold text-primary" : "text-muted")}>{i + 1}. {name}</p>
                 </div>
               ))}
-            </div>
-          </div>
-          {combo >= 3 && <Badge tone="warning"><Flame size={12} />{combo}</Badge>}
-          <Badge tone="primary" title="XP trong bài này">+{js.xp} XP</Badge>
-          <Button variant={tutorOpen ? "secondary" : "ghost"} size="sm" onClick={() => setTutorOpen((o) => !o)} aria-label="Hỏi AI về bài này" aria-expanded={tutorOpen}><Bot size={18} /><span className="hidden md:inline">Hỏi AI</span></Button>
-          {onSprint && <Button variant="ghost" size="sm" onClick={onSprint} aria-label="Sprint ≈8 phút" title="Sprint ≈8 phút: cốt lõi trên một màn hình + 6 câu kiểm tra"><Zap size={16} /><span className="hidden md:inline">Sprint</span></Button>}
-          <ViToggle />
-          <ReaderControls />
-          <Button variant="ghost" size="icon" onClick={onClassic} aria-label="Xem đầy đủ (cách học cũ)" title="Xem đầy đủ (cách học cũ)"><BookOpenText size={18} /></Button>
-        </div>
-      </header>
+            </div>} />
 
       <main className="reader-page lesson-big mx-auto max-w-4xl px-3 pb-28 pt-6 sm:px-6 xl:max-w-5xl">
         {/* enter animation only: an exit animation (AnimatePresence mode="wait") could freeze the old screen when
